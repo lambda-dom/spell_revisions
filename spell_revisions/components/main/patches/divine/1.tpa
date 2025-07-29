@@ -1,0 +1,12 @@
+//Libraries.
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION bless BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10101
+        match_opcode = 142                  //Display portrait icon.
+    END
+END
