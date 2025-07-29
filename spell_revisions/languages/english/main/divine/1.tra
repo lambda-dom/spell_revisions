@@ -273,7 +273,7 @@ The summoned animals will aid the caster by whatever means they possess, staying
 
 Bat (1 Hit Dice):
 STR 9, DEX 14, CON 11, INT 4, WIS 11, CHA 4;  AL Neutral
-HP 4, AC 8, THAC0 20, Saving Throws 20/20/20/20/20
+HP 4, AC 8, THAC0 19, Saving Throws 13/17/13/15/17
 1 Attack Per Round, 1d2 Piercing Damage (Bite)
 
 Combat Abilities:
@@ -285,8 +285,8 @@ Special Qualities:
   Blindsense: relies on echolocation to fight in conditions of poor light or total darkness, ignoring the penalties associated with blindness
 "
 
-@1580 = ~Goodberry~
-@1581 = ~Goodberry
+@1580 = "Goodberry"
+@1581 = "Goodberry
 Level: 1
 School: Alteration
 Sphere: Plant
@@ -296,7 +296,7 @@ Casting Time: 1 round
 Area of Effect: Special
 Saving Throw: None
 
-Casting a Goodberry spell creates 5 magical berries that the caster can carry with him or give to others. These berries initially cure 1 point of physical damage for each one eaten. For every three levels of experience, the berries heal one additional point of damage, up to a maximum of 7 points at level 18. The berries last for 8 hours, or until eaten.~
+Casting a Goodberry spell creates 5 magical berries that the caster can carry with him or give to others. These berries initially cure 1 point of physical damage for each one eaten. For every three levels of experience, the berries heal one additional point of damage, up to a maximum of 7 points at level 18. The berries last for 8 hours, or until eaten."
 
 
 //Strings for display string [139] opcodes.
