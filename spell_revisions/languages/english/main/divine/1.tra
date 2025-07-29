@@ -58,8 +58,8 @@ Saving Throw: None
 This spell allows the priest to search out the feelings of all creatures within the current area. When affected by this spell, a target will briefly glow red if he's evil, green if he's good, and white if he's neutral. Magic resistance does not affect this spell."
 
 //entangle:sppr105
-@1050 = ~Entangle~
-@1051 = ~Entangle
+@1050 = "Entangle"
+@1051 = "Entangle
 Level: 1
 School: Alteration
 Sphere: Plant
@@ -69,11 +69,11 @@ Casting Time: 5
 Area of Effect: 30' radius
 Saving Throw: Breath partial
 
-By means of this spell, the druid causes plants to entangle all creatures in the area of effect. The grasses, weeds, bushes, and even trees wrap, twist, and entwine about the creatures, holding them fast for the duration of the spell. Those held receive a -2 penalty to attack rolls and a +2 penalty to AC. Creatures that make a successful saving throw vs. breath temporarily avoid entanglement and can move at half speed through the area, but must make additional saving throws each round they remain in the area of effect. An entangled creature can attack, provided it does not have to move to reach an opponent. Incorporeal and flying creatures are unaffected by this spell, as are elementals and exceptionally large and strong creatures who suffer little to no distress from the entangling plants.~
+By means of this spell, the druid causes plants to entangle all creatures in the area of effect. The grasses, weeds, bushes, and even trees wrap, twist, and entwine about the creatures, holding them fast for the duration of the spell. Those held receive a -2 penalty to attack rolls and a +2 penalty to AC. Creatures that make a successful saving throw vs. breath temporarily avoid entanglement and can move at half speed through the area, but must make additional saving throws each round they remain in the area of effect. An entangled creature can attack, provided it does not have to move to reach an opponent. Incorporeal and flying creatures are unaffected by this spell, as are elementals and exceptionally large and strong creatures who suffer little to no distress from the entangling plants."
 
 //magical_stone:sppr106
-@1060 = ~Magical Stone~
-@1061 = ~Magical Stone
+@1060 = "Magical Stone"
+@1061 = "Magical Stone
 Level: 1
 School: Enchantment
 Sphere: Combat
@@ -83,10 +83,53 @@ Casting Time: 1
 Area of Effect: Special
 Saving Throw: None
 
-Using this spell, the priest can temporarily enchant ten small stones, no larger than sling bullets. The character using them can then hurl up to three stones per round at an opponent, with a +1 bonus to attack rolls. Each stone that hits inflicts 1d4 + 2 points of damage (1d4 + 5 against undead), and is considered to be of +1 enchantment to determine what it can hit. The magic in each stone expires after 2 turns or when used.~
+Using this spell, the priest can temporarily enchant ten small stones, no larger than sling bullets. The character using them can then hurl up to three stones per round at an opponent, with a +1 bonus to attack rolls. Each stone that hits inflicts 1d4 + 2 points of damage (1d4 + 5 against undead), and is considered to be of +1 enchantment to determine what it can hit. The magic in each stone expires after 2 turns or when used."
+
+//protection_evil:sppr107
+@1070 = "Protection from Evil"
+@1071 = "Protection from Evil
+Level: 1
+School: Abjuration
+Sphere: Protection
+Range: Touch
+Duration: 5 turns
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, it creates a magical barrier around the recipient at a distance of one foot. The barrier moves with the recipient and has two major effects: first, all attacks made by evil creatures against the protected creature receive a -2 penalty to their attack roll, and second, any saving throws caused by such attacks are made by the protected creature with a +2 bonus."
+
+//resist_fear:sppr108
+@1080 = "Resist Fear"
+@1081 = "Resist Fear
+Level: 1
+School: Abjuration
+Sphere: Charm
+Range: Long
+Duration: 5 turns
+Casting Time: 1
+Area of Effect: 30' radius
+Saving Throw: None
+
+The caster instills courage in the spell recipients, raising their morale to its highest. If the recipients are affected by magical fear, this is negated. In addition, the recipients are protected from magical fear for the duration of the spell. At the instant the spell is completed, it affects all creatures in a 30 foot radius centered on the point selected by the caster (thus, affected creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not)."
+
+//sanctuary:sppr109
+@1090 = "Sanctuary"
+@1091 = "Sanctuary
+Level: 1
+School: Abjuration
+Sphere: Charm, Protection
+Range: Personal
+Duration: 6 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+When the priest casts a Sanctuary spell, it causes all of his opponents to ignore his existence, as if he were invisible. While protected by this spell, the subject cannot take direct offensive action without breaking the spell, but may use non-attack spells focused on himself or otherwise act in any way that does not violate the prohibition against offensive action. This allows a warded priest to heal his wounds, for example, or to cast a Chant spell. He cannot cast spells on other targets without ending the spell."
 
 
 //Strings for display string [139] opcodes.
 //Level 1.
 @10101 = "Blessed"
-@10103 = "Healed"
+@10102 = "Healed"
+@10103 = "Protected from Evil"
