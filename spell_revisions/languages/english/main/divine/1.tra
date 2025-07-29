@@ -239,6 +239,52 @@ Saving Throw: Spell negates
 
 When this spell is cast, a pale glow surrounds and outlines all enemies within the area of effect, making their position and movements easily visible. Outlined creatures do not benefit from the concealment normally provided by darkness, invisibility, or similar effects, and suffer a -2 penalty to AC. Those who succeed at a saving throw vs. spell are totally unaffected by the spell. The light is too dim to have any special effect on undead or dark-dwelling creatures vulnerable to light. The faerie fire does not cause any harm to the objects or creatures thus outlined."
 
+@1560 = "Obscuring Mist"
+@1561 = "Obscuring Mist
+Level: 1
+School: Conjuration
+Sphere: Weather
+Range: Long
+Duration: 6 rounds
+Casting Time: 5
+Area of Effect: 20' radius
+Saving Throw: None
+
+When this spell is cast, a misty bank of fog billows out from the designated point obscuring all sight. Everyone within the cloud suffers a -2 penalty to attack rolls and have their line of sight halved. Anyone, inside or outside the cloud, trying to attack a creature concealed by the fog with ranged weapons will do so with a -4 penalty to attack rolls. Creatures with blindsight, or that do not rely on sight can fight within the cloud without penalties."
+
+@1570 = "Animal Summoning I"
+@1571 = "Animal Summoning I
+Level: 1
+School: Conjuration
+Sphere: Animal
+Range: Long
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster calls a number of animals, which serve the summoner under any conditions. The type and number of creatures that appear depend upon the level of the druid casting the spell.
+
+1st : 3 large bats
+3rd : 4 large bats
+5th+ : 5 large bats
+
+The summoned animals will aid the caster by whatever means they possess, staying until the spell duration expires.
+
+Bat (1 Hit Dice):
+STR 9, DEX 14, CON 11, INT 4, WIS 11, CHA 4;  AL Neutral
+HP 4, AC 8, THAC0 20, Saving Throws 20/20/20/20/20
+1 Attack Per Round, 1d2 Piercing Damage (Bite)
+
+Combat Abilities:
+  Disease: target must save vs. death or suffer a -1 penalty to DEX and CON for 8 hours
+  Swarm: each bat within 5 feet grants additional +2 bonus to attack rolls
+
+Special Qualities:
+  Flying: immune to ground spells like Grease and Entangle
+  Blindsense: relies on echolocation to fight in conditions of poor light or total darkness, ignoring the penalties associated with blindness
+"
+
 
 //Strings for display string [139] opcodes.
 //Level 1.

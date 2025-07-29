@@ -2,3 +2,5 @@
 *
                     install label               clearair    patch       over    destination
 faerie_fire         1       faerie_fire         0           *           0       #lit:dlfrfire
+obscuring_mist      1       obscuring_mist      1           *           0       #lit:dlobmist
+bat_swarm           1       bat_swarm           0           *           0       #lit:dlbswarm

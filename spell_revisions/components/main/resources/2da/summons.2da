@@ -1,0 +1,4 @@
+2DA V1.0
+*
+                    inst    name    power   f_cls   s_cls   str     str_ex  dex     con     int     wis     chr     hps     ac      thac0   apr     sv_spl  sv_brt  sv_dth  sv_wand sv_ptf  res_mag res_fir res_col res_elc res_acd res_sls res_crs res_prc res_mis ea      general     race        class               specific    gender      alignment       patch               over    destination
+bat                 1       1001    0       1       0       9       0       14      11      4       11      4       4       8       20      1       20      20      20      20      20      0       0       0       0       0       0       0       0       0       ally    animal      no_race     *                   *           summoned    neutral         bat                 1       #lit:batsu
