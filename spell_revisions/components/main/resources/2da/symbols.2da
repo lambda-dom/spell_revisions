@@ -1,6 +1,13 @@
 2DA V1.0
 *
                                     install type    level   patch   override    destination
+CLERIC_STRENGTH_OF_STONE            1       priest  1       *       0           *
+CLERIC_SUNSCORCH                    1       priest  1       *       0           *
+CLERIC_REGENERATE_LIGHT_WOUNDS      1       priest  1       *       0           *
+CLERIC_CAUSE_LIGHT_WOUNDS           1       priest  1       *       0           *
+CLERIC_FAERIE_FIRE                  1       priest  1       *       0           *
+CLERIC_OBSCURING_MIST               1       priest  1       *       0           *
+CLERIC_ANIMAL_SUMMONING_LEVEL_1     1       priest  1       *       0           *
 WIZARD_OBSCURING_MIST               1       wizard  1       *       0           *
 WIZARD_EXPEDITIOUS_RETREAT          1       wizard  1       *       0           *
 WIZARD_TRUE_STRIKE                  1       wizard  1       *       0           *

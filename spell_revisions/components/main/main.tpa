@@ -14,3 +14,21 @@ LAF install_resources STR_VAR
     type = "add_symbol"
     table = "%resources%/2da/symbols.2da"
 END
+
+
+//Install spells.
+WITH_SCOPE BEGIN
+    OUTER_FOR (i = 1; i <= 1; ++i) BEGIN
+        LAF install_subcomponent STR_VAR
+            subcomponent = "%root%/subcomponents/divine/%i%.tpa"
+        END
+    END
+END
+
+WITH_SCOPE BEGIN
+    OUTER_FOR (i = 1; i <= 0; ++i) BEGIN
+        LAF install_subcomponent STR_VAR
+            subcomponent = "%root%/subcomponents/arcane/%i%.tpa"
+        END
+    END
+END
