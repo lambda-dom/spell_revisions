@@ -15,8 +15,8 @@ BEGIN
     LPF CLONE_EFFECT INT_VAR
         check_globals = check_globals
         check_headers = check_headers
-        header = header
         verbose = 1
+        header = header
         match_opcode = match_opcode
         opcode = 139                        //Display string.
         parameter1 = tlk_ref
