@@ -98,7 +98,7 @@ DEFINE_PATCH_FUNCTION shillelagh STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION strength_stone BEGIN
+DEFINE_PATCH_FUNCTION strength_stone STR_VAR destination = "*" BEGIN
     //Patch strings.
     LPF clone_to_display_string INT_VAR
         tra_ref = 10104
@@ -132,7 +132,7 @@ DEFINE_PATCH_FUNCTION strength_stone BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION sunscorch BEGIN
+DEFINE_PATCH_FUNCTION sunscorch STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "sunscorch_blind"
@@ -142,7 +142,7 @@ DEFINE_PATCH_FUNCTION sunscorch BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 146              //Cast spell.
+        match_opcode = 146                  //Cast spell.
     STR_VAR
         match_resource = "blnd#res"
         resource = "%res%"
@@ -162,10 +162,34 @@ DEFINE_PATCH_FUNCTION sunscorch BEGIN
             check_headers = 1
             verbose = 1
             header = i - 1
-            match_opcode = 177          //Use Eff.
+            match_opcode = 177              //Use Eff.
         STR_VAR
-            match_resource = ""
+            match_resource = "damg#res"
             resource = "%res%"
         END
+    END
+END
+
+DEFINE_PATCH_FUNCTION regenerate_light_wounds STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10105
+        clone = 142                         //Display portrait icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION cause_light BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "cause_light_wounds"
+        array = "items"
+        ext = "itm"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 111                  //Create Weapon.
+    STR_VAR
+        match_resource = "item#res"
+        resource = "%res%"
     END
 END

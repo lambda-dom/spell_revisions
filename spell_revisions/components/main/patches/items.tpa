@@ -10,6 +10,11 @@ LAF get_table_references STR_VAR
     dir = "%resources%/2da/items"
 RET_ARRAY subspells = references END
 
+LAF get_table_references STR_VAR
+    tables = "spells"
+    dir = "%resources%/2da/items"
+RET_ARRAY spells = references END
+
 
 //Patches.
 DEFINE_PATCH_FUNCTION shillelagh_itm BEGIN
@@ -22,7 +27,24 @@ DEFINE_PATCH_FUNCTION shillelagh_itm BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 146              //Cast spell.
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION cause_light_itm BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "cause_light_wounds_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
     STR_VAR
         match_resource = "spl#res"
         resource = "%res%"

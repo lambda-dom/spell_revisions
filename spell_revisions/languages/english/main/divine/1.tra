@@ -200,6 +200,32 @@ Saving Throw: Breath partial
 
 When this spell is cast, a brilliant ray of scorching heat slants down from the sky and strikes one target of the caster's choice. The creature struck by the ray sustains 2d6 points of fire damage plus 1d6 every two extra levels of experience, up to a maximum of 6d6 at 9th level. Undead creatures and monsters vulnerable to bright light suffer double damage, up to a maximum of 12d6 at 9th level. If the target successfully rolls a saving throw vs. breath he will receive only half damage. In addition to sustaining damage, victims who fail their saves are blinded for 1 round."
 
+@1530 = "Regenerate Light Wounds"
+@1531 = "Regenerate Light Wounds
+Level: 1
+School: Alteration
+Sphere: Healing
+Range: Touch
+Duration: 1 turn + 2 rounds/level
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 1 hit point per round, up to a maximum of 30 hit points within 3 turns at level 10. The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
+
+@1540 = "Cause Light Wounds"
+@1541 = "Cause Light Wounds
+Level: 1
+School: Necromancy
+Sphere: Necromantic
+Range: Personal
+Duration: Special
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell is the reverse of Cure Light Wounds. Instead of healing the creature touched, it causes damage. On a successful touch from the priest, the spell inflicts 1d8 + 1/level points of damage upon the target, up to a maximum of 1d8 + 10 at level 10. The spell expires once the priest makes a successful melee attack or after 1 turn has passed. The priest gains a +4 bonus to hit the target. Magic resistance does not affect this spell."
+
 
 //Strings for display string [139] opcodes.
 //Level 1.
