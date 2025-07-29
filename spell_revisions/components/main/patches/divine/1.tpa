@@ -1,12 +1,46 @@
 //Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
 //Mod libraries.
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
+//Load reference tables.
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
+
 //Patches.
-DEFINE_PATCH_FUNCTION bless BEGIN
+DEFINE_PATCH_FUNCTION bless STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
         tra_ref = 10101
         match_opcode = 142                  //Display portrait icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION cure_light_wounds STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10103
+        match_opcode = 240                  //Remove portrait icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION entangle STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "entangle_a"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "entg#res"
+        resource = "%res%"
     END
 END

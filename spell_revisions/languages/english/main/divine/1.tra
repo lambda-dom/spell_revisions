@@ -14,7 +14,65 @@ Saving Throw: None
 
 Upon uttering the Bless spell, the caster raises the morale of friendly creatures by +1. Furthermore, it raises their attack and damage dice rolls by +1. The caster determines at what range he will cast the spell. At the instant the spell is completed, it affects all creatures in a 30 foot radius centered on the point selected by the caster (thus, affected creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not)."
 
+//command:sppr102
+@1020 = "Command"
+@1021 = "Command
+Level: 1
+School: Enchantment
+Sphere: Charm, Combat, Law
+Range: Long
+Duration: 1 round
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Spell negates
+
+This spell enables the priest to command another creature to lie down and take no action (sleep) for a single round. The creature has a saving throw penalty of -1 (to save against this spell) for every two extra levels of the caster, to a maximum of -4 at 9th level."
+
+//cure_light_wounds:sppr103
+//TODO: spell also cures intoxication.
+@1030 = "Cure Light Wounds"
+@1031 = "Cure Light Wounds
+Level: 1
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: Permanent
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 1d8 + 1/level points of damage sustained by the target creature, up to a maximum of 1d8 + 10."
+
+//detect_alignment:sppr104
+@1040 = "Detect Alignment"
+@1041 = "Detect Alignment
+Level: 1
+School: Divination
+Sphere: Divination
+Range: Personal
+Duration: Instant
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: None
+
+This spell allows the priest to search out the feelings of all creatures within the current area. When affected by this spell, a target will briefly glow red if he's evil, green if he's good, and white if he's neutral. Magic resistance does not affect this spell."
+
+//entangle:sppr105
+@1050 = ~Entangle~
+@1051 = ~Entangle
+Level: 1
+School: Alteration
+Sphere: Plant
+Range: Long
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: Breath partial
+
+By means of this spell, the druid causes plants to entangle all creatures in the area of effect. The grasses, weeds, bushes, and even trees wrap, twist, and entwine about the creatures, holding them fast for the duration of the spell. Those held receive a -2 penalty to attack rolls and a +2 penalty to AC. Creatures that make a successful saving throw vs. breath temporarily avoid entanglement and can move at half speed through the area, but must make additional saving throws each round they remain in the area of effect. An entangled creature can attack, provided it does not have to move to reach an opponent. Incorporeal and flying creatures are unaffected by this spell, as are elementals and exceptionally large and strong creatures who suffer little to no distress from the entangling plants.~
+
 
 //Strings for display string [139] opcodes.
 //Level 1.
 @10101 = "Blessed"
+@10103 = "Healed"
