@@ -93,3 +93,37 @@ DEFINE_PATCH_FUNCTION shillelagh STR_VAR destination = "*" BEGIN
         END
     END
 END
+
+DEFINE_PATCH_FUNCTION strength_stone BEGIN
+    //Patch strings.
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10104
+        match_opcode = 142                  //Display portrait icon.
+    END
+
+    //Patch in spell immunities.
+    PATCH_FOR_EACH spell IN
+        "DRAGON_WING_BUFFET"
+    BEGIN
+        LPF get_spell_res STR_VAR
+            spell = "%spell%"
+        RET res = resource END
+
+        //Sanitize.
+        PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+            PATCH_FAIL "strength_stone: unknown spell '%spell%'."
+        END
+
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            match_opcode = 44               //Strength bonus.
+            opcode = 206                    //Protection from spell.
+            parameter1 = 0                  //Zero out.
+            parameter2 = 0
+        STR_VAR
+            resource = "%res%"
+            insert = "last"
+        END
+    END
+END

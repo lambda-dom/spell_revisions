@@ -16,6 +16,11 @@ LAF install_resources STR_VAR
 END
 
 
+//Install icons for spells.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/icons.tpa"
+END
+
 //Install items for spells (e. g. items created through spells).
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/items.tpa"
