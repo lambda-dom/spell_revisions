@@ -1,0 +1,21 @@
+//Description strings.
+//Items for spells.
+//Divine.
+//Level 1.
+@2100 = "Magical Stone"
+@2101 = "These stones have been enchanted by the Magical Stone spell."
+
+@2110 = "Shillelagh"
+@2111 = "This magical cudgel was created by the Shillelagh spell."
+
+@2120 = "Cause Light Wounds"
+@2121 = "Fists enchanted by the Cause Light Wounds spell."
+
+@2130 = "Goodberry"
+@2131 = "Created by the Goodberry spell, this simple-looking berry will heal one point of damage."
+@2132 = "Created by the Goodberry spell, this simple-looking berry will heal two points of damage."
+@2133 = "Created by the Goodberry spell, this simple-looking berry will heal three points of damage."
+@2134 = "Created by the Goodberry spell, this simple-looking berry will heal four points of damage."
+@2135 = "Created by the Goodberry spell, this simple-looking berry will heal five points of damage."
+@2136 = "Created by the Goodberry spell, this simple-looking berry will heal six points of damage."
+@2137 = "Created by the Goodberry spell, this simple-looking berry will heal seven points of damage."

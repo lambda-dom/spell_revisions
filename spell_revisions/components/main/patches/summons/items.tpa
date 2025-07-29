@@ -1,0 +1,64 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+
+
+//Load references.
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "spells"
+    dir = "%resources%/2da/summons"
+RET_ARRAY spells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION bat_immunities BEGIN
+    //Patch bat swarm.
+    LPF get_table_ref STR_VAR
+        value = "bat_swarm"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 1
+        check_headers = 0
+        verbose = 1
+        match_opcode = 232              //Cast spell on condition.
+    STR_VAR
+        match_resource = "swrm#res"
+        resource = "%res%"
+    END
+
+    //Patch immunities.
+    PATCH_FOR_EACH spell IN
+        //Flying immunity.
+        "WIZARD_GREASE"
+        "CLERIC_ENTANGLE"
+        
+        //Blind immunity.
+        "WIZARD_OBSCURING_MIST"
+        "CLERIC_OBSCURING_MIST"
+    BEGIN
+        LPF get_spell_res STR_VAR
+            spell = "%spell%"
+        RET res = resource END
+
+        //Sanitize.
+        PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+            PATCH_FAIL "bat_immunities: spell '%spell%' does not exist."
+        END
+
+        LPF ADD_ITEM_EQEFFECT INT_VAR
+            opcode = 206                //Protection from spell
+            parameter1 = 0              //Zero out.
+            parameter2 = 0
+            target = 1                  //Self.
+            timing = 2                  //Equipped.
+            insert_point = 0 - 1        //Last.
+        STR_VAR
+            resource = "%res%"
+        END
+    END
+END

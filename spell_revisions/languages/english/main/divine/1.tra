@@ -14,7 +14,295 @@ Saving Throw: None
 
 Upon uttering the Bless spell, the caster raises the morale of friendly creatures by +1. Furthermore, it raises their attack and damage dice rolls by +1. The caster determines at what range he will cast the spell. At the instant the spell is completed, it affects all creatures in a 30 foot radius centered on the point selected by the caster (thus, affected creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not)."
 
+//command:sppr102
+@1020 = "Command"
+@1021 = "Command
+Level: 1
+School: Enchantment
+Sphere: Charm, Combat, Law
+Range: Long
+Duration: 1 round
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Spell negates
+
+This spell enables the priest to command another creature to lie down and take no action (sleep) for a single round. The creature has a saving throw penalty of -1 (to save against this spell) for every two extra levels of the caster, to a maximum of -4 at 9th level."
+
+//cure_light_wounds:sppr103
+//TODO: spell also cures intoxication, but not mentioned in description.
+@1030 = "Cure Light Wounds"
+@1031 = "Cure Light Wounds
+Level: 1
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: Permanent
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 1d8 + 1/level points of damage sustained by the target creature, up to a maximum of 1d8 + 10."
+
+//detect_alignment:sppr104
+@1040 = "Detect Alignment"
+@1041 = "Detect Alignment
+Level: 1
+School: Divination
+Sphere: Divination
+Range: Personal
+Duration: Instant
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: None
+
+This spell allows the priest to search out the feelings of all creatures within the current area. When affected by this spell, a target will briefly glow red if he's evil, green if he's good, and white if he's neutral. Magic resistance does not affect this spell."
+
+//entangle:sppr105
+@1050 = "Entangle"
+@1051 = "Entangle
+Level: 1
+School: Alteration
+Sphere: Plant
+Range: Long
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: Breath partial
+
+By means of this spell, the druid causes plants to entangle all creatures in the area of effect. The grasses, weeds, bushes, and even trees wrap, twist, and entwine about the creatures, holding them fast for the duration of the spell. Those held receive a -2 penalty to attack rolls and a +2 penalty to AC. Creatures that make a successful saving throw vs. breath temporarily avoid entanglement and can move at half speed through the area, but must make additional saving throws each round they remain in the area of effect. An entangled creature can attack, provided it does not have to move to reach an opponent. Incorporeal and flying creatures are unaffected by this spell, as are elementals and exceptionally large and strong creatures who suffer little to no distress from the entangling plants."
+
+//magical_stone:sppr106
+@1060 = "Magical Stone"
+@1061 = "Magical Stone
+Level: 1
+School: Enchantment
+Sphere: Combat
+Range: Personal
+Duration: 2 turns
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: None
+
+Using this spell, the priest can temporarily enchant ten small stones, no larger than sling bullets. The character using them can then hurl up to three stones per round at an opponent, with a +1 bonus to attack rolls. Each stone that hits inflicts 1d4 + 2 points of damage (1d4 + 5 against undead), and is considered to be of +1 enchantment to determine what it can hit. The magic in each stone expires after 2 turns or when used."
+
+//protection_evil:sppr107
+@1070 = "Protection from Evil"
+@1071 = "Protection from Evil
+Level: 1
+School: Abjuration
+Sphere: Protection
+Range: Touch
+Duration: 5 turns
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, it creates a magical barrier around the recipient at a distance of one foot. The barrier moves with the recipient and has two major effects: first, all attacks made by evil creatures against the protected creature receive a -2 penalty to their attack roll, and second, any saving throws caused by such attacks are made by the protected creature with a +2 bonus."
+
+//resist_fear:sppr108
+@1080 = "Resist Fear"
+@1081 = "Resist Fear
+Level: 1
+School: Abjuration
+Sphere: Charm
+Range: Long
+Duration: 5 turns
+Casting Time: 1
+Area of Effect: 30' radius
+Saving Throw: None
+
+The caster instills courage in the spell recipients, raising their morale to its highest. If the recipients are affected by magical fear, this is negated. In addition, the recipients are protected from magical fear for the duration of the spell. At the instant the spell is completed, it affects all creatures in a 30 foot radius centered on the point selected by the caster (thus, affected creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not)."
+
+//sanctuary:sppr109
+@1090 = "Sanctuary"
+@1091 = "Sanctuary
+Level: 1
+School: Abjuration
+Sphere: Charm, Protection
+Range: Personal
+Duration: 6 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+When the priest casts a Sanctuary spell, it causes all of his opponents to ignore his existence, as if he were invisible. While protected by this spell, the subject cannot take direct offensive action without breaking the spell, but may use non-attack spells focused on himself or otherwise act in any way that does not violate the prohibition against offensive action. This allows a warded priest to heal his wounds, for example, or to cast a Chant spell. He cannot cast spells on other targets without ending the spell."
+
+//shillelagh:sppr110
+@1100 = "Shillelagh"
+@1101 = "Shillelagh
+Level: 1
+School: Alteration
+Sphere: Combat, Plant
+Range: Personal
+Duration: 2 turns
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+This spell enables the druid to create a magical cudgel. The shillelagh inflicts 2d4 + 1 points of damage on a successful hit and causes tendrils to wrap around and hold the victim in place for one round unless a save vs. breath is made. The caster wields the shillelagh as if proficient with the weapon, at his normal THAC0. At level 1, it functions as a magical weapon with an enchantment bonus of +1. For every other four experience levels of the spellcaster, this bonus increases by one, up to a total of +3 enchantment level, +3 to attack rolls, and +3 to damage for a 9th-level caster. The shillelagh can be used only by the druid, and remains in his hand for the duration of the spell or until dispelled."
+
+//armor_faith:sppr111
+@1110 = "Armor of Faith"
+@1111 = "Armor of Faith
+Level: 1
+School: Abjuration
+Sphere: Protection
+Range: Personal
+Duration: 5 turns
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+The caster of the Armor of Faith receives significant protection against physical and magic damage. This magical armor is a force of energy that absorbs a portion of the damage intended for the caster, effectively reducing the damage sustained by 10%. Multiple castings of this spell are not cumulative."
+
+//Circle of Protection:sppr112
+//doom:sppr113
+@1130 = "Doom"
+@1131 = "Doom
+Level: 1
+School: Enchantment
+Sphere: Charm
+Range: Long
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Spell negates
+
+This spell causes a feeling of doom to overwhelm the target. For the duration of the spell, the target receives a -2 penalty to attack rolls, damage rolls, and saving throws unless a save vs. spell is made. The creature has a saving throw penalty of -1 (to save against this spell) for every two extra levels of the caster, to a maximum of -4 at 9th level. Multiple castings of this spell are not cumulative."
+
+//sppr114: Animal Friendship
+//sppr115: Endure Heat and Cold
+//New spells.
+//New divine spells.
+@1510 = ~Strength of Stone~
+@1511 = ~Strength of Stone
+Level: 1
+School: Alteration
+Sphere: Elemental (Earth)
+Range: Personal
+Duration: 5 turns
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+Calling upon the strength of the earth, the druid gains some of the solidity and strength of stone. This spell sets the strength of the character to 18 and then adds 50 exceptional strength on top of this. The character receives any strength bonuses appropriate. For example, if a character has between 18/50 and 18/00 strength, then his strength will just be set to 18/00. If a character has a strength between 18/01 and 18/50, then his strength will become 18/50 + original percentage. If his strength is less then 18, then it will just become 18/50. However, this spell will actually lower a character's strength if it is already 19 or more. For the duration of the spell, the caster also becomes immune to everything, magical or otherwise, that pushes him away (e.g. wing buffets, gusts of wind, telekinesis, etc.), but will move at a reduced speed.~
+
+@1520 = "Sunscorch"
+@1521 = "Sunscorch
+Level: 1
+School: Evocation
+Sphere: Sun
+Range: Long
+Duration: Instant
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: Breath partial
+
+When this spell is cast, a brilliant ray of scorching heat slants down from the sky and strikes one target of the caster's choice. The creature struck by the ray sustains 2d6 points of fire damage plus 1d6 every two extra levels of experience, up to a maximum of 6d6 at 9th level. Undead creatures and monsters vulnerable to bright light suffer double damage, up to a maximum of 12d6 at 9th level. If the target successfully rolls a saving throw vs. breath he will receive only half damage. In addition to sustaining damage, victims who fail their saves are blinded for 1 round."
+
+@1530 = "Regenerate Light Wounds"
+@1531 = "Regenerate Light Wounds
+Level: 1
+School: Alteration
+Sphere: Healing
+Range: Touch
+Duration: 1 turn + 2 rounds/level
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 1 hit point per round, up to a maximum of 30 hit points within 3 turns at level 10. The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
+
+@1540 = "Cause Light Wounds"
+@1541 = "Cause Light Wounds
+Level: 1
+School: Necromancy
+Sphere: Necromantic
+Range: Personal
+Duration: Special
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell is the reverse of Cure Light Wounds. Instead of healing the creature touched, it causes damage. On a successful touch from the priest, the spell inflicts 1d8 + 1/level points of damage upon the target, up to a maximum of 1d8 + 10 at level 10. The spell expires once the priest makes a successful melee attack or after 1 turn has passed. The priest gains a +4 bonus to hit the target. Magic resistance does not affect this spell."
+
+@1550 = "Faerie Fire"
+@1551 = "Faerie Fire
+Level: 1
+School: Evocation
+Sphere: Weather
+Range: Long
+Duration: 4 rounds
+Casting Time: 1
+Area of Effect: 5' radius
+Saving Throw: Spell negates
+
+When this spell is cast, a pale glow surrounds and outlines all enemies within the area of effect, making their position and movements easily visible. Outlined creatures do not benefit from the concealment normally provided by darkness, invisibility, or similar effects, and suffer a -2 penalty to AC. Those who succeed at a saving throw vs. spell are totally unaffected by the spell. The light is too dim to have any special effect on undead or dark-dwelling creatures vulnerable to light. The faerie fire does not cause any harm to the objects or creatures thus outlined."
+
+@1560 = "Obscuring Mist"
+@1561 = "Obscuring Mist
+Level: 1
+School: Conjuration
+Sphere: Weather
+Range: Long
+Duration: 6 rounds
+Casting Time: 5
+Area of Effect: 20' radius
+Saving Throw: None
+
+When this spell is cast, a misty bank of fog billows out from the designated point obscuring all sight. Everyone within the cloud suffers a -2 penalty to attack rolls and have their line of sight halved. Anyone, inside or outside the cloud, trying to attack a creature concealed by the fog with ranged weapons will do so with a -4 penalty to attack rolls. Creatures with blindsight, or that do not rely on sight can fight within the cloud without penalties."
+
+@1570 = "Animal Summoning I"
+@1571 = "Animal Summoning I
+Level: 1
+School: Conjuration
+Sphere: Animal
+Range: Long
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster calls a number of animals, which serve the summoner under any conditions. The type and number of creatures that appear depend upon the level of the druid casting the spell.
+
+1st : 3 large bats
+3rd : 4 large bats
+5th+ : 5 large bats
+
+The summoned animals will aid the caster by whatever means they possess, staying until the spell duration expires.
+
+Bat (1 Hit Dice):
+STR 9, DEX 14, CON 11, INT 4, WIS 11, CHA 4;  AL Neutral
+HP 4, AC 8, THAC0 19, Saving Throws 13/17/13/15/17
+1 Attack Per Round, 1d2 Piercing Damage (Bite)
+
+Combat Abilities:
+  Disease: target must save vs. death or suffer a -1 penalty to DEX and CON for 8 hours
+  Swarm: each bat within 5 feet grants additional +2 bonus to attack rolls
+
+Special Qualities:
+  Flying: immune to ground spells like Grease and Entangle
+  Blindsense: relies on echolocation to fight in conditions of poor light or total darkness, ignoring the penalties associated with blindness
+"
+
+@1580 = "Goodberry"
+@1581 = "Goodberry
+Level: 1
+School: Alteration
+Sphere: Plant
+Range: Personal
+Duration: Special
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+Casting a Goodberry spell creates 5 magical berries that the caster can carry with him or give to others. These berries initially cure 1 point of physical damage for each one eaten. For every three levels of experience, the berries heal one additional point of damage, up to a maximum of 7 points at level 18. The berries last for 8 hours, or until eaten."
+
 
 //Strings for display string [139] opcodes.
 //Level 1.
 @10101 = "Blessed"
+@10102 = "Healed"
+@10103 = "Protected from Evil"
+@10104 = "Strength of Stone"
+@10105 = "Regenerating"

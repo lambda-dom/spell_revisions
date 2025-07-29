@@ -1,0 +1,36 @@
+2DA V1.0
+*
+                                install patch   over    destination
+strength_stone_a                1       *       0       #suf:a:CLERIC_STRENGTH_OF_STONE
+strength_stone_b                1       *       0       #suf:b:CLERIC_STRENGTH_OF_STONE
+strength_stone_c                1       *       0       #suf:c:CLERIC_STRENGTH_OF_STONE
+sunscorch_a                     1       *       0       #suf:a:CLERIC_SUNSCORCH
+sunscorch_b                     1       *       0       #suf:b:CLERIC_SUNSCORCH
+sunscorch_c                     1       *       0       #suf:c:CLERIC_SUNSCORCH
+faerie_fire_a                   1       *       0       #suf:a:CLERIC_FAERIE_FIRE
+faerie_fire_b                   1       *       0       #suf:b:CLERIC_FAERIE_FIRE
+faerie_fire_c                   1       *       0       #suf:c:CLERIC_FAERIE_FIRE
+regenerate_light_wounds_a       1       *       0       #suf:a:CLERIC_REGENERATE_LIGHT_WOUNDS
+regenerate_light_wounds_b       1       *       0       #suf:b:CLERIC_REGENERATE_LIGHT_WOUNDS
+regenerate_light_wounds_c       1       *       0       #suf:c:CLERIC_REGENERATE_LIGHT_WOUNDS
+cause_light_wounds_a            1       *       0       #suf:a:CLERIC_CAUSE_LIGHT_WOUNDS
+cause_light_wounds_b            1       *       0       #suf:b:CLERIC_CAUSE_LIGHT_WOUNDS
+cause_light_wounds_c            1       *       0       #suf:c:CLERIC_CAUSE_LIGHT_WOUNDS
+animal_summon_1_a               1       *       0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_1
+animal_summon_1_b               1       *       0       #suf:b:CLERIC_ANIMAL_SUMMONING_LEVEL_1
+animal_summon_1_c               1       *       0       #suf:c:CLERIC_ANIMAL_SUMMONING_LEVEL_1
+obscuring_mist_a                1       *       0       #suf:a:WIZARD_OBSCURING_MIST
+obscuring_mist_b                1       *       0       #suf:b:WIZARD_OBSCURING_MIST
+obscuring_mist_c                1       *       0       #suf:c:WIZARD_OBSCURING_MIST
+expeditious_retreat_a           1       *       0       #suf:a:WIZARD_EXPEDITIOUS_RETREAT
+expeditious_retreat_b           1       *       0       #suf:b:WIZARD_EXPEDITIOUS_RETREAT
+expeditious_retreat_c           1       *       0       #suf:c:WIZARD_EXPEDITIOUS_RETREAT
+true_strike_a                   1       *       0       #suf:a:WIZARD_TRUE_STRIKE
+true_strike_b                   1       *       0       #suf:b:WIZARD_TRUE_STRIKE
+true_strike_c                   1       *       0       #suf:c:WIZARD_TRUE_STRIKE
+dimension_jump_a                1       *       0       #suf:a:WIZARD_DIMENSION_JUMP
+dimension_jump_b                1       *       0       #suf:b:WIZARD_DIMENSION_JUMP
+dimension_jump_c                1       *       0       #suf:c:WIZARD_DIMENSION_JUMP
+monster_summon_1_a              1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_1
+monster_summon_1_b              1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_1
+monster_summon_1_c              1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_1

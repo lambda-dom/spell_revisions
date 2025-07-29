@@ -1,0 +1,5 @@
+2DA V1.0
+*
+                install subspell        name    descr   arg1    arg2    arg3    school      sectype         patch   over    destination
+entangle_a      1       entangle        *       *       1       *       *       transmuter  disabling       *       0       #suf:a:CLERIC_ENTANGLE
+sunscorch_blind 1       blind           *       *       1       *       *       invoker     offensivedamage *       0       #suf:a:CLERIC_SUNSCORCH

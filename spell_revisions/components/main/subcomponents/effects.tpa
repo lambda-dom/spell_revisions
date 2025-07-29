@@ -1,0 +1,14 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
+
+//Initialization.
+LAF get_component_resources_dir RET resources = dir END
+
+
+//Install effects.
+LAF install_resources STR_VAR
+    type = "create_effect"
+    table = "%resources%/2da/effects.2da"
+END
