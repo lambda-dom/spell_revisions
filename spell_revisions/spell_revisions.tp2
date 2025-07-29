@@ -1,0 +1,26 @@
+BACKUP "weidu_external/backup/spell_revisions"
+AUTHOR "lambda_dom"
+VERSION "1.0"
+
+//Flags.
+AUTO_EVAL_STRINGS
+
+//Component preamble.
+ALWAYS
+    //Set library dir.
+    OUTER_TEXT_SPRINT WEIDU_LIBRARY_DIR "weidu_library"
+
+    //Library includes.
+    INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+END
+
+//Languages
+LANGUAGE "English" "english" "%MOD_FOLDER%/languages/english/main.tra"
+
+
+//Components.
+//Main.
+BEGIN @1 DESIGNATED 1
+LABEL "lambda_dom-spell_revisions-main"
+REQUIRE_PREDICATE (GAME_IS "bgee bg2ee eet") @100
+LAF install_component STR_VAR COMPONENT = "main" END
