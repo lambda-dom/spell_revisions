@@ -4,3 +4,6 @@
 //Level 1.
 @2100 = "Magical Stone"
 @2101 = "These stones have been enchanted by the Magical Stone spell."
+
+@2110 = "Shillelagh"
+@2111 = "This magical cudgel was created by the Shillelagh spell."
