@@ -1,3 +1,5 @@
+Fixes to base SR, v4.19.
+
 # A. Divine spells.
 
 ## A. 1. Level 1.
