@@ -15,6 +15,10 @@ LAF install_resources STR_VAR
     table = "%resources%/2da/symbols.2da"
 END
 
+//Install projectiles.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/projectiles.tpa"
+END
 
 //Install icons for spells.
 LAF install_subcomponent STR_VAR

@@ -1,13 +1,13 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
 
 //Mod libraries.
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
 //Load reference tables.
-LAF get_component_resources_dir RET resources = dir END
 LAF get_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
@@ -19,6 +19,12 @@ RET_ARRAY items = references END
 LAF get_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "1"
+    dir = "%resources%/2da/divine"
+RET_ARRAY spells = references END
 
 
 //Patches.
@@ -190,6 +196,45 @@ DEFINE_PATCH_FUNCTION cause_light_wounds BEGIN
         match_opcode = 111                  //Create Weapon.
     STR_VAR
         match_resource = "item#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION faerie_fire BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "faerie_fire_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "ffir#res"
+        resource = "%res%"
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "ffir#res"
+        resource = "%res%"
+    END
+
+    //Patch-in protection from aux glitterdust.
+    //Spell not installed at this point, so use computed ref.
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:a:WIZARD_GLITTERDUST"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "gdst#res"
         resource = "%res%"
     END
 END

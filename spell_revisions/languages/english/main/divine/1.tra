@@ -226,6 +226,19 @@ Saving Throw: None
 
 This spell is the reverse of Cure Light Wounds. Instead of healing the creature touched, it causes damage. On a successful touch from the priest, the spell inflicts 1d8 + 1/level points of damage upon the target, up to a maximum of 1d8 + 10 at level 10. The spell expires once the priest makes a successful melee attack or after 1 turn has passed. The priest gains a +4 bonus to hit the target. Magic resistance does not affect this spell."
 
+@1550 = "Faerie Fire"
+@1551 = "Faerie Fire
+Level: 1
+School: Evocation
+Sphere: Weather
+Range: Long
+Duration: 4 rounds
+Casting Time: 1
+Area of Effect: 5' radius
+Saving Throw: Spell negates
+
+When this spell is cast, a pale glow surrounds and outlines all enemies within the area of effect, making their position and movements easily visible. Outlined creatures do not benefit from the concealment normally provided by darkness, invisibility, or similar effects, and suffer a -2 penalty to AC. Those who succeed at a saving throw vs. spell are totally unaffected by the spell. The light is too dim to have any special effect on undead or dark-dwelling creatures vulnerable to light. The faerie fire does not cause any harm to the objects or creatures thus outlined."
+
 
 //Strings for display string [139] opcodes.
 //Level 1.
