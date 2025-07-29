@@ -1,4 +1,4 @@
 2DA V1.0
 *
-            install name    descr   type    lvl flags       school      sectype     book_icon               abil_icon           projectile          patch           over    destination
-bless       1       1010    1011    priest  1   00000000    enchanter   none        #suf:c:CLERIC_BLESS     #suf:b:CLERIC_BLESS #lit:sparpupa       bless           1       #spl:CLERIC_BLESS
+            install name    descr   type    lvl flags       school      sectype     book_icon               abil_icon           projectile                          patch           over    destination
+bless       1       1010    1011    priest  1   00000000    enchanter   none        #suf:c:CLERIC_BLESS     #suf:b:CLERIC_BLESS #lbl:sparkle_area_purple_party_only bless           1       #spl:CLERIC_BLESS
