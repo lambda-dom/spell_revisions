@@ -1,0 +1,4 @@
+2DA V1.0
+*
+                        install name    descr   id_name id_desc type        prof        flags       i_icon          g_icon          d_icon          price   stack   lore    weight  enchant excl    ability1    ability2    ability3    patch   over    destination
+magical_stone           1       2100    2101    *       *       bullet      none        0010000000  #lit:dlmstone   #lit:gbull04    #lit:cbull01    0       20      0       0       1       *       -1          -1          -1          *       0       #suf:a:CLERIC_MAGIC_STONE

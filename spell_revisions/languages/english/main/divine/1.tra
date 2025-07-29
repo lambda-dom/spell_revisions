@@ -29,7 +29,7 @@ Saving Throw: Spell negates
 This spell enables the priest to command another creature to lie down and take no action (sleep) for a single round. The creature has a saving throw penalty of -1 (to save against this spell) for every two extra levels of the caster, to a maximum of -4 at 9th level."
 
 //cure_light_wounds:sppr103
-//TODO: spell also cures intoxication.
+//TODO: spell also cures intoxication, but not mentioned in description.
 @1030 = "Cure Light Wounds"
 @1031 = "Cure Light Wounds
 Level: 1
@@ -70,6 +70,20 @@ Area of Effect: 30' radius
 Saving Throw: Breath partial
 
 By means of this spell, the druid causes plants to entangle all creatures in the area of effect. The grasses, weeds, bushes, and even trees wrap, twist, and entwine about the creatures, holding them fast for the duration of the spell. Those held receive a -2 penalty to attack rolls and a +2 penalty to AC. Creatures that make a successful saving throw vs. breath temporarily avoid entanglement and can move at half speed through the area, but must make additional saving throws each round they remain in the area of effect. An entangled creature can attack, provided it does not have to move to reach an opponent. Incorporeal and flying creatures are unaffected by this spell, as are elementals and exceptionally large and strong creatures who suffer little to no distress from the entangling plants.~
+
+//magical_stone:sppr106
+@1060 = ~Magical Stone~
+@1061 = ~Magical Stone
+Level: 1
+School: Enchantment
+Sphere: Combat
+Range: Personal
+Duration: 2 turns
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: None
+
+Using this spell, the priest can temporarily enchant ten small stones, no larger than sling bullets. The character using them can then hurl up to three stones per round at an opponent, with a +1 bonus to attack rolls. Each stone that hits inflicts 1d4 + 2 points of damage (1d4 + 5 against undead), and is considered to be of +1 enchantment to determine what it can hit. The magic in each stone expires after 2 turns or when used.~
 
 
 //Strings for display string [139] opcodes.

@@ -1,0 +1,26 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
+
+//Initialization.
+LAF get_component_root RET root = dir END
+LAF get_component_resources_dir RET resources = dir END
+LAF get_component_tra_dir RET tra = dir END
+
+
+//Install bams for items.
+LAF install_resources STR_VAR
+    type = "icon"
+    table = "%resources%/2da/items/icons.2da"
+    dir = "%resources%/bam/items"
+END
+
+//Install spell-created items.
+LAF install_resources STR_VAR
+    type = "item"
+    table = "%resources%/2da/items.2da"
+    dir = "%resources%/itm/spells"
+    tra = "%tra%/spells/items.tra"
+    patches = "%root%/patches/items.tpa"
+END

@@ -1,0 +1,6 @@
+//Description strings.
+//Items for spells.
+//Divine.
+//Level 1.
+@2100 = "Magical Stone"
+@2101 = "These stones have been enchanted by the Magical Stone spell."
