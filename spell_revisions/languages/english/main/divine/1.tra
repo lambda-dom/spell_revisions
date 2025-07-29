@@ -285,6 +285,19 @@ Special Qualities:
   Blindsense: relies on echolocation to fight in conditions of poor light or total darkness, ignoring the penalties associated with blindness
 "
 
+@1580 = ~Goodberry~
+@1581 = ~Goodberry
+Level: 1
+School: Alteration
+Sphere: Plant
+Range: Personal
+Duration: Special
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+Casting a Goodberry spell creates 5 magical berries that the caster can carry with him or give to others. These berries initially cure 1 point of physical damage for each one eaten. For every three levels of experience, the berries heal one additional point of damage, up to a maximum of 7 points at level 18. The berries last for 8 hours, or until eaten.~
+
 
 //Strings for display string [139] opcodes.
 //Level 1.

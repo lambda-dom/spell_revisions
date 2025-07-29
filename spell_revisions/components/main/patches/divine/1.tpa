@@ -276,3 +276,24 @@ DEFINE_PATCH_FUNCTION animal_summoning_1 BEGIN
         resource = "%res%"
     END
 END
+
+DEFINE_PATCH_FUNCTION goodberry BEGIN
+    LPF get_spell_header_count RET headers_count = count END
+    FOR (i = 1; i <= headers_count; ++i) BEGIN
+        //Get reference.
+        LPF get_table_ref STR_VAR
+            value = "goodberry_%i%"
+            array = "items"
+            ext = "itm"
+        RET res = resource END
+
+        LPF ALTER_EFFECT INT_VAR
+            verbose = 1
+            header = i - 1
+            match_opcode = 122              //Create inventory item.
+        STR_VAR
+            match_resource = ""
+            resource = "%res%"
+        END
+    END
+END
