@@ -49,7 +49,7 @@ DEFINE_PATCH_FUNCTION entangle STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION magical_stone BEGIN
+DEFINE_PATCH_FUNCTION magical_stone STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "magical_stone"
@@ -59,16 +59,37 @@ DEFINE_PATCH_FUNCTION magical_stone BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 111              //Create Weapon.
+        match_opcode = 111                  //Create Weapon.
     STR_VAR
         match_resource = "item#res"
         resource = "%res%"
     END
 END
 
-DEFINE_PATCH_FUNCTION protection_evil BEGIN
+DEFINE_PATCH_FUNCTION protection_evil STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
         tra_ref = 10103
-        match_opcode = 142              //Display portrait icon.
+        match_opcode = 142                  //Display portrait icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION shillelagh STR_VAR destination = "*" BEGIN
+    LPF get_spell_header_count RET headers_count = count END
+    FOR (i = 1; i <= headers_count; ++i) BEGIN
+        //Get reference.
+        LPF get_table_ref STR_VAR
+            value = "shillelagh_%i%"
+            array = "items"
+            ext = "itm"
+        RET res = resource END
+
+        LPF ALTER_EFFECT INT_VAR
+            verbose = 1
+            header = i - 1
+            match_opcode = 111              //Create Weapon.
+        STR_VAR
+            match_resource = "item#res"
+            resource = "%res%"
+        END
     END
 END

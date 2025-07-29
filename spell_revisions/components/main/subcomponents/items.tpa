@@ -16,6 +16,12 @@ LAF install_resources STR_VAR
     dir = "%resources%/bam/items"
 END
 
+//Install subspells required by items (for spells...).
+LAF install_resources STR_VAR
+    type = "subspell"
+    table = "%resources%/2da/items/subspells.2da"
+END
+
 //Install spell-created items.
 LAF install_resources STR_VAR
     type = "item"
