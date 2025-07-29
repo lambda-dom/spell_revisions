@@ -177,7 +177,7 @@ DEFINE_PATCH_FUNCTION regenerate_light_wounds STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION cause_light BEGIN
+DEFINE_PATCH_FUNCTION cause_light_wounds BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "cause_light_wounds"
