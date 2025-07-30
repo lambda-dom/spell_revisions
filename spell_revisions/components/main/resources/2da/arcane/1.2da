@@ -1,0 +1,4 @@
+2DA V1.0
+*
+            install name    descr   type    lvl flags       school      sectype         book_icon               abil_icon               projectile      patch   over    destination
+grease      1       1010    1011    wizard  1   01000000    conjurer    conjuration     #suf:c:WIZARD_GREASE    #suf:b:WIZARD_GREASE    #lit:grease     *       1       #spl:WIZARD_GREASE
