@@ -1,0 +1,8 @@
+//Patches.
+DEFINE_PATCH_FUNCTION charm_person_animal_a BEGIN
+    LPF CLONE_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 5                    //Charm
+        parameter1 = 2                      //Animal.
+    END
+END

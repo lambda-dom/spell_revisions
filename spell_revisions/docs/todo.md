@@ -6,6 +6,8 @@
 
 * Find Familiar: implement.
 
+## A. 2. Level 2.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

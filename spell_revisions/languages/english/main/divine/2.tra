@@ -1,0 +1,87 @@
+//Spell descriptions.
+//Divine.
+//Level 2.
+//aid:sppr201
+@2010 = "Aid"
+@2011 = "Aid
+Level: 2
+School: Necromancy
+Sphere: Combat, Necromantic
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+The recipient of this spell gains a +1 bonus to attack rolls, damage rolls, and saving throws, plus 1d8 additional hit points +1 per level of the caster, up to a maximum of 1d8 + 10. The Aid spell allows the recipient to temporarily have more hit points than his full normal total. The bonus hit points are lost first when the recipient takes damage. Multiple castings of this spell are not cumulative."
+
+//barkskin:sppr202
+@2020 = "Barkskin"
+@2021 = "Barkskin
+Level: 2
+School: Alteration
+Sphere: Plant
+Range: Touch
+Duration: 5 turns
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a priest casts the Barkskin spell upon a creature, its skin becomes as tough as bark, improving its Armor Class by 2, plus 1 AC for every other six levels of the caster, up to a maximum of +4 AC at 15th level. Multiple castings of this spell are not cumulative."
+
+//chant:sppr203
+@2030 = "Chant"
+@2031 = "Chant
+Level: 2
+School: Conjuration
+Sphere: Combat
+Range: Personal
+Duration: 1 turn
+Casting Time: 1 round
+Area of Effect: 30' radius
+Saving Throw: None
+
+By means of the Chant spell, the priest brings special favor upon himself and his party, and causes harm to his enemies. When the chant is completed, all attack rolls, damage rolls, and saving throws made by those in the area of effect who are friendly to the priest gain +1 bonuses, while those of the priest's enemies suffer -1 penalties. Multiple Chant spells are not cumulative."
+@2032 = "Chant Good"
+@2033 = "Chant Evil"
+
+//charm_person_animal:sppr204
+@2040 = "Charm Person or Animal"
+@2041 = ~Charm Person or Animal
+Level: 2
+School: Enchantment
+Sphere: Animal
+Range: Medium
+Duration: 1 turn
+Casting Time: 2
+Area of Effect: 1 person or animal
+Saving Throw: Spell negates
+
+This spell affects any single person or animal that it is cast upon. The term "person" includes any bipedal human, demihuman, or humanoid of man-size or smaller, such as dwarves, elves, gnolls, gnomes, half-elves, halflings, half-orcs, hobgoblins, kobolds, and others. If the target fails their save vs. spell, they regard the caster as a trusted friend and ally to be heeded and protected for the duration of the spell. The caster may give them orders, and the charmed creature will carry them out as quickly as possible.
+
+Creatures that are currently neutral to the caster are more amenable to helping them and make their saving throw with no bonus, while those that are hostile are significantly more difficult to influence and instead gain a +4 bonus to making their saving throw. If the caster attempts to harm the charmed creature, the spell is broken and the affected creature will immediately become hostile to the caster. If two or more charm effects simultaneously affect a creature, the most recent charm takes precedence. After the duration of the spell or if a dispel magic is successfully cast upon them, the affected creature resumes their previous behavior prior to being charmed.~
+
+//find_traps:sppr205
+@2050 = "Find Traps"
+@2051 = "Find Traps
+Level: 2
+School: Divination
+Sphere: Divination
+Range: Personal
+Duration: 3 turns
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: None
+
+When a priest casts a find traps spell, all traps - concealed normally or magically - of magical or mechanical nature become apparent to him. Once per round, all traps within a 30 foot radius of the caster will be revealed. A trap is any device or magical ward that meets three criteria: it can inflict a sudden or unexpected result, the spellcaster would view the result as undesirable or harmful, and the creator specifically intended the harmful or undesirable result as such. Thus, traps include glyphs and similar spells or devices."
+
+
+//Strings for display string [139] opcodes.
+@10201 = "Aid"
+@10202 = "Chant"
+@10203 = "Evil Chant"
+@10204 = "Charmed"
+@10205 = "Held"
+@10206 = "Silenced"
+@10207 = "Healed"
+@10208 = "Regenerating"

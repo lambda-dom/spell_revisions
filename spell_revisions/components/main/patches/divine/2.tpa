@@ -1,0 +1,107 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+//Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "2"
+    dir = "%resources%/2da/divine"
+RET_ARRAY spells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION aid BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10201
+        match_opcode = 18                   //Max hp bonus.
+    END
+END
+
+DEFINE_PATCH_FUNCTION chant_a BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10202
+        match_opcode = 142                  //Display icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION chant_b BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10203
+        match_opcode = 142                  //Display icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION chant BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "chant_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "good#res"
+        resource = "%res%"
+    END
+
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "chant_b"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "evil#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION charm_person_animal BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "charm_person_animal"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        match_resource = "chrm#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION find_traps BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "find_traps_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
