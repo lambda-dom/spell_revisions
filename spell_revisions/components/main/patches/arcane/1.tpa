@@ -1,0 +1,286 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
+//Load references.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "1"
+    dir = "%resources%/2da/arcane"
+RET_ARRAY spells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION armor STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10101
+        match_opcode = 142                  //Display icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION charm_person STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "charm_humanoid_neutral"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        match_resource = "chrm#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION color_spray STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "color_spray_slow"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "slow#res"
+        resource = "%res%"
+    END
+
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "color_spray_blind"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "blnd#res"
+        resource = "%res%"
+    END
+
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "color_spray_confusion"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "conf#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION protection_petrification STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10102
+        match_opcode = 142                  //Display icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION protection_evil STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10103
+        match_opcode = 142                  //Display icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION shield STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10104
+        match_opcode = 142                  //Display icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION shocking_grasp STR_VAR destination = "*" BEGIN
+    //Add melee effects.
+    LPF get_spell_header_count RET headers_count = count END
+    FOR (i = 1; i <= headers_count ; ++i) BEGIN
+        LPF get_table_ref STR_VAR
+            value = "shocking_grasp_%i%"
+            array = "items"
+            ext = "itm"
+        RET res = resource END
+
+        LPF ALTER_EFFECT INT_VAR
+            verbose = 1
+            header = i - 1
+            match_opcode = 111              //Create Weapon.
+        STR_VAR
+            match_resource = "sgrp#res"
+            resource = "%res%"
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION sleep BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "sleep_a"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION chill_touch BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "chill_touch"
+        array = "items"
+        ext = "itm"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 111              //Create Weapon.
+    STR_VAR
+        match_resource = "chll#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION chromatic_orb BEGIN
+    PATCH_WITH_SCOPE BEGIN
+        DEFINE_ASSOCIATIVE_ARRAY spell_orbs BEGIN
+            "chromatic_orb_white"       => "whte#orb"
+            "chromatic_orb_aquamarine"  => "aqua#orb"
+            "chromatic_orb_red"         => "red#orb"
+        END
+
+        PHP_EACH spell_orbs AS orb => match BEGIN
+            //Get reference.
+            LPF get_table_ref STR_VAR
+                value = "%orb%"
+                array = "spells"
+                ext = "spl"
+            RET res = resource END
+
+            LPF ALTER_EFFECT INT_VAR
+                verbose = 1
+                match_opcode = 146              //Cast spell.
+            STR_VAR
+                match_resource = "%match%"
+                resource = "%res%"
+            END
+        END
+    END
+
+    PATCH_WITH_SCOPE BEGIN
+        //Patch in subspells.
+        DEFINE_ASSOCIATIVE_ARRAY subspell_orbs BEGIN
+            "chromatic_orb_green"   => "gren#orb"
+            "chromatic_orb_yellow"  => "yell#orb"
+            "chromatic_orb_violet"  => "viol#orb"
+            "chromatic_orb_blue"    => "blue#orb"
+        END
+
+
+        PHP_EACH subspell_orbs AS orb => match BEGIN
+            //Get reference.
+            LPF get_table_ref STR_VAR
+                value = "%orb%"
+                array = "subspells"
+                ext = "spl"
+            RET res = resource END
+
+            LPF ALTER_EFFECT INT_VAR
+                verbose = 1
+                match_opcode = 146              //Cast spell.
+            STR_VAR
+                match_resource = "%match%"
+                resource = "%res%"
+            END
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION larloch_minor_drain BEGIN
+    //Patch-in string ref.
+    LPF get_spell_header_count RET headers_count = count END
+    FOR (i = 1; i <= headers_count; ++i) BEGIN
+        //Get reference.
+        LPF get_table_ref STR_VAR
+            value = "larloch_minor_drain_%i%"
+            array = "subspells"
+            ext = "spl"
+        RET res = resource END
+
+        LPF ALTER_EFFECT INT_VAR
+            verbose = 1
+            header = i - 1
+            match_opcode = 146              //Cast spell.
+        STR_VAR
+            match_resource = "spl#res"
+            resource = "%res%"
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION reflected_image BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "reflected_image_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "refl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION spook BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "spook_panic"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "fear#res"
+        resource = "%res%"
+    END
+END

@@ -50,3 +50,37 @@ DEFINE_PATCH_FUNCTION cause_light_itm BEGIN
         resource = "%res%"
     END
 END
+
+DEFINE_PATCH_FUNCTION shocking_grasp_itm BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "shocking_grasp_stun"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "stun#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION ghoul_touch_itm BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "ghoul_touch_hold"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "hold#res"
+        resource = "%res%"
+    END
+END

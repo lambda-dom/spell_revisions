@@ -12,4 +12,4 @@ Proposed changes to SR base spells.
 
 ## B. 1. Level 1.
 
-* Grease: increase aoe to something more useful.
+* Grease: increase aoe.
