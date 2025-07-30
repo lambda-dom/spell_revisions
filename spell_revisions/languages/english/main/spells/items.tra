@@ -2,20 +2,28 @@
 //Items for spells.
 //Divine.
 //Level 1.
-@2100 = "Magical Stone"
-@2101 = "These stones have been enchanted by the Magical Stone spell."
+@1100 = "Magical Stone"
+@1101 = "These stones have been enchanted by the Magical Stone spell."
 
-@2110 = "Shillelagh"
-@2111 = "This magical cudgel was created by the Shillelagh spell."
+@1110 = "Shillelagh"
+@1111 = "This magical cudgel was created by the Shillelagh spell."
 
-@2120 = "Cause Light Wounds"
-@2121 = "Fists enchanted by the Cause Light Wounds spell."
+@1120 = "Cause Light Wounds"
+@1121 = "Fists enchanted by the Cause Light Wounds spell."
 
-@2130 = "Goodberry"
-@2131 = "Created by the Goodberry spell, this simple-looking berry will heal one point of damage."
-@2132 = "Created by the Goodberry spell, this simple-looking berry will heal two points of damage."
-@2133 = "Created by the Goodberry spell, this simple-looking berry will heal three points of damage."
-@2134 = "Created by the Goodberry spell, this simple-looking berry will heal four points of damage."
-@2135 = "Created by the Goodberry spell, this simple-looking berry will heal five points of damage."
-@2136 = "Created by the Goodberry spell, this simple-looking berry will heal six points of damage."
-@2137 = "Created by the Goodberry spell, this simple-looking berry will heal seven points of damage."
+@1130 = "Goodberry"
+@1131 = "Created by the Goodberry spell, this simple-looking berry will heal one point of damage."
+@1132 = "Created by the Goodberry spell, this simple-looking berry will heal two points of damage."
+@1133 = "Created by the Goodberry spell, this simple-looking berry will heal three points of damage."
+@1134 = "Created by the Goodberry spell, this simple-looking berry will heal four points of damage."
+@1135 = "Created by the Goodberry spell, this simple-looking berry will heal five points of damage."
+@1136 = "Created by the Goodberry spell, this simple-looking berry will heal six points of damage."
+@1137 = "Created by the Goodberry spell, this simple-looking berry will heal seven points of damage."
+
+//Arcane.
+//Level 1.
+@2100 = "Shocking Grasp"
+@2101 = "Fists enchanted by the Shocking Grasp spell."
+
+@2110 = "Chill Touch"
+@2111 = "Fists enchanted by the Chill Touch spell."

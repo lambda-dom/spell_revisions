@@ -1,0 +1,7 @@
+//Description strings.
+//Subspells.
+//Chromatic orb aux subspells.
+@2101 = "Green Orb"
+@2102 = "Yellow Orb"
+@2103 = "Violet Orb"
+@2104 = "Blue Orb"

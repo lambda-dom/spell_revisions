@@ -1,0 +1,355 @@
+//Description strings.
+//Arcane level 1 spells.
+//grease:spwi101
+@1010 = "Grease"
+@1011 = "Grease
+Level: 1
+School: Conjuration
+Range: Medium
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: 10' radius
+Saving Throw: Breath partial
+
+A Grease spell covers a material surface with a slippery layer of a fatty, greasy nature. Any creature caught in it when the spell is cast must save vs. breath at +2 bonus or fall to the ground for one round. Those who enter the area or remain within it must make a save each round until they reach the nearest non-greased surface. A creature that succeeds on their saving throw can walk within or through the area of grease but will have their movements slowed considerably. Incorporeal and flying creatures are unaffected by this spell, as are exceptionally large creatures who suffer little to no distress from the greasy coating."
+
+//armor:spwi102
+@1020 = "Mage Armor"
+@1021 = "Mage Armor
+Level: 1
+School: Conjuration
+Range: Personal
+Duration: 8 hours
+Casting Time: 1 round
+Area of Effect: Caster
+Saving Throw: None
+
+By means of this spell, the wizard creates a magical field of force that sets its base armor class to 6. This improves by 1 AC for every four levels of the caster, up to a minimum base armor class of 3 at 12th level. This armor does not hinder movement, adds no weight or encumbrance, nor does it prevent spellcasting. It lasts until successfully dispelled or until the duration runs out."
+
+//burning_hands:spwi103
+@1030 = "Burning Hands"
+@1031 = "Burning Hands
+Level: 1
+School: Evocation
+Range: Special
+Duration: Instant
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: None
+
+When the wizard casts this spell, a cone of searing flames shoots from his fingertips towards a designated point. His hands must be held so as to send forth a fan-like sheet of flames: the wizard's thumbs must touch each other and his fingers must be spread. The burning hands send out 10-foot-long jets of flame in a horizontal arc of about 60 degrees in front of the wizard. All creatures caught in the flames suffer 1d6 points of fire damage plus 1d6 for every other 2 levels of the caster, up to a maximum of 5d6 at 9th level."
+
+//charm_person:spwi104
+@1040 = ~Charm Person~
+@1041 = ~Charm Person
+Level: 1
+School: Enchantment
+Range: Long
+Duration: 5 rounds
+Casting Time: 1
+Area of Effect: 1 person
+Saving Throw: Spell negates
+
+This spell affects any single person that it is cast upon. The term "person" includes any bipedal human, demihuman, or humanoid of man-size or smaller, such as dwarves, elves, gnolls, gnomes, half-elves, halflings, half-orcs, hobgoblins, kobolds, and others. If the target fails their save vs. spell, they regard the caster as a trusted friend and ally to be heeded and protected for the duration of the spell. The caster may give them orders, and the charmed creature will carry them out as quickly as possible.
+
+Creatures that are currently neutral to the caster are more amenable to helping them and make their saving throw with no bonus, while those that are hostile are significantly more difficult to influence and instead gain a +4 bonus to making their saving throw. If the caster attempts to harm the charmed creature, the spell is broken and the affected creature will immediately become hostile to the caster. If two or more charm effects simultaneously affect a creature, the most recent charm takes precedence. After the duration of the spell or if a dispel magic is successfully cast upon them, the affected creature resumes their previous behavior prior to being charmed.~
+
+//color_spray:spwi105
+@1050 = "Color Spray"
+@1051 = "Color Spray
+Level: 1
+School: Alteration
+Range: Special
+Duration: Special
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: Spell negates
+
+Upon casting this spell, the wizard causes a vivid, fan-shaped spray of clashing colors to spring forth from his hand. The spray is 15 feet in length and spread out in a horizontal arc of about 60 degrees in front of the wizard. The spell's effects depend upon the caster's level - creatures with Hit Dice/levels less than or equal to the caster are slowed for 5 rounds, those with Hit Dice/levels one or two greater than the wizard are blinded for 3 rounds, and all others are confused for 1 round. Creatures with more than 22 Hit Dice/levels will have to save only against the confusion effect, regardless of the caster's level."
+
+//spwi106: Blindness
+//spwi107: Friends
+//protection_petrification:spwi108
+@1080 = "Protection from Petrification"
+@1081 = "Protection from Petrification
+Level: 1
+School: Abjuration
+Range: Touch
+Duration: 1 hour
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell grants the recipient immunity to all petrification attacks. This includes basilisk and medusa gaze, cursed scrolls of petrification, etc."
+
+//non-existent: spwi109
+//identify:spwi110
+@1100 = "Identify"
+@1101 = "Identify
+Level: 1
+School: Divination
+Range: Personal
+Duration: Instant
+Casting Time: Special
+Area of Effect: 1 item
+Saving Throw: None
+
+When this spell is cast, name and enchantments (including curses) of one item subsequently touched by the wizard are revealed without fail. Many unidentified items can still be used, but at great risk."
+
+//spwi111: Infravision
+//magic_missile:spwi112
+@1120 = "Magic Missile"
+@1121 = "Magic Missile
+Level: 1
+School: Evocation
+Range: Long
+Duration: Instant
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+Use of the Magic Missile spell, one of the most popular first level spells, creates up to five missiles of magical energy that dart forth from the wizard's fingertip and unerringly strike their target, which must be a creature of some sort. Each missile inflicts 1d4 + 1 points of damage. For every two extra levels of experience, the wizard gains an additional missile - he has two at 3rd level, three at 5th level, four at 7th level, and a maximum of five missiles at 9th level."
+
+//protection_evil:spwi113
+@1130 = "Protection from Evil"
+@1131 = "Protection from Evil
+Level: 1
+School: Abjuration
+Range: Touch
+Duration: 5 turns
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, it creates a magical barrier around the recipient at a distance of one foot. The barrier moves with the recipient and has two major effects: first, all attacks made by evil or evilly enchanted creatures against the protected creature receive a -2 penalty to their attack roll, and second, any saving throws caused by such attacks are made by the protected creature with a +2 bonus."
+
+//shield:spwi114
+@1140 = "Shield"
+@1141 = "Shield
+Level: 1
+School: Abjuration
+Range: Personal
+Duration: 5 turns
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+When this spell is cast, an invisible barrier comes into being in front of the wizard, granting him immunity to the spell Magic Missile. Furthermore, the fluctuating force shield around the caster acts similarly to a regular shield, effectively increasing AC by 2 points (+4 vs. missile weapons). This effect lasts for the duration of the spell or until dispelled."
+
+//shocking_grasp:spwi115
+@1150 = "Shocking Grasp"
+@1151 = "Shocking Grasp
+Level: 1
+School: Evocation
+Range: Personal
+Duration: Special
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Special
+
+When the wizard touches a creature while this spell is in effect, an electrical charge will deal 1d6 points of damage and stun the target for 1 round. If the target makes a successful saving throw vs. spell, he is not stunned. For every two extra experience levels of the caster, the creature will suffer an additional 1d6 points of damage and roll their saving throw at an increased -1 penalty, to a maximum of 5d6 damage and a -4 saving throw penalty at 9th level. The spell expires once the caster makes a successful melee attack or after 1 turn has passed. The wizard gains a +4 bonus to hit the target."
+
+//sleep:spwi116
+@1160 = "Sleep"
+@1161 = "Sleep
+Level: 1
+School: Enchantment
+Range: Long
+Duration: 5 rounds
+Casting Time: 1
+Area of Effect: 30' radius
+Saving Throw: Spell negates
+
+When a wizard casts a Sleep spell, he causes a comatose slumber to come upon one or more creatures. Creatures in the area of effect must make a saving throw vs. spell or fall asleep. Any further attempts to harm the targets will waken them. Opponents with more Hit Dice/levels than the caster are unaffected by this spell. Elves and half-elves are particularly resistant to sleep effects, while the undead and certain other creatures such as dragons, elementals and constructs are completely immune to magically induced sleep."
+
+//chill_touch:spwi117
+@1170 = "Chill Touch"
+@1171 = "Chill Touch
+Level: 1
+School: Necromancy
+Range: Personal
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: Special
+
+When the caster completes this spell, a blue glow encompasses his hand. This energy attacks the life force of any living creature upon which the wizard makes a successful melee attack. The touched creature suffers 1d6 points of cold damage and loses one point of strength for 1 hour (no ability drain if the victim saves vs. death). The wizard gains a +4 bonus to hit the target and his touch is considered to be of +1 enchantment to determine what it can hit."
+
+//chromatic_orb:spwi118
+@1180 = "Chromatic Orb"
+@1181 = "Chromatic Orb
+Level: 1
+School: Alteration
+Range: Long
+Duration: Special
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Spell partial
+
+This spell causes a 2-foot-diameter sphere to appear in the caster's hand. When thrown, the sphere heads unerringly towards its target. The sphere inflicts magic damage and causes different effects depending upon its color. As the level of the caster improves, both the damage inflicted and number of colors known increases. The color of any given orb is chosen randomly from the colors known at the wizard's level. The orb is occasionally even multicolored, causing multiple effects. The victim can save vs. spell against all special effects but gets no save against the damage. All special effects last for 5 rounds, except poison that lasts for 3 rounds.
+
+1st level: 1d3 damage; White - Light (-4 penalty to saving throws)
+2nd level: 1d4 damage; Aquamarine - Magnetism (-4 penalty to AC)
+4th level: 1d6 damage; Red - Pain (-1 to strength and dexterity)
+6th level: 1d8 damage; Green - Poison (2 hp per round)
+8th level: 1d10 damage; Yellow - Blindness
+10th level: 2d6 damage; Violet - Slow
+12th+ level: 2d8 damage; Blue - Paralysis"
+
+//Chromatic orb aux spells.
+@1182 = "White Orb"
+@1183 = "Aquamarine Orb"
+@1184 = "Red Orb"
+
+
+//larloch_minor_drain:spwi119
+@1190 = "Larloch's Minor Drain"
+@1191 = "Larloch's Minor Drain
+Level: 1
+School: Necromancy
+Range: Long
+Duration: Special
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+With this spell, the wizard drains the life force from a target and adds it to his own. The target creature suffers 2 points of damage, while the mage gains 2 hit points. For every two extra levels of the caster, the draining is augmented by 2 points, up to a maximum of 10 points at 9th level. If the mage goes over his maximum hit point total with this spell, he loses it after 1 turn."
+
+//reflected_image:spwi120
+@1200 = "Reflected Image"
+@1201 = "Reflected Image
+Level: 1
+School: Illusion
+Range: Personal
+Duration: 4 rounds + 1 round/3 levels
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+Upon casting this spell, the wizard creates one illusory image of himself that will travel alongside him. The image performs all of the actions that the wizard does, and seems to react normally to both physical and magical damage (such as appearing to be burned when hit by a fireball) so that if any enemies are trying to attack the wizard they will not know which one is real. There is a 50% chance that an attacker will attack the image and a 50% chance that he will attack the caster. The image is immune to all forms of damage, but will disappear if a dispel magic or a detect illusion spell is cast upon it, or when the spell duration runs out. This spell cannot be cast on anyone who is under the effects of a Mirror Image spell, and multiple castings of this spell will not create additional images."
+
+//non-existent: spwi121
+//non-existent: spwi122
+//Find Familiar: spwi123
+
+//nahal_reckless_dweomer:spwi124
+@1240 = "Nahal's Reckless Dweomer"
+@1241 = "Nahal's Reckless Dweomer
+Level: 1
+School: Conjuration
+Range: Personal
+Duration: Special
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: Special
+
+This spell is the wild mage's ultimate last-resort spell. When cast, the mage releases a sudden flood of wild magical energy in the hope of seizing and shaping that energy into a desired spell effect. The attempt usually fails, but something almost always occurs in the process.
+
+To use Reckless Dweomer, simply cast it and then choose from your list of known spells. A burst of magical energy is released, which the wild mage tries to manipulate into the desired form. The actual effect of the spell is determined randomly by a dice roll on the Wild Surge Table, as found in your manual. Because the release of energy is planned by the mage, his level is added to the dice roll. If the result indicates success, the mage has shaped the magical energy into the desired effect. More often than not, the effect is completely unexpected. The result may be beneficial to the mage or it may be completely disastrous; this is the risk the mage takes in casting Nahal's Reckless Dweomer."
+
+//spook:spwi125
+@1250 = "Spook"
+@1251 = "Spook
+Level: 1
+School: Illusion
+Range: Long
+Duration: 5 rounds
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Special
+
+A Spook spell enables the wizard to play upon natural fears to cause the target creature to perceive the spellcaster as someone or something inimical which then appears to advance upon it in a threatening manner. If the creature does not make a successful saving throw vs. spell, it turns and flees at maximum speed as far from the wizard as possible. The creature has a saving throw penalty of -1 to save against this spell for every two extra experience levels of the caster, to a maximum of -4 at 9th level. Although the caster does not actually pursue the fleeing creature, a phantasm from its own mind does. Undead creatures and constructs, certain powerful creatures who can easily discern the illusion such as dragons, and creatures under the effect of a True Seeing spell, are immune to the effects of this spell."
+
+
+//New spells.
+@1500 = "Obscuring Mist"
+@1501 = "Obscuring Mist
+Level: 1
+School: Conjuration
+Range: Long
+Duration: 6 rounds
+Casting Time: 5
+Area of Effect: 20' radius
+Saving Throw: None
+
+When this spell is cast, a misty bank of fog billows out from the designated point obscuring all sight. Everyone within the cloud suffer -2 penalty to attack rolls, and have their line of sight halved. Anyone, inside or outside the cloud, trying to attack a creature concealed by the fog with ranged weapons will do so with a -4 penalty to attack rolls. Creatures with blindsight, or that do not rely on sight can fight within the cloud without penalties."
+
+@1510 = "Expeditious Retreat"
+@1511 = "Expeditious Retreat
+Level: 1
+School: Alteration
+Range: Personal
+Duration: 3 rounds
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: None
+
+When cast, this spell provides all friendly creatures in the area with an amazing fleetness of foot. The affected creatures movement rate is almost tripled for the duration of the spell, but the excessively unnatural speed prevents them from taking almost any other actions except for running."
+
+@1520 = "True Strike"
+@1521 = "True Strike
+Level: 1
+School: Divination
+Range: Personal
+Duration: 3 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This spell grants the caster otherworldly sight, resulting in preternatural accuracy for a short period. While the spell is in effect attack rolls are made with a +4 perception bonus and the chance to score critical hits is increased by 5%."
+
+@1530 = "Dimension Jump"
+@1531 = "Dimension Jump
+Level: 1
+School: Conjuration
+Range: Personal
+Duration: Instant
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This spell transports the caster to any place within sight. When the spell is cast, a dimensional portal opens up in front of the caster, which he immediately steps through. Upon passing through the portal, the caster finds himself at his chosen destination. The caster always arrives at exactly the spot desired, and the dimensional door doesn't allow anyone or anything else to pass through. Spells about to be cast upon the wizard will fail, and missiles about to hit him will instead hit thin air."
+
+@1540 = "Know Alignment"
+@1541 = "Know Alignment
+Level: 1
+School: Divination
+Range: Personal
+Duration: Instant
+Casting Time: 2
+Area of Effect: Special
+Saving Throw: None
+
+This spell allows the wizard to search out the feelings of all creatures within the current area. When affected by this spell, a target will briefly glow red if he's evil, green if he's good, and white if he's neutral. Magic resistance does not affect this spell."
+
+@1550 = "Monster Summoning I"
+@1551 = "Monster Summoning I
+Level: 1
+School: Conjuration
+Range: Medium
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster summons a number of monsters, which serve the mage under any conditions. The type and number of creatures that appear depend upon the level of the wizard casting the spell. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires.
+
+1st : 2 gibberlings
+3rd : 3 gibberlings
+5th : 4 gibberlings
+7th+ : 5 gibberlings
+
+Gibberling (1 Hit Dice):
+STR 10, DEX 10, CON 10, INT 6, WIS 7, CHA 4;  AL Chaotic Neutral
+HP 8, AC 10, THAC0 19, Saving Throws 13/17/15/13/17
+1 Attack Per Round, 1d6 Piercing Damage (Masterwork Short Sword)"
+
+
+//Strings for display string [139] opcodes.
+@10101 = "Magic Armor"
+@10102 = "Protected from petrification"
+@10103 = "Protected from evil"
+@10104 = "Shielded"
+
+//Not used yet: sleep on creatures with dice > caster level.
+@10201 = "Spell Ineffective"

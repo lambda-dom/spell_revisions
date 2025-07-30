@@ -1,3 +1,6 @@
 //Items for summons.
 //Divine.
 @1101 = "Bite"
+
+//Arcane.
+@2101 = "Short Sword"
