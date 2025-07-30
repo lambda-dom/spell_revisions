@@ -1,4 +1,7 @@
 //Description strings.
 //Summons.
 //Divine.
-@1001 = "Bat"
+@1101 = "Bat"
+
+//Arcane.
+@2101 = "Gibberling"

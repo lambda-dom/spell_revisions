@@ -261,6 +261,90 @@ Saving Throw: Special
 A Spook spell enables the wizard to play upon natural fears to cause the target creature to perceive the spellcaster as someone or something inimical which then appears to advance upon it in a threatening manner. If the creature does not make a successful saving throw vs. spell, it turns and flees at maximum speed as far from the wizard as possible. The creature has a saving throw penalty of -1 to save against this spell for every two extra experience levels of the caster, to a maximum of -4 at 9th level. Although the caster does not actually pursue the fleeing creature, a phantasm from its own mind does. Undead creatures and constructs, certain powerful creatures who can easily discern the illusion such as dragons, and creatures under the effect of a True Seeing spell, are immune to the effects of this spell."
 
 
+//New spells.
+@1500 = "Obscuring Mist"
+@1501 = "Obscuring Mist
+Level: 1
+School: Conjuration
+Range: Long
+Duration: 6 rounds
+Casting Time: 5
+Area of Effect: 20' radius
+Saving Throw: None
+
+When this spell is cast, a misty bank of fog billows out from the designated point obscuring all sight. Everyone within the cloud suffer -2 penalty to attack rolls, and have their line of sight halved. Anyone, inside or outside the cloud, trying to attack a creature concealed by the fog with ranged weapons will do so with a -4 penalty to attack rolls. Creatures with blindsight, or that do not rely on sight can fight within the cloud without penalties."
+
+@1510 = "Expeditious Retreat"
+@1511 = "Expeditious Retreat
+Level: 1
+School: Alteration
+Range: Personal
+Duration: 3 rounds
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: None
+
+When cast, this spell provides all friendly creatures in the area with an amazing fleetness of foot. The affected creatures movement rate is almost tripled for the duration of the spell, but the excessively unnatural speed prevents them from taking almost any other actions except for running."
+
+@1520 = "True Strike"
+@1521 = "True Strike
+Level: 1
+School: Divination
+Range: Personal
+Duration: 3 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This spell grants the caster otherworldly sight, resulting in preternatural accuracy for a short period. While the spell is in effect attack rolls are made with a +4 perception bonus and the chance to score critical hits is increased by 5%."
+
+@1530 = "Dimension Jump"
+@1531 = "Dimension Jump
+Level: 1
+School: Conjuration
+Range: Personal
+Duration: Instant
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This spell transports the caster to any place within sight. When the spell is cast, a dimensional portal opens up in front of the caster, which he immediately steps through. Upon passing through the portal, the caster finds himself at his chosen destination. The caster always arrives at exactly the spot desired, and the dimensional door doesn't allow anyone or anything else to pass through. Spells about to be cast upon the wizard will fail, and missiles about to hit him will instead hit thin air."
+
+@1540 = "Know Alignment"
+@1541 = "Know Alignment
+Level: 1
+School: Divination
+Range: Personal
+Duration: Instant
+Casting Time: 2
+Area of Effect: Special
+Saving Throw: None
+
+This spell allows the wizard to search out the feelings of all creatures within the current area. When affected by this spell, a target will briefly glow red if he's evil, green if he's good, and white if he's neutral. Magic resistance does not affect this spell."
+
+@1550 = "Monster Summoning I"
+@1551 = "Monster Summoning I
+Level: 1
+School: Conjuration
+Range: Medium
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster summons a number of monsters, which serve the mage under any conditions. The type and number of creatures that appear depend upon the level of the wizard casting the spell. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires.
+
+1st : 2 gibberlings
+3rd : 3 gibberlings
+5th : 4 gibberlings
+7th+ : 5 gibberlings
+
+Gibberling (1 Hit Dice):
+STR 10, DEX 10, CON 10, INT 6, WIS 7, CHA 4;  AL Chaotic Neutral
+HP 8, AC 10, THAC0 19, Saving Throws 13/17/15/13/17
+1 Attack Per Round, 1d6 Piercing Damage (Masterwork Short Sword)"
+
+
 //Strings for display string [139] opcodes.
 @10101 = "Magic Armor"
 @10102 = "Protected from petrification"

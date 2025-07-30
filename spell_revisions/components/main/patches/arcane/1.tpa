@@ -140,7 +140,7 @@ DEFINE_PATCH_FUNCTION shocking_grasp STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION sleep BEGIN
+DEFINE_PATCH_FUNCTION sleep STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "sleep_a"
@@ -150,14 +150,14 @@ DEFINE_PATCH_FUNCTION sleep BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 146              //Cast spell.
+        match_opcode = 146                  //Cast spell.
     STR_VAR
         match_resource = "spl#res"
         resource = "%res%"
     END
 END
 
-DEFINE_PATCH_FUNCTION chill_touch BEGIN
+DEFINE_PATCH_FUNCTION chill_touch STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "chill_touch"
@@ -167,14 +167,14 @@ DEFINE_PATCH_FUNCTION chill_touch BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 111              //Create Weapon.
+        match_opcode = 111                  //Create Weapon.
     STR_VAR
         match_resource = "chll#res"
         resource = "%res%"
     END
 END
 
-DEFINE_PATCH_FUNCTION chromatic_orb BEGIN
+DEFINE_PATCH_FUNCTION chromatic_orb STR_VAR destination = "*" BEGIN
     PATCH_WITH_SCOPE BEGIN
         DEFINE_ASSOCIATIVE_ARRAY spell_orbs BEGIN
             "chromatic_orb_white"       => "whte#orb"
@@ -192,7 +192,7 @@ DEFINE_PATCH_FUNCTION chromatic_orb BEGIN
 
             LPF ALTER_EFFECT INT_VAR
                 verbose = 1
-                match_opcode = 146              //Cast spell.
+                match_opcode = 146          //Cast spell.
             STR_VAR
                 match_resource = "%match%"
                 resource = "%res%"
@@ -220,7 +220,7 @@ DEFINE_PATCH_FUNCTION chromatic_orb BEGIN
 
             LPF ALTER_EFFECT INT_VAR
                 verbose = 1
-                match_opcode = 146              //Cast spell.
+                match_opcode = 146          //Cast spell.
             STR_VAR
                 match_resource = "%match%"
                 resource = "%res%"
@@ -229,7 +229,7 @@ DEFINE_PATCH_FUNCTION chromatic_orb BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION larloch_minor_drain BEGIN
+DEFINE_PATCH_FUNCTION larloch_minor_drain STR_VAR destination = "*" BEGIN
     //Patch-in string ref.
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
@@ -251,7 +251,7 @@ DEFINE_PATCH_FUNCTION larloch_minor_drain BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION reflected_image BEGIN
+DEFINE_PATCH_FUNCTION reflected_image STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "reflected_image_a"
@@ -261,14 +261,14 @@ DEFINE_PATCH_FUNCTION reflected_image BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 146              //Cast spell.
+        match_opcode = 146                  //Cast spell.
     STR_VAR
         match_resource = "refl#res"
         resource = "%res%"
     END
 END
 
-DEFINE_PATCH_FUNCTION spook BEGIN
+DEFINE_PATCH_FUNCTION spook STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "spook_panic"
@@ -278,9 +278,46 @@ DEFINE_PATCH_FUNCTION spook BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 146              //Cast spell.
+        match_opcode = 146                  //Cast spell.
     STR_VAR
         match_resource = "fear#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION obscuring_mist STR_VAR destination = "*" BEGIN
+    //Add protection from cleric obscuring mist.
+    LPF get_spell_res STR_VAR
+        spell = "CLERIC_OBSCURING_MIST"
+    RET res = resource END
+
+    LPF CLONE_EFFECT INT_VAR
+        check_globals = 0
+        check_headers = 1
+        verbose = 1
+        match_opcode = 142                  //Display icon
+        opcode = 206                        //Protection from spell.
+        parameter1 = 0                      //Clean.
+        parameter2 = 0
+    STR_VAR
+        resource = "%res%"
+        insert = "last"
+    END
+END
+
+DEFINE_PATCH_FUNCTION monster_summoning_1 BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "summon_gibberling"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 177              //Use Eff.
+    STR_VAR
+        match_resource = "summ#res"
         resource = "%res%"
     END
 END
