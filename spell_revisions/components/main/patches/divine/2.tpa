@@ -16,6 +16,10 @@ LAF get_table_references STR_VAR
     tables = "items"
 RET_ARRAY items = references END
 
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
 LAF get_component_resources_dir RET resources = dir END
 LAF get_table_references STR_VAR
     tables = "2"
@@ -162,7 +166,7 @@ DEFINE_PATCH_FUNCTION silence STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION spiritual_hammer BEGIN
+DEFINE_PATCH_FUNCTION spiritual_hammer STR_VAR destination = "*" BEGIN
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
         //Get reference.
@@ -175,7 +179,7 @@ DEFINE_PATCH_FUNCTION spiritual_hammer BEGIN
         LPF ALTER_EFFECT INT_VAR
             verbose = 1
             header = i - 1
-            match_opcode = 111          //Create Weapon.
+            match_opcode = 111              //Create Weapon.
         STR_VAR
             match_resource = "item#res"
             resource = "%res%"
@@ -183,3 +187,83 @@ DEFINE_PATCH_FUNCTION spiritual_hammer BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION know_opponent STR_VAR destination = "*" BEGIN
+    LPF get_spell_res STR_VAR spell = "CLERIC_KNOW_OPPONENT" RET old = resource END
+    LPF get_spell_res STR_VAR spell = "WIZARD_KNOW_OPPONENT" RET new = resource END
+
+    LPF CLONE_EFFECT INT_VAR
+        check_globals = 0
+        check_headers = 1
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "%old%"
+        resource = "%new%"
+        insert = "below"
+    END
+END
+
+DEFINE_PATCH_FUNCTION cure_moderate_wounds STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10206
+        match_opcode = 240                  //Remove portrait icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION regen_moderate_wounds BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10207
+        match_opcode = 142                  //Display portrait icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION gust_wind_druid BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "gust_wind_knockback"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "knck#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION cause_moderate_wounds BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "cause_moderate_wounds"
+        array = "items"
+        ext = "itm"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 111              //Create Weapon.
+    STR_VAR
+        match_resource = "item#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION animal_summoning_2 BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "summon_war_dog"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 177              //Use Eff.
+    STR_VAR
+        match_resource = "summ#res"
+        resource = "%res%"
+    END
+END

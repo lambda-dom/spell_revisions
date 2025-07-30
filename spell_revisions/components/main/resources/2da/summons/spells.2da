@@ -1,4 +1,5 @@
 2DA V1.0
 *
-                install name    descr   type    lvl flags       school      sectype book_icon   abil_icon   projectile          patch           over    destination
-bat_swarm       1       *       *       special 1   00000000    *           *       *           *           #lbl:bat_swarm      *               0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_1
+                install name    descr   type    lvl flags       school      sectype book_icon   abil_icon   projectile          patch   over    destination
+bat_swarm       1       *       *       special 1   00000000    *           *       *           *           #lbl:bat_swarm      *       0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_1
+war_dog_scent   1       *       *       special 1   00011000    none        none    *           *           #lbl:war_dog_scent  *       0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_2

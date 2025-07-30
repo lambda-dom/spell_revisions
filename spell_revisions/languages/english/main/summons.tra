@@ -2,6 +2,7 @@
 //Summons.
 //Divine.
 @1101 = "Bat"
+@1201 = "War Dog"
 
 //Arcane.
 @2101 = "Gibberling"

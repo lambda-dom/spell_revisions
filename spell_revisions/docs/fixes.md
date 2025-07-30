@@ -6,6 +6,10 @@ Fixes to base SR, v4.19.
 
 * Animal Summoning I: the thac0 and saves of bats in the cre file and description disagree. Went with the description.
 
+## A. 2. Level 2.
+
+* Animal Summoning II: AC of war dogs disagrees in the cre file and the description. Went with the description.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.
