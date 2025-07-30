@@ -1,12 +1,20 @@
+Not just things to (still) do but also proposed changes to spells.
+
 # A. Divine spells.
 
 ## A. 1. Level 1.
 
+* Armor of Faith: restore resistances of old spell.
+
 * Entangle: current implementation is incorrect as the decrease movement applies to all creatures, including those that should be immune. Solution: if we want to use the subspell (and we should), we may need another spell to decrease speed and then call the subspell.
 
-* Find Familiar: implement.
+* Goodberry: scaling, slow regenerating effect of 1 hp for round. Only castable outdoors and ooc.
+
+* Find Familiar: yet to implement.
 
 ## A. 2. Level 2.
+
+* Chant: have good chant nullify bad chant and vice versa.
 
 * Cure Moderate Wounds: move Cleric_Cure_Medium_Wounds to level 2.
 
@@ -16,7 +24,7 @@
 
 ## B. 1. Level 1.
 
-* Grease: follow above implementation? Use a sleep subspell?
+* Grease: follow above implementation? Use a sleep subspell? Also increase aoe.
 
 * Sleep: display ineffective spell for creatures with dice > caster level.
 
