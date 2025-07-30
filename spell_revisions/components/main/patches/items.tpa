@@ -51,6 +51,40 @@ DEFINE_PATCH_FUNCTION cause_light_itm BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION cause_moderate_itm BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "cause_moderate_wounds_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION cause_serious_itm BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "cause_serious_wounds_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+END
+
 DEFINE_PATCH_FUNCTION shocking_grasp_itm BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR

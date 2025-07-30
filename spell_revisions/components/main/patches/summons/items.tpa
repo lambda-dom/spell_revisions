@@ -25,7 +25,7 @@ DEFINE_PATCH_FUNCTION bat_immunities BEGIN
         check_globals = 1
         check_headers = 0
         verbose = 1
-        match_opcode = 232              //Cast spell on condition.
+        match_opcode = 232                  //Cast spell on condition.
     STR_VAR
         match_resource = "swrm#res"
         resource = "%res%"
@@ -51,14 +51,33 @@ DEFINE_PATCH_FUNCTION bat_immunities BEGIN
         END
 
         LPF ADD_ITEM_EQEFFECT INT_VAR
-            opcode = 206                //Protection from spell
-            parameter1 = 0              //Zero out.
+            opcode = 206                    //Protection from spell
+            parameter1 = 0                  //Zero out.
             parameter2 = 0
-            target = 1                  //Self.
-            timing = 2                  //Equipped.
-            insert_point = 0 - 1        //Last.
+            target = 1                      //Self.
+            timing = 2                      //Equipped.
+            insert_point = 0 - 1            //Last.
         STR_VAR
             resource = "%res%"
         END
+    END
+END
+
+DEFINE_PATCH_FUNCTION war_dog_scent BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "war_dog_scent"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 1
+        check_headers = 0
+        verbose = 1
+        match_opcode = 232                  //Cast spell on condition.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
     END
 END

@@ -6,6 +6,12 @@
 
 * Find Familiar: implement.
 
+## A. 2. Level 2.
+
+* Cure Moderate Wounds: move Cleric_Cure_Medium_Wounds to level 2.
+
+* Regenerate Moderate Wounds: handle stacking of regen spells. The idea is that higher level remove and block lower level.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

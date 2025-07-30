@@ -12,5 +12,6 @@ LAF get_component_tra_dir RET tra = dir END
 LAF install_resources STR_VAR
     type = "subspell"
     table = "%resources%/2da/subspells.2da"
+    patches = "%root%/patches/subspells.tpa"
     tra = "%tra%/subspells.tra"
 END
