@@ -75,13 +75,114 @@ Saving Throw: None
 
 When a priest casts a find traps spell, all traps - concealed normally or magically - of magical or mechanical nature become apparent to him. Once per round, all traps within a 30 foot radius of the caster will be revealed. A trap is any device or magical ward that meets three criteria: it can inflict a sudden or unexpected result, the spellcaster would view the result as undesirable or harmful, and the creator specifically intended the harmful or undesirable result as such. Thus, traps include glyphs and similar spells or devices."
 
+//flame_blade:sppr206
+@2060 = "Flame Blade"
+@2061 = "Flame Blade
+Level: 2
+School: Evocation
+Sphere: Elemental (Fire)
+Range: Personal
+Duration: 2 turns
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+With this spell, the caster causes a blazing ray of red-hot fire to spring forth from his hand. The caster wields this blade-like ray as if proficient with the weapon, at his normal THAC0. At level 3, it functions as a magical weapon, dealing 2d6+1 points of fire damage, with an enchantment bonus of +1. For every other three experience levels of the spellcaster, this bonus increases by one, up to a total of +3 enchantment level, +3 to attack rolls, and +3 to damage for a 9th-level caster. Since the blade is immaterial, strength modifiers do not apply to attack rolls or damage, and attacks with the flame blade are considered melee touch attacks (+4 attack roll bonus)."
+
+//sppr207:goodberry:moved to level 1
+//hold_person:sppr208
+@2080 = "Hold Person"
+@2081 = "Hold Person
+Level: 2
+School: Enchantment
+Sphere: Charm, Law
+Range: Long
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: Target and enemies within 5'
+Saving Throw: Spell negates
+
+This spell holds one or more humans, demihumans, or humanoid creatures rigidly immobile and in place for one turn. The effect is centered on the victim selected by the caster. Every enemy within 5 feet of the target is also affected. Those who succeed at a saving throw vs. spell are totally unaffected by the spell. Undead creatures cannot be held with this spell.
+
+Held creatures cannot move or speak, but they remain aware of events around them even though they are helpless to change them. Time passes at a normal rate for the targets and hence being held does not stop any worsening of their condition due to wounds, disease, or poison."
+
+//know alignment:sppr209. To feprecate as detect alignment already exists at level 1.
+//resist_elements:sppr210: replaces resist fire.
+@2100 = "Resist Elements"
+@2101 = "Resist Elements
+Level: 2
+School: Transmutation
+Sphere: Protection
+Range: Touch
+Duration: 1 turn + 1 round/level
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None
+
+Upon the casting of this spell, the recipient's resistance to all forms of elemental damage is increased by 25%. This effect will last for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
+
+//silence:sppr211
+@2110 = "Silence"
+@2111 = "Silence
+Level: 2
+School: Alteration
+Sphere: Guardian
+Range: Long
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: 15' radius
+Saving Throw: Spell negates
+
+Upon casting this spell, complete silence prevails in the affected area. All sound is stopped: conversation is impossible and spells cannot be cast unless an affected spellcaster then casts Vocalize. All enemies in the area must make a saving throw vs. spell at -4; if the save is failed, then they are silenced for the duration of the spell. At the instant the spell is completed, it affects all creatures in a 15 foot radius centered on the point selected by the caster (thus, affected creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not)."
+
+//slow_poison:sppr212
+@2120 = "Slow Poison"
+@2121 = "Slow Poison
+Level: 2
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: Instant
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast upon a poisoned individual, it greatly slows the effects of venom, actually neutralizing all but the most deadly poisons."
+
+//spiritual_hammer:sppr213
+@2130 = "Spiritual Hammer"
+@2131 = "Spiritual Hammer
+Level: 2
+School: Evocation
+Sphere: Combat
+Range: Medium
+Duration: 2 turns
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+By calling upon his deity, the caster of a Spiritual Hammer spell brings into existence a field of force shaped vaguely like a hammer. The caster wields the spiritual hammer as if proficient with the weapon, at his normal THAC0. As long as the caster concentrates upon the hammer, it can be used to strike at any opponents within 20 feet, but the wielder does not receive the standard penalty for holding a ranged weapon when engaged in close combat. At level 1, it functions as a magical weapon, dealing 1d8 + 1 points of magic damage, with an enchantment bonus of +1. For every five experience levels of the spellcaster, this bonus increases by one, up to a total of +5 enchantment level, +5 to attack rolls, and +5 to damage for a 20th-level caster. Due to its ethereal nature, strength modifiers do not apply to attack rolls or damage, and attacks with the spiritual weapon are considered melee touch attacks (+4 attack roll bonus)."
+
+//draw_divine_might:sppr214
+@2140 = "Draw upon Divine Might"
+@2141 = "Draw upon Divine Might
+Level: 2
+School: Evocation
+Sphere: Combat
+Range: Personal
+Duration: 1 turn
+Casting Time: 2
+Area of Effect: Caster
+Saving Throw: None
+
+When this spell is cast, the priest's body shudders and glows with a shimmering aura as it becomes a vessel for the power of his god. When he does this, his strength, dexterity, and constitution scores are raised by 1 point for every 3 levels of the caster, to a maximum of 3 points at level 9. This spell is not cumulative with itself or with other similar spells."
+
 
 //Strings for display string [139] opcodes.
 @10201 = "Aid"
 @10202 = "Chant"
 @10203 = "Evil Chant"
-@10204 = "Charmed"
-@10205 = "Held"
-@10206 = "Silenced"
-@10207 = "Healed"
-@10208 = "Regenerating"
+@10204 = "Held"
+@10205 = "Silenced"
+@10206 = "Healed"
+@10207 = "Regenerating"

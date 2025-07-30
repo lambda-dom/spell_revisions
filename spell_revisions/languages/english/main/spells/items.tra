@@ -20,6 +20,16 @@
 @1136 = "Created by the Goodberry spell, this simple-looking berry will heal six points of damage."
 @1137 = "Created by the Goodberry spell, this simple-looking berry will heal seven points of damage."
 
+//Level 2.
+@1200 = "Flame Blade"
+@1201 = "This magical scimitar was created by the Flame Blade spell."
+
+@1210 = "Spiritual Hammer"
+@1211 = "This magical warhammer was created by the Spiritual Hammer spell."
+
+@1220 = "Cause Moderate Wounds"
+@1221 = "Fists enchanted by the Cause Moderate Wounds spell."
+
 //Arcane.
 //Level 1.
 @2100 = "Shocking Grasp"
