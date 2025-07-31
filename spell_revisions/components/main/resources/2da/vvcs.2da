@@ -1,0 +1,5 @@
+2DA V1.0
+*
+                install animation                   patch   over    destination
+sound_burst     1       #suf:a:WIZARD_SOUND_BURST   *       0       #suf:a:WIZARD_SOUND_BURST
+storm_shield    0       #suf:a:CLERIC_STORM_SHIELD  *       0       #suf:a:CLERIC_STORM_SHIELD

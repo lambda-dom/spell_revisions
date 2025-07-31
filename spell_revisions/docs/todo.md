@@ -29,3 +29,11 @@ Not just things to (still) do but also proposed changes to spells.
 * Sleep: display ineffective spell for creatures with dice > caster level.
 
 * Spook: True Seeing makes one immune to Spook and this is handled in the True Seeing spell. Better to add a TRUE_SIGHT state to splstate.ids, set it via Set Spell State [328] in True Seeing and then use the usual shenanigan in Spook (e. g. 318) to make True Seeing nullify it. This spell state is apparently missing and is being set via proficiencies, but these are not detected via 318 and related opcodes (or at least I do not know how).
+
+## B. 2. Level 2.
+
+* Battering Ram: move unconsciousness from knockback to its own subspell? This would need weidu_library patching.
+
+# C. General.
+
+* Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.

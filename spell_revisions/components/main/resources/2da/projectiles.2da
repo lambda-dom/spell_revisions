@@ -10,3 +10,4 @@ silence             1       silence             0           *           0       
 war_dog_scent       1       war_dog_scent       0           *           0       #lit:dldscent
 stinking_cloud      1       stinking_cloud_sr   1           *           0       #lit:dlstkcld
 glitterdust         1       glitterdust         0           *           0       #lit:dlgldust
+sound_burst         1       sound_burst         0           *           0       #lit:dlsndbrs

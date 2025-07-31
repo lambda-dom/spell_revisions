@@ -241,6 +241,58 @@ Saving Throw: Special
 
 This spell creates a cloud of glittering golden particles within the area of effect. The sparkling dust dazzles all opponents in the area (-2 penalty to attack rolls) for 4 rounds and reveals any opponents who are invisible. Those affected must also save vs. breath to avoid becoming completely covered by the dust, which cannot be removed and continues to sparkle for 4 rounds. Those failing the save remain unable to successfully hide themselves until the dust fades."
 
+//New spells.
+//Replaces knock.
+@2500 = "Battering Ram"
+@2501 = "Battering Ram
+Level: 2
+School: Evocation
+Range: Medium
+Duration: Instant
+Casting Time: 2
+Area of Effect: 1 creature or object
+Saving Throw: Special
+
+This spell creates a ram-like force that can strike with considerable power. The force can be used to open or smash locked, held, or wizard-locked doors, as well as locked boxes or chests, but it does not raise barred gates or similar impediments. If used against a creature, the target suffers 2d6 points of crushing damage, and must save vs. breath to avoid being knocked unconscious for 1 round."
+
+//Replaces know alignment.
+@2510 = "Know Opponent"
+@2511 = "Know Opponent
+Level: 2
+School: Divination
+Range: Long
+Duration: 2 turns
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, the wizard's eyes glow with magical energy, enabling him to read the aura of a creature, and determine the creature's strengths and weaknesses. For the duration of the spell, the target's physical resistances are lowered by 10% and all attacks against the target creature are made with a +2 bonus to the attack roll. Certain magical devices negate the power of the Know Opponent spell, and the spell has no effect on creatures who don't emanate auras, such as constructs. Magic resistance does not affect this spell."
+
+//Replaces deafness.
+@2520 = "Sound Burst"
+@2521 = "Sound Burst
+Level: 2
+School: Evocation
+Range: Long
+Duration: 1 turn
+Casting Time: 2
+Area of Effect: Target and enemies within 10'
+Saving Throw: Breath partial
+
+This spell blasts an area with a tremendous cacophony. Enemies within the area suffer 4d4 points of crushing damage, and are deafened for 1 turn. A successful save vs. breath at -2 penalty halves the damage and negates the deafness, and the spell does not affect elementals and constructs. Deafened spellcasters have a 50% chance to miscast any spell. This deafness can be done away with by means of a Dispel Magic spell or a Cure Disease spell."
+
+@2530 = "Resist Elements"
+@2531 = "Resist Elements
+Level: 2
+School: Transmutation
+Range: Touch
+Duration: 1 turn + 1 round/level
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None
+
+Upon the casting of this spell, the recipient's resistance to all forms of elemental damage is increased by 25%. This effect will last for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
+
 
 //Strings for display string [139] opcodes.
 @10201 = "Blurred"
