@@ -20,6 +20,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Regenerate Moderate Wounds: handle stacking of regen spells. The idea is that higher level remove and block lower level.
 
+## A. 3. Level 3.
+
+* Dispel Magic: only the description is in.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

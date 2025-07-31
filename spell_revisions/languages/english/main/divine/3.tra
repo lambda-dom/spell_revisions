@@ -43,8 +43,8 @@ Cold Resistance 100%
 Slashing & Piercing Resistance 40%; Missile Resistance 60%"
 
 //call_lightning:sppr302
-@3020 = ~Call Lightning~
-@3021 = ~Call Lightning
+@3020 = "Call Lightning"
+@3021 = "Call Lightning
 Level: 3
 School: Alteration
 Sphere: Weather
@@ -54,12 +54,12 @@ Casting Time: 1 round
 Area of Effect: 360' radius
 Saving Throw: Breath half
 
-Immediately upon completion of the spell, and once per round thereafter, the caster causes a 30-foot-long vertical bolt of lightning to come crashing down upon an enemy. The spell has a duration of one round for every three levels of the caster, up to a maximum of 5 rounds at 15th level. The lightning will strike first at the target of the spell, dealing 6d6 points of electrical damage, with a successful save vs. breath at -2 reducing this to half. For the remainder of the storm's duration, the bolts will strike out randomly at the enemies of the caster.~
+Immediately upon completion of the spell, and once per round thereafter, the caster causes a 30-foot-long vertical bolt of lightning to come crashing down upon an enemy. The spell has a duration of one round for every three levels of the caster, up to a maximum of 5 rounds at 15th level. The lightning will strike first at the target of the spell, dealing 6d6 points of electrical damage, with a successful save vs. breath at -2 reducing this to half. For the remainder of the storm's duration, the bolts will strike out randomly at the enemies of the caster."
 
-//Dispel magic:sppr303
 //Description for the remove magic, enemies-only version
-@3030 = ~Dispel Magic~
-@3031 = ~Dispel Magic
+//dispel_magic:sppr303
+@3030 = "Dispel Magic"
+@3031 = "Dispel Magic
 Level: 3
 School: Abjuration
 Sphere: All
@@ -71,11 +71,11 @@ Saving Throw: Special
 
 Dispel Magic removes magical effects upon any enemies within the area of effect. This includes effects from spells, potions, and certain magical items such as wands. It does not, however, affect enchanted magical items or spell protections such as Spell Turning and Spell Deflection. While this spell dispels the individual effects of Grease, Web, Stinking Cloud, and other such spells, it does not dispel the area of effect. Magic resistance does not affect this spell.
 
-The chance of the dispel succeeding is determined by the level of the caster and the level of the magic being dispelled. The base chance of successfully dispelling is 50%. For every level that the caster of Dispel Magic is above the level of the magic he is trying to dispel, his chance of success increases by 5%. For every level that the caster of Dispel Magic is below the level of the magic he attempts to dispel, his chance of success decreases by 10%. However, despite the difference in levels, there is always at least a 1% chance of success or failure. Thus, if a caster is 10 levels higher than the magic he is trying to dispel, there is only a 1% chance of failure. Similarly if the caster is 4 levels lower than the magic he is trying to dispel, there is only a 10% chance of success. Intuitively, this spell is almost useless if the level of the magic attempted to dispel is 5 or more levels higher than the caster.~
+The chance of the dispel succeeding is determined by the level of the caster and the level of the magic being dispelled. The base chance of successfully dispelling is 50%. For every level that the caster of Dispel Magic is above the level of the magic he is trying to dispel, his chance of success increases by 5%. For every level that the caster of Dispel Magic is below the level of the magic he attempts to dispel, his chance of success decreases by 10%. However, despite the difference in levels, there is always at least a 1% chance of success or failure. Thus, if a caster is 10 levels higher than the magic he is trying to dispel, there is only a 1% chance of failure. Similarly if the caster is 4 levels lower than the magic he is trying to dispel, there is only a 10% chance of success. Intuitively, this spell is almost useless if the level of the magic attempted to dispel is 5 or more levels higher than the caster."
 
-//Glyph of warding:sppr304
-@3040 = ~Glyph of Warding~
-@3041 = ~Glyph of Warding
+//glyph_warding:sppr304
+@3040 = "Glyph of Warding"
+@3041 = "Glyph of Warding
 Level: 3
 School: Abjuration
 Sphere: Guardian
@@ -87,10 +87,10 @@ Saving Throw: Breath half
 
 A glyph of warding is a powerful inscription magically drawn to prevent unauthorized or hostile creatures from passing, entering, or opening. It can be used to guard a small bridge, to ward an entry, or as a trap on a chest or box. Any enemy violating the warded area will trigger the trap.
 
-When the spell is cast, the priest weaves a tracery of faintly glowing lines around the warding sigil. When a hostile creature comes within 15 feet of the glyph, it is triggered and explodes, damaging every enemy within a 20 foot radius. The damage inflicted is equal to 1d4 points of electrical damage per level of the caster (up to a maximum of 10d4). Those who a roll successful saving throw vs. breath will receive only half damage. This spell will not harm party members.~
+When the spell is cast, the priest weaves a tracery of faintly glowing lines around the warding sigil. When a hostile creature comes within 15 feet of the glyph, it is triggered and explodes, damaging every enemy within a 20 foot radius. The damage inflicted is equal to 1d4 points of electrical damage per level of the caster (up to a maximum of 10d4). Those who a roll successful saving throw vs. breath will receive only half damage. This spell will not harm party members."
 
-//Hold person or animal:sppr305
-@3050 = ~Hold Person or Animal~
+//hold_person_animal:sppr305
+@3050 = "Hold Person or Animal"
 @3051 = ~Hold Person or Animal
 Level: 3
 School: Enchantment
@@ -101,13 +101,13 @@ Casting Time: 5
 Area of Effect: Target, and enemies within 5'
 Saving Throw: Spell negates
 
-This spell holds persons and animals rigidly immobile and in place. The term person includes any bipedal human, demihuman, or humanoid of man-size or smaller, such as dwarves, elves, gnolls, gnomes, half-elves, halflings, half-orcs, hobgoblins, humans, kobolds, and others. Only normal and giant sized animals are affected by this spell. Monsters such as wyverns, ankhegs, and carrion crawlers do not count as animals. The effect is centered on the victim selected by the caster. Every hostile person or animal within 5 feet of the target is also affected. Those who succeed on a save vs. spell at -2 are totally unaffected.
+This spell holds persons and animals rigidly immobile and in place. The term "person" includes any bipedal human, demihuman, or humanoid of man-size or smaller, such as dwarves, elves, gnolls, gnomes, half-elves, halflings, half-orcs, hobgoblins, humans, kobolds, and others. Only normal and giant sized animals are affected by this spell. Monsters such as wyverns, ankhegs, and carrion crawlers do not count as animals. The effect is centered on the victim selected by the caster. Every hostile person or animal within 5 feet of the target is also affected. Those who succeed on a save vs. spell at -2 are totally unaffected.
 
 Held creatures cannot move or speak, but they remain aware of events around them even though they are helpless to change them. Time passes at a normal rate for the targets and hence being held does not stop any worsening of their condition due to wounds, disease, or poison.~
 
-//Protection from fire:sppr306:disabled
-@3060 = ~Protection from Fire~
-@3061 = ~Protection from Fire
+//protection_fire, disabled:sppr306
+@3060 = "Protection from Fire"
+@3061 = "Protection from Fire
 Level: 5
 School: Abjuration
 Sphere: Elemental, Protection
@@ -117,11 +117,11 @@ Casting Time: 5
 Area of Effect: 1 creature
 Saving Throw: None
 
-When a Protection from Fire spell is cast, the recipient receives complete protection from fire-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like fiery dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Burning Hands, Fireball, Flame Strike, and Fire Storm. Multiple castings of this spell are not cumulative.~
+When a Protection from Fire spell is cast, the recipient receives complete protection from fire-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like fiery dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Burning Hands, Fireball, Flame Strike, and Fire Storm. Multiple castings of this spell are not cumulative."
 
-//Break enchantment:sppr307:replacement for remove curse.
-@3070 =~Break Enchantment~
-@3071 =~Break Enchantment
+//break_enchantment, replacement for remove curse:sppr307
+@3070 ="Break Enchantment"
+@3071 ="Break Enchantment
 Level: 3
 School: Abjuration
 Sphere: All
@@ -131,11 +131,11 @@ Casting Time: 5
 Area of Effect: 1 creature
 Saving Throw: None
 
-Upon casting this spell, the priest is able to free a victim from enchantments and curses. The spell can reverse the effects of confusion and feeblemindedness, free a victim from petrification, magical sleep or charm, and break the effects of a curse. Note that Break Enchantment cannot remove the curse from a cursed shield, weapon, or suit of armor, for example, but allows those afflicted with any such cursed item to get rid of it. Certain special curses may not be countered by this spell, or may be countered only by a caster of a certain level or through a particular ritual.~
+Upon casting this spell, the priest is able to free a victim from enchantments and curses. The spell can reverse the effects of confusion and feeblemindedness, free a victim from petrification, magical sleep or charm, and break the effects of a curse. Note that Break Enchantment cannot remove the curse from a cursed shield, weapon, or suit of armor, for example, but allows those afflicted with any such cursed item to get rid of it. Certain special curses may not be countered by this spell, or may be countered only by a caster of a certain level or through a particular ritual."
 
-//Remove paralysis:sppr308
-@3080 = ~Remove Paralysis~
-@3081 = ~Remove Paralysis
+//remove_paralysis:sppr308
+@3080 = "Remove Paralysis"
+@3081 = "Remove Paralysis
 Level: 3
 School: Abjuration
 Sphere: Necromantic, Protection
@@ -145,13 +145,13 @@ Casting Time: 3
 Area of Effect: 30' radius
 Saving Throw: None
 
-By the use of this spell, the priest can free several creatures from the effects of any paralyzation or related magic (such as a ghoul's touch, Hold spell, or Power Word Stun).~
+By the use of this spell, the priest can free several creatures from the effects of any paralyzation or related magic (such as a ghoul's touch, Hold spell, or Power Word Stun)."
 
-//Invisibility purge:sppr309
-@3090 = ~Invisibility Purge~
-@3091 = ~Invisibility Purge
+//invisibility_purge:sppr309
+@3090 = "Invisibility Purge"
+@3091 = "Invisibility Purge
 Level: 3
-School: Abjuration
+School: Divination
 Sphere: Wards
 Range: Personal
 Duration: 5 rounds
@@ -159,11 +159,11 @@ Casting Time: 3
 Area of Effect: 30' radius
 Saving Throw: None
 
-Instantly and once each round for 5 rounds after this spell is cast, all concealed enemies within the area of effect will have their invisibility dispelled. Invisible objects carried into the warded area will also become visible. This spell does not reveal illusions or enable the caster to see through physical objects. Magic resistance does not affect this spell.~
+Instantly and once each round for 5 rounds after this spell is cast, all concealed enemies within the area of effect will have their invisibility dispelled. Invisible objects carried into the warded area will also become visible. This spell does not reveal illusions or enable the caster to see through physical objects. Magic resistance does not affect this spell."
 
-//Miscast magic:sppr310
-@3100 = ~Miscast Magic~
-@3101 = ~Miscast Magic
+//miscast_magic:sppr310
+@3100 = "Miscast Magic"
+@3101 = "Miscast Magic
 Level: 3
 School: Enchantment
 Sphere: Chaos
@@ -173,11 +173,11 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: Spell negates
 
-Miscast Magic causes spells cast by the affected creature to take on an effect different from what they intend, similar to what happens during a wild surge. There is a chance that the result will be beneficial to the spellcaster, but generally, the effects are undesirable. The target must make save vs. spell at -2 to negate the spell's effects. Those who fail the save will miscast any spells cast in the next round, and each round after the first must make another save to avoid miscasting for one further round. The effects of the spell last for 5 rounds, or until dispelled.~
+Miscast Magic causes spells cast by the affected creature to take on an effect different from what they intend, similar to what happens during a wild surge. There is a chance that the result will be beneficial to the spellcaster, but generally, the effects are undesirable. The target must make save vs. spell at -2 to negate the spell's effects. Those who fail the save will miscast any spells cast in the next round, and each round after the first must make another save to avoid miscasting for one further round. The effects of the spell last for 5 rounds, or until dispelled."
 
-//Rigid Thinking:sppr311
-@3110 = ~Rigid Thinking~
-@3111 = ~Rigid Thinking
+//rigid_thinking:sppr311
+@3110 = "Rigid Thinking"
+@3111 = "Rigid Thinking
 Level: 3
 School: Enchantment
 Sphere: Law
@@ -187,11 +187,11 @@ Casting Time: 5
 Area of Effect: 1 person or mammal
 Saving Throw: Spell negates
 
-The target of this spell must make a saving throw vs. spell or come under its effects. When under the effects of the Rigid Thinking spell, the victim will randomly wander, attack the nearest person, or stand confused.~
+The target of this spell must make a saving throw vs. spell or come under its effects. When under the effects of the Rigid Thinking spell, the victim will randomly wander, attack the nearest person, or stand confused."
 
-//Strength of one:sppr312
-@3120 = ~Strength of One~
-@3121 = ~Strength of One
+//strength_one:sppr312
+@3120 = "Strength of One"
+@3121 = "Strength of One
 Level: 3
 School: Alteration
 Sphere: Law
@@ -201,11 +201,11 @@ Casting Time: 3
 Area of Effect: 30' radius
 Saving Throw: None
 
-When this spell is cast, all party members within 30 feet of the caster gain a +2 bonus to strength. If a party member ends up with a strength value of 18, then her strength will be set to 18/75. The spell lasts for 10 rounds, whereafter everyone's strength returns to normal.~
+When this spell is cast, all party members within 30 feet of the caster gain a +2 bonus to strength. If a party member ends up with a strength value of 18, then her strength will be set to 18/75. The spell lasts for 10 rounds, whereafter everyone's strength returns to normal."
 
-//Holy smite: sppr313
-@3130 = ~Holy Smite~
-@3131 = ~Holy Smite
+//holy_smite: sppr313
+@3130 = "Holy Smite"
+@3131 = "Holy Smite
 Level: 3
 School: Necromancy
 Sphere: Necromantic
@@ -215,11 +215,11 @@ Casting Time: 3
 Area of Effect: 20' radius
 Saving Throw: Special
 
-With this spell the priest draws down holy power to smite his enemies. Opponents within the spell's area of effect take 1d4 points of damage for every level of the caster (up to a maximum of 10d4), with a successful saving throw vs. spell for half. If the victim fails his save, then he will also be blinded for 1 round.~
+With this spell the priest draws down holy power to smite his enemies. Opponents within the spell's area of effect take 1d4 points of damage for every level of the caster (up to a maximum of 10d4), with a successful saving throw vs. spell for half. If the victim fails his save, then he will also be blinded for 1 round."
 
-//Unholy blight: sppr314
-@3140 = ~Unholy Blight~
-@3141 = ~Unholy Blight
+//unholy_blight: sppr314
+@3140 = "Unholy Blight"
+@3141 = "Unholy Blight
 Level: 3
 School: Necromancy
 Sphere: Necromantic
@@ -229,9 +229,9 @@ Casting Time: 3
 Area of Effect: 20' radius
 Saving Throw: Special
 
-With this spell the priest calls up unholy power to smite his enemies. The power takes the form of a chilling, cloying miasma of darkness. Opponents within the spell's area of effect take 1d4 points of damage for every level of the caster up to a maximum of 10d4, with a successful saving throw vs. spell for half. If the victim fails his save, then he will also receive a -2 penalty on his attack rolls and saving throws for 4 rounds.~
+With this spell the priest calls up unholy power to smite his enemies. The power takes the form of a chilling, cloying miasma of darkness. Opponents within the spell's area of effect take 1d4 points of damage for every level of the caster up to a maximum of 10d4, with a successful saving throw vs. spell for half. If the victim fails his save, then he will also receive a -2 penalty on his attack rolls and saving throws for 4 rounds."
 
-//Cure serious wounds: sppr315: move level 3 to level 3, replaces cure medium wounds.
+//cure_serious_wounds: sppr315: move level 3 to level 3, replaces cure medium wounds.
 @3150 = ~Cure Serious Wounds~
 @3151 = ~Cure Serious Wounds
 Level: 3

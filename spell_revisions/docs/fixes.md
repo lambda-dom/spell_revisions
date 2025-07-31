@@ -36,14 +36,18 @@ Fixes to base SR, v4.19.
 
 ## B. 3. Level 3.
 
-* Animate Dead: greater skeleton: gender niether -> summoned. Align neutral -> chaotic evil. Wis 11 -> 10. Charisma is also 9 instead of 1. Correct saves vs. death 0 -> 9. Charisma 1 -> 3 as currently, the implementation requires a minimum of 3. Corrections to ac and thac0. Correct damage bonus on mace and skeleton great sword 1 -> 2. Added 233 opcodes for proficiency. Undead immunities: fear, fatigue, berserk, charm, confusion, disease, hold, level drain, petrification, poison, stun, sleep, death: corrected description and implemented correctly voa blocks library.
+* Animate Dead: greater skeleton: gender niether -> summoned. Align neutral -> chaotic evil. Wis 11 -> 10. Charisma is also 9 instead of 1. Correct saves vs. death 0 -> 9. Charisma 1 -> 3 as currently, the implementation requires a minimum of 3. Corrections to ac and thac0. Correct damage bonus on mace and skeleton great sword 1 -> 2. Added 233 opcodes for proficiency. Undead immunities: fear, fatigue, berserk, charm, confusion, disease, hold, level drain, petrification, poison, stun, sleep, death: corrected description and implemented correctly via blocks library.
 
 note(s):
 * shield has an ac bonus of 2, but is classified as a buckler.
 
-* Magic fang: the implementation is geared for old BG, with a convoluted method using Create Weapon [111]. In EE, we can use Enchantment Bonus [345] and other goodies to vastly simplify the implementation. Also use only one Use Eff, keyed to General, Animal (projectile guarantees party only) to cast a spell that applies the relevant opcodes. Extended spell to also monsters.
-
 * Icelance: Uses a hold creature 2 opcode -> move to subspell? Why hold creature 2?
+
+* Magic fang: the implementation is geared for old BG, with a convoluted method using Create Weapon [111]. In EE, we can use Enchantment Bonus [345] to vastly simplify the implementation. Extended spell to also monsters.
+
+* Miscast Magic: implementation was incorrect, as it was only granting a save in the first two rounds.
+
+* Unholy Blight: fix stacking of saves and thac0 penalty.
 
 * Animal Summoning III: corrections to wolf summon: int, ac, thac0.
 

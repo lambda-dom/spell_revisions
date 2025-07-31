@@ -1,5 +1,7 @@
 //Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
 
 
 //Load references.
@@ -7,9 +9,19 @@ LAF get_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "3"
+    dir = "%resources%/2da/divine"
+RET_ARRAY spells = references END
+
 
 //Patches.
-DEFINE_PATCH_FUNCTION animate_dead BEGIN
+DEFINE_PATCH_FUNCTION animate_dead STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "summon_lesser_skeleton"
@@ -19,7 +31,7 @@ DEFINE_PATCH_FUNCTION animate_dead BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 177              //Use Eff.
+        match_opcode = 177                  //Use Eff.
     STR_VAR
         match_resource = "lesk#res"
         resource = "%res%"
@@ -34,9 +46,258 @@ DEFINE_PATCH_FUNCTION animate_dead BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 177              //Use Eff.
+        match_opcode = 177                  //Use Eff.
     STR_VAR
         match_resource = "grsk#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION hold_person_or_animal STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "hold_person_animal_humanoid"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "hper#res"
+        resource = "%res%"
+    END
+
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "hold_person_animal_animal"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "hani#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION invisibility_purge STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "invisibility_purge_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "ipur#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION miscast_magic_b STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "miscast_magic_wild_magic"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "mmag#res"
+        resource = "%res%"
+    END
+
+    //Get reference.
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:c:CLERIC_MISCAST_MAGIC"
+    RET res = resource END
+
+    PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
+        PATCH_FAIL "miscast_magic_b: spell '%res%.spl' does not exist in-game."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "next#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION miscast_magic_c STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "miscast_magic_wild_magic"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "mmag#res"
+        resource = "%res%"
+    END
+
+    //Get reference.
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:d:CLERIC_MISCAST_MAGIC"
+    RET res = resource END
+
+    PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
+        PATCH_FAIL "miscast_magic_c: spell '%res%.spl' does not exist in-game."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "next#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION miscast_magic_d STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "miscast_magic_wild_magic"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "mmag#res"
+        resource = "%res%"
+    END
+
+    //Get reference.
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:e:CLERIC_MISCAST_MAGIC"
+    RET res = resource END
+
+    PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
+        PATCH_FAIL "miscast_magic_d: spell '%res%.spl' does not exist in-game."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "next#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION miscast_magic_e STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "miscast_magic_wild_magic"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "mmag#res"
+        resource = "%res%"
+    END
+
+    //Remove next.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+        opcode = 1024                       //Non-existent.
+    STR_VAR
+        match_resource = "next#res"
+    END
+
+    LPF DELETE_SPELL_EFFECT INT_VAR
+        opcode_to_delete = 1024             //Non-existent.
+    END
+END
+
+DEFINE_PATCH_FUNCTION miscast_magic STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "miscast_magic_wild_magic"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "mmag#res"
+        resource = "%res%"
+    END
+
+    //Get reference.
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:b:CLERIC_MISCAST_MAGIC"
+    RET res = resource END
+
+    PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
+        PATCH_FAIL "miscast_magic: spell '%res%.spl' does not exist in-game."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "next#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION holy_smite STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "holy_smite_blind"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "blnd#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION unholy_blight STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "unholy_blight_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "unbl#res"
         resource = "%res%"
     END
 END
