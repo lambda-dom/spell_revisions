@@ -10,6 +10,10 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 //Load reference tables.
 LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
     tables = "items"
 RET_ARRAY items = references END
 
@@ -238,3 +242,19 @@ DEFINE_PATCH_FUNCTION resist_elements STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION monster_summoning_2 BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "summon_green_slime"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 177              //Use Eff.
+    STR_VAR
+        match_resource = "summ#res"
+        resource = "%res%"
+    END
+END

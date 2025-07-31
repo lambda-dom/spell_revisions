@@ -51,3 +51,18 @@ DEFINE_PATCH_FUNCTION gibberling STR_VAR destination = "*" BEGIN
         array = "items"
     END
 END
+
+DEFINE_PATCH_FUNCTION green_slime BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "green_slime_pseudopod"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "green_slime_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
