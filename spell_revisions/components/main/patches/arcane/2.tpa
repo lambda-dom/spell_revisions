@@ -1,6 +1,8 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
 //Mod libraries.
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
@@ -74,7 +76,7 @@ DEFINE_PATCH_FUNCTION ghoul_touch STR_VAR destination = "*" BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 111              //Create Weapon.
+        match_opcode = 111                  //Create Weapon.
     STR_VAR
         match_resource = "item#res"
         resource = "%res%"
@@ -85,5 +87,64 @@ DEFINE_PATCH_FUNCTION vocalize STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
         tra_ref = 10205
         match_opcode = 142                  //Display icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION chaos_shield STR_VAR destination = "*" BEGIN
+    //Get spell references
+    LPF get_spell_res STR_VAR spell = "WIZARD_CHAOS_SHIELD" RET old = resource END
+    LPF get_spell_res STR_VAR spell = "WIZARD_IMPROVED_CHAOS_SHIELD" RET new = resource END
+
+    LPF CLONE_EFFECT INT_VAR
+        check_globals = 0
+        check_headers = 1
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "%old%"
+        resource = "%new%"
+        insert = "below"
+    END
+END
+
+DEFINE_PATCH_FUNCTION glitterdust BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "glitterdust_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+
+
+    //Patch-in protection from aux faerie fire.
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:a:CLERIC_FAERIE_FIRE"
+    RET new = resource END
+
+    LPF CLONE_EFFECT INT_VAR
+        check_globals = 0
+        check_headers = 1
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "%res%"
+        resource = "%new%"
+        insert = "below"
     END
 END
