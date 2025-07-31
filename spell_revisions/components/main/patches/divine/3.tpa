@@ -357,7 +357,7 @@ DEFINE_PATCH_FUNCTION cause_serious_wounds STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION magic_fang BEGIN
+DEFINE_PATCH_FUNCTION magic_fang STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "magic_fang_a"
@@ -386,7 +386,7 @@ DEFINE_PATCH_FUNCTION spike_growth STR_VAR destination = "*" BEGIN
         verbose = 1
         match_opcode = 146                  //Cast spell.
     STR_VAR
-        match_resource = ""
+        match_resource = "spik#res"
         resource = "%res%"
     END
 END
