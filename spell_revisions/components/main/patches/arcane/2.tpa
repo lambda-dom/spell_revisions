@@ -1,0 +1,260 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
+//Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
+LAF get_table_references STR_VAR
+    tables = "vvcs"
+RET_ARRAY vvcs = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "2"
+    dir = "%resources%/2da/arcane"
+RET_ARRAY spells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION blur STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10201
+        match_opcode = 65                   //Blur.
+    END
+END
+
+DEFINE_PATCH_FUNCTION detect_invisibility STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "detect_invisibility_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION luck STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10202
+        match_opcode = 142                  //Display icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION mirror_image STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10203
+        match_opcode = 159                  //Mirror image.
+    END
+END
+
+DEFINE_PATCH_FUNCTION strength STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10204
+        match_opcode = 142                  //Display icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION ghoul_touch STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "ghoul_touch"
+        array = "items"
+        ext = "itm"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 111                  //Create Weapon.
+    STR_VAR
+        match_resource = "item#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION vocalize STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10205
+        match_opcode = 142                  //Display icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION chaos_shield STR_VAR destination = "*" BEGIN
+    //Get spell references
+    LPF get_spell_res STR_VAR spell = "WIZARD_CHAOS_SHIELD" RET old = resource END
+    LPF get_spell_res STR_VAR spell = "WIZARD_IMPROVED_CHAOS_SHIELD" RET new = resource END
+
+    LPF CLONE_EFFECT INT_VAR
+        check_globals = 0
+        check_headers = 1
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "%old%"
+        resource = "%new%"
+        insert = "below"
+    END
+END
+
+DEFINE_PATCH_FUNCTION glitterdust STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "glitterdust_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+
+
+    //Patch-in protection from aux faerie fire.
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:a:CLERIC_FAERIE_FIRE"
+    RET new = resource END
+
+    LPF CLONE_EFFECT INT_VAR
+        check_globals = 0
+        check_headers = 1
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "%res%"
+        resource = "%new%"
+        insert = "below"
+    END
+END
+
+DEFINE_PATCH_FUNCTION battering_ram STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "battering_ram_knockback"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "knck#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION know_opponent STR_VAR destination = "*" BEGIN
+    LPF get_spell_res STR_VAR spell = "WIZARD_KNOW_OPPONENT" RET old = resource END
+    LPF get_spell_res STR_VAR spell = "CLERIC_KNOW_OPPONENT" RET new = resource END
+
+    LPF CLONE_EFFECT INT_VAR
+        check_globals = 0
+        check_headers = 1
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "%old%"
+        resource = "%new%"
+        insert = "below"
+    END
+END
+
+DEFINE_PATCH_FUNCTION sound_burst STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "sound_burst_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "sndb#res"
+        resource = "%res%"
+    END
+
+    //Patch vvc.
+    LPF get_table_ref STR_VAR
+        value = "sound_burst"
+        array = "vvcs"
+        ext = "vvc"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 215                  //Play visual effect.
+    STR_VAR
+        match_resource = "vvc#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION resist_elements STR_VAR destination = "*" BEGIN
+    LPF get_spell_res STR_VAR spell = "WIZARD_RESIST_ELEMENTS" RET old = resource END
+    LPF get_spell_res STR_VAR spell = "CLERIC_RESIST_FIRE" RET new = resource END
+
+    LPF CLONE_EFFECT INT_VAR
+        check_globals = 0
+        check_headers = 1
+        verbose = 1
+        match_opcode = 321                  //Remove effects by resource.
+    STR_VAR
+        match_resource = "%old%"
+        resource = "%new%"
+        insert = "below"
+    END
+END
+
+DEFINE_PATCH_FUNCTION monster_summoning_2 BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "summon_green_slime"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 177              //Use Eff.
+    STR_VAR
+        match_resource = "summ#res"
+        resource = "%res%"
+    END
+END

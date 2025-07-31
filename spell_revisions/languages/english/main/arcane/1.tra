@@ -1,5 +1,6 @@
 //Description strings.
-//Arcane level 1 spells.
+//Arcane spells.
+//Level 1.
 //grease:spwi101
 @1010 = "Grease"
 @1011 = "Grease
@@ -40,7 +41,7 @@ Saving Throw: None
 When the wizard casts this spell, a cone of searing flames shoots from his fingertips towards a designated point. His hands must be held so as to send forth a fan-like sheet of flames: the wizard's thumbs must touch each other and his fingers must be spread. The burning hands send out 10-foot-long jets of flame in a horizontal arc of about 60 degrees in front of the wizard. All creatures caught in the flames suffer 1d6 points of fire damage plus 1d6 for every other 2 levels of the caster, up to a maximum of 5d6 at 9th level."
 
 //charm_person:spwi104
-@1040 = ~Charm Person~
+@1040 = "Charm Person"
 @1041 = ~Charm Person
 Level: 1
 School: Enchantment

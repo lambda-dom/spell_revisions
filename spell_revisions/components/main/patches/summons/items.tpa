@@ -81,3 +81,24 @@ DEFINE_PATCH_FUNCTION war_dog_scent BEGIN
         resource = "%res%"
     END
 END
+
+DEFINE_PATCH_FUNCTION green_slime_immunities BEGIN
+    PATCH_PRINT "WARNING: green_slime_immunities: immunities not implemented yet."
+
+    // PATCH_FOR_EACH block IN
+    //     "charm"
+    //     "confusion"
+    //     "disease"
+    //     "paralysis"
+    //     "poison"
+    //     "sleep"
+    //     "stun"
+    // BEGIN
+    //     LPF patch_block INT_VAR
+    //         match_opcode = 292              //Immunity to backstab.
+    //         globals = 1
+    //     STR_VAR
+    //         block = "%block%"
+    //     END
+    // END
+END

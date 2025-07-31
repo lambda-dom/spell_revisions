@@ -20,3 +20,4 @@ larloch_minor_drain_3   1       vampiric_damage *       *       6       0       
 larloch_minor_drain_4   1       vampiric_damage *       *       8       0           0       necromancer offensivedamage *                       1       #suf:d:WIZARD_LARLOCH_MINOR_DRAIN
 larloch_minor_drain_5   1       vampiric_damage *       *       10      0           0       necromancer offensivedamage *                       1       #suf:e:WIZARD_LARLOCH_MINOR_DRAIN
 spook_panic             1       panic           *       *       5       *           *       illusionist disabling       *                       0       #suf:a:WIZARD_SPOOK
+battering_ram_knockback 1       knockback       *       *       1       10          *       invoker     offensivedamage *                       0       #suf:a:WIZARD_BATTERING_RAM
