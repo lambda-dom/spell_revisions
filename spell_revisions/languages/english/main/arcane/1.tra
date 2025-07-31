@@ -1,5 +1,6 @@
 //Description strings.
-//Arcane level 1 spells.
+//Arcane spells.
+//Level 1.
 //grease:spwi101
 @1010 = "Grease"
 @1011 = "Grease

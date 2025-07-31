@@ -24,7 +24,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 1. Level 1.
 
-* Grease: follow above implementation? Use a sleep subspell? Also increase aoe.
+* Grease: follow implementation of Entangle? Use a sleep subspell? Also increase aoe.
 
 * Sleep: display ineffective spell for creatures with dice > caster level.
 
