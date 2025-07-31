@@ -32,6 +32,8 @@ Fixes to base SR, v4.19.
 
 * Spiritual Hammer: Fix: give hammer prof to spiritual hammers. Move spell to item block (this was only needed in oBG because of the next item); drop undocumented golem immunity to magic damage. Dropped aux spell that also has spurious (?) sectype. Fix weight 2 -> 0.
 
+* Gust of Wind (druid version): mention in description that it dispels insect swarms in the area.
+
 * Cause Moderate Wounds: Fix?? Stick power of cast spell opcode 1 -> 0 for consistency with cause light wounds.
 
 ## B. 3. Level 3.

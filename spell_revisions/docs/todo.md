@@ -24,6 +24,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Dispel Magic: only the description is in.
 
+* Insects: only the description is in. It needs sectype adding, which requires weidu_library support not existing yet.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

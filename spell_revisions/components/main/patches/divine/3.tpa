@@ -10,6 +10,10 @@ LAF get_table_references STR_VAR
 RET_ARRAY effects = references END
 
 LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+LAF get_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 
@@ -278,7 +282,7 @@ DEFINE_PATCH_FUNCTION holy_smite STR_VAR destination = "*" BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 146              //Cast spell.
+        match_opcode = 146                  //Cast spell.
     STR_VAR
         match_resource = "blnd#res"
         resource = "%res%"
@@ -295,9 +299,111 @@ DEFINE_PATCH_FUNCTION unholy_blight STR_VAR destination = "*" BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 146              //Cast spell.
+        match_opcode = 146                  //Cast spell.
     STR_VAR
         match_resource = "unbl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION gust_wind STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "gust_wind_knockback"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "knck#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION contagion STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "contagion_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "cont#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION cause_serious_wounds STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "cause_serious_wounds"
+        array = "items"
+        ext = "itm"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 111                  //Create Weapon.
+    STR_VAR
+        match_resource = "item#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION magic_fang BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "magic_fang_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "fang#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION spike_growth STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "spike_growth_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION animal_summoning_3 STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "summon_wolf"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        match_resource = "summ#res"
         resource = "%res%"
     END
 END

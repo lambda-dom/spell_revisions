@@ -232,8 +232,8 @@ Saving Throw: Special
 With this spell the priest calls up unholy power to smite his enemies. The power takes the form of a chilling, cloying miasma of darkness. Opponents within the spell's area of effect take 1d4 points of damage for every level of the caster up to a maximum of 10d4, with a successful saving throw vs. spell for half. If the victim fails his save, then he will also receive a -2 penalty on his attack rolls and saving throws for 4 rounds."
 
 //cure_serious_wounds: sppr315: move level 3 to level 3, replaces cure medium wounds.
-@3150 = ~Cure Serious Wounds~
-@3151 = ~Cure Serious Wounds
+@3150 = "Cure Serious Wounds"
+@3151 = "Cure Serious Wounds
 Level: 3
 School: Necromancy
 Sphere: Healing
@@ -243,12 +243,12 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
 
-When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 3d8 + 3/level points of damage sustained by the target creature (up to a maximum of 3d8+30).~
+When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 3d8 + 3/level points of damage sustained by the target creature (up to a maximum of 3d8+30)."
 
 //non-existent: sppr316
-//Cure disease: sppr317
-@3170 = ~Cure Disease~
-@3171 = ~Cure Disease
+//cure_disease: sppr317
+@3170 = "Cure Disease"
+@3171 = "Cure Disease
 Level: 3
 School: Abjuration
 Sphere: Healing
@@ -258,11 +258,11 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-By laying her hands upon a sickly person, the caster can cure almost any disease with this spell. The cure is permanent, but this does not grant the recipient of the spell immunity from further afflictions. Blindness and deafness are also cured with this spell, but some powerful magically created diseases may not be curable by this spell.~
+By laying her hands upon a sickly person, the caster can cure almost any disease with this spell. The cure is permanent, but this does not grant the recipient of the spell immunity from further afflictions. Blindness and deafness are also cured with this spell, but some powerful magically created diseases may not be curable by this spell."
 
-//Gust of Wind: sppr318: replacement for Zone of Sweet Air
-@3180 = ~Gust of Wind~
-@3181 = ~Gust of Wind
+//gust_wind: sppr318: replacement for Zone of Sweet Air
+@3180 = "Gust of Wind"
+@3181 = "Gust of Wind
 Level: 3
 School: Abjuration
 Sphere: Wards, Elemental (Air)
@@ -272,11 +272,11 @@ Casting Time: 1
 Area of Effect: Special
 Saving Throw: Special
 
-This spell creates a severe blast of air that originates from the caster, affecting all enemies in its path. Those within 6 feet must save vs. breath at -2 or be blown back by the force of the gust and knocked unconscious for 1 round. In addition, this spell will disperse all clouds, including magically created vapors such as Cloudkill, in the caster's current area.~
+This spell creates a severe blast of air that originates from the caster, affecting all enemies in its path. Those within 6 feet must save vs. breath at -2 or be blown back by the force of the gust and knocked unconscious for 1 round. In addition, this spell will disperse all clouds, including magically created vapors such as Cloudkill, in the caster's current area."
 
-//Summon Insects: sppr319
-@3190 = ~Summon Insects~
-@3191 = ~Summon Insects
+//summon_insects: sppr319
+@3190 = "Summon Insects"
+@3191 = "Summon Insects
 Level: 3
 School: Conjuration
 Sphere: Animal
@@ -288,7 +288,7 @@ Saving Throw: Special
 
 The Summon Insects spell attracts a cloud or swarm of normal insects to attack one enemy of the caster. This swarm gathers at a point chosen by the caster, within the spell's range, and attacks a single creature the caster points to.
 
-For the duration of the spell, the affected creature fights with a -2 penalty to attack rolls and armor class. In addition, each round the victim suffers 2d3 points of damage from insect bites, has a 100% chance of spell failure and it if fails a save vs. poison at +2 it panics and flees from the caster. If a successful save vs. breath at -2 is made, the target manages to avoid most of the swarm, reducing damage from bites by half and completely negating the spell failure penalty. Magic resistance does not affect this spell.~
+For the duration of the spell, the affected creature fights with a -2 penalty to attack rolls and armor class. In addition, each round the victim suffers 2d3 points of damage from insect bites, has a 100% chance of spell failure and it if fails a save vs. poison at +2 it panics and flees from the caster. If a successful save vs. breath at -2 is made, the target manages to avoid most of the swarm, reducing damage from bites by half and completely negating the spell failure penalty. Magic resistance does not affect this spell."
 
 //New divine spells.
 @3500 = ~Contagion~
