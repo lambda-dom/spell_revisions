@@ -1,0 +1,42 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
+
+//Load references.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION animate_dead BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "summon_lesser_skeleton"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 177              //Use Eff.
+    STR_VAR
+        match_resource = "lesk#res"
+        resource = "%res%"
+    END
+
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "summon_greater_skeleton"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 177              //Use Eff.
+    STR_VAR
+        match_resource = "grsk#res"
+        resource = "%res%"
+    END
+END
