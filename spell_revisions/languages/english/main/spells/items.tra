@@ -30,6 +30,10 @@
 @1220 = "Cause Moderate Wounds"
 @1221 = "Fists enchanted by the Cause Moderate Wounds spell."
 
+//Level 3.
+@1300 = "Cause Serious Wounds"
+@1301 = "Fists enchanted by the Cause Serious Wounds spell."
+
 //Arcane.
 //Level 1.
 @2100 = "Shocking Grasp"
@@ -37,3 +41,7 @@
 
 @2110 = "Chill Touch"
 @2111 = "Fists enchanted by the Chill Touch spell."
+
+//Level 2.
+@2200 = "Ghoul Touch"
+@2201 = "Fists enchanted by the Ghoul Touch spell."

@@ -7,6 +7,10 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
 //Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
 LAF get_component_resources_dir RET resources = dir END
 LAF get_table_references STR_VAR
     tables = "2"
@@ -15,14 +19,14 @@ RET_ARRAY spells = references END
 
 
 //Patches.
-DEFINE_PATCH_FUNCTION blur BEGIN
+DEFINE_PATCH_FUNCTION blur STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
         tra_ref = 10201
         match_opcode = 65                   //Blur.
     END
 END
 
-DEFINE_PATCH_FUNCTION detect_invisibility BEGIN
+DEFINE_PATCH_FUNCTION detect_invisibility STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "detect_invisibility_a"
@@ -39,24 +43,47 @@ DEFINE_PATCH_FUNCTION detect_invisibility BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION luck BEGIN
+DEFINE_PATCH_FUNCTION luck STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
         tra_ref = 10202
         match_opcode = 142                  //Display icon.
     END
 END
 
-DEFINE_PATCH_FUNCTION mirror_image BEGIN
+DEFINE_PATCH_FUNCTION mirror_image STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
         tra_ref = 10203
         match_opcode = 159                  //Mirror image.
     END
 END
 
-DEFINE_PATCH_FUNCTION strength BEGIN
+DEFINE_PATCH_FUNCTION strength STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
         tra_ref = 10204
         match_opcode = 142                  //Display icon.
     END
 END
 
+DEFINE_PATCH_FUNCTION ghoul_touch STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "ghoul_touch"
+        array = "items"
+        ext = "itm"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 111              //Create Weapon.
+    STR_VAR
+        match_resource = "item#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION vocalize STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10205
+        match_opcode = 142                  //Display icon.
+    END
+END

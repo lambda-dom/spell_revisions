@@ -51,3 +51,23 @@ Fixes to base SR, v4.19.
 * Sleep: fix off-by-1 errors in probability.
 
 * Monster Summoning I: the thac0 of gibberlings in the cre file and description disagree. Went with the description.
+
+## B. 2. Level 2.
+
+* Ghoul Touch: fix description to mention that paralyze lasts for 3 rounds only. Sectype (of main spell) to `offensivedamage` for consistency with similar spells.
+
+* Glitterdust: Question: why the variable stuff?
+
+* Mirror Image: concurrent refresh with lower level reflected image.
+
+* Power Word Sleep: fix off-by-1 errors in probability. Add immunities to golem, slime, sword and illusionary.
+
+* Resist Elements: fix: drop sphere line in description and description sectype abjuration -> transmutation.
+
+* Stinking Cloud: add immunity to (mordenkainen) swords and illusionary creatures.
+
+* Strength: make it refreshing to not stack exceptional strength increment.
+
+* Web: add immunity to mephits.
+
+* Monster Summon II: fix: remove spurious poison icon from jelly pod. Fix int, wis, chr, acid resistance according to description. Fix lack of immunities to disease and sleep. Fix poorly implemented immunities.
