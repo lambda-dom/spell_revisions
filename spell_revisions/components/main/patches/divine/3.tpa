@@ -415,8 +415,6 @@ DEFINE_PATCH_FUNCTION storm_shield STR_VAR destination = "*" BEGIN
         PATCH_FAIL "storm_shield: sectype 'INSECTS' not found."
     END
 
-    PATCH_PRINT "storm_shield: sectype 'INSECTS' has id '%sectype_id%'."
-
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
         match_opcode = 205                  //Protection from sectype.
@@ -427,16 +425,16 @@ END
 DEFINE_PATCH_FUNCTION magic_fang STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
-        value = "magic_fang_a"
-        array = "spells"
-        ext = "spl"
+        value = "magic_fang_enchant"
+        array = "effects"
+        ext = "eff"
     RET res = resource END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 146                  //Cast spell.
+        match_opcode = 177                  //Use Eff.
     STR_VAR
-        match_resource = "fang#res"
+        match_resource = "ench#res"
         resource = "%res%"
     END
 END
@@ -454,6 +452,23 @@ DEFINE_PATCH_FUNCTION spike_growth STR_VAR destination = "*" BEGIN
         match_opcode = 146                  //Cast spell.
     STR_VAR
         match_resource = "spik#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION icelance STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "icelance_hold"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "hold#res"
         resource = "%res%"
     END
 END

@@ -14,3 +14,5 @@ sound_burst         1       sound_burst         0           *           0       
 strength_of_one     1       strength_of_one     0           *           0       #lit:dlstrone
 holy_smite          1       holy_smite          0           *           0       #lit:dlhlysmt
 unholy_blight       1       unholy_blight_sr    0           *           0       #lit:dlunhblt
+spike_growth        1       spike_growth        0           *           0       #lit:dlspgrow
+icelance            1       icelance            0           icelance    0       #lit:dlicelnc

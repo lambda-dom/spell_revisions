@@ -40,8 +40,14 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Battering Ram: move unconsciousness from knockback to its own subspell? This would need weidu_library patching.
 
+## B. 3. Level 3.
+
+* Spike Growth: remove save from movement set for parity with entangle.
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
 
 * Cure line of spells: mention in description that it also cures intoxication.
+
+* Regenerate line of spells: handle inter-spell concurrency.

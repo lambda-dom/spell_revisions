@@ -291,8 +291,8 @@ The Summon Insects spell attracts a cloud or swarm of normal insects to attack o
 For the duration of the spell, the affected creature fights with a -2 penalty to attack rolls and armor class. In addition, each round the victim suffers 2d3 points of damage from insect bites, has a 100% chance of spell failure and it if fails a save vs. poison at +2 it panics and flees from the caster. If a successful save vs. breath at -2 is made, the target manages to avoid most of the swarm, reducing damage from bites by half and completely negating the spell failure penalty. Magic resistance does not affect this spell."
 
 //New divine spells.
-@3500 = ~Contagion~
-@3501 = ~Contagion
+@3500 = "Contagion"
+@3501 = "Contagion
 Level: 3
 School: Necromancy
 Sphere: Necromantic
@@ -302,10 +302,10 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: Poison negates
 
-This spell causes a major disease and weakness in a creature. Every 2 rounds the afflicted individual must make a saving throw vs. poison at -2 or suffer additional -2 penalty to strength, dexterity, constitution, and charisma (up to -6 to all stats). The effects of this spell will persist until the creature receives a Cure Disease spell, or the spell duration expires.~
+This spell causes a major disease and weakness in a creature. Every 2 rounds the afflicted individual must make a saving throw vs. poison at -2 or suffer additional -2 penalty to strength, dexterity, constitution, and charisma (up to -6 to all stats). The effects of this spell will persist until the creature receives a Cure Disease spell, or the spell duration expires."
 
-@3510 = ~Cause Serious Wounds~
-@3511 = ~Cause Serious Wounds
+@3510 = "Cause Serious Wounds"
+@3511 = "Cause Serious Wounds
 Level: 3
 School: Necromancy
 Sphere: Necromantic
@@ -315,10 +315,10 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell is the reverse of Cure Serious Wounds. Instead of healing the creature touched, it causes damage. On a successful touch from the priest, the spell inflicts 3d8 + 3/level points of damage upon the target (up to a maximum of 3d8+30). The spell expires once the priest makes a successful melee attack or after 1 turn has passed. The priest gains a +4 bonus to hit the target. Magic resistance does not affect this spell.~
+This spell is the reverse of Cure Serious Wounds. Instead of healing the creature touched, it causes damage. On a successful touch from the priest, the spell inflicts 3d8 + 3/level points of damage upon the target (up to a maximum of 3d8+30). The spell expires once the priest makes a successful melee attack or after 1 turn has passed. The priest gains a +4 bonus to hit the target. Magic resistance does not affect this spell."
 
-@3520 = ~Storm Shield~
-@3521 = ~Storm Shield
+@3520 = "Storm Shield"
+@3521 = "Storm Shield
 Level: 3
 School: Abjuration
 Sphere: Weather, Elemental (Air)
@@ -328,10 +328,10 @@ Casting Time: 5
 Area of Effect: Caster
 Saving Throw: None
 
-This spell surrounds the caster with an invisible curtain of stormy winds that moves with him. The wind wall grants the caster +4 bonus to saves vs. breath and AC against missiles for the duration of the spell. Non-magical missile weapons are deflected away, while gases cannot penetrate the barrier. Tiny and small flying creatures cannot pass through.~
+This spell surrounds the caster with an invisible curtain of stormy winds that moves with him. The wind wall grants the caster +4 bonus to saves vs. breath and AC against missiles for the duration of the spell. Non-magical missile weapons are deflected away, while gases cannot penetrate the barrier. Tiny and small flying creatures cannot pass through."
 
-@3530 = ~Magic Fang~
-@3531 = ~Magic Fang
+@3530 = "Magic Fang"
+@3531 = "Magic Fang
 Level: 3
 School: Alteration
 Sphere: Animal
@@ -341,10 +341,10 @@ Casting Time: 5
 Area of Effect: 30' radius
 Saving Throw: None
 
-This spell turns natural weapons (such as teeth, claws, etc.) of friendly animals within range into magical weapons, effectively granting a +1 enhancement bonus on attack and damage rolls. For every other five experience levels of the spellcaster, this bonus increases by one, up to a total of +3 enchantment level, +3 to attack rolls, and +3 to damage for a 15th-level caster. Multiple castings of this spell are not cumulative.~
+This spell turns natural weapons (such as teeth, claws, etc.) of friendly animals within range into magical weapons, effectively granting a +1 enhancement bonus on attack and damage rolls. For every other five experience levels of the spellcaster, this bonus increases by one, up to a total of +3 enchantment level, +3 to attack rolls, and +3 to damage for a 15th-level caster. Multiple castings of this spell are not cumulative."
 
-@3540 = ~Spike Growth~
-@3541 = ~Spike Growth
+@3540 = "Spike Growth"
+@3541 = "Spike Growth
 Level: 3
 School: Alteration
 Sphere: Plant
@@ -354,10 +354,10 @@ Casting Time: 5
 Area of Effect: 20' radius
 Saving Throw: Breath partial
 
-The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. Any creature will suffer 1d4 points of piercing damage each round that they remain within the affected area. The spikes can damage the victim's legs, so that even once they are free of the spike growth their movement rate is halved for 3 rounds unless a successful save vs. breath is made. Those failing the save also suffer 1 point of bleeding damage each round for 3 rounds. Incorporeal and flying creatures are unaffected by this spell, as are elementals and exceptionally large creatures who suffer little to no distress from the small spikes.~
+The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. Any creature will suffer 1d4 points of piercing damage each round that they remain within the affected area. The spikes can damage the victim's legs, so that even once they are free of the spike growth their movement rate is halved for 3 rounds unless a successful save vs. breath is made. Those failing the save also suffer 1 point of bleeding damage each round for 3 rounds. Incorporeal and flying creatures are unaffected by this spell, as are elementals and exceptionally large creatures who suffer little to no distress from the small spikes."
 
-@3550 = ~Icelance~
-@3551 = ~Icelance
+@3550 = "Icelance"
+@3551 = "Icelance
 Level: 3
 School: Evocation
 Sphere: Elemental (Water)
@@ -367,10 +367,10 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: Paralyzation partial
 
-When this spell is cast, a sharp spear of ice impales the target, inflicting 5d6 points of damage. The target must make a save vs. paralyzation or be held for three rounds.~
+When this spell is cast, a sharp spear of ice impales the target, inflicting 5d6 points of damage. The target must make a save vs. paralyzation or be held for three rounds."
 
-@3560 = ~Regenerate Serious Wounds~
-@3561 = ~Regenerate Serious Wounds
+@3560 = "Regenerate Serious Wounds"
+@3561 = "Regenerate Serious Wounds
 Level: 3
 School: Alteration
 Sphere: Healing
@@ -380,7 +380,7 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 3 hit points per round (up to a maximum of 90 hit points within 3 turns at level 10). The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative.~
+This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 3 hit points per round (up to a maximum of 90 hit points within 3 turns at level 10). The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
 
 @3570 = ~Animal Summoning III~
 @3571 = ~Animal Summoning III

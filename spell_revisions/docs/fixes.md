@@ -43,13 +43,13 @@ Fixes to base SR, v4.19.
 note(s):
 * shield has an ac bonus of 2, but is classified as a buckler.
 
-* Icelance: Uses a hold creature 2 opcode -> move to subspell? Why hold creature 2?
-
 * Magic fang: the implementation is geared for old BG, with a convoluted method using Create Weapon [111]. In EE, we can use Enchantment Bonus [345] to vastly simplify the implementation. Extended spell to also monsters.
 
 * Miscast Magic: implementation was incorrect, as it was only granting a save in the first two rounds.
 
 * Unholy Blight: fix stacking of saves and thac0 penalty.
+
+* Icelance: standardized hold to a subspell; does *not* use hold creature 2 opcode.
 
 * Animal Summoning III: corrections to wolf summon: int, ac, thac0.
 

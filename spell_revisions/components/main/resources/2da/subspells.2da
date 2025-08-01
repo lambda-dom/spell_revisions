@@ -9,6 +9,7 @@ hold_person_animal_humanoid 1       hold_creature   *       *       10      gene
 hold_person_animal_animal   1       hold_creature   *       *       10      general     animal      enchanter   disabling       *                       0       #suf:b:CLERIC_HOLD_ANIMAL
 holy_smite_blind            1       blind           *       *       1       *           *           necromancer offensivedamage *                       0       #suf:a:CLERIC_HOLY_SMITE
 summon_insects_panic        1       panic           *       *       1       *           *           conjurer    *               *                       0       #suf:c:CLERIC_SUMMON_INSECTS
+icelance_hold               1       paralyze        *       *       3       *           *           invoker     offensivedamage *                       0       #suf:a:CLERIC_ICELANCE
 charm_humanoid_neutral      1       charm           *       *       5       humanoid    0           enchanter   disabling       *                       0       #suf:a:WIZARD_CHARM_PERSON
 color_spray_slow            1       slow            *       *       5       *           *           transmuter  disabling       *                       0       #suf:a:WIZARD_COLOR_SPRAY
 color_spray_blind           1       blind           *       *       5       *           *           transmuter  disabling       *                       0       #suf:b:WIZARD_COLOR_SPRAY
