@@ -63,7 +63,7 @@ DEFINE_PATCH_FUNCTION cause_moderate_itm BEGIN
         verbose = 1
         match_opcode = 146              //Cast spell.
     STR_VAR
-        match_resource = ""
+        match_resource = "spl#res"
         resource = "%res%"
     END
 END
@@ -80,7 +80,7 @@ DEFINE_PATCH_FUNCTION cause_serious_itm BEGIN
         verbose = 1
         match_opcode = 146              //Cast spell.
     STR_VAR
-        match_resource = ""
+        match_resource = "spl#res"
         resource = "%res%"
     END
 END

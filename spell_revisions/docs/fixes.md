@@ -32,7 +32,26 @@ Fixes to base SR, v4.19.
 
 * Spiritual Hammer: Fix: give hammer prof to spiritual hammers. Move spell to item block (this was only needed in oBG because of the next item); drop undocumented golem immunity to magic damage. Dropped aux spell that also has spurious (?) sectype. Fix weight 2 -> 0.
 
+* Gust of Wind (druid version): mention in description that it dispels insect swarms in the area.
+
 * Cause Moderate Wounds: Fix?? Stick power of cast spell opcode 1 -> 0 for consistency with cause light wounds.
+
+## B. 3. Level 3.
+
+* Animate Dead: greater skeleton: gender niether -> summoned. Align neutral -> chaotic evil. Wis 11 -> 10. Charisma is also 9 instead of 1. Correct saves vs. death 0 -> 9. Charisma 1 -> 3 as currently, the implementation requires a minimum of 3. Corrections to ac and thac0. Correct damage bonus on mace and skeleton great sword 1 -> 2. Added 233 opcodes for proficiency. Undead immunities: fear, fatigue, berserk, charm, confusion, disease, hold, level drain, petrification, poison, stun, sleep, death: corrected description and implemented correctly via blocks library.
+
+note(s):
+* shield has an ac bonus of 2, but is classified as a buckler.
+
+* Magic fang: the implementation is geared for old BG, with a convoluted method using Create Weapon [111]. In EE, we can use Enchantment Bonus [345] to vastly simplify the implementation. Extended spell to also monsters.
+
+* Miscast Magic: implementation was incorrect, as it was only granting a save in the first two rounds.
+
+* Unholy Blight: fix stacking of saves and thac0 penalty.
+
+* Icelance: standardized hold to a subspell; does *not* use hold creature 2 opcode.
+
+* Animal Summoning III: corrections to wolf summon: int, ac, thac0.
 
 # B. Arcane spells.
 

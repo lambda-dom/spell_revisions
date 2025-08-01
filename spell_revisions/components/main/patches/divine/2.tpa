@@ -7,6 +7,7 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 //Mod libraries.
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
+
 //Load reference tables.
 LAF get_table_references STR_VAR
     tables = "effects"
@@ -210,14 +211,18 @@ DEFINE_PATCH_FUNCTION cure_moderate_wounds STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION regen_moderate_wounds BEGIN
+DEFINE_PATCH_FUNCTION regenerate_moderate_wounds STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
         tra_ref = 10207
         match_opcode = 142                  //Display portrait icon.
     END
 END
 
-DEFINE_PATCH_FUNCTION gust_wind_druid BEGIN
+DEFINE_PATCH_FUNCTION gust_wind_kill_insects STR_VAR destination = "*" BEGIN
+    PATCH_PRINT "gust_wind_kill_insects: removal of sectype not patched yet."
+END
+
+DEFINE_PATCH_FUNCTION gust_wind_druid STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "gust_wind_knockback"
@@ -232,9 +237,24 @@ DEFINE_PATCH_FUNCTION gust_wind_druid BEGIN
         match_resource = "knck#res"
         resource = "%res%"
     END
+
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "gust_wind_kill_insects"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "kins#res"
+        resource = "%res%"
+    END
 END
 
-DEFINE_PATCH_FUNCTION cause_moderate_wounds BEGIN
+DEFINE_PATCH_FUNCTION cause_moderate_wounds STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "cause_moderate_wounds"
@@ -251,7 +271,7 @@ DEFINE_PATCH_FUNCTION cause_moderate_wounds BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION animal_summoning_2 BEGIN
+DEFINE_PATCH_FUNCTION animal_summoning_2 STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "summon_war_dog"

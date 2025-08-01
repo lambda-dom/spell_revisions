@@ -1,0 +1,4 @@
+2DA V1.0
+*
+                install opcode      target      p1  p2  p3  p4  power   timing  duration    prob1   prob2   dice    size    saves   bonus   dispel  special res res2    res3    projectile  school  sectype     patch   over    destination
+pack_attack     1       thac0_bonus projectile  1   0   *   *   0       limited 7           *       *       *       *       *       *       natural *       *   *       *       *           *       *           *       0       #suf:a:CLERIC_ANIMAL_SUMMONING_3

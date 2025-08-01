@@ -43,6 +43,57 @@ DEFINE_PATCH_FUNCTION war_dog BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION lesser_skeleton BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "skeleton_mace"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "skeleton_shield"
+        slot = "shield"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "undead_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_skeleton BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "skeleton_2h_sword"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "undead_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION wolf BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "wolf_bite"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "wolf_pack_attack"
+        slot = "rring"
+        array = "items"
+    END
+END
+
 DEFINE_PATCH_FUNCTION gibberling STR_VAR destination = "*" BEGIN
     //Equip items.
     LPF creature_add_item STR_VAR

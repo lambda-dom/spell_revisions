@@ -1,8 +1,10 @@
 //Items for summons.
 //Divine.
 @1101 = "Bite"
+@1301 = "Shield"
+@1302 = "Mace +1"
+@1303 = "Two-Handed Sword +1"
 
 //Arcane.
 @2101 = "Short Sword"
 @2201 = "Pseudopod"
-
