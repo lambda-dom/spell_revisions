@@ -1,10 +1,13 @@
 2DA V1.0
 *
-                    install name    descr   type    lvl flags       school      sectype         book_icon                   abil_icon                   projectile          patch           over    destination
-clairvoyance        1       3010    3011    wizard  3   00000000    diviner     *               #suf:c:WIZARD_CLAIRVOYANCE  #suf:b:WIZARD_CLAIRVOYANCE  *                   *               1       #spl:WIZARD_CLAIRVOYANCE
-flame_arrow_damage  1       *       *       special 3   00000000    conjurer    offensivedamage *                           *                           #lbl:arrow_flaming  *               0       #suf:a:WIZARD_FLAME_ARROW
-flame_arrow_b       1       *       *       special 3   00000000    conjurer    offensivedamage *                           *                           #lbl:flame_arrow    flame_arrow_b   0       #suf:b:WIZARD_FLAME_ARROW
-flame_arrow_c       1       *       *       special 3   00000000    conjurer    offensivedamage *                           *                           #lbl:flame_arrow    flame_arrow_c   0       #suf:c:WIZARD_FLAME_ARROW
-flame_arrow_d       1       *       *       special 3   00000000    conjurer    offensivedamage *                           *                           #lbl:flame_arrow    flame_arrow_d   0       #suf:d:WIZARD_FLAME_ARROW
-flame_arrow_e       1       *       *       special 3   00000000    conjurer    offensivedamage *                           *                           #lbl:flame_arrow    flame_arrow_e   0       #suf:e:WIZARD_FLAME_ARROW
-flame_arrow         1       *       *       wizard  3   00000000    conjurer    offensivedamage *                           *                           *                   flame_arrow     1       #spl:WIZARD_FLAME_ARROW
+                    install name    descr   type    lvl flags       school      sectype         book_icon                   abil_icon                   projectile                      patch           over    destination
+clairvoyance        1       3010    3011    wizard  3   00000000    diviner     *               #suf:c:WIZARD_CLAIRVOYANCE  #suf:b:WIZARD_CLAIRVOYANCE  *                               *               1       #spl:WIZARD_CLAIRVOYANCE
+flame_arrow_damage  1       *       *       special 3   00000000    conjurer    offensivedamage *                           *                           #lbl:arrow_flaming              *               0       #suf:a:WIZARD_FLAME_ARROW
+flame_arrow_b       1       *       *       special 1   00000000    conjurer    offensivedamage *                           *                           #lbl:flame_arrow                flame_arrow_b   0       #suf:b:WIZARD_FLAME_ARROW
+flame_arrow_c       1       *       *       special 1   00000000    conjurer    offensivedamage *                           *                           #lbl:flame_arrow                flame_arrow_c   0       #suf:c:WIZARD_FLAME_ARROW
+flame_arrow_d       1       *       *       special 1   00000000    conjurer    offensivedamage *                           *                           #lbl:flame_arrow                flame_arrow_d   0       #suf:d:WIZARD_FLAME_ARROW
+flame_arrow_e       1       *       *       special 1   00000000    conjurer    offensivedamage *                           *                           #lbl:flame_arrow                flame_arrow_e   0       #suf:e:WIZARD_FLAME_ARROW
+flame_arrow         1       3030    3031    wizard  3   01000000    conjurer    offensivedamage #suf:c:WIZARD_FLAME_ARROW   #suf:b:WIZARD_FLAME_ARROW   *                               flame_arrow     1       #spl:WIZARD_FLAME_ARROW
+fireball            1       3040    3041    wizard  3   01000000    invoker     offensivedamage #suf:c:WIZARD_FIREBALL      #suf:b:WIZARD_FIREBALL      #lbl:fireball                   *               1       #spl:WIZARD_FIREBALL
+haste_winded        1       *       *       special 1   00000000    transmuter  *               *                           *                           *                               haste_winded    0       #suf:a:WIZARD_HASTE
+haste               1       3050    3051    wizard  3   00000000    transmuter  haste           #suf:c:WIZARD_HASTE         #suf:b:WIZARD_HASTE         #lbl:instant_area_party_only    haste           1       #spl:WIZARD_HASTE

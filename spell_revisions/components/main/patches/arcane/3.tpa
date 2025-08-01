@@ -3,6 +3,8 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/sectypes.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
 
 //Load reference tables.
@@ -135,4 +137,62 @@ DEFINE_PATCH_FUNCTION flame_arrow STR_VAR destination = "*" BEGIN
         match_resource = "next#res"
         references = "spells"
     END
+END
+
+
+DEFINE_PATCH_FUNCTION haste_winded STR_VAR destination = "*" BEGIN
+    LPF get_spell_res STR_VAR spell = "WIZARD_IMPROVED_HASTE" RET res = resource END
+    PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "haste_winded: spell 'WIZARD_IMPROVED_HASTE' not found in 'spell.ids'."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "imph#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION haste STR_VAR destination = "*" BEGIN
+//    LPF patch_resource_reference INT_VAR
+//        match_opcode = 146                  //Cast spell.
+//    STR_VAR
+//        resource = "haste_winded"
+//        match_resource = "wind#res"
+//        references = "spells"
+//    END
+//
+//    //Patch sectypes.
+//    LPF get_sectype_id STR_VAR sectype = "haste" RET sectype_id = id END
+//    PATCH_IF (sectype_id = 0 - 1) BEGIN
+//        PATCH_FAIL "haste: sectype 'haste' not found."
+//    END
+//
+//    LPF ALTER_EFFECT INT_VAR
+//        verbose = 1
+//        match_opcode = 221                  //Remove protections by sectype.
+//        parameter2 = sectype_id
+//    END
+//
+//    LPF get_sectype_id STR_VAR sectype = "slow" RET sectype_id = id END
+//    PATCH_IF (sectype_id = 0 - 1) BEGIN
+//        PATCH_FAIL "haste: sectype 'low' not found."
+//    END
+//
+//    LPF CLONE_EFFECT INT_VAR
+//        verbose = 1
+//        match_opcode = 221                  //Remove protections by sectype.
+//        parameter2 = sectype_id
+//    STR_VAR
+//        insert = "below"
+//    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Remove protections by sectype.
+        parameter1 = 0
+    END
+
 END

@@ -31,7 +31,7 @@ The chance of the dispel succeeding is determined by the level of the caster and
 
 //flame_arrow:spwi303
 @3030 = "Flame Arrow"
-@3030 = "Flame Arrow
+@3031 = "Flame Arrow
 Level: 3
 School: Conjuration
 Range: Long
@@ -41,4 +41,30 @@ Area of Effect: Special
 Saving Throw: Breath half
 
 This spell enables the caster to hurl flaming arrows at his enemies. The caster receives one arrow for every two experience levels (up to a maximum of five arrows at level 10), and each arrow inflicts 1d6 points of missile damage plus 1d6 points of fire damage. Upon completion of the spell, the first arrow will streak towards the creature targeted by the wizard, while additional arrows will randomly target opponents within range."
+
+//fireball:spwi304
+@3040 = "Fireball"
+@3041 = "Fireball
+Level: 3
+School: Evocation
+Range: Long
+Duration: Instant
+Casting Time: 3
+Area of Effect: 30' radius
+Saving Throw: Breath half
+
+A fireball is an explosive burst of flame that detonates with a low roar, delivering damage proportional to the level of the wizard who cast it - 1d6 points of damage for each level of experience of the spellcaster (up to a maximum of 10d6). The wizard points his finger and speaks the range (distance and height) at which the fireball is to burst. A streak flashes from the pointing digit and, unless it impacts upon a material body or solid barrier prior to attaining the prescribed range, blossoms into the fireball (an early impact results in an early detonation). Creatures who fail their saving throw vs. breath at -2 suffer full damage from the blast. Those who roll successful saving throws manage to dodge, fall flat, or roll aside, each receiving half damage."
+
+//haste:spwi305
+@3050 = "Haste"
+@3051 = "Haste
+Level: 3
+School: Alteration
+Range: Medium
+Duration: 1 turn + 1 round/level
+Casting Time: 3
+Area of Effect: 20' radius
+Saving Throw: None
+
+When this spell is cast, the affected creatures gain +6 to movement rate and can make an extra half attack each round. Spellcasting and spell effects are not affected. Haste negates and counters the effects of a Slow spell. When the spell ends, affected creatures become winded for 3 rounds. While winded they receive penalties of -2 to hit, damage, and armor class, and cannot be hasted again. This spell is not cumulative with itself or with other similar magic."
 

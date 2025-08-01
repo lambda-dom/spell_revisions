@@ -1173,17 +1173,6 @@ ACTION_IF (GAME_INCLUDES ~bg2~) BEGIN
     BUT_ONLY
 END
 
-COPY ~spell_rev\spwi3##\spwi304.spl~     ~override~  // Fireball
-  SAY NAME1 @507    SAY UNIDENTIFIED_DESC @508
-COPY ~spell_rev\spwi3##\scrl1g.itm~     ~override~
-  SAY NAME2 @507    SAY IDENTIFIED_DESC   @508
-
-COPY ~spell_rev\spwi3##\spwi305.spl~     ~override~  // Haste
-  SAY NAME1 @509    SAY UNIDENTIFIED_DESC @510
-COPY ~spell_rev\spwi3##\scrl1h.itm~     ~override~
-  SAY NAME2 @509    SAY IDENTIFIED_DESC   @510
-COPY ~spell_rev\spwi3##\spwi305d.spl~     ~override~
-
 COPY ~spell_rev\spwi3##\spwi306.spl~     ~override~  // Hold Person
   SAY NAME1 @511    SAY UNIDENTIFIED_DESC @512
 COPY ~spell_rev\spwi3##\scrl1i.itm~     ~override~
