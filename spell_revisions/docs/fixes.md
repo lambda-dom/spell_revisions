@@ -90,3 +90,7 @@ note(s):
 * Web: add immunity to mephits.
 
 * Monster Summon II: fix: remove spurious poison icon from jelly pod. Fix int, wis, chr, acid resistance according to description. Fix lack of immunities to disease and sleep. Fix poorly implemented immunities.
+
+## B. 3. Level 3.
+
+* Clairvoyance: correction of power in saves opcode.

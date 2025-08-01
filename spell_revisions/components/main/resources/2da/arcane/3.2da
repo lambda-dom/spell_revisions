@@ -1,0 +1,4 @@
+2DA V1.0
+*
+                        install name    descr   type    lvl flags       school      sectype book_icon                   abil_icon                   projectile  patch   over    destination
+clairvoyance            1       3010    3011    wizard  3   00000000    diviner     *       #suf:c:WIZARD_CLAIRVOYANCE  #suf:b:WIZARD_CLAIRVOYANCE  *           *       1       #spl:WIZARD_CLAIRVOYANCE

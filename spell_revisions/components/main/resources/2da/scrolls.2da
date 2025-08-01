@@ -46,3 +46,6 @@ WIZARD_BATTERING_RAM                    scrl91      10      1
 WIZARD_KNOW_OPPONENT                    scrl92      10      1
 WIZARD_SOUND_BURST                      scrla2      10      1
 WIZARD_MONSTER_SUMMONING_LEVEL_2        scrl2a      10      1
+WIZARD_CLAIRVOYANCE                     scrl1d      10      1
+WIZARD_DISPEL_MAGIC                     scrla7      10      1
+WIZARD_FLAME_ARROW                      scrl1f      10      1

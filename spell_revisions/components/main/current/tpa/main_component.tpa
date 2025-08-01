@@ -32,7 +32,6 @@ COPY ~spell_rev\shared\adscroll.itm~     ~override~
   SAY NAME2 @22000    SAY IDENTIFIED_DESC   @22001
 COPY ~spell_rev\shared\adscroll.bam~     ~override~
 
-
 COPY ~spell_rev\shared\dvimhere.mrk~      ~override~  // Used to detect if SR is installed
 COPY ~spell_rev\shared\dvsrv3.mrk~      ~override~  // Used to detect if SR V3 is installed
 COPY ~spell_rev\shared\dvsrv4here.mrk~      ~override~  // Used to detect if SR V4 is installed
@@ -1160,13 +1159,7 @@ COPY ~spell_rev\spwi2##\dvpr210a.bam~   ~override~
 COPY ~spell_rev\spwi2##\scrl86.itm~     ~override~  // vanilla's Detect Evil scroll
   SAY NAME2 @864    SAY IDENTIFIED_DESC   @865
 
-/*-----------------------level 3-----------------------*/
-
-COPY ~spell_rev\spwi3##\spwi301.spl~     ~override~  // Clairvoyance
-  SAY NAME1 @501    SAY UNIDENTIFIED_DESC @502
-COPY ~spell_rev\spwi3##\scrl1d.itm~     ~override~
-  SAY NAME2 @501    SAY IDENTIFIED_DESC   @502
-
+//Level 3.
 COPY ~spell_rev\spwi3##\spwi302.spl~     ~override~  // Remove Magic
   SAY NAME1 @503    SAY UNIDENTIFIED_DESC @504
 COPY ~spell_rev\spwi3##\scrla7.itm~     ~override~
@@ -1175,8 +1168,6 @@ COPY ~spell_rev\spwi3##\scrla7.itm~     ~override~
 ADD_PROJECTILE ~spell_rev\projectles\dvfarrow.pro~
 COPY ~spell_rev\spwi3##\spwi303.spl~     ~override~  // Flame Arrow
   SAY NAME1 @505    SAY UNIDENTIFIED_DESC @506
-COPY ~spell_rev\spwi3##\scrl1f.itm~     ~override~
-  SAY NAME2 @505    SAY IDENTIFIED_DESC   @506
 COPY ~spell_rev\spwi3##\spwi303a.spl~     ~override~
   WRITE_SHORT 0x98 %dvfarrow%
 COPY ~spell_rev\spwi3##\spwi303b.spl~     ~override~
