@@ -1,6 +1,9 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
+
 
 //Load reference tables.
 LAF get_component_resources_dir RET resources = dir END
@@ -12,4 +15,124 @@ RET_ARRAY spells = references END
 
 //Patches.
 DEFINE_PATCH_FUNCTION flame_arrow_b STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_damage"
+        match_resource = "damg#res"
+        references = "spells"
+    END
+
+    //Kill next cast spell.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+        opcode = 1024                       //Non-existent.
+    STR_VAR
+        match_resource = "next#res"
+    END
+
+    LPF DELETE_SPELL_EFFECT INT_VAR
+        opcode_to_delete = 1024             //Non-existent.
+    END
+END
+
+DEFINE_PATCH_FUNCTION flame_arrow_c STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_damage"
+        match_resource = "damg#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_b"
+        match_resource = "next#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION flame_arrow_d STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_damage"
+        match_resource = "damg#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_c"
+        match_resource = "next#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION flame_arrow_e STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_damage"
+        match_resource = "damg#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_d"
+        match_resource = "next#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION flame_arrow STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_damage"
+        match_resource = "damg#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        header = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_b"
+        match_resource = "next#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        header = 2
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_c"
+        match_resource = "next#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        header = 3
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_d"
+        match_resource = "next#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        header = 4
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_e"
+        match_resource = "next#res"
+        references = "spells"
+    END
 END
