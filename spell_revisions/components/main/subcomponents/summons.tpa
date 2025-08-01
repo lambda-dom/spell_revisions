@@ -15,6 +15,12 @@ LAF install_resources STR_VAR
     table = "%resources%/2da/summons/scripts.2da"
 END
 
+//Install effects used by summons.
+LAF install_resources STR_VAR
+    type = "create_effect"
+    table = "%resources%/2da/summons/effects.2da"
+END
+
 //Install spells for summons.
 LAF install_resources STR_VAR
     type = "spell"

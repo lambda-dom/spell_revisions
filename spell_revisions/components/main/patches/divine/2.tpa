@@ -7,6 +7,7 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 //Mod libraries.
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
+
 //Load reference tables.
 LAF get_table_references STR_VAR
     tables = "effects"
