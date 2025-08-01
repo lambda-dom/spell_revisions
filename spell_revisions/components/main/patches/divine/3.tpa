@@ -323,6 +323,57 @@ DEFINE_PATCH_FUNCTION gust_wind STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION summon_insects_a STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "summon_insects_panic"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "fear#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION summon_insects_b STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "summon_insects_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "insc#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION summon_insects STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "summon_insects_b"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
 DEFINE_PATCH_FUNCTION contagion STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
