@@ -307,6 +307,20 @@ DEFINE_PATCH_FUNCTION unholy_blight STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION cure_serious_wounds STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10305
+        match_opcode = 240                  //Remove portrait icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION cure_disease STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10304
+        match_opcode = 240                  //Remove portrait icon.
+    END
+END
+
 DEFINE_PATCH_FUNCTION gust_wind STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
@@ -317,7 +331,7 @@ DEFINE_PATCH_FUNCTION gust_wind STR_VAR destination = "*" BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 146              //Cast spell.
+        match_opcode = 146                  //Cast spell.
     STR_VAR
         match_resource = "knck#res"
         resource = "%res%"
@@ -334,7 +348,7 @@ DEFINE_PATCH_FUNCTION summon_insects_a STR_VAR destination = "*" BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 146              //Cast spell.
+        match_opcode = 146                  //Cast spell.
     STR_VAR
         match_resource = "fear#res"
         resource = "%res%"
@@ -470,6 +484,13 @@ DEFINE_PATCH_FUNCTION icelance STR_VAR destination = "*" BEGIN
     STR_VAR
         match_resource = "hold#res"
         resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION regenerate_serious_wounds STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10306
+        match_opcode = 142                  //Display portrait icon.
     END
 END
 

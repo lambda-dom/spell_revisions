@@ -411,9 +411,9 @@ Pack Attack: each wolf within 10 feet grants additional +1 bonus to attack rolls
 
 
 //Display strings.
-//Aux invisibility purge.
-@10000 = "Dispel Invisible"
-@10001 = "Rigid Thinking"
-@10002 = "Strength of One"
-@10003 = "Disease Cured"
-@10004 = "Healed"
+@10301 = "Dispel Invisible" //Not used yet.
+@10302 = "Rigid Thinking"   //Not used yet.
+@10303 = "Strength of One"  //Not used yet.
+@10304 = "Disease Cured"
+@10305 = "Healed"
+@10306 = "Regenerating"
