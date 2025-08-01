@@ -15,6 +15,11 @@ LAF install_resources STR_VAR
     table = "%resources%/2da/symbols.2da"
 END
 
+//Install sectypes.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/sectypes.tpa"
+END
+
 //Install vvcs.
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/vvcs.tpa"

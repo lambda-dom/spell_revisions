@@ -1,0 +1,16 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/sectypes.tpa"
+
+
+//Initialization.
+LAF get_component_resources_dir RET resources = dir END
+LAF get_component_tra_dir RET tra = dir END
+
+
+//Install vvcs for spells.
+LAF add_sectypes STR_VAR
+    table = "%resources%/2da/sectypes.2da"
+    tra = "%tra%/sectypes.tra"
+END
