@@ -156,43 +156,36 @@ DEFINE_PATCH_FUNCTION haste_winded STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION haste STR_VAR destination = "*" BEGIN
-//    LPF patch_resource_reference INT_VAR
-//        match_opcode = 146                  //Cast spell.
-//    STR_VAR
-//        resource = "haste_winded"
-//        match_resource = "wind#res"
-//        references = "spells"
-//    END
-//
-//    //Patch sectypes.
-//    LPF get_sectype_id STR_VAR sectype = "haste" RET sectype_id = id END
-//    PATCH_IF (sectype_id = 0 - 1) BEGIN
-//        PATCH_FAIL "haste: sectype 'haste' not found."
-//    END
-//
-//    LPF ALTER_EFFECT INT_VAR
-//        verbose = 1
-//        match_opcode = 221                  //Remove protections by sectype.
-//        parameter2 = sectype_id
-//    END
-//
-//    LPF get_sectype_id STR_VAR sectype = "slow" RET sectype_id = id END
-//    PATCH_IF (sectype_id = 0 - 1) BEGIN
-//        PATCH_FAIL "haste: sectype 'low' not found."
-//    END
-//
-//    LPF CLONE_EFFECT INT_VAR
-//        verbose = 1
-//        match_opcode = 221                  //Remove protections by sectype.
-//        parameter2 = sectype_id
-//    STR_VAR
-//        insert = "below"
-//    END
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "haste_winded"
+        match_resource = "wind#res"
+        references = "spells"
+    END
+
+    //Patch sectypes.
+    LPF get_sectype_id STR_VAR sectype = "haste" RET sectype_id = id END
+    PATCH_IF (sectype_id = 0 - 1) BEGIN
+        PATCH_FAIL "haste: sectype 'haste' not found."
+    END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 146                  //Remove protections by sectype.
-        parameter1 = 0
+        match_opcode = 221                  //Remove protections by sectype.
+        parameter2 = sectype_id
     END
 
+    LPF get_sectype_id STR_VAR sectype = "slow" RET sectype_id = id END
+    PATCH_IF (sectype_id = 0 - 1) BEGIN
+        PATCH_FAIL "haste: sectype 'low' not found."
+    END
+
+    LPF CLONE_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 221                  //Remove protections by sectype.
+        parameter2 = sectype_id
+    STR_VAR
+        insert = "below"
+    END
 END
