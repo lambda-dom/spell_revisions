@@ -1165,19 +1165,6 @@ COPY ~spell_rev\spwi3##\spwi302.spl~     ~override~  // Remove Magic
 COPY ~spell_rev\spwi3##\scrla7.itm~     ~override~
   SAY NAME2 @503    SAY IDENTIFIED_DESC   @504
 
-ADD_PROJECTILE ~spell_rev\projectles\dvfarrow.pro~
-COPY ~spell_rev\spwi3##\spwi303.spl~     ~override~  // Flame Arrow
-  SAY NAME1 @505    SAY UNIDENTIFIED_DESC @506
-COPY ~spell_rev\spwi3##\spwi303a.spl~     ~override~
-  WRITE_SHORT 0x98 %dvfarrow%
-COPY ~spell_rev\spwi3##\spwi303b.spl~     ~override~
-  WRITE_SHORT 0x98 %dvfarrow%
-COPY ~spell_rev\spwi3##\spwi303c.spl~     ~override~
-  WRITE_SHORT 0x98 %dvfarrow%
-COPY ~spell_rev\spwi3##\spwi303d.spl~     ~override~
-  WRITE_SHORT 0x98 %dvfarrow%
-COPY ~spell_rev\spwi3##\spwi303e.spl~     ~override~
-
 ACTION_IF (GAME_INCLUDES ~bg2~) BEGIN
   COPY_EXISTING ~cut01b.bcs~ ~override~
     DECOMPILE_AND_PATCH BEGIN

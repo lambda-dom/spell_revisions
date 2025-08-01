@@ -1,4 +1,10 @@
 2DA V1.0
 *
-                        install name    descr   type    lvl flags       school      sectype book_icon                   abil_icon                   projectile  patch   over    destination
-clairvoyance            1       3010    3011    wizard  3   00000000    diviner     *       #suf:c:WIZARD_CLAIRVOYANCE  #suf:b:WIZARD_CLAIRVOYANCE  *           *       1       #spl:WIZARD_CLAIRVOYANCE
+                    install name    descr   type    lvl flags       school      sectype     book_icon                   abil_icon                   projectile          patch           over    destination
+clairvoyance        1       3010    3011    wizard  3   00000000    diviner     *           #suf:c:WIZARD_CLAIRVOYANCE  #suf:b:WIZARD_CLAIRVOYANCE  *                   *               1       #spl:WIZARD_CLAIRVOYANCE
+flame_arrow_damage  1       *       *       special 1   00000000    conjurer    disabling   *                           *                           #lbl:arrow_flaming  *               0       #suf:a:WIZARD_FLAME_ARROW
+flame_arrow_next    1       *       *       special 1   00000000    conjurer    disabling   *                           *                           #lbl:flame_arrow    flame_arrow_b   0       #suf:b:WIZARD_FLAME_ARROW
+flame_arrow_next    1       *       *       special 1   00000000    conjurer    disabling   *                           *                           #lbl:flame_arrow    flame_arrow_c   0       #suf:c:WIZARD_FLAME_ARROW
+flame_arrow_next    1       *       *       special 1   00000000    conjurer    disabling   *                           *                           #lbl:flame_arrow    flame_arrow_d   0       #suf:d:WIZARD_FLAME_ARROW
+flame_arrow_next    1       *       *       special 1   00000000    conjurer    disabling   *                           *                           #lbl:flame_arrow    flame_arrow_e   0       #suf:e:WIZARD_FLAME_ARROW
+flame_arrow         1       *       *       wizard  1   00000000    conjurer    disabling   *                           *                           *                   flame_arrow     0       #suf:b:WIZARD_FLAME_ARROW
