@@ -43,3 +43,5 @@ Not just things to (still) do but also proposed changes to spells.
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
+
+* Cure line of spells: mention in description that it also cures intoxication.

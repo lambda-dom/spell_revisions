@@ -106,7 +106,7 @@ This spell holds one or more humans, demihumans, or humanoid creatures rigidly i
 
 Held creatures cannot move or speak, but they remain aware of events around them even though they are helpless to change them. Time passes at a normal rate for the targets and hence being held does not stop any worsening of their condition due to wounds, disease, or poison."
 
-//know alignment:sppr209. To feprecate as detect alignment already exists at level 1.
+//know alignment:sppr209. To deprecate as detect alignment already exists at level 1.
 //resist_elements:sppr210: replaces resist fire.
 @2100 = "Resist Elements"
 @2101 = "Resist Elements
