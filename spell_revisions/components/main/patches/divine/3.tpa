@@ -2,6 +2,7 @@
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/sectypes.tpa"
 
 
 //Load references.
@@ -405,6 +406,21 @@ DEFINE_PATCH_FUNCTION cause_serious_wounds STR_VAR destination = "*" BEGIN
     STR_VAR
         match_resource = "item#res"
         resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION storm_shield STR_VAR destination = "*" BEGIN
+    LPF get_sectype_id STR_VAR sectype = "INSECTS" RET sectype_id = id END
+    PATCH_IF (sectype_id = 0 - 1) BEGIN
+        PATCH_FAIL "storm_shield: sectype 'INSECTS' not found."
+    END
+
+    PATCH_PRINT "storm_shield: sectype 'INSECTS' has id '%sectype_id%'."
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 205                  //Protection from sectype.
+        parameter2 = sectype_id
     END
 END
 
