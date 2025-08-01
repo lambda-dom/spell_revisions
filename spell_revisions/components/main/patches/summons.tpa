@@ -79,6 +79,21 @@ DEFINE_PATCH_FUNCTION greater_skeleton BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION wolf BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "wolf_bite"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "wolf_pack_attack"
+        slot = "rring"
+        array = "items"
+    END
+END
+
 DEFINE_PATCH_FUNCTION gibberling STR_VAR destination = "*" BEGIN
     //Equip items.
     LPF creature_add_item STR_VAR

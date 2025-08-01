@@ -382,8 +382,8 @@ Saving Throw: None
 
 This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 3 hit points per round (up to a maximum of 90 hit points within 3 turns at level 10). The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
 
-@3570 = ~Animal Summoning III~
-@3571 = ~Animal Summoning III
+@3570 = "Animal Summoning III"
+@3571 = "Animal Summoning III
 Level: 3
 School: Conjuration
 Sphere: Animal
@@ -407,7 +407,7 @@ HP 21, AC 6, THAC0 18, Saving Throws 15/17/15/13/17
 1 Attack Per Round, 1d6 Piercing Damage (Bite)
 
 Combat Abilities:
-Pack Attack: each wolf within 10 feet grants additional +1 bonus to attack rolls~
+Pack Attack: each wolf within 10 feet grants additional +1 bonus to attack rolls"
 
 
 //Display strings.

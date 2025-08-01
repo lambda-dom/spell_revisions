@@ -5,6 +5,7 @@
 @1201 = "War Dog"
 @1301 = "Lesser Skeleton"
 @1302 = "Greater Skeleton"
+@1303 = "Wolf"
 
 //Arcane.
 @2101 = "Gibberling"

@@ -106,6 +106,25 @@ DEFINE_PATCH_FUNCTION undead_immunities STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION wolf_pack_attack BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "pack_attack"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 1
+        check_headers = 0
+        verbose = 1
+        match_opcode = 232              //Cast spell on condition.
+    STR_VAR
+        match_resource = "item#res"
+        resource = "%res%"
+    END
+END
+
 DEFINE_PATCH_FUNCTION green_slime_immunities STR_VAR destination = "*" BEGIN
     PATCH_FOR_EACH block IN
         "charm"
