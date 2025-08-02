@@ -1173,23 +1173,9 @@ ACTION_IF (GAME_INCLUDES ~bg2~) BEGIN
     BUT_ONLY
 END
 
-COPY ~spell_rev\spwi3##\spwi309.spl~     ~override~  // Monster Summoning III (originally Monster Summoning I)
-  SAY NAME1 @517    SAY UNIDENTIFIED_DESC @518
-COPY ~spell_rev\spwi3##\hobarcsu.eff~     ~override~
-COPY ~spell_rev\spwi3##\hobarcsu.cre~     ~override~
-  SAY NAME1 @3517
-  SAY NAME2 @3517
-COPY ~spell_rev\spwi3##\hobarcsu.itm~     ~override~
-COPY ~spell_rev\spwi3##\hobwarsu.itm~     ~override~
-COPY ~spell_rev\spwi3##\hobshasu.eff~     ~override~
-COPY ~spell_rev\spwi3##\hobshasu.cre~     ~override~
-  SAY NAME1 @3518
-  SAY NAME2 @3518
-COPY ~spell_rev\spwi3##\hobshasu.itm~     ~override~
 COPY ~spell_rev\spwi3##\dvhobsha.bcs~     ~override~
-COPY ~spell_rev\spwi3##\spwi309a.bam~     ~override~
-COPY ~spell_rev\spwi3##\spwi309b.bam~     ~override~
-COPY ~spell_rev\spwi3##\spwi309c.bam~     ~override~
+
+// Monster Summoning III (originally Monster Summoning I)
 APPEND ~spell.ids~ ~2309 WIZARD_MONSTER_SUMMONING_LEVEL_3~
 
 //Non-detection: detectable spells stuff.
