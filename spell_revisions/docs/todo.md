@@ -26,6 +26,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Insects: only the description is in. It needs sectype adding, which requires weidu_library support not existing yet.
 
+* Spike Growth: remove save from movement set for parity with entangle.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.
@@ -42,7 +44,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 3. Level 3.
 
-* Spike Growth: remove save from movement set for parity with entangle.
+* Dispel Magic: only the description is in.
+
+* Remove magic: reinstate, with old icon but targetiing everyone (that is remove magic becomes old dispel magic).
 
 # C. General.
 
