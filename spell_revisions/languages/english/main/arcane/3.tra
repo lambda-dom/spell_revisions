@@ -171,7 +171,7 @@ By means of this spell, the wizard bestows upon a creature total invulnerability
 
 //slow:spwi312
 @3120 = "Slow"
-@3120 = "Slow
+@3121 = "Slow
 Level: 3
 School: Alteration
 Range: Long
@@ -206,7 +206,124 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
 
-When this spell is cast, the target loses 3 hit points for every two caster levels, to a maximum drain of 30 for a 20th level caster. These hit points are added to the caster's current hit points. Non-living creatures like the undead, constructs and elementals are immune to the effects of the spell."
+When this spell is cast, the target loses 3 hit points for every two caster levels, to a maximum drain of 30 for a 20th level caster, and these hit points are then added to the caster's current hit points. Non-living creatures like the undead, constructs and elementals are immune to the effects of the spell."
 
 //non existent:spwi315
 //dire_charm:spwi316
+@3160 = "Dire Charm"
+@3161 = ~Dire Charm
+Level: 3
+School: Enchantment
+Range: Long
+Duration: 1 turn
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: Spell negates
+
+This spell works in the exact same manner as Charm Person, with two differences: the saving throw has no bonus, and the enchantment has a longer duration. Dire Charm affects any single person it is cast upon. The term "person" includes any bipedal human, demihuman, or humanoid of man-size or smaller, such as dwarves, elves, gnolls, gnomes, half-elves, halflings, half-orcs, hobgoblins, humans, kobolds, and others. Thus, a 10th-level fighter could be charmed, but an ogre could not. If the recipient fails his saving throw, he regards the caster as a trusted friend and ally to be heeded and protected. The caster may give him orders, and the charmed creature will carry them out as quickly as possible.
+
+If the caster harms, or attempts to harm, the charmed creature by some overt action, or if a Dispel Magic spell is successfully cast upon the charmed creature, the charm spell is broken. If two or more charm effects simultaneously affect a creature, the most recent charm takes precedence.~
+
+//ghost_armor:spwi317
+@3170 = "Ghost Armor"
+@3171 = "Ghost Armor
+Level: 3
+School: Illusion
+Range: Touch
+Duration: 10 turns
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, the wizard creates an insubstantial but quasi-real suit of armor. This semi-illusory material covers the subject and actually gives some real protection provided that opponents don't actively disbelieve in the armor (detecting the illusion) and neither a dispel magic nor detect illusion spell is cast upon it. Until dispelled or disbelieved, the armor sets the recipient's base armor class to 2. This spell will not function with any other form of magical armor, but it is cumulative with dexterity bonuses and, in the case of fighter/mages, with the shield bonus. The ghost armor does not hinder movement, adds no weight or encumbrance, nor does it prevent spellcasting. A favourite among mage/thieves, the ghostly nimbus of light which surrounds the recipient grants +20% bonus to Stealth."
+
+//minor_spell_deflection:spwi318
+@3180 = "Minor Spell Deflection"
+@3181 = "Minor Spell Deflection
+Level: 3
+School: Abjuration
+Range: Personal
+Duration: 5 turns
+Casting Time: 3
+Area of Effect: Caster
+Saving Throw: None
+
+This abjuration spell causes any spells cast against the wizard to be absorbed and consumed. This affects a total of 6 spell levels, but having 1 level left of protection means a 1st level spell would get absorbed, as well as a 4th level spell. Spells greater than 4th level will not be affected. This spell will not protect the caster from a dispel magic. However, it will not be affected by a dispel magic, either.
+
+This spell absorbs spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the wizard (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud)."
+
+//protection_from_fire:spwi319
+//protection_from_cold:spwi320
+//spell_thrust:spwi321
+@3210 = "Spell Thrust"
+@3211 = "Spell Thrust
+Level: 3
+School: Abjuration
+Range: Long
+Duration: Instant
+Casting Time: 3
+Area of Effect: 15' radius
+Saving Throw: None
+
+When this spell is cast, it will dispel one spell protection of 5th level or lower on all enemies within the area of effect. This will always dispel the highest level of spell protection on a target first. If a target has two or more protections tied for the highest level, the choice will be random. Magic resistance does not affect this spell.
+
+The spell protections dispelled by Spell Thrust are: Minor Spell Deflection, Non-Detection, Minor Globe of Invulnerability, Spell Deflection, Dispelling Screen and Spell Shield."
+
+//detect_illusion:spwi322
+@3220 = "Detect Illusion"
+@3221 = "Detect Illusion
+Level: 3
+School: Divination
+Range: Long
+Duration: Instant
+Casting Time: 3
+Area of Effect: 30' radius
+Saving Throw: None
+
+When this spell is cast at a point designated by the wizard, an area roughly 30 feet in radius will be affected. All hostile illusion spells of 4th level and lower in this area will be dispelled. Magic resistance does not affect this spell.
+
+The illusion spells dispelled by Detect Illusion are: Reflected Image, Blur, Invisibility, Mirror Image, Ghost Armor, Invisibility Sphere, and Improved Invisibility."
+
+//non existent:spwi323
+//hold_undead:spwi324
+@3240 = "Hold Undead"
+@3241 = "Hold Undead
+Level: 3
+School: Necromancy
+Range: Long
+Duration: 1 turn
+Casting Time: 3
+Area of Effect: Target, and enemies within 5'
+Saving Throw: Spell negates
+
+This spell stops undead creatures in their place for the duration of the spell. The effect is centered on the victim selected by the caster. Any undead creatures within 5 feet of the target are also affected. Those who succeed at a saving throw vs. spell at -2 are totally unaffected by the spell.
+
+Those affected become unable to move or groan, but they remain aware of events around them even though they are helpless to change them. Time passes at a normal rate for the targets and hence the effect does not stop any worsening of their condition due to injury or rot."
+
+//melfs_minute_meteors:spwi325
+@3250 = "Melf's Minute Meteors"
+@3251 = "Melf's Minute Meteors
+Level: 3
+School: Evocation
+Range: Personal
+Duration: Special
+Casting Time: 3
+Area of Effect: Special
+Saving Throw: None
+
+This spell enables the wizard to summon small globes of fire (one for each level of experience of the caster), which, when thrown, burst upon impact and inflict 1d4 points of missile damage plus 2d4 points of fire damage to the creature struck. The wizard gains a +5 bonus to hit with the missiles, and each meteor is considered to be of +2 enchantment to determine what it can hit. The wizard may discharge up to five missiles per round."
+
+//dispel_magic:spwi326
+
+//New spells.
+@3500 = "Icelance"
+@3501 = "Icelance
+Level: 3
+School: Evocation
+Range: Short
+Duration: Special
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: Paralyzation partial
+
+When this spell is cast, a sharp spear of ice impales the target, inflicting 5d6 points of damage. The target must make a save vs. paralyzation or be held for three rounds."

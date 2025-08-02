@@ -1195,27 +1195,6 @@ APPEND ~spell.ids~ ~2309 WIZARD_MONSTER_SUMMONING_LEVEL_3~
 //Non-detection: detectable spells stuff.
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~spwi310.SPL    282     3     6     142    n     A~
 
-COPY ~spell_rev\spwi3##\spwi314.spl~     ~override~  // Vampiric Touch
-  SAY NAME1 @527    SAY UNIDENTIFIED_DESC @528
-COPY ~spell_rev\spwi3##\spwi314.eff~     ~override~
-
-COPY ~spell_rev\spwi3##\spwi316.spl~     ~override~  // Dire Charm
-  SAY NAME1 @529    SAY UNIDENTIFIED_DESC @530
-COPY ~spell_rev\spwi3##\scrl1s.itm~     ~override~
-  SAY NAME2 @529    SAY IDENTIFIED_DESC   @530
-
-COPY ~spell_rev\spwi3##\spwi317.spl~     ~override~  // Ghost Armor
-  SAY NAME1 @531    SAY UNIDENTIFIED_DESC @532
-COPY ~spell_rev\spwi3##\scrl1t.itm~     ~override~
-  SAY NAME2 @531    SAY IDENTIFIED_DESC   @532
-COPY ~spell_rev\spwi3##\gharmor.vvc~     ~override~
-COPY ~spell_rev\spwi3##\gharmor.bam~     ~override~
-
-COPY ~spell_rev\spwi3##\spwi318.spl~     ~override~  // Minor Spell Deflection
-  SAY NAME1 @533    SAY UNIDENTIFIED_DESC @534
-COPY ~spell_rev\spwi3##\scrl6g.itm~     ~override~
-  SAY NAME2 @533    SAY IDENTIFIED_DESC   @534
-
 COPY ~spell_rev\spwi3##\spwi319.spl~     ~override~  // Protection from Fire
   SAY NAME1 @535    SAY UNIDENTIFIED_DESC @536
 /* COPY ~spell_rev\spwi3##\scrl6h.itm~     ~override~
@@ -1226,49 +1205,15 @@ COPY ~spell_rev\spwi3##\spwi320.spl~     ~override~  // Protection from Cold
 /* COPY ~spell_rev\spwi3##\scrl6i.itm~     ~override~
   SAY NAME2 @537    SAY IDENTIFIED_DESC   @538 */  // Scroll used for Icelance
   
-ADD_PROJECTILE ~spell_rev\projectles\dvsplthr.pro~
-COPY ~spell_rev\spwi3##\spwi321.spl~     ~override~  // Spell Thrust
-  SAY NAME1 @539    SAY UNIDENTIFIED_DESC @540
-  WRITE_SHORT 0x98 %dvsplthr%
-COPY ~spell_rev\spwi3##\scrl6j.itm~     ~override~
-  SAY NAME2 @539    SAY IDENTIFIED_DESC   @540
-
-COPY ~spell_rev\spwi3##\spwi322.spl~     ~override~  // Detect Illusion
-  SAY NAME1 @541    SAY UNIDENTIFIED_DESC @542
-COPY ~spell_rev\spwi3##\scrl6k.itm~     ~override~
-  SAY NAME2 @541    SAY IDENTIFIED_DESC   @542
-
-COPY ~spell_rev\spwi3##\spwi324.spl~     ~override~  // Hold Undead
-  SAY NAME1 @543    SAY UNIDENTIFIED_DESC @544
-COPY ~spell_rev\spwi3##\scrl6l.itm~     ~override~
-  SAY NAME2 @543    SAY IDENTIFIED_DESC   @544
+//Patching for hold undead projectile.
 COPY_EXISTING ~holdnecr.pro~ ~override~
   WRITE_SHORT 0x204 65
   WRITE_SHORT 0x206 65
-
-COPY ~spell_rev\spwi3##\spwi325.spl~     ~override~  // Melf's Minute Meteors
-  SAY NAME1 @545    SAY UNIDENTIFIED_DESC @546
-COPY ~spell_rev\spwi3##\scrla5.itm~     ~override~
-  SAY NAME2 @545    SAY IDENTIFIED_DESC   @546
-COPY ~spell_rev\spwi3##\melfmet.itm~     ~override~
-  SAY NAME1 @3545
-  SAY NAME2 @3545
 
 COPY ~spell_rev\spwi3##\spwi326.spl~     ~override~  // Dispel Magic
   SAY NAME1 @547    SAY UNIDENTIFIED_DESC @548
 COPY ~spell_rev\spwi3##\scrl1e.itm~     ~override~
   SAY NAME2 @547    SAY IDENTIFIED_DESC   @548
-
-//ADD_SPELL: Icelance
-ADD_SPELL ~spell_rev\spwi3##\spwi327.spl~ 2 3 ~WIZARD_ICELANCE~  // Icelance (added by V4)
-  SAY NAME1 @875    SAY UNIDENTIFIED_DESC @876
-  WRITE_SHORT 0x98 %dvicespr%
-COPY ~spell_rev\spwi3##\scrl6i.itm~     ~override~
-  SAY NAME2 @875    SAY IDENTIFIED_DESC   @876
-COPY ~spell_rev\spwi3##\dvwi327a.bam~     ~override~
-COPY ~spell_rev\spwi3##\dvwi327b.bam~     ~override~
-COPY ~spell_rev\spwi3##\dvwi327c.bam~     ~override~
-
 
 /*-----------------------level 4-----------------------*/
 

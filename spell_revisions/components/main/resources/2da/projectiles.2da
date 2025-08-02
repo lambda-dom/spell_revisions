@@ -18,3 +18,4 @@ spike_growth        1       spike_growth        0           *           0       
 icelance            1       icelance            0           icelance    0       #lit:dlicelnc
 pack_attack         1       pack_attack         0           *           0       #lit:dlpakatt
 flame_arrow         1       flame_arrow         0           *           0       #lit:dlflmarw
+spell_thrust        1       spell_thrust        0           *           0       #lit:dlsplthr

@@ -60,3 +60,11 @@ WIZARD_PROTECTION_FROM_NORMAL_MISSILES  scrl1n      10      1
 WIZARD_SLOW                             scrl1o      10      1
 WIZARD_SKULL_TRAP                       scrl1p      10      1
 WIZARD_VAMPIRIC_TOUCH                   scrl1q      10      1
+WIZARD_DIRE_CHARM                       scrl1s      10      1
+WIZARD_GHOST_ARMOR                      scrl1t      10      1
+WIZARD_MINOR_SPELL_DEFLECTION           scrl6g      10      1
+WIZARD_SPELL_THRUST                     scrl6j      10      1
+WIZARD_DETECT_ILLUSION                  scrl6k      10      1
+WIZARD_HOLD_UNDEAD                      scrl6l      10      1
+WIZARD_MELF_METEOR                      scrla5      10      1
+WIZARD_ICELANCE                         scrl6i      10      1

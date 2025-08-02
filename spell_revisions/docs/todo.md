@@ -56,6 +56,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Vampiric Touch: I am not sure the flags have been chosen correctly or even if they can be so shosen, and by this I mean: do damage per amount + dice, maybe capped by max hp of target. Absorb only up to maximum hp. Concurrency with other Vampiric Touches must also be addressed (e.g. spin106).
 
+* Protection from Fire and Cold: not yet done as these are moved to level 4.
+
+* Melf's meteors: description says evocation school, spell says conjuration. Going with description for now.
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
@@ -68,3 +72,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 note(s):
 * up to level 3 debuffs should also be revisited to see if they follow the rule.
+
+* Armor line of spells: concurrency not handled yet.
+
+* Display strings: this has only be handled in a small number of spells.

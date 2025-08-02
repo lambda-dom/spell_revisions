@@ -10,6 +10,18 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/tables.tpa"
 
 
 //Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
+LAF get_table_references STR_VAR
+    tables = "vvcs"
+RET_ARRAY vvcs = references END
+
 LAF get_component_resources_dir RET resources = dir END
 LAF get_table_references STR_VAR
     tables = "3"
@@ -258,5 +270,43 @@ DEFINE_PATCH_FUNCTION slow STR_VAR destination = "*" BEGIN
         verbose = 1
         match_opcode = 221                  //Remove protections by sectype.
         parameter2 = sectype_id
+    END
+END
+
+DEFINE_PATCH_FUNCTION ghost_armor STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215                  //Play visual effect.
+    STR_VAR
+        resource = "ghost_armor"
+        match_resource = "vvc#res"
+        references = "vvcs"
+    END
+END
+
+DEFINE_PATCH_FUNCTION melfs_minute_meteors STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "melf_meteor"
+        ext = "itm"
+        match_resource = "melf#res"
+        references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION icelance STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "icelance_hold"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "hold#res"
+        resource = "%res%"
     END
 END
