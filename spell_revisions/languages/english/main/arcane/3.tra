@@ -142,8 +142,8 @@ Memorized Spells:
 2. Chant, Hold Person, Silence"
 
 //non_detection:spwi310
-@3100 = ~Non-Detection~
-@3101 = ~Non-Detection
+@3100 = "Non-Detection"
+@3101 = "Non-Detection
 Level: 3
 School: Abjuration
 Range: Touch
@@ -154,7 +154,7 @@ Saving Throw: None
 
 By casting this spell, the wizard protects a hidden or invisible creature from being exposed by divinations that dispel invisibility, such as Invisibility Purge, Oracle, and True Seeing, or by a thief's Detect Illusion ability.
 
-Note: while a creature protected by Non-Detection cannot be exposed to everyone, they still may be observed and detected by individuals who, through a spell or innate ability, have the power to directly see through invisibility. This includes the caster, and only the caster, of Detect Invisibility and True Seeing.~
+Note: while a creature protected by Non-Detection cannot be exposed to everyone, they still may be observed and detected by individuals who, through a spell or innate ability, have the power to directly see through invisibility. This includes the caster, and only the caster, of Detect Invisibility and True Seeing."
 
 //protection_from_missiles:spwi311
 @3110 = "Protection from Missiles"
@@ -169,3 +169,44 @@ Saving Throw: None
 
 By means of this spell, the wizard bestows upon a creature total invulnerability to hurled and projected missiles such as arrows, axes, bolts, javelins, and sling stones. This spell does not convey any protection from magical attacks such as Fireballs, Lightning Bolts, or Magic Missiles, but magically created missiles such as Melf's Acid Arrows, Melf's Minute Meteors, and Flame Arrows will be harmlessly deflected."
 
+//slow:spwi312
+@3120 = "Slow"
+@3120 = "Slow
+Level: 3
+School: Alteration
+Range: Long
+Duration: 1 turn
+Casting Time: 3
+Area of Effect: 30' radius
+Saving Throw: Polymorph negates
+
+A Slow spell causes creatures to move and attack at half of their normal rates unless a save vs. polymorph at -2 is made. Slowed creatures also suffer a -2 penalty to attack rolls, AC, and saves vs. breath. Spellcasting time is doubled, though spell effects are not affected. Furthermore, the rate at which these creatures regenerate or suffer damage from poison is halved. At the instant the spell is completed, all hostile creatures in 30 foot radius of a point selected by the caster will be affected (thus, creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not). It negates the effects of a Haste spell, but does not otherwise affect magically speeded or slowed creatures. This spell is not cumulative with itself or with other similar magic."
+
+//skull_trap:spwi313
+@3130 = "Skull Trap"
+@3131 = "Skull Trap
+Level: 3
+School: Necromancy
+Range: Medium
+Duration: Special
+Casting Time: 3
+Area of Effect: 20' radius
+Saving Throw: Breath half
+
+Upon casting this spell, a skull is thrown by the caster at the target area. The skull floats in the area until a creature comes within 15 feet of it. When this happens, the skull is triggered and explodes, damaging everyone within a 20 foot radius. The explosion deals 1d6 points of magic damage per level of the caster (up to a maximum of 10d6), with a save vs. breath at -2 allowed for half damage. When casting this spell, it is wise to set it far away from the party, lest they set it off accidentally. Undead creatures are not affected by this spell."
+
+//vampiric_touch:spwi314
+@3140 = "Vampiric Touch"
+@3141 = "Vampiric Touch
+Level: 3
+School: Necromancy
+Range: Touch
+Duration: Instant
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, the target loses 3 hit points for every two caster levels, to a maximum drain of 30 for a 20th level caster. These hit points are added to the caster's current hit points. Non-living creatures like the undead, constructs and elementals are immune to the effects of the spell."
+
+//non existent:spwi315
+//dire_charm:spwi316

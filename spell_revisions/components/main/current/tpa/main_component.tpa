@@ -1195,22 +1195,8 @@ APPEND ~spell.ids~ ~2309 WIZARD_MONSTER_SUMMONING_LEVEL_3~
 //Non-detection: detectable spells stuff.
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~spwi310.SPL    282     3     6     142    n     A~
 
-COPY ~spell_rev\spwi3##\spwi312.spl~     ~override~  // Slow
-  SAY NAME1 @523    SAY UNIDENTIFIED_DESC @524
-COPY ~spell_rev\spwi3##\scrl1o.itm~     ~override~
-  SAY NAME2 @523    SAY IDENTIFIED_DESC   @524	
-
-COPY ~spell_rev\spwi3##\spwi313.spl~     ~override~  // Skull Trap
-  SAY NAME1 @525    SAY UNIDENTIFIED_DESC @526
-COPY ~spell_rev\spwi3##\scrl1p.itm~     ~override~
-  SAY NAME2 @525    SAY IDENTIFIED_DESC   @526
-COPY ~spell_rev\spwi3##\spwi313i.eff~     ~override~
-
 COPY ~spell_rev\spwi3##\spwi314.spl~     ~override~  // Vampiric Touch
   SAY NAME1 @527    SAY UNIDENTIFIED_DESC @528
-  LPF ALTER_EFFECT INT_VAR match_opcode = 206 match_parameter1 = 61914 parameter1 = RESOLVE_STR_REF(@3527) END
-COPY ~spell_rev\spwi3##\scrl1q.itm~     ~override~
-  SAY NAME2 @527    SAY IDENTIFIED_DESC   @528
 COPY ~spell_rev\spwi3##\spwi314.eff~     ~override~
 
 COPY ~spell_rev\spwi3##\spwi316.spl~     ~override~  // Dire Charm

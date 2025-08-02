@@ -98,3 +98,5 @@ note(s):
 * Non-detection: protection from spell type divinationattack.
 
 * Protection from Missiles: externalized the projectiles that spell defends against. Fixed flame arrow projectile. Needs a pass over missing projectiles.
+
+* Vampiric Touch: only heals up to max, so cannot be used to augment max hps.

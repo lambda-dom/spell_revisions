@@ -52,6 +52,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles.
 
+* Skull Trap: has an extra protection for swords. Undocumented but to be decided.
+
+* Vampiric Touch: I am not sure the flags have been chosen correctly or even if they can be so shosen, and by this I mean: do damage per amount + dice, maybe capped by max hp of target. Absorb only up to maximum hp. Concurrency with other Vampiric Touches must also be addressed (e.g. spin106).
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
@@ -59,3 +63,8 @@ Not just things to (still) do but also proposed changes to spells.
 * Cure line of spells: mention in description that it also cures intoxication.
 
 * Regenerate line of spells: handle inter-spell concurrency.
+
+* Self-stacking debuffs: debuffs like Slow stack with themselves if not protected against -- this is achieved by a Protection from Spell [206] opcode and *not* by refreshing. The reason is that the debuffs apply on a failed save so it could happen that the refresh would clean the applied debuff and then fail to apply its effects due to a successful save. In the case of Slow, the problem is sharper because the debuff is applied via sectype, so while it does not stack with itself it will stack with other instances of the sectype. For now this is how it is done, but this ought to be revisited.
+
+note(s):
+* up to level 3 debuffs should also be revisited to see if they follow the rule.

@@ -58,46 +58,6 @@ This spell creates a cloud of glittering golden particles within the area of eff
 
 
 //Level 3.
-@523=~Slow~
-@524=~Slow
-Level: 3
-School: Alteration
-Range: Long
-Duration: 1 turn
-Casting Time: 3
-Area of Effect: 30' radius
-Saving Throw: Polymorph negates
-
-A Slow spell causes creatures to move and attack at half of their normal rates unless a save vs. polymorph at -2 is made. Slowed creatures also suffer a -2 penalty to attack rolls, AC, and saves vs. breath. Spellcasting time is doubled, though spell effects are not affected. Furthermore, the rate at which these creatures regenerate or suffer damage from poison is halved. At the instant the spell is completed, all hostile creatures in 30 foot radius of a point selected by the caster will be affected (thus, creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not). It negates the effects of a Haste spell, but does not otherwise affect magically speeded or slowed creatures. This spell is not cumulative with itself or with other similar magic.~
-
-@525=~Skull Trap~
-@526=~Skull Trap
-Level: 3
-School: Necromancy
-Range: Medium
-Duration: Special
-Casting Time: 3
-Area of Effect: 20' radius
-Saving Throw: Breath half
-
-Upon casting this spell, a skull is thrown by the caster at the target area. The skull floats in the area until a creature comes within 15 feet of it. When this happens, the skull is triggered and explodes, damaging everyone within a 20 foot radius. The explosion deals 1d6 points of magic damage per level of the caster (up to a maximum of 10d6), with a save vs. breath at -2 allowed for half damage. When casting this spell, it is wise to set it far away from the party, lest they set it off accidentally. Undead creatures are not affected by this spell.~
-
-@527=~Vampiric Touch~
-@528=~Vampiric Touch
-Level: 3
-School: Necromancy
-Range: Touch
-Duration: Special
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
-
-When this spell is cast, the target loses 3 hit points for every two caster levels, to a maximum drain of 30 for a 20th level caster. These hit points are added to the caster's current hit points, with any hit points over the caster's normal maximum treated as temporary additional hit points. The temporary hit points last for 5 turns.
-
-Note that this spell may not be cast multiple times to radically increase the caster's hit points. The caster must wait for the first Vampiric Touch spell to run its course before casting another.~
-
-@3527=~A vampiric touch spell is already active~
-
 @529=~Dire Charm~
 @530=~Dire Charm
 Level: 3
