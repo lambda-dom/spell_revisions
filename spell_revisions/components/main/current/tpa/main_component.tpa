@@ -1192,17 +1192,8 @@ COPY ~spell_rev\spwi3##\spwi309b.bam~     ~override~
 COPY ~spell_rev\spwi3##\spwi309c.bam~     ~override~
 APPEND ~spell.ids~ ~2309 WIZARD_MONSTER_SUMMONING_LEVEL_3~
 
-COPY ~spell_rev\spwi3##\spwi310.spl~     ~override~  // Non-Detection
-  SAY NAME1 @519    SAY UNIDENTIFIED_DESC @520
-COPY ~spell_rev\spwi3##\scrl1m.itm~     ~override~
-  SAY NAME2 @519    SAY IDENTIFIED_DESC   @520
 //Non-detection: detectable spells stuff.
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~spwi310.SPL    282     3     6     142    n     A~
-
-COPY ~spell_rev\spwi3##\spwi311.spl~     ~override~  // Protection from Missiles
-  SAY NAME1 @521    SAY UNIDENTIFIED_DESC @522
-COPY ~spell_rev\spwi3##\scrl1n.itm~     ~override~
-  SAY NAME2 @521    SAY IDENTIFIED_DESC   @522
 
 COPY ~spell_rev\spwi3##\spwi312.spl~     ~override~  // Slow
   SAY NAME1 @523    SAY UNIDENTIFIED_DESC @524

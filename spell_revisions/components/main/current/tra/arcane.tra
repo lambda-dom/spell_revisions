@@ -58,31 +58,6 @@ This spell creates a cloud of glittering golden particles within the area of eff
 
 
 //Level 3.
-@519=~Non-Detection~
-// ***** the following description has been altered in English, needs translation
-@520=~Non-Detection
-Level: 3
-School: Abjuration
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
-
-By casting this spell, the wizard protects a hidden or invisible creature from being exposed by divinations that dispel invisibility, such as Invisibility Purge, Oracle, and True Seeing, or by a thief's Detect Illusion ability.
-
-Note: while a creature protected by Non-Detection cannot be exposed to everyone, they still may be observed and detected by individuals who, through a spell or innate ability, have the power to directly see through invisibility. This includes the caster, and only the caster, of Detect Invisibility and True Seeing.~
-
-@521=~Protection from Missiles~
-@522=~Protection from Missiles
-Level: 3
-School: Abjuration
-Range: Touch
-Duration: 1 turn
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
-
-By means of this spell, the wizard bestows upon a creature total invulnerability to hurled and projected missiles such as arrows, axes, bolts, javelins, and sling stones. This spell does not convey any protection from magical attacks such as Fireballs, Lightning Bolts, or Magic Missiles, but magically created missiles such as Melf's Acid Arrows, Melf's Minute Meteors, and Flame Arrows will be harmlessly deflected.~
-
 @523=~Slow~
 @524=~Slow
 Level: 3

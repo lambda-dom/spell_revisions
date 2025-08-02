@@ -94,3 +94,7 @@ note(s):
 ## B. 3. Level 3.
 
 * Clairvoyance: correction of power in saves opcode.
+
+* Non-detection: protection from spell type divinationattack.
+
+* Protection from Missiles: externalized the projectiles that spell defends against. Fixed flame arrow projectile. Needs a pass over missing projectiles.

@@ -2,9 +2,11 @@
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/projectiles.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/sectypes.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/tables.tpa"
 
 
 //Load reference tables.
@@ -187,5 +189,60 @@ DEFINE_PATCH_FUNCTION haste STR_VAR destination = "*" BEGIN
         parameter2 = sectype_id
     STR_VAR
         insert = "below"
+    END
+END
+
+DEFINE_PATCH_FUNCTION protection_from_missiles STR_VAR destination = "*" BEGIN
+    //Externalize this dir, so that modders can hook up into it.
+    LPF get_component_resources_dir RET resources_dir = dir END
+    TEXT_SPRINT resources_dir "%resources_dir%/2da/arcane"
+
+    //Load projectiles table.
+    LPF load_table STR_VAR
+        file = "%resources_dir%/protection_from_missiles.2da"
+        fields = "missile:install:id"
+    RET_ARRAY missiles = table END
+
+    //Loop backwards.
+    LPF get_table_row_count STR_VAR table = "missiles" RET row_count = count END
+    FOR (i = row_count - 1; i >= 0; --i) BEGIN
+        LPF get_row_from_table INT_VAR
+            row = i
+        STR_VAR
+            table = "missiles"
+        RET_ARRAY row = array END
+
+        PATCH_WITH_SCOPE BEGIN
+            TEXT_SPRINT missile $"row"("missile")
+            TEXT_SPRINT install $"row"("install")
+            TEXT_SPRINT id $"row"("id")
+
+            PATCH_IF NOT (install = 0) BEGIN
+                PATCH_IF NOT (IS_AN_INT id) BEGIN
+                    PATCH_FAIL "protection_from_missiles: id column value '%id%' of row '%i%' is not an integer."
+                END
+
+                //Normalize id.
+                pro_id = id
+                PATCH_IF (pro_id = 0) BEGIN
+                    LPF get_missile_id STR_VAR missile = "%missile%" RET pro_id = id END
+                    PATCH_IF (pro_id = 0 - 1) BEGIN
+                        PATCH_FAIL "protection_from_missiles: missile '%missile%' of row '%i%' is not a valid missile label."
+                    END
+
+                    //Correct value.
+                    pro_id -= 1
+                END
+
+                LPF CLONE_EFFECT INT_VAR
+                    verbose = 1
+                    match_opcode = 156      //Protection from missiles overlay.
+                    opcode = 83             //Immunity to projectile.
+                    parameter2 = pro_id
+                STR_VAR
+                    insert = "below"
+                END
+            END
+        END
     END
 END

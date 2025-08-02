@@ -55,3 +55,5 @@ WIZARD_HOLD_PERSON                      scrl1i      10      1
 WIZARD_INVISIBILITY_10_FOOT             scrl1j      10      1
 WIZARD_LIGHTNING_BOLT                   scrl1k      10      1
 WIZARD_MONSTER_SUMMONING_LEVEL_3        scrl1l      10      1
+WIZARD_NON_DETECTION                    scrl1m      10      1
+WIZARD_PROTECTION_FROM_NORMAL_MISSILES  scrl1n      10      1

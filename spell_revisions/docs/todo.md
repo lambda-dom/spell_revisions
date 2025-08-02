@@ -50,6 +50,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Monster Summoning III: only scaffolding (icons, scrolls, etc.) and description is in.
 
+* Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles.
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
