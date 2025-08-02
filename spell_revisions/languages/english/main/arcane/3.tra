@@ -146,6 +146,8 @@ Memorized Spells:
 @3101 = ~Non-Detection
 Level: 3
 School: Abjuration
+Range: Touch
+Duration: 8 hours
 Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
