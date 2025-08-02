@@ -48,6 +48,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Remove magic: reinstate, with old icon but targetiing everyone (that is remove magic becomes old dispel magic).
 
+* Monster Summoning III: only scaffolding (icons, scrolls, etc.) and description is in.
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.

@@ -1173,25 +1173,8 @@ ACTION_IF (GAME_INCLUDES ~bg2~) BEGIN
     BUT_ONLY
 END
 
-COPY ~spell_rev\spwi3##\spwi306.spl~     ~override~  // Hold Person
-  SAY NAME1 @511    SAY UNIDENTIFIED_DESC @512
-COPY ~spell_rev\spwi3##\scrl1i.itm~     ~override~
-  SAY NAME2 @511    SAY IDENTIFIED_DESC   @512
-
-COPY ~spell_rev\spwi3##\spwi307.spl~     ~override~  // Invisibility Sphere (previously named Invisibility 10' Radius)
-  SAY NAME1 @513    SAY UNIDENTIFIED_DESC @514
-COPY ~spell_rev\spwi3##\scrl1j.itm~     ~override~
-  SAY NAME2 @513    SAY IDENTIFIED_DESC   @514
-
-COPY ~spell_rev\spwi3##\spwi308.spl~     ~override~  // Lightning Bolt
-  SAY NAME1 @515    SAY UNIDENTIFIED_DESC @516
-COPY ~spell_rev\spwi3##\scrl1k.itm~     ~override~
-  SAY NAME2 @515    SAY IDENTIFIED_DESC   @516
-
 COPY ~spell_rev\spwi3##\spwi309.spl~     ~override~  // Monster Summoning III (originally Monster Summoning I)
   SAY NAME1 @517    SAY UNIDENTIFIED_DESC @518
-COPY ~spell_rev\spwi3##\scrl1l.itm~     ~override~
-  SAY NAME2 @517    SAY IDENTIFIED_DESC   @518
 COPY ~spell_rev\spwi3##\hobarcsu.eff~     ~override~
 COPY ~spell_rev\spwi3##\hobarcsu.cre~     ~override~
   SAY NAME1 @3517
@@ -1211,9 +1194,10 @@ APPEND ~spell.ids~ ~2309 WIZARD_MONSTER_SUMMONING_LEVEL_3~
 
 COPY ~spell_rev\spwi3##\spwi310.spl~     ~override~  // Non-Detection
   SAY NAME1 @519    SAY UNIDENTIFIED_DESC @520
-APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~spwi310.SPL    282     3     6     142    n     A~
 COPY ~spell_rev\spwi3##\scrl1m.itm~     ~override~
   SAY NAME2 @519    SAY IDENTIFIED_DESC   @520
+//Non-detection: detectable spells stuff.
+APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~spwi310.SPL    282     3     6     142    n     A~
 
 COPY ~spell_rev\spwi3##\spwi311.spl~     ~override~  // Protection from Missiles
   SAY NAME1 @521    SAY UNIDENTIFIED_DESC @522

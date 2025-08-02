@@ -51,3 +51,7 @@ WIZARD_DISPEL_MAGIC                     scrla7      10      1
 WIZARD_FLAME_ARROW                      scrl1f      10      1
 WIZARD_FIREBALL                         scrl1g      10      1
 WIZARD_HASTE                            scrl1h      10      1
+WIZARD_HOLD_PERSON                      scrl1i      10      1
+WIZARD_INVISIBILITY_10_FOOT             scrl1j      10      1
+WIZARD_LIGHTNING_BOLT                   scrl1k      10      1
+WIZARD_MONSTER_SUMMONING_LEVEL_3        scrl1l      10      1
