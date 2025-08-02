@@ -427,9 +427,9 @@ DEFINE_PATCH_FUNCTION cause_serious_wounds STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION storm_shield STR_VAR destination = "*" BEGIN
-    LPF get_sectype_id STR_VAR sectype = "INSECTS" RET sectype_id = id END
+    LPF get_sectype_id STR_VAR sectype = "insects" RET sectype_id = id END
     PATCH_IF (sectype_id = 0 - 1) BEGIN
-        PATCH_FAIL "storm_shield: sectype 'INSECTS' not found."
+        PATCH_FAIL "storm_shield: sectype 'insects' not found."
     END
 
     LPF ALTER_EFFECT INT_VAR

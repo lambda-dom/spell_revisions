@@ -1,0 +1,189 @@
+IF
+    !StateCheck(Myself,STATE_CHARMED)
+    !Allegiance(Myself,EVILCUTOFF)
+    !Allegiance(Myself,ALLY)
+THEN
+    RESPONSE #100
+        Ally()
+        Continue()
+END
+
+IF
+    HotKey(F)
+    Global("dv_followmode","LOCALS",1)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_followmode","LOCALS",0)
+        SmallWait(1)
+        DisplayStringHead(Myself,835)  // Follow mode on
+END
+
+IF
+    HotKey(F)
+    Global("dv_followmode","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_followmode","LOCALS",1)
+        SmallWait(1)
+        DisplayStringHead(Myself,836)  // Follow mode off
+END
+
+IF
+    Global("dv_followmode","LOCALS",0)
+    ActionListEmpty()
+    !Range(LastSummonerOf(Myself),10)
+    !See(LastSummonerOf(Myself))
+    CombatCounter(0)
+    !Exists([EVILCUTOFF])
+THEN
+    RESPONSE #100
+        SetGlobal("dv_SummonInFormation","LOCALS",1)
+        FollowObjectFormation(LastSummonerOf(Myself),3,3)
+END
+
+IF
+    Global("dv_SummonInFormation","LOCALS",1)
+    OR(2)
+        Exists([EVILCUTOFF])
+        !CombatCounter(0)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_SummonInFormation","LOCALS",0)
+        ClearActions(Myself)
+        Continue()
+END
+
+IF
+    HotKey(E)
+    Global("dv_AIOffSwitch","LOCALS",1)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_AIOffSwitch","LOCALS",0)
+        SmallWait(1)
+        DisplayStringHead(Myself,16469)  // On
+END
+
+IF
+    HotKey(D)
+    Global("dv_AIOffSwitch","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_AIOffSwitch","LOCALS",1)
+        SmallWait(1)
+        DisplayStringHead(Myself,16470)  // Off
+END
+
+IF
+    Global("dv_AIOffSwitch","LOCALS",1)
+THEN
+    RESPONSE #100
+END
+
+IF
+    HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+    HPPercentLT(Myself,75)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+END
+
+IF
+    HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    !Range(NearestEnemyOf(Myself),4)
+    Range(NearestEnemyOf(Myself),20)
+    HaveSpell(CLERIC_CHANT)  // SPPR203.SPL (Chant)
+    !StateCheck(LastSeenBy(Myself),STATE_CHANT)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_CHANT)  // SPPR203.SPL (Chant)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    !Range(NearestEnemyOf(Myself),4)
+    HaveSpell(CLERIC_BLESS)  // SPPR101.SPL (Bless)
+    !StateCheck(LastSeenBy(Myself),STATE_BLESS)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_BLESS)  // SPPR101.SPL (Bless)
+END
+
+IF
+    See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
+    HaveSpell(CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+THEN
+    RESPONSE #100
+        Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+END
+
+IF
+    See(NearestEnemyOfType([0.0.0.DRUID_ALL]))
+    HaveSpell(CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+THEN
+    RESPONSE #100
+        Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+END
+
+IF
+    See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+    HaveSpell(CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+THEN
+    RESPONSE #100
+        Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    See(NearestEnemyOfType([0.0.0.BARD_ALL]))
+    HaveSpell(CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+THEN
+    RESPONSE #100
+        Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
+    General(LastSeenBy,HUMANOID)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+THEN
+    RESPONSE #100
+        Spell(NearestEnemyOf(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_ARMOR_OF_FAITH)  // SPPR111.SPL (Armor of Faith)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_ARMOR_OF_FAITH)  // SPPR111.SPL (Armor of Faith)
+        SetGlobal("lastSpell","LOCALS",1)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Global("lastSpell","LOCALS",1)
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackOneRound(NearestEnemyOf(Myself))
+END
+

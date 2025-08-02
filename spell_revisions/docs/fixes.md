@@ -90,3 +90,17 @@ note(s):
 * Web: add immunity to mephits.
 
 * Monster Summon II: fix: remove spurious poison icon from jelly pod. Fix int, wis, chr, acid resistance according to description. Fix lack of immunities to disease and sleep. Fix poorly implemented immunities.
+
+## B. 3. Level 3.
+
+* Clairvoyance: correction of power in saves opcode.
+
+* Non-detection: protection from spell type divinationattack.
+
+* Protection from Missiles: externalized the projectiles that spell defends against. Fixed flame arrow projectile. Needs a pass over missing projectiles.
+
+* Dire Charm: correction of off-by-one probability.
+
+* Ghost Armor: added bonus to move silently.
+
+* Monster Summoning III: Correction to the dice of bastard sword. Corrections to shaman: hps.

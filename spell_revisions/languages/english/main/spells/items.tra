@@ -45,3 +45,7 @@
 //Level 2.
 @2200 = "Ghoul Touch"
 @2201 = "Fists enchanted by the Ghoul Touch spell."
+
+//Level 2.
+@2300 = "Melf's Minute Meteor"
+@2301 = "These minute meteors were created by the Melf's Minute Meteors spell."

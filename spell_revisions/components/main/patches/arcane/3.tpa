@@ -1,0 +1,330 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/projectiles.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/sectypes.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/tables.tpa"
+
+
+//Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
+LAF get_table_references STR_VAR
+    tables = "vvcs"
+RET_ARRAY vvcs = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "3"
+    dir = "%resources%/2da/arcane"
+RET_ARRAY spells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION flame_arrow_b STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_damage"
+        match_resource = "damg#res"
+        references = "spells"
+    END
+
+    //Kill next cast spell.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+        opcode = 1024                       //Non-existent.
+    STR_VAR
+        match_resource = "next#res"
+    END
+
+    LPF DELETE_SPELL_EFFECT INT_VAR
+        opcode_to_delete = 1024             //Non-existent.
+    END
+END
+
+DEFINE_PATCH_FUNCTION flame_arrow_c STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_damage"
+        match_resource = "damg#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_b"
+        match_resource = "next#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION flame_arrow_d STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_damage"
+        match_resource = "damg#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_c"
+        match_resource = "next#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION flame_arrow_e STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_damage"
+        match_resource = "damg#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_d"
+        match_resource = "next#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION flame_arrow STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_damage"
+        match_resource = "damg#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        header = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_b"
+        match_resource = "next#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        header = 2
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_c"
+        match_resource = "next#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        header = 3
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_d"
+        match_resource = "next#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        header = 4
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flame_arrow_e"
+        match_resource = "next#res"
+        references = "spells"
+    END
+END
+
+
+DEFINE_PATCH_FUNCTION haste_winded STR_VAR destination = "*" BEGIN
+    LPF get_spell_res STR_VAR spell = "WIZARD_IMPROVED_HASTE" RET res = resource END
+    PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "haste_winded: spell 'WIZARD_IMPROVED_HASTE' not found in 'spell.ids'."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "imph#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION haste STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "haste_winded"
+        match_resource = "wind#res"
+        references = "spells"
+    END
+
+    //Patch sectypes.
+    LPF get_sectype_id STR_VAR sectype = "haste" RET sectype_id = id END
+    PATCH_IF (sectype_id = 0 - 1) BEGIN
+        PATCH_FAIL "haste: sectype 'haste' not found."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 221                  //Remove protections by sectype.
+        parameter2 = sectype_id
+    END
+
+    LPF get_sectype_id STR_VAR sectype = "slow" RET sectype_id = id END
+    PATCH_IF (sectype_id = 0 - 1) BEGIN
+        PATCH_FAIL "haste: sectype 'slow' not found."
+    END
+
+    LPF CLONE_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 221                  //Remove protections by sectype.
+        parameter2 = sectype_id
+    STR_VAR
+        insert = "below"
+    END
+END
+
+DEFINE_PATCH_FUNCTION monster_summoning_3 BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_hobgoblin_archer"
+        ext = "eff"
+        match_resource = "arch#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_hobgoblin_shaman"
+        ext = "eff"
+        match_resource = "sham#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION protection_from_missiles STR_VAR destination = "*" BEGIN
+    //Externalize this dir, so that modders can hook up into it.
+    LPF get_component_resources_dir RET resources_dir = dir END
+    TEXT_SPRINT resources_dir "%resources_dir%/2da/arcane"
+
+    //Load projectiles table.
+    LPF load_table STR_VAR
+        file = "%resources_dir%/protection_from_missiles.2da"
+        fields = "missile:install:id"
+    RET_ARRAY missiles = table END
+
+    //Loop backwards.
+    LPF get_table_row_count STR_VAR table = "missiles" RET row_count = count END
+    FOR (i = row_count - 1; i >= 0; --i) BEGIN
+        LPF get_row_from_table INT_VAR
+            row = i
+        STR_VAR
+            table = "missiles"
+        RET_ARRAY row = array END
+
+        PATCH_WITH_SCOPE BEGIN
+            TEXT_SPRINT missile $"row"("missile")
+            TEXT_SPRINT install $"row"("install")
+            TEXT_SPRINT id $"row"("id")
+
+            PATCH_IF NOT (install = 0) BEGIN
+                PATCH_IF NOT (IS_AN_INT id) BEGIN
+                    PATCH_FAIL "protection_from_missiles: id column value '%id%' of row '%i%' is not an integer."
+                END
+
+                //Normalize id.
+                pro_id = id
+                PATCH_IF (pro_id = 0) BEGIN
+                    LPF get_missile_id STR_VAR missile = "%missile%" RET pro_id = id END
+                    PATCH_IF (pro_id = 0 - 1) BEGIN
+                        PATCH_FAIL "protection_from_missiles: missile '%missile%' of row '%i%' is not a valid missile label."
+                    END
+
+                    //Correct value.
+                    pro_id -= 1
+                END
+
+                LPF CLONE_EFFECT INT_VAR
+                    verbose = 1
+                    match_opcode = 156      //Protection from missiles overlay.
+                    opcode = 83             //Immunity to projectile.
+                    parameter2 = pro_id
+                STR_VAR
+                    insert = "below"
+                END
+            END
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION slow STR_VAR destination = "*" BEGIN
+    //Patch sectypes.
+    LPF get_sectype_id STR_VAR sectype = "haste" RET sectype_id = id END
+    PATCH_IF (sectype_id = 0 - 1) BEGIN
+        PATCH_FAIL "slow: sectype 'haste' not found."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 221                  //Remove protections by sectype.
+        parameter2 = sectype_id
+    END
+END
+
+DEFINE_PATCH_FUNCTION ghost_armor STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215                  //Play visual effect.
+    STR_VAR
+        resource = "ghost_armor"
+        match_resource = "vvc#res"
+        references = "vvcs"
+    END
+END
+
+DEFINE_PATCH_FUNCTION melfs_minute_meteors STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "melf_meteor"
+        ext = "itm"
+        match_resource = "melf#res"
+        references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION icelance STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "icelance_hold"
+        match_resource = "hold#res"
+        references = "subspells"
+    END
+END

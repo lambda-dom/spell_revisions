@@ -17,3 +17,5 @@ unholy_blight       1       unholy_blight_sr    0           *           0       
 spike_growth        1       spike_growth        0           *           0       #lit:dlspgrow
 icelance            1       icelance            0           icelance    0       #lit:dlicelnc
 pack_attack         1       pack_attack         0           *           0       #lit:dlpakatt
+flame_arrow         1       flame_arrow         0           *           0       #lit:dlflmarw
+spell_thrust        1       spell_thrust        0           *           0       #lit:dlsplthr

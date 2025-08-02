@@ -80,3 +80,6 @@ resist_elements_a               1       *       0       #suf:a:WIZARD_RESIST_ELE
 monster_summon_2_a              1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_2
 monster_summon_2_b              1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_2
 monster_summon_2_c              1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_2
+monster_summon_3_a              1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_3
+monster_summon_3_b              1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_3
+monster_summon_3_c              1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_3

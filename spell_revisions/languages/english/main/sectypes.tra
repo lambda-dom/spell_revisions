@@ -1,3 +1,5 @@
 //Description strings.
 //Sectypes.
 @1001 = "Insects dispersed"
+@1011 = "Haste dispelled"
+@1021 = "Slow dispelled"

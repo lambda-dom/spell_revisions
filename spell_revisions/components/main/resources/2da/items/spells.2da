@@ -1,6 +1,6 @@
 2DA V1.0
 *
-                        install name    descr   type    lvl flags       school      sectype             book_icon   abil_icon   projectile  patch   over    destination
-cause_light_wounds_a    1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *           *       0       #suf:a:CLERIC_CAUSE_LIGHT_WOUNDS
-cause_moderate_wounds_a 1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *           *       0       #suf:a:CLERIC_CAUSE_MODERATE_WOUNDS
-cause_serious_wounds_a  1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *           *       0       #suf:a:CLERIC_CAUSE_SERIOUS_WOUNDS
+                        install name    descr   type    lvl flags       school      sectype             book_icon   abil_icon   projectile  range   speed   patch   over    destination
+cause_light_wounds_a    1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *           1000    1       *       0       #suf:a:CLERIC_CAUSE_LIGHT_WOUNDS
+cause_moderate_wounds_a 1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *           1000    1       *       0       #suf:a:CLERIC_CAUSE_MODERATE_WOUNDS
+cause_serious_wounds_a  1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *           1000    1       *       0       #suf:a:CLERIC_CAUSE_SERIOUS_WOUNDS
