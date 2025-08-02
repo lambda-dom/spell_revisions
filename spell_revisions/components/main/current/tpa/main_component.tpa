@@ -1162,8 +1162,6 @@ COPY ~spell_rev\spwi2##\scrl86.itm~     ~override~  // vanilla's Detect Evil scr
 //Level 3.
 COPY ~spell_rev\spwi3##\spwi302.spl~     ~override~  // Remove Magic
   SAY NAME1 @503    SAY UNIDENTIFIED_DESC @504
-COPY ~spell_rev\spwi3##\scrla7.itm~     ~override~
-  SAY NAME2 @503    SAY IDENTIFIED_DESC   @504
 
 ACTION_IF (GAME_INCLUDES ~bg2~) BEGIN
   COPY_EXISTING ~cut01b.bcs~ ~override~
@@ -1172,8 +1170,6 @@ ACTION_IF (GAME_INCLUDES ~bg2~) BEGIN
     END
     BUT_ONLY
 END
-
-COPY ~spell_rev\spwi3##\dvhobsha.bcs~     ~override~
 
 // Monster Summoning III (originally Monster Summoning I)
 APPEND ~spell.ids~ ~2309 WIZARD_MONSTER_SUMMONING_LEVEL_3~
@@ -1198,8 +1194,6 @@ COPY_EXISTING ~holdnecr.pro~ ~override~
 
 COPY ~spell_rev\spwi3##\spwi326.spl~     ~override~  // Dispel Magic
   SAY NAME1 @547    SAY UNIDENTIFIED_DESC @548
-COPY ~spell_rev\spwi3##\scrl1e.itm~     ~override~
-  SAY NAME2 @547    SAY IDENTIFIED_DESC   @548
 
 /*-----------------------level 4-----------------------*/
 

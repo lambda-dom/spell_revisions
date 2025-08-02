@@ -76,3 +76,5 @@ note(s):
 * Armor line of spells: concurrency not handled yet.
 
 * Display strings: this has only be handled in a small number of spells.
+
+* Cre scripts: set them in the patches instead of relying on name synchronicity.

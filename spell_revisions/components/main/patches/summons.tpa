@@ -117,3 +117,33 @@ DEFINE_PATCH_FUNCTION green_slime BEGIN
         array = "items"
     END
 END
+
+DEFINE_PATCH_FUNCTION hobgoblin_archer STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "hobgoblin_archer_longbow"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "hobgoblin_archer_bastard_sword"
+        slot = "weapon2"
+        array = "items"
+    END
+
+    //Arrows for bow.
+    ADD_CRE_ITEM "arow01" #40 #0 #0 "identified&unstealable&undroppable" "quiver"
+    ADD_CRE_ITEM "helm01" #0 #0 #0 "identified&unstealable&undroppable" "helmet"
+END
+
+DEFINE_PATCH_FUNCTION hobgoblin_shaman STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "hobgoblin_shaman_longsword"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    ADD_CRE_ITEM "helm01" #0 #0 #0 "identified&unstealable&undroppable" "helmet"
+END

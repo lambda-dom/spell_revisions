@@ -1,0 +1,71 @@
+IF
+    HotKey(F)
+    Global("dv_followmode","LOCALS",1)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_followmode","LOCALS",0)
+        SmallWait(1)
+        DisplayStringHead(Myself,835)  // Follow mode on
+END
+
+IF
+    HotKey(F)
+    Global("dv_followmode","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_followmode","LOCALS",1)
+        SmallWait(1)
+        DisplayStringHead(Myself,836)  // Follow mode off
+END
+
+IF
+    Global("dv_followmode","LOCALS",0)
+    ActionListEmpty()
+    !Range(LastSummonerOf(Myself),10)
+    !See(LastSummonerOf(Myself))
+    CombatCounter(0)
+    !Exists([EVILCUTOFF])
+THEN
+    RESPONSE #100
+        SetGlobal("dv_SummonInFormation","LOCALS",1)
+        FollowObjectFormation(LastSummonerOf(Myself),3,3)
+END
+
+IF
+    Global("dv_SummonInFormation","LOCALS",1)
+    OR(2)
+        Exists([EVILCUTOFF])
+        !CombatCounter(0)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_SummonInFormation","LOCALS",0)
+        ClearActions(Myself)
+        Continue()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    !Range(NearestEnemyOf(Myself),5)
+THEN
+    RESPONSE #100
+        EquipRanged()
+        Continue()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Range(NearestEnemyOf(Myself),5)
+THEN
+    RESPONSE #100
+        EquipMostDamagingMelee()
+        Continue()
+END
+
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+

@@ -1,4 +1,6 @@
 2DA V1.0
 *
-            install patch   over    destination
-dvmelee     1       *       0       #lit:dvmelee
+                    install patch   over    destination
+melee               1       *       0       #lit:dvmelee
+ranged              1       *       0       #lit:dvranged
+hobgoblin_shaman    1       *       0       #lit:dvhobsha

@@ -11,6 +11,10 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/tables.tpa"
 
 //Load reference tables.
 LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
     tables = "items"
 RET_ARRAY items = references END
 
@@ -204,6 +208,26 @@ DEFINE_PATCH_FUNCTION haste STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION monster_summoning_3 BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_hobgoblin_archer"
+        ext = "eff"
+        match_resource = "arch#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_hobgoblin_shaman"
+        ext = "eff"
+        match_resource = "sham#res"
+        references = "effects"
+    END
+END
+
 DEFINE_PATCH_FUNCTION protection_from_missiles STR_VAR destination = "*" BEGIN
     //Externalize this dir, so that modders can hook up into it.
     LPF get_component_resources_dir RET resources_dir = dir END
@@ -296,17 +320,11 @@ END
 
 DEFINE_PATCH_FUNCTION icelance STR_VAR destination = "*" BEGIN
     //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "icelance_hold"
-        array = "subspells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "icelance_hold"
         match_resource = "hold#res"
-        resource = "%res%"
+        references = "subspells"
     END
 END

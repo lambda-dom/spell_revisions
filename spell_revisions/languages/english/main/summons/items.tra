@@ -8,3 +8,6 @@
 //Arcane.
 @2101 = "Short Sword"
 @2201 = "Pseudopod"
+@2301 = "Longbow"
+@2302 = "Bastard Sword"
+@2303 = "Longsword"

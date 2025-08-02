@@ -48,6 +48,8 @@ WIZARD_SOUND_BURST                      scrla2      10      1
 WIZARD_MONSTER_SUMMONING_LEVEL_2        scrl2a      10      1
 WIZARD_CLAIRVOYANCE                     scrl1d      10      1
 WIZARD_DISPEL_MAGIC                     scrla7      10      1
+WIZARD_REMOVE_MAGIC                     scrla7      10      1
+WIZARD_DISPEL_MAGIC                     scrl1e      10      1
 WIZARD_FLAME_ARROW                      scrl1f      10      1
 WIZARD_FIREBALL                         scrl1g      10      1
 WIZARD_HASTE                            scrl1h      10      1

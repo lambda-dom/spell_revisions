@@ -102,3 +102,5 @@ note(s):
 * Dire Charm: correction of off-by-one probability.
 
 * Ghost Armor: added bonus to move silently.
+
+* Monster Summoning III: Correction to the dice of bastard sword. Corrections to shaman: hps.
