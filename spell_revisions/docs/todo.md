@@ -24,9 +24,11 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Dispel Magic: only the description is in.
 
-* Insects: only the description is in. It needs sectype adding, which requires weidu_library support not existing yet.
-
 * Spike Growth: remove save from movement set for parity with entangle.
+
+## A. 4. Level 4.
+
+* Animal Summoning IV: only description is in.
 
 # B. Arcane spells.
 

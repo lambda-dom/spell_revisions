@@ -1,4 +1,6 @@
 //Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/blocks.tpa"
+
 //Mod libraries.
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
@@ -8,5 +10,26 @@ DEFINE_PATCH_FUNCTION cure_critical_wounds STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
         tra_ref = 10401
         match_opcode = 240                  //Remove portrait icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION free_action STR_VAR destination = "*" BEGIN
+    LPF get_spell_header_count RET header_count = count END
+    FOR (i = 0; i < header_count; ++i) BEGIN
+        PATCH_FOR_EACH block IN
+            //Movement rate 2 needed? Or only to properly block spells?
+            //entangle
+            //grease
+            //web
+            //slow -> protection from slow sectype.
+            //stun
+        BEGIN
+            LPF patch_block INT_VAR
+                header = i
+                match_opcode = 163              //Free Action.
+            STR_VAR
+                block = "%block%"
+            END
+        END
     END
 END

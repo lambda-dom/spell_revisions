@@ -53,6 +53,10 @@ note(s):
 
 * Animal Summoning III: corrections to wolf summon: int, ac, thac0.
 
+## B. 4. Level 4.
+
+* Free Action: tightened imlementation of immunities.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

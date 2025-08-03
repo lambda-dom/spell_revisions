@@ -1,6 +1,7 @@
 //Description strings.
 //Divine spells.
 //Level 4.
+//cure_critical_wounds:sppr401
 @4010 = "Cure Critical Wounds"
 @4011 = "Cure Critical Wounds
 Level: 4
@@ -13,6 +14,48 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 4d8 + 4/level points of damage sustained by the target creature (up to a maximum of 4d8 + 40)."
+
+//animal_summoning_4:sppr402
+@4020 = "Animal Summoning IV"
+@4021 = "Animal Summoning IV
+Level: 4
+School: Conjuration
+Sphere: Animal
+Range: Long
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster calls a number of animals, which serve the summoner under any conditions. The type and number of creatures that appear depend upon the level of the druid casting the spell.
+
+7th : 2 leopards
+9th+ : 3 leopards
+
+The summoned animals will aid the caster by whatever means they possess, staying until the spell duration expires.
+
+Leopard (4 Hit Dice):
+STR 16, DEX 18, CON 15, INT 6, WIS 13, CHA 6;  AL Neutral
+HP 36, AC 5, THAC0 16, Saving Throws 12/16/12/14/16
+2 Attacks Per Round, 1d6+1 Piercing Damage (Claws & Bite)
+
+Combat Abilities:
+Pounce: can charge a target if at least 6 feet away. During that round the leopard moves at double speed, attacks with a +2 bonus to hit and damage rolls, but suffers a -2 penalty to AC"
+
+//free_action:sppr403
+@4030 = "Free Action"
+@4031 = "Free Action
+Level: 4
+School: Abjuration
+Sphere: Charm
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+While under the effects of this spell, the recipient becomes immune to everything, magical or otherwise, that limits his mobility in any way. This includes, but is not limited to, Entangle, Grease, Web, Hold, Slow, and Stun. This effect will last for the duration of the spell or until dispelled."
+
 
 
 //Display strings.
