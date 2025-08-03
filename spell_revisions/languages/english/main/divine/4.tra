@@ -56,6 +56,77 @@ Saving Throw: None
 
 While under the effects of this spell, the recipient becomes immune to everything, magical or otherwise, that limits his mobility in any way. This includes, but is not limited to, Entangle, Grease, Web, Hold, Slow, and Stun. This effect will last for the duration of the spell or until dispelled."
 
+//neutralize_poison:sppr404
+@4040 = "Neutralize Poison"
+@4041 = "Neutralize Poison
+Level: 4
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell removes all toxins from the body, both natural and magical in nature. When this spell is cast upon a poisoned individual, it immediately neutralizes any poison. In addition, for the duration of the spell, the recipient is immune to any poison it is exposed to, and spells like Poison and Cloudkill won't affect the protected creature."
+
+//mental_domination:sppr405
+@4050 = "Mental Domination"
+@4051 = "Mental Domination
+Level: 4
+School: Enchantment
+Sphere: Thought
+Range: Long
+Duration: 1 turn
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: Spell negates
+
+When cast upon a subject, he must make a save vs. spell at -2 in order to avoid the priest entering his mind. The effects of this spell are similar to the 5th level wizard spell Domination, with a few minor differences. Most notably, this spell gives the priest no access to the subject's thoughts, memory, or sensory apparatus. The priest simply is able to command the subject to perform certain tasks or functions during the spell duration. To control the subject, the priest must be within range and must be able to see the subject. This control will last until dispelled or for the duration of the spell."
+
+//defensive_harmony:sppr406
+@4060 = "Defensive Harmony"
+@4061 = "Defensive Harmony
+Level: 4
+School: Enchantment
+Sphere: Law
+Range: Personal
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: 10' radius
+Saving Throw: None
+
+Defensive Harmony grants affected creatures a defensive bonus by enhancing the coordination of their attacks and defenses. This allows a group of creatures to act as a cohesive unit for a single battle or encounter. The effect is always centered on the caster, but affects all those within a 10 foot radius. The affected creatures can move outside of this radius after the spell is cast and still enjoy the benefits of the Harmony. While the spell is in effect, each affected creature gains a +4 bonus to her armor class. Multiple castings of this spell are not cumulative."
+
+//protection_from_electricity, deprecated:sppr407
+//magic_circle_against_evil:sppr408
+@4080 = "Magic Circle against Evil"
+@4081 = "Magic Circle against Evil
+Level: 4
+School: Abjuration
+Sphere: Protection
+Range: Personal
+Duration: 5 turns
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: None
+
+Upon casting this spell, the priest causes all friendly creatures within the area of effect to be affected by the spell Protection from Evil. Creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not."
+
+//death_ward:sppr409
+@4090 = "Death Ward"
+@4091 = "Death Ward
+Level: 4
+School: Necromancy
+Sphere: Necromantic
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+While under the effects of this spell, the recipient is immune to all forms of death magic. This includes, but is not limited to, Death Spell, Disintegrate, Power Word Kill, Finger of Death, and Wail of the Banshee. This effect will last for the duration of the spell or until dispelled."
+
 
 
 //Display strings.

@@ -30,6 +30,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Animal Summoning IV: only description is in.
 
+* Free Action: temp immunities are in but not curing them.
+
+* Death Ward: standardize immunities to instant death and disintegrate.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

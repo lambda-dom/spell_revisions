@@ -409,26 +409,6 @@ COPY ~spell_rev\sppr4##\sppr402c.bam~     ~override~
 APPEND ~spell.ids~ ~1402 CLERIC_ANIMAL_SUMMONING_LEVEL_4~
 
 
-COPY ~spell_rev\sppr4##\sppr403.spl~     ~override~  // Free Action
-  SAY NAME1 @115    SAY UNIDENTIFIED_DESC @116
-COPY ~spell_rev\sppr4##\scrl58.itm~     ~override~
-  SAY NAME2 @115    SAY IDENTIFIED_DESC   @116
-
-COPY ~spell_rev\sppr4##\sppr404.spl~     ~override~  // Neutralize Poison
-  SAY NAME1 @117    SAY UNIDENTIFIED_DESC @118 
-
-COPY ~spell_rev\sppr4##\sppr405.spl~     ~override~  // Mental Domination
-  SAY NAME1 @119    SAY UNIDENTIFIED_DESC @120
-COPY ~spell_rev\sppr4##\scrl5a.itm~     ~override~
-  SAY NAME2 @119    SAY IDENTIFIED_DESC   @120
-
-ADD_PROJECTILE ~spell_rev\projectles\dvharmon.pro~
-COPY ~spell_rev\sppr4##\sppr406.spl~     ~override~  // Defensive Harmony
-  SAY NAME1 @121    SAY UNIDENTIFIED_DESC @122
-  WRITE_SHORT 0x98 %dvharmon%
-COPY ~spell_rev\sppr4##\scrl5b.itm~     ~override~
-  SAY NAME2 @121    SAY IDENTIFIED_DESC   @122
-
 COPY ~spell_rev\sppr4##\sppr407.spl~     ~override~  // old Protection from Lightning (disabled)
   SAY NAME1 @123    SAY UNIDENTIFIED_DESC @124
   LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 7567 parameter1 = RESOLVE_STR_REF(@123) END
@@ -436,22 +416,6 @@ COPY ~spell_rev\sppr4##\scrl5c.itm~     ~override~
   SAY NAME2 @123    SAY IDENTIFIED_DESC   @124
 COPY_EXISTING ~spell.ids~ ~override~
   REPLACE_TEXTUALLY ~^1407[ %TAB%]+CLERIC_PROTECTION_FROM_LIGHTNING\b~ ~1407 CLERIC_PROTECTION_FROM_LIGHTNING_DEPRECATED~
-
-COPY ~spell_rev\sppr4##\sppr408.spl~ ~override~ // Magic Circle against Evil (previously named Protection from Evil 10' Radius)
-  SAY NAME1 @125 SAY UNIDENTIFIED_DESC @126
-/* ADD_PROJECTILE ~spell_rev\projectles\dvproevi.pro~ // V2's aura-like animation
-COPY ~spell_rev\sppr4##\sppr408d.spl~ ~override~
-  WRITE_SHORT 0x98 %dvproevi%
-COPY ~spell_rev\shared\dvholya1.bam~     ~override~
-COPY ~spell_rev\shared\dvholya1.vvc~     ~override~
-COPY ~spell_rev\shared\dvholya2.bam~     ~override~
-COPY ~spell_rev\shared\dvholya2.vvc~     ~override~ */
-
-COPY ~spell_rev\sppr4##\scrl5d.itm~     ~override~
-  SAY NAME2 @125    SAY IDENTIFIED_DESC   @126
-
-COPY ~spell_rev\sppr4##\sppr409.spl~     ~override~  // Death Ward
-  SAY NAME1 @127    SAY UNIDENTIFIED_DESC @128
 
 COPY ~spell_rev\sppr4##\sppr410.spl~     ~override~  // Call Woodland Beings
   SAY NAME1 @129    SAY UNIDENTIFIED_DESC @130
