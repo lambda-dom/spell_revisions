@@ -2,4 +2,4 @@
 *
                         install name    descr   type    lvl flags       school      sectype             book_icon                           abil_icon                           projectile  range   speed   patch                   over    destination
 cure_critical_wounds    1       4010    4011    priest  4   00000000    necromancer none                #suf:c:CLERIC_CURE_CRITICAL_WOUNDS  #suf:b:CLERIC_CURE_CRITICAL_WOUNDS  *           1       4       cure_critical_wounds    1       #spl:CLERIC_CURE_CRITICAL_WOUNDS
-free_action             1       4030    4031    priest  4   00000000    abjurer     specificprotections #suf:c:CLERIC_FREE_ACTION           #suf:b:CLERIC_FREE_ACTION           *           1       5       free_actioon            1       #spl:CLERIC_FREE_ACTION
+free_action             1       4030    4031    priest  4   00000000    abjurer     specificprotections #suf:c:CLERIC_FREE_ACTION           #suf:b:CLERIC_FREE_ACTION           *           1       5       free_action             1       #spl:CLERIC_FREE_ACTION

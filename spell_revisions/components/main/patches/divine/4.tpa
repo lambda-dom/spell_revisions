@@ -18,11 +18,11 @@ DEFINE_PATCH_FUNCTION free_action STR_VAR destination = "*" BEGIN
     FOR (i = 0; i < header_count; ++i) BEGIN
         PATCH_FOR_EACH block IN
             //Movement rate 2 needed? Or only to properly block spells?
-            //entangle
-            //grease
-            //web
-            //slow -> protection from slow sectype.
-            //stun
+            "entangle"
+            "grease"
+            "web"
+            "slow"
+            "stun"
         BEGIN
             LPF patch_block INT_VAR
                 header = i
