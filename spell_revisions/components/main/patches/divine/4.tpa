@@ -1,0 +1,12 @@
+//Libraries.
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION cure_critical_wounds STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10401
+        match_opcode = 240                  //Remove portrait icon.
+    END
+END

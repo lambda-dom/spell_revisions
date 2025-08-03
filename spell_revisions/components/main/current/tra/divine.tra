@@ -13,19 +13,6 @@ Saving Throw: None
 When this spell is cast, a pale glow surrounds and outlines all creatures within the area of effect, making their position and movements easily visible. Outlined creatures suffer a -2 penalty to AC for the duration of the spell. The light is too dim to have any special effect on undead or dark-dwelling creatures vulnerable to light. The faerie fire does not cause any harm to the objects or creatures thus outlined.~
 
 //Level 4.
-@111=~Cure Critical Wounds~
-@112=~Cure Critical Wounds
-Level: 4
-School: Necromancy
-Sphere: Healing
-Range: Touch
-Duration: Permanent
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
-
-When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 4d8 + 4/level points of damage sustained by the target creature (up to a maximum of 4d8+40).~
-
 @113=~Animal Summoning IV~
 @114=~Animal Summoning IV
 Level: 4

@@ -389,12 +389,10 @@ APPEND ~spell.ids~ ~1318 CLERIC_GUST_OF_WIND~
 LAF ds_altered_spell INT_VAR old_clone=60 new_clone=~-1~ STR_VAR file=~sppr319.spl~ END
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~sppr319a.SPL    233     1     120   146    6     A~
 
-/*-----------------------level 4-----------------------*/
-
-COPY ~spell_rev\sppr4##\sppr401.spl~     ~override~  // Cure Critical Wounds (moved from lvl 5, replaces Cure Serious Wounds)
+//Level 4.
+// Cure Critical Wounds (moved from lvl 5, replaces Cure Serious Wounds)
+COPY ~spell_rev\sppr4##\sppr401.spl~     ~override~
   SAY NAME1 @111    SAY UNIDENTIFIED_DESC @112
-COPY ~spell_rev\sppr5##\scrl61.itm~     ~override~
-  SAY NAME2 @111    SAY IDENTIFIED_DESC   @112
 
 COPY ~spell_rev\sppr4##\sppr402.spl~     ~override~  // Animal Summoning IV (originally Animal Summoning I)
   SAY NAME1 @113    SAY UNIDENTIFIED_DESC @114
@@ -409,6 +407,7 @@ COPY ~spell_rev\sppr4##\sppr402a.bam~     ~override~
 COPY ~spell_rev\sppr4##\sppr402b.bam~     ~override~
 COPY ~spell_rev\sppr4##\sppr402c.bam~     ~override~
 APPEND ~spell.ids~ ~1402 CLERIC_ANIMAL_SUMMONING_LEVEL_4~
+
 
 COPY ~spell_rev\sppr4##\sppr403.spl~     ~override~  // Free Action
   SAY NAME1 @115    SAY UNIDENTIFIED_DESC @116

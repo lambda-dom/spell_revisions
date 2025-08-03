@@ -1,0 +1,19 @@
+//Description strings.
+//Divine spells.
+//Level 4.
+@4010 = "Cure Critical Wounds"
+@4011 = "Cure Critical Wounds
+Level: 4
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: Permanent
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 4d8 + 4/level points of damage sustained by the target creature (up to a maximum of 4d8 + 40)."
+
+
+//Display strings.
+@10401 = "Healed"

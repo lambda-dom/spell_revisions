@@ -56,17 +56,17 @@ LAF install_subcomponent STR_VAR
 END
 
 
-// //Install spells.
-// WITH_SCOPE BEGIN
-//     OUTER_FOR (i = 1; i <= 0; ++i) BEGIN
-//         LAF install_subcomponent STR_VAR
-//             subcomponent = "%root%/subcomponents/divine/%i%.tpa"
-//         END
-//     END
-// END
+//Install spells.
+WITH_SCOPE BEGIN
+    OUTER_FOR (i = 4; i <= 4; ++i) BEGIN
+        LAF install_subcomponent STR_VAR
+            subcomponent = "%root%/subcomponents/divine/%i%.tpa"
+        END
+    END
+END
 
 WITH_SCOPE BEGIN
-    OUTER_FOR (i = 3; i <= 3; ++i) BEGIN
+    OUTER_FOR (i = 1; i <= 0; ++i) BEGIN
         LAF install_subcomponent STR_VAR
             subcomponent = "%root%/subcomponents/arcane/%i%.tpa"
         END
