@@ -1,8 +1,16 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/blocks.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 //Mod libraries.
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
+//Load references.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
 
 
 //Patches.
@@ -14,22 +22,37 @@ DEFINE_PATCH_FUNCTION cure_critical_wounds STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION free_action STR_VAR destination = "*" BEGIN
-    LPF get_spell_header_count RET header_count = count END
-    FOR (i = 0; i < header_count; ++i) BEGIN
-        PATCH_FOR_EACH block IN
-            //Movement rate 2 needed? Or only to properly block spells?
-            "entangle"
-            "grease"
-            "web"
-            "slow"
-            "stun"
-        BEGIN
-            LPF patch_block INT_VAR
-                header = i
-                match_opcode = 163              //Free Action.
-            STR_VAR
-                block = "%block%"
-            END
+    PATCH_FOR_EACH block IN
+        "entangle"
+        "grease"
+        "web"
+        "slow"
+        "stun"
+    BEGIN
+        LPF patch_block INT_VAR
+            match_opcode = 163              //Free Action.
+        STR_VAR
+            block = "%block%"
         END
+    END
+END
+
+DEFINE_PATCH_FUNCTION divine_power STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "divine_power_a"
+        ext = "eff"
+        match_resource = "apr1#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "divine_power_b"
+        ext = "eff"
+        match_resource = "apr2#res"
+        references = "effects"
     END
 END

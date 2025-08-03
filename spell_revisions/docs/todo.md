@@ -6,7 +6,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Armor of Faith: restore resistances of old spell.
 
-* Entangle: current implementation is incorrect as the decrease movement applies to all creatures, including those that should be immune. Solution: if we want to use the subspell (and we should), we may need another spell to decrease speed and then call the subspell.
+* Entangle: current implementation is incorrect as the decrease movement applies to all creatures, including those that should be immune. Solution: if we want to use the subspell (and we should), we may need another spell to decrease speed and then call the subspell or simply patch the subspell.
 
 * Goodberry: scaling, slow regenerating effect of 1 hp for round. Only castable outdoors and ooc.
 
@@ -15,8 +15,6 @@ Not just things to (still) do but also proposed changes to spells.
 ## A. 2. Level 2.
 
 * Chant: have good chant nullify bad chant and vice versa.
-
-* Cure Moderate Wounds: move Cleric_Cure_Medium_Wounds to level 2.
 
 * Regenerate Moderate Wounds: handle stacking of regen spells. The idea is that higher level remove and block lower level.
 
@@ -30,9 +28,13 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Animal Summoning IV: only description is in.
 
-* Free Action: temp immunities are in but not curing them.
+* Free Action: temp immunities are in but not curing them. Movement Rate 2 immunity dropped for now.
 
 * Death Ward: standardize immunities to instant death and disintegrate.
+
+* Call Woodland Beings: only description is in.
+
+* Negative Plane Protection: description says abjuration, spell says transmutation: went with description for now. No sectype; vanila is combination.
 
 # B. Arcane spells.
 
@@ -40,7 +42,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Grease: follow implementation of Entangle? Use a sleep subspell? Also increase aoe.
 
-* Sleep: display ineffective spell for creatures with dice > caster level.
+* Sleep: display "ineffective spell" for creatures with dice > caster level.
 
 * Spook: True Seeing makes one immune to Spook and this is handled in the True Seeing spell. Better to add a TRUE_SIGHT state to splstate.ids, set it via Set Spell State [328] in True Seeing and then use the usual shenanigan in Spook (e. g. 318) to make True Seeing nullify it. This spell state is apparently missing and is being set via proficiencies, but these are not detected via 318 and related opcodes (or at least I do not know how).
 
@@ -53,8 +55,6 @@ Not just things to (still) do but also proposed changes to spells.
 * Dispel Magic: only the description is in.
 
 * Remove magic: reinstate, with old icon but targetiing everyone (that is remove magic becomes old dispel magic).
-
-* Monster Summoning III: only scaffolding (icons, scrolls, etc.) and description is in.
 
 * Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles.
 

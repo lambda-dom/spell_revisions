@@ -430,17 +430,8 @@ COPY ~spell_rev\sppr4##\dvnymph.cre~     ~override~
 COPY ~spell_rev\sppr4##\dvnymph.itm~     ~override~
 COPY ~spell_rev\sppr4##\dvnymph.bcs~     ~override~
 
-COPY ~spell_rev\sppr4##\sppr411.spl~     ~override~  // Poison
-  SAY NAME1 @131    SAY UNIDENTIFIED_DESC @132
-
-COPY ~spell_rev\sppr4##\sppr412.spl~     ~override~  // Divine Power (renamed from Holy Power)
-  SAY NAME1 @133    SAY UNIDENTIFIED_DESC @134
-COPY ~spell_rev\sppr4##\sppr412a.eff~     ~override~
-COPY ~spell_rev\sppr4##\sppr412b.eff~     ~override~
-STRING_SET ~8267~ @133 // change portrait icon name into Divine Power
-
-COPY ~spell_rev\sppr4##\sppr413.spl~     ~override~  // Negative Plane Protection
-  SAY NAME1 @135    SAY UNIDENTIFIED_DESC @136
+// change portrait icon name into Divine Power
+STRING_SET ~8267~ @133
 
 ACTION_IF install_cause_wounds BEGIN
   COPY ~spell_rev\sppr4##\sppr414.spl~     ~override~  // Cause Critical Wounds (moved from lvl 5, replaces Cause Serious Wounds)
@@ -470,9 +461,6 @@ ADD_SPELL ~spell_rev\sppr4##\sppr418.spl~ 1 4 ~CLERIC_ICE_STORM~  // Ice Storm (
 //ADD_SPELL: Regenerate Critical Wounds
 ADD_SPELL ~spell_rev\sppr4##\sppr419.spl~ 1 4 ~CLERIC_REGENERATE_CRITICAL_WOUNDS~  // Regenerate Critical Wounds (new druid spell)
   SAY NAME1 @307    SAY UNIDENTIFIED_DESC @308
-COPY ~spell_rev\sppr4##\dvpr419a.bam~     ~override~
-COPY ~spell_rev\sppr4##\dvpr419b.bam~     ~override~
-COPY ~spell_rev\sppr4##\dvpr419c.bam~     ~override~
 
 
 /*-----------------------level 5-----------------------*/
