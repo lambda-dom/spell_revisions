@@ -1098,8 +1098,7 @@ COPY ~spell_rev\spwi3##\spwi326.spl~     ~override~  // Dispel Magic
 COPY ~spell_rev\spwi4##\spwi401.spl~     ~override~  // Confusion
   SAY NAME1 @561    SAY UNIDENTIFIED_DESC @562
 
-COPY ~spell_rev\spwi4##\spwi402.spl~     ~override~  // Dimension Door (disabled)
-  SAY NAME1 @563    SAY UNIDENTIFIED_DESC @564
+// Dimension Door (disabled)
 APPEND ~spell.ids~ ~2402 WIZARD_DIMENSION_DOOR_DEPRECATED~
 
 COPY ~spell_rev\spwi4##\spwi403.spl~     ~override~  // Fire Shield (Blue) (AI only now)
@@ -1115,28 +1114,13 @@ COPY ~spell_rev\spwi4##\spwi403f.spl~     ~override~
 COPY ~spell_rev\spwi4##\spwi403g.spl~     ~override~
 COPY ~spell_rev\spwi4##\spwi403h.spl~     ~override~ */
 
-COPY ~spell_rev\spwi4##\spwi404.spl~     ~override~  // Ice Storm
-  SAY NAME1 @567    SAY UNIDENTIFIED_DESC @568
-COPY ~spell_rev\spwi4##\scrl1x.itm~     ~override~
-  SAY NAME2 @567    SAY IDENTIFIED_DESC   @568
+
+// Ice Storm projectile.
 COPY_EXISTING ~icestorm.pro~ ~override~
   WRITE_BYTE 0x216 4
-  
-COPY ~spell_rev\spwi4##\spwi405.spl~     ~override~  // Improved Invisibility
-  SAY NAME1 @569    SAY UNIDENTIFIED_DESC @570
-COPY ~spell_rev\spwi4##\scrl1y.itm~     ~override~
 
-  SAY NAME2 @569    SAY IDENTIFIED_DESC   @570
-
-COPY ~spell_rev\spwi4##\spwi406.spl~     ~override~  // Minor Globe of Invulnerability
-  SAY NAME1 @571    SAY UNIDENTIFIED_DESC @572
-COPY ~spell_rev\spwi4##\scrl1z.itm~     ~override~
-  SAY NAME2 @571    SAY IDENTIFIED_DESC   @572
-COPY ~spell_rev\spwi4##\spwi406a.bam~    ~override~
-COPY ~spell_rev\spwi4##\spwi406b.bam~    ~override~
-COPY ~spell_rev\spwi4##\spwi406c.bam~    ~override~
-
-COPY ~spell_rev\spwi4##\spwi407.spl~     ~override~  // old Monster Summoning IV (disabled)
+// old Monster Summoning IV (disabled)
+COPY ~spell_rev\spwi4##\spwi407.spl~     ~override~
   SAY NAME1 @573    SAY UNIDENTIFIED_DESC @574
 COPY ~spell_rev\spwi4##\gnollsu.eff~     ~override~
 COPY ~spell_rev\spwi4##\gnollsu.cre~     ~override~
@@ -1145,10 +1129,10 @@ COPY ~spell_rev\spwi4##\gnlcapsu.eff~     ~override~
 COPY ~spell_rev\spwi4##\gnlcapsu.cre~     ~override~
   SAY NAME1 #19691
   SAY NAME2 #19691
-
 COPY ~spell_rev\spwi4##\gnlcapsu.itm~     ~override~
 COPY_EXISTING ~spell.ids~ ~override~
   REPLACE_TEXTUALLY ~^2407[ %TAB%]+WIZARD_MONSTER_SUMMONING_2\b~ ~2407 WIZARD_MONSTER_SUMMONING_2_DEPRECATED~
+
 
 COPY ~spell_rev\spwi4##\spwi408.spl~     ~override~  // Stoneskin
   SAY NAME1 @575    SAY UNIDENTIFIED_DESC @576

@@ -99,18 +99,6 @@ Dispel Magic removes magical effects upon any enemies within the area of effect.
 The chance of the dispel succeeding is determined by the level of the caster and the level of the magic being dispelled. The base chance of successfully dispelling is 50%. For every level that the caster of Dispel Magic is above the level of the magic he is trying to dispel, his chance of success increases by 5%. For every level that the caster of Dispel Magic is below the level of the magic he attempts to dispel, his chance of success decreases by 10%. However, despite the difference in levels, there is always at least a 1% chance of success or failure. Thus, if a caster is 10 levels higher than the magic he is trying to dispel, there is only a 1% chance of failure. Similarly if the caster is 4 levels lower than the magic he is trying to dispel, there is only a 10% chance of success. Intuitively, this spell is almost useless if the level of the magic attempted to dispel is 5 or more levels higher than the caster.~
 
 //Level 4.
-@563=~Dimension Jump~
-@564=~Dimension Jump
-Level: 1
-School: Conjuration
-Range: Personal
-Duration: Instant
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
-
-This spell transports the caster to any place within sight. When the spell is cast, a dimensional portal opens up in front of the caster, which he immediately steps through. Upon passing through the portal, the caster finds himself at his chosen destination. The caster always arrives at exactly the spot desired, and the dimensional door doesn't allow anyone or anything else to pass through. Spells about to be cast upon the wizard will fail, and missiles about to hit him will instead hit thin air.~
-
 @565=~Mestil's Acid Sheath~
 @566=~Mestil's Acid Sheath
 Level: 5
@@ -122,42 +110,6 @@ Area of Effect: Special
 Saving Throw: None
 
 This spell conjures an acid shield around the caster. This shield not only grants the user 50% acid resistance, but also protects the caster from attacks made within a 5' radius. Opponents that hit the caster with a weapon or spell from within this radius will suffer 4d4 points of acid damage. Multiple castings of this spell are not cumulative, but it can be used in conjunction with similar spells. Tiny and small flying creatures cannot pass through the caustic barrier. Magic resistance does not affect this spell.~
-
-@567=~Ice Storm~
-@568=~Ice Storm
-Level: 4
-School: Evocation
-Range: Long
-Duration: 4 rounds
-Casting Time: 4
-Area of Effect: 30' radius
-Saving Throw: None
-
-When this spell is cast, great magical hailstones pound down for 4 rounds within a 30 foot radius of a point selected by the caster. Creatures within the area of effect have their movement speed reduced by 50%, and receive 2d8 points of cold damage for each round they remain inside the storm.~
-
-@569=~Improved Invisibility~
-@570=~Improved Invisibility
-Level: 4
-School: Illusion
-Range: Touch
-Duration: 3 rounds + 1 round/level
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
-
-This spell is similar to the Invisibility spell, but the recipient is able to attack, either by missile discharge, melee combat, or spellcasting, and remain unseen. Note, however, that there are sometimes telltale traces, a shimmering, that enable observant opponents to approximate the invisible character's whereabouts. These traces are only noticeable when specifically looked for, after the creature has made his presence known. Once the character has revealed himself, opponents can attempt to attack him with conventional weapons, though they do so with a -4 penalty to the attack roll, or they may cast area of effect spells near his position. Opponents remain unable to directly target the invisible creature with spells, scrolls, or abilities until the spell duration expires or the invisibility is dispelled.~
-
-@571=~Minor Globe of Invulnerability~
-@572=~Minor Globe of Invulnerability
-Level: 4
-School: Abjuration
-Range: Personal
-Duration: 2 turns
-Casting Time: 4
-Area of Effect: Caster
-Saving Throw: None
-
-This spell creates a faintly shimmering magical sphere around the caster that prevents any 1st-, 2nd-, or 3rd-level spell effects from penetrating (i.e., the area of effect of any such spells does not include the area of the globe of invulnerability). This includes innate abilities and effects from devices. However, any type of spell can be cast out of the magical sphere, and these pass from the caster of the globe to their subject without affecting the globe. Fourth and higher level spells are not affected by the globe. The globe can be brought down by a successful dispel magic.~
 
 @575=~Stoneskin~
 @576=~Stoneskin

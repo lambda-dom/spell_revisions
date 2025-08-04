@@ -62,6 +62,14 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Melf's meteors: description says evocation school, spell says conjuration. Going with description for now.
 
+## B. 4. Level 4.
+
+* Blue Shield: reinstate it.
+
+* Mestil's Acid Shield: replaces cold shield but we are reinstating it.
+
+* Minor Glove of Invulnerability: pass through area spells of level <= that must be protected against. Externalize like with PfM?
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
