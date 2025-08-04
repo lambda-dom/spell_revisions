@@ -116,3 +116,5 @@ note(s):
 * Monster Summoning III: Correction to the dice of bastard sword. Corrections to shaman: hps.
 
 ## B. 4. Level 4.
+
+* Confusion: standardized range to long per description (35 -> 30).

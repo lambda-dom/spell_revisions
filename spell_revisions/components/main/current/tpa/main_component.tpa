@@ -68,8 +68,6 @@ COPY_EXISTING ~intmod.2da~ ~override~  // Int Modifier for Maze & Imprisonment
 
 COPY ~spell_rev\shared\contingx.2da~      ~override~  // spells used for contingencies
 
-COPY ~spell_rev\shared\dvwinded.spl~      ~override~  // Fatigue Effect
-
 COPY ~spell_rev\shared\dvbanish.eff~     ~override~ // Banish EFFs
 COPY ~spell_rev\shared\dvbanish.spl~     ~override~
 
@@ -1096,12 +1094,9 @@ COPY_EXISTING ~holdnecr.pro~ ~override~
 COPY ~spell_rev\spwi3##\spwi326.spl~     ~override~  // Dispel Magic
   SAY NAME1 @547    SAY UNIDENTIFIED_DESC @548
 
-/*-----------------------level 4-----------------------*/
-
+//Level 4.
 COPY ~spell_rev\spwi4##\spwi401.spl~     ~override~  // Confusion
   SAY NAME1 @561    SAY UNIDENTIFIED_DESC @562
-COPY ~spell_rev\spwi4##\scrl1u.itm~     ~override~
-  SAY NAME2 @561    SAY IDENTIFIED_DESC   @562
 
 COPY ~spell_rev\spwi4##\spwi402.spl~     ~override~  // Dimension Door (disabled)
   SAY NAME1 @563    SAY UNIDENTIFIED_DESC @564

@@ -98,21 +98,7 @@ Dispel Magic removes magical effects upon any enemies within the area of effect.
 
 The chance of the dispel succeeding is determined by the level of the caster and the level of the magic being dispelled. The base chance of successfully dispelling is 50%. For every level that the caster of Dispel Magic is above the level of the magic he is trying to dispel, his chance of success increases by 5%. For every level that the caster of Dispel Magic is below the level of the magic he attempts to dispel, his chance of success decreases by 10%. However, despite the difference in levels, there is always at least a 1% chance of success or failure. Thus, if a caster is 10 levels higher than the magic he is trying to dispel, there is only a 1% chance of failure. Similarly if the caster is 4 levels lower than the magic he is trying to dispel, there is only a 10% chance of success. Intuitively, this spell is almost useless if the level of the magic attempted to dispel is 5 or more levels higher than the caster.~
 
-
-/*------------------level 4------------------*/
-
-@561=~Confusion~
-@562=~Confusion
-Level: 4
-School: Enchantment
-Range: Long
-Duration: 5 rounds
-Casting Time: 4
-Area of Effect: 30' radius
-Saving Throw: Spell negates
-
-This spell causes confusion in one or more creatures within the area, creating indecision and the inability to take effective action. All hostile creatures within the area of effect are allowed a saving throw vs. spell at -2. Those successfully saving are unaffected by the spell. Those who fail their saving throws will either go berserk, stand confused, or wander about for the duration of the spell. Wandering creatures move as far from the caster as possible, according to their most typical mode of movement (characters walk, fish swim, bats fly, etc.). Any confused creature that is attacked perceives the attacker as an enemy and acts according to its basic nature.~
-
+//Level 4.
 @563=~Dimension Jump~
 @564=~Dimension Jump
 Level: 1

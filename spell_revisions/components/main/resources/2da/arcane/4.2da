@@ -1,0 +1,4 @@
+2DA V1.0
+*
+            install name    descr   type    lvl flags       school      sectype     book_icon               abil_icon                   projectile                          range   speed   patch       over    destination
+confusion   1       4010    4011    wizard  4   01000000    enchanter   disabling   #suf:c:WIZARD_CONFUSION #suf:b:WIZARD_CONFUSION     #lbl:sparkle_area_gold_not_party    30      4       *           1       #spl:WIZARD_CONFUSION
