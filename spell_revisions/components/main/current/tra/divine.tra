@@ -1224,45 +1224,6 @@ Slashing, Piercing, & Missile Resistance 40%~
 
 /*----------------Druid's Regenerate Wound spells----------------*/
 
-@301=~Regenerate Light Wounds~
-@302=~Regenerate Light Wounds
-Level: 1
-School: Alteration
-Sphere: Healing
-Range: Touch
-Duration: 1 turn + 2 rounds/level
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
-
-This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 1 hit point per round (up to a maximum of 30 hit points within 3 turns at level 10). The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative.~
-
-@303=~Regenerate Moderate Wounds~
-@304=~Regenerate Moderate Wounds
-Level: 2
-School: Alteration
-Sphere: Healing
-Range: Touch
-Duration: 1 turn + 2 rounds/level
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None
-
-This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 2 hit points per round (up to a maximum of 60 hit points within 3 turns at level 10). The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative.~
-
-@305=~Regenerate Serious Wounds~
-@306=~Regenerate Serious Wounds
-Level: 3
-School: Alteration
-Sphere: Healing
-Range: Touch
-Duration: 1 turn + 2 rounds/level
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
-
-This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 3 hit points per round (up to a maximum of 90 hit points within 3 turns at level 10). The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative.~
-
 @309=~Mass Regenerate~
 @310=~Mass Regenerate
 Level: 5

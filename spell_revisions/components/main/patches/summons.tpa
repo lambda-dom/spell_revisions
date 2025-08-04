@@ -94,6 +94,36 @@ DEFINE_PATCH_FUNCTION wolf BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION leopard BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "leopard_claws"
+        slot = "weapon1"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION hamadryad BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "hamadryad_bow"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    //Arrows for bow.
+    ADD_CRE_ITEM "arow02" #40 #0 #0 "identified&unstealable&undroppable" "quiver"
+END
+
+DEFINE_PATCH_FUNCTION nymph BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "nymph_touch"
+        slot = "weapon1"
+        array = "items"
+    END
+END
+
 DEFINE_PATCH_FUNCTION gibberling STR_VAR destination = "*" BEGIN
     //Equip items.
     LPF creature_add_item STR_VAR

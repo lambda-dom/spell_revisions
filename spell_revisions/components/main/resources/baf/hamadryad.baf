@@ -1,0 +1,82 @@
+IF
+    !StateCheck(Myself,STATE_CHARMED)
+    !Allegiance(Myself,EVILCUTOFF)
+    !Allegiance(Myself,ALLY)
+THEN
+    RESPONSE #100
+        Ally()
+        Continue()
+END
+
+IF
+    HotKey(E)
+    Global("dv_AIOffSwitch","LOCALS",1)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_AIOffSwitch","LOCALS",0)
+        SmallWait(1)
+        DisplayStringHead(Myself,16469)  // On
+END
+
+IF
+    HotKey(D)
+    Global("dv_AIOffSwitch","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_AIOffSwitch","LOCALS",1)
+        SmallWait(1)
+        DisplayStringHead(Myself,16470)  // Off
+END
+
+IF
+    Global("dv_AIOffSwitch","LOCALS",1)
+THEN
+    RESPONSE #100
+END
+
+IF
+    HaveSpell(CLERIC_BARKSKIN)  // SPPR202.SPL (Barkskin)
+    Global("prep","LOCALS",0)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_BARKSKIN)  // SPPR202.SPL (Barkskin)
+        SetGlobal("prep","LOCALS",1)
+END
+
+IF
+    HaveSpell(CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
+    See([PC])
+    StateCheck(LastSeenBy(Myself),STATE_POISONED)
+THEN
+    RESPONSE #100
+        Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
+END
+
+IF
+    HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+    HPPercentLT(Myself,80)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Animal)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    !CheckStatGT(LastSeenBy(Myself),0,CLERIC_INSECT_PLAGUE)
+THEN
+    RESPONSE #100
+        Spell(NearestEnemyOf(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Animal)
+END
+
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+

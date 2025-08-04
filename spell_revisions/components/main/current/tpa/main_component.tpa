@@ -394,18 +394,7 @@ APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~sppr319a.SPL    233     1     120 
 COPY ~spell_rev\sppr4##\sppr401.spl~     ~override~
   SAY NAME1 @111    SAY UNIDENTIFIED_DESC @112
 
-COPY ~spell_rev\sppr4##\sppr402.spl~     ~override~  // Animal Summoning IV (originally Animal Summoning I)
-  SAY NAME1 @113    SAY UNIDENTIFIED_DESC @114
-COPY ~spell_rev\sppr4##\catjagsu.eff~     ~override~
-COPY ~spell_rev\sppr4##\catjagsu.cre~     ~override~
-  SAY NAME1 @2113
-  SAY NAME2 @2113
-COPY ~spell_rev\sppr4##\catjagsu.itm~     ~override~
-COPY ~spell_rev\sppr4##\catjagsu.bcs~     ~override~
-COPY ~spell_rev\sppr4##\dvspratt.spl~     ~override~ // Spring Attack (Pounce)
-COPY ~spell_rev\sppr4##\sppr402a.bam~     ~override~
-COPY ~spell_rev\sppr4##\sppr402b.bam~     ~override~
-COPY ~spell_rev\sppr4##\sppr402c.bam~     ~override~
+// Animal Summoning IV (originally Animal Summoning I)
 APPEND ~spell.ids~ ~1402 CLERIC_ANIMAL_SUMMONING_LEVEL_4~
 
 
@@ -417,30 +406,12 @@ COPY ~spell_rev\sppr4##\scrl5c.itm~     ~override~
 COPY_EXISTING ~spell.ids~ ~override~
   REPLACE_TEXTUALLY ~^1407[ %TAB%]+CLERIC_PROTECTION_FROM_LIGHTNING\b~ ~1407 CLERIC_PROTECTION_FROM_LIGHTNING_DEPRECATED~
 
-COPY ~spell_rev\sppr4##\sppr410.spl~     ~override~  // Call Woodland Beings
-  SAY NAME1 @129    SAY UNIDENTIFIED_DESC @130
-COPY ~spell_rev\sppr4##\hamasu.eff~     ~override~
-COPY ~spell_rev\sppr4##\hamasu.cre~     ~override~
-COPY ~spell_rev\sppr4##\hamasu.itm~     ~override~
-COPY ~spell_rev\sppr4##\hamasu.bcs~     ~override~
-COPY ~spell_rev\sppr4##\dvnymph.eff~     ~override~
-COPY ~spell_rev\sppr4##\dvnymph.cre~     ~override~
-  SAY NAME1 @2129
-  SAY NAME2 @2129
-COPY ~spell_rev\sppr4##\dvnymph.itm~     ~override~
-COPY ~spell_rev\sppr4##\dvnymph.bcs~     ~override~
-
 // change portrait icon name into Divine Power
 STRING_SET ~8267~ @133
 
 //Lesser restoration scroll.
 COPY ~spell_rev\sppr4##\restore.itm~     ~override~
   SAY NAME2 @143    SAY IDENTIFIED_DESC   @144 
-
-//ADD_SPELL: Regenerate Critical Wounds
-ADD_SPELL ~spell_rev\sppr4##\sppr419.spl~ 1 4 ~CLERIC_REGENERATE_CRITICAL_WOUNDS~  // Regenerate Critical Wounds (new druid spell)
-  SAY NAME1 @307    SAY UNIDENTIFIED_DESC @308
-
 
 /*-----------------------level 5-----------------------*/
 

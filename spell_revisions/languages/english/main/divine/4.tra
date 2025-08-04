@@ -37,7 +37,7 @@ The summoned animals will aid the caster by whatever means they possess, staying
 Leopard (4 Hit Dice):
 STR 16, DEX 18, CON 15, INT 6, WIS 13, CHA 6;  AL Neutral
 HP 36, AC 5, THAC0 16, Saving Throws 12/16/12/14/16
-2 Attacks Per Round, 1d6+1 Piercing Damage (Claws & Bite)
+2 Attacks Per Round, 1d6 + 1 Piercing Damage (Claws)
 
 Combat Abilities:
 Pounce: can charge a target if at least 6 feet away. During that round the leopard moves at double speed, attacks with a +2 bonus to hit and damage rolls, but suffers a -2 penalty to AC"
@@ -150,7 +150,7 @@ The summoned beings will aid the caster by whatever means they possess, staying 
 Hamadryad (4 Hit Dice):
 STR 10, DEX 18, CON 12, INT 14, WIS 14, CHA 18; AL Neutral
 HP 32, AC 3, THAC0 14, Saving Throws 12/16/12/14/16
-2 Attacks Per Round, 1d6+1 missile (Short Bow & arrows +1)
+2 Attacks Per Round, 1d6 + 1 missile (Short Bow & Arrows +1)
 
 Special Qualities:
 Magic Resistance 75%
@@ -162,7 +162,7 @@ Memorized Spells:
 Nymph (7 Hit Dice):
 STR 10, DEX 17, CON 12, INT 16, WIS 17, CHA 19; AL Neutral Good
 HP 42, AC 3, THAC0 15, Saving Throws 12/10/12/14/10
-1 Attack Per Round, 1d4 Crushing (Touch +0)
+1 Attack Per Round, 1d4 Crushing (Touch)
 
 Special Qualities:
 Magic Resistance 50%

@@ -4,6 +4,9 @@
 @1301 = "Shield"
 @1302 = "Mace +1"
 @1303 = "Two-Handed Sword +1"
+@1401 = "Claws"
+@1402 = "Shortbow"
+@1403 = "Touch"
 
 //Arcane.
 @2101 = "Short Sword"

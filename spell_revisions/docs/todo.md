@@ -24,13 +24,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## A. 4. Level 4.
 
-* Animal Summoning IV: only description is in.
-
 * Free Action: temp immunities are in but not curing them. Movement Rate 2 immunity dropped for now.
 
 * Death Ward: standardize immunities to instant death and disintegrate.
-
-* Call Woodland Beings: only description is in.
 
 * Negative Plane Protection: description says abjuration, spell says transmutation: went with description for now. No sectype; vanila is combination.
 
@@ -82,3 +78,7 @@ note(s):
 * Display strings: this has only be handled in a small number of spells.
 
 * Cre scripts: set them in the patches instead of relying on name synchronicity.
+
+* Cre scripts: some spells are cast in the script (example: leopard casts dvspratt). The resource names must be corrected in a patch to the script.
+
+* Summon spell lists: summon spell lists also have to be combed over and eventually patched.
