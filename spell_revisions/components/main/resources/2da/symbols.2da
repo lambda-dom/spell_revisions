@@ -41,3 +41,4 @@ WIZARD_RESIST_ELEMENTS              1       wizard  2       *       0           
 WIZARD_MONSTER_SUMMONING_LEVEL_2    1       wizard  2       *       0           *
 WIZARD_MONSTER_SUMMONING_LEVEL_3    1       wizard  3       *       0           *
 WIZARD_ICELANCE                     1       wizard  3       *       0           *
+WIZARD_BREAK_ENCHANTMENT            1       wizard  4       *       0           *

@@ -70,6 +70,14 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Minor Glove of Invulnerability: pass through area spells of level <= that must be protected against. Externalize like with PfM?
 
+* Otiluke Resilient Sphere: only description is in.
+
+* Spirit Armor: handle concurrency with other armor spells.
+
+* Polymorph self and other: only description in.
+
+* Enchant weapon: only description in.
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.

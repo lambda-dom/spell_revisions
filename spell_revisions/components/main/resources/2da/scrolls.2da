@@ -74,6 +74,13 @@ WIZARD_CONFUSION                        scrl1u      10      1
 WIZARD_ICE_STORM                        scrl1x      10      1
 WIZARD_IMPROVED_INVISIBILITY            scrl1y      10      1
 WIZARD_MINOR_GLOBE_OF_INVULNERABILITY   scrl1z      10      1
+WIZARD_STONESKIN                        scrl2b      10      1
+WIZARD_CONTAGION                        scrla8      10      1
+WIZARD_BREAK_ENCHANTMENT                scrl5g      10      1
+WIZARD_EMOTION_HOPELESSNESS             scrl5h      10      1
+WIZARD_GREATER_MALISON                  scrl5i      10      1
+WIZARD_OTILUKES_RESILIENT_SPHERE        scrl5j      10      1
+WIZARD_SPIRIT_ARMOR                     scrl5k      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1

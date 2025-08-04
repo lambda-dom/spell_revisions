@@ -1133,49 +1133,15 @@ COPY ~spell_rev\spwi4##\gnlcapsu.itm~     ~override~
 COPY_EXISTING ~spell.ids~ ~override~
   REPLACE_TEXTUALLY ~^2407[ %TAB%]+WIZARD_MONSTER_SUMMONING_2\b~ ~2407 WIZARD_MONSTER_SUMMONING_2_DEPRECATED~
 
-
-COPY ~spell_rev\spwi4##\spwi408.spl~     ~override~  // Stoneskin
-  SAY NAME1 @575    SAY UNIDENTIFIED_DESC @576
-COPY ~spell_rev\spwi4##\scrl2b.itm~     ~override~
-  SAY NAME2 @575    SAY IDENTIFIED_DESC   @576
-
-COPY ~spell_rev\spwi4##\spwi409.spl~     ~override~  // Contagion
-  SAY NAME1 @577    SAY UNIDENTIFIED_DESC @578
-COPY ~spell_rev\spwi4##\scrla8.itm~     ~override~
-  SAY NAME2 @577    SAY IDENTIFIED_DESC   @578
-
-COPY ~spell_rev\spwi4##\spwi410.spl~     ~override~  // Break Enchantment (replaces Remove Curse)
-  SAY NAME1 @579    SAY UNIDENTIFIED_DESC @580
-COPY ~spell_rev\spwi4##\scrl5g.itm~     ~override~
-  SAY NAME2 @579    SAY IDENTIFIED_DESC   @580
+// Break Enchantment (replaces Remove Curse)
 APPEND ~spell.ids~ ~2410 WIZARD_BREAK_ENCHANTMENT~
-
-COPY ~spell_rev\spwi4##\spwi411.spl~     ~override~  // Emotion: Despair (replaces Emotion: Hopelessness)
-  SAY NAME1 @581    SAY UNIDENTIFIED_DESC @582
-COPY ~spell_rev\spwi4##\scrl5h.itm~     ~override~
-  SAY NAME2 @581    SAY IDENTIFIED_DESC   @582
-
-COPY ~spell_rev\spwi4##\spwi412.spl~     ~override~  // Greater Malison
-  SAY NAME1 @583    SAY UNIDENTIFIED_DESC @584
-  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 44916 parameter1 = RESOLVE_STR_REF(@3583) END
-COPY ~spell_rev\spwi4##\scrl5i.itm~     ~override~
-  SAY NAME2 @583    SAY IDENTIFIED_DESC   @584
 
 COPY ~spell_rev\spwi4##\spwi413.spl~     ~override~  // Otiluke's Resilient Sphere
   SAY NAME1 @585    SAY UNIDENTIFIED_DESC @586
-COPY ~spell_rev\spwi4##\scrl5j.itm~     ~override~
-  SAY NAME2 @585    SAY IDENTIFIED_DESC   @586
 COPY ~spell_rev\spwi4##\spwi413c.spl~     ~override~
 COPY ~spell_rev\spwi4##\spwi413d.spl~     ~override~
 COPY ~spell_rev\spwi4##\spwi413c.eff~     ~override~
 COPY ~spell_rev\spwi4##\spwi413d.eff~     ~override~
-
-COPY ~spell_rev\spwi4##\spwi414.spl~     ~override~  // Spirit Armor
-  SAY NAME1 @587    SAY UNIDENTIFIED_DESC @588
-COPY ~spell_rev\spwi4##\scrl5k.itm~     ~override~
-  SAY NAME2 @587    SAY IDENTIFIED_DESC   @588
-COPY ~spell_rev\spwi4##\sparmor.vvc~     ~override~
-COPY ~spell_rev\spwi4##\sparmor.bam~     ~override~
 
 COPY ~spell_rev\spwi4##\spwi415.spl~     ~override~  // Polymorph Other
   SAY NAME1 @589    SAY UNIDENTIFIED_DESC @590
@@ -1207,10 +1173,6 @@ ACTION_IF NOT GAME_IS ~bgee bg2ee eet iwdee~ BEGIN
     SAY NAME2 @593    SAY IDENTIFIED_DESC   @594
   COPY ~spell_rev\spwi4##\enchwp~     ~override~
 END
-// change icon from red to blue on enhanced editions and original games
-COPY ~spell_rev\spwi4##\spwi417a.bam~     ~override~
-COPY ~spell_rev\spwi4##\spwi417b.bam~     ~override~
-COPY ~spell_rev\spwi4##\spwi417c.bam~     ~override~
 
 COPY ~spell_rev\spwi4##\spwi418.spl~     ~override~  // Fire Shield (Red)
   SAY NAME1 @595    SAY UNIDENTIFIED_DESC @596

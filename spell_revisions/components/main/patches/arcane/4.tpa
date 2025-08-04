@@ -1,2 +1,31 @@
 //Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
+
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
 //Patches.
+DEFINE_PATCH_FUNCTION contagion STR_VAR destination = "*" BEGIN
+    //Spell may not exist by this point => TODO: refactor to ensure it does.
+    //Get reference.
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:a:CLERIC_CONTAGION"
+    RET res = resource END
+
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "cont#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_malison STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10401
+        match_opcode = 142                  //Display icon.
+    END
+END
