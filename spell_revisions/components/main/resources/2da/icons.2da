@@ -83,9 +83,9 @@ monster_summon_2_c              1       *       0       #suf:c:WIZARD_MONSTER_SU
 monster_summon_3_a              1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_3
 monster_summon_3_b              1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_3
 monster_summon_3_c              1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_3
-minor_globe_invulnerability_a   1       *       1       #suf:a:WIZARD_MINOR_GLOBE_INVULNERABILITY
-minor_globe_invulnerability_b   1       *       1       #suf:b:WIZARD_MINOR_GLOBE_INVULNERABILITY
-minor_globe_invulnerability_c   1       *       1       #suf:c:WIZARD_MINOR_GLOBE_INVULNERABILITY
+minor_globe_invulnerability_a   1       *       1       #suf:a:WIZARD_MINOR_GLOBE_OF_INVULNERABILITY
+minor_globe_invulnerability_b   1       *       1       #suf:b:WIZARD_MINOR_GLOBE_OF_INVULNERABILITY
+minor_globe_invulnerability_c   1       *       1       #suf:c:WIZARD_MINOR_GLOBE_OF_INVULNERABILITY
 enchanted_weapon_a              1       *       1       #suf:a:WIZARD_ENCHANTED_WEAPON
 enchanted_weapon_b              1       *       1       #suf:b:WIZARD_ENCHANTED_WEAPON
 enchanted_weapon_c              1       *       1       #suf:c:WIZARD_ENCHANTED_WEAPON
