@@ -433,24 +433,7 @@ COPY ~spell_rev\sppr4##\dvnymph.bcs~     ~override~
 // change portrait icon name into Divine Power
 STRING_SET ~8267~ @133
 
-ACTION_IF install_cause_wounds BEGIN
-  COPY ~spell_rev\sppr4##\sppr414.spl~     ~override~  // Cause Critical Wounds (moved from lvl 5, replaces Cause Serious Wounds)
-    SAY NAME1 @137    SAY UNIDENTIFIED_DESC @138
-  COPY ~spell_rev\sppr4##\critical.itm~     ~override~
-  COPY ~spell_rev\sppr4##\sppr414d.spl~     ~override~
-END
-
-COPY ~spell_rev\sppr4##\sppr415.spl~     ~override~  // Farsight
-  SAY NAME1 @139    SAY UNIDENTIFIED_DESC @140
-
-COPY ~spell_rev\sppr4##\sppr416.spl~     ~override~  // Cloak of Fear
-  SAY NAME1 @141    SAY UNIDENTIFIED_DESC @142
-COPY ~spell_rev\sppr4##\sppr416d.spl~     ~override~
-  WRITE_SHORT 0x98 %dvclfear%
-COPY ~spell_rev\sppr4##\sppr416i.eff~     ~override~
-
-COPY ~spell_rev\sppr4##\sppr417.spl~     ~override~  // Lesser Restoration
-  SAY NAME1 @143    SAY UNIDENTIFIED_DESC @144
+//Lesser restoration scroll.
 COPY ~spell_rev\sppr4##\restore.itm~     ~override~
   SAY NAME2 @143    SAY IDENTIFIED_DESC   @144 
 

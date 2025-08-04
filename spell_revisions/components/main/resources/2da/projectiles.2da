@@ -20,3 +20,4 @@ pack_attack         1       pack_attack         0           *           0       
 flame_arrow         1       flame_arrow         0           *           0       #lit:dlflmarw
 spell_thrust        1       spell_thrust        0           *           0       #lit:dlsplthr
 defensive_harmony   1       defensive_harmony   0           *           0       #lit:dldefhrm
+cloak_fear          1       cloak_fear          0           *           0       #lit:dlclkfea

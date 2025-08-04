@@ -26,60 +26,6 @@ Saving Throw: None
 
 When a Protection from Electricity spell is cast, the recipient receives complete protection from all electrical-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like electric dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Lightning Bolt, Glyph of Warding, Call Lightning, and Chain Lightning. Multiple castings of this spell are not cumulative.~
 
-@137=~Cause Critical Wounds~
-@138=~Cause Critical Wounds
-Level: 4
-School: Necromancy
-Sphere: Necromantic
-Range: Personal
-Duration: Special
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
-
-This spell is the reverse of Cure Critical Wounds. Instead of healing the creature touched, it causes damage. On a successful touch from the priest, the spell inflicts 4d8 + 4/level points of damage upon the target (up to a maximum of 4d8+40). The spell expires once the priest makes a successful melee attack or after 1 turn has passed. The priest gains a +4 bonus to hit the target. Magic resistance does not affect this spell.~
-
-@139=~Farsight~
-@140=~Farsight
-Level: 4
-School: Divination
-Sphere: Divination
-Range: Personal
-Duration: 5 turns
-Casting Time: 4
-Area of Effect: Special
-Saving Throw: None
-
-When Farsight is cast, the caster is able to view an area of an unexplored map. After casting the spell, simply click on a section of the map that you want to view. For the duration of the spell, the caster can spy on that area, noting creatures and fortifications.~
-
-@141=~Cloak of Fear~
-@142=~Cloak of Fear
-Level: 4
-School: Conjuration
-Sphere: Charm
-Range: Personal
-Duration: 1 turn
-Casting Time: 1
-Area of Effect: 6' radius
-Saving Throw: Special
-
-Cloak of Fear empowers the caster to radiate a personal aura of fear out to a 6' radius. All enemies not immune to fear within this aura suffer -2 penalty to attack rolls, and each round they must roll a successful saving throw vs. spell or run away in panic for 1 round. Party members are immune to the effects of the aura.~
-
-@143=~Lesser Restoration~
-@144=~Lesser Restoration
-Level: 4
-School: Necromancy
-Sphere: Necromantic
-Range: Touch
-Duration: Permanent
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
-
-When this spell is cast, the life energy level of the recipient is raised. This reverses any previous life energy level drain of the creature by a force or monster.
-
-The casting of this spell is very draining on the priest, leaving him physically and mentally exhausted. For 5 rounds after the spell is cast, the priest will suffer a -2 penalty to hit, damage, armor class, and casting speed factor.~
-
 @145=~Ice Storm~
 @146=~Ice Storm
 Level: 4

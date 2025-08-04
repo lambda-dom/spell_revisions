@@ -55,7 +55,9 @@ note(s):
 
 ## B. 4. Level 4.
 
-* Free Action: tightened imlementation of immunities.
+* Free Action: tightened implementation of immunities.
+
+* Cause Critical Wounds: correct damage of level 10 header 36 -> 40.
 
 # B. Arcane spells.
 
