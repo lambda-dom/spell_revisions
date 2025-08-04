@@ -282,6 +282,32 @@ When this spell is cast, the life energy level of the recipient is raised. This 
 
 The casting of this spell is very draining on the priest, leaving him physically and mentally exhausted. For 5 rounds after the spell is cast, the priest will suffer a -2 penalty to hit, damage, armor class, and casting speed factor."
 
+//New spells.
+@4500 = "Ice Storm"
+@4501 = "Ice Storm
+Level: 4
+School: Evocation
+Sphere: Elemental (Water)
+Range: Long
+Duration: 4 rounds
+Casting Time: 4
+Area of Effect: 30' radius
+Saving Throw: None
+
+When this spell is cast, great magical hailstones pound down for 4 rounds within a 30 foot radius of a point selected by the caster. Creatures within the area of effect have their movement speed reduced by 50%, and receive 2d8 points of cold damage for each round they remain inside the storm."
+
+@4510 = "Regenerate Critical Wounds"
+@4511 = "Regenerate Critical Wounds
+Level: 4
+School: Alteration
+Sphere: Healing
+Range: Touch
+Duration: 1 turn + 2 rounds/level
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 4 hit points per round (up to a maximum of 120 hit points within 3 turns at level 10). The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
 
 
 //Display strings.

@@ -437,10 +437,6 @@ STRING_SET ~8267~ @133
 COPY ~spell_rev\sppr4##\restore.itm~     ~override~
   SAY NAME2 @143    SAY IDENTIFIED_DESC   @144 
 
-//ADD_SPELL: Ice Storm
-ADD_SPELL ~spell_rev\sppr4##\sppr418.spl~ 1 4 ~CLERIC_ICE_STORM~  // Ice Storm (added to druid's spells)
-  SAY NAME1 @145    SAY UNIDENTIFIED_DESC @146
-
 //ADD_SPELL: Regenerate Critical Wounds
 ADD_SPELL ~spell_rev\sppr4##\sppr419.spl~ 1 4 ~CLERIC_REGENERATE_CRITICAL_WOUNDS~  // Regenerate Critical Wounds (new druid spell)
   SAY NAME1 @307    SAY UNIDENTIFIED_DESC @308

@@ -16,8 +16,6 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Chant: have good chant nullify bad chant and vice versa.
 
-* Regenerate Moderate Wounds: handle stacking of regen spells. The idea is that higher level remove and block lower level.
-
 ## A. 3. Level 3.
 
 * Dispel Magic: only the description is in.
@@ -72,7 +70,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Cure line of spells: mention in description that it also cures intoxication.
 
-* Regenerate line of spells: handle inter-spell concurrency.
+* Regenerate line of spells: handle inter-spell concurrency. The idea is that higher level remove and block lower level.
 
 * Self-stacking debuffs: debuffs like Slow stack with themselves if not protected against -- this is achieved by a Protection from Spell [206] opcode and *not* by refreshing. The reason is that the debuffs apply on a failed save so it could happen that the refresh would clean the applied debuff and then fail to apply its effects due to a successful save. In the case of Slow, the problem is sharper because the debuff is applied via sectype, so while it does not stack with itself it will stack with other instances of the sectype. For now this is how it is done, but this ought to be revisited.
 

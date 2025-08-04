@@ -26,20 +26,6 @@ Saving Throw: None
 
 When a Protection from Electricity spell is cast, the recipient receives complete protection from all electrical-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like electric dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Lightning Bolt, Glyph of Warding, Call Lightning, and Chain Lightning. Multiple castings of this spell are not cumulative.~
 
-@145=~Ice Storm~
-@146=~Ice Storm
-Level: 4
-School: Evocation
-Sphere: Elemental (Water)
-Range: Long
-Duration: 4 rounds
-Casting Time: 4
-Area of Effect: 30' radius
-Saving Throw: None
-
-When this spell is cast, great magical hailstones pound down for 4 rounds within a 30 foot radius of a point selected by the caster. Creatures within the area of effect have their movement speed reduced by 50%, and receive 2d8 points of cold damage for each round they remain inside the storm.~
-
-
 /*------------------level 5------------------*/
 
 @151=~Animal Summoning V~
@@ -1276,19 +1262,6 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 3 hit points per round (up to a maximum of 90 hit points within 3 turns at level 10). The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative.~
-
-@307=~Regenerate Critical Wounds~
-@308=~Regenerate Critical Wounds
-Level: 4
-School: Alteration
-Sphere: Healing
-Range: Touch
-Duration: 1 turn + 2 rounds/level
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
-
-This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 4 hit points per round (up to a maximum of 120 hit points within 3 turns at level 10). The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative.~
 
 @309=~Mass Regenerate~
 @310=~Mass Regenerate
