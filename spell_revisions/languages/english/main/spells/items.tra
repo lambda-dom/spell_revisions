@@ -34,6 +34,10 @@
 @1300 = "Cause Serious Wounds"
 @1301 = "Fists enchanted by the Cause Serious Wounds spell."
 
+//Level 4.
+@1400 = "Cause Critical Wounds"
+@1401 = "Fists enchanted by the Cause Critical Wounds spell."
+
 //Arcane.
 //Level 1.
 @2100 = "Shocking Grasp"

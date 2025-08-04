@@ -1,6 +1,7 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 
 //Load references.
@@ -78,10 +79,21 @@ DEFINE_PATCH_FUNCTION cause_serious_itm BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
-        match_opcode = 146              //Cast spell.
+        match_opcode = 146                  //Cast spell.
     STR_VAR
         match_resource = "spl#res"
         resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION cause_critical_itm BEGIN
+    //Get reference.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "cause_critical_wounds_a"
+        match_resource = "spl#res"
+        references = "spells"
     END
 END
 

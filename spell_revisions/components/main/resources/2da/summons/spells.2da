@@ -4,3 +4,4 @@
 bat_swarm       1       *       *       special 1   00000000    *           *       *           *           #lbl:bat_swarm      1       1       *               0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_1
 war_dog_scent   1       *       *       special 1   00011000    none        none    *           *           #lbl:war_dog_scent  10      1       *               0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_2
 pack_attack     1       *       *       special 1   00000000    *           *       *           *           #lbl:pack_attack    1       1       pack_attack     0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_3
+pounce          1       *       *       special 1   00000000    *           *       *           *           *                   1       1       *               0       #lit:dvspratt

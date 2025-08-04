@@ -1,0 +1,314 @@
+//Description strings.
+//Divine spells.
+//Level 4.
+//cure_critical_wounds:sppr401
+@4010 = "Cure Critical Wounds"
+@4011 = "Cure Critical Wounds
+Level: 4
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: Permanent
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 4d8 + 4/level points of damage sustained by the target creature (up to a maximum of 4d8 + 40)."
+
+//animal_summoning_4:sppr402
+@4020 = "Animal Summoning IV"
+@4021 = "Animal Summoning IV
+Level: 4
+School: Conjuration
+Sphere: Animal
+Range: Long
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster calls a number of animals, which serve the summoner under any conditions. The type and number of creatures that appear depend upon the level of the druid casting the spell.
+
+7th : 2 leopards
+9th+ : 3 leopards
+
+The summoned animals will aid the caster by whatever means they possess, staying until the spell duration expires.
+
+Leopard (4 Hit Dice):
+STR 16, DEX 18, CON 15, INT 6, WIS 13, CHA 6;  AL Neutral
+HP 36, AC 5, THAC0 16, Saving Throws 12/16/12/14/16
+2 Attacks Per Round, 1d6 + 1 Piercing Damage (Claws)
+
+Combat Abilities:
+Pounce: can charge a target if at least 6 feet away. During that round the leopard moves at double speed, attacks with a +2 bonus to hit and damage rolls, but suffers a -2 penalty to AC"
+
+//free_action:sppr403
+@4030 = "Free Action"
+@4031 = "Free Action
+Level: 4
+School: Abjuration
+Sphere: Charm
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+While under the effects of this spell, the recipient becomes immune to everything, magical or otherwise, that limits his mobility in any way. This includes, but is not limited to, Entangle, Grease, Web, Hold, Slow, and Stun. This effect will last for the duration of the spell or until dispelled."
+
+//neutralize_poison:sppr404
+@4040 = "Neutralize Poison"
+@4041 = "Neutralize Poison
+Level: 4
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell removes all toxins from the body, both natural and magical in nature. When this spell is cast upon a poisoned individual, it immediately neutralizes any poison. In addition, for the duration of the spell, the recipient is immune to any poison it is exposed to, and spells like Poison and Cloudkill won't affect the protected creature."
+
+//mental_domination:sppr405
+@4050 = "Mental Domination"
+@4051 = "Mental Domination
+Level: 4
+School: Enchantment
+Sphere: Thought
+Range: Long
+Duration: 1 turn
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: Spell negates
+
+When cast upon a subject, he must make a save vs. spell at -2 in order to avoid the priest entering his mind. The effects of this spell are similar to the 5th level wizard spell Domination, with a few minor differences. Most notably, this spell gives the priest no access to the subject's thoughts, memory, or sensory apparatus. The priest simply is able to command the subject to perform certain tasks or functions during the spell duration. To control the subject, the priest must be within range and must be able to see the subject. This control will last until dispelled or for the duration of the spell."
+
+//defensive_harmony:sppr406
+@4060 = "Defensive Harmony"
+@4061 = "Defensive Harmony
+Level: 4
+School: Enchantment
+Sphere: Law
+Range: Personal
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: 10' radius
+Saving Throw: None
+
+Defensive Harmony grants affected creatures a defensive bonus by enhancing the coordination of their attacks and defenses. This allows a group of creatures to act as a cohesive unit for a single battle or encounter. The effect is always centered on the caster, but affects all those within a 10 foot radius. The affected creatures can move outside of this radius after the spell is cast and still enjoy the benefits of the Harmony. While the spell is in effect, each affected creature gains a +4 bonus to her armor class. Multiple castings of this spell are not cumulative."
+
+//protection_from_electricity, deprecated:sppr407
+//magic_circle_against_evil:sppr408
+@4080 = "Magic Circle against Evil"
+@4081 = "Magic Circle against Evil
+Level: 4
+School: Abjuration
+Sphere: Protection
+Range: Personal
+Duration: 5 turns
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: None
+
+Upon casting this spell, the priest causes all friendly creatures within the area of effect to be affected by the spell Protection from Evil. Creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not."
+
+//death_ward:sppr409
+@4090 = "Death Ward"
+@4091 = "Death Ward
+Level: 4
+School: Necromancy
+Sphere: Necromantic
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+While under the effects of this spell, the recipient is immune to all forms of death magic. This includes, but is not limited to, Death Spell, Disintegrate, Power Word Kill, Finger of Death, and Wail of the Banshee. This effect will last for the duration of the spell or until dispelled."
+
+//call_woodland_beings:sppr410
+@4100 = "Call Woodland Beings"
+@4101 = "Call Woodland Beings
+Level: 4
+School: Conjuration
+Sphere: Animal
+Range: Medium
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster calls a number of magical woodland beings. The type and number of creatures that appear depend upon the level of the druid casting the spell.
+
+7th : 1 hamadryad
+9th : 2 hamadryads
+11th+ : 2 hamadryads, 1 nymph
+
+The summoned beings will aid the caster by whatever means they possess, staying until the spell duration expires.
+
+Hamadryad (4 Hit Dice):
+STR 10, DEX 18, CON 12, INT 14, WIS 14, CHA 18; AL Neutral
+HP 32, AC 3, THAC0 14, Saving Throws 12/16/12/14/16
+2 Attacks Per Round, 1d6 + 1 missile (Short Bow & Arrows +1)
+
+Special Qualities:
+Magic Resistance 75%
+
+Memorized Spells:
+1. Cure Light Wounds (x2), Entangle (x2), Shillelagh, Doom
+2. Barkskin, Charm Person or Animal (x2), Resist Elements, Slow Poison
+
+Nymph (7 Hit Dice):
+STR 10, DEX 17, CON 12, INT 16, WIS 17, CHA 19; AL Neutral Good
+HP 42, AC 3, THAC0 15, Saving Throws 12/10/12/14/10
+1 Attack Per Round, 1d4 Crushing (Touch)
+
+Special Qualities:
+Magic Resistance 50%
+
+Memorized Spells:
+1. Cure Light Wounds (x2), Entangle (x2), Shillelagh, Doom
+2. Barkskin, Charm Person or Animal (x2), Resist Elements, Slow Poison
+3. Call Lightning, Hold Person or Animal, Summon Insects
+4. Animal Summoning IV"
+
+//poison:sppr411
+@4110 = "Poison"
+@4111 = "Poison
+Level: 4
+School: Necromancy
+Sphere: Healing
+Range: Short
+Duration: 1 turn
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: Poison partial
+
+Through this spell, the caster can poison a single victim. The damage dealt by the poison depends upon the level of the priest casting the spell.
+
+7th level:  4d4  +  1 every 4 seconds
+9th level:  5d5  +  1 every 3 seconds
+12th level:  6d6  +  1 every 2 seconds
+15th+ level:  8d8  +  1 every 1 second
+
+The victim cannot avoid the initial damage unless it is completely immune to the effects of poison, but a successful save vs. poison at -2 will negate the ongoing damage."
+
+//divine_power:sppr412
+@4120 = "Divine Power"
+@4121 = "Divine Power
+Level: 4
+School: Evocation
+Sphere: Combat
+Range: Personal
+Duration: 1 round/level
+Casting Time: 4
+Area of Effect: Caster
+Saving Throw: None
+
+Through this spell, the caster imbues himself with the strength and skill of a fighter of the same level. The priest's strength is set to 18/00, even if it is normally higher, his THAC0 becomes that of a fighter of the same level, and he gains 1 temporary hit point for every level he has attained. The caster gains extra attacks as a fighter of the same level, thus an extra half an attack per round at 7th level and another half attack per round at 13th level. This lasts for the duration of the spell or until successfully dispelled. Multiple castings of this spell are not cumulative.
+
+Note: this spell does not give any extra attacks to multiclassed or dual-classed fighter/clerics or ranger/clerics, as they normally gain additional attacks per round due to their fighter or ranger levels."
+
+//negative_plane_protection:sppr413
+@4130 = "Negative Plane Protection"
+@4131 = "Negative Plane Protection
+Level: 4
+School: Abjuration
+Sphere: Necromantic, Protection
+Range: Touch
+Duration: 5 turns
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Negative Plane Protection spell is cast, the recipient receives complete protection from negative energy attacks. This spell also affords the recipient partial protection from monsters with Negative Energy plane connections (such as vampires) and certain weapons and spells that drain levels. A protected creature is immune to any form of level draining for the duration of the spell, though they will still suffer normal hit point damage from the physical attacks, if applicable."
+
+//cause_critical_wounds:sppr414
+@4140 = "Cause Critical Wounds"
+@4141 = "Cause Critical Wounds
+Level: 4
+School: Necromancy
+Sphere: Necromantic
+Range: Personal
+Duration: Special
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell is the reverse of Cure Critical Wounds. Instead of healing the creature touched, it causes damage. On a successful touch from the priest, the spell inflicts 4d8 + 4/level points of damage upon the target (up to a maximum of 4d8 + 40). The spell expires once the priest makes a successful melee attack or after 1 turn has passed. The priest gains a +4 bonus to hit the target. Magic resistance does not affect this spell."
+
+//farsight:sppr415
+@4150 = "Farsight"
+@4151 = "Farsight
+Level: 4
+School: Divination
+Sphere: Divination
+Range: Personal
+Duration: 5 turns
+Casting Time: 4
+Area of Effect: Special
+Saving Throw: None
+
+When Farsight is cast, the caster is able to view an area of an unexplored map. After casting the spell, simply click on a section of the map that you want to view. For the duration of the spell, the caster can spy on that area, noting creatures and fortifications."
+
+//cloak_fear:sppr416
+@4160 = "Cloak of Fear"
+@4161 = "Cloak of Fear
+Level: 4
+School: Conjuration
+Sphere: Charm
+Range: Personal
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: 6' radius
+Saving Throw: Special
+
+Cloak of Fear empowers the caster to radiate a personal aura of fear out to a 6' radius. All enemies not immune to fear within this aura suffer -2 penalty to attack rolls, and each round they must roll a successful saving throw vs. spell or run away in panic for 1 round. Party members are immune to the effects of the aura."
+
+//lesser_restoration:sppr417
+@4170 = "Lesser Restoration"
+@4171 = "Lesser Restoration
+Level: 4
+School: Necromancy
+Sphere: Necromantic
+Range: Touch
+Duration: Permanent
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, the life energy level of the recipient is raised. This reverses any previous life energy level drain of the creature by a force or monster.
+
+The casting of this spell is very draining on the priest, leaving him physically and mentally exhausted. For 5 rounds after the spell is cast, the priest will suffer a -2 penalty to hit, damage, armor class, and casting speed factor."
+
+//New spells.
+@4500 = "Ice Storm"
+@4501 = "Ice Storm
+Level: 4
+School: Evocation
+Sphere: Elemental (Water)
+Range: Long
+Duration: 4 rounds
+Casting Time: 4
+Area of Effect: 30' radius
+Saving Throw: None
+
+When this spell is cast, great magical hailstones pound down for 4 rounds within a 30 foot radius of a point selected by the caster. Creatures within the area of effect have their movement speed reduced by 50%, and receive 2d8 points of cold damage for each round they remain inside the storm."
+
+@4510 = "Regenerate Critical Wounds"
+@4511 = "Regenerate Critical Wounds
+Level: 4
+School: Alteration
+Sphere: Healing
+Range: Touch
+Duration: 1 turn + 2 rounds/level
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 4 hit points per round (up to a maximum of 120 hit points within 3 turns at level 10). The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
+
+
+//Display strings.
+@10401 = "Healed"

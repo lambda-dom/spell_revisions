@@ -53,6 +53,16 @@ note(s):
 
 * Animal Summoning III: corrections to wolf summon: int, ac, thac0.
 
+## B. 4. Level 4.
+
+* Free Action: tightened implementation of immunities.
+
+* Cause Critical Wounds: correct damage of level 10 header 36 -> 40.
+
+* Animal Summoning IV: leopard claws missing +1 damage bonus. Leopard: corrections to wis, chr, ac. Corrections to pounce (+2 bonus instead of +4).
+
+* Call Woodland Beings: hamadryad: correct ac, thac0, apr, saves (per description). Remove dire charm and dimension door? Nymph: ac, saves (per description), magic resistance missing, alignment.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

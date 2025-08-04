@@ -389,46 +389,14 @@ APPEND ~spell.ids~ ~1318 CLERIC_GUST_OF_WIND~
 LAF ds_altered_spell INT_VAR old_clone=60 new_clone=~-1~ STR_VAR file=~sppr319.spl~ END
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~sppr319a.SPL    233     1     120   146    6     A~
 
-/*-----------------------level 4-----------------------*/
-
-COPY ~spell_rev\sppr4##\sppr401.spl~     ~override~  // Cure Critical Wounds (moved from lvl 5, replaces Cure Serious Wounds)
+//Level 4.
+// Cure Critical Wounds (moved from lvl 5, replaces Cure Serious Wounds)
+COPY ~spell_rev\sppr4##\sppr401.spl~     ~override~
   SAY NAME1 @111    SAY UNIDENTIFIED_DESC @112
-COPY ~spell_rev\sppr5##\scrl61.itm~     ~override~
-  SAY NAME2 @111    SAY IDENTIFIED_DESC   @112
 
-COPY ~spell_rev\sppr4##\sppr402.spl~     ~override~  // Animal Summoning IV (originally Animal Summoning I)
-  SAY NAME1 @113    SAY UNIDENTIFIED_DESC @114
-COPY ~spell_rev\sppr4##\catjagsu.eff~     ~override~
-COPY ~spell_rev\sppr4##\catjagsu.cre~     ~override~
-  SAY NAME1 @2113
-  SAY NAME2 @2113
-COPY ~spell_rev\sppr4##\catjagsu.itm~     ~override~
-COPY ~spell_rev\sppr4##\catjagsu.bcs~     ~override~
-COPY ~spell_rev\sppr4##\dvspratt.spl~     ~override~ // Spring Attack (Pounce)
-COPY ~spell_rev\sppr4##\sppr402a.bam~     ~override~
-COPY ~spell_rev\sppr4##\sppr402b.bam~     ~override~
-COPY ~spell_rev\sppr4##\sppr402c.bam~     ~override~
+// Animal Summoning IV (originally Animal Summoning I)
 APPEND ~spell.ids~ ~1402 CLERIC_ANIMAL_SUMMONING_LEVEL_4~
 
-COPY ~spell_rev\sppr4##\sppr403.spl~     ~override~  // Free Action
-  SAY NAME1 @115    SAY UNIDENTIFIED_DESC @116
-COPY ~spell_rev\sppr4##\scrl58.itm~     ~override~
-  SAY NAME2 @115    SAY IDENTIFIED_DESC   @116
-
-COPY ~spell_rev\sppr4##\sppr404.spl~     ~override~  // Neutralize Poison
-  SAY NAME1 @117    SAY UNIDENTIFIED_DESC @118 
-
-COPY ~spell_rev\sppr4##\sppr405.spl~     ~override~  // Mental Domination
-  SAY NAME1 @119    SAY UNIDENTIFIED_DESC @120
-COPY ~spell_rev\sppr4##\scrl5a.itm~     ~override~
-  SAY NAME2 @119    SAY IDENTIFIED_DESC   @120
-
-ADD_PROJECTILE ~spell_rev\projectles\dvharmon.pro~
-COPY ~spell_rev\sppr4##\sppr406.spl~     ~override~  // Defensive Harmony
-  SAY NAME1 @121    SAY UNIDENTIFIED_DESC @122
-  WRITE_SHORT 0x98 %dvharmon%
-COPY ~spell_rev\sppr4##\scrl5b.itm~     ~override~
-  SAY NAME2 @121    SAY IDENTIFIED_DESC   @122
 
 COPY ~spell_rev\sppr4##\sppr407.spl~     ~override~  // old Protection from Lightning (disabled)
   SAY NAME1 @123    SAY UNIDENTIFIED_DESC @124
@@ -438,79 +406,12 @@ COPY ~spell_rev\sppr4##\scrl5c.itm~     ~override~
 COPY_EXISTING ~spell.ids~ ~override~
   REPLACE_TEXTUALLY ~^1407[ %TAB%]+CLERIC_PROTECTION_FROM_LIGHTNING\b~ ~1407 CLERIC_PROTECTION_FROM_LIGHTNING_DEPRECATED~
 
-COPY ~spell_rev\sppr4##\sppr408.spl~ ~override~ // Magic Circle against Evil (previously named Protection from Evil 10' Radius)
-  SAY NAME1 @125 SAY UNIDENTIFIED_DESC @126
-/* ADD_PROJECTILE ~spell_rev\projectles\dvproevi.pro~ // V2's aura-like animation
-COPY ~spell_rev\sppr4##\sppr408d.spl~ ~override~
-  WRITE_SHORT 0x98 %dvproevi%
-COPY ~spell_rev\shared\dvholya1.bam~     ~override~
-COPY ~spell_rev\shared\dvholya1.vvc~     ~override~
-COPY ~spell_rev\shared\dvholya2.bam~     ~override~
-COPY ~spell_rev\shared\dvholya2.vvc~     ~override~ */
+// change portrait icon name into Divine Power
+STRING_SET ~8267~ @133
 
-COPY ~spell_rev\sppr4##\scrl5d.itm~     ~override~
-  SAY NAME2 @125    SAY IDENTIFIED_DESC   @126
-
-COPY ~spell_rev\sppr4##\sppr409.spl~     ~override~  // Death Ward
-  SAY NAME1 @127    SAY UNIDENTIFIED_DESC @128
-
-COPY ~spell_rev\sppr4##\sppr410.spl~     ~override~  // Call Woodland Beings
-  SAY NAME1 @129    SAY UNIDENTIFIED_DESC @130
-COPY ~spell_rev\sppr4##\hamasu.eff~     ~override~
-COPY ~spell_rev\sppr4##\hamasu.cre~     ~override~
-COPY ~spell_rev\sppr4##\hamasu.itm~     ~override~
-COPY ~spell_rev\sppr4##\hamasu.bcs~     ~override~
-COPY ~spell_rev\sppr4##\dvnymph.eff~     ~override~
-COPY ~spell_rev\sppr4##\dvnymph.cre~     ~override~
-  SAY NAME1 @2129
-  SAY NAME2 @2129
-COPY ~spell_rev\sppr4##\dvnymph.itm~     ~override~
-COPY ~spell_rev\sppr4##\dvnymph.bcs~     ~override~
-
-COPY ~spell_rev\sppr4##\sppr411.spl~     ~override~  // Poison
-  SAY NAME1 @131    SAY UNIDENTIFIED_DESC @132
-
-COPY ~spell_rev\sppr4##\sppr412.spl~     ~override~  // Divine Power (renamed from Holy Power)
-  SAY NAME1 @133    SAY UNIDENTIFIED_DESC @134
-COPY ~spell_rev\sppr4##\sppr412a.eff~     ~override~
-COPY ~spell_rev\sppr4##\sppr412b.eff~     ~override~
-STRING_SET ~8267~ @133 // change portrait icon name into Divine Power
-
-COPY ~spell_rev\sppr4##\sppr413.spl~     ~override~  // Negative Plane Protection
-  SAY NAME1 @135    SAY UNIDENTIFIED_DESC @136
-
-ACTION_IF install_cause_wounds BEGIN
-  COPY ~spell_rev\sppr4##\sppr414.spl~     ~override~  // Cause Critical Wounds (moved from lvl 5, replaces Cause Serious Wounds)
-    SAY NAME1 @137    SAY UNIDENTIFIED_DESC @138
-  COPY ~spell_rev\sppr4##\critical.itm~     ~override~
-  COPY ~spell_rev\sppr4##\sppr414d.spl~     ~override~
-END
-
-COPY ~spell_rev\sppr4##\sppr415.spl~     ~override~  // Farsight
-  SAY NAME1 @139    SAY UNIDENTIFIED_DESC @140
-
-COPY ~spell_rev\sppr4##\sppr416.spl~     ~override~  // Cloak of Fear
-  SAY NAME1 @141    SAY UNIDENTIFIED_DESC @142
-COPY ~spell_rev\sppr4##\sppr416d.spl~     ~override~
-  WRITE_SHORT 0x98 %dvclfear%
-COPY ~spell_rev\sppr4##\sppr416i.eff~     ~override~
-
-COPY ~spell_rev\sppr4##\sppr417.spl~     ~override~  // Lesser Restoration
-  SAY NAME1 @143    SAY UNIDENTIFIED_DESC @144
+//Lesser restoration scroll.
 COPY ~spell_rev\sppr4##\restore.itm~     ~override~
   SAY NAME2 @143    SAY IDENTIFIED_DESC   @144 
-
-//ADD_SPELL: Ice Storm
-ADD_SPELL ~spell_rev\sppr4##\sppr418.spl~ 1 4 ~CLERIC_ICE_STORM~  // Ice Storm (added to druid's spells)
-  SAY NAME1 @145    SAY UNIDENTIFIED_DESC @146
-
-//ADD_SPELL: Regenerate Critical Wounds
-ADD_SPELL ~spell_rev\sppr4##\sppr419.spl~ 1 4 ~CLERIC_REGENERATE_CRITICAL_WOUNDS~  // Regenerate Critical Wounds (new druid spell)
-  SAY NAME1 @307    SAY UNIDENTIFIED_DESC @308
-COPY ~spell_rev\sppr4##\dvpr419a.bam~     ~override~
-COPY ~spell_rev\sppr4##\dvpr419b.bam~     ~override~
-COPY ~spell_rev\sppr4##\dvpr419c.bam~     ~override~
-
 
 /*-----------------------level 5-----------------------*/
 

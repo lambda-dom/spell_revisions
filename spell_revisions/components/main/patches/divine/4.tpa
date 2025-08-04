@@ -1,0 +1,164 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/blocks.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
+
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
+//Load references.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "4"
+    dir = "%resources%/2da/divine"
+RET_ARRAY spells = references END
+
+LAF get_table_references STR_VAR
+    tables = "3"
+    dir = "%resources%/2da/arcane"
+RET_ARRAY arcane_spells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION cure_critical_wounds STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10401
+        match_opcode = 240                  //Remove portrait icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION animal_summoning_4 STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF get_table_ref STR_VAR
+        value = "summon_leopard"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        match_resource = "summ#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION free_action STR_VAR destination = "*" BEGIN
+    PATCH_FOR_EACH block IN
+        "entangle"
+        "grease"
+        "web"
+        "slow"
+        "stun"
+    BEGIN
+        LPF patch_block INT_VAR
+            match_opcode = 163              //Free Action.
+        STR_VAR
+            block = "%block%"
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION call_woodland_beings STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "summon_hamadryad"
+        ext = "eff"
+        match_resource = "sum1#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "summon_nymph"
+        ext = "eff"
+        match_resource = "sum2#res"
+        references = "effects"
+    END
+END
+
+
+DEFINE_PATCH_FUNCTION divine_power STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "divine_power_a"
+        ext = "eff"
+        match_resource = "apr1#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "divine_power_b"
+        ext = "eff"
+        match_resource = "apr2#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION cause_critical_wounds STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "cause_critical_wounds"
+        ext = "itm"
+        match_resource = "item#res"
+        references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION cloak_fear_a STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "cloak_fear_panic"
+        match_resource = "spl#res"
+        references = "subspells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION cloak_fear STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "cloak_fear_a"
+        match_resource = "clkf#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION lesser_restoration STR_VAR destination = "*" BEGIN
+    //Spell does not exist by this point => TODO: refactor to ensure it does.
+    //Get reference.
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:a:WIZARD_HASTE"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "wind#res"
+        resource = "%res%"
+    END
+END

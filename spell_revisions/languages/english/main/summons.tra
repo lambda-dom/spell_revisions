@@ -6,6 +6,10 @@
 @1301 = "Lesser Skeleton"
 @1302 = "Greater Skeleton"
 @1303 = "Wolf"
+@1401 = "Leopard"
+@1402 = "Hamadryad"
+@1403 = "Nymph"
+
 
 //Arcane.
 @2101 = "Gibberling"
