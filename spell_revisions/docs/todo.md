@@ -18,17 +18,19 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## A. 3. Level 3.
 
+* Animate Dead: gender "summoned" on skeletons may be incorrect. Double check.
+
 * Dispel Magic: only the description is in.
 
 * Spike Growth: remove save from movement set for parity with entangle.
 
 ## A. 4. Level 4.
 
-* Free Action: temp immunities are in but not curing them. Movement Rate 2 immunity dropped for now.
+* Free Action: immunities are in but not curing them. Movement Rate 2 immunity dropped.
 
 * Death Ward: standardize immunities to instant death and disintegrate.
 
-* Negative Plane Protection: description says abjuration, spell says transmutation: went with description for now. No sectype; vanila is combination.
+* Negative Plane Protection: description says abjuration, spell says transmutation: went with description. No sectype; vanila is combination.
 
 # B. Arcane spells.
 
@@ -48,13 +50,13 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Dispel Magic: only the description is in.
 
-* Remove magic: reinstate, with old icon but targetiing everyone (that is remove magic becomes old dispel magic).
+* Remove magic: reinstate, with old icon but targeting everyone (that is remove magic becomes old dispel magic).
 
 * Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles.
 
-* Skull Trap: has an extra protection for swords. Undocumented but to be decided.
+* Skull Trap: has an extra protection for swords. Undocumented so dropped for now, but to be revisited.
 
-* Vampiric Touch: I am not sure the flags have been chosen correctly or even if they can be so shosen, and by this I mean: do damage per amount + dice, maybe capped by max hp of target. Absorb only up to maximum hp. Concurrency with other Vampiric Touches must also be addressed (e.g. spin106).
+* Vampiric Touch: I am not sure the flags have been chosen correctly or even if they can be so chosen, and by this I mean: do damage per amount + dice, maybe capped by max hp of target. Absorb only up to maximum hp. Concurrency with other Vampiric Touches must also be addressed (e.g. spin106).
 
 * Protection from Fire and Cold: not yet done as these are moved to level 4.
 
@@ -82,3 +84,5 @@ note(s):
 * Cre scripts: some spells are cast in the script (example: leopard casts dvspratt). The resource names must be corrected in a patch to the script.
 
 * Summon spell lists: summon spell lists also have to be combed over and eventually patched.
+
+* Make use of states from splstate.ids.
