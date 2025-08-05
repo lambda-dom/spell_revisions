@@ -82,6 +82,14 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Fire Shield: sectype offensivedamage -> specificprotections.
 
+* Secret Word: school enchant (description) -> abjuration.
+
+* Minor Spell Sequencer: out of combat only. 
+
+* Monster Summoning IV: only description in.
+
+* Wizard Eye: change from non-stacking to refreshing? Review creature.
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.

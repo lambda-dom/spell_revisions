@@ -1163,40 +1163,6 @@ COPY ~spell_rev\spwi4##\spwi465.itm~     ~override~
 COPY ~spell_rev\spwi4##\spwi465.spl~     ~override~
   SAY NAME1 ~Shapeshifts Winter Wolf~
 
-ACTION_IF NOT GAME_IS ~bgee bg2ee eet iwdee~ BEGIN
-  COPY ~spell_rev\spwi4##\enchwp~     ~override~
-END
-
-COPY ~spell_rev\spwi4##\spwi418.spl~     ~override~  // Fire Shield (Red)
-  SAY NAME1 @595    SAY UNIDENTIFIED_DESC @596
-COPY ~spell_rev\spwi4##\scrl6n.itm~     ~override~
-  SAY NAME2 @595    SAY IDENTIFIED_DESC   @596
-COPY ~spell_rev\spwi4##\spwi418a.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418b.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418c.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418d.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418e.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418f.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418g.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418h.spl~     ~override~
-
-COPY ~spell_rev\spwi4##\spwi419.spl~     ~override~  // Secret Word
-  SAY NAME1 @597    SAY UNIDENTIFIED_DESC @598
-COPY ~spell_rev\spwi4##\scrl6o.itm~     ~override~
-  SAY NAME2 @597    SAY IDENTIFIED_DESC   @598
-
-COPY ~spell_rev\spwi4##\spwi420.spl~     ~override~  // Simbul's Spell Matrix (previously named Minor Spell Sequencer)
-  SAY NAME1 @599    SAY UNIDENTIFIED_DESC @600
-COPY ~spell_rev\spwi4##\scrl6p.itm~     ~override~
-  SAY NAME2 @599    SAY IDENTIFIED_DESC   @600
-COPY ~spell_rev\spwi4##\spwi420d.spl~     ~override~
-  SAY NAME1 @599
-
-COPY ~spell_rev\spwi4##\spwi421.spl~     ~override~  // Teleport Field
-  SAY NAME1 @601    SAY UNIDENTIFIED_DESC @602
-COPY ~spell_rev\spwi4##\scrl6q.itm~     ~override~
-  SAY NAME2 @601    SAY IDENTIFIED_DESC   @602
-
 COPY ~spell_rev\spwi4##\spwi423.spl~     ~override~  // Monster Summoning IV ("replaces" Spider Spawn)
   SAY NAME1 @603    SAY UNIDENTIFIED_DESC @604
 COPY ~spell_rev\spwi4##\scrl6r.itm~     ~override~
@@ -1207,45 +1173,21 @@ COPY ~spell_rev\spwi4##\spidphsu.cre~     ~override~
 COPY ~spell_rev\spwi4##\spidphsu.itm~     ~override~
 COPY ~spell_rev\spwi4##\spidswsu.cre~     ~override~
 COPY ~spell_rev\spwi4##\spidswsu.itm~     ~override~
-COPY ~spell_rev\spwi4##\spwi423a.bam~     ~override~
-COPY ~spell_rev\spwi4##\spwi423b.bam~     ~override~
-COPY ~spell_rev\spwi4##\spwi423c.bam~     ~override~
 APPEND ~spell.ids~ ~2423 WIZARD_MONSTER_SUMMONING_2~
 APPEND ~spell.ids~ ~2423 WIZARD_MONSTER_SUMMONING_LEVEL_4~
-
-COPY ~spell_rev\spwi4##\spwi424.spl~     ~override~  // Farsight
-  SAY NAME1 @605    SAY UNIDENTIFIED_DESC @606
-COPY ~spell_rev\spwi4##\scrlaq.itm~     ~override~
-  SAY NAME2 @605    SAY IDENTIFIED_DESC   @606
-
-COPY ~spell_rev\spwi4##\spwi425.spl~     ~override~  // Wizard Eye
-  SAY NAME1 @607    SAY UNIDENTIFIED_DESC @608
-COPY ~spell_rev\spwi4##\scrla1.itm~     ~override~
-  SAY NAME2 @607    SAY IDENTIFIED_DESC   @608
 
 //ADD_SPELL: Protection from Elemental Energy
 ADD_SPELL ~spell_rev\spwi4##\spwi426.spl~ 2 4 ~WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY~  // Protection from Elemental Energy
   SAY NAME1 @873    SAY UNIDENTIFIED_DESC @874
-COPY ~spell_rev\spwi4##\scrl6h.itm~     ~override~
-  SAY NAME2 @873    SAY IDENTIFIED_DESC   @874
 COPY ~spell_rev\spwi4##\dvwi426.2da~     ~override~
-COPY ~spell_rev\spwi4##\dvwi426a.bam~    ~override~
-COPY ~spell_rev\spwi4##\dvwi426b.bam~    ~override~
-COPY ~spell_rev\spwi4##\dvwi426c.bam~    ~override~
 
 //ADD_SPELL: Vitriolic Sphere
-ADD_PROJECTILE ~spell_rev\projectles\dvvtrsph.pro~
 ADD_SPELL ~spell_rev\spwi4##\spwi427.spl~ 2 4 ~WIZARD_VITRIOLIC_SPHERE~  // Vitriolic Sphere (new spell)
   SAY NAME1 @877    SAY UNIDENTIFIED_DESC @878
   WRITE_SHORT 0x98 %dvvtrsph%
-COPY ~spell_rev\spwi4##\scrl6y.itm~     ~override~
-  SAY NAME2 @877    SAY IDENTIFIED_DESC   @878
 COPY ~spell_rev\spwi4##\dvvtrsph.vvc~     ~override~
 COPY ~spell_rev\spwi4##\dvvtrsph.bam~     ~override~
 COPY ~spell_rev\spwi4##\dvvtrtra.bam~     ~override~
-COPY ~spell_rev\spwi4##\dvwi427a.bam~     ~override~
-COPY ~spell_rev\spwi4##\dvwi427b.bam~     ~override~
-COPY ~spell_rev\spwi4##\dvwi427c.bam~     ~override~
 
 
 /*-----------------------level 5-----------------------*/

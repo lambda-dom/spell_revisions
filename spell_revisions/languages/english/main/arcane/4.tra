@@ -232,6 +232,109 @@ Saving Throw: None
 
 This spell protects the user by surrounding the caster with a circular wall of flames. This shield not only grants the user 40% fire and cold resistance, but also protects the caster from attacks made within a 5' radius. Opponents that hit the caster with a weapon or spell from within this radius will suffer 1d6 points of fire damage plus one for every two levels of the caster (up to a maximum of 1d6 + 10). Multiple castings of this spell are not cumulative, but it can be used in conjunction with similar spells. Tiny and small flying creatures cannot pass through the flames. Magic resistance does not affect this spell."
 
+//secret_word:spwi419
+@4190 = "Secret Word"
+@4191 = "Secret Word
+Level: 4
+School: Enchantment
+Range: Long
+Duration: Instant
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Secret Word spell is uttered, it will dispel one spell protection of 7th level or lower on the target. This will always dispel the highest level of spell protection on a target first. If a target has two or more protections tied for the highest level, the choice will be random. Magic resistance does not affect this spell.
+
+The spell protection spells dispelled by Secret Word are: Minor Spell Deflection, Non-Detection, Minor Globe of Invulnerability, Spell Deflection, Dispelling Screen, Spell Shield, Globe of Invulnerability, Greater Spell Deflection, and Shield of the Archons."
+
+//simbul_spell_matrix:spwi420
+@4200 = "Simbul's Spell Matrix"
+@4201 = "Simbul's Spell Matrix
+Level: 4
+School: Universal
+Range: Personal
+Duration: Special
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+This spell allows a mage to prepare a magical matrix that can store spells to be used later in a single swift action. The matrix can store two spells to be released simultaneously, all of which must be of 2nd level or lower. A mage can only possess one spell matrix at a time, and the matrix will remain active until the spells contained within it are released."
+
+//teleport_field:spwi421
+@4210 = "Teleport Field"
+@4211 = "Teleport Field
+Level: 4
+School: Alteration
+Range: Long
+Duration: 1 turn
+Casting Time: 4
+Area of Effect: 30' radius
+Saving Throw: Spell negates
+
+With this spell, the wizard instigates a teleportation effect as far as the wizard can see. All enemies in this area are randomly teleported for the duration of the spell unless they save vs. spell at -4. Magic resistance does not affect this spell. This spell is best used against multiple enemies, serving to confuse them and allowing the wizard to concentrate on activating her defenses."
+
+//non existent:spwi422
+//spider_spawn, deprecated:spwi423
+//farsight:spwi424
+@4240 = "Farsight"
+@4241 = "Farsight
+Level: 4
+School: Divination
+Range: Personal
+Duration: 5 turns
+Casting Time: 4
+Area of Effect: Special
+Saving Throw: None
+
+When Farsight is cast, the caster is able to view an area of an unexplored map. After casting the spell, simply click on a section of the map that you want to view. For the duration of the spell, the caster can spy on that area, noting creatures and fortifications."
+
+//wizard_eye:spwi425
+@4250 = "Wizard Eye"
+@4251 = "Wizard Eye
+Level: 4
+School: Divination
+Range: Short
+Duration: 1 round/level
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+When this spell is employed, the wizard creates an invisible sensory organ that sends him visual information. The wizard eye can see with normal vision up to 60 feet away in brightly lit areas. The wizard eye can travel in any direction as long as the spell lasts. It has substance and a form that can be detected (by a Detect Invisibility spell, for instance). Solid barriers prevent the passage of a wizard eye. The powers of the eye cannot be enhanced by other spells or items. The caster is subject to any gaze attack met by the eye. A successful dispel cast on the wizard or eye ends the spell."
+
+
+//New spells.
+@4500 = "Monster Summoning IV"
+@4501 = "Monster Summoning IV
+Level: 4
+School: Conjuration
+Range: Medium
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster summons a number of monsters, which serve the mage under any conditions. The type and number of creatures that appear depend upon the level of the wizard casting the spell. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires.
+
+7th : 2 giant spiders
+9th : 3 giant spiders
+12th+ : 3 giant spiders, 1 sword spider
+
+Giant Spider (4 Hit Dice):
+STR 15, DEX 17, CON 12, INT -, WIS 10, CHA 2;  AL Neutral
+HP 32, AC 6, THAC0 16, Saving Throws 10/13/10/13/13
+1 Attack Per Round, 1d8 Piercing Damage (Bite +1)
+
+Sword Spider (5 Hit Dice):
+STR 17, DEX 10, CON 15, INT -, WIS 11, CHA 3;  AL Neutral
+HP 45, AC 3, THAC0 14, Saving Throws 9/12/9/12/12
+4 Attacks Per Round, 1d8+2 Piercing Damage (Legs & Bite +1)
+
+Combat Abilities (all spiders):
+Poison: spiders' bites inject a venom which inflicts 3hp/round for 1 turn (save vs. poison negates)
+
+Special Qualities (all spiders):
+Immune to poison & web effects"
+
 
 //Enchanted weapon aux spell names.
 @4910 = "Axe"

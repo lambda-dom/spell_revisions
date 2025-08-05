@@ -161,3 +161,31 @@ DEFINE_PATCH_FUNCTION fire_shield STR_VAR destination = "*" BEGIN
         END
     END
 END
+
+DEFINE_PATCH_FUNCTION simbul_spell_matrix_d STR_VAR destination = "*" BEGIN
+    //Sanitize.
+    LPF get_spell_res STR_VAR spell = "WIZARD_MINOR_SEQUENCER" RET res = resource END
+    PATCH_IF NOT (7 = STRING_LENGTH "%res%") BEGIN
+        PATCH_FAIL "simbul_spell_matrix_d: parent resource name '%res%' is not 7 characters long."
+    END
+
+    PATCH_IF NOT ("%destination%" STRING_EQUAL_CASE "%res%d") BEGIN
+        PATCH_FAIL "simbul_spell_matrix_d: resource name '%destination%' is not '%res%d'."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 258                  //Activate sequencer.
+    STR_VAR
+        match_resource = "actv#res"
+        resource = "%res%"
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 172                  //Remove spell.
+    STR_VAR
+        match_resource = "rems#res"
+        resource = "%destination%"
+    END
+END
