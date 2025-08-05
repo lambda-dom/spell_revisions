@@ -1143,10 +1143,7 @@ COPY ~spell_rev\spwi4##\spwi413d.spl~     ~override~
 COPY ~spell_rev\spwi4##\spwi413c.eff~     ~override~
 COPY ~spell_rev\spwi4##\spwi413d.eff~     ~override~
 
-COPY ~spell_rev\spwi4##\spwi415.spl~     ~override~  // Polymorph Other
-  SAY NAME1 @589    SAY UNIDENTIFIED_DESC @590
-COPY ~spell_rev\spwi4##\scrl5l.itm~     ~override~
-  SAY NAME2 @589    SAY IDENTIFIED_DESC   @590
+//These do not seem to be used anywhere in Polymorph other.
 COPY ~spell_rev\spwi4##\plysquir.eff~     ~override~
 COPY ~spell_rev\spwi4##\squirp.itm~     ~override~
 
@@ -1167,10 +1164,6 @@ COPY ~spell_rev\spwi4##\spwi465.spl~     ~override~
   SAY NAME1 ~Shapeshifts Winter Wolf~
 
 ACTION_IF NOT GAME_IS ~bgee bg2ee eet iwdee~ BEGIN
-  COPY ~spell_rev\spwi4##\spwi417.spl~     ~override~  // Enchanted Weapon
-    SAY NAME1 @593    SAY UNIDENTIFIED_DESC @594
-  COPY ~spell_rev\spwi4##\scrl6m.itm~     ~override~
-    SAY NAME2 @593    SAY IDENTIFIED_DESC   @594
   COPY ~spell_rev\spwi4##\enchwp~     ~override~
 END
 

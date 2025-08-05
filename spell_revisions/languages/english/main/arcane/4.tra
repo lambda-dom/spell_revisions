@@ -217,7 +217,7 @@ Casting Time: 4
 Area of Effect: Special
 Saving Throw: None
 
-This spell conjures forth a +3 enchanted weapon that can be given to anyone. The weapon may be of any type, or the caster may alternatively decide to conjure 40 magical arrows, bolts, or bullets. The weapon stays in existence for no longer than a day."
+This spell conjures forth a +3 enchanted weapon in the inventory that can be given to anyone. The weapon may be of any type, or the caster may alternatively decide to conjure 40 magical arrows, bolts, or bullets. The weapon stays in existence for no longer than a day."
 
 //fire_shield:spwi418
 @4180 = "Fire Shield"

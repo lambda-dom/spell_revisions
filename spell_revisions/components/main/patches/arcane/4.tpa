@@ -1,8 +1,21 @@
 //Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
 
 //Mod libraries.
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
+//Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+LAF get_table_references STR_VAR
+    tables = "tables"
+RET_ARRAY tables = references END
 
 
 //Patches.
@@ -27,5 +40,38 @@ DEFINE_PATCH_FUNCTION greater_malison STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
         tra_ref = 10401
         match_opcode = 142                  //Display icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION polymorph_other STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "squirrel_a"
+        ext = "itm"
+        match_resource = "item#res"
+        references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION enchanted_weapon_itm STR_VAR destination = "" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "%destination%"
+        ext = "itm"
+        match_resource = "item#res"
+        references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION enchanted_weapon STR_VAR destination = "" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 214                  //Select spell.
+    STR_VAR
+        resource = "enchanted_weapon"
+        ext = "2da"
+        match_resource = "tabl#res"
+        references = "tables"
     END
 END

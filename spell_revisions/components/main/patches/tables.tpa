@@ -1,0 +1,22 @@
+//Libraries.
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION enchanted_weapon STR_VAR destination = "" BEGIN
+    PATCH_IF NOT (7 = (STRING_LENGTH "%destination%")) BEGIN
+        PATCH_FAIL "enchanted_weapon: resource '%destination%' is not 7 characters long."
+    END
+
+    COUNT_2DA_COLS cols
+    COUNT_2DA_ROWS cols row_count
+    //Loop: generate resource name and patch it.
+    //Relies on convention association of item -> 1 character code.
+    FOR (i = 0; i < row_count; ++i) BEGIN
+        INNER_PATCH_SAVE res "%destination%_" BEGIN
+            code = 97 + i
+            WRITE_BYTE 7 code
+        END
+
+        SET_2DA_ENTRY i 1 cols "%res%"
+    END
+END

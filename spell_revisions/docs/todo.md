@@ -74,7 +74,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Spirit Armor: handle concurrency with other armor spells.
 
-* Polymorph self and other: only description in.
+* Polymorph other: aux resources do not seem to be used anywhere.
+
+* Polymorph self: only description in.
 
 * Enchant weapon: only description in.
 

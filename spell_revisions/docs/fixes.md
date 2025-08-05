@@ -118,3 +118,5 @@ note(s):
 ## B. 4. Level 4.
 
 * Confusion: standardized range to long per description (35 -> 30).
+
+* Polymorph Other: standardized range to long per description (40 -> 30). The SR implementation goes by creating an item in the weapon slot that does the animation and stat changes. Polymorph opcode is not used (is bugged in the EEs per the IESDP).
