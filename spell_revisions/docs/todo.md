@@ -78,7 +78,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Polymorph self: only description in.
 
-* Enchant weapon: only description in.
+* Enchant weapon: the basic spell is in but the items are missing proper descriptions and the spells names and ability icons.
 
 # C. General.
 

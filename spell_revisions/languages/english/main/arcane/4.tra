@@ -233,5 +233,32 @@ Saving Throw: None
 This spell protects the user by surrounding the caster with a circular wall of flames. This shield not only grants the user 40% fire and cold resistance, but also protects the caster from attacks made within a 5' radius. Opponents that hit the caster with a weapon or spell from within this radius will suffer 1d6 points of fire damage plus one for every two levels of the caster (up to a maximum of 1d6 + 10). Multiple castings of this spell are not cumulative, but it can be used in conjunction with similar spells. Tiny and small flying creatures cannot pass through the flames. Magic resistance does not affect this spell."
 
 
+//Enchanted weapon aux spell names.
+@4910 = "Axe"
+@4911 = "Club"
+@4912 = "Flail"
+@4913 = "Mace"
+@4914 = "Morning Star"
+@4915 = "Hammer"
+@4916 = "Dagger"
+@4917 = "Short Sword"
+@4918 = "Long Sword"
+@4919 = "Bastard Sword"
+@4920 = "Two-Handed Sword"
+@4921 = "Scimitar"
+@4922 = "Katana"
+@4923 = "Halberd"
+@4924 = "Quarterstaff"
+@4925 = "Spear"
+@4926 = "Short Bow"
+@4927 = "Long Bow"
+@4928 = "Light Crossbow"
+@4929 = "Heavy Crossbow"
+@4930 = "Sling"
+@4931 = "Arrow"
+@4932 = "Bolt"
+@4933 = "Bullet"
+
+
 //Display strings.
 @10401 = "Saving Throws Lowered"
