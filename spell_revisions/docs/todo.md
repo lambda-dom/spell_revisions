@@ -78,7 +78,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Polymorph self: only description in.
 
-* Enchant weapon: the basic spell is in but the items are missing proper descriptions and the spells names and ability icons.
+* Enchant weapon: the basic spell is in but the items are missing proper descriptions and the spell, descriptions and ability icons.
+
+* Fire Shield: sectype offensivedamage -> specificprotections.
 
 # C. General.
 

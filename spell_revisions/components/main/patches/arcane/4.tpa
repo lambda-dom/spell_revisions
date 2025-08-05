@@ -3,6 +3,8 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/sectypes.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
 //Mod libraries.
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
@@ -62,5 +64,100 @@ DEFINE_PATCH_FUNCTION enchanted_weapon STR_VAR destination = "" BEGIN
         ext = "2da"
         match_resource = "tabl#res"
         references = "tables"
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_b STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "8" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 4
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_c STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "10" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 5
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_d STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "12" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 6
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_e STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "14" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 7
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_f STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "16" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 8
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_g STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "18" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 9
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_h STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "20" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 10
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield STR_VAR destination = "*" BEGIN
+    //Patch sectype.
+    LPF encode_spell_sectype STR_VAR value = "insects" RET sectype_id = return END
+    LPF CLONE_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 30                   //Fire resistance.
+        parameter1 = 0
+        parameter2 = sectype_id
+    STR_VAR
+        insert = "above"
+    END
+
+    //Patch retaliation spells.
+    LPF get_spell_res STR_VAR spell = "WIZARD_FIRE_SHIELD_RED" RET res = resource END
+    PATCH_FOR_EACH char IN
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h"
+    BEGIN
+        TEXT_SPRINT res_name "%res%%char%"
+        PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res_name%.spl") BEGIN
+            PATCH_FAIL "fire_shield: resource '%res_name%.spl' does not exist in game."
+        END
+
+        LPF ALTER_EFFECT INT_VAR
+            verbose = 1
+            match_opcode = 232              //Cast spell on condition.
+        STR_VAR
+            match_resource = "rtl%char%#res"
+            resource = "%res_name%"
+        END
     END
 END

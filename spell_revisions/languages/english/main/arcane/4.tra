@@ -221,7 +221,7 @@ This spell conjures forth a +3 enchanted weapon in the inventory that can be giv
 
 //fire_shield:spwi418
 @4180 = "Fire Shield"
-@4180 = "Fire Shield
+@4181 = "Fire Shield
 Level: 4
 School: Evocation
 Range: Personal
