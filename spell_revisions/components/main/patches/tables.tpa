@@ -3,6 +3,8 @@
 
 //Patches.
 DEFINE_PATCH_FUNCTION enchanted_weapon STR_VAR destination = "" BEGIN
+    PATCH_PRINT "enchanted_weapon: patching table."
+
     PATCH_IF NOT (7 = (STRING_LENGTH "%destination%")) BEGIN
         PATCH_FAIL "enchanted_weapon: resource '%destination%' is not 7 characters long."
     END
@@ -10,7 +12,34 @@ DEFINE_PATCH_FUNCTION enchanted_weapon STR_VAR destination = "" BEGIN
     COUNT_2DA_COLS cols
     COUNT_2DA_ROWS cols row_count
     //Loop: generate resource name and patch it.
-    //Relies on convention association of item -> 1 character code.
+    //Relies on convention association of item -> 1 character code. This is equivalent to:
+    // DEFINE_ASSOCIATIVE_ARRAY names BEGIN
+    //     "Axe"               => "a"
+    //     "Club"              => "b"
+    //     "Flail"             => "c"
+    //     "Mace"              => "d"
+    //     "Morning_Star"      => "e"
+    //     "Hammer"            => "f"
+    //     "Dagger"            => "g"
+    //     "Short_Sword"       => "h"
+    //     "Long_Sword"        => "i"
+    //     "Bastard_Sword"     => "j"
+    //     "Two_Handed_Sword"  => "k"
+    //     "Scimitar"          => "l"
+    //     "Katana"            => "m"
+    //     "Halberd"           => "n"
+    //     "Quarterstaff"      => "o"
+    //     "Spear"             => "p"
+    //     "Short_Bow"         => "q"
+    //     "Long_Bow"          => "r"
+    //     "Light_Xbow"        => "s"
+    //     "Heavy_Xbow"        => "t"
+    //     "Sling"             => "u"
+    //     "Arrow"             => "v"
+    //     "Bolt"              => "w"
+    //     "Bullet"            => "x"
+    // END
+
     FOR (i = 0; i < row_count; ++i) BEGIN
         INNER_PATCH_SAVE res "%destination%_" BEGIN
             code = 97 + i
