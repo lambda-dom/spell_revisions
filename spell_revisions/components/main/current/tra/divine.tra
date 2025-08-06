@@ -30,32 +30,6 @@ When a Protection from Electricity spell is cast, the recipient receives complet
 //Level 5.
 @1040=~Dire Leopard~
 
-@155=~Flame Strike~
-@156=~Flame Strike
-Level: 5
-School: Evocation
-Sphere: Combat, Elemental (Fire)
-Range: Long
-Duration: Instant
-Casting Time: 5
-Area of Effect: Target, and enemies within 5'
-Saving Throw: Breath half
-
-Upon casting this spell, a vertical column of fire roars downward, striking a victim selected by the caster, along with every creature within 5 feet of the target. Those who fail on their saving throw vs. breath at -4 sustain 1d6 points of fire damage per level of the caster (up to a maximum of 15d6), and those who succeed receive half damage. This spell will not harm party members.~
-
-@157=~Raise Dead~
-@158=~Raise Dead
-Level: 5
-School: Necromancy
-Sphere: Necromantic
-Range: Short
-Duration: Permanent
-Casting Time: 1 round
-Area of Effect: 1 person
-Saving Throw: None
-
-When the priest casts a Raise Dead spell, life can be restored to a dead comrade. Note that the body of the person must be whole; otherwise, missing parts are still missing when the person is brought back to life. The person has but 1 hit point when raised and must regain the rest by natural healing or curative magic.~
-
 @2157=~Harper's Call~
 @2158=~Harper's Call
 Level: 5
@@ -68,36 +42,6 @@ Area of Effect: 1 person
 Saving Throw: None
 
 This spell is only available to Harpers. The Harper's Call restores a comrade to life, to further serve the cause of the Harpers. This spell functions similarly to Raise Dead, with the following exceptions: the Harper must transfer a small portion of her life essence (10 hit points) to successfully raise the deceased person; the target has but 1 hit point when raised and must regain the rest by natural healing or curative magic; and the raised person suffers a -5 penalty to all ability scores for one minute, making this spell virtually useless in combat.~
-
-@159=~True Seeing~
-@160=~True Seeing
-Level: 5
-School: Divination
-Sphere: All
-Range: Personal
-Duration: 1 turn
-Casting Time: 5
-Area of Effect: Special
-Saving Throw: None
-
-When this spell is cast, the caster gains the ability to see the exact locations of creatures or objects under displacement or invisibility effects, and see through illusions. This effectively neutralize spells such as Blur and Mirror Image, allow the caster to see and target invisible creatures normally, and make him unaffected by hostile illusion spells such as Spook. The caster is also cured from any form of blindness and is immune to it for the duration of the spell.
-
-Note: True Seeing does not dispel illusionary clones such as those conjured by Mislead or Simulacrum, but instead clearly highlights them, revealing them as deceptions.~
-
-@161=~Stoneskin~
-@162=~Stoneskin
-Level: 5
-School: Alteration
-Sphere: Elemental (Earth)
-Range: Personal
-Duration: 8 hours
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
-
-When a druid casts this powerful spell upon herself, an outer skin of stone will emerge from the ground, completely covering and shielding her. This skin is, of course, magical and will hinder the druid in no way. The effect of this is to protect the druid from physical attacks such as melee weapons and projectiles. One skin is gained for every two levels of the caster. For each skin the druid possesses, the spell will stop one attack, so a 10th level druid would be protected from the first 5 attacks made against her but the sixth would affect her normally. The skins will remain on the druid until she is affected by a dispel magic, all of the skins are removed due to physical attacks, or the spell duration expires.
-
-It is important to note that this will not protect the druid from any area attacks (such as Fireball), and that any weapon capable of inflicting some type of elemental damage can still harm the caster - the skins will not protect against fire, cold, acid, or electrical damage, even if physical damage is blocked. Multiple castings of this spell are not cumulative.~
 
 @163=~Champion's Strength~
 @164=~Champion's Strength

@@ -36,7 +36,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Animal Summoning V: only description in.
 
-* Cure Mortal Wounds: Implement proper scaling. Implement immunity for non-living and extra-planar or delete from description?
+* Cure Mortal Wounds: Implement immunity for non-living and extra-planar or delete from description?
+
+* True Seeing: there is a protection from the cloak of mirroring -- drop it if needed. Aux spell only removes illusion school spells up to level 2; remove illusionary protections of all levels? Missing protection against shadow door.
 
 # B. Arcane spells.
 
@@ -116,3 +118,5 @@ note(s):
 * Summon spell lists: summon spell lists also have to be combed over and eventually patched.
 
 * Make use of states from splstate.ids.
+
+* As per Cure Mortal Wounds description implement immunity for non-living and extra-planar for all cure spells.

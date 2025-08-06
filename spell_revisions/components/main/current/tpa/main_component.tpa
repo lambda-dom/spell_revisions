@@ -421,26 +421,6 @@ APPEND ~spell.ids~ ~1501 CLERIC_ANIMAL_SUMMONING_LEVEL_5~
 // old Cure Critical Wounds (disabled) -> Cure Mortal Wounds.
 APPEND ~spell.ids~ ~1502 CLERIC_CURE_CRITICAL_WOUNDS_DEPRECATED~
 
-COPY ~spell_rev\sppr5##\sppr503.spl~     ~override~  // Flame Strike
-  SAY NAME1 @155    SAY UNIDENTIFIED_DESC @156
-  SET "loop" = 7
-  WHILE (%loop% > 0) BEGIN
-    WRITE_SHORT (0x98 + 0x28 * (%loop% - 1) ) %dvflame%
-    SET "loop" = %loop% - 1
-  END
-COPY ~spell_rev\sppr5##\scrl62.itm~     ~override~
-  SAY NAME2 @155    SAY IDENTIFIED_DESC   @156
-
-COPY ~spell_rev\sppr5##\sppr504.spl~     ~override~  // Raise Dead 
-  SAY NAME1 @157    SAY UNIDENTIFIED_DESC @158
-COPY ~spell_rev\sppr5##\scrl63.itm~     ~override~
-  SAY NAME2 @157    SAY IDENTIFIED_DESC   @158
-
-COPY ~spell_rev\sppr5##\sppr505.spl~     ~override~  // True Seeing
-  SAY NAME1 @159    SAY UNIDENTIFIED_DESC @160
-COPY ~spell_rev\sppr5##\sppr505d.spl~     ~override~
-  SAY NAME1 @159
-
 COPY ~spell_rev\sppr5##\sppr506.spl~     ~override~  // Iron Skins
   SAY NAME1 @161    SAY UNIDENTIFIED_DESC @162
 

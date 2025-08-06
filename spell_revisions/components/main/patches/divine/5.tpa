@@ -1,12 +1,20 @@
 //Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
 
 //Load references.
 LAF get_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "5"
+    dir = "%resources%/2da/divine"
+RET_ARRAY spells = references END
 
 
 //Patches.
@@ -18,5 +26,46 @@ DEFINE_PATCH_FUNCTION animal_summoning_5 STR_VAR destination = "*" BEGIN
         ext = "eff"
         match_resource = "summ#res"
         references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION true_seeing_a STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Use Eff.
+    STR_VAR
+        resource = "true_seeing_b"
+        match_resource = "mvis#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION true_seeing STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Use Eff.
+    STR_VAR
+        resource = "true_seeing_a"
+        match_resource = "mvis#res"
+        references = "spells"
+    END
+
+    //Patch in protections from obscuring mist.
+    LPF get_spell_res STR_VAR spell = "WIZARD_SPOOK" RET match = resource END
+    PATCH_FOR_EACH spell IN
+        "CLERIC_OBSCURING_MIST"
+        "WIZARD_OBSCURING_MIST"
+    BEGIN
+        LPF get_spell_res STR_VAR spell = "%spell%" RET res = resource END
+        PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+            PATCH_FAIL "true_seeing: spell '%spell%' not found in 'spell.ids'."
+        END
+
+        LPF CLONE_EFFECT INT_VAR
+            verbose = 1
+            match_opcode = 206              //Protection from spell.
+        STR_VAR
+            match_resource = "%match%"
+            resource = "%res%"
+            insert = "last"
+        END
     END
 END
