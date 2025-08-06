@@ -23,6 +23,10 @@ LAF get_table_references STR_VAR
     tables = "tables"
 RET_ARRAY tables = references END
 
+LAF get_table_references STR_VAR
+    tables = "vvcs"
+RET_ARRAY vvcs = references END
+
 
 //Patches.
 DEFINE_PATCH_FUNCTION contagion STR_VAR destination = "*" BEGIN
@@ -194,7 +198,7 @@ DEFINE_PATCH_FUNCTION simbul_spell_matrix_d STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION monster_summoning_4 BEGIN
+DEFINE_PATCH_FUNCTION monster_summoning_4 STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 177                  //Use eff.
     STR_VAR
@@ -211,5 +215,15 @@ DEFINE_PATCH_FUNCTION monster_summoning_4 BEGIN
         ext = "eff"
         match_resource = "sum2#res"
         references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION vitriolic_sphere STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215                  //Play visual effect.
+    STR_VAR
+        resource = "vitriolic_sphere"
+        match_resource = "vvc#res"
+        references = "vvcs"
     END
 END

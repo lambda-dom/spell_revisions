@@ -1170,15 +1170,6 @@ APPEND ~spell.ids~ ~2423 WIZARD_MONSTER_SUMMONING_LEVEL_4~
 ADD_SPELL ~spell_rev\spwi4##\spwi426.spl~ 2 4 ~WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY~  // Protection from Elemental Energy
   SAY NAME1 @873    SAY UNIDENTIFIED_DESC @874
 
-//ADD_SPELL: Vitriolic Sphere
-ADD_SPELL ~spell_rev\spwi4##\spwi427.spl~ 2 4 ~WIZARD_VITRIOLIC_SPHERE~  // Vitriolic Sphere (new spell)
-  SAY NAME1 @877    SAY UNIDENTIFIED_DESC @878
-  WRITE_SHORT 0x98 %dvvtrsph%
-COPY ~spell_rev\spwi4##\dvvtrsph.vvc~     ~override~
-COPY ~spell_rev\spwi4##\dvvtrsph.bam~     ~override~
-COPY ~spell_rev\spwi4##\dvvtrtra.bam~     ~override~
-
-
 /*-----------------------level 5-----------------------*/
 
 COPY ~spell_rev\spwi5##\spwi501.spl~     ~override~  // Summon Shadow (replaces Animate Dead)

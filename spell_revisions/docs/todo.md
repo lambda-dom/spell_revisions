@@ -84,6 +84,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Wizard Eye: change from non-stacking to refreshing? Review creature.
 
+* Protection from Elemental Energy: still needs acid and electricity protection.
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
