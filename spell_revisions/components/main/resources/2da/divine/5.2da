@@ -1,0 +1,5 @@
+2DA V1.0
+*
+                        install name    descr   type    lvl flags       school      sectype             book_icon                                   abil_icon                                   projectile                      range   speed   patch               over    destination
+animal_summoning_5      1       5010    5011    priest  5   00000000    conjurer    conjuration         #suf:c:CLERIC_ANIMAL_SUMMONING_LEVEL_5      #suf:b:CLERIC_ANIMAL_SUMMONING_LEVEL_5      *                               30      9       animal_summoning_5  1       #spl:CLERIC_ANIMAL_SUMMONING_LEVEL_5
+cure_mortal_wounds      1       5020    5021    priest  5   00000000    necromancer none                #suf:c:CLERIC_CURE_CRITICAL_WOUNDS          #suf:b:CLERIC_CURE_CRITICAL_WOUNDS          *                               1       5       *                   1       #spl:CLERIC_CURE_MORTAL_WOUNDS

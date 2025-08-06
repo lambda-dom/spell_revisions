@@ -32,6 +32,12 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Negative Plane Protection: description says abjuration, spell says transmutation: went with description. No sectype; vanila is combination.
 
+## A. 5. Level 5.
+
+* Animal Summoning V: only description in.
+
+* Cure Mortal Wounds: Implement proper scaling. Implement immunity for non-living and extra-planar or delete from description?
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

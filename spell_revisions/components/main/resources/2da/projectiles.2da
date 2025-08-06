@@ -22,3 +22,4 @@ spell_thrust        1       spell_thrust        0           *                   
 defensive_harmony   1       defensive_harmony   0           *                   0       #lit:dldefhrm
 cloak_fear          1       cloak_fear          0           *                   0       #lit:dlclkfea
 vitriolic_sphere    1       vitriolic_sphere    0           vitriolic_sphere    0       #lit:dlvtrsph
+flame_strike        1       flame_strike_sr     0           *                   0       #lit:dlflmstr

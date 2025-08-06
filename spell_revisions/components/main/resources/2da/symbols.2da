@@ -29,6 +29,8 @@ CLERIC_ANIMAL_SUMMONING_LEVEL_4         1       priest  4       *       0       
 CLERIC_CAUSE_CRITICAL_WOUNDS            0       priest  4       *       0           *
 CLERIC_ICE_STORM                        1       priest  4       *       0           *
 CLERIC_REGENERATE_CRITICAL_WOUNDS       1       priest  4       *       0           *
+CLERIC_CURE_MORTAL_WOUNDS               1       priest  5       *       0           *
+CLERIC_ANIMAL_SUMMONING_LEVEL_5         1       priest  5       *       0           *
 WIZARD_OBSCURING_MIST                   1       wizard  1       *       0           *
 WIZARD_EXPEDITIOUS_RETREAT              1       wizard  1       *       0           *
 WIZARD_TRUE_STRIKE                      1       wizard  1       *       0           *
