@@ -2,6 +2,7 @@
 INCLUDE "%WEIDU_LIBRARY_DIR%/blocks.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
 
@@ -11,6 +12,12 @@ LAF get_table_references STR_VAR
     tables = "spells"
     dir = "%resources%/2da/summons"
 RET_ARRAY spells = references END
+
+LAF get_table_references STR_VAR
+    tables = "subspells"
+    dir = "%resources%/2da/summons"
+RET_ARRAY subspells = references END
+
 
 
 //Patches.
@@ -141,5 +148,46 @@ DEFINE_PATCH_FUNCTION green_slime_immunities STR_VAR destination = "*" BEGIN
         STR_VAR
             block = "%block%"
         END
+    END
+END
+
+DEFINE_PATCH_FUNCTION giant_spider_sting STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "spider_sting_poison"
+        match_resource = "posn#res"
+        references = "subspells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION sword_spider_sting STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "spider_sting_poison"
+        match_resource = "posn#res"
+        references = "subspells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION spider_immunities STR_VAR destination = "*" BEGIN
+    PATCH_FOR_EACH block IN
+        "web"
+        "poison"
+    BEGIN
+        LPF patch_block INT_VAR
+            match_opcode = 0                //AC Bonus.
+            globals = 1
+        STR_VAR
+            block = "%block%"
+        END
+    END
+
+    //Hacky.
+    LPF DELETE_EFFECT INT_VAR
+        verbose = 1
+        check_headers = 0
+        match_opcode = 0
     END
 END

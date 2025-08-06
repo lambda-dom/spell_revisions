@@ -21,6 +21,13 @@ LAF install_resources STR_VAR
     table = "%resources%/2da/summons/effects.2da"
 END
 
+//Install subspells for summons.
+LAF install_resources STR_VAR
+    type = "subspell"
+    dir = "%resources%/spl/summons"
+    table = "%resources%/2da/summons/subspells.2da"
+END
+
 //Install spells for summons.
 LAF install_resources STR_VAR
     type = "spell"

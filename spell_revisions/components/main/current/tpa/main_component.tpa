@@ -1095,9 +1095,6 @@ COPY ~spell_rev\spwi3##\spwi326.spl~     ~override~  // Dispel Magic
   SAY NAME1 @547    SAY UNIDENTIFIED_DESC @548
 
 //Level 4.
-COPY ~spell_rev\spwi4##\spwi401.spl~     ~override~  // Confusion
-  SAY NAME1 @561    SAY UNIDENTIFIED_DESC @562
-
 // Dimension Door (disabled)
 APPEND ~spell.ids~ ~2402 WIZARD_DIMENSION_DOOR_DEPRECATED~
 
@@ -1113,7 +1110,6 @@ COPY ~spell_rev\spwi4##\spwi403e.spl~     ~override~
 COPY ~spell_rev\spwi4##\spwi403f.spl~     ~override~
 COPY ~spell_rev\spwi4##\spwi403g.spl~     ~override~
 COPY ~spell_rev\spwi4##\spwi403h.spl~     ~override~ */
-
 
 // Ice Storm projectile.
 COPY_EXISTING ~icestorm.pro~ ~override~
@@ -1163,23 +1159,16 @@ COPY ~spell_rev\spwi4##\spwi465.itm~     ~override~
 COPY ~spell_rev\spwi4##\spwi465.spl~     ~override~
   SAY NAME1 ~Shapeshifts Winter Wolf~
 
-COPY ~spell_rev\spwi4##\spwi423.spl~     ~override~  // Monster Summoning IV ("replaces" Spider Spawn)
-  SAY NAME1 @603    SAY UNIDENTIFIED_DESC @604
-COPY ~spell_rev\spwi4##\scrl6r.itm~     ~override~
-  SAY NAME2 @603    SAY IDENTIFIED_DESC   @604
-COPY ~spell_rev\spwi4##\spidgisu.cre~     ~override~
-COPY ~spell_rev\spwi4##\spidgisu.itm~     ~override~
+//Seemingly unused phase spider.
 COPY ~spell_rev\spwi4##\spidphsu.cre~     ~override~
 COPY ~spell_rev\spwi4##\spidphsu.itm~     ~override~
-COPY ~spell_rev\spwi4##\spidswsu.cre~     ~override~
-COPY ~spell_rev\spwi4##\spidswsu.itm~     ~override~
+// Monster Summoning IV ("replaces" Spider Spawn)
 APPEND ~spell.ids~ ~2423 WIZARD_MONSTER_SUMMONING_2~
 APPEND ~spell.ids~ ~2423 WIZARD_MONSTER_SUMMONING_LEVEL_4~
 
 //ADD_SPELL: Protection from Elemental Energy
 ADD_SPELL ~spell_rev\spwi4##\spwi426.spl~ 2 4 ~WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY~  // Protection from Elemental Energy
   SAY NAME1 @873    SAY UNIDENTIFIED_DESC @874
-COPY ~spell_rev\spwi4##\dvwi426.2da~     ~override~
 
 //ADD_SPELL: Vitriolic Sphere
 ADD_SPELL ~spell_rev\spwi4##\spwi427.spl~ 2 4 ~WIZARD_VITRIOLIC_SPHERE~  // Vitriolic Sphere (new spell)

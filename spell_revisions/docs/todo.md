@@ -80,13 +80,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Enchant weapon: the basic spell is in but the items are missing proper descriptions and the spell, descriptions and ability icons.
 
-* Fire Shield: sectype offensivedamage -> specificprotections.
-
-* Secret Word: school enchant (description) -> abjuration.
-
-* Minor Spell Sequencer: out of combat only. 
-
-* Monster Summoning IV: only description in.
+* Monster Summoning IV: cre and script for phase spider unused.
 
 * Wizard Eye: change from non-stacking to refreshing? Review creature.
 

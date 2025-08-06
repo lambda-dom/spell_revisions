@@ -89,6 +89,9 @@ minor_globe_invulnerability_c   1       *       1       #suf:c:WIZARD_MINOR_GLOB
 enchanted_weapon_a              1       *       1       #suf:a:WIZARD_ENCHANTED_WEAPON
 enchanted_weapon_b              1       *       1       #suf:b:WIZARD_ENCHANTED_WEAPON
 enchanted_weapon_c              1       *       1       #suf:c:WIZARD_ENCHANTED_WEAPON
+monster_summon_4_a              1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_4
+monster_summon_4_b              1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_4
+monster_summon_4_c              1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_4
 protection_elemental_energy_a   1       *       0       #suf:a:WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY
 protection_elemental_energy_b   1       *       0       #suf:b:WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY
 protection_elemental_energy_c   1       *       0       #suf:c:WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY

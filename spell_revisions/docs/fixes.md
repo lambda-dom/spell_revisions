@@ -122,3 +122,12 @@ note(s):
 * Polymorph Other: standardized range to long per description (40 -> 30). The SR implementation goes by creating an item in the weapon slot that does the animation and stat changes. Polymorph opcode is not used (is bugged in the EEs per the IESDP).
 
 * Simbul Spell Matrix: out of combat only.
+
+* Monster Summoning IV: Correct description on the amount of poison damage (3 -> 2) and damage bonuses on both stings. Correct probability of poison (20 -> 100) on sword spider sting. Standardized imlpementation of immunities. Giant Spider: corrections to ac, thac0 and saves. Sword spider: corrections to thac0 and saves.
+
+* Fire Shield: sectype offensivedamage -> specificprotections.
+
+* Secret Word: school enchant (description) -> abjuration.
+
+* Minor Spell Sequencer: out of combat only. 
+

@@ -12,6 +12,10 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 //Load reference tables.
 LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
     tables = "items"
 RET_ARRAY items = references END
 
@@ -187,5 +191,25 @@ DEFINE_PATCH_FUNCTION simbul_spell_matrix_d STR_VAR destination = "*" BEGIN
     STR_VAR
         match_resource = "rems#res"
         resource = "%destination%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION monster_summoning_4 BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_giant_spider"
+        ext = "eff"
+        match_resource = "sum1#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_sword_spider"
+        ext = "eff"
+        match_resource = "sum2#res"
+        references = "effects"
     END
 END

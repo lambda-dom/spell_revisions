@@ -320,20 +320,44 @@ By means of this spell, the caster summons a number of monsters, which serve the
 12th+ : 3 giant spiders, 1 sword spider
 
 Giant Spider (4 Hit Dice):
-STR 15, DEX 17, CON 12, INT -, WIS 10, CHA 2;  AL Neutral
+STR 15, DEX 17, CON 12, INT -, WIS 10, CHA 3;  AL Neutral
 HP 32, AC 6, THAC0 16, Saving Throws 10/13/10/13/13
-1 Attack Per Round, 1d8 Piercing Damage (Bite +1)
+1 Attack Per Round, 1d8 + 1 Piercing Damage (Sting +1)
 
 Sword Spider (5 Hit Dice):
 STR 17, DEX 10, CON 15, INT -, WIS 11, CHA 3;  AL Neutral
 HP 45, AC 3, THAC0 14, Saving Throws 9/12/9/12/12
-4 Attacks Per Round, 1d8+2 Piercing Damage (Legs & Bite +1)
+4 Attacks Per Round, 1d8 + 2 Piercing Damage (Legs & Sting +1)
 
 Combat Abilities (all spiders):
-Poison: spiders' bites inject a venom which inflicts 3hp/round for 1 turn (save vs. poison negates)
+Poison: spiders' bites inject a venom which inflicts 2hp/round for 1 turn (save vs. poison negates)
 
 Special Qualities (all spiders):
-Immune to poison & web effects"
+Immune to poison and web effects"
+
+@4510 = "Protection from Elemental Energy"
+@4511 = "Protection from Elemental Energy
+Level: 4
+School: Abjuration
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, the recipient receives complete protection from one damage type: acid, cold, fire, or lightning. 100% of the damage from the selected source of energy will be absorbed, and the target creature will become completely immune to the effects of spells based on that element. Multiple castings of this spell are not cumulative, but each time a different damage type can be selected."
+
+@4520 = "Vitriolic Sphere"
+@4520 = "Vitriolic Sphere
+Level: 4
+School: Conjuration
+Range: Medium
+Duration: Special
+Casting Time: 3
+Area of Effect: Target, and anyone within 10'
+Saving Throw: Breath half
+
+When this spell is cast, a glowing orb of emerald acid streaks to the target and explodes in a 10-foot radius. Each creature in the area must make a save vs. breath. On a failed save, a creature takes 10d4 acid damage and 4d4 acid damage at the end of its next 2 rounds. On a successful save, a creature takes half the initial damage and half damage at the end of each round."
 
 
 //Enchanted weapon aux spell names.

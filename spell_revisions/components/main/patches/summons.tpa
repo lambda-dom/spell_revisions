@@ -177,3 +177,34 @@ DEFINE_PATCH_FUNCTION hobgoblin_shaman STR_VAR destination = "*" BEGIN
 
     ADD_CRE_ITEM "helm01" #0 #0 #0 "identified&unstealable&undroppable" "helmet"
 END
+
+DEFINE_PATCH_FUNCTION giant_spider STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "giant_spider_sting"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "spider_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION sword_spider STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "sword_spider_sting"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "spider_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
