@@ -38,6 +38,14 @@
 @1400 = "Cause Critical Wounds"
 @1401 = "Fists enchanted by the Cause Critical Wounds spell."
 
+//Level 5.
+@1500 = "Cause Mortal Wounds"
+@1501 = "Fists enchanted by the Cause Mortal Wounds spell."
+
+@1510 = "Slay Living"
+@1511 = "Fists enchanted by the Slay Living spell."
+
+
 //Arcane.
 //Level 1.
 @2100 = "Shocking Grasp"
@@ -54,7 +62,7 @@
 @2300 = "Melf's Minute Meteor"
 @2301 = "These minute meteors were created by the Melf's Minute Meteors spell."
 
-//Level 3.
+//Level 4.
 @2400 = "Squirrel Claws"
 @2401 = "These claws were created by the Polymorph Other spell."
 

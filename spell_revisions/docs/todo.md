@@ -42,6 +42,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Chaotic Commands: standardize immunities (probably will need append_block support from weidu_library).
 
+* Cause and Cure Mortal Wounds: extend scaling to level 15?
+
+* Greater Command: move sleep to subspell.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

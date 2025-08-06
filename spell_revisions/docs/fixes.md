@@ -67,7 +67,9 @@ note(s):
 
 * Animal Summoning V: creature not in yet.
 
-* Cure Mortal Wounds: casting speed 7 -> 5.
+* Cure Mortal Wounds: casting speed 7 -> 5. Scaling 5 per level.
+
+* Cause Mortal Wounds: same scaling as cure mortal wounds.
 
 # B. Arcane spells.
 

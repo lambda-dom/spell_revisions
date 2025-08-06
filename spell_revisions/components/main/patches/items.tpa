@@ -97,6 +97,28 @@ DEFINE_PATCH_FUNCTION cause_critical_itm BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION cause_mortal_itm BEGIN
+    //Get reference.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "cause_mortal_wounds_a"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION slay_living_itm BEGIN
+    //Get reference.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "slay_living_a"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
 DEFINE_PATCH_FUNCTION shocking_grasp_itm BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR

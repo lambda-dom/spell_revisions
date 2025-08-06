@@ -421,39 +421,6 @@ APPEND ~spell.ids~ ~1501 CLERIC_ANIMAL_SUMMONING_LEVEL_5~
 // old Cure Critical Wounds (disabled) -> Cure Mortal Wounds.
 APPEND ~spell.ids~ ~1502 CLERIC_CURE_CRITICAL_WOUNDS_DEPRECATED~
 
-COPY ~spell_rev\sppr5##\sppr508.spl~     ~override~  // Chaotic Commands
-  SAY NAME1 @165    SAY UNIDENTIFIED_DESC @166
-COPY ~spell_rev\sppr5##\scrl5f.itm~     ~override~
-  SAY NAME2 @165    SAY IDENTIFIED_DESC   @166
-
-COPY ~spell_rev\sppr5##\sppr509.spl~     ~override~  // Magic Resistance
-  SAY NAME1 @167    SAY UNIDENTIFIED_DESC @168
-
-ACTION_IF install_cause_wounds BEGIN
-  COPY ~spell_rev\sppr5##\sppr510.spl~     ~override~  // old Cause Critical Wounds (disabled)
-    SAY NAME1 @169    SAY UNIDENTIFIED_DESC @170 // Cause Mortal Wounds
-  APPEND ~spell.ids~ ~1510 CLERIC_CAUSE_CRITICAL_WOUNDS_DEPRECATED~
-END
-
-COPY ~spell_rev\sppr5##\sppr511.spl~     ~override~  // Slay Living
-  SAY NAME1 @171    SAY UNIDENTIFIED_DESC @172
-COPY ~spell_rev\sppr5##\slaylive.itm~     ~override~
-COPY ~spell_rev\sppr5##\sppr511d.spl~     ~override~
-
-ADD_PROJECTILE ~spell_rev\projectles\dvgcommd.pro~
-COPY ~spell_rev\sppr5##\sppr512.spl~     ~override~  // Greater Command
-  SAY NAME1 @173    SAY UNIDENTIFIED_DESC @174
-  WRITE_SHORT 0x98 %dvgcommd%
-COPY ~spell_rev\sppr5##\sppr512a.spl~     ~override~
-COPY ~spell_rev\sppr5##\sppr512b.spl~     ~override~
-COPY ~spell_rev\sppr5##\sppr512c.spl~     ~override~
-COPY ~spell_rev\sppr5##\sppr512d.spl~     ~override~
-COPY ~spell_rev\sppr5##\sppr512e.spl~     ~override~
-COPY ~spell_rev\sppr5##\sppr512f.spl~     ~override~
-COPY ~spell_rev\sppr5##\sppr512g.spl~     ~override~
-COPY ~spell_rev\sppr5##\sppr512h.spl~     ~override~
-COPY ~spell_rev\sppr5##\sppr512i.spl~     ~override~
-
 COPY ~spell_rev\sppr5##\sppr513.spl~     ~override~  // Righteous Fury (previously named Righteous Magic)
   SAY NAME1 @175    SAY UNIDENTIFIED_DESC @176
 COPY ~spell_rev\sppr5##\dvmgchit.eff~     ~override~  // 1d6 magic damage on hit

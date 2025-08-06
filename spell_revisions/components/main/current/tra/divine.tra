@@ -43,58 +43,6 @@ Saving Throw: None
 
 This spell is only available to Harpers. The Harper's Call restores a comrade to life, to further serve the cause of the Harpers. This spell functions similarly to Raise Dead, with the following exceptions: the Harper must transfer a small portion of her life essence (10 hit points) to successfully raise the deceased person; the target has but 1 hit point when raised and must regain the rest by natural healing or curative magic; and the raised person suffers a -5 penalty to all ability scores for one minute, making this spell virtually useless in combat.~
 
-@167=~Magic Resistance~
-@168=~Magic Resistance
-Level: 5
-School: Alteration
-Sphere: Protection
-Range: Touch
-Duration: 2 rounds/level
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
-
-Upon the casting of this spell, the recipient's resistance to all forms of magic is increased by 2% per level of the priest, up to a maximum bonus of 40% at 20th level. This effect will last for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative.~
-
-@169=~Cause Mortal Wounds~
-@170=~Cause Mortal Wounds
-Level: 5
-School: Necromancy
-Sphere: Healing
-Range: Personal
-Duration: Special
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
-
-This spell is the reverse of Cure Mortal Wounds. Instead of healing the creature touched, it causes damage. On a successful touch from the priest, the spell inflicts 5d8+25 points of damage upon the target. The spell expires once the priest attempts a melee attack or after 5 rounds have passed. The priest gains a +4 bonus to hit the target.~
-
-@171=~Slay Living~
-@172=~Slay Living
-Level: 5
-School: Necromancy
-Sphere: Necromantic
-Range: Personal
-Duration: Special
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: Spell partial
-
-Upon casting this spell, the priest has to touch an opponent in order to visit the effect upon them. On a successful touch from the priest, the victim is instantly killed unless a saving throw vs. spell is made. Even then, the victim will suffer 2d8+20 points of magic damage. The spell expires once the priest makes a successful melee attack or after 1 turn has passed. The priest gains a +4 bonus to hit the target. Magic resistance does not affect this spell.~
-
-@173=~Greater Command~
-@174=~Greater Command
-Level: 5
-School: Enchantment
-Sphere: Charm, Combat, Law
-Range: Long
-Duration: 1 turn
-Casting Time: 1
-Area of Effect: Target, and enemies within 20'
-Saving Throw: Special
-
-As with the first level spell Command, this spell enables the priest to command other creatures to lie down and take no action (sleep), but the effects of this spell last up to 10 rounds, and every enemy within 20 feet of the target is affected (save vs. spell at -4 negates). At the start of each round after the first, those affected get another save to attempt to break free from the spell. When the spell duration expires, any creatures still sleeping will awaken.~
-
 @175=~Righteous Fury~
 @176=~Righteous Fury
 Level: 5
