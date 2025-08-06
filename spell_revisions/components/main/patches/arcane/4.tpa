@@ -1,0 +1,229 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/sectypes.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
+//Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+LAF get_table_references STR_VAR
+    tables = "tables"
+RET_ARRAY tables = references END
+
+LAF get_table_references STR_VAR
+    tables = "vvcs"
+RET_ARRAY vvcs = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION contagion STR_VAR destination = "*" BEGIN
+    //Spell may not exist by this point => TODO: refactor to ensure it does.
+    //Get reference.
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:a:CLERIC_CONTAGION"
+    RET res = resource END
+
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "cont#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_malison STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10401
+        match_opcode = 142                  //Display icon.
+    END
+END
+
+DEFINE_PATCH_FUNCTION polymorph_other STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "squirrel_a"
+        ext = "itm"
+        match_resource = "item#res"
+        references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION enchanted_weapon STR_VAR destination = "" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 214                  //Select spell.
+    STR_VAR
+        resource = "enchanted_weapon"
+        ext = "2da"
+        match_resource = "tabl#res"
+        references = "tables"
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_b STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "8" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 4
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_c STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "10" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 5
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_d STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "12" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 6
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_e STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "14" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 7
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_f STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "16" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 8
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_g STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "18" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 9
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield_h STR_VAR destination = "*" BEGIN
+    LPF set_spell_header_field INT_VAR header = 0 STR_VAR field = "min_level" value = "20" END
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = 10
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_shield STR_VAR destination = "*" BEGIN
+    //Patch sectype.
+    LPF encode_spell_sectype STR_VAR value = "insects" RET sectype_id = return END
+    LPF CLONE_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 30                   //Fire resistance.
+        parameter1 = 0
+        parameter2 = sectype_id
+    STR_VAR
+        insert = "above"
+    END
+
+    //Patch retaliation spells.
+    LPF get_spell_res STR_VAR spell = "WIZARD_FIRE_SHIELD_RED" RET res = resource END
+    PATCH_FOR_EACH char IN
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h"
+    BEGIN
+        TEXT_SPRINT res_name "%res%%char%"
+        PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res_name%.spl") BEGIN
+            PATCH_FAIL "fire_shield: resource '%res_name%.spl' does not exist in game."
+        END
+
+        LPF ALTER_EFFECT INT_VAR
+            verbose = 1
+            match_opcode = 232              //Cast spell on condition.
+        STR_VAR
+            match_resource = "rtl%char%#res"
+            resource = "%res_name%"
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION simbul_spell_matrix_d STR_VAR destination = "*" BEGIN
+    //Sanitize.
+    LPF get_spell_res STR_VAR spell = "WIZARD_MINOR_SEQUENCER" RET res = resource END
+    PATCH_IF NOT (7 = STRING_LENGTH "%res%") BEGIN
+        PATCH_FAIL "simbul_spell_matrix_d: parent resource name '%res%' is not 7 characters long."
+    END
+
+    PATCH_IF NOT ("%destination%" STRING_EQUAL_CASE "%res%d") BEGIN
+        PATCH_FAIL "simbul_spell_matrix_d: resource name '%destination%' is not '%res%d'."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 258                  //Activate sequencer.
+    STR_VAR
+        match_resource = "actv#res"
+        resource = "%res%"
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 172                  //Remove spell.
+    STR_VAR
+        match_resource = "rems#res"
+        resource = "%destination%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION monster_summoning_4 STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_giant_spider"
+        ext = "eff"
+        match_resource = "sum1#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_sword_spider"
+        ext = "eff"
+        match_resource = "sum2#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION vitriolic_sphere STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215                  //Play visual effect.
+    STR_VAR
+        resource = "vitriolic_sphere"
+        match_resource = "vvc#res"
+        references = "vvcs"
+    END
+END

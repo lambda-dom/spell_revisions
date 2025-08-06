@@ -68,8 +68,6 @@ COPY_EXISTING ~intmod.2da~ ~override~  // Int Modifier for Maze & Imprisonment
 
 COPY ~spell_rev\shared\contingx.2da~      ~override~  // spells used for contingencies
 
-COPY ~spell_rev\shared\dvwinded.spl~      ~override~  // Fatigue Effect
-
 COPY ~spell_rev\shared\dvbanish.eff~     ~override~ // Banish EFFs
 COPY ~spell_rev\shared\dvbanish.spl~     ~override~
 
@@ -1096,15 +1094,8 @@ COPY_EXISTING ~holdnecr.pro~ ~override~
 COPY ~spell_rev\spwi3##\spwi326.spl~     ~override~  // Dispel Magic
   SAY NAME1 @547    SAY UNIDENTIFIED_DESC @548
 
-/*-----------------------level 4-----------------------*/
-
-COPY ~spell_rev\spwi4##\spwi401.spl~     ~override~  // Confusion
-  SAY NAME1 @561    SAY UNIDENTIFIED_DESC @562
-COPY ~spell_rev\spwi4##\scrl1u.itm~     ~override~
-  SAY NAME2 @561    SAY IDENTIFIED_DESC   @562
-
-COPY ~spell_rev\spwi4##\spwi402.spl~     ~override~  // Dimension Door (disabled)
-  SAY NAME1 @563    SAY UNIDENTIFIED_DESC @564
+//Level 4.
+// Dimension Door (disabled)
 APPEND ~spell.ids~ ~2402 WIZARD_DIMENSION_DOOR_DEPRECATED~
 
 COPY ~spell_rev\spwi4##\spwi403.spl~     ~override~  // Fire Shield (Blue) (AI only now)
@@ -1120,28 +1111,12 @@ COPY ~spell_rev\spwi4##\spwi403f.spl~     ~override~
 COPY ~spell_rev\spwi4##\spwi403g.spl~     ~override~
 COPY ~spell_rev\spwi4##\spwi403h.spl~     ~override~ */
 
-COPY ~spell_rev\spwi4##\spwi404.spl~     ~override~  // Ice Storm
-  SAY NAME1 @567    SAY UNIDENTIFIED_DESC @568
-COPY ~spell_rev\spwi4##\scrl1x.itm~     ~override~
-  SAY NAME2 @567    SAY IDENTIFIED_DESC   @568
+// Ice Storm projectile.
 COPY_EXISTING ~icestorm.pro~ ~override~
   WRITE_BYTE 0x216 4
-  
-COPY ~spell_rev\spwi4##\spwi405.spl~     ~override~  // Improved Invisibility
-  SAY NAME1 @569    SAY UNIDENTIFIED_DESC @570
-COPY ~spell_rev\spwi4##\scrl1y.itm~     ~override~
 
-  SAY NAME2 @569    SAY IDENTIFIED_DESC   @570
-
-COPY ~spell_rev\spwi4##\spwi406.spl~     ~override~  // Minor Globe of Invulnerability
-  SAY NAME1 @571    SAY UNIDENTIFIED_DESC @572
-COPY ~spell_rev\spwi4##\scrl1z.itm~     ~override~
-  SAY NAME2 @571    SAY IDENTIFIED_DESC   @572
-COPY ~spell_rev\spwi4##\spwi406a.bam~    ~override~
-COPY ~spell_rev\spwi4##\spwi406b.bam~    ~override~
-COPY ~spell_rev\spwi4##\spwi406c.bam~    ~override~
-
-COPY ~spell_rev\spwi4##\spwi407.spl~     ~override~  // old Monster Summoning IV (disabled)
+// old Monster Summoning IV (disabled)
+COPY ~spell_rev\spwi4##\spwi407.spl~     ~override~
   SAY NAME1 @573    SAY UNIDENTIFIED_DESC @574
 COPY ~spell_rev\spwi4##\gnollsu.eff~     ~override~
 COPY ~spell_rev\spwi4##\gnollsu.cre~     ~override~
@@ -1150,58 +1125,21 @@ COPY ~spell_rev\spwi4##\gnlcapsu.eff~     ~override~
 COPY ~spell_rev\spwi4##\gnlcapsu.cre~     ~override~
   SAY NAME1 #19691
   SAY NAME2 #19691
-
 COPY ~spell_rev\spwi4##\gnlcapsu.itm~     ~override~
 COPY_EXISTING ~spell.ids~ ~override~
   REPLACE_TEXTUALLY ~^2407[ %TAB%]+WIZARD_MONSTER_SUMMONING_2\b~ ~2407 WIZARD_MONSTER_SUMMONING_2_DEPRECATED~
 
-COPY ~spell_rev\spwi4##\spwi408.spl~     ~override~  // Stoneskin
-  SAY NAME1 @575    SAY UNIDENTIFIED_DESC @576
-COPY ~spell_rev\spwi4##\scrl2b.itm~     ~override~
-  SAY NAME2 @575    SAY IDENTIFIED_DESC   @576
-
-COPY ~spell_rev\spwi4##\spwi409.spl~     ~override~  // Contagion
-  SAY NAME1 @577    SAY UNIDENTIFIED_DESC @578
-COPY ~spell_rev\spwi4##\scrla8.itm~     ~override~
-  SAY NAME2 @577    SAY IDENTIFIED_DESC   @578
-
-COPY ~spell_rev\spwi4##\spwi410.spl~     ~override~  // Break Enchantment (replaces Remove Curse)
-  SAY NAME1 @579    SAY UNIDENTIFIED_DESC @580
-COPY ~spell_rev\spwi4##\scrl5g.itm~     ~override~
-  SAY NAME2 @579    SAY IDENTIFIED_DESC   @580
+// Break Enchantment (replaces Remove Curse)
 APPEND ~spell.ids~ ~2410 WIZARD_BREAK_ENCHANTMENT~
-
-COPY ~spell_rev\spwi4##\spwi411.spl~     ~override~  // Emotion: Despair (replaces Emotion: Hopelessness)
-  SAY NAME1 @581    SAY UNIDENTIFIED_DESC @582
-COPY ~spell_rev\spwi4##\scrl5h.itm~     ~override~
-  SAY NAME2 @581    SAY IDENTIFIED_DESC   @582
-
-COPY ~spell_rev\spwi4##\spwi412.spl~     ~override~  // Greater Malison
-  SAY NAME1 @583    SAY UNIDENTIFIED_DESC @584
-  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 44916 parameter1 = RESOLVE_STR_REF(@3583) END
-COPY ~spell_rev\spwi4##\scrl5i.itm~     ~override~
-  SAY NAME2 @583    SAY IDENTIFIED_DESC   @584
 
 COPY ~spell_rev\spwi4##\spwi413.spl~     ~override~  // Otiluke's Resilient Sphere
   SAY NAME1 @585    SAY UNIDENTIFIED_DESC @586
-COPY ~spell_rev\spwi4##\scrl5j.itm~     ~override~
-  SAY NAME2 @585    SAY IDENTIFIED_DESC   @586
 COPY ~spell_rev\spwi4##\spwi413c.spl~     ~override~
 COPY ~spell_rev\spwi4##\spwi413d.spl~     ~override~
 COPY ~spell_rev\spwi4##\spwi413c.eff~     ~override~
 COPY ~spell_rev\spwi4##\spwi413d.eff~     ~override~
 
-COPY ~spell_rev\spwi4##\spwi414.spl~     ~override~  // Spirit Armor
-  SAY NAME1 @587    SAY UNIDENTIFIED_DESC @588
-COPY ~spell_rev\spwi4##\scrl5k.itm~     ~override~
-  SAY NAME2 @587    SAY IDENTIFIED_DESC   @588
-COPY ~spell_rev\spwi4##\sparmor.vvc~     ~override~
-COPY ~spell_rev\spwi4##\sparmor.bam~     ~override~
-
-COPY ~spell_rev\spwi4##\spwi415.spl~     ~override~  // Polymorph Other
-  SAY NAME1 @589    SAY UNIDENTIFIED_DESC @590
-COPY ~spell_rev\spwi4##\scrl5l.itm~     ~override~
-  SAY NAME2 @589    SAY IDENTIFIED_DESC   @590
+//These do not seem to be used anywhere in Polymorph other.
 COPY ~spell_rev\spwi4##\plysquir.eff~     ~override~
 COPY ~spell_rev\spwi4##\squirp.itm~     ~override~
 
@@ -1221,98 +1159,16 @@ COPY ~spell_rev\spwi4##\spwi465.itm~     ~override~
 COPY ~spell_rev\spwi4##\spwi465.spl~     ~override~
   SAY NAME1 ~Shapeshifts Winter Wolf~
 
-ACTION_IF NOT GAME_IS ~bgee bg2ee eet iwdee~ BEGIN
-  COPY ~spell_rev\spwi4##\spwi417.spl~     ~override~  // Enchanted Weapon
-    SAY NAME1 @593    SAY UNIDENTIFIED_DESC @594
-  COPY ~spell_rev\spwi4##\scrl6m.itm~     ~override~
-    SAY NAME2 @593    SAY IDENTIFIED_DESC   @594
-  COPY ~spell_rev\spwi4##\enchwp~     ~override~
-END
-// change icon from red to blue on enhanced editions and original games
-COPY ~spell_rev\spwi4##\spwi417a.bam~     ~override~
-COPY ~spell_rev\spwi4##\spwi417b.bam~     ~override~
-COPY ~spell_rev\spwi4##\spwi417c.bam~     ~override~
-
-COPY ~spell_rev\spwi4##\spwi418.spl~     ~override~  // Fire Shield (Red)
-  SAY NAME1 @595    SAY UNIDENTIFIED_DESC @596
-COPY ~spell_rev\spwi4##\scrl6n.itm~     ~override~
-  SAY NAME2 @595    SAY IDENTIFIED_DESC   @596
-COPY ~spell_rev\spwi4##\spwi418a.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418b.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418c.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418d.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418e.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418f.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418g.spl~     ~override~
-COPY ~spell_rev\spwi4##\spwi418h.spl~     ~override~
-
-COPY ~spell_rev\spwi4##\spwi419.spl~     ~override~  // Secret Word
-  SAY NAME1 @597    SAY UNIDENTIFIED_DESC @598
-COPY ~spell_rev\spwi4##\scrl6o.itm~     ~override~
-  SAY NAME2 @597    SAY IDENTIFIED_DESC   @598
-
-COPY ~spell_rev\spwi4##\spwi420.spl~     ~override~  // Simbul's Spell Matrix (previously named Minor Spell Sequencer)
-  SAY NAME1 @599    SAY UNIDENTIFIED_DESC @600
-COPY ~spell_rev\spwi4##\scrl6p.itm~     ~override~
-  SAY NAME2 @599    SAY IDENTIFIED_DESC   @600
-COPY ~spell_rev\spwi4##\spwi420d.spl~     ~override~
-  SAY NAME1 @599
-
-COPY ~spell_rev\spwi4##\spwi421.spl~     ~override~  // Teleport Field
-  SAY NAME1 @601    SAY UNIDENTIFIED_DESC @602
-COPY ~spell_rev\spwi4##\scrl6q.itm~     ~override~
-  SAY NAME2 @601    SAY IDENTIFIED_DESC   @602
-
-COPY ~spell_rev\spwi4##\spwi423.spl~     ~override~  // Monster Summoning IV ("replaces" Spider Spawn)
-  SAY NAME1 @603    SAY UNIDENTIFIED_DESC @604
-COPY ~spell_rev\spwi4##\scrl6r.itm~     ~override~
-  SAY NAME2 @603    SAY IDENTIFIED_DESC   @604
-COPY ~spell_rev\spwi4##\spidgisu.cre~     ~override~
-COPY ~spell_rev\spwi4##\spidgisu.itm~     ~override~
+//Seemingly unused phase spider.
 COPY ~spell_rev\spwi4##\spidphsu.cre~     ~override~
 COPY ~spell_rev\spwi4##\spidphsu.itm~     ~override~
-COPY ~spell_rev\spwi4##\spidswsu.cre~     ~override~
-COPY ~spell_rev\spwi4##\spidswsu.itm~     ~override~
-COPY ~spell_rev\spwi4##\spwi423a.bam~     ~override~
-COPY ~spell_rev\spwi4##\spwi423b.bam~     ~override~
-COPY ~spell_rev\spwi4##\spwi423c.bam~     ~override~
+// Monster Summoning IV ("replaces" Spider Spawn)
 APPEND ~spell.ids~ ~2423 WIZARD_MONSTER_SUMMONING_2~
 APPEND ~spell.ids~ ~2423 WIZARD_MONSTER_SUMMONING_LEVEL_4~
-
-COPY ~spell_rev\spwi4##\spwi424.spl~     ~override~  // Farsight
-  SAY NAME1 @605    SAY UNIDENTIFIED_DESC @606
-COPY ~spell_rev\spwi4##\scrlaq.itm~     ~override~
-  SAY NAME2 @605    SAY IDENTIFIED_DESC   @606
-
-COPY ~spell_rev\spwi4##\spwi425.spl~     ~override~  // Wizard Eye
-  SAY NAME1 @607    SAY UNIDENTIFIED_DESC @608
-COPY ~spell_rev\spwi4##\scrla1.itm~     ~override~
-  SAY NAME2 @607    SAY IDENTIFIED_DESC   @608
 
 //ADD_SPELL: Protection from Elemental Energy
 ADD_SPELL ~spell_rev\spwi4##\spwi426.spl~ 2 4 ~WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY~  // Protection from Elemental Energy
   SAY NAME1 @873    SAY UNIDENTIFIED_DESC @874
-COPY ~spell_rev\spwi4##\scrl6h.itm~     ~override~
-  SAY NAME2 @873    SAY IDENTIFIED_DESC   @874
-COPY ~spell_rev\spwi4##\dvwi426.2da~     ~override~
-COPY ~spell_rev\spwi4##\dvwi426a.bam~    ~override~
-COPY ~spell_rev\spwi4##\dvwi426b.bam~    ~override~
-COPY ~spell_rev\spwi4##\dvwi426c.bam~    ~override~
-
-//ADD_SPELL: Vitriolic Sphere
-ADD_PROJECTILE ~spell_rev\projectles\dvvtrsph.pro~
-ADD_SPELL ~spell_rev\spwi4##\spwi427.spl~ 2 4 ~WIZARD_VITRIOLIC_SPHERE~  // Vitriolic Sphere (new spell)
-  SAY NAME1 @877    SAY UNIDENTIFIED_DESC @878
-  WRITE_SHORT 0x98 %dvvtrsph%
-COPY ~spell_rev\spwi4##\scrl6y.itm~     ~override~
-  SAY NAME2 @877    SAY IDENTIFIED_DESC   @878
-COPY ~spell_rev\spwi4##\dvvtrsph.vvc~     ~override~
-COPY ~spell_rev\spwi4##\dvvtrsph.bam~     ~override~
-COPY ~spell_rev\spwi4##\dvvtrtra.bam~     ~override~
-COPY ~spell_rev\spwi4##\dvwi427a.bam~     ~override~
-COPY ~spell_rev\spwi4##\dvwi427b.bam~     ~override~
-COPY ~spell_rev\spwi4##\dvwi427c.bam~     ~override~
-
 
 /*-----------------------level 5-----------------------*/
 

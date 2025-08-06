@@ -50,6 +50,36 @@
 @2200 = "Ghoul Touch"
 @2201 = "Fists enchanted by the Ghoul Touch spell."
 
-//Level 2.
+//Level 3.
 @2300 = "Melf's Minute Meteor"
 @2301 = "These minute meteors were created by the Melf's Minute Meteors spell."
+
+//Level 3.
+@2400 = "Squirrel Claws"
+@2401 = "These claws were created by the Polymorph Other spell."
+
+//Items for enchanted weapons.
+@2410 = "Axe"
+@2411 = "Club"
+@2412 = "Flail"
+@2413 = "Mace"
+@2414 = "Morning Star"
+@2415 = "Hammer"
+@2416 = "Dagger"
+@2417 = "Short Sword"
+@2418 = "Long Sword"
+@2419 = "Bastard Sword"
+@2420 = "Two-Handed Sword"
+@2421 = "Scimitar"
+@2422 = "Katana"
+@2423 = "Halberd"
+@2424 = "Quarterstaff"
+@2425 = "Spear"
+@2426 = "Short Bow"
+@2427 = "Long Bow"
+@2428 = "Light Crossbow"
+@2429 = "Heavy Crossbow"
+@2430 = "Sling"
+@2431 = "Arrow"
+@2432 = "Bolt"
+@2433 = "Bullet"

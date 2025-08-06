@@ -45,6 +45,11 @@ LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/items.tpa"
 END
 
+//Install tables for spells (e. g. tables used by select spell [214] opcode).
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/tables.tpa"
+END
+
 //Install effects for spells.
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/effects.tpa"
@@ -58,7 +63,7 @@ END
 
 //Install spells.
 WITH_SCOPE BEGIN
-    OUTER_FOR (i = 4; i <= 4; ++i) BEGIN
+    OUTER_FOR (i = 1; i <= 0; ++i) BEGIN
         LAF install_subcomponent STR_VAR
             subcomponent = "%root%/subcomponents/divine/%i%.tpa"
         END
@@ -66,7 +71,7 @@ WITH_SCOPE BEGIN
 END
 
 WITH_SCOPE BEGIN
-    OUTER_FOR (i = 1; i <= 0; ++i) BEGIN
+    OUTER_FOR (i = 4; i <= 4; ++i) BEGIN
         LAF install_subcomponent STR_VAR
             subcomponent = "%root%/subcomponents/arcane/%i%.tpa"
         END

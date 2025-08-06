@@ -34,3 +34,13 @@ DEFINE_PATCH_FUNCTION icelance BEGIN
     LPF set_projectile_field STR_VAR field = "fire_sound" value = "%sound%" END
     LPF set_projectile_field STR_VAR field = "travel_animation" value = "%animation%" END
 END
+
+DEFINE_PATCH_FUNCTION vitriolic_sphere BEGIN
+    LPF get_table_ref STR_VAR
+        value = "vitriolic_sphere_travelling"
+        array = "travelling"
+        ext = "bam"
+    RET animation = resource END
+
+    LPF set_projectile_field STR_VAR field = "travel_animation" value = "%animation%" END
+END

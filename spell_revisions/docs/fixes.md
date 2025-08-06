@@ -4,11 +4,11 @@ Fixes to base SR, v4.19.
 
 ## A. 1. Level 1.
 
-* Animal Summoning I: the thac0 and saves of bats in the cre file and description disagree. Went with the description.
+* Animal Summoning I: correction of bats: thac0, saves (went with the description).
 
 * Armor of Faith: changed portrait icon to EE Armor of Faith.
 
-* Cause Light Wounds: Fix?? item of enchant level 1 -> 7, but this has to be re-checked, especially against protections like PfMW.
+* Cause Light Wounds: item of enchant level 1 -> 7, but this has to be re-checked, especially against protections like PfMW.
 
 * Detect Alignment: -> know alignment and fixed wrong level in the docs.
 
@@ -18,7 +18,7 @@ Fixes to base SR, v4.19.
 
 ## A. 2. Level 2.
 
-* Animal Summoning 2: Fix?? drop sectype on dog scent. Fix int 6 -> 4 (hps 16 and ac 6, due to con and dex mods? recheck). AC of war dogs disagrees in the cre file and the description. Went with the description.
+* Animal Summoning 2: drop sectype on dog scent. War dogs: correct int, hps and ac (went with the description).
 
 * Chant: implementation changed to put the buff in an aux spell of its own. Aux spells special and at level 1. Add string display for evil chant. Fix sectypes on aux.
 
@@ -34,11 +34,11 @@ Fixes to base SR, v4.19.
 
 * Gust of Wind (druid version): mention in description that it dispels insect swarms in the area.
 
-* Cause Moderate Wounds: Fix?? Stick power of cast spell opcode 1 -> 0 for consistency with cause light wounds.
+* Cause Moderate Wounds: stick power of cast spell opcode 1 -> 0 for consistency with cause light wounds.
 
 ## B. 3. Level 3.
 
-* Animate Dead: greater skeleton: gender niether -> summoned. Align neutral -> chaotic evil. Wis 11 -> 10. Charisma is also 9 instead of 1. Correct saves vs. death 0 -> 9. Charisma 1 -> 3 as currently, the implementation requires a minimum of 3. Corrections to ac and thac0. Correct damage bonus on mace and skeleton great sword 1 -> 2. Added 233 opcodes for proficiency. Undead immunities: fear, fatigue, berserk, charm, confusion, disease, hold, level drain, petrification, poison, stun, sleep, death: corrected description and implemented correctly via blocks library.
+* Animate Dead: greater skeleton: gender niether -> summoned (todo: this may be incorrect). Align neutral -> chaotic evil. Wis 11 -> 10. Charisma is also 9 instead of 1. Correct saves vs. death 0 -> 9. Charisma 1 -> 3 as currently, the implementation requires a minimum of 3. Corrections to ac and thac0. Correct damage bonus on mace and skeleton great sword 1 -> 2. Added 233 opcodes for proficiency. Undead immunities: fear, fatigue, berserk, charm, confusion, disease, hold, level drain, petrification, poison, stun, sleep, death: corrected description and implemented correctly via blocks library.
 
 note(s):
 * shield has an ac bonus of 2, but is classified as a buckler.
@@ -61,7 +61,7 @@ note(s):
 
 * Animal Summoning IV: leopard claws missing +1 damage bonus. Leopard: corrections to wis, chr, ac. Corrections to pounce (+2 bonus instead of +4).
 
-* Call Woodland Beings: hamadryad: correct ac, thac0, apr, saves (per description). Remove dire charm and dimension door? Nymph: ac, saves (per description), magic resistance missing, alignment.
+* Call Woodland Beings: hamadryad: correct ac, thac0, apr, saves (per description). Remove dire charm and dimension door. Nymph: ac, saves (per description), magic resistance bonus missing, incorrect alignment.
 
 # B. Arcane spells.
 
@@ -79,7 +79,7 @@ note(s):
 
 * Sleep: fix off-by-1 errors in probability.
 
-* Monster Summoning I: the thac0 of gibberlings in the cre file and description disagree. Went with the description.
+* Monster Summoning I: gibberlings: correct thac0 (per description).
 
 ## B. 2. Level 2.
 
@@ -99,7 +99,7 @@ note(s):
 
 * Web: add immunity to mephits.
 
-* Monster Summon II: fix: remove spurious poison icon from jelly pod. Fix int, wis, chr, acid resistance according to description. Fix lack of immunities to disease and sleep. Fix poorly implemented immunities.
+* Monster Summon II: fix: remove spurious poison icon from jelly pod. Fix int, wis, chr, acid resistance according (per description). Fix lack of immunities to disease and sleep. Fix poorly implemented immunities.
 
 ## B. 3. Level 3.
 
@@ -114,3 +114,20 @@ note(s):
 * Ghost Armor: added bonus to move silently.
 
 * Monster Summoning III: Correction to the dice of bastard sword. Corrections to shaman: hps.
+
+## B. 4. Level 4.
+
+* Confusion: standardized range to long per description (35 -> 30).
+
+* Polymorph Other: standardized range to long per description (40 -> 30). The SR implementation goes by creating an item in the weapon slot that does the animation and stat changes. Polymorph opcode is not used (is bugged in the EEs per the IESDP).
+
+* Simbul Spell Matrix: out of combat only.
+
+* Monster Summoning IV: Correct description on the amount of poison damage (3 -> 2) and damage bonuses on both stings. Correct probability of poison (20 -> 100) on sword spider sting. Standardized imlpementation of immunities. Giant Spider: corrections to ac, thac0 and saves. Sword spider: corrections to thac0 and saves.
+
+* Fire Shield: sectype offensivedamage -> specificprotections.
+
+* Secret Word: school enchant (description) -> abjuration.
+
+* Minor Spell Sequencer: out of combat only. 
+
