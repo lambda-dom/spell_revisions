@@ -421,14 +421,6 @@ APPEND ~spell.ids~ ~1501 CLERIC_ANIMAL_SUMMONING_LEVEL_5~
 // old Cure Critical Wounds (disabled) -> Cure Mortal Wounds.
 APPEND ~spell.ids~ ~1502 CLERIC_CURE_CRITICAL_WOUNDS_DEPRECATED~
 
-COPY ~spell_rev\sppr5##\sppr506.spl~     ~override~  // Iron Skins
-  SAY NAME1 @161    SAY UNIDENTIFIED_DESC @162
-
-COPY ~spell_rev\sppr5##\sppr507.spl~     ~override~  // Champion's Strength
-  SAY NAME1 @163    SAY UNIDENTIFIED_DESC @164
-COPY ~spell_rev\sppr5##\scrl5e.itm~     ~override~
-  SAY NAME2 @163    SAY IDENTIFIED_DESC   @164
-
 COPY ~spell_rev\sppr5##\sppr508.spl~     ~override~  // Chaotic Commands
   SAY NAME1 @165    SAY UNIDENTIFIED_DESC @166
 COPY ~spell_rev\sppr5##\scrl5f.itm~     ~override~

@@ -40,6 +40,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * True Seeing: there is a protection from the cloak of mirroring -- drop it if needed. Aux spell only removes illusion school spells up to level 2; remove illusionary protections of all levels? Missing protection against shadow door.
 
+* Chaotic Commands: standardize immunities (probably will need append_block support from weidu_library).
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.
