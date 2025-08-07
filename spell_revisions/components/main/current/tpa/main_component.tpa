@@ -408,16 +408,7 @@ COPY ~spell_rev\sppr4##\restore.itm~     ~override~
   SAY NAME2 @143    SAY IDENTIFIED_DESC   @144 
 
 
-//Level 4.
-COPY ~spell_rev\sppr5##\sppr501.spl~     ~override~  // Animal Summoning V (originally Animal Summoning II)
-  SAY NAME1 @151    SAY UNIDENTIFIED_DESC @152
-COPY ~spell_rev\sppr5##\snakegsu.eff~     ~override~
-COPY ~spell_rev\sppr5##\snakegsu.cre~     ~override~
-  SAY NAME1 @2151
-  SAY NAME2 @2151
-COPY ~spell_rev\sppr5##\snakegsu.itm~     ~override~
-APPEND ~spell.ids~ ~1501 CLERIC_ANIMAL_SUMMONING_LEVEL_5~
-
+//Level 5.
 // old Cure Critical Wounds (disabled) -> Cure Mortal Wounds.
 APPEND ~spell.ids~ ~1502 CLERIC_CURE_CRITICAL_WOUNDS_DEPRECATED~
 

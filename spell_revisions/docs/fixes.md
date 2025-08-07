@@ -65,7 +65,7 @@ note(s):
 
 ## A. 5. Level 5.
 
-* Animal Summoning V: creature not in yet.
+* Animal Summoning V: snake: corrections to ac, str, dex, con.
 
 * Cure Mortal Wounds: casting speed 7 -> 5. Scaling 5 per level.
 

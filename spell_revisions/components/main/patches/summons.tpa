@@ -124,6 +124,21 @@ DEFINE_PATCH_FUNCTION nymph BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION giant_snake STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "giant_snake_bite"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "giant_snake_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
 DEFINE_PATCH_FUNCTION gibberling STR_VAR destination = "*" BEGIN
     //Equip items.
     LPF creature_add_item STR_VAR
