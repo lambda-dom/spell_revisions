@@ -43,58 +43,6 @@ Saving Throw: None
 
 This spell is only available to Harpers. The Harper's Call restores a comrade to life, to further serve the cause of the Harpers. This spell functions similarly to Raise Dead, with the following exceptions: the Harper must transfer a small portion of her life essence (10 hit points) to successfully raise the deceased person; the target has but 1 hit point when raised and must regain the rest by natural healing or curative magic; and the raised person suffers a -5 penalty to all ability scores for one minute, making this spell virtually useless in combat.~
 
-@175=~Righteous Fury~
-@176=~Righteous Fury
-Level: 5
-School: Alteration
-Sphere: Combat
-Range: Personal
-Duration: 1 round/level
-Casting Time: 5
-Area of Effect: Caster
-Saving Throw: None
-
-This is a powerful combat spell that enhances the priest's physical prowess, charging him with positive energy and transforming him into a juggernaut of destruction. The caster's strength is augmented by 4 points, his armor class is improved by 2 points, and he gains 1 temporary hit point for every level he has attained (up to a maximum of 20). Furthermore, the caster deals an additional 1d6 points of magic damage whenever he strikes an opponent with a melee weapon. The effects last for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative.~
-
-@177=~Mass Cure~
-@178=~Mass Cure
-Level: 5
-School: Necromancy
-Sphere: Healing
-Range: Personal
-Duration: Permanent
-Casting Time: 5
-Area of Effect: Sight
-Saving Throw: None
-
-When casting this spell, the priest must picture the faces of his fellow party members clearly and focus on the unity of the group. Upon completion, all party members within sight of the caster are healed by 2d8 + 2/level hit points (up to a maximum of 2d8+20).~
-
-@105=~Repulsion~
-@106=~Repulsion
-Level: 5
-School: Abjuration
-Sphere: Wards
-Range: Personal
-Duration: 1 turn
-Casting Time: 5
-Area of Effect: 10' radius
-Saving Throw: Spell negates
-
-An invisible, mobile field surrounds the caster and prevents creatures from approaching him. Any creature within or entering the field must attempt a save vs. spell at -4 penalty. If it fails, it gets pushed away by 10 feet. Repelled creatures' actions are not otherwise restricted. They can fight other creatures and can cast spells and attack you with ranged weapons.~
-
-@179=~Pixie Dust~
-@180=~Pixie Dust
-Level: 5
-School: Conjuration
-Sphere: Combat
-Range: Personal
-Duration: 1 turn
-Casting Time: 5
-Area of Effect: 30' radius
-Saving Throw: None
-
-This spell creates a handful of pixie dust that the caster can toss into the air. Allies covered by the dust becomes improved invisible for 1 turn.~
-
 @181=~Insect Plague~
 @182=~Insect Plague
 Level: 5

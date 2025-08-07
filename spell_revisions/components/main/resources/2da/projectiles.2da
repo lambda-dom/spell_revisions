@@ -24,3 +24,5 @@ cloak_fear          1       cloak_fear          0           *                   
 vitriolic_sphere    1       vitriolic_sphere    0           vitriolic_sphere    0       #lit:dlvtrsph
 flame_strike        1       flame_strike_sr     0           *                   0       #lit:dlflmstr
 greater_command     1       greater_command     0           *                   0       #lit:dlgrtcmm
+mass_cure           1       mass_cure           0           *                   0       #lit:dlmsscur
+repulsion           1       repulsion           0           *                   0       #lit:dlrplsin

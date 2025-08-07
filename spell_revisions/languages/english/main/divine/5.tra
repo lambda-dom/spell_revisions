@@ -189,3 +189,59 @@ Saving Throw: Special
 
 As with the first level spell Command, this spell enables the priest to command other creatures to lie down and take no action (sleep), but the effects of this spell last up to 10 rounds, and every enemy within 20 feet of the target is affected (save vs. spell at -4 negates). At the start of each round after the first, those affected get another save to attempt to break free from the spell. When the spell duration expires, any creatures still sleeping will awaken."
 
+//righteous_fury:sppr513
+@5130 = "Righteous Fury"
+@5131 = "Righteous Fury
+Level: 5
+School: Alteration
+Sphere: Combat
+Range: Personal
+Duration: 1 round/level
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+This is a powerful combat spell that enhances the priest's physical prowess, charging him with positive energy and transforming him into a juggernaut of destruction. The caster's strength is augmented by 4 points, his armor class is improved by 2 points, and he gains 1 temporary hit point for every level he has attained (up to a maximum of 20). Furthermore, the caster deals an additional 1d6 points of magic damage whenever he strikes an opponent with a melee weapon. The effects last for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
+
+//mass_cure:sppr514
+@5140 = "Mass Cure"
+@5141 = "Mass Cure
+Level: 5
+School: Necromancy
+Sphere: Healing
+Range: Personal
+Duration: Permanent
+Casting Time: 5
+Area of Effect: Sight
+Saving Throw: None
+
+When casting this spell, the priest must picture the faces of his fellow party members clearly and focus on the unity of the group. Upon completion, all party members within sight of the caster are healed by 2d8 + 2/level hit points (up to a maximum of 2d8 + 20)."
+
+//repulsion:sppr515
+@5150 = "Repulsion"
+@5151 = "Repulsion
+Level: 5
+School: Abjuration
+Sphere: Wards
+Range: Personal
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: 10' radius
+Saving Throw: Spell negates
+
+An invisible, mobile field surrounds the caster and prevents creatures from approaching him. Any creature within or entering the field must attempt a save vs. spell at -4 penalty. If it fails, it gets pushed away by 10 feet. Repelled creatures' actions are not otherwise restricted. They can fight other creatures, cast spells and attack the caster with ranged weapons."
+
+//pixie_dust:sppr516
+@5160 = "Pixie Dust"
+@5161 = "Pixie Dust
+Level: 5
+School: Conjuration
+Sphere: Combat
+Range: Personal
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: None
+
+This spell creates a handful of pixie dust that the caster can toss into the air. Allies covered by the dust becomes improved invisible for 1 turn."
+
