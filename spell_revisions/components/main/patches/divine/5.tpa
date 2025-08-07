@@ -294,3 +294,15 @@ DEFINE_PATCH_FUNCTION polymorph_other STR_VAR destination = "*" BEGIN
         references = "items"
     END
 END
+
+DEFINE_PATCH_FUNCTION animal_growth STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "animal_growth_a"
+        ext = "eff"
+        match_resource = "grth#res"
+        references = "effects"
+    END
+END
+

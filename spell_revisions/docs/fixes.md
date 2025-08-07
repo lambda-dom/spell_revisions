@@ -71,6 +71,8 @@ note(s):
 
 * Cause Mortal Wounds: same scaling as cure mortal wounds.
 
+* Animal Growth: fixes to range (harmless) and casting speed. Fix target caster -> actor. Extended to monsters.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

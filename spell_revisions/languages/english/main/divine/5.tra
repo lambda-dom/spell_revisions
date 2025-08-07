@@ -276,3 +276,81 @@ Saving Throw: Polymorph negates
 Polymorph Other is a powerful magic that permanently alters the form of the creature affected. The target's mental attributes are not affected and they do not receive the special abilities of the new form, but physical attributes are changed to adhere to the new form and the affected creature loses any special abilities it had in its original form. This particular version of the spell will transform the recipient into a squirrel unless a save vs. polymorph is made successfully. The effectiveness of this spell is dependent upon the target's level, with weak creatures being relatively easy to transmute and more powerful creatures being very difficult. Creatures with less than 8 HD/levels save at a -4 penalty, those with 8 - 14 HD/levels save normally, and those with 15 or more HD/levels save with a +2 bonus. The transformation is instant and permanent until a dispel magic is cast successfully upon the affected creature.
 
 Note that all clothes and equipment that the target was wearing will mold into the new form. However, they will return to their previous state once the target dies or the effects are dispelled."
+
+@5510 = "Protection from Fire"
+@5511 = "Protection from Fire
+Level: 5
+School: Abjuration
+Sphere: Elemental, Protection
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Protection from Fire spell is cast, the recipient receives complete protection from fire-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like fiery dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Burning Hands, Fireball, Flame Strike, and Fire Storm. Multiple castings of this spell are not cumulative."
+
+@5520 = "Protection from Cold"
+@5521 = "Protection from Cold
+Level: 5
+School: Abjuration
+Sphere: Elemental, Protection
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Protection from Cold spell is cast, the recipient receives complete protection from cold-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like icy dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Ice Storm and Cone of Cold. Multiple castings of this spell are not cumulative."
+
+@5530 = "Protection from Electricity"
+@5531 = "Protection from Electricity
+Level: 5
+School: Abjuration
+Sphere: Elemental, Protection
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Protection from Electricity spell is cast, the recipient receives complete protection from all electrical-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like electric dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Lightning Bolt, Glyph of Warding, Call Lightning, and Chain Lightning. Multiple castings of this spell are not cumulative."
+
+@5540 = "Protection from Acid"
+@5541 = "Protection from Acid
+Level: 5
+School: Abjuration
+Sphere: Elemental, Protection
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Protection from Acid spell is cast, the recipient receives complete protection from all acid-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like acidic dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Melf's Acid Arrow and Acid Fog. Multiple castings of this spell are not cumulative."
+
+@5550 = "Mass Regenerate"
+@5551 = "Mass Regenerate
+Level: 5
+School: Alteration
+Sphere: Healing
+Range: Touch
+Duration: 1 turn + 2 rounds/level
+Casting Time: 5
+Area of Effect: Sight
+Saving Throw: None
+
+This spell enables the caster to imbue all allies within sight with the ability to regenerate. The creatures affected will regain 2 hit points per round (up to a maximum of 60 hit points within 3 turns at level 10). Multiple castings of this spell are not cumulative."
+
+@5560 = "Animal Growth"
+@5561 = "Animal Growth
+Level: 5
+School: Alteration
+Sphere: Animal
+Range: Personal
+Duration: 3 turns
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: None
+
+When this spell is cast, the caster causes all friendly animals and monsters within range to become tougher, stronger and more tenacious. The alteration grants +2 bonus to attack rolls, damage rolls, armor class and saving throws. It also increases the recipient's hit points by 50%, and these bonus hit points are lost first when the recipient takes damage. Multiple castings of this spell are not cumulative."

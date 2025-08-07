@@ -427,58 +427,9 @@ STRING_SET ~8272~ @133
 // Repulsion (replaces Repulse Undead)
 APPEND ~spell.ids~ ~1515 CLERIC_REPULSION~
 
-COPY ~spell_rev\sppr5##\sppr517.spl~     ~override~  // Insect Plague
-  SAY NAME1 @181    SAY UNIDENTIFIED_DESC @182
-COPY ~spell_rev\sppr5##\sppr517a.spl~     ~override~
-COPY ~spell_rev\sppr5##\sppr517b.spl~     ~override~
-
 // Insect Plague detectable spells stuff.
 LAF ds_altered_spell INT_VAR old_clone=60 new_clone=~-1~ STR_VAR file=~sppr517.spl~ END
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~sppr517a.SPL    233     2     120   146    6     A~
-
-//ADD_SPELL: Polymorph Other
-ADD_SPELL ~spell_rev\sppr5##\sppr519.spl~ 1 5 ~CLERIC_POLYMORPH_OTHER~ // Polymorph Other (added to druid's spells)
-  SAY NAME1 @185    SAY UNIDENTIFIED_DESC @186
-COPY ~spell_rev\sppr5##\dvsquir.itm~     ~override~
-
-//ADD_SPELL: Protection from Acid
-ADD_SPELL ~spell_rev\sppr5##\sppr520.spl~ 1 5 ~CLERIC_PROTECTION_FROM_ACID~ // Protection from Acid (added to priest's spells)
-  SAY NAME1 @187    SAY UNIDENTIFIED_DESC @188
-
-//ADD_SPELL: Protection from Cold
-ADD_SPELL ~spell_rev\sppr5##\sppr521.spl~ 1 5 ~CLERIC_PROTECTION_FROM_COLD~ // Protection from Cold (added to priest's spells)
-  SAY NAME1 @189    SAY UNIDENTIFIED_DESC @190
-
-//ADD_SPELL: Protection from Electricity
-ADD_SPELL ~spell_rev\sppr5##\sppr522.spl~ 1 5 ~CLERIC_PROTECTION_FROM_LIGHTNING~ // Protection from Electricity (moved from lvl 4)
-  SAY NAME1 @123    SAY UNIDENTIFIED_DESC @124
-  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 7567 parameter1 = RESOLVE_STR_REF(@123) END
-
-//ADD_SPELL: Protection from Fire
-ADD_SPELL ~spell_rev\sppr5##\sppr523.spl~ 1 5 ~CLERIC_PROTECTION_FROM_FIRE~ // Protection from Fire (moved from lvl 3)
-  SAY NAME1 @81    SAY UNIDENTIFIED_DESC @82
-
-//ADD_SPELL: Mass Regenerate
-ADD_PROJECTILE ~spell_rev\projectles\dvmsrege.pro~
-ADD_SPELL ~spell_rev\sppr5##\sppr524.spl~ 1 5 ~CLERIC_MASS_REGENERATE~ // Mass Regenerate
-SAY NAME1 @309    SAY UNIDENTIFIED_DESC @310
-  SET "loop" = 10
-  WHILE (%loop% > 0) BEGIN
-    WRITE_SHORT (0x98 + 0x28 * (%loop% - 1) ) %dvmsrege%
-    SET "loop" = %loop% - 1
-  END
-COPY ~spell_rev\sppr5##\dvpr524a.bam~     ~override~
-COPY ~spell_rev\sppr5##\dvpr524b.bam~     ~override~
-COPY ~spell_rev\sppr5##\dvpr524c.bam~     ~override~
-
-//ADD_SPELL: Animal Growth
-ADD_SPELL ~spell_rev\sppr5##\sppr525.spl~ 1 5 ~CLERIC_ANIMAL_GROWTH~  // Animal Growth
-  SAY NAME1 @329    SAY UNIDENTIFIED_DESC @330
-COPY ~spell_rev\sppr5##\dvpr525d.spl~     ~override~
-COPY ~spell_rev\sppr5##\dvpr525.eff~      ~override~
-COPY ~spell_rev\sppr5##\dvpr525a.bam~     ~override~
-COPY ~spell_rev\sppr5##\dvpr525b.bam~     ~override~
-COPY ~spell_rev\sppr5##\dvpr525c.bam~     ~override~
 
 COPY ~spell_rev\sppr5##\spja01.spl~     ~override~  // Harper's Call
   SAY NAME1 @2157    SAY UNIDENTIFIED_DESC @2158

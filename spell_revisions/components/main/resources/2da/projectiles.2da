@@ -26,3 +26,4 @@ flame_strike        1       flame_strike_sr     0           *                   
 greater_command     1       greater_command     0           *                   0       #lit:dlgrtcmm
 mass_cure           1       mass_cure           0           *                   0       #lit:dlmsscur
 repulsion           1       repulsion           0           *                   0       #lit:dlrplsin
+mass_regenerate     1       mass_regenerate     0           *                   0       #lit:dlmssreg
