@@ -32,6 +32,32 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Negative Plane Protection: description says abjuration, spell says transmutation: went with description. No sectype; vanila is combination.
 
+## A. 5. Level 5.
+
+* Animal Summoning V: only description in.
+
+* Cure Mortal Wounds: Implement immunity for non-living and extra-planar or delete from description?
+
+* True Seeing: there is a protection from the cloak of mirroring -- drop it if needed. Aux spell only removes illusion school spells up to level 2; remove illusionary protections of all levels? Missing protection against shadow door.
+
+* Chaotic Commands: standardize immunities (probably will need append_block support from weidu_library).
+
+* Cause and Cure Mortal Wounds: extend scaling to level 15?
+
+* Greater Command: move sleep to subspell.
+
+* Protection from Acid: add protection to Vitriolic Sphere or not needed?
+
+* Protection from Cold: only protectiom from wizard's cone of cold and icestrom. Add other.
+
+* Protection from Fire: missing protection (e. g. aux flame arrow).
+
+* Elemental protection: do the same dance as with wizard's protection from elemental energy.
+
+* Mass Regenerate: currently non-stacking. SR adds non-concurrent stacking, but is it needed?
+
+* Harper's Call: to do.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.
@@ -110,3 +136,7 @@ note(s):
 * Summon spell lists: summon spell lists also have to be combed over and eventually patched.
 
 * Make use of states from splstate.ids.
+
+* As per Cure Mortal Wounds description implement immunity for non-living and extra-planar for all cure spells.
+
+* Elemental protection: deal more systematically with elemental protection: if elemental resist >= 100 then protection from resource to block spell.

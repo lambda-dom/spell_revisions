@@ -1,0 +1,308 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+
+
+//Load references.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "5"
+    dir = "%resources%/2da/divine"
+RET_ARRAY spells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION animal_summoning_5 STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "summon_giant_snake"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION true_seeing_a STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Use Eff.
+    STR_VAR
+        resource = "true_seeing_b"
+        match_resource = "mvis#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION true_seeing STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Use Eff.
+    STR_VAR
+        resource = "true_seeing_a"
+        match_resource = "mvis#res"
+        references = "spells"
+    END
+
+    //Patch in protections from obscuring mist.
+    LPF get_spell_res STR_VAR spell = "WIZARD_SPOOK" RET match = resource END
+    PATCH_FOR_EACH spell IN
+        "CLERIC_OBSCURING_MIST"
+        "WIZARD_OBSCURING_MIST"
+    BEGIN
+        LPF get_spell_res STR_VAR spell = "%spell%" RET res = resource END
+        PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+            PATCH_FAIL "true_seeing: spell '%spell%' not found in 'spell.ids'."
+        END
+
+        LPF CLONE_EFFECT INT_VAR
+            verbose = 1
+            match_opcode = 206              //Protection from spell.
+        STR_VAR
+            match_resource = "%match%"
+            resource = "%res%"
+            insert = "last"
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION cause_mortal_wounds STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "cause_mortal_wounds"
+        ext = "itm"
+        match_resource = "item#res"
+        references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION slay_living STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "slay_living"
+        ext = "itm"
+        match_resource = "item#res"
+        references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_command_i STR_VAR destination = "*" BEGIN
+    LPF DELETE_EFFECT INT_VAR
+        match_opcode = 146                  //Cast spell.
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_command_h STR_VAR destination = "*" BEGIN
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:i:CLERIC_GREATER_COMMAND"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_command_g STR_VAR destination = "*" BEGIN
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:h:CLERIC_GREATER_COMMAND"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_command_f STR_VAR destination = "*" BEGIN
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:g:CLERIC_GREATER_COMMAND"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_command_e STR_VAR destination = "*" BEGIN
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:f:CLERIC_GREATER_COMMAND"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_command_d STR_VAR destination = "*" BEGIN
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:e:CLERIC_GREATER_COMMAND"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_command_c STR_VAR destination = "*" BEGIN
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:d:CLERIC_GREATER_COMMAND"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_command_b STR_VAR destination = "*" BEGIN
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:c:CLERIC_GREATER_COMMAND"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_command_a STR_VAR destination = "*" BEGIN
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:b:CLERIC_GREATER_COMMAND"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_command STR_VAR destination = "*" BEGIN
+    LPF get_resource_ref STR_VAR
+        ref = "#suf:a:CLERIC_GREATER_COMMAND"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION righteous_magic STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 248                  //Melee effect.
+    STR_VAR
+        resource = "righteous_magic_damage"
+        ext = "eff"
+        match_resource = "mdmg#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION repulsion STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "repulsion_knockback"
+        match_resource = "repl#res"
+        references = "subspells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION insect_plague_a STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "summon_insects_panic"
+        match_resource = "fear#res"
+        references = "subspells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION insect_plague_b STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "insect_plague_a"
+        match_resource = "insc#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION insect_plague STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "insect_plague_b"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION polymorph_other STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "squirrel_a"
+        ext = "itm"
+        match_resource = "item#res"
+        references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION animal_growth STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "animal_growth_a"
+        ext = "eff"
+        match_resource = "grth#res"
+        references = "effects"
+    END
+END
+

@@ -1,0 +1,356 @@
+//Description strings.
+//Divine spells.
+//Level 5.
+//animal_summon_5:sppr501
+@5010 = "Animal Summoning V"
+@5011 = "Animal Summoning V
+Level: 5
+School: Conjuration
+Sphere: Animal
+Range: Long
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster calls a number of animals, which serve the summoner under any conditions. The type and number of creatures that appear depend upon the level of the druid casting the spell.
+
+9th : 2 giant snakes
+11th+ : 3 giant snakes
+
+The summoned animals will aid the caster by whatever means they possess, staying until the spell duration expires.
+
+Giant Snake (5 Hit Dice):
+STR 15, DEX 17, CON 11, INT 6, WIS 12, CHA 10;  AL Neutral
+HP 40, AC 2, THAC0 12, Saving Throws 11/15/11/13/15
+1 Attack Per Round, 1d4 Piercing Damage (Bite)
+
+Combat Abilities:
+Poison: inflicts 1d6 damage on each hit plus 1 point every 3 seconds for 1 turn on a failed save vs. poison
+
+Special Qualities
+Immune to entangle, grease, web and poison effects"
+
+//cure_mortal_wounds:sppr502
+@5020 = "Cure Mortal Wounds"
+@5021 = "Cure Mortal Wounds
+Level: 5
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: Permanent
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 5d8 + 5/level points of damage sustained by the target creature, up to a maximum of 5d8 + 50 at level 10. This healing cannot affect creatures without corporeal bodies, nor can it cure wounds of creatures not living or of extraplanar origin."
+
+//flame_strike:sppr503
+@5030 = "Flame Strike"
+@5031 = "Flame Strike
+Level: 5
+School: Evocation
+Sphere: Combat, Elemental (Fire)
+Range: Long
+Duration: Instant
+Casting Time: 5
+Area of Effect: Target, and enemies within 5'
+Saving Throw: Breath half
+
+Upon casting this spell, a vertical column of fire roars downward, striking a victim selected by the caster, along with every creature within 5 feet of the target. Those who fail on their saving throw vs. breath at -4 sustain 1d6 points of fire damage per level of the caster (up to a maximum of 15d6), and those who succeed receive half damage. This spell will not harm party members."
+
+//raise_dead:sppr504
+@5040 = "Raise Dead"
+@5041 = "Raise Dead
+Level: 5
+School: Necromancy
+Sphere: Necromantic
+Range: Short
+Duration: Permanent
+Casting Time: 1 round
+Area of Effect: 1 person
+Saving Throw: None
+
+When the priest casts a Raise Dead spell, life can be restored to a dead comrade. Note that the body of the person must be whole; otherwise, missing parts are still missing when the person is brought back to life. The person has but 1 hit point when raised and must regain the rest by natural healing or curative magic."
+
+//true_seeing:sppr505
+@5050 = "True Seeing"
+@5051 = "True Seeing
+Level: 5
+School: Divination
+Sphere: All
+Range: Personal
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+When this spell is cast, the caster gains the ability to see the exact locations of creatures or objects under displacement or invisibility effects, and see through illusions. This effectively neutralize spells such as Blur and Mirror Image, allow the caster to see and target invisible creatures normally, and make him unaffected by hostile illusion spells such as Spook. The caster is also cured from any form of blindness and is immune to it for the duration of the spell.
+
+Note: True Seeing does not dispel illusionary clones such as those conjured by Mislead or Simulacrum, but instead clearly highlights them, revealing them as deceptions."
+
+//stoneskin:sppr506
+@5060 = "Stoneskin"
+@5061 = "Stoneskin
+Level: 5
+School: Alteration
+Sphere: Elemental (Earth)
+Range: Personal
+Duration: 8 hours
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+When a druid casts this powerful spell upon herself, an outer skin of stone will emerge from the ground, completely covering and shielding her. This skin is, of course, magical and will hinder the druid in no way. The effect of this is to protect the druid from physical attacks such as melee weapons and projectiles. One skin is gained for every two levels of the caster. For each skin the druid possesses, the spell will stop one attack, so a 10th level druid would be protected from the first 5 attacks made against her but the sixth would affect her normally. The skins will remain on the druid until she is affected by a dispel magic, all of the skins are removed due to physical attacks, or the spell duration expires.
+
+It is important to note that this will not protect the druid from any area attacks (such as Fireball), and that any weapon capable of inflicting some type of elemental damage can still harm the caster - the skins will not protect against fire, cold, acid, or electrical damage, even if physical damage is blocked. Multiple castings of this spell are not cumulative."
+
+//champion_strength:sppr507
+@5070 = "Champion's Strength"
+@5071 = "Champion's Strength
+Level: 5
+School: Alteration
+Sphere: Law
+Range: Medium
+Duration: 1 round/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, the priest draws on the power of his god and lends it to the target creature, in effect creating a champion. The target gains a bonus to strength, dexterity, and constitution scores at a rate of 1 for every 3 levels of the caster, up to a maximum bonus of 6 at 18th level. The effect lasts for 1 round for every level of the caster or until dispelled. This spell is not cumulative with itself or with other similar spells."
+
+//chaotic_commands:sppr508
+@5080 = "Chaotic Commands"
+@5081 = "Chaotic Commands
+Level: 5
+School: Enchantment
+Sphere: Chaos
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+While under the effects of this spell, the recipient becomes immune to magical commands. Charm, Command, Confusion, Domination, Hold, and Sleep are all spells that fit into this category. This spell also protects from psionic mind attacks such as a mind flayer's Psionic Blast, but it will not confer complete immunity to psionics. This effect will last for the duration of the spell or until dispelled."
+
+//magic_resistance:sppr509
+@5090 = "Magic Resistance"
+@5091 = "Magic Resistance
+Level: 5
+School: Alteration
+Sphere: Protection
+Range: Touch
+Duration: 2 rounds/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+Upon the casting of this spell, the recipient's resistance to all forms of magic is increased by 2% per level of the priest, up to a maximum bonus of 40% at 20th level. This effect will last for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
+
+//cause_mortal_wounds:sppr510
+@5100 = "Cause Mortal Wounds"
+@5101 = "Cause Mortal Wounds
+Level: 5
+School: Necromancy
+Sphere: Healing
+Range: Personal
+Duration: Special
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell is the reverse of Cure Mortal Wounds. Instead of healing the creature touched, it causes damage. On a successful touch from the priest, the spell inflicts 5d8 + 5/level points of magic damage upon the target, up to a maximum of 5d8 + 50 at level 10. The spell expires once the priest attempts a melee attack or after 5 rounds have passed. The priest gains a +4 bonus to hit the target."
+
+//slay_living:sppr511
+@5110 = "Slay Living"
+@5111 = "Slay Living
+Level: 5
+School: Necromancy
+Sphere: Necromantic
+Range: Personal
+Duration: Special
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: Spell partial
+
+Upon casting this spell, the priest has to touch an opponent in order to visit the effect upon them. On a successful touch from the priest, the victim is instantly killed unless a saving throw vs. spell is made. Even then, the victim will suffer 2d8 + 25 points of magic damage. The spell expires once the priest makes a successful melee attack or after 1 turn has passed. The priest gains a +4 bonus to hit the target. Magic resistance does not affect this spell."
+
+//greater_command:sppr512
+@5120 = "Greater Command"
+@5121 = "Greater Command
+Level: 5
+School: Enchantment
+Sphere: Charm, Combat, Law
+Range: Long
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: Target, and enemies within 20'
+Saving Throw: Special
+
+As with the first level spell Command, this spell enables the priest to command other creatures to lie down and take no action (sleep), but the effects of this spell last up to 10 rounds, and every enemy within 20 feet of the target is affected (save vs. spell at -4 negates). At the start of each round after the first, those affected get another save to attempt to break free from the spell. When the spell duration expires, any creatures still sleeping will awaken."
+
+//righteous_fury:sppr513
+@5130 = "Righteous Fury"
+@5131 = "Righteous Fury
+Level: 5
+School: Alteration
+Sphere: Combat
+Range: Personal
+Duration: 1 round/level
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+This is a powerful combat spell that enhances the priest's physical prowess, charging him with positive energy and transforming him into a juggernaut of destruction. The caster's strength is augmented by 4 points, his armor class is improved by 2 points, and he gains 1 temporary hit point for every level he has attained (up to a maximum of 20). Furthermore, the caster deals an additional 1d6 points of magic damage whenever he strikes an opponent with a melee weapon. The effects last for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
+
+//mass_cure:sppr514
+@5140 = "Mass Cure"
+@5141 = "Mass Cure
+Level: 5
+School: Necromancy
+Sphere: Healing
+Range: Personal
+Duration: Permanent
+Casting Time: 5
+Area of Effect: Sight
+Saving Throw: None
+
+When casting this spell, the priest must picture the faces of his fellow party members clearly and focus on the unity of the group. Upon completion, all party members within sight of the caster are healed by 2d8 + 2/level hit points (up to a maximum of 2d8 + 20)."
+
+//repulsion:sppr515
+@5150 = "Repulsion"
+@5151 = "Repulsion
+Level: 5
+School: Abjuration
+Sphere: Wards
+Range: Personal
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: 10' radius
+Saving Throw: Spell negates
+
+An invisible, mobile field surrounds the caster and prevents creatures from approaching him. Any creature within or entering the field must attempt a save vs. spell at -4 penalty. If it fails, it gets pushed away by 10 feet. Repelled creatures' actions are not otherwise restricted. They can fight other creatures, cast spells and attack the caster with ranged weapons."
+
+//pixie_dust:sppr516
+@5160 = "Pixie Dust"
+@5161 = "Pixie Dust
+Level: 5
+School: Conjuration
+Sphere: Combat
+Range: Personal
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: None
+
+This spell creates a handful of pixie dust that the caster can toss into the air. Allies covered by the dust becomes improved invisible for 1 turn."
+
+//insect_plage:sppr517
+@5170 = "Insect Plague"
+@5171 = "Insect Plague
+Level: 5
+School: Conjuration
+Sphere: Animal
+Range: Long
+Duration: 6 rounds
+Casting Time: 5
+Area of Effect: Target and enemies within 30'
+Saving Throw: Special
+
+When this spell is cast, a mass of creeping, hopping, and flying insects gather and swarm, first attacking the target, and then moving on to all enemies of the caster within the spell's radius.
+
+For the duration of the spell, those affected fight with a -2 penalty to attack rolls and armor class. In addition, each round the victims suffer 2d3 points of damage from insect bites, have a 100% chance of spell failure and on a failed save vs. poison will panic for that round. If a successful save vs. breath at -2 is made, the target manages to avoid most of the swarm, reducing damage from bites by half and completely negating the spell failure penalty. Magic resistance does not affect this spell."
+
+//New spells.
+@5500 = "Polymorph Other"
+@5501 = "Polymorph Other
+Level: 5
+School: Alteration
+Sphere: Animal
+Range: Long
+Duration: Permanent
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: Polymorph negates
+
+Polymorph Other is a powerful magic that permanently alters the form of the creature affected. The target's mental attributes are not affected and they do not receive the special abilities of the new form, but physical attributes are changed to adhere to the new form and the affected creature loses any special abilities it had in its original form. This particular version of the spell will transform the recipient into a squirrel unless a save vs. polymorph is made successfully. The effectiveness of this spell is dependent upon the target's level, with weak creatures being relatively easy to transmute and more powerful creatures being very difficult. Creatures with less than 8 HD/levels save at a -4 penalty, those with 8 - 14 HD/levels save normally, and those with 15 or more HD/levels save with a +2 bonus. The transformation is instant and permanent until a dispel magic is cast successfully upon the affected creature.
+
+Note that all clothes and equipment that the target was wearing will mold into the new form. However, they will return to their previous state once the target dies or the effects are dispelled."
+
+@5510 = "Protection from Fire"
+@5511 = "Protection from Fire
+Level: 5
+School: Abjuration
+Sphere: Elemental, Protection
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Protection from Fire spell is cast, the recipient receives complete protection from fire-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like fiery dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Burning Hands, Fireball, Flame Strike, and Fire Storm. Multiple castings of this spell are not cumulative."
+
+@5520 = "Protection from Cold"
+@5521 = "Protection from Cold
+Level: 5
+School: Abjuration
+Sphere: Elemental, Protection
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Protection from Cold spell is cast, the recipient receives complete protection from cold-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like icy dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Ice Storm and Cone of Cold. Multiple castings of this spell are not cumulative."
+
+@5530 = "Protection from Electricity"
+@5531 = "Protection from Electricity
+Level: 5
+School: Abjuration
+Sphere: Elemental, Protection
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Protection from Electricity spell is cast, the recipient receives complete protection from all electrical-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like electric dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Lightning Bolt, Glyph of Warding, Call Lightning, and Chain Lightning. Multiple castings of this spell are not cumulative."
+
+@5540 = "Protection from Acid"
+@5541 = "Protection from Acid
+Level: 5
+School: Abjuration
+Sphere: Elemental, Protection
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Protection from Acid spell is cast, the recipient receives complete protection from all acid-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like acidic dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Melf's Acid Arrow and Acid Fog. Multiple castings of this spell are not cumulative."
+
+@5550 = "Mass Regenerate"
+@5551 = "Mass Regenerate
+Level: 5
+School: Alteration
+Sphere: Healing
+Range: Touch
+Duration: 1 turn + 2 rounds/level
+Casting Time: 5
+Area of Effect: Sight
+Saving Throw: None
+
+This spell enables the caster to imbue all allies within sight with the ability to regenerate. The creatures affected will regain 2 hit points per round (up to a maximum of 60 hit points within 3 turns at level 10). Multiple castings of this spell are not cumulative."
+
+@5560 = "Animal Growth"
+@5561 = "Animal Growth
+Level: 5
+School: Alteration
+Sphere: Animal
+Range: Personal
+Duration: 3 turns
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: None
+
+When this spell is cast, the caster causes all friendly animals and monsters within range to become tougher, stronger and more tenacious. The alteration grants +2 bonus to attack rolls, damage rolls, armor class and saving throws. It also increases the recipient's hit points by 50%, and these bonus hit points are lost first when the recipient takes damage. Multiple castings of this spell are not cumulative."

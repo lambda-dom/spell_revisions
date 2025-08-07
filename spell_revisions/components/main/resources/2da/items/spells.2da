@@ -5,3 +5,5 @@ cause_light_wounds_a    1       *       *       special 1   01000000    necroman
 cause_moderate_wounds_a 1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *           1000    1       *       0       #suf:a:CLERIC_CAUSE_MODERATE_WOUNDS
 cause_serious_wounds_a  1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *           1000    1       *       0       #suf:a:CLERIC_CAUSE_SERIOUS_WOUNDS
 cause_critical_wounds_a 1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *           1000    1       *       0       #suf:a:CLERIC_CAUSE_CRITICAL_WOUNDS
+cause_mortal_wounds_a   1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *           1000    1       *       0       #suf:a:CLERIC_CAUSE_MORTAL_WOUNDS
+slay_living_a           1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *           1000    1       *       0       #suf:a:CLERIC_SLAY_LIVING

@@ -53,7 +53,7 @@ note(s):
 
 * Animal Summoning III: corrections to wolf summon: int, ac, thac0.
 
-## B. 4. Level 4.
+## A. 4. Level 4.
 
 * Free Action: tightened implementation of immunities.
 
@@ -62,6 +62,16 @@ note(s):
 * Animal Summoning IV: leopard claws missing +1 damage bonus. Leopard: corrections to wis, chr, ac. Corrections to pounce (+2 bonus instead of +4).
 
 * Call Woodland Beings: hamadryad: correct ac, thac0, apr, saves (per description). Remove dire charm and dimension door. Nymph: ac, saves (per description), magic resistance bonus missing, incorrect alignment.
+
+## A. 5. Level 5.
+
+* Animal Summoning V: snake: corrections to ac, str, dex, con.
+
+* Cure Mortal Wounds: casting speed 7 -> 5. Scaling 5 per level.
+
+* Cause Mortal Wounds: same scaling as cure mortal wounds.
+
+* Animal Growth: fixes to range (harmless) and casting speed. Fix target caster -> actor. Extended to monsters.
 
 # B. Arcane spells.
 
@@ -130,4 +140,3 @@ note(s):
 * Secret Word: school enchant (description) -> abjuration.
 
 * Minor Spell Sequencer: out of combat only. 
-
