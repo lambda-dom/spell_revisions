@@ -1,3 +1,73 @@
 //Description strings.
 //Arcane spells.
 //Level 5.
+//summon_shadow:spwi501
+@5010 = "Summon Shadow"
+@5011 = "Summon Shadow
+Level: 5
+School: Necromancy
+Range: Long
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster summons a number of shadows, undead monsters which serve the mage under any conditions. The type and number of creatures that appear depend upon the level of the wizard casting the spell.
+
+9th : 3 shadows
+12th+ : 2 wraiths
+
+The undead creatures will remain under the wizard's control until they are slain or the spell duration expires.
+
+Shadow (3 Hit Dice):
+STR -, DEX 14, CON -, INT 6, WIS 12, CHA 11;  AL Chaotic Evil
+HP 36, AC 5, THAC0 13, Saving Throws 11/13/11/13/13
+1 Attack Per Round, 1d6+1 Cold Damage (Touch +1)
+
+Combat Abilities:
+Chill Touch: creatures struck must save vs. death or lose 1 point of strength for 1 hour
+
+Special Qualities:
+Immune to normal weapons
+Immune to backstab, charm, confusion, hold, poison, sleep, stun, & death effects
+Cold Resistance 100%; Physical Damage Resistance 50%
+
+Wraith (5 Hit Dice):
+STR -, DEX 15, CON -, INT 11, WIS 13, CHA 12;  AL Lawful Evil
+HP 60, AC 4, THAC0 12, Saving Throws 10/13/10/13/13
+1 Attack Per Round, 1d8+1 Cold Damage (Touch +1)
+
+Combat Abilities:
+Life Drain: each successful hit raises the wraith's hit points by 5 for 1 turn and causes the target to save vs. death or lose 1 level
+
+Special Qualities:
+Immune to normal weapons
+Immune to backstab, blindness, charm, confusion, hold, poison, sleep, stun, & death effects
+Cold Resistance 100%; Physical Damage Resistance 50%"
+
+//cloud_kill:spwi502
+@5020 = "Cloudkill"
+@5021 = "Cloudkill
+Level: 5
+School: Conjuration
+Range: Long
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: None
+
+This spell generates a billowing cloud of ghastly, yellowish green vapors that is so toxic as to slay any creature with fewer than 4 Hit Dice, and cause creatures with 4 to 6 Hit Dice to roll saving throws vs. poison with -4 penalties or be slain. Holding one's breath has no effect on the lethality of the spell. Those with more than 6 Hit Dice must leave the cloud immediately, or suffer 1d10 points of poison damage each round while in the area of effect. Undead creatures are not affected by the poisonous cloud."
+
+//cone_cold:spwi503
+@5030 = "Cone of Cold"
+@5031 = "Cone of Cold
+Level: 5
+School: Evocation
+Range: Special
+Duration: Instant
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: Breath half
+
+When this spell is cast, it causes a cone-shaped spray of extreme cold to spring forth from the wizard's hand. The cone is 30 feet in length and spread out in a horizontal arc of 60 degrees in front of the wizard. It drains heat and causes 1d4 + 1 points of damage per level of experience of the wizard (to a maximum of 15d4 + 15 at level 15), with a save vs. breath at -4 allowed for half damage."
+

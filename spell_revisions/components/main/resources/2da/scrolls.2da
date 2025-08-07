@@ -92,6 +92,9 @@ WIZARD_EYE                              scrla1      10      1
 WIZARD_MONSTER_SUMMONING_LEVEL_4        scrl6r      10      1
 WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY scrl6h      10      1
 WIZARD_VITRIOLIC_SPHERE                 scrl6y      10      1
+WIZARD_SUMMON_SHADOW                    scrl2d      10      1
+WIZARD_CLOUDKILL                        scrl2e      10      1
+WIZARD_CONE_OF_COLD                     scrl2f      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1

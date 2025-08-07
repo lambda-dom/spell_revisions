@@ -1,4 +1,5 @@
 2DA V1.0
 *
-                            install name    descr   type    lvl flags       school      sectype                 book_icon                                       abil_icon                                       projectile                          range   speed   patch                   over    destination
-confusion                   1       4010    4011    wizard  4   01000000    enchanter   disabling               #suf:c:WIZARD_CONFUSION                         #suf:b:WIZARD_CONFUSION                         #lbl:sparkle_area_gold_not_party    30      4       *                       1       #spl:WIZARD_CONFUSION
+                install name    descr   type    lvl flags       school      sectype         book_icon                   abil_icon                   projectile      range   speed   patch    over    destination
+cloud_kill      1       5020    5021    wizard  5   01000000    conjurer    battleground    #suf:c:WIZARD_CLOUDKILL     #suf:b:WIZARD_CLOUDKILL     #lbl:cloud_kill 30      5       *        1       #spl:WIZARD_CLOUDKILL
+cone_cold       1       5030    5031    wizard  5   01000000    invoker     offensivedamage #suf:c:WIZARD_CONE_OF_COLD  #suf:b:WIZARD_CONE_OF_COLD  #lbl:cone_cold  10      1       *        1       #spl:WIZARD_CONE_OF_COLD
