@@ -245,3 +245,34 @@ Saving Throw: None
 
 This spell creates a handful of pixie dust that the caster can toss into the air. Allies covered by the dust becomes improved invisible for 1 turn."
 
+//insect_plage:sppr517
+@5170 = "Insect Plague"
+@5171 = "Insect Plague
+Level: 5
+School: Conjuration
+Sphere: Animal
+Range: Long
+Duration: 6 rounds
+Casting Time: 5
+Area of Effect: Target and enemies within 30'
+Saving Throw: Special
+
+When this spell is cast, a mass of creeping, hopping, and flying insects gather and swarm, first attacking the target, and then moving on to all enemies of the caster within the spell's radius.
+
+For the duration of the spell, those affected fight with a -2 penalty to attack rolls and armor class. In addition, each round the victims suffer 2d3 points of damage from insect bites, have a 100% chance of spell failure and on a failed save vs. poison will panic for that round. If a successful save vs. breath at -2 is made, the target manages to avoid most of the swarm, reducing damage from bites by half and completely negating the spell failure penalty. Magic resistance does not affect this spell."
+
+//New spells.
+@5500 = "Polymorph Other"
+@5501 = "Polymorph Other
+Level: 5
+School: Alteration
+Sphere: Animal
+Range: Long
+Duration: Permanent
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: Polymorph negates
+
+Polymorph Other is a powerful magic that permanently alters the form of the creature affected. The target's mental attributes are not affected and they do not receive the special abilities of the new form, but physical attributes are changed to adhere to the new form and the affected creature loses any special abilities it had in its original form. This particular version of the spell will transform the recipient into a squirrel unless a save vs. polymorph is made successfully. The effectiveness of this spell is dependent upon the target's level, with weak creatures being relatively easy to transmute and more powerful creatures being very difficult. Creatures with less than 8 HD/levels save at a -4 penalty, those with 8 - 14 HD/levels save normally, and those with 15 or more HD/levels save with a +2 bonus. The transformation is instant and permanent until a dispel magic is cast successfully upon the affected creature.
+
+Note that all clothes and equipment that the target was wearing will mold into the new form. However, they will return to their previous state once the target dies or the effects are dispelled."
