@@ -1026,8 +1026,7 @@ APPEND ~spell.ids~ ~2423 WIZARD_MONSTER_SUMMONING_LEVEL_4~
 ADD_SPELL ~spell_rev\spwi4##\spwi426.spl~ 2 4 ~WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY~  // Protection from Elemental Energy
   SAY NAME1 @873    SAY UNIDENTIFIED_DESC @874
 
-/*-----------------------level 5-----------------------*/
-
+//Level 5.
 COPY ~spell_rev\spwi5##\spwi501.spl~     ~override~  // Summon Shadow (replaces Animate Dead)
   SAY NAME1 @611    SAY UNIDENTIFIED_DESC @612
 COPY ~spell_rev\spwi5##\scrl2d.itm~     ~override~
