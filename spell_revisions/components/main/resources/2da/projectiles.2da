@@ -27,3 +27,5 @@ greater_command     1       greater_command     0           *                   
 mass_cure           1       mass_cure           0           *                   0       #lit:dlmsscur
 repulsion           1       repulsion           0           *                   0       #lit:dlrplsin
 mass_regenerate     1       mass_regenerate     0           *                   0       #lit:dlmssreg
+cloud_kill          1       cloud_kill          1           *                   0       #lit:dlcldkll
+cone_cold           1       cone_cold           0           *                   0       #lit:dlconecl

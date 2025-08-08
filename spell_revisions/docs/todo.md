@@ -112,6 +112,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Protection from Elemental Energy: still needs acid and electricity protection.
 
+## B. 5. Level 5.
+
+* Summon Shadow: only description is in.
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
