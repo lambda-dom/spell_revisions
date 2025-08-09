@@ -1,2 +1,37 @@
 //Libraries.
-//Mod libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
+
+//Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "vvcs"
+RET_ARRAY vvcs = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "5"
+    dir = "%resources%/2da/arcane"
+RET_ARRAY spells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION shadow_door STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215                  //Play vvc.
+    STR_VAR
+        resource = "shadow_door"
+        ext = "vvc"
+        match_resource = "vvc#res"
+        references = "vvcs"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "shadow_door_a"
+        match_resource = "door#res"
+        references = "spells"
+    END
+END
+

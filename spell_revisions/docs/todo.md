@@ -116,6 +116,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Summon Shadow: only description is in.
 
+* Monster Summon 5: only description is in.
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.

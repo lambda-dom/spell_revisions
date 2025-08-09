@@ -29,3 +29,4 @@ repulsion           1       repulsion           0           *                   
 mass_regenerate     1       mass_regenerate     0           *                   0       #lit:dlmssreg
 cloud_kill          1       cloud_kill          1           *                   0       #lit:dlcldkll
 cone_cold           1       cone_cold           0           *                   0       #lit:dlconecl
+shadow_door         1       shadow_door         0           *                   0       #lit:dlshdoor

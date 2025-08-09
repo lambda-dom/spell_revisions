@@ -61,6 +61,12 @@ regenerate_critical_wounds_c    1       *       0       #suf:c:CLERIC_REGENERATE
 animal_summon_5_a               1       *       0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_5
 animal_summon_5_b               1       *       0       #suf:b:CLERIC_ANIMAL_SUMMONING_LEVEL_5
 animal_summon_5_c               1       *       0       #suf:c:CLERIC_ANIMAL_SUMMONING_LEVEL_5
+mass_regenerate_a               1       *       0       #suf:a:CLERIC_MASS_REGENERATE
+mass_regenerate_b               1       *       0       #suf:b:CLERIC_MASS_REGENERATE
+mass_regenerate_c               1       *       0       #suf:c:CLERIC_MASS_REGENERATE
+animal_growth_a                 1       *       0       #suf:a:CLERIC_ANIMAL_GROWTH
+animal_growth_b                 1       *       0       #suf:b:CLERIC_ANIMAL_GROWTH
+animal_growth_c                 1       *       0       #suf:c:CLERIC_ANIMAL_GROWTH
 obscuring_mist_a                1       *       0       #suf:a:WIZARD_OBSCURING_MIST
 obscuring_mist_b                1       *       0       #suf:b:WIZARD_OBSCURING_MIST
 obscuring_mist_c                1       *       0       #suf:c:WIZARD_OBSCURING_MIST
@@ -101,9 +107,6 @@ protection_elemental_energy_c   1       *       0       #suf:c:WIZARD_PROTECTION
 vitriolic_sphere_a              1       *       0       #suf:a:WIZARD_VITRIOLIC_SPHERE
 vitriolic_sphere_b              1       *       0       #suf:b:WIZARD_VITRIOLIC_SPHERE
 vitriolic_sphere_c              1       *       0       #suf:c:WIZARD_VITRIOLIC_SPHERE
-mass_regenerate_a               1       *       0       #suf:a:CLERIC_MASS_REGENERATE
-mass_regenerate_b               1       *       0       #suf:b:CLERIC_MASS_REGENERATE
-mass_regenerate_c               1       *       0       #suf:c:CLERIC_MASS_REGENERATE
-animal_growth_a                 1       *       0       #suf:a:CLERIC_ANIMAL_GROWTH
-animal_growth_b                 1       *       0       #suf:b:CLERIC_ANIMAL_GROWTH
-animal_growth_c                 1       *       0       #suf:c:CLERIC_ANIMAL_GROWTH
+monster_summon_5_a              1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_5
+monster_summon_5_b              1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_5
+monster_summon_5_c              1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_5

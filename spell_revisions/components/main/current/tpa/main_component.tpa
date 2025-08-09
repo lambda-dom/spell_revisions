@@ -1046,8 +1046,6 @@ COPY_EXISTING ~spccoldl.bam~ ~override~
 
 COPY ~spell_rev\spwi5##\spwi504.spl~     ~override~  // Monster Summoning V (originally Monster Summoning III)
   SAY NAME1 @617    SAY UNIDENTIFIED_DESC @618
-COPY ~spell_rev\spwi5##\scrl2g.itm~     ~override~
-  SAY NAME2 @617    SAY IDENTIFIED_DESC   @618
 COPY ~spell_rev\spwi5##\ogregrsu.eff~     ~override~
 COPY ~spell_rev\spwi5##\ogregrsu.cre~     ~override~
 COPY ~spell_rev\spwi5##\ogregrsu.itm~     ~override~
@@ -1055,21 +1053,7 @@ COPY ~spell_rev\spwi5##\ogremasu.eff~     ~override~
 COPY ~spell_rev\spwi5##\ogremasu.cre~     ~override~
 COPY ~spell_rev\spwi5##\ogremasu.itm~     ~override~
 COPY ~spell_rev\spwi5##\ogremasu.bcs~     ~override~
-COPY ~spell_rev\spwi5##\spwi504a.bam~     ~override~
-COPY ~spell_rev\spwi5##\spwi504b.bam~     ~override~
-COPY ~spell_rev\spwi5##\spwi504c.bam~     ~override~
 APPEND ~spell.ids~ ~2504 WIZARD_MONSTER_SUMMONING_LEVEL_5~
-
-COPY ~spell_rev\spwi5##\spwi505.spl~     ~override~  // Shadow Door
-  SAY NAME1 @619    SAY UNIDENTIFIED_DESC @620
-COPY ~spell_rev\spwi5##\scrl2h.itm~     ~override~
-  SAY NAME2 @619    SAY IDENTIFIED_DESC   @620
-ADD_PROJECTILE ~spell_rev\projectles\dvsdoor.pro~
-COPY ~spell_rev\spwi5##\spwi505d.spl~     ~override~
-  WRITE_SHORT 0x98 %dvsdoor%
-COPY ~spell_rev\spwi5##\dvsdoor.eff~     ~override~
-COPY ~spell_rev\spwi5##\dvsdoor.bam~     ~override~
-COPY ~spell_rev\spwi5##\dvsdoor.vvc~     ~override~
 
 COPY ~spell_rev\spwi5##\spwi506.spl~     ~override~  // Domination
   SAY NAME1 @621    SAY UNIDENTIFIED_DESC @622
