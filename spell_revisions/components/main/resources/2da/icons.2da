@@ -113,3 +113,9 @@ monster_summon_5_c              1       *       0       #suf:c:WIZARD_MONSTER_SU
 waves_fatigue_a                 1       *       0       #suf:a:WIZARD_WAVES_OF_FATIGUE
 waves_fatigue_b                 1       *       0       #suf:b:WIZARD_WAVES_OF_FATIGUE
 waves_fatigue_c                 1       *       0       #suf:c:WIZARD_WAVES_OF_FATIGUE
+spell_shield_a                  1       *       0       #suf:a:WIZARD_SPELL_SHIELD
+spell_shield_b                  1       *       0       #suf:b:WIZARD_SPELL_SHIELD
+spell_shield_c                  1       *       0       #suf:c:WIZARD_SPELL_SHIELD
+spell_deflection_a              1       *       1       #suf:a:WIZARD_SPELL_DEFLECTION
+spell_deflection_b              1       *       1       #suf:b:WIZARD_SPELL_DEFLECTION
+spell_deflection_c              1       *       1       #suf:c:WIZARD_SPELL_DEFLECTION

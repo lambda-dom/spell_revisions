@@ -359,6 +359,58 @@ Saving Throw: Breath half
 
 When this spell is cast, a glowing orb of emerald acid streaks to the target and explodes in a 10-foot radius. Each creature in the area must make a save vs. breath. On a failed save, a creature takes 10d4 acid damage and 4d4 acid damage at the end of its next 2 rounds. On a successful save, a creature takes half the initial damage and half damage at the end of each round."
 
+//protection_electricity:spwi512, moved to level 4.
+@4600 = "Protection from Electricity"
+@4601 = "Protection from Electricity
+Level: 4
+School: Abjuration
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Protection from Electricity spell is cast, the recipient receives complete protection from all electrical-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like electric dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Lightning Bolt, Glyph of Warding, Call Lightning, and Chain Lightning. Multiple castings of this spell are not cumulative."
+
+//protection_acid:spwi517, moved to level 4.
+@4610 = "Protection from Acid"
+@4611 = "Protection from Acid
+Level: 4
+School: Abjuration
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Protection from Acid spell is cast, the recipient receives complete protection from all acid-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like acidic dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Melf's Acid Arrow and Acid Fog. Multiple castings of this spell are not cumulative."
+
+//Moved from level 3.
+@4620 = "Protection from Fire"
+@4621 = "Protection from Fire
+Level: 4
+School: Abjuration
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Protection from Fire spell is cast, the recipient receives complete protection from all fire-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like fiery dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Burning Hands, Fireball, Flame Strike, and Fire Storm. Multiple castings of this spell are not cumulative."
+
+//Moved from level 3.
+@4630 = "Protection from Cold"
+@4631 = "Protection from Cold
+Level: 4
+School: Abjuration
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Protection from Cold spell is cast, the recipient receives complete protection from all cold-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like icy dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Ice Storm and Cone of Cold. Multiple castings of this spell are not cumulative."
+
 
 //Enchanted weapon aux spell names.
 @4910 = "Axe"

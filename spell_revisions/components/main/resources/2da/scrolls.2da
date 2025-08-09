@@ -105,6 +105,16 @@ WIZARD_DISPELLING_SCREEN                scrl6s      10      1
 WIZARD_PROTECTION_FROM_NORMAL_WEAPONS   scrl6t      10      1
 WIZARD_PROTECTION_FROM_ELECTRICITY      scrl5t      10      1
 WIZARD_BREACH                           scrl6u      10      1
+WIZARD_LOWER_RESISTANCE                 scrl6v      10      1
+WIZARD_ORACLE                           scrl6w      10      1
+WIZARD_CONJURE_LESSER_FIRE_ELEMENTAL    scrl6x      10      1
+WIZARD_PROTECTION_FROM_ACID             *           10      1
+WIZARD_PHANTOM_BLADE                    scrl6z      10      1
+WIZARD_SPELL_SHIELD                     scrl8x      10      1
+WIZARD_CONJURE_LESSER_AIR_ELEMENTAL     scrl7b      10      1
+WIZARD_CONJURE_LESSER_EARTH_ELEMENTAL   scrl7c      10      1
+WIZARD_SPELL_DEFLECTION                 scrl7d      10      1
+WIZARD_SUN_FIRE                         scrlar      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1

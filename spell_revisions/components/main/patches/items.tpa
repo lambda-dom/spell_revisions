@@ -7,18 +7,23 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 //Load references.
 LAF get_component_resources_dir RET resources = dir END
 LAF get_table_references STR_VAR
-    tables = "subspells"
+    tables = "effects"
     dir = "%resources%/2da/items"
-RET_ARRAY subspells = references END
+RET_ARRAY effects = references END
 
 LAF get_table_references STR_VAR
     tables = "spells"
     dir = "%resources%/2da/items"
 RET_ARRAY spells = references END
 
+LAF get_table_references STR_VAR
+    tables = "subspells"
+    dir = "%resources%/2da/items"
+RET_ARRAY subspells = references END
+
 
 //Patches.
-DEFINE_PATCH_FUNCTION shillelagh_itm BEGIN
+DEFINE_PATCH_FUNCTION shillelagh_itm STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "shillelagh_entangle"
@@ -35,7 +40,7 @@ DEFINE_PATCH_FUNCTION shillelagh_itm BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION cause_light_itm BEGIN
+DEFINE_PATCH_FUNCTION cause_light_itm STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "cause_light_wounds_a"
@@ -52,7 +57,7 @@ DEFINE_PATCH_FUNCTION cause_light_itm BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION cause_moderate_itm BEGIN
+DEFINE_PATCH_FUNCTION cause_moderate_itm STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "cause_moderate_wounds_a"
@@ -69,7 +74,7 @@ DEFINE_PATCH_FUNCTION cause_moderate_itm BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION cause_serious_itm BEGIN
+DEFINE_PATCH_FUNCTION cause_serious_itm STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "cause_serious_wounds_a"
@@ -86,7 +91,7 @@ DEFINE_PATCH_FUNCTION cause_serious_itm BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION cause_critical_itm BEGIN
+DEFINE_PATCH_FUNCTION cause_critical_itm STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
@@ -97,7 +102,7 @@ DEFINE_PATCH_FUNCTION cause_critical_itm BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION cause_mortal_itm BEGIN
+DEFINE_PATCH_FUNCTION cause_mortal_itm STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
@@ -108,7 +113,7 @@ DEFINE_PATCH_FUNCTION cause_mortal_itm BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION slay_living_itm BEGIN
+DEFINE_PATCH_FUNCTION slay_living_itm STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
@@ -119,7 +124,7 @@ DEFINE_PATCH_FUNCTION slay_living_itm BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION shocking_grasp_itm BEGIN
+DEFINE_PATCH_FUNCTION shocking_grasp_itm STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "shocking_grasp_stun"
@@ -136,7 +141,7 @@ DEFINE_PATCH_FUNCTION shocking_grasp_itm BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION ghoul_touch_itm BEGIN
+DEFINE_PATCH_FUNCTION ghoul_touch_itm STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR
         value = "ghoul_touch_hold"
@@ -150,5 +155,16 @@ DEFINE_PATCH_FUNCTION ghoul_touch_itm BEGIN
     STR_VAR
         match_resource = "hold#res"
         resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION phantom_blade_itm STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "phantom_blade_magic_damage"
+        ext = "eff"
+        match_resource = "damg#res"
+        references = "effects"
     END
 END

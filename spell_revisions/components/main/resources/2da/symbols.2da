@@ -58,5 +58,6 @@ WIZARD_MONSTER_SUMMONING_LEVEL_4        1       wizard  4       *       0       
 WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY 1       wizard  4       *       0           *
 WIZARD_VITRIOLIC_SPHERE                 1       wizard  4       *       0           *
 WIZARD_SUMMON_SHADOW                    1       wizard  5       *       0           *
+WIZARD_MONSTER_SUMMONING_LEVEL_5        1       wizard  5       *       0           *
 WIZARD_WAVES_OF_FATIGUE                 1       wizard  5       *       0           *
 WIZARD_DISPELLING_SCREEN                1       wizard  5       *       0           *

@@ -120,7 +120,7 @@ Casting Time: 1
 Area of Effect: Special
 Saving Throw: Special
 
-By means of this spell, the wizard creates the illusion of a door. The illusion also permits the wizard to appear to step through this "door" and disappear. In reality he has darted aside and can flee, totally invisible, for the spell duration. Opponents within 5 feet of the caster must save vs. spell or be fooled into following the caster through the door, becoming trapped in an extradimensional room for up to 4 rounds. Creatures with exceptional intelligence may escape the illusion faster, while creatures who can see through illusions (e.g. dragons, liches, demons), or are under the effects of a True Seeing spell, are unaffected."
+By means of this spell, the wizard creates the illusion of a door. The illusion also permits the wizard to appear to step through this door and disappear. In reality he has darted aside and can flee, totally invisible, for the spell duration. Opponents within 5 feet of the caster must save vs. spell or be fooled into following the caster through the door, becoming trapped in an extradimensional room for up to 4 rounds. Creatures with exceptional intelligence may escape the illusion faster, while creatures who can see through illusions (e.g. dragons, liches, demons), or are under the effects of a True Seeing spell, are unaffected."
 
 //domination:spwi506
 @5060 = "Domination"
@@ -202,19 +202,6 @@ Saving Throw: None
 
 This spell creates an immobile, faintly shimmering magical sphere around the caster that cannot be penetrated by non-magical weapons; all such weapons are harmlessly deflected (missile weapons strike the sphere, then immediately fall to the ground). This does not include weapons that are blessed or enchanted. The effect lasts for the duration of the spell or until dispelled."
 
-//protection_electricity:spwi512, moved to level 4.
-@5120 = "Protection from Electricity"
-@5121 = "Protection from Electricity
-Level: 4
-School: Abjuration
-Range: Touch
-Duration: 1 turn/level
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
-
-When a Protection from Electricity spell is cast, the recipient receives complete protection from all electrical-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like electric dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Lightning Bolt, Glyph of Warding, Call Lightning, and Chain Lightning. Multiple castings of this spell are not cumulative."
-
 //breach:spwi513
 @5130 = "Breach"
 @5131 = "Breach
@@ -232,3 +219,162 @@ The specific protection spells dispelled by Breach are: Resist Fear, Resist Elem
 
 The combat protection spells dispelled by Breach are: Mage Armor, Shield, Armor of Faith, Barkskin, Protection from Missiles, Spirit Armor, Stoneskin, Protection from Normal Weapons, Protection from Magical Weapons, Physical Mirror, Prismatic Mantle, Moment of Prescience and Absolute Immunity."
 
+//lower_resistance:spwi514
+@5140 = "Lower Resistance"
+@5141 = "Lower Resistance
+Level: 5
+School: Alteration
+Range: Long
+Duration: 1 round/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When cast upon a target creature, this spell will lower their magic resistance by 2% per level of the caster (up to a maximum of 40% at 20th level). There is no saving throw vs. this spell and magic resistance is ignored. This spell is not affected by dispel magic. Once it has been cast, there is no way to cancel the effects until the spell expires.
+
+For example, if a creature has 50% magic resistance and this spell is cast on it by a 15th level mage, then its magic resistance would be lowered by 30% automatically. This effect is cumulative for each casting of this spell. If this spell was cast upon this same creature again, the creature's magic resistance would be 50% - 30% (initial casting) - 30% (current casting) which would leave the creature with 0% magic resistance after both spells have been cast."
+
+//oracle:spwi515
+@5150 = "Oracle"
+@5151 = "Oracle
+Level: 5
+School: Divination
+Range: Personal
+Duration: Instant
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: None
+
+When this spell is cast, an area roughly 30 feet in radius around the caster will be affected. All hostile illusion/phantasm spells in this area will be dispelled. This spell only affects one's enemies.
+
+The spells that are affected by this are: Reflected Image, Invisibility, Blur, Mirror Image, Ghost Armor, Invisibility Sphere, Improved Invisibility, Shadow Door, Pixie Dust, Mislead, Project Image, and Mass Invisibility."
+
+//conjure_lesser_fire_elemental:spwi516
+@5160 = "Conjure Lesser Fire Elemental"
+@5161 = "Conjure Lesser Fire Elemental
+Level: 5
+School: Conjuration
+Range: Medium
+Duration: 1 turn + 1 round/level
+Casting Time: 8
+Area of Effect: Special
+Saving Throw: None
+
+Upon casting Conjure Lesser Fire Elemental, the caster opens a special gate to the Elemental Plane of Fire, and a fire elemental is summoned to the vicinity of the spellcaster. The elemental has 8 Hit Dice and will serve the caster's every whim until banished back to its home plane, the spell duration expires, or upon the elemental's death. It is particularly difficult to maintain a gate to the Inner Planes - there is a 15% chance that the portal opened by the caster will collapse before the elemental enters the Prime Material Plane.
+
+Lesser Fire Elemental (8 Hit Dice):
+STR 14, DEX 16, CON 16, INT 6, WIS 11, CHA 11;  AL Neutral
+HP 80, AC 2, THAC0 10, Saving Throws 10/12/11/11/13
+2 Attacks Per Round, 2d4 + 2 Slashing +2d4 Fire Damage (Fist +2)
+
+Special Qualities:
+Immune to normal weapons
+Immune to hold, poison, polymorph, sleep and stun effects
+Fire Resistance 100%
+Slashing, Crushing, Piercing, & Missile Resistance 20%"
+
+//phantom_blade:spwi518
+@5180 = "Phantom Blade"
+@5181 = "Phantom Blade
+Level: 5
+School: Illusion
+Range: Personal
+Duration: 1 round/level
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+This spell creates a translucent, weightless, shadowlike sword made of material from the Plane of Shadow that extends 3 feet from the caster's hand. The caster wields the phantom blade as if it was a long sword but he suffers no penalty for non-proficiency. The sword deals 1d12 + 4 points of magic damage to its victims, and an additional 10 points of damage against undead creatures. Due to its ethereal nature, strength bonuses do not apply, but attacks with the phantom blade are considered melee touch attacks, and thus gain a +4 bonus to hit. Furthermore, a successful strike temporarily scrambles magic, causing any spells the target casts in the next round to fail (save vs. spell at a -4 penalty negates). The blade is considered to be of +4 enchantment when determining what it can hit, but it cannot harm inorganic things because it has no solid existence. The phantom blade can only be used by the caster, and remains in his hand for the duration of the spell or until dispelled."
+
+//spell_shield:spwi519
+@5190 = "Spell Shield"
+@5191 = "Spell Shield
+Level: 5
+School: Abjuration
+Range: Personal
+Duration: 5 turns
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+When this spell is cast the wizard is protected from the next magical attack against him. If one of those spells is cast at the wizard this spell activates and absorbs the attack. However, this only works once as this spell is consumed in the process.
+
+The spells that Spell Shield protects the wizard from are: Spell Thrust, Secret Word, Pierce Magic, Ruby Ray, Warding Whip, Pierce Shield, and Spellstrike."
+
+//conjure_lesser_air_elemental:spwi520
+@5200 = "Conjure Lesser Air Elemental"
+@5201 = "Conjure Lesser Air Elemental
+Level: 5
+School: Conjuration
+Range: Medium
+Duration: 1 turn + 1 round/level
+Casting Time: 8
+Area of Effect: Special
+Saving Throw: None
+
+Upon casting Conjure Lesser Air Elemental, the caster opens a special gate to the Elemental Plane of Air, and an air elemental is summoned to the vicinity of the spellcaster. The elemental has 8 Hit Dice and will serve the caster's every whim until banished back to its home plane, the spell duration expires, or upon the elemental's death. It is particularly difficult to maintain a gate to the Inner Planes - there is a 15% chance that the portal opened by the caster will collapse before the elemental enters the Prime Material Plane.
+
+Lesser Air Elemental (8 Hit Dice):
+STR 14, DEX 17, CON 16, INT 6, WIS 11, CHA 11;  AL Neutral
+HP 80, AC 0, THAC0 8, Saving Throws 10/12/11/11/13
+3 Attacks Per Round, 1d6 + 2 Piercing Damage (Fist +2)
+
+Special Qualities:
+Immune to normal weapons
+Immune to hold, poison, sleep, & stun effects
+Slashing, Crushing and Piercing Resistance 20%; Missile Resistance 60%"
+
+//conjure_lesser_earth_elemental:spwi521
+@5210 = "Conjure Lesser Earth Elemental"
+@5211 = "Conjure Lesser Earth Elemental
+Level: 5
+School: Conjuration
+Range: Medium
+Duration: 1 turn + 1 round/level
+Casting Time: 8
+Area of Effect: Special
+Saving Throw: None
+
+Upon casting Conjure Lesser Earth Elemental, the caster opens a special gate to the Elemental Plane of Earth, and an earth elemental is summoned to the vicinity of the spellcaster. The elemental has 8 Hit Dice and will serve the caster's every whim until banished back to its home plane, the spell duration expires, or upon the elemental's death. It is particularly difficult to maintain a gate to the Inner Planes - there is a 15% chance that the portal opened by the caster will collapse before the elemental enters the Prime Material Plane.
+
+Lesser Earth Elemental (8 Hit Dice):
+STR 19, DEX 8, CON 18, INT 6, WIS 11, CHA 11;  AL Neutral
+HP 96, AC 4, THAC0 8, Saving Throws 10/12/11/11/13
+2 Attacks Per Round, 2d6 + 9 Crushing Damage (Fist +2)
+
+Special Qualities:
+Immune to normal weapons
+Immune to hold, poison, polymorph, sleep, & stun effects
+Slashing, Piercing and Missile Resistance 40%"
+
+//spell_deflection:spwi522
+@5220 = "Spell Deflection"
+@5221 = "Spell Deflection
+Level: 5
+School: Abjuration
+Range: Personal
+Duration: 5 turns
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+This abjuration spell causes any spells cast against the wizard to be absorbed and consumed. This affects a total of 9 spell levels, but having 1 level left of protection means a 1st level spell would get absorbed, as well as a 7th level spell. Spells greater than 7th level will not be affected. This spell will not protect the caster from a dispel magic. However, it will not be affected by a dispel magic, either.
+
+This spell absorbs spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the wizard (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud)."
+
+//fireburst:spwi523, renamed sunfire
+@5230 = "Fireburst"
+@5231 = "Fireburst
+Level: 5
+School: Evocation
+Range: Personal
+Duration: Instant
+Casting Time: 1
+Area of Effect: 15' radius
+Saving Throw: Breath half
+
+This spell creates an explosive burst of flame that detonates with a low roar and delivers damage proportional to the level of the wizard who cast it, similar to a fireball. The wizard gestures with his hand and the entire area around him erupts in flames, striking all except the caster for 1d6 points of damage per level of the wizard (up to a maximum of 15d6). Creatures who fail their saving throw vs. breath at -4 suffer full damage from the blast. Those who roll successful saving throws manage to dodge, fall flat, or roll aside, each receiving half damage."
+
+
+//Strings for display string [139] opcodes.
+@10501 = "Shielded from Magic Attacks"

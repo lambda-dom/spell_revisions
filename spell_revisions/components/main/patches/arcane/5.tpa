@@ -1,9 +1,17 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
 //Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
 LAF get_table_references STR_VAR
     tables = "vvcs"
 RET_ARRAY vvcs = references END
@@ -35,3 +43,30 @@ DEFINE_PATCH_FUNCTION shadow_door STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION phantom_blade STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "phantom_blade"
+        ext = "itm"
+        match_resource = "item#res"
+        references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION spell_shield STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10501
+        match_opcode = 226                  //Spell type protection.
+    END
+END
+
+DEFINE_PATCH_FUNCTION fireburst STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 148                  //Cast spell at point.
+    STR_VAR
+        resource = "fireburst_a"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END

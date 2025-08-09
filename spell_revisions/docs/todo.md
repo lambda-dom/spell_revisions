@@ -126,6 +126,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Protection from Electricty: only description in; move to level 4.
 
+* Conjure (Lesser) Elemental: Only descriptions in. Add water elemental and consolidate all spells in one.
+
+* Spell Deflection: add display string.
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.

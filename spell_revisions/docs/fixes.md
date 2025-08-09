@@ -146,3 +146,5 @@ note(s):
 Dispelling Screen: undocumented bonus of mr (to be patched out later?).
 
 Breach: range 40 -> 30 per description (Long).
+
+Phantom Blade: correct damage to undead. Moved prof opcode to it.
