@@ -118,6 +118,14 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Monster Summon 5: only description is in.
 
+* Shadow Door: add a True Seeing state so that we can put immunity to the spell in the spell itself (see Spook above).
+
+* Waves of Fatigue: add immunity for "non-living" (undead, elementals, constructs, etc.).
+
+* Dispelling Screen: the base spell makes no sense so have to implement the patching.
+
+* Protection from Electricty: only description in; move to level 4.
+
 # C. General.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
@@ -146,3 +154,5 @@ note(s):
 * As per Cure Mortal Wounds description implement immunity for non-living and extra-planar for all cure spells.
 
 * Elemental protection: deal more systematically with elemental protection: if elemental resist >= 100 then protection from resource to block spell.
+
+* Anti-undead spells like hold undead should bypass magic resistance.

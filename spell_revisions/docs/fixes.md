@@ -140,3 +140,9 @@ note(s):
 * Secret Word: school enchant (description) -> abjuration.
 
 * Minor Spell Sequencer: out of combat only. 
+
+## B. 5. Level 5.
+
+Dispelling Screen: undocumented bonus of mr (to be patched out later?).
+
+Breach: range 40 -> 30 per description (Long).

@@ -97,6 +97,14 @@ WIZARD_CLOUDKILL                        scrl2e      10      1
 WIZARD_CONE_OF_COLD                     scrl2f      10      1
 WIZARD_MONSTER_SUMMONING_LEVEL_5        scrl2g      10      1
 WIZARD_SHADOW_DOOR                      scrl2h      10      1
+WIZARD_DOMINATION                       scrl5n      10      1
+WIZARD_HOLD_MONSTER                     scrl5o      10      1
+WIZARD_WAVES_OF_FATIGUE                 scrl5p      10      1
+WIZARD_FEEBLEMIND                       scrl5q      10      1
+WIZARD_DISPELLING_SCREEN                scrl6s      10      1
+WIZARD_PROTECTION_FROM_NORMAL_WEAPONS   scrl6t      10      1
+WIZARD_PROTECTION_FROM_ELECTRICITY      scrl5t      10      1
+WIZARD_BREACH                           scrl6u      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1
