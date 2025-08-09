@@ -252,3 +252,22 @@ DEFINE_PATCH_FUNCTION wraith STR_VAR destination = "*" BEGIN
         array = "items"
     END
 END
+
+DEFINE_PATCH_FUNCTION ogre_berserker STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "ogre_berserker_morning_star"
+        slot = "weapon1"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION ogre_mage STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "ogre_mage_katana"
+        slot = "weapon1"
+        array = "items"
+    END
+END
+

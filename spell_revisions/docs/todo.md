@@ -110,21 +110,17 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Wizard Eye: change from non-stacking to refreshing? Review creature.
 
-* Protection from Elemental Energy: still needs acid and electricity protection.
+* Protection from Elemental Energy: only descriptions of elemental spells in.
 
 ## B. 5. Level 5.
 
-* Summon Shadow: only description is in.
-
-* Monster Summon 5: only description is in.
+* Monster Summon 5: Ogre Mage casts haste not slow which he does not have; does not use invis at will which is not memo anyway.
 
 * Shadow Door: add a True Seeing state so that we can put immunity to the spell in the spell itself (see Spook above).
 
 * Waves of Fatigue: add immunity for "non-living" (undead, elementals, constructs, etc.).
 
 * Dispelling Screen: the base spell makes no sense so have to implement the patching.
-
-* Protection from Electricty: only description in; move to level 4.
 
 * Conjure (Lesser) Elemental: Only descriptions in. Add water elemental and consolidate all spells in one.
 

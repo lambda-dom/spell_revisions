@@ -1,0 +1,218 @@
+IF
+    !StateCheck(Myself,STATE_CHARMED)
+    !Allegiance(Myself,EVILCUTOFF)
+    !Allegiance(Myself,ALLY)
+THEN
+    RESPONSE #100
+        Ally()
+        Continue()
+END
+
+IF
+    ActionListEmpty()
+    !Range(LastSummonerOf(Myself),10)
+    !See(LastSummonerOf(Myself))
+    CombatCounter(0)
+    !Exists([EVILCUTOFF])
+THEN
+    RESPONSE #100
+        SetGlobal("dv_SummonInFormation","LOCALS",1)
+        FollowObjectFormation(LastSummonerOf(Myself),3,3)
+END
+
+IF
+    Global("dv_SummonInFormation","LOCALS",1)
+    OR(2)
+        Exists([EVILCUTOFF])
+        !CombatCounter(0)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_SummonInFormation","LOCALS",0)
+        ClearActions(Myself)
+        Continue()
+END
+
+IF
+    HotKey(E)
+    Global("dv_AIOffSwitch","LOCALS",1)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_AIOffSwitch","LOCALS",0)
+        SmallWait(1)
+        DisplayStringHead(Myself,16469)  // od
+END
+
+IF
+    HotKey(D)
+    Global("dv_AIOffSwitch","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_AIOffSwitch","LOCALS",1)
+        SmallWait(1)
+        DisplayStringHead(Myself,16470)  // e S
+END
+
+IF
+    Global("dv_AIOffSwitch","LOCALS",1)
+THEN
+    RESPONSE #100
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_SHIELD)  // SPWI114.SPL (harmCo)
+    !StateCheck(Myself,STATE_INVISIBLE)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(Myself,WIZARD_SHIELD)  // SPWI114.SPL (harmCo)
+END
+
+IF
+    StateCheck(Myself,STATE_INVISIBLE)
+    GlobalTimerNotExpired("inviswander","LOCALS")
+THEN
+    RESPONSE #100
+        RandomWalkContinuous()
+END
+
+IF
+    !GlobalTimerNotExpired("invis","LOCALS")
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    See(NearestEnemyOf(Myself))
+    !CheckStatGT(NearestEnemyOf(Myself),0,SEEINVISIBLE)
+    !CheckStatGT(NearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(SecondNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(ThirdNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(FourthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(FifthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(SixthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(SeventhNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(EighthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(NinthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(TenthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !StateCheck(Myself,STATE_INVISIBLE)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        ApplySpell(Myself,WIZARD_INVISIBILITY)  // SPWI206.SPL (l, 10' Radiu)
+        SetGlobalTimer("invis","LOCALS",THREE_ROUNDS)
+        SetGlobalTimer("inviswander","LOCALS",3)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (PersonDire C)
+    See(NearestEnemyOf(Myself))
+    HPLT(LastSeenBy(Myself),15)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (PersonDire C)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_SLOW)  // SPWI312.SPL (thWi)
+    NumCreatureGT([ENEMY],2)
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (thWi)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (sBlindnessBl)
+    !StateCheck(Myself,STATE_NOT_TARGETABLE)
+    !CheckStatGT(Myself,0,SANCTUARY)
+    See(NearestEnemyOf(Myself))
+    !CheckStatGT(NearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(SecondNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(ThirdNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(FourthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(FifthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(SixthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(SeventhNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(EighthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(NinthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(TenthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(Myself,WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (sBlindnessBl)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_HORROR)  // SPWI205.SPL (TouchL)
+    NumCreatureGT([ENEMY],2)
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),WIZARD_HORROR)  // SPWI205.SPL (TouchL)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_BLINDNESS)  // SPWI106.SPL (tion From)
+    See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_BLINDNESS)  // SPWI106.SPL (tion From)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_DIRE_CHARM)  // SPWI316.SPL (riendsSlee)
+    NumCreatureGT([ENEMY],1)
+    See(NearestEnemyOf(Myself))
+    General(LastSeenBy,HUMANOID)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    !HasBounceEffects(LastSeenBy(Myself))
+    HPGT(LastSeenBy(Myself),20)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),WIZARD_DIRE_CHARM)  // SPWI316.SPL (riendsSlee)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_HASTE)  // SPWI305.SPL (treng)
+    NumCreatureGT([ENEMY],2)
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(Myself,WIZARD_HASTE)  // SPWI305.SPL (treng)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackOneRound(LastSeenBy(Myself))
+END
+

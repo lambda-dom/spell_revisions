@@ -1,0 +1,224 @@
+IF
+    HotKey(F)
+    Global("dv_followmode","LOCALS",1)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_followmode","LOCALS",0)
+        SmallWait(1)
+        DisplayStringHead(Myself,835)  // Follow mode on
+END
+
+IF
+    HotKey(F)
+    Global("dv_followmode","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_followmode","LOCALS",1)
+        SmallWait(1)
+        DisplayStringHead(Myself,836)  // Follow mode off
+END
+
+IF
+    Global("dv_followmode","LOCALS",0)
+    ActionListEmpty()
+    !Range(LastSummonerOf(Myself),10)
+    !See(LastSummonerOf(Myself))
+    CombatCounter(0)
+    !Exists([EVILCUTOFF])
+THEN
+    RESPONSE #100
+        SetGlobal("dv_SummonInFormation","LOCALS",1)
+        FollowObjectFormation(LastSummonerOf(Myself),3,3)
+END
+
+IF
+    Global("dv_SummonInFormation","LOCALS",1)
+    OR(2)
+        Exists([EVILCUTOFF])
+        !CombatCounter(0)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_SummonInFormation","LOCALS",0)
+        ClearActions(Myself)
+        Continue()
+END
+
+IF
+    See(Myself)
+    False()
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("rage","LOCALS")
+    HaveSpell(BERSERKER_RAGE)  // SPCL321.SPL (Enrage)
+    See(NearestEnemyOf(Myself))
+    !CheckStat(Myself,1,OFFENSIVE_MODIFIER)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("rage","LOCALS",EIGHTEEN_MINUTES)
+        Spell(Myself,BERSERKER_RAGE)  // SPCL321.SPL (Enrage)
+END
+
+IF
+    NumCreatureGT([EVILCUTOFF],9)
+    !InParty(TenthNearestEnemyOf(Myself))
+    HPGT(TenthNearestEnemyOf(Myself),5)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    See(TenthNearestEnemyOf(Myself))
+    False()
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    NumCreatureGT([EVILCUTOFF],8)
+    !InParty(NinthNearestEnemyOf(Myself))
+    HPGT(NinthNearestEnemyOf(Myself),5)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    See(NinthNearestEnemyOf(Myself))
+    False()
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    NumCreatureGT([EVILCUTOFF],7)
+    !InParty(EighthNearestEnemyOf(Myself))
+    HPGT(EighthNearestEnemyOf(Myself),5)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    See(EighthNearestEnemyOf(Myself))
+    False()
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    NumCreatureGT([EVILCUTOFF],6)
+    !InParty(SeventhNearestEnemyOf(Myself))
+    HPGT(SeventhNearestEnemyOf(Myself),5)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    See(SeventhNearestEnemyOf(Myself))
+    False()
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    NumCreatureGT([EVILCUTOFF],5)
+    !InParty(SixthNearestEnemyOf(Myself))
+    HPGT(SixthNearestEnemyOf(Myself),5)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    See(SixthNearestEnemyOf(Myself))
+    False()
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    NumCreatureGT([EVILCUTOFF],4)
+    !InParty(FifthNearestEnemyOf(Myself))
+    HPGT(FifthNearestEnemyOf(Myself),5)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    See(FifthNearestEnemyOf(Myself))
+    False()
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    NumCreatureGT([EVILCUTOFF],3)
+    !InParty(FourthNearestEnemyOf(Myself))
+    HPGT(FourthNearestEnemyOf(Myself),5)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    See(FourthNearestEnemyOf(Myself))
+    False()
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    NumCreatureGT([EVILCUTOFF],2)
+    !InParty(ThirdNearestEnemyOf(Myself))
+    HPGT(ThirdNearestEnemyOf(Myself),5)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    See(ThirdNearestEnemyOf(Myself))
+    False()
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    NumCreatureGT([EVILCUTOFF],1)
+    !InParty(SecondNearestEnemyOf(Myself))
+    HPGT(SecondNearestEnemyOf(Myself),5)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    See(SecondNearestEnemyOf(Myself))
+    False()
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    NumCreatureGT([EVILCUTOFF],0)
+    !InParty(NearestEnemyOf(Myself))
+    HPGT(NearestEnemyOf(Myself),5)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    See(NearestEnemyOf(Myself))
+    False()
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+    !InParty(LastAttackerOf(Myself))
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+    !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+    !Class(LastAttackerOf(Myself),INNOCENT)
+    See(LastAttackerOf(Myself))
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackOneRound(NearestEnemyOf(Myself))
+END
+

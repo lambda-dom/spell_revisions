@@ -143,10 +143,12 @@ note(s):
 
 ## B. 5. Level 5.
 
-Summon Shadow: Shadow: added immunities to fear and fatigue; standardized immunities. Missing save on opcode in shadow touch. Corrections to thac0. Wraith: added immunities to fear and fatigue; standardized immunities. Standardized level drain. Corrections to thac0, ac. Range of spell long -> medium.
+* Summon Shadow: Shadow: added immunities to fear and fatigue; standardized immunities. Missing save on opcode in shadow touch. Corrections to thac0. Wraith: added immunities to fear and fatigue; standardized immunities. Standardized level drain. Corrections to thac0, ac. Range of spell long -> medium.
 
-Dispelling Screen: undocumented bonus of mr (patched out later?).
+* Monster Summoning V: correct ridiculous damage bonus 9 -> 3, 1. Ogre Berserker: corrections to thac0, hps. Ogre Mage: corrections to int, wis, chr, hps, ac, thac0, saves.
 
-Breach: range 40 -> 30 per description (Long).
+* Dispelling Screen: undocumented bonus of mr (patched out later?).
 
-Phantom Blade: correct damage to undead. Moved prof opcode to it.
+* Breach: range 40 -> 30 per description (Long).
+
+* Phantom Blade: correct damage to undead. Moved prof opcode to it.
