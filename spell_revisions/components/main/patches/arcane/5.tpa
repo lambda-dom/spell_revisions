@@ -9,6 +9,10 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 //Load reference tables.
 LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
     tables = "items"
 RET_ARRAY items = references END
 
@@ -24,6 +28,26 @@ RET_ARRAY spells = references END
 
 
 //Patches.
+DEFINE_PATCH_FUNCTION summon_shadow STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_shadow"
+        ext = "eff"
+        match_resource = "shdw#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_wraith"
+        ext = "eff"
+        match_resource = "wrth#res"
+        references = "effects"
+    END
+END
+
 DEFINE_PATCH_FUNCTION shadow_door STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 215                  //Play vvc.

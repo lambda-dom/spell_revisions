@@ -214,3 +214,68 @@ DEFINE_PATCH_FUNCTION spider_immunities STR_VAR destination = "*" BEGIN
         match_opcode = 0
     END
 END
+
+DEFINE_PATCH_FUNCTION shadow_immunities STR_VAR destination = "*" BEGIN
+    PATCH_FOR_EACH block IN
+        "fear"
+        "fatigue"
+        "charm"
+        "confusion"
+        "disease"
+        "paralysis"
+        "poison"
+        "sleep"
+        "stun"
+        "instant_death"
+    BEGIN
+        LPF patch_block INT_VAR
+            match_opcode = 292              //Immunity backstab.
+            globals = 1
+        STR_VAR
+            block = "%block%"
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION shadow_touch STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "shadow_drain_strength"
+        match_resource = "sdrn#res"
+        references = "subspells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION wraith_immunities STR_VAR destination = "*" BEGIN
+    PATCH_FOR_EACH block IN
+        "fear"
+        "fatigue"
+        "blindness"
+        "charm"
+        "confusion"
+        "disease"
+        "paralysis"
+        "poison"
+        "sleep"
+        "stun"
+        "instant_death"
+    BEGIN
+        LPF patch_block INT_VAR
+            match_opcode = 292              //Immunity backstab.
+            globals = 1
+        STR_VAR
+            block = "%block%"
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION wraith_touch STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "wraith_level_drain"
+        match_resource = "ldrn#res"
+        references = "subspells"
+    END
+END

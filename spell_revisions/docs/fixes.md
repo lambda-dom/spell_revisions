@@ -143,7 +143,9 @@ note(s):
 
 ## B. 5. Level 5.
 
-Dispelling Screen: undocumented bonus of mr (to be patched out later?).
+Summon Shadow: Shadow: added immunities to fear and fatigue; standardized immunities. Missing save on opcode in shadow touch. Corrections to thac0. Wraith: added immunities to fear and fatigue; standardized immunities. Standardized level drain. Corrections to thac0, ac. Range of spell long -> medium.
+
+Dispelling Screen: undocumented bonus of mr (patched out later?).
 
 Breach: range 40 -> 30 per description (Long).
 
