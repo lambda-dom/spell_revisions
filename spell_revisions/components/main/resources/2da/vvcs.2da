@@ -1,8 +1,12 @@
 2DA V1.0
 *
-                    install animation                       patch   over    destination
-sound_burst         1       #spl:WIZARD_SOUND_BURST         *       0       #spl:WIZARD_SOUND_BURST
-ghost_armor         1       #spl:WIZARD_GHOST_ARMOR         *       0       #spl:WIZARD_GHOST_ARMOR
-spirit_armor        1       #spl:WIZARD_SPIRIT_ARMOR        *       0       #spl:WIZARD_SPIRIT_ARMOR
-vitriolic_sphere    1       #spl:WIZARD_VITRIOLIC_SPHERE    *       0       #spl:WIZARD_VITRIOLIC_SPHERE
-storm_shield        1       #spl:CLERIC_STORM_SHIELD        *       0       #spl:CLERIC_STORM_SHIELD
+                        install animation                       patch   over    destination
+sound_burst             1       #spl:WIZARD_SOUND_BURST         *       0       #spl:WIZARD_SOUND_BURST
+ghost_armor             1       #spl:WIZARD_GHOST_ARMOR         *       0       #spl:WIZARD_GHOST_ARMOR
+spirit_armor            1       #spl:WIZARD_SPIRIT_ARMOR        *       0       #spl:WIZARD_SPIRIT_ARMOR
+vitriolic_sphere        1       #spl:WIZARD_VITRIOLIC_SPHERE    *       0       #spl:WIZARD_VITRIOLIC_SPHERE
+shadow_door             1       #spl:WIZARD_SHADOW_DOOR         *       0       #spl:WIZARD_SHADOW_DOOR
+storm_shield            1       #spl:CLERIC_STORM_SHIELD        *       0       #spl:CLERIC_STORM_SHIELD
+conjure_air_elemental   1       #lit:dlelmair                   *       0       #lit:dlelmair
+conjure_fire_elemental  1       #lit:dlelmfir                   *       0       #lit:dlelmfir
+conjure_earth_elemental 1       #lit:dlelmear                   *       0       #lit:dlelmear

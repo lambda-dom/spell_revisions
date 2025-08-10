@@ -223,3 +223,95 @@ DEFINE_PATCH_FUNCTION sword_spider STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION shadow STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "shadow_touch"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "shadow_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION wraith STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "wraith_touch"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "wraith_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION ogre_berserker STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "ogre_berserker_morning_star"
+        slot = "weapon1"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION ogre_mage STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "ogre_mage_katana"
+        slot = "weapon1"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION lesser_air_elemental STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "lesser_air_elemental_fists"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "elemental_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION lesser_earth_elemental STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "lesser_earth_elemental_fists"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "elemental_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION lesser_fire_elemental STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "lesser_fire_elemental_fists"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "elemental_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END

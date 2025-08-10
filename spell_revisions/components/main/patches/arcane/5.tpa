@@ -1,0 +1,149 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
+//Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+LAF get_table_references STR_VAR
+    tables = "vvcs"
+RET_ARRAY vvcs = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "5"
+    dir = "%resources%/2da/arcane"
+RET_ARRAY spells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION summon_shadow STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_shadow"
+        ext = "eff"
+        match_resource = "shdw#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_wraith"
+        ext = "eff"
+        match_resource = "wrth#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION shadow_door STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215                  //Play vvc.
+    STR_VAR
+        resource = "shadow_door"
+        ext = "vvc"
+        match_resource = "vvc#res"
+        references = "vvcs"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "shadow_door_a"
+        match_resource = "door#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION monster_summoning_5 STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_ogre_berserker"
+        ext = "eff"
+        match_resource = "sum1#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_ogre_mage"
+        ext = "eff"
+        match_resource = "sum2#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION conjure_lesser_fire_elemental STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "conjure_lesser_fire_elemental"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION phantom_blade STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "phantom_blade"
+        ext = "itm"
+        match_resource = "item#res"
+        references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION spell_shield STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        tra_ref = 10501
+        match_opcode = 226                  //Spell type protection.
+    END
+END
+
+DEFINE_PATCH_FUNCTION conjure_lesser_air_elemental STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "conjure_lesser_air_elemental"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION conjure_lesser_earth_elemental STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "conjure_lesser_earth_elemental"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION fireburst STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 148                  //Cast spell at point.
+    STR_VAR
+        resource = "fireburst_a"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END

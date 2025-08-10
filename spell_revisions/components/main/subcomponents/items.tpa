@@ -16,6 +16,12 @@ LAF install_resources STR_VAR
     dir = "%resources%/bam/items"
 END
 
+//Install effects for items (for spells...).
+LAF install_resources STR_VAR
+    type = "create_effect"
+    table = "%resources%/2da/items/effects.2da"
+END
+
 //Install spells for items (for spells...).
 LAF install_resources STR_VAR
     type = "spell"

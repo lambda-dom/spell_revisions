@@ -92,7 +92,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Blue Shield: reinstate it.
 
-* Mestil's Acid Shield: replaces cold shield but we are reinstating it.
+* Mestil's Acid Shield: replaces cold shield but we are reinstating it. Spell itself is not in (and is in level 5).
 
 * Minor Glove of Invulnerability: pass through area spells of level <= that must be protected against. Externalize like with PfM?
 
@@ -102,15 +102,27 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Polymorph other: aux resources do not seem to be used anywhere.
 
-* Polymorph self: only description in.
-
 * Enchant weapon: the basic spell is in but the items are missing proper descriptions and the spell, descriptions and ability icons.
 
 * Monster Summoning IV: cre and script for phase spider unused.
 
 * Wizard Eye: change from non-stacking to refreshing? Review creature.
 
-* Protection from Elemental Energy: still needs acid and electricity protection.
+## B. 5. Level 5.
+
+* Shadow Summon: refactor immunities by reusing undead immunities and moving everything else to the touch.
+
+* Monster Summon 5: Ogre Mage casts haste not slow which he does not have; does not use invis at will which is not memorized anyway.
+
+* Shadow Door: add a True Seeing state so that we can put immunity to the spell in the spell itself (see Spook above).
+
+* Waves of Fatigue: add immunity for "non-living" (undead, elementals, constructs, etc.).
+
+* Dispelling Screen: the base spell makes no sense so have to implement the patching.
+
+* Conjure (Lesser) Elemental: Add water elemental and consolidate all spells in one.
+
+* Spell Deflection: add display string.
 
 # C. General.
 
@@ -140,3 +152,9 @@ note(s):
 * As per Cure Mortal Wounds description implement immunity for non-living and extra-planar for all cure spells.
 
 * Elemental protection: deal more systematically with elemental protection: if elemental resist >= 100 then protection from resource to block spell.
+
+* Anti-undead spells like hold undead should bypass magic resistance.
+
+* Use `append_item_block` instead of hack with `patch_block`.
+
+* Conjure Elemental: remove probability of not summoning. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Damage bonus 9 -> 4.

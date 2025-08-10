@@ -218,6 +218,16 @@ DEFINE_PATCH_FUNCTION monster_summoning_4 STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION protection_elemental_energy STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 214                  //Select spell.
+    STR_VAR
+        resource = "protection_elemental_energy"
+        match_resource = "tabl#res"
+        references = "tables"
+    END
+END
+
 DEFINE_PATCH_FUNCTION vitriolic_sphere STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 215                  //Play visual effect.

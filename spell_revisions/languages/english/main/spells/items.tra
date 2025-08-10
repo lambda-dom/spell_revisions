@@ -91,3 +91,7 @@
 @2431 = "Arrow"
 @2432 = "Bolt"
 @2433 = "Bullet"
+
+//Level 5.
+@2500 = "Phantom Blade"
+@2501 = "This longsword was created by the Phantom Blade spell."

@@ -140,3 +140,17 @@ note(s):
 * Secret Word: school enchant (description) -> abjuration.
 
 * Minor Spell Sequencer: out of combat only. 
+
+## B. 5. Level 5.
+
+* Summon Shadow: Shadow: added immunities to fear and fatigue; standardized immunities. Missing save on opcode in shadow touch. Corrections to thac0. Wraith: added immunities to fear and fatigue; standardized immunities. Standardized level drain. Corrections to thac0, ac. Range of spell long -> medium.
+
+* Monster Summoning V: correct ridiculous damage bonus 9 -> 3, 1. Ogre Berserker: corrections to thac0, hps. Ogre Mage: corrections to int, wis, chr, hps, ac, thac0, saves.
+
+* Dispelling Screen: undocumented bonus of mr (patched out later?).
+
+* Breach: range 40 -> 30 per description (Long).
+
+* Phantom Blade: correct damage to undead. Moved prof opcode to it.
+
+* Conjure Elemental: standardized duration to 2 turns (= level 10 in old spell) instead of 3 to accentuate "difficult to maintain portal" blurb. Fix off-by-1 probability errors. Air Elemental: added polymorph immunity per other elementals. Corrections to ac, thac0. Added 50% electricity resistance. Earth elemental: corrections to ac, thac0. Fire elemental: corrections to ac, thac0. Giant humanoid -> monster.
