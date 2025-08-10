@@ -28,30 +28,7 @@ Saving Throw: None
 
 This spell is only available to Harpers. The Harper's Call restores a comrade to life, to further serve the cause of the Harpers. This spell functions similarly to Raise Dead, with the following exceptions: the Harper must transfer a small portion of her life essence (10 hit points) to successfully raise the deceased person; the target has but 1 hit point when raised and must regain the rest by natural healing or curative magic; and the raised person suffers a -5 penalty to all ability scores for one minute, making this spell virtually useless in combat.~
 
-/*------------------level 6------------------*/
-
-@191=~Aerial Servant~
-@192=~Aerial Servant
-Level: 6
-School: Conjuration
-Sphere: Summoning
-Range: Medium
-Duration: 1 turn/level
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
-
-The caster of this spell summons an Aerial Servant to do the caster's bidding for the duration of the spell. The servant will attack any enemies that the caster decides, staying until the duration of the spell ends or he is slain.
-
-Aerial Servant (13 Hit Dice):
-STR 21, DEX 19, CON 17, INT 6, WIS 11, CHA 11;  AL Neutral
-HP 122, AC -1, THAC0 5, Saving Throws 5/7/6/5/8
-2 Attacks Per Round, 2d6+11 Crushing Damage (Fist +2)
-
-Special Qualities:
-Natural Invisibility: constantly invisible as if affected by an Improved Invisibility spell
-Immune to hold, poison, sleep, & stun effects~
-
+//Level 6.
 @193=~Animal Summoning VI~
 @194=~Animal Summoning VI
 Level: 6
@@ -282,7 +259,7 @@ HP 138, AC -1, THAC0 1, Saving Throws 4/6/5/4/7
 
 Special Qualities (12 & 16 Hit Dice):
 Immune to normal weapons
-Immune to hold, poison, polymorph, sleep, & stun effects
+Immune to hold, poison, polymorph, sleep and stun effects
 Slashing, Crushing, & Piercing Resistance 20%; Missile Resistance 60%~
 
 @221=~Conjure Earth Elemental~
@@ -310,7 +287,7 @@ HP 152, AC 2, THAC0 0, Saving Throws 4/6/5/4/7
 
 Special Qualities (12 & 16 Hit Dice):
 Immune to normal weapons
-Immune to hold, poison, polymorph, sleep, & stun effects
+Immune to hold, poison, polymorph, sleep and stun effects
 Slashing, Piercing, & Missile Resistance 40%~
 
 @223=~Banishment~
@@ -346,7 +323,7 @@ HP 108, AC 2, THAC0 11, Saving Throws 5/7/6/5/8
 
 Special Qualities:
 Immune to normal weapons
-Immune to charm, confusion, hold, poison, sleep, stun, & death effects
+Immune to charm, confusion, hold, poison, sleep, stun and death effects
 Cold Resistance 100%; Magic Resistance 90%
 Slashing & Piercing Resistance 40%; Missile Resistance 60%~
 

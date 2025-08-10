@@ -432,8 +432,7 @@ COPY ~spell_rev\sppr5##\spja01e.eff~     ~override~
 COPY ~spell_rev\sppr5##\spja01f.eff~     ~override~
 
 
-/*-----------------------level 6-----------------------*/
-
+//Level 6.
 COPY ~spell_rev\sppr6##\sppr601.spl~     ~override~  // Aerial Servant
   SAY NAME1 @191    SAY UNIDENTIFIED_DESC @192
 COPY ~spell_rev\sppr6##\servsu.cre~     ~override~
