@@ -139,6 +139,15 @@ DEFINE_PATCH_FUNCTION giant_snake STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION cave_bear STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "cave_bear_claws"
+        slot = "weapon1"
+        array = "items"
+    END
+END
+
 DEFINE_PATCH_FUNCTION gibberling STR_VAR destination = "*" BEGIN
     //Equip items.
     LPF creature_add_item STR_VAR

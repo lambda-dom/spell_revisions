@@ -34,8 +34,6 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## A. 5. Level 5.
 
-* Animal Summoning V: only description in.
-
 * Cure Mortal Wounds: Implement immunity for non-living and extra-planar or delete from description?
 
 * True Seeing: there is a protection from the cloak of mirroring -- drop it if needed. Aux spell only removes illusion school spells up to level 2; remove illusionary protections of all levels? Missing protection against shadow door.
@@ -50,13 +48,15 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Protection from Cold: only protectiom from wizard's cone of cold and icestrom. Add other.
 
-* Protection from Fire: missing protection (e. g. aux flame arrow).
+* Protection from Fire: missing protections (e. g. aux flame arrow).
 
 * Elemental protection: do the same dance as with wizard's protection from elemental energy.
 
 * Mass Regenerate: currently non-stacking. SR adds non-concurrent stacking, but is it needed?
 
-* Harper's Call: to do.
+* Harper's Call: to do. Drop the penalties and make it out of combat only.
+
+## A. 6. Level 6.
 
 # B. Arcane spells.
 
@@ -158,3 +158,7 @@ note(s):
 * Use `append_item_block` instead of hack with `patch_block`.
 
 * Conjure Elemental: remove probability of not summoning. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Damage bonus 9 -> 4.
+
+* Damage bonus on natural attacks: these are set seeming randomly; standardize them.
+
+* Add snake race for snake summon (possibly other with no_race).

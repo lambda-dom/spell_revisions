@@ -29,29 +29,6 @@ Saving Throw: None
 This spell is only available to Harpers. The Harper's Call restores a comrade to life, to further serve the cause of the Harpers. This spell functions similarly to Raise Dead, with the following exceptions: the Harper must transfer a small portion of her life essence (10 hit points) to successfully raise the deceased person; the target has but 1 hit point when raised and must regain the rest by natural healing or curative magic; and the raised person suffers a -5 penalty to all ability scores for one minute, making this spell virtually useless in combat.~
 
 //Level 6.
-@193=~Animal Summoning VI~
-@194=~Animal Summoning VI
-Level: 6
-School: Conjuration
-Sphere: Animal
-Range: Long
-Duration: 3 turns
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
-
-By means of this spell, the caster calls a number of animals, which serve the summoner under any conditions. The type and number of creatures that appear depend upon the level of the druid casting the spell.
-
-11th : 2 cave bears
-13th+ : 3 cave bears
-
-The summoned animals will aid the caster by whatever means they possess, staying until the spell duration expires.
-
-Cave Bear (6 Hit Dice):
-STR 19, DEX 13, CON 19, INT 6, WIS 12, CHA 10;  AL Neutral
-HP 78, AC 3, THAC0 11, Saving Throws 11/15/11/13/15
-2 Attacks Per Round, 2d4+9 Crushing Damage (Claws & Bite)~
-
 @195=~Blade Barrier~
 @196=~Blade Barrier
 Level: 6

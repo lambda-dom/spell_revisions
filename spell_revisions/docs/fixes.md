@@ -73,6 +73,10 @@ note(s):
 
 * Animal Growth: fixes to range (harmless) and casting speed. Fix target caster -> actor. Extended to monsters.
 
+## A. 6. Level 6.
+
+* Animal Summoning VI: cave bear: corrections to damage bonus in claws. Corrections to thac0.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

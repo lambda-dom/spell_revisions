@@ -67,6 +67,9 @@ mass_regenerate_c               1       *       0       #suf:c:CLERIC_MASS_REGEN
 animal_growth_a                 1       *       0       #suf:a:CLERIC_ANIMAL_GROWTH
 animal_growth_b                 1       *       0       #suf:b:CLERIC_ANIMAL_GROWTH
 animal_growth_c                 1       *       0       #suf:c:CLERIC_ANIMAL_GROWTH
+animal_summon_6_a               1       *       0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_6
+animal_summon_6_b               1       *       0       #suf:b:CLERIC_ANIMAL_SUMMONING_LEVEL_6
+animal_summon_6_c               1       *       0       #suf:c:CLERIC_ANIMAL_SUMMONING_LEVEL_6
 obscuring_mist_a                1       *       0       #suf:a:WIZARD_OBSCURING_MIST
 obscuring_mist_b                1       *       0       #suf:b:WIZARD_OBSCURING_MIST
 obscuring_mist_c                1       *       0       #suf:c:WIZARD_OBSCURING_MIST

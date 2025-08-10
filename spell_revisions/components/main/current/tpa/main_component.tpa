@@ -440,14 +440,7 @@ COPY ~spell_rev\sppr6##\servsu.cre~     ~override~
   SAY NAME2 @191
 COPY ~spell_rev\sppr6##\servsu.itm~     ~override~
 
-COPY ~spell_rev\sppr6##\sppr602.spl~     ~override~  // Animal Summoning VI (originally Animal Summoning III)
-  SAY NAME1 @193    SAY UNIDENTIFIED_DESC @194
-COPY ~spell_rev\sppr6##\bearcasu.eff~     ~override~
-COPY ~spell_rev\sppr6##\bearcasu.cre~     ~override~
-COPY ~spell_rev\sppr6##\bearcasu.itm~     ~override~
-COPY ~spell_rev\sppr6##\sppr602a.bam~     ~override~
-COPY ~spell_rev\sppr6##\sppr602b.bam~     ~override~
-COPY ~spell_rev\sppr6##\sppr602c.bam~     ~override~
+// Animal Summoning VI (originally Animal Summoning III)
 APPEND ~spell.ids~ ~1602 CLERIC_ANIMAL_SUMMONING_LEVEL_6~
 
 COPY ~spell_rev\sppr6##\sppr603.spl~     ~override~  // Blade Barrier
