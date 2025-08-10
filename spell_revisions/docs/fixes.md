@@ -77,6 +77,8 @@ note(s):
 
 * Animal Summoning VI: cave bear: corrections to damage bonus in claws. Corrections to thac0.
 
+* Fire Seeds: +6 -> +4 enchantment. Added dart prof so that characters with it can use it.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

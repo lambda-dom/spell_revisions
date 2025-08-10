@@ -58,6 +58,11 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## A. 6. Level 6.
 
+* Aerial Description: only description in.
+
+* Conjure Fire Elemental: only description in.
+
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

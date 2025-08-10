@@ -45,6 +45,10 @@
 @1510 = "Slay Living"
 @1511 = "Fists enchanted by the Slay Living spell."
 
+//Level 6.
+@1600 = "Fire Seeds"
+@1601 = "These Fire Seeds were created the Fire Seeds spell."
+
 
 //Arcane.
 //Level 1.

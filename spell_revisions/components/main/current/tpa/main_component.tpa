@@ -443,11 +443,8 @@ COPY ~spell_rev\sppr6##\servsu.itm~     ~override~
 // Animal Summoning VI (originally Animal Summoning III)
 APPEND ~spell.ids~ ~1602 CLERIC_ANIMAL_SUMMONING_LEVEL_6~
 
-COPY ~spell_rev\sppr6##\sppr603.spl~     ~override~  // Blade Barrier
-  SAY NAME1 @195    SAY UNIDENTIFIED_DESC @196
-COPY ~spell_rev\sppr6##\sppr603d.spl~     ~override~
-COPY ~spell_rev\sppr6##\sppr603e.spl~     ~override~
-COPY ~spell_rev\sppr6##\sppr698.spl~     ~override~  // Blade Barrier (AI's version)
+// Blade Barrier (AI's version)
+COPY ~spell_rev\sppr6##\sppr698.spl~     ~override~
 
 COPY ~spell_rev\sppr6##\sppr604.spl~     ~override~  // Conjure Animals (disabled)
   SAY NAME1 @197    SAY UNIDENTIFIED_DESC @198
@@ -462,6 +459,8 @@ COPY ~spell_rev\sppr6##\sppr606.spl~     ~override~  // Fire Seeds
 COPY ~spell_rev\sppr6##\sppr606d.spl~     ~override~
 COPY ~spell_rev\sppr6##\fireseed.itm~     ~override~
   SAY NAME1 @201    SAY UNIDENTIFIED_DESC @201
+
+//Patch pro for fire seeds.
 COPY_EXISTING ~bolt2.pro~ ~override~
   WRITE_SHORT 0x204 110
   WRITE_SHORT 0x206 110

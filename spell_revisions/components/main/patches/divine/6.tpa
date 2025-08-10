@@ -8,6 +8,16 @@ LAF get_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "6"
+    dir = "%resources%/2da/divine"
+RET_ARRAY spells = references END
+
 
 //Patches.
 DEFINE_PATCH_FUNCTION animal_summoning_6 STR_VAR destination = "*" BEGIN
@@ -21,3 +31,33 @@ DEFINE_PATCH_FUNCTION animal_summoning_6 STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION blade_barrier_a STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "blade_barrier_b"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION blade_barrier STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "blade_barrier_a"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_seeds STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "fire_seeds"
+        ext = "itm"
+        match_resource = "item#res"
+        references = "items"
+    END
+END

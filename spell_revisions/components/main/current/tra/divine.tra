@@ -29,21 +29,6 @@ Saving Throw: None
 This spell is only available to Harpers. The Harper's Call restores a comrade to life, to further serve the cause of the Harpers. This spell functions similarly to Raise Dead, with the following exceptions: the Harper must transfer a small portion of her life essence (10 hit points) to successfully raise the deceased person; the target has but 1 hit point when raised and must regain the rest by natural healing or curative magic; and the raised person suffers a -5 penalty to all ability scores for one minute, making this spell virtually useless in combat.~
 
 //Level 6.
-@195=~Blade Barrier~
-@196=~Blade Barrier
-Level: 6
-School: Conjuration
-Sphere: Guardian, Creation
-Range: Personal
-Duration: 1 turn
-Casting Time: 6
-Area of Effect: 6' radius
-Saving Throw: None
-
-The priest employs this spell to create a wall of circling, razor-sharp blades. These whirl and flash around the caster, forming a dangerous barrier. Every creature not in the caster's party and within a 6 foot radius suffers 1d8 points of slashing damage every 3 seconds. Magic resistance does not affect this spell.
-
-Note that spells like Invisibility, Shadow Door, etc. will not function on the caster when protected by Blade Barrier. Also, cleric/thieves and cleric/rangers who cast this will not be able to hide in shadows until the spell expires.~
-
 @197=~Conjure Animals~
 @198=~Conjure Animals
 Level: 6
@@ -56,48 +41,6 @@ Area of Effect: Special
 Saving Throw: None
 
 This spell allows the caster to summon forth and control one or two massive mountain bears. The bears will respond to the caster's every whim for the duration of the spell.~
-
-@199=~Conjure Fire Elemental~
-@200=~Conjure Fire Elemental
-Level: 6
-School: Conjuration
-Sphere: Elemental (Fire)
-Range: Medium
-Duration: 1 turn + 1 round/level
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
-
-Upon casting a Conjure Fire Elemental spell, the caster opens a special gate to the Elemental Plane of Fire, and a fire elemental is summoned to the vicinity of the spellcaster. Normally, an elemental with 12 hit dice will be conjured. At fifteenth level and above, however, the caster will be able to summon an elemental with 16 hit dice. The elemental will do the bidding of the caster until it is slain or the duration of the spell runs out. All of the commands given to the elemental are done so telepathically, so there is no time lost due to miscommunication, and it is not necessary to know the language of the summoned creature.
-
-Fire Elemental (12 Hit Dice):
-STR 16, DEX 17, CON 17, INT 6, WIS 11, CHA 11;  AL Neutral
-HP 116, AC 1, THAC0 7, Saving Throws 7/9/8/8/10
-2 Attacks Per Round, 2d6+4 Slashing +2d6 Fire Damage (Fist +3)
-
-Greater Fire Elemental (16 Hit Dice):
-STR 18, DEX 19, CON 18, INT 6, WIS 11, CHA 11;  AL Neutral
-HP 138, AC 0, THAC0 3, Saving Throws 4/6/5/4/7
-2 Attacks Per Round, 2d8+5 Slashing +2d8 Fire Damage (Fist +3)
-
-Special Qualities (12 & 16 Hit Dice):
-Immune to normal weapons
-Immune to hold, poison, polymorph, sleep, & stun effects
-Fire Resistance 100%
-Slashing, Crushing, Piercing, & Missile Resistance 20%~
-
-@201=~Fire Seeds~
-@202=~Fire Seeds
-Level: 6
-School: Conjuration
-Sphere: Elemental (Fire)
-Range: Personal
-Duration: 5 turns
-Casting Time: 6
-Area of Effect: Special
-Saving Throw: Breath half
-
-This spell enables the druid to create a number of fire seeds, one for every 2 experience levels the druid has attained (up to a maximum of 10 fire seeds at 20th level). When thrown at an enemy, these will explode into small fireballs, causing 4d6 points of damage to all within a 10 foot radius (save vs. breath at -4 for half damage). The seeds are treated as missiles hurled by the caster with a +4 bonus to the attack roll and each has an enchantment level of +4. These seeds will appear in the caster's hands and remain in existence for 5 turns. The druid may discharge up to five of them per round.~
 
 @203=~Heal~
 @204=~Heal
