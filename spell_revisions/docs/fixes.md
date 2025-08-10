@@ -152,3 +152,5 @@ note(s):
 * Breach: range 40 -> 30 per description (Long).
 
 * Phantom Blade: correct damage to undead. Moved prof opcode to it.
+
+* Conjure Elemental: standardized duration to 2 turns (= level 10 in old spell) instead of 3 to accentuate "difficult to maintain portal" blurb. Fix off-by-1 probability errors. Air Elemental: added polymorph immunity per other elementals. Corrections to ac, thac0. Added 50% electricity resistance. Earth elemental: corrections to ac, thac0. Fire elemental: corrections to ac, thac0. Giant humanoid -> monster.

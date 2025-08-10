@@ -1027,32 +1027,13 @@ ADD_SPELL ~spell_rev\spwi4##\spwi426.spl~ 2 4 ~WIZARD_PROTECTION_FROM_ELEMENTAL_
   SAY NAME1 @873    SAY UNIDENTIFIED_DESC @874
 
 //Level 5.
-COPY ~spell_rev\spwi5##\spwi501.spl~     ~override~  // Summon Shadow (replaces Animate Dead)
-  SAY NAME1 @611    SAY UNIDENTIFIED_DESC @612
-COPY ~spell_rev\spwi5##\shadowsu.cre~     ~override~
-  SAY NAME1 @3611
-  SAY NAME2 @3611
-COPY ~spell_rev\spwi5##\shadowsu.eff~     ~override~
-COPY ~spell_rev\spwi5##\shadowsu.itm~     ~override~
-COPY ~spell_rev\spwi5##\dvwraith.cre~     ~override~
-  SAY NAME1 @3612
-  SAY NAME2 @3612
-COPY ~spell_rev\spwi5##\dvwraith.eff~     ~override~
-COPY ~spell_rev\spwi5##\dvwraith.itm~     ~override~
+// Summon Shadow (replaces Animate Dead)
 APPEND ~spell.ids~ ~2501 WIZARD_SUMMON_SHADOW~
 
 //Why is this being copied for cone of cold?
 COPY_EXISTING ~spccoldl.bam~ ~override~
 
-COPY ~spell_rev\spwi5##\spwi504.spl~     ~override~  // Monster Summoning V (originally Monster Summoning III)
-  SAY NAME1 @617    SAY UNIDENTIFIED_DESC @618
-COPY ~spell_rev\spwi5##\ogregrsu.eff~     ~override~
-COPY ~spell_rev\spwi5##\ogregrsu.cre~     ~override~
-COPY ~spell_rev\spwi5##\ogregrsu.itm~     ~override~
-COPY ~spell_rev\spwi5##\ogremasu.eff~     ~override~
-COPY ~spell_rev\spwi5##\ogremasu.cre~     ~override~
-COPY ~spell_rev\spwi5##\ogremasu.itm~     ~override~
-COPY ~spell_rev\spwi5##\ogremasu.bcs~     ~override~
+// Monster Summoning V (originally Monster Summoning III)
 APPEND ~spell.ids~ ~2504 WIZARD_MONSTER_SUMMONING_LEVEL_5~
 
 //Waves of Fatigue (replaces Chaos)
@@ -1083,7 +1064,6 @@ COPY ~spell_rev\spwi5##\spwi512.spl~     ~override~  // Protection from Electric
 
 COPY ~spell_rev\spwi5##\spwi516.spl~     ~override~  // Conjure Lesser Fire Elemental
   SAY NAME1 @641    SAY UNIDENTIFIED_DESC @642
-COPY ~spell_rev\spwi5##\splesfir.eff~     ~override~
 COPY ~spell_rev\spwi5##\elfirsu1.cre~     ~override~
   SAY NAME1 @3641
   SAY NAME2 @3641
@@ -1096,7 +1076,6 @@ COPY ~spell_rev\spwi5##\spwi517.spl~     ~override~  // Protection From Acid
 
 COPY ~spell_rev\spwi5##\spwi520.spl~     ~override~  // Conjure Lesser Air Elemental
   SAY NAME1 @649    SAY UNIDENTIFIED_DESC @650
-COPY ~spell_rev\spwi5##\splesair.eff~     ~override~
 COPY ~spell_rev\spwi5##\elairsu1.cre~     ~override~
   SAY NAME1 @3649
   SAY NAME2 @3649
@@ -1104,7 +1083,6 @@ COPY ~spell_rev\spwi5##\elairsu1.itm~     ~override~
 
 COPY ~spell_rev\spwi5##\spwi521.spl~     ~override~  // Conjure Lesser Earth Elemental
   SAY NAME1 @651    SAY UNIDENTIFIED_DESC @652
-COPY ~spell_rev\spwi5##\splesear.eff~     ~override~
 COPY ~spell_rev\spwi5##\elearsu1.cre~     ~override~
   SAY NAME1 @3651
   SAY NAME2 @3651

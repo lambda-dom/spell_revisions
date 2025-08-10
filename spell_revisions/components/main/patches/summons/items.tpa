@@ -279,3 +279,17 @@ DEFINE_PATCH_FUNCTION wraith_touch STR_VAR destination = "*" BEGIN
         references = "subspells"
     END
 END
+
+DEFINE_PATCH_FUNCTION elemental_immunities STR_VAR destination = "*" BEGIN
+    PATCH_FOR_EACH block IN
+        "paralysis"
+        "poison"
+        "polymorph"
+        "sleep"
+        "stun"
+    BEGIN
+        LPF append_item_block STR_VAR
+            block = "%block%"
+        END
+    END
+END

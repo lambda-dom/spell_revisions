@@ -114,7 +114,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 5. Level 5.
 
-* Monster Summon 5: Ogre Mage casts haste not slow which he does not have; does not use invis at will which is not memo anyway.
+* Shadow Summon: refactor immunities by reusing undead immunities and moving everything else to the touch.
+
+* Monster Summon 5: Ogre Mage casts haste not slow which he does not have; does not use invis at will which is not memorized anyway.
 
 * Shadow Door: add a True Seeing state so that we can put immunity to the spell in the spell itself (see Spook above).
 
@@ -156,3 +158,7 @@ note(s):
 * Elemental protection: deal more systematically with elemental protection: if elemental resist >= 100 then protection from resource to block spell.
 
 * Anti-undead spells like hold undead should bypass magic resistance.
+
+* Use `append_item_block` instead of hack with `patch_block`.
+
+* Conjure Elemental: remove probability of not summoning. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Damage bonus 9 -> 4.

@@ -255,7 +255,7 @@ The spells that are affected by this are: Reflected Image, Invisibility, Blur, M
 Level: 5
 School: Conjuration
 Range: Medium
-Duration: 1 turn + 1 round/level
+Duration: 2 turns
 Casting Time: 8
 Area of Effect: Special
 Saving Throw: None
@@ -271,7 +271,7 @@ Special Qualities:
 Immune to normal weapons
 Immune to hold, poison, polymorph, sleep and stun effects
 Fire Resistance 100%
-Slashing, Crushing, Piercing, & Missile Resistance 20%"
+Slashing, Crushing, Piercing and Missile Resistance 20%"
 
 //phantom_blade:spwi518
 @5180 = "Phantom Blade"
@@ -307,7 +307,7 @@ The spells that Spell Shield protects the wizard from are: Spell Thrust, Secret 
 Level: 5
 School: Conjuration
 Range: Medium
-Duration: 1 turn + 1 round/level
+Duration: 2 turns
 Casting Time: 8
 Area of Effect: Special
 Saving Throw: None
@@ -321,7 +321,8 @@ HP 80, AC 0, THAC0 8, Saving Throws 10/12/11/11/13
 
 Special Qualities:
 Immune to normal weapons
-Immune to hold, poison, sleep, & stun effects
+Immune to hold, poison, polymorph, sleep and stun effects
+Electricity Resistance 50%
 Slashing, Crushing and Piercing Resistance 20%; Missile Resistance 60%"
 
 //conjure_lesser_earth_elemental:spwi521
@@ -330,7 +331,7 @@ Slashing, Crushing and Piercing Resistance 20%; Missile Resistance 60%"
 Level: 5
 School: Conjuration
 Range: Medium
-Duration: 1 turn + 1 round/level
+Duration: 2 turns
 Casting Time: 8
 Area of Effect: Special
 Saving Throw: None
@@ -340,11 +341,11 @@ Upon casting Conjure Lesser Earth Elemental, the caster opens a special gate to 
 Lesser Earth Elemental (8 Hit Dice):
 STR 19, DEX 8, CON 18, INT 6, WIS 11, CHA 11;  AL Neutral
 HP 96, AC 4, THAC0 8, Saving Throws 10/12/11/11/13
-2 Attacks Per Round, 2d6 + 9 Crushing Damage (Fist +2)
+2 Attacks Per Round, 2d6 + 4 Crushing Damage (Fist +2)
 
 Special Qualities:
 Immune to normal weapons
-Immune to hold, poison, polymorph, sleep, & stun effects
+Immune to hold, poison, polymorph, sleep and stun effects
 Slashing, Piercing and Missile Resistance 40%"
 
 //spell_deflection:spwi522

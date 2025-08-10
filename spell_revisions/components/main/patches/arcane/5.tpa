@@ -87,6 +87,17 @@ DEFINE_PATCH_FUNCTION monster_summoning_5 STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION conjure_lesser_fire_elemental STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "conjure_lesser_fire_elemental"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
 DEFINE_PATCH_FUNCTION phantom_blade STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 111                  //Create weapon.
@@ -102,6 +113,28 @@ DEFINE_PATCH_FUNCTION spell_shield STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
         tra_ref = 10501
         match_opcode = 226                  //Spell type protection.
+    END
+END
+
+DEFINE_PATCH_FUNCTION conjure_lesser_air_elemental STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "conjure_lesser_air_elemental"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION conjure_lesser_earth_elemental STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "conjure_lesser_earth_elemental"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
     END
 END
 
