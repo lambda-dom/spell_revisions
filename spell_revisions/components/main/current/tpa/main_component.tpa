@@ -1062,31 +1062,10 @@ COPY ~spell_rev\spwi5##\spwi512.spl~     ~override~  // Protection from Electric
   SAY NAME1 @633    SAY UNIDENTIFIED_DESC @634
   LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 7567 parameter1 = RESOLVE_STR_REF(@633) END
 
-COPY ~spell_rev\spwi5##\spwi516.spl~     ~override~  // Conjure Lesser Fire Elemental
-  SAY NAME1 @641    SAY UNIDENTIFIED_DESC @642
-COPY ~spell_rev\spwi5##\elfirsu1.cre~     ~override~
-  SAY NAME1 @3641
-  SAY NAME2 @3641
-COPY ~spell_rev\spwi5##\elfirsu1.itm~     ~override~
-
 COPY ~spell_rev\spwi5##\spwi517.spl~     ~override~  // Protection From Acid
   SAY NAME1 @643    SAY UNIDENTIFIED_DESC @644
 /* COPY ~spell_rev\spwi5##\scrl6y.itm~     ~override~
   SAY NAME2 @643    SAY IDENTIFIED_DESC   @644 */
-
-COPY ~spell_rev\spwi5##\spwi520.spl~     ~override~  // Conjure Lesser Air Elemental
-  SAY NAME1 @649    SAY UNIDENTIFIED_DESC @650
-COPY ~spell_rev\spwi5##\elairsu1.cre~     ~override~
-  SAY NAME1 @3649
-  SAY NAME2 @3649
-COPY ~spell_rev\spwi5##\elairsu1.itm~     ~override~
-
-COPY ~spell_rev\spwi5##\spwi521.spl~     ~override~  // Conjure Lesser Earth Elemental
-  SAY NAME1 @651    SAY UNIDENTIFIED_DESC @652
-COPY ~spell_rev\spwi5##\elearsu1.cre~     ~override~
-  SAY NAME1 @3651
-  SAY NAME2 @3651
-COPY ~spell_rev\spwi5##\elearsu1.itm~     ~override~
 
 //Detectable spells stuff for spell deflection.
 LAF ds_altered_spell INT_VAR old_clone=200 new_clone=~-1~ STR_VAR file=~spwi522.spl~ END
