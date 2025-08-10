@@ -135,6 +135,17 @@ DEFINE_PATCH_FUNCTION fire_seeds_itm STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION harm_itm STR_VAR destination = "*" BEGIN
+    //Get reference.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "harm_a"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
 DEFINE_PATCH_FUNCTION shocking_grasp_itm STR_VAR destination = "*" BEGIN
     //Get reference.
     LPF get_table_ref STR_VAR

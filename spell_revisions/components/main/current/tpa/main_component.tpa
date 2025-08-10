@@ -454,26 +454,10 @@ APPEND ~spell.ids~ ~1604 CLERIC_CONJURE_ANIMALS_DEPRECATED~
 COPY ~spell_rev\sppr6##\sppr605.spl~     ~override~  // Conjure Fire Elemental
   SAY NAME1 @199    SAY UNIDENTIFIED_DESC @200
 
-COPY ~spell_rev\sppr6##\sppr606.spl~     ~override~  // Fire Seeds
-  SAY NAME1 @201    SAY UNIDENTIFIED_DESC @202
-COPY ~spell_rev\sppr6##\sppr606d.spl~     ~override~
-COPY ~spell_rev\sppr6##\fireseed.itm~     ~override~
-  SAY NAME1 @201    SAY UNIDENTIFIED_DESC @201
-
 //Patch pro for fire seeds.
 COPY_EXISTING ~bolt2.pro~ ~override~
   WRITE_SHORT 0x204 110
   WRITE_SHORT 0x206 110
-
-COPY ~spell_rev\sppr6##\sppr607.spl~     ~override~  // Heal
-  SAY NAME1 @203    SAY UNIDENTIFIED_DESC @204
-
-ACTION_IF install_cause_wounds BEGIN
-  COPY ~spell_rev\sppr6##\sppr608.spl~     ~override~  // Harm
-    SAY NAME1 @205    SAY UNIDENTIFIED_DESC @206
-  COPY ~spell_rev\sppr6##\harm.itm~     ~override~
-  COPY ~spell_rev\sppr6##\sppr608d.spl~     ~override~
-END
 
 COPY ~spell_rev\sppr6##\sppr609.spl~     ~override~  // False Dawn
   SAY NAME1 @207    SAY UNIDENTIFIED_DESC @208

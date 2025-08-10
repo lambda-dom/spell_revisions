@@ -61,3 +61,14 @@ DEFINE_PATCH_FUNCTION fire_seeds STR_VAR destination = "*" BEGIN
         references = "items"
     END
 END
+
+DEFINE_PATCH_FUNCTION harm STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "harm"
+        ext = "itm"
+        match_resource = "item#res"
+        references = "items"
+    END
+END
