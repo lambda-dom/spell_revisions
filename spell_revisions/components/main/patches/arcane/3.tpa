@@ -229,9 +229,9 @@ DEFINE_PATCH_FUNCTION monster_summoning_3 BEGIN
 END
 
 DEFINE_PATCH_FUNCTION protection_from_missiles STR_VAR destination = "*" BEGIN
-    //Externalize this dir, so that modders can hook up into it.
+    //Externalize this, so that modders can hook up into it.
     LPF get_component_resources_dir RET resources_dir = dir END
-    TEXT_SPRINT resources_dir "%resources_dir%/2da/arcane"
+    TEXT_SPRINT resources_dir "%resources_dir%/2da/external"
 
     //Load projectiles table.
     LPF load_table STR_VAR

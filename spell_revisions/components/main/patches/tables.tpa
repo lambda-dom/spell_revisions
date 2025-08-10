@@ -1,10 +1,23 @@
 //Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/2da.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
+
+
+//Encoders for patches.
+DEFINE_PATCH_FUNCTION encode_elemental_protection_entry STR_VAR value = "" RET return BEGIN
+    LPF get_resource_ref STR_VAR ref = "%value%" RET return = resource END
+    PATCH_IF ("%return%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "encode_elemental_protection_entry: invalid '%value%' spell."
+    END
+
+    PATCH_IF NOT (FILE_EXISTS_IN_GAME "%return%.spl") BEGIN
+        PATCH_FAIL "encode_elemental_protection_entry: resource '%return%.spl' for '%value%' does not exist in game."
+    END
+END
 
 
 //Patches.
-DEFINE_PATCH_FUNCTION enchanted_weapon STR_VAR destination = "" BEGIN
-    PATCH_PRINT "enchanted_weapon: patching table."
-
+DEFINE_PATCH_FUNCTION enchanted_weapon STR_VAR destination = "*" BEGIN
     PATCH_IF NOT (7 = (STRING_LENGTH "%destination%")) BEGIN
         PATCH_FAIL "enchanted_weapon: resource '%destination%' is not 7 characters long."
     END
@@ -48,4 +61,8 @@ DEFINE_PATCH_FUNCTION enchanted_weapon STR_VAR destination = "" BEGIN
 
         SET_2DA_ENTRY i 1 cols "%res%"
     END
+END
+
+DEFINE_PATCH_FUNCTION protection_elemental_energy STR_VAR destination = "*" BEGIN
+    LPF patch_table_column STR_VAR patcher = "encode_elemental_protection_entry" END
 END

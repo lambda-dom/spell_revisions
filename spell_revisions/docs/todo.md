@@ -102,15 +102,11 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Polymorph other: aux resources do not seem to be used anywhere.
 
-* Polymorph self: only description in.
-
 * Enchant weapon: the basic spell is in but the items are missing proper descriptions and the spell, descriptions and ability icons.
 
 * Monster Summoning IV: cre and script for phase spider unused.
 
 * Wizard Eye: change from non-stacking to refreshing? Review creature.
-
-* Protection from Elemental Energy: only descriptions of elemental spells in.
 
 ## B. 5. Level 5.
 
@@ -124,7 +120,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Dispelling Screen: the base spell makes no sense so have to implement the patching.
 
-* Conjure (Lesser) Elemental: Only descriptions in. Add water elemental and consolidate all spells in one.
+* Conjure (Lesser) Elemental: Add water elemental and consolidate all spells in one.
 
 * Spell Deflection: add display string.
 
