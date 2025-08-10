@@ -92,7 +92,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Blue Shield: reinstate it.
 
-* Mestil's Acid Shield: replaces cold shield but we are reinstating it.
+* Mestil's Acid Shield: replaces cold shield but we are reinstating it. Spell itself is not in (and is in level 5).
 
 * Minor Glove of Invulnerability: pass through area spells of level <= that must be protected against. Externalize like with PfM?
 
