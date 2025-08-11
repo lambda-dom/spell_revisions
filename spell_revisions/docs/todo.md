@@ -58,7 +58,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## A. 6. Level 6.
 
-* Conjure Elemental: only descriptions in.
+* Conjure Elemental: only descriptions in. Doing it in the wizard level 6.
 
 * Physical Mirror: use PfM table to set up immunities to missiles. Shared mirror image effect with reflected image cannot be done because of different power levels.
 
@@ -84,7 +84,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Remove magic: reinstate, with old icon but targeting everyone (that is remove magic becomes old dispel magic).
 
-* Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles.
+* Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles. Also used for physical mirror.
 
 * Skull Trap: has an extra protection for swords. Undocumented so dropped for now, but to be revisited.
 
@@ -115,8 +115,6 @@ Not just things to (still) do but also proposed changes to spells.
 * Wizard Eye: change from non-stacking to refreshing? Review creature.
 
 ## B. 5. Level 5.
-
-* Shadow Summon: refactor immunities by reusing undead immunities and moving everything else to the touch.
 
 * Monster Summon 5: Ogre Mage casts haste not slow which he does not have; does not use invis at will which is not memorized anyway.
 
@@ -165,8 +163,8 @@ note(s):
 
 * Use `append_item_block` instead of hack with `patch_block`.
 
-* Conjure Elemental: remove probability of not summoning. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Damage bonus 9 -> 4. Move immunity to normal weapons from immunities to weapon as it is used by aerial servant as well.
+* Conjure Elemental: remove probability of not summoning. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Damage bonus 9 -> 4.
 
 * Damage bonus on natural attacks: these are set seeming randomly; standardize them.
 
-* Add snake race for snake summon (possibly other with no_race).
+* Add snake race for snake summon (possibly others with no_race).

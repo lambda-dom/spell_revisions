@@ -79,9 +79,13 @@ note(s):
 
 * Animal Summoning VI: cave bear: corrections to damage bonus in claws. Corrections to thac0.
 
+* Conjure Elemental: standardized duration to 2 turns (= level 10 in old spell) per wizard lesser version.
+
 * Fire Seeds: +6 -> +4 enchantment. Added dart prof so that characters with it can use it.
 
 * False Dawn: spurious cast spell opcode.
+
+* Animate Skeleton Warrior: standardized immunities. Damage bonus 1 (corrected description). Corrections to thac0.
 
 # B. Arcane spells.
 
@@ -153,7 +157,7 @@ note(s):
 
 ## B. 5. Level 5.
 
-* Summon Shadow: Shadow: added immunities to fear and fatigue; standardized immunities. Missing save on opcode in shadow touch. Corrections to thac0. Wraith: added immunities to fear and fatigue; standardized immunities. Standardized level drain. Corrections to thac0, ac. Range of spell long -> medium.
+* Summon Shadow: Shadow: added immunities to fear and fatigue; standardized immunities. Missing save on opcode in shadow touch. Corrections to thac0. Wraith: added immunities to fear and fatigue; standardized immunities and dropped blindness immunity. Standardized level drain. Corrections to thac0, ac. Range of spell long -> medium.
 
 * Monster Summoning V: correct ridiculous damage bonus 9 -> 3, 1. Ogre Berserker: corrections to thac0, hps. Ogre Mage: corrections to int, wis, chr, hps, ac, thac0, saves.
 

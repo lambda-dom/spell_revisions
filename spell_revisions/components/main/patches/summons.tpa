@@ -163,6 +163,27 @@ DEFINE_PATCH_FUNCTION aerial_servant STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION skeleton_warrior BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "greater_skeleton_2h_sword"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "undead_immunities"
+        slot = "rring"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "immune_normal_weapons"
+        slot = "lring"
+        array = "items"
+    END
+END
+
 DEFINE_PATCH_FUNCTION gibberling STR_VAR destination = "*" BEGIN
     //Equip items.
     LPF creature_add_item STR_VAR
@@ -256,8 +277,14 @@ DEFINE_PATCH_FUNCTION shadow STR_VAR destination = "*" BEGIN
     END
 
     LPF creature_add_item STR_VAR
-        reference = "shadow_immunities"
+        reference = "undead_immunities"
         slot = "rring"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "wraith_immunities"
+        slot = "lring"
         array = "items"
     END
 END
@@ -271,8 +298,14 @@ DEFINE_PATCH_FUNCTION wraith STR_VAR destination = "*" BEGIN
     END
 
     LPF creature_add_item STR_VAR
-        reference = "wraith_immunities"
+        reference = "undead_immunities"
         slot = "rring"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "wraith_immunities"
+        slot = "lring"
         array = "items"
     END
 END
@@ -308,6 +341,12 @@ DEFINE_PATCH_FUNCTION lesser_air_elemental STR_VAR destination = "*" BEGIN
         slot = "rring"
         array = "items"
     END
+
+    LPF creature_add_item STR_VAR
+        reference = "immune_normal_weapons"
+        slot = "lring"
+        array = "items"
+    END
 END
 
 DEFINE_PATCH_FUNCTION lesser_earth_elemental STR_VAR destination = "*" BEGIN
@@ -323,6 +362,12 @@ DEFINE_PATCH_FUNCTION lesser_earth_elemental STR_VAR destination = "*" BEGIN
         slot = "rring"
         array = "items"
     END
+
+    LPF creature_add_item STR_VAR
+        reference = "immune_normal_weapons"
+        slot = "lring"
+        array = "items"
+    END
 END
 
 DEFINE_PATCH_FUNCTION lesser_fire_elemental STR_VAR destination = "*" BEGIN
@@ -336,6 +381,12 @@ DEFINE_PATCH_FUNCTION lesser_fire_elemental STR_VAR destination = "*" BEGIN
     LPF creature_add_item STR_VAR
         reference = "elemental_immunities"
         slot = "rring"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "immune_normal_weapons"
+        slot = "lring"
         array = "items"
     END
 END

@@ -72,7 +72,7 @@ Level: 6
 School: Conjuration
 Sphere: Elemental (Fire)
 Range: Medium
-Duration: 1 turn + 1 round/level
+Duration: 2 turns
 Casting Time: 1 round
 Area of Effect: Special
 Saving Throw: None
@@ -82,18 +82,18 @@ Upon casting a Conjure Fire Elemental spell, the caster opens a special gate to 
 Fire Elemental (12 Hit Dice):
 STR 16, DEX 17, CON 17, INT 6, WIS 11, CHA 11;  AL Neutral
 HP 116, AC 1, THAC0 7, Saving Throws 7/9/8/8/10
-2 Attacks Per Round, 2d6+4 Slashing +2d6 Fire Damage (Fist +3)
+2 Attacks Per Round, 2d6 + 4 Slashing +2d6 Fire Damage (Fist +3)
 
 Greater Fire Elemental (16 Hit Dice):
 STR 18, DEX 19, CON 18, INT 6, WIS 11, CHA 11;  AL Neutral
 HP 138, AC 0, THAC0 3, Saving Throws 4/6/5/4/7
-2 Attacks Per Round, 2d8+5 Slashing +2d8 Fire Damage (Fist +3)
+2 Attacks Per Round, 2d8 + 5 Slashing +2d8 Fire Damage (Fist +3)
 
-Special Qualities (12 & 16 Hit Dice):
+Special Qualities (12 and 16 Hit Dice):
 Immune to normal weapons
 Immune to hold, poison, polymorph, sleep and stun effects
 Fire Resistance 100%
-Slashing, Crushing, Piercing, & Missile Resistance 20%"
+Slashing, Crushing, Piercing and Missile Resistance 20%"
 
 //fire_seeds:sppr606
 @6060 = "Fire Seeds"
@@ -248,17 +248,17 @@ Upon casting a Conjure Earth Elemental spell, the caster opens a special gate to
 Earth Elemental (12 Hit Dice):
 STR 21, DEX 8, CON 19, INT 6, WIS 11, CHA 11;  AL Neutral
 HP 116, AC 3, THAC0 4, Saving Throws 7/9/8/8/10
-2 Attacks Per Round, 2d8+12 Crushing Damage (Fist +3)
+2 Attacks Per Round, 2d8 + 12 Crushing Damage (Fist +3)
 
 Greater Earth Elemental (16 Hit Dice):
 STR 23, DEX 8, CON 21, INT 6, WIS 11, CHA 11;  AL Neutral
 HP 152, AC 2, THAC0 0, Saving Throws 4/6/5/4/7
-2 Attacks Per Round, 2d8+14 Crushing Damage (Fist +3)
+2 Attacks Per Round, 2d8 + 14 Crushing Damage (Fist +3)
 
-Special Qualities (12 & 16 Hit Dice):
+Special Qualities (12 and 16 Hit Dice):
 Immune to normal weapons
 Immune to hold, poison, polymorph, sleep and stun effects
-Slashing, Piercing, & Missile Resistance 40%"
+Slashing, Piercing and Missile Resistance 40%"
 
 @6510 = "Conjure Air Elemental"
 @6511 = "Conjure Air Elemental
@@ -276,14 +276,14 @@ Upon casting a Conjure Air Elemental spell, the caster opens a special gate to t
 Air Elemental (12 Hit Dice):
 STR 16, DEX 19, CON 17, INT 6, WIS 11, CHA 11;  AL Neutral
 HP 116, AC 0, THAC0 5, Saving Throws 7/9/8/8/10
-3 Attacks Per Round, 1d8+4 Piercing Damage (Fist +3)
+3 Attacks Per Round, 1d8 + 4 Piercing Damage (Fist +3)
 
 Greater Air Elemental (16 Hit Dice):
 STR 18, DEX 21, CON 18, INT 6, WIS 11, CHA 11;  AL Neutral
 HP 138, AC -1, THAC0 1, Saving Throws 4/6/5/4/7
-3 Attacks Per Round, 1d8+5 Piercing Damage (Fist +3)
+3 Attacks Per Round, 1d8 + 5 Piercing Damage (Fist +3)
 
-Special Qualities (12 & 16 Hit Dice):
+Special Qualities (12 and 16 Hit Dice):
 Immune to normal weapons
 Immune to hold, poison, polymorph, sleep and stun effects
 Slashing, Crushing, & Piercing Resistance 20%; Missile Resistance 60%"
@@ -317,11 +317,11 @@ This spell animates the corpse of a skilled warrior to rise up and serve the cas
 Skeleton Warrior (9 Hit Dice):
 STR 18/51, DEX 14, CON -, INT 15, WIS 14, CHA 12;  AL Neutral Evil
 HP 108, AC 2, THAC0 11, Saving Throws 5/7/6/5/8
-2 Attacks Per Round, 2d6+4 Slashing Damage (Two-Handed Sword +1)
+2 Attacks Per Round, 2d6 + 1 Slashing Damage (Two-Handed Sword +1)
 
 Special Qualities:
 Immune to normal weapons
-Immune to charm, confusion, hold, poison, sleep, stun and death effects
+Undead immunities to fear, fatigue, charm, confusion, disease, hold, poison, sleep, stun and death effects
 Cold Resistance 100%; Magic Resistance 90%
 Slashing & Piercing Resistance 40%; Missile Resistance 60%"
 

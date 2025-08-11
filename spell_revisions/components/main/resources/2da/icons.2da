@@ -73,6 +73,9 @@ animal_summon_6_c               1       *       0       #suf:c:CLERIC_ANIMAL_SUM
 banishment_a                    1       *       0       #suf:a:CLERIC_BANISHMENT
 banishment_b                    1       *       0       #suf:b:CLERIC_BANISHMENT
 banishment_c                    1       *       0       #suf:c:CLERIC_BANISHMENT
+animate_skeleton_warrior_a      1       *       0       #suf:a:CLERIC_ANIMATE_SKELETON_WARRIOR
+animate_skeleton_warrior_b      1       *       0       #suf:b:CLERIC_ANIMATE_SKELETON_WARRIOR
+animate_skeleton_warrior_c      1       *       0       #suf:c:CLERIC_ANIMATE_SKELETON_WARRIOR
 obscuring_mist_a                1       *       0       #suf:a:WIZARD_OBSCURING_MIST
 obscuring_mist_b                1       *       0       #suf:b:WIZARD_OBSCURING_MIST
 obscuring_mist_c                1       *       0       #suf:c:WIZARD_OBSCURING_MIST

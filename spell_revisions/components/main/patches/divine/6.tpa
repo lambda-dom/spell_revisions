@@ -185,3 +185,14 @@ DEFINE_PATCH_FUNCTION banishment STR_VAR destination = "*" BEGIN
         references = "effects"
     END
 END
+
+DEFINE_PATCH_FUNCTION animate_skeleton_warrior STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "summon_skeleton_warrior"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
