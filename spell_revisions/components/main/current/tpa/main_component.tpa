@@ -454,28 +454,15 @@ APPEND ~spell.ids~ ~1604 CLERIC_CONJURE_ANIMALS_DEPRECATED~
 COPY ~spell_rev\sppr6##\sppr605.spl~     ~override~  // Conjure Fire Elemental
   SAY NAME1 @199    SAY UNIDENTIFIED_DESC @200
 
-//Patch pro for fire seeds.
+//Patch projectile for fire seeds.
 COPY_EXISTING ~bolt2.pro~ ~override~
   WRITE_SHORT 0x204 110
   WRITE_SHORT 0x206 110
 
-COPY ~spell_rev\sppr6##\sppr609.spl~     ~override~  // False Dawn
-  SAY NAME1 @207    SAY UNIDENTIFIED_DESC @208
-ADD_PROJECTILE ~spell_rev\projectles\dvfdawn.pro~
-COPY ~spell_rev\sppr6##\sppr609e.spl~     ~override~
-  WRITE_SHORT 0x98 %dvfdawn%
-COPY ~spell_rev\sppr6##\sppr609f.spl~     ~override~
-COPY ~spell_rev\sppr6##\sppr609.eff~     ~override~
+//False Dawn: seeming unused effs.
 COPY ~spell_rev\sppr6##\dawnvis2.eff~     ~override~
 COPY ~spell_rev\sppr6##\dawndam2.eff~     ~override~
 COPY ~spell_rev\sppr6##\dawnblnd.eff~     ~override~
-
-COPY ~spell_rev\sppr6##\sppr610.spl~     ~override~  // Dolorous Decay
-  SAY NAME1 @209    SAY UNIDENTIFIED_DESC @210
-COPY ~spell_rev\sppr6##\dvddecay.eff~     ~override~
-
-COPY ~spell_rev\sppr6##\sppr611.spl~     ~override~  // Wondrous Recall
-  SAY NAME1 @211    SAY UNIDENTIFIED_DESC @212
 
 COPY ~spell_rev\sppr6##\sppr612.spl~     ~override~  // Bolt of Glory
   SAY NAME1 @213    SAY UNIDENTIFIED_DESC @214

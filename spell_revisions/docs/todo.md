@@ -62,6 +62,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Conjure Fire Elemental: only description in.
 
+* False Dawn: move blindness to subspell.
 
 # B. Arcane spells.
 
@@ -130,6 +131,8 @@ Not just things to (still) do but also proposed changes to spells.
 * Spell Deflection: add display string.
 
 # C. General.
+
+* weidu_library stuff: (1) re-order saves in cre tables to align with standard ordering for better comparison. (2) type the fields like those requiring tra refs by making the default -1 instead of *.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
 

@@ -79,6 +79,8 @@ note(s):
 
 * Fire Seeds: +6 -> +4 enchantment. Added dart prof so that characters with it can use it.
 
+* False Dawn: spurious cast spell opcode.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.
