@@ -1,6 +1,7 @@
 2DA V1.0
 *
                         install name    descr   type    lvl flags       school      sectype             book_icon                                   abil_icon                                   projectile                      range   speed   patch               over    destination
+aerial_servant          1       6010    6011    priest  6   00000000    conjurer    conjuration         #suf:c:CLERIC_AERIAL_SERVANT                #suf:b:CLERIC_AERIAL_SERVANT                *                               20      9       aerial_servant      1       #spl:CLERIC_AERIAL_SERVANT
 animal_summoning_6      1       6020    6021    priest  6   00000000    conjurer    conjuration         #suf:c:CLERIC_ANIMAL_SUMMONING_LEVEL_6      #suf:b:CLERIC_ANIMAL_SUMMONING_LEVEL_6      *                               20      9       animal_summoning_6  1       #spl:CLERIC_ANIMAL_SUMMONING_LEVEL_6
 blade_barrier_b         1       *       *       special 1   01000000    conjurer    offensivedamage     *                                           *                                           #lbl:small_area_not_party       6       1       *                   0       #suf:b:CLERIC_BLADE_BARRIER
 blade_barrier_a         1       *       *       special 1   01000000    conjurer    offensivedamage     *                                           *                                           *                               1       1       blade_barrier_a     0       #suf:a:CLERIC_BLADE_BARRIER

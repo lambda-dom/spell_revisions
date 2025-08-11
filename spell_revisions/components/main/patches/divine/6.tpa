@@ -24,6 +24,17 @@ RET_ARRAY spells = references END
 
 
 //Patches.
+DEFINE_PATCH_FUNCTION aerial_servant STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "summon_aerial_servant"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
 DEFINE_PATCH_FUNCTION animal_summoning_6 STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 177                  //Use Eff.

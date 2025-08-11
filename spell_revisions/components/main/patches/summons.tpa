@@ -148,6 +148,21 @@ DEFINE_PATCH_FUNCTION cave_bear STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION aerial_servant STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "aerial_servant_fists"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "elemental_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
 DEFINE_PATCH_FUNCTION gibberling STR_VAR destination = "*" BEGIN
     //Equip items.
     LPF creature_add_item STR_VAR

@@ -75,6 +75,8 @@ note(s):
 
 ## A. 6. Level 6.
 
+* Aerial Servant: add normal invis to fists. Fix damage bonus. Added polymorph per other elementals. Corrections to thac0 and ac. Deleted spurious immunity to maze opcode. Deleted spurious servsu.bcs script.
+
 * Animal Summoning VI: cave bear: corrections to damage bonus in claws. Corrections to thac0.
 
 * Fire Seeds: +6 -> +4 enchantment. Added dart prof so that characters with it can use it.

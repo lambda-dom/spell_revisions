@@ -58,13 +58,11 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## A. 6. Level 6.
 
-* Aerial Description: only description in.
-
 * Conjure Elemental: only descriptions in.
 
 * Physical Mirror: use PfM table to set up immunities to missiles. Shared mirror image effect with reflected image cannot be done because of different power levels.
 
-* Banishment: second eff has wrong target; not clear what is the correct target.
+* Banishment: second eff has wrong target; not clear what is the correct target, if any (summoned_demon?).
 
 # B. Arcane spells.
 
@@ -134,7 +132,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 # C. General.
 
-* weidu_library stuff: (1) re-order saves in cre tables to align with standard ordering for better comparison. (2) type the fields like those requiring tra refs by making the default -1 instead of *.
+* weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
 
@@ -167,7 +165,7 @@ note(s):
 
 * Use `append_item_block` instead of hack with `patch_block`.
 
-* Conjure Elemental: remove probability of not summoning. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Damage bonus 9 -> 4.
+* Conjure Elemental: remove probability of not summoning. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Damage bonus 9 -> 4. Move immunity to normal weapons from immunities to weapon as it is used by aerial servant as well.
 
 * Damage bonus on natural attacks: these are set seeming randomly; standardize them.
 

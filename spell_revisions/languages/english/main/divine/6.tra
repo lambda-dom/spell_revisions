@@ -18,11 +18,11 @@ The caster of this spell summons an Aerial Servant to do the caster's bidding fo
 Aerial Servant (13 Hit Dice):
 STR 21, DEX 19, CON 17, INT 6, WIS 11, CHA 11;  AL Neutral
 HP 122, AC -1, THAC0 5, Saving Throws 5/7/6/5/8
-2 Attacks Per Round, 2d6+11 Crushing Damage (Fist +2)
+2 Attacks Per Round, 2d6 + 4 Crushing Damage (Fists +2)
 
 Special Qualities:
 Natural Invisibility: constantly invisible as if affected by an Improved Invisibility spell
-Immune to hold, poison, sleep and stun effects"
+Immune to hold, poison, polymorph, sleep and stun effects"
 
 //monster_summoning_6:sppr602
 @6020 = "Animal Summoning VI"
