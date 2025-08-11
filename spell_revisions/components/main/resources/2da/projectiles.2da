@@ -31,3 +31,5 @@ cloud_kill          1       cloud_kill          1           *                   
 cone_cold           1       cone_cold           0           *                   0       #lit:dlconecl
 shadow_door         1       shadow_door         0           *                   0       #lit:dlshdoor
 fireburst           1       fireburst           0           *                   0       #lit:dlfirbrt
+false_dawn          1       false_dawn_sr       0           *                   0       #lit:dlfldawn
+sol_searing_orb     1       sol_searing_orb     0           *                   0       #lit:dlssrorb

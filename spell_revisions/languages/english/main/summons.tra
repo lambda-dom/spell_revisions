@@ -10,6 +10,9 @@
 @1402 = "Hamadryad"
 @1403 = "Nymph"
 @1501 = "Giant Snake"
+@1601 = "Aerial Servant"
+@1602 = "Cave Bear"
+@1603 = "Skeleton Warrior"
 
 
 //Arcane.
@@ -27,3 +30,11 @@
 @2506 = "Lesser Earth Elemental"
 @2507 = "Lesser Fire Elemental"
 @2508 = "Lesser Water Elemental"
+@2601 = "Air Elemental"
+@2602 = "Earth Elemental"
+@2603 = "Fire Elemental"
+@2604 = "Water Elemental"
+@2605 = "Greater Air Elemental"
+@2606 = "Greater Earth Elemental"
+@2607 = "Greater Fire Elemental"
+@2608 = "Greater Water Elemental"

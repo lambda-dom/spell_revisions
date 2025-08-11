@@ -40,7 +40,7 @@ END
 
 DEFINE_PATCH_FUNCTION true_seeing_a STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
-        match_opcode = 146                  //Use Eff.
+        match_opcode = 146                  //Cast spell.
     STR_VAR
         resource = "true_seeing_b"
         match_resource = "mvis#res"
@@ -50,7 +50,7 @@ END
 
 DEFINE_PATCH_FUNCTION true_seeing STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
-        match_opcode = 146                  //Use Eff.
+        match_opcode = 146                  //Cast spell.
     STR_VAR
         resource = "true_seeing_a"
         match_resource = "mvis#res"

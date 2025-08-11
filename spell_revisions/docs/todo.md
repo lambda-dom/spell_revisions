@@ -34,8 +34,6 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## A. 5. Level 5.
 
-* Animal Summoning V: only description in.
-
 * Cure Mortal Wounds: Implement immunity for non-living and extra-planar or delete from description?
 
 * True Seeing: there is a protection from the cloak of mirroring -- drop it if needed. Aux spell only removes illusion school spells up to level 2; remove illusionary protections of all levels? Missing protection against shadow door.
@@ -50,13 +48,21 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Protection from Cold: only protectiom from wizard's cone of cold and icestrom. Add other.
 
-* Protection from Fire: missing protection (e. g. aux flame arrow).
+* Protection from Fire: missing protections (e. g. aux flame arrow).
 
 * Elemental protection: do the same dance as with wizard's protection from elemental energy.
 
 * Mass Regenerate: currently non-stacking. SR adds non-concurrent stacking, but is it needed?
 
-* Harper's Call: to do.
+* Harper's Call: to do. Drop the penalties and make it out of combat only.
+
+## A. 6. Level 6.
+
+* Conjure Elemental: only descriptions in. Doing it in the wizard level 6.
+
+* Physical Mirror: use PfM table to set up immunities to missiles. Shared mirror image effect with reflected image cannot be done because of different power levels.
+
+* Banishment: second eff has wrong target; not clear what is the correct target, if any (summoned_demon?).
 
 # B. Arcane spells.
 
@@ -78,7 +84,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Remove magic: reinstate, with old icon but targeting everyone (that is remove magic becomes old dispel magic).
 
-* Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles.
+* Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles. Also used for physical mirror.
 
 * Skull Trap: has an extra protection for swords. Undocumented so dropped for now, but to be revisited.
 
@@ -110,8 +116,6 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 5. Level 5.
 
-* Shadow Summon: refactor immunities by reusing undead immunities and moving everything else to the touch.
-
 * Monster Summon 5: Ogre Mage casts haste not slow which he does not have; does not use invis at will which is not memorized anyway.
 
 * Shadow Door: add a True Seeing state so that we can put immunity to the spell in the spell itself (see Spook above).
@@ -125,6 +129,8 @@ Not just things to (still) do but also proposed changes to spells.
 * Spell Deflection: add display string.
 
 # C. General.
+
+* weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.
 
 * Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
 
@@ -158,3 +164,7 @@ note(s):
 * Use `append_item_block` instead of hack with `patch_block`.
 
 * Conjure Elemental: remove probability of not summoning. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Damage bonus 9 -> 4.
+
+* Damage bonus on natural attacks: these are set seeming randomly; standardize them.
+
+* Add snake race for snake summon (possibly others with no_race).

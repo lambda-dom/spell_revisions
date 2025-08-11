@@ -28,8 +28,8 @@ Combat Abilities:
 Chill Touch: creatures struck must save vs. death or lose 1 point of strength for 1 turn
 
 Special Qualities:
-Immune to normal weapons
-Immune to backstab, fear, fatigue, charm, confusion, hold, poison, sleep, stun and death effects
+Immune to normal weapons and backstab
+Undead immunities to fear, fatigue, charm, confusion, hold, poison, sleep, stun and death effects
 Cold Resistance 100%; Physical Damage Resistance 50%
 
 Wraith (5 Hit Dice):
@@ -41,8 +41,8 @@ Combat Abilities:
 Life Drain: each successful hit raises the wraith's hit points by 5 for 1 turn and causes the target to save vs. death or lose 1 level
 
 Special Qualities:
-Immune to normal weapons
-Immune to backstab, fear, fatigue, blindness, charm, confusion, hold, poison, sleep, stun and death effects
+Immune to normal weapons and backstab
+Undead immunities to fear, fatigue, charm, confusion, hold, poison, sleep, stun and death effects
 Cold Resistance 100%; Physical Damage Resistance 50%"
 
 //cloud_kill:spwi502

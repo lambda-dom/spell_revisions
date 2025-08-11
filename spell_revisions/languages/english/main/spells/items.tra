@@ -45,6 +45,16 @@
 @1510 = "Slay Living"
 @1511 = "Fists enchanted by the Slay Living spell."
 
+//Level 6.
+@1600 = "Fire Seeds"
+@1601 = "These Fire Seeds were created the Fire Seeds spell."
+
+@1610 = "Harm"
+@1611 = "Fists enchanted by the Harm spell."
+
+@1620 = "Searing Orb"
+@1621 = "This Searing Orb were created the Sol's Searing Orb spell."
+
 
 //Arcane.
 //Level 1.
