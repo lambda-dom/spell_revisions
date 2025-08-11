@@ -142,3 +142,35 @@ DEFINE_PATCH_FUNCTION bolt_glory STR_VAR destination = "*" BEGIN
         references = "effects"
     END
 END
+
+DEFINE_PATCH_FUNCTION physical_mirror STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "physical_mirror_a"
+        match_resource = "refl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION sol_searing_orb STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create weapon.
+    STR_VAR
+        resource = "sol_searing_orb"
+        ext = "itm"
+        match_resource = "item#res"
+        references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION banishment STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "banishment_a"
+        ext = "eff"
+        match_resource = "bnsh#res"
+        references = "effects"
+    END
+END

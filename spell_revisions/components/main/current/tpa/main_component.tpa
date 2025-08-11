@@ -459,38 +459,20 @@ COPY_EXISTING ~bolt2.pro~ ~override~
   WRITE_SHORT 0x204 110
   WRITE_SHORT 0x206 110
 
-//False Dawn: seeming unused effs.
+//False Dawn: unused effs.
 COPY ~spell_rev\sppr6##\dawnvis2.eff~     ~override~
 COPY ~spell_rev\sppr6##\dawndam2.eff~     ~override~
 COPY ~spell_rev\sppr6##\dawnblnd.eff~     ~override~
 
-COPY ~spell_rev\sppr6##\sppr612.spl~     ~override~  // Bolt of Glory
-  SAY NAME1 @213    SAY UNIDENTIFIED_DESC @214
-COPY ~spell_rev\sppr6##\boltdem.eff~     ~override~
-COPY ~spell_rev\sppr6##\boltelem.eff~     ~override~
-COPY ~spell_rev\sppr6##\boltprim.eff~     ~override~
-COPY ~spell_rev\sppr6##\boltund.eff~     ~override~
-
-COPY ~spell_rev\sppr6##\sppr613.spl~     ~override~  // Physical Mirror
-  SAY NAME1 @215    SAY UNIDENTIFIED_DESC @216
+//Detectable spells stuff for physical mirror.
 LAF ds_altered_spell INT_VAR old_clone=197 new_clone=~142~ STR_VAR file=~sppr613.spl~ END
-COPY ~spell_rev\sppr6##\sppr613d.spl~     ~override~
 
-COPY ~spell_rev\sppr6##\sppr614.spl~     ~override~  // Sol's Searing Orb
-  SAY NAME1 @217    SAY UNIDENTIFIED_DESC @218
+//Override projectile for sol's searing orb.
 COPY ~spell_rev\projectles\bulletex.pro~     ~override~
-COPY ~spell_rev\sppr6##\sorb.itm~     ~override~
-
-//ADD_SPELL: Regeneration
-ADD_SPELL ~spell_rev\sppr6##\sppr619.spl~ 1 6 ~CLERIC_REGENERATION_DRUID_VERSION~  // Regeneration (added to druid's spells)
-  SAY NAME1 @311    SAY UNIDENTIFIED_DESC @312
 
 //ADD_SPELL: Banishment
 ADD_SPELL ~spell_rev\sppr6##\sppr620.spl~ 1 6 ~CLERIC_BANISHMENT~  // Banishment (added to cleric's spells)
   SAY NAME1 @223    SAY UNIDENTIFIED_DESC @224
-COPY ~spell_rev\sppr6##\dvpr620a.bam~     ~override~
-COPY ~spell_rev\sppr6##\dvpr620b.bam~     ~override~
-COPY ~spell_rev\sppr6##\dvpr620c.bam~     ~override~
 
 //ADD_SPELL: Conjure Air Elemental
 ADD_SPELL ~spell_rev\sppr6##\sppr621.spl~ 1 6 ~CLERIC_CONJURE_AIR_ELEMENTAL~  // Conjure Air Elemental (added to druid's spells)

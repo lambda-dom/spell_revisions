@@ -60,9 +60,11 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Aerial Description: only description in.
 
-* Conjure Fire Elemental: only description in.
+* Conjure Elemental: only descriptions in.
 
-* False Dawn: move blindness to subspell.
+* Physical Mirror: use PfM table to set up immunities to missiles. Shared mirror image effect with reflected image cannot be done because of different power levels.
+
+* Banishment: second eff has wrong target; not clear what is the correct target.
 
 # B. Arcane spells.
 
