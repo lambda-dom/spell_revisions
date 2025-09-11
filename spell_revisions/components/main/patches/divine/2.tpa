@@ -51,88 +51,55 @@ DEFINE_PATCH_FUNCTION chant_b STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION chant STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "chant_a"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "chant_a"
         match_resource = "good#res"
-        resource = "%res%"
+        references = "spells"
     END
 
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "chant_b"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "chant_b"
         match_resource = "evil#res"
-        resource = "%res%"
+        references = "spells"
     END
 END
 
 DEFINE_PATCH_FUNCTION charm_person_animal STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "charm_person_animal"
-        array = "effects"
-        ext = "eff"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 177                  //Use Eff.
     STR_VAR
+        resource = "charm_person_animal"
+        ext = "eff"
         match_resource = "chrm#res"
-        resource = "%res%"
+        references = "effects"
     END
 END
 
 DEFINE_PATCH_FUNCTION find_traps STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "find_traps_a"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "find_traps_a"
         match_resource = "spl#res"
-        resource = "%res%"
+        references = "spells"
     END
 END
 
 DEFINE_PATCH_FUNCTION flame_blade STR_VAR destination = "*" BEGIN
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
-        //Get reference.
-        LPF get_table_ref STR_VAR
-            value = "flame_blade_%i%"
-            array = "items"
-            ext = "itm"
-        RET res = resource END
-
-        LPF ALTER_EFFECT INT_VAR
-            verbose = 1
-            header = i - 1
+        LPF patch_resource_reference INT_VAR
             match_opcode = 111              //Create Weapon.
+            verbose = 1
         STR_VAR
+            resource = "flame_blade_%i%"
+            ext = "itm"
             match_resource = "item#res"
-            resource = "%res%"
+            references = "items"
         END
     END
 END
@@ -170,20 +137,13 @@ END
 DEFINE_PATCH_FUNCTION spiritual_hammer STR_VAR destination = "*" BEGIN
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
-        //Get reference.
-        LPF get_table_ref STR_VAR
-            value = "spiritual_hammer_%i%"
-            array = "items"
-            ext = "itm"
-        RET res = resource END
-
-        LPF ALTER_EFFECT INT_VAR
-            verbose = 1
-            header = i - 1
+        LPF patch_resource_reference INT_VAR
             match_opcode = 111              //Create Weapon.
+            header = i - 1
         STR_VAR
+            resource = "spiritual_hammer_%i%"
             match_resource = "item#res"
-            resource = "%res%"
+            references = "items"
         END
     END
 END
@@ -223,67 +183,41 @@ DEFINE_PATCH_FUNCTION gust_wind_kill_insects STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION gust_wind_druid STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "gust_wind_knockback"
-        array = "subspells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
-        match_opcode = 146              //Cast spell.
-    STR_VAR
-        match_resource = "knck#res"
-        resource = "%res%"
-    END
-
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "gust_wind_kill_insects"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "gust_wind_knockback"
+        match_resource = "knck#res"
+        references = "subspells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "gust_wind_kill_insects"
         match_resource = "kins#res"
-        resource = "%res%"
+        references = "spells"
     END
 END
 
 DEFINE_PATCH_FUNCTION cause_moderate_wounds STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "cause_moderate_wounds"
-        array = "items"
-        ext = "itm"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
-        match_opcode = 111              //Create Weapon.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 111                  //Create Weapon.
     STR_VAR
+        resource = "cause_moderate_wounds"
+        ext = "itm"
         match_resource = "item#res"
-        resource = "%res%"
+        references = "items"
     END
 END
 
 DEFINE_PATCH_FUNCTION animal_summoning_2 STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "summon_war_dog"
-        array = "effects"
-        ext = "eff"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
-        match_opcode = 177              //Use Eff.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
     STR_VAR
+        resource = "summon_war_dog"
+        ext = "eff"
         match_resource = "summ#res"
-        resource = "%res%"
+        references = "effects"
     END
 END

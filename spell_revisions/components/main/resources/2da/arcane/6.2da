@@ -1,0 +1,4 @@
+2DA V1.0
+*
+                                install name    descr   type    lvl flags       school      sectype             book_icon                                       abil_icon                                       projectile                          range   speed   patch                           over    destination
+summon_shadow                   1       5010    5011    wizard  5   00000000    necromancer conjuration         #suf:c:WIZARD_CARRION                           #suf:b:WIZARD_CARRION                           *                                   20      9       summon_shadow                   1       #spl:WIZARD_SUMMON_SHADOW
