@@ -1,6 +1,7 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
@@ -41,19 +42,12 @@ DEFINE_PATCH_FUNCTION blur STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION detect_invisibility STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "detect_invisibility_a"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "detect_invisibility_a"
         match_resource = "spl#res"
-        resource = "%res%"
+        references = "spells"
     END
 END
 
@@ -79,19 +73,13 @@ DEFINE_PATCH_FUNCTION strength STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION ghoul_touch STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "ghoul_touch"
-        array = "items"
-        ext = "itm"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
-        match_opcode = 111                  //Create Weapon.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "ghoul_touch"
+        ext = "itm"
         match_resource = "item#res"
-        resource = "%res%"
+        references = "items"
     END
 END
 
@@ -162,19 +150,12 @@ DEFINE_PATCH_FUNCTION glitterdust STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION battering_ram STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "battering_ram_knockback"
-        array = "subspells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "battering_ram_knockback"
         match_resource = "knck#res"
-        resource = "%res%"
+        references = "subspells"
     END
 END
 
@@ -195,34 +176,21 @@ DEFINE_PATCH_FUNCTION know_opponent STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION sound_burst STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "sound_burst_a"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "sound_burst_a"
         match_resource = "sndb#res"
-        resource = "%res%"
+        references = "spells"
     END
 
-    //Patch vvc.
-    LPF get_table_ref STR_VAR
-        value = "sound_burst"
-        array = "vvcs"
-        ext = "vvc"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 215                  //Play visual effect.
+        ext = "vvc"
     STR_VAR
+        resource = "sound_burst"
         match_resource = "vvc#res"
-        resource = "%res%"
+        references = "vvcs"
     END
 END
 
@@ -243,18 +211,12 @@ DEFINE_PATCH_FUNCTION resist_elements STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION monster_summoning_2 BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "summon_green_slime"
-        array = "effects"
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
         ext = "eff"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
-        match_opcode = 177              //Use Eff.
     STR_VAR
+        resource = "summon_green_slime"
         match_resource = "summ#res"
-        resource = "%res%"
+        references = "effects"
     END
 END

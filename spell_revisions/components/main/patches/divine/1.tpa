@@ -44,36 +44,23 @@ DEFINE_PATCH_FUNCTION cure_light_wounds STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION entangle STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "entangle_a"
-        array = "subspells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "entangle_a"
         match_resource = "entg#res"
-        resource = "%res%"
+        references = "subspells"
     END
 END
 
 DEFINE_PATCH_FUNCTION magical_stone STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "magical_stone"
-        array = "items"
-        ext = "itm"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 111                  //Create Weapon.
     STR_VAR
+        resource = "magical_stone"
+        ext = "itm"
         match_resource = "item#res"
-        resource = "%res%"
+        references = "items"
     END
 END
 
@@ -87,20 +74,14 @@ END
 DEFINE_PATCH_FUNCTION shillelagh STR_VAR destination = "*" BEGIN
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
-        //Get reference.
-        LPF get_table_ref STR_VAR
-            value = "shillelagh_%i%"
-            array = "items"
-            ext = "itm"
-        RET res = resource END
-
-        LPF ALTER_EFFECT INT_VAR
-            verbose = 1
-            header = i - 1
+        LPF patch_resource_reference INT_VAR
             match_opcode = 111              //Create Weapon.
+            header = i - 1
         STR_VAR
+            resource = "shillelagh_%i%"
+            ext = "itm"
             match_resource = "item#res"
-            resource = "%res%"
+            references = "items"
         END
     END
 END
@@ -140,39 +121,25 @@ DEFINE_PATCH_FUNCTION strength_stone STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION sunscorch STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "sunscorch_blind"
-        array = "subspells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "sunscorch_blind"
         match_resource = "blnd#res"
-        resource = "%res%"
+        references = "subspells"
     END
 
     //Patch in effects.
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
-        //Get reference.
-        LPF get_table_ref STR_VAR
-            value = "sunscorch_%i%"
-            array = "effects"
-            ext = "eff"
-        RET res = resource END
-
-        LPF ALTER_EFFECT INT_VAR
-            check_headers = 1
-            verbose = 1
-            header = i - 1
+        LPF patch_resource_reference INT_VAR
             match_opcode = 177              //Use Eff.
+            header = i - 1
         STR_VAR
-            match_resource = "damg#res"
-            resource = "%res%"
+            resource = "sunscorch_%i%"
+            ext = "eff"
+            match_resource = "blnd#res"
+            references = "effects"
         END
     END
 END
@@ -185,19 +152,13 @@ DEFINE_PATCH_FUNCTION regenerate_light_wounds STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION cause_light_wounds BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "cause_light_wounds"
-        array = "items"
-        ext = "itm"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 111                  //Create Weapon.
     STR_VAR
+        resource = "sunscorch_blind"
+        ext = "itm"
         match_resource = "item#res"
-        resource = "%res%"
+        references = "items"
     END
 END
 
@@ -261,39 +222,27 @@ DEFINE_PATCH_FUNCTION obscuring_mist BEGIN
 END
 
 DEFINE_PATCH_FUNCTION animal_summoning_1 BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "summon_bat"
-        array = "effects"
-        ext = "eff"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
-        match_opcode = 177              //Use Eff.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
     STR_VAR
+        resource = "sunscorch_blind"
+        ext = "eff"
         match_resource = "summ#res"
-        resource = "%res%"
+        references = "effects"
     END
 END
 
 DEFINE_PATCH_FUNCTION goodberry BEGIN
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
-        //Get reference.
-        LPF get_table_ref STR_VAR
-            value = "goodberry_%i%"
-            array = "items"
-            ext = "itm"
-        RET res = resource END
-
-        LPF ALTER_EFFECT INT_VAR
-            verbose = 1
-            header = i - 1
+        LPF patch_resource_reference INT_VAR
             match_opcode = 122              //Create inventory item.
+            header = i - 1
         STR_VAR
+            resource = "goodberry_%i%"
+            ext = "itm"
             match_resource = ""
-            resource = "%res%"
+            references = "items"
         END
     END
 END
