@@ -15,6 +15,11 @@ LAF get_table_references STR_VAR
     dir = "%resources%/2da/arcane"
 RET_ARRAY spells = references END
 
+LAF get_table_references STR_VAR
+    tables = "5"
+    dir = "%resources%/2da/divine"
+RET_ARRAY cleric_lvl5_spells = references END
+
 
 //Patches.
 DEFINE_PATCH_FUNCTION summon_invisible_stalker STR_VAR destination = "*" BEGIN
@@ -67,5 +72,37 @@ DEFINE_PATCH_FUNCTION banishment STR_VAR destination = "*" BEGIN
         ext = "eff"
         match_resource = "bnsh#res"
         references = "effects"
+    END
+END
+
+//Same patch as cleric's true seeing.
+DEFINE_PATCH_FUNCTION true_seeing STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "true_seeing_a"
+        match_resource = "mvis#res"
+        references = "cleric_lvl5_spells"
+    END
+
+    //Patch in protections from obscuring mist.
+    LPF get_spell_res STR_VAR spell = "WIZARD_SPOOK" RET match = resource END
+    PATCH_FOR_EACH spell IN
+        "CLERIC_OBSCURING_MIST"
+        "WIZARD_OBSCURING_MIST"
+    BEGIN
+        LPF get_spell_res STR_VAR spell = "%spell%" RET res = resource END
+        PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+            PATCH_FAIL "true_seeing: spell '%spell%' not found in 'spell.ids'."
+        END
+
+        LPF CLONE_EFFECT INT_VAR
+            verbose = 1
+            match_opcode = 206              //Protection from spell.
+        STR_VAR
+            match_resource = "%match%"
+            resource = "%res%"
+            insert = "last"
+        END
     END
 END

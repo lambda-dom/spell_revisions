@@ -120,6 +120,11 @@ WIZARD_GLOBE_OF_INVULNERABILITY         scrl7f      10      1
 WIZARD_TENSERS_TRANSFORMATION           scrl7g      10      1
 WIZARD_FLESH_TO_STONE                   scrl7h      10      1
 WIZARD_BANISHMENT                       scrl7i      10      1
+WIZARD_PROTECTION_FROM_MAGIC_ENERGY     scrl7j      10      1
+WIZARD_MISLEAD                          scrl7k      10      1
+WIZARD_PIERCE_MAGIC                     scrl7l      10      1
+WIZARD_TRUE_SIGHT                       scrl7m      10      1
+WIZARD_PROTECTION_FROM_MAGICAL_WEAPONS  scrl7o      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1
