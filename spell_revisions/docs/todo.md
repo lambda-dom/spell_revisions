@@ -134,6 +134,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Globe of Invulnerability: see Minor Globe of Invulnerability.
 
+* Flesh to Stone: why the remove combination spell type protections [221]?
+
+* Banishment: see cleric's banishment.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.

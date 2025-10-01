@@ -56,3 +56,29 @@ Tenser's Transformation is a sight guaranteed to astound any creature not aware 
 
 Note: this spell does not give any extra attacks to multiclassed or dual-classed fighter/mages, as they normally gain additional attacks per round due to their fighter levels."
 
+//flesh_to_stone:spwi604
+@6040 = "Flesh to Stone"
+@6041 = "Flesh to Stone
+Level: 6
+School: Alteration
+Range: Long
+Duration: Special
+Casting Time: 6
+Area of Effect: 1 creature
+Saving Throw: Special
+
+Flesh to Stone is a powerful magic that permanently turns the flesh of the creature affected into stone. When struck by this spell the target is slowed for 3 rounds as its flesh begins to harden. The following round the subject of the spell must save vs. petrification at -4 or be turned into a statue. A dispel magic spell cannot restore the victim's natural form, but some powerful spells, such as Stone to Flesh or Freedom, can. This spell has no effect on undead, constructs, or incorporeal creatures."
+
+//banishment:spwi605, replaces death spell
+@6050 = "Banishment"
+@6050 = "Banishment
+Level: 6
+School: Abjuration
+Range: Long
+Duration: Instant
+Casting Time: 6
+Area of Effect: 30' radius
+Saving Throw: None
+
+This spell forces hostile summoned creatures in the area back to their proper plane. Magic resistance does not affect this spell."
+

@@ -9,6 +9,12 @@ LAF get_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "6"
+    dir = "%resources%/2da/arcane"
+RET_ARRAY spells = references END
+
 
 //Patches.
 DEFINE_PATCH_FUNCTION summon_invisible_stalker STR_VAR destination = "*" BEGIN
@@ -38,6 +44,28 @@ DEFINE_PATCH_FUNCTION tensers_transformation STR_VAR destination = "*" BEGIN
         resource = "tenser_transformation_thac0_b"
         ext = "eff"
         match_resource = "thc2#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION flesh_to_stone STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flesh_to_stone_a"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION banishment STR_VAR destination = "*" BEGIN
+    //Use same effect as cleric's banishment.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "banishment_a"
+        ext = "eff"
+        match_resource = "bnsh#res"
         references = "effects"
     END
 END

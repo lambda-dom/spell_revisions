@@ -1012,20 +1012,12 @@ COPY ~spell_rev\spwi5##\dvwi526c.bam~    ~override~
 //Invisible stalker: what is this cre for? Overriding vanilla?
 COPY ~spell_rev\spwi6##\stalke.cre~     ~override~
 
-COPY ~spell_rev\spwi6##\spwi604.spl~     ~override~  // Flesh to Stone
-  SAY NAME1 @667    SAY UNIDENTIFIED_DESC @668
-COPY ~spell_rev\spwi6##\scrl7h.itm~     ~override~
-  SAY NAME2 @667    SAY IDENTIFIED_DESC   @668
-COPY ~spell_rev\spwi6##\spwi604i.eff~     ~override~
-COPY ~spell_rev\spwi6##\spwi604d.spl~     ~override~
-
 COPY ~spell_rev\spwi6##\spwi605.spl~     ~override~  // Banishment ("replaces" Death Spell)
   SAY NAME1 @669    SAY UNIDENTIFIED_DESC @670
 COPY ~spell_rev\spwi6##\scrl7i.itm~     ~override~
   SAY NAME2 @669    SAY IDENTIFIED_DESC   @670
-COPY ~spell_rev\spwi6##\dvwi605a.bam~    ~override~
-COPY ~spell_rev\spwi6##\dvwi605b.bam~    ~override~
-COPY ~spell_rev\spwi6##\dvwi605c.bam~    ~override~
+
+//Replace Death spell with banishment.
 APPEND ~spell.ids~ ~2605 WIZARD_BANISHMENT~
 
 COPY ~spell_rev\spwi6##\spwi606.spl~     ~override~  // Protection from Magic Energy

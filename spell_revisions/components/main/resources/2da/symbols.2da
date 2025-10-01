@@ -67,3 +67,4 @@ WIZARD_SUMMON_SHADOW                    1       wizard  5       *       0       
 WIZARD_MONSTER_SUMMONING_LEVEL_5        1       wizard  5       *       0           *
 WIZARD_WAVES_OF_FATIGUE                 1       wizard  5       *       0           *
 WIZARD_DISPELLING_SCREEN                1       wizard  5       *       0           *
+WIZARD_BANISHMENT                       1       wizard  6       *       0           *
