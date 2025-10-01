@@ -125,6 +125,11 @@ WIZARD_MISLEAD                          scrl7k      10      1
 WIZARD_PIERCE_MAGIC                     scrl7l      10      1
 WIZARD_TRUE_SIGHT                       scrl7m      10      1
 WIZARD_PROTECTION_FROM_MAGICAL_WEAPONS  scrl7o      10      1
+WIZARD_POWER_WORD_SILENCE               scrl7p      10      1
+WIZARD_IMPROVED_HASTE                   scrl7q      10      1
+WIZARD_ACID_FOG                         scrl7r      10      1
+WIZARD_CHAIN_LIGHTNING                  scrl7s      10      1
+WIZARD_DISINTEGRATE                     scrl7t      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1

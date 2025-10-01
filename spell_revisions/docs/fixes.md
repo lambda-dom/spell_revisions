@@ -172,3 +172,9 @@ note(s):
 ## B. 6. Level 6.
 
 * Invisible Stalker: corrections to int and wis; thac0. Damage bonus on fists 2 -> 4. Corrections to immunities as per description: remove fear, fatigue, berserk and added sleep.
+
+* Improved Haste: missing remove of haste sectype. Spell sectype is set but (unless I am mistaken) should be none.
+
+* Chain Lightning: main target spell scales at one level less than it should.
+
+* Disintegrate: power of Use Eff [177] 5 -> 6.

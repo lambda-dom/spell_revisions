@@ -138,6 +138,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Banishment: see cleric's banishment.
 
+* Improved Haste: missing remove spell resources to match protection from spell protections. Add like PfM? Check spell sectype should be none: should be in the code somewhere.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.
