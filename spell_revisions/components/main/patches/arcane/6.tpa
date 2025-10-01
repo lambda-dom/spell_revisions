@@ -1,7 +1,23 @@
 //Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 
 //Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
 
 
 //Patches.
+DEFINE_PATCH_FUNCTION summon_invisible_stalker STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_invisible_stalker"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END

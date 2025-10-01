@@ -115,6 +115,8 @@ WIZARD_CONJURE_LESSER_AIR_ELEMENTAL     scrl7b      10      1
 WIZARD_CONJURE_LESSER_EARTH_ELEMENTAL   scrl7c      10      1
 WIZARD_SPELL_DEFLECTION                 scrl7d      10      1
 WIZARD_SUN_FIRE                         scrlar      10      1
+WIZARD_INVISIBLE_STALKER                scrl7e      10      1
+WIZARD_GLOBE_OF_INVULNERABILITY         scrl7f      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1

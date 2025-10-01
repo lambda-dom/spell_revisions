@@ -1,4 +1,5 @@
 2DA V1.0
 *
-                                install name    descr   type    lvl flags       school      sectype             book_icon                                       abil_icon                                       projectile                          range   speed   patch                           over    destination
-summon_shadow                   1       5010    5011    wizard  5   00000000    necromancer conjuration         #suf:c:WIZARD_CARRION                           #suf:b:WIZARD_CARRION                           *                                   20      9       summon_shadow                   1       #spl:WIZARD_SUMMON_SHADOW
+                        install name    descr   type    lvl flags       school      sectype             book_icon                               abil_icon                               projectile  range   speed   patch                       over    destination
+invisible_stalker       1       6010    6011    wizard  6   00000000    conjurer    conjuration         #suf:c:WIZARD_INVISIBLE_STALKER         #suf:b:WIZARD_INVISIBLE_STALKER         *           20      9       summon_invisible_stalker    1       #spl:WIZARD_INVISIBLE_STALKER
+globe_invulnerability   1       6020    6021    wizard  6   00000000    abjurer     spellprotections    #suf:c:WIZARD_GLOBE_OF_INVULNERABILITY  #suf:b:WIZARD_GLOBE_OF_INVULNERABILITY  *           1       6       *                           1       #spl:WIZARD_GLOBE_OF_INVULNERABILITY

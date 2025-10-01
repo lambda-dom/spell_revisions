@@ -128,3 +128,6 @@ spell_shield_c                  1       *       0       #suf:c:WIZARD_SPELL_SHIE
 spell_deflection_a              1       *       1       #suf:a:WIZARD_SPELL_DEFLECTION
 spell_deflection_b              1       *       1       #suf:b:WIZARD_SPELL_DEFLECTION
 spell_deflection_c              1       *       1       #suf:c:WIZARD_SPELL_DEFLECTION
+globe_invulnerability_a         1       *       0       #suf:a:WIZARD_GLOBE_OF_INVULNERABILITY
+globe_invulnerability_b         1       *       0       #suf:b:WIZARD_GLOBE_OF_INVULNERABILITY
+globe_invulnerability_c         1       *       0       #suf:c:WIZARD_GLOBE_OF_INVULNERABILITY

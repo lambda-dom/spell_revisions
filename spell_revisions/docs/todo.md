@@ -100,7 +100,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Mestil's Acid Shield: replaces cold shield but we are reinstating it. Spell itself is not in (and is in level 5).
 
-* Minor Glove of Invulnerability: pass through area spells of level <= that must be protected against. Externalize like with PfM?
+* Minor Globe of Invulnerability: pass through area spells of level <= that must be protected against. Externalize like with PfM?
 
 * Otiluke Resilient Sphere: only description is in.
 
@@ -127,6 +127,12 @@ Not just things to (still) do but also proposed changes to spells.
 * Conjure (Lesser) Elemental: Add water elemental and consolidate all spells in one.
 
 * Spell Deflection: add display string.
+
+## B. 6. Level 6.
+
+* Invisible Stalker: backstab x2 where exactly? *If* it can be added via class setting, class is already ranger so the kit field must be set to stalker. Only move silently is set to 120% as an invis effect is added through thje fists. What about hide in shadoes (set to 0 in the cre)?
+
+* Globe of Invulnerability: see Minor Globe of Invulnerability.
 
 # C. General.
 
@@ -161,7 +167,7 @@ note(s):
 
 * Anti-undead spells like hold undead should bypass magic resistance.
 
-* Use `append_item_block` instead of hack with `patch_block`.
+* Use `append_item_block` instead of hack with `patch_block`. This is already (partially?) done.
 
 * Conjure Elemental: remove probability of not summoning. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Damage bonus 9 -> 4.
 

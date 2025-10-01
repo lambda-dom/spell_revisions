@@ -390,3 +390,18 @@ DEFINE_PATCH_FUNCTION lesser_fire_elemental STR_VAR destination = "*" BEGIN
         array = "items"
     END
 END
+
+DEFINE_PATCH_FUNCTION invisible_stalker STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "stalker_fists"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "stalker_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END

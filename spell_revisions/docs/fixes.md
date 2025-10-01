@@ -168,3 +168,7 @@ note(s):
 * Phantom Blade: correct damage to undead. Moved prof opcode to it.
 
 * Conjure Elemental: standardized duration to 2 turns (= level 10 in old spell) instead of 3 to accentuate "difficult to maintain portal" blurb. Fix off-by-1 probability errors. Air Elemental: added polymorph immunity per other elementals. Corrections to ac, thac0. Added 50% electricity resistance. Earth elemental: corrections to ac, thac0. Fire elemental: corrections to ac, thac0. Giant humanoid -> monster.
+
+## B. 6. Level 6.
+
+* Invisible Stalker: corrections to int and wis; thac0. Damage bonus on fists 2 -> 4. Corrections to immunities as per description: remove fear, fatigue, berserk and added sleep.

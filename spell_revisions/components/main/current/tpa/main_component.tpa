@@ -1009,23 +1009,8 @@ COPY ~spell_rev\spwi5##\dvwi526c.bam~    ~override~
 
 
 //Level 6.
-COPY ~spell_rev\spwi6##\spwi601.spl~     ~override~  // Invisible Stalker
-  SAY NAME1 @661    SAY UNIDENTIFIED_DESC @662
-COPY ~spell_rev\spwi6##\scrl7e.itm~     ~override~
-  SAY NAME2 @661    SAY IDENTIFIED_DESC   @662
-COPY ~spell_rev\spwi6##\spstalk.eff~     ~override~
-COPY ~spell_rev\spwi6##\dvstalk.cre~     ~override~
+//Invisible stalker: what is this cre for? Overriding vanilla?
 COPY ~spell_rev\spwi6##\stalke.cre~     ~override~
-COPY ~spell_rev\spwi6##\stalker.itm~     ~override~
-COPY ~spell_rev\spwi6##\stalkesu.itm~     ~override~
-
-COPY ~spell_rev\spwi6##\spwi602.spl~     ~override~  // Globe of Invulnerability
-  SAY NAME1 @663    SAY UNIDENTIFIED_DESC @664
-COPY ~spell_rev\spwi6##\scrl7f.itm~     ~override~
-  SAY NAME2 @663    SAY IDENTIFIED_DESC   @664
-COPY ~spell_rev\spwi6##\spwi602a.bam~    ~override~
-COPY ~spell_rev\spwi6##\spwi602b.bam~    ~override~
-COPY ~spell_rev\spwi6##\spwi602c.bam~    ~override~
 
 COPY ~spell_rev\spwi6##\spwi603.spl~     ~override~  // Tenser's Transformation
   SAY NAME1 @665    SAY UNIDENTIFIED_DESC @666
