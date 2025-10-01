@@ -1012,13 +1012,6 @@ COPY ~spell_rev\spwi5##\dvwi526c.bam~    ~override~
 //Invisible stalker: what is this cre for? Overriding vanilla?
 COPY ~spell_rev\spwi6##\stalke.cre~     ~override~
 
-COPY ~spell_rev\spwi6##\spwi603.spl~     ~override~  // Tenser's Transformation
-  SAY NAME1 @665    SAY UNIDENTIFIED_DESC @666
-COPY ~spell_rev\spwi6##\scrl7g.itm~     ~override~
-  SAY NAME2 @665    SAY IDENTIFIED_DESC   @666
-COPY ~spell_rev\spwi6##\spwi603a.eff~     ~override~
-COPY ~spell_rev\spwi6##\spwi603b.eff~     ~override~
-
 COPY ~spell_rev\spwi6##\spwi604.spl~     ~override~  // Flesh to Stone
   SAY NAME1 @667    SAY UNIDENTIFIED_DESC @668
 COPY ~spell_rev\spwi6##\scrl7h.itm~     ~override~

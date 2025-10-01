@@ -21,3 +21,23 @@ DEFINE_PATCH_FUNCTION summon_invisible_stalker STR_VAR destination = "*" BEGIN
         references = "effects"
     END
 END
+
+DEFINE_PATCH_FUNCTION tensers_transformation STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "tenser_transformation_thac0_a"
+        ext = "eff"
+        match_resource = "thc1#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "tenser_transformation_thac0_b"
+        ext = "eff"
+        match_resource = "thc2#res"
+        references = "effects"
+    END
+END
