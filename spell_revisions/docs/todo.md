@@ -140,7 +140,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Monster Summon 6: review damage bonuses, especially on the wyvern as they are too much?
 
-* Summon Nishruu: not in yet.
+* Summon Nishruu: review the script with the mysterious detect illusions block, replacing the vanilla block for weaknbess against dispel magic.
 
 * Stone to Flesh: not in yet.
 

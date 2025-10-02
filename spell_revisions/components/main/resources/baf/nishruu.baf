@@ -1,0 +1,71 @@
+IF
+    Allegiance(LastSummonerOf(Myself),ENEMY)
+    Global("npc","LOCALS",0)
+THEN
+    RESPONSE #100
+        Enemy()
+        MoveToObject(NearestEnemyOf(LastSummonerOf(Myself)))
+        SetGlobal("npc","LOCALS",1)
+END
+
+IF
+    !See([GOODCUTOFF])
+    Range(Player1,40)
+    Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        MoveToObject(Player1)
+END
+
+//What is this block for? It suggests a role for the detect illusion bonus.
+//Commented out and remove bonus for now.
+//In vanilla this block is for the weakness to dispel magic.
+// IF
+//     CheckStatLT(Myself,20,DETECTILLUSIONS)
+//     !StateCheck(Myself,STATE_DEAD)
+// THEN
+//     RESPONSE #100
+//         Kill(Myself)
+// END
+
+IF
+    SpellCastOnMe([ANYONE],0)
+THEN
+    RESPONSE #100
+        ApplySpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+END
+
+IF
+    See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+THEN
+    RESPONSE #100
+        AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+    See(NearestEnemyOfType([0.0.0.BARD_ALL]))
+THEN
+    RESPONSE #100
+        AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+    See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
+THEN
+    RESPONSE #100
+        AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+    See(NearestEnemyOfType([0.0.0.DRUID_ALL]))
+THEN
+    RESPONSE #100
+        AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END

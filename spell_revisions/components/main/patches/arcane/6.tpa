@@ -245,3 +245,14 @@ DEFINE_PATCH_FUNCTION animate_skeleton_warrior STR_VAR destination = "*" BEGIN
         references = "effects"
     END
 END
+
+DEFINE_PATCH_FUNCTION summon_nishruu STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "summon_nishruu"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END

@@ -561,3 +561,18 @@ DEFINE_PATCH_FUNCTION greater_fire_elemental STR_VAR destination = "*" BEGIN
         array = "items"
     END
 END
+
+DEFINE_PATCH_FUNCTION nishruu STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "nishruu_contact"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "nishruu_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
