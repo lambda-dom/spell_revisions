@@ -238,7 +238,7 @@ Level: 6
 School: Conjuration
 Sphere: Elemental (Earth)
 Range: Medium
-Duration: 1 turn + 1 round/level
+Duration: 2 turns
 Casting Time: 1 round
 Area of Effect: Special
 Saving Throw: None
@@ -266,7 +266,7 @@ Level: 6
 School: Conjuration
 Sphere: Elemental (Air)
 Range: Medium
-Duration: 1 turn + 1 round/level
+Duration: 2 turns
 Casting Time: 1 round
 Area of Effect: Special
 Saving Throw: None
@@ -286,7 +286,7 @@ HP 138, AC -1, THAC0 1, Saving Throws 4/6/5/4/7
 Special Qualities (12 and 16 Hit Dice):
 Immune to normal weapons
 Immune to hold, poison, polymorph, sleep and stun effects
-Slashing, Crushing, & Piercing Resistance 20%; Missile Resistance 60%"
+Slashing, Crushing and Piercing Resistance 20%; Missile Resistance 60%"
 
 @6520 = "Banishment"
 @6521 = "Banishment

@@ -81,6 +81,12 @@ note(s):
 
 * Conjure Elemental: standardized duration to 2 turns (= level 10 in old spell) per wizard lesser version.
 
+* Conjure Fire Elemental: fire elemental: ac 4 -> 1, thac0 10 -> 7, general monster; fists damage bonus 3 -> 4. Greater fire elemental: ac 4 -> 0, thac0 7 -> 3, general monster; fists damage bonus 3 -> 5.
+
+* Conjure Earth Elemental: earth elemental: thac0 11 -> 4, hps 126 -> 116. Fist: document mr penalty. damage bonus 3 -> 12. Greater earth elemental: thac0 8 -> 0. Fist: document mr penalty. damage bonus 3 -> 14, dice size 10 -> 8.
+
+* Conjure Air Elemental: ac 4 -> 0, thac0 8 -> 5. Fist: document mr bonus. damage bonus 3 -> 4. Greater air elemental: ac 4 -> -1, thac0 5 -> 1. Fist: document mr penalty. damage bonus 3 -> 5.
+
 * Fire Seeds: +6 -> +4 enchantment. Added dart prof so that characters with it can use it.
 
 * False Dawn: spurious cast spell opcode.
@@ -175,13 +181,13 @@ note(s):
 
 * Improved Haste: missing remove of haste sectype. Spell sectype is set but (unless I am mistaken) should be none.
 
+* Contingency: out of combat only.
+
 * Chain Lightning: main target spell scales at one level less than it should.
 
 * Disintegrate: power of Use Eff [177] 5 -> 6.
 
 * Conjure Elemental: standardized duration to 2 turns (= level 10 in old spell) per lesser version.
-
-* Conjure Fire Elemental: fire elemental: ac 4 -> 1, thac0 10 -> 7, general monster; fists damage bonus 3 -> 4. Greater fire elemental: ac 4 -> 0, thac0 7 -> 3, general monster; fists damage bonus 3 -> 5.
 
 * Monster Summoning VI: Baby wyvern: sting damage bonus 1 -> 3. Document sting is only 25% chance and fix one-off error. Corrections to str 19 -> 17, thac0 14 -> 12. Wyvern: thac0 13 -> 8, save vs. spell 10 -> 14, wyvern sting damage bonus 2 -> 9. Document sting is only 25% chance and fix one-off error.
 

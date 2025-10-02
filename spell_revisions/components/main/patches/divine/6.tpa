@@ -216,3 +216,43 @@ DEFINE_PATCH_FUNCTION animate_skeleton_warrior STR_VAR destination = "*" BEGIN
         references = "effects"
     END
 END
+
+DEFINE_PATCH_FUNCTION conjure_air_elemental STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "conjure_air_elemental"
+        ext = "eff"
+        match_resource = "sum1#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "conjure_greater_air_elemental"
+        ext = "eff"
+        match_resource = "sum2#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION conjure_earth_elemental STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "conjure_earth_elemental"
+        ext = "eff"
+        match_resource = "sum1#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "conjure_greater_earth_elemental"
+        ext = "eff"
+        match_resource = "sum2#res"
+        references = "effects"
+    END
+END
