@@ -370,15 +370,15 @@ Special Qualities:
 Immune to normal weapons
 Undead immunities to fear, fatigue, charm, confusion, disease, hold, poison, sleep, stun and death effects
 Cold Resistance 100%; Magic Resistance 90%
-Slashing & Piercing Resistance 40%; Missile Resistance 60%"
+Slashing and Piercing Resistance 40%; Missile Resistance 60%"
 
 //summon_nishruu:spwi624
 @6240 = "Summon Nishruu"
 @6241 = "Summon Nishruu
-Level: 7
+Level: 6
 School: Conjuration
 Range: Long
-Duration: 1 round/level
+Duration: 1 turn
 Casting Time: 1 round
 Area of Effect: Special
 Saving Throw: None
@@ -391,12 +391,13 @@ HP 90, AC 10, THAC0 7, Saving Throws 8/8/8/8/8
 1 Attack Per Round, Drain Magic (Contact +3)
 
 Combat Abilities:
-Drain Magic:
-- wizards lose one memorized spell, chosen at random from the highest spell level possible
-- any creature touched must save vs. spell or suffer feeblemindedness for 3 rounds
+Drain Magic: wizards lose one memorized spell, chosen at random from the highest spell level possible
+Feeblemind: any creature touched must save vs. spell or suffer feeblemindedness for 3 rounds
 
 Special Qualities:
+Detect invisibility: creature is under a constant detect invisibility effect
 Absorb Magic: immune to magic, every spell cast against a Nishruu heals the creature by 1d8 + 1 hit points
+Immunity to poison
 Physical Resistance 50%"
 
 //stone_to_flesh:spwi625

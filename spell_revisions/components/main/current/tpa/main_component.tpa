@@ -1029,39 +1029,6 @@ COPY ~spell_rev\spwi6##\spwi618.spl~     ~override~
 COPY_EXISTING ~spell.ids~ ~override~
   REPLACE_TEXTUALLY ~^2618[ %TAB%]+WIZARD_SPELL_DEFLECTION\b~ ~2618 WIZARD_SPELL_DEFLECTION_DEPRECATED~
 
-COPY ~spell_rev\spwi6##\spwi620.spl~     ~override~  // Conjure Fire Elemental
-  SAY NAME1 @697    SAY UNIDENTIFIED_DESC @698
-COPY ~spell_rev\spwi6##\spfir1.eff~     ~override~
-COPY ~spell_rev\spwi6##\spfir2.eff~     ~override~
-COPY ~spell_rev\spwi6##\elfirsu2.itm~     ~override~
-COPY ~spell_rev\spwi6##\elfirsu3.itm~     ~override~
-
-COPY ~spell_rev\spwi6##\spwi621.spl~     ~override~  // Conjure Air Elemental
-  SAY NAME1 @699    SAY UNIDENTIFIED_DESC @700
-COPY ~spell_rev\spwi6##\spair1.eff~     ~override~
-COPY ~spell_rev\spwi6##\spair2.eff~     ~override~
-COPY ~spell_rev\spwi6##\elairsu2.cre~     ~override~
-  SAY NAME1 @3699
-  SAY NAME2 @3699
-COPY ~spell_rev\spwi6##\elairsu2.itm~     ~override~
-COPY ~spell_rev\spwi6##\elairsu3.cre~     ~override~
-  SAY NAME1 @3700
-  SAY NAME2 @3700
-COPY ~spell_rev\spwi6##\elairsu3.itm~     ~override~
-
-COPY ~spell_rev\spwi6##\spwi622.spl~     ~override~  // Conjure Earth Elemental
-  SAY NAME1 @701    SAY UNIDENTIFIED_DESC @702
-COPY ~spell_rev\spwi6##\speart1.eff~     ~override~
-COPY ~spell_rev\spwi6##\speart2.eff~     ~override~
-COPY ~spell_rev\spwi6##\elearsu2.cre~     ~override~
-  SAY NAME1 @3701
-  SAY NAME2 @3701
-COPY ~spell_rev\spwi6##\elearsu2.itm~     ~override~
-COPY ~spell_rev\spwi6##\elearsu3.cre~     ~override~
-  SAY NAME1 @3702
-  SAY NAME2 @3702
-COPY ~spell_rev\spwi6##\elearsu3.itm~     ~override~
-
 // Animate Skeleton Warrior (replaces Summon Carrion)
 APPEND ~spell.ids~ ~2623 WIZARD_ANIMATE_SKELETON_WARRIOR~
 
@@ -1082,8 +1049,7 @@ COPY ~spell_rev\spwi6##\mummysu.bcs~     ~override~
 COPY ~spell_rev\spwi6##\mummydsp.spl~     ~override~
 COPY ~spell_rev\spwi6##\mummydsp.eff~     ~override~ */
 
-COPY ~spell_rev\spwi6##\spwi624.spl~     ~override~  // Summon Nishruu
-  SAY NAME1 @705    SAY UNIDENTIFIED_DESC @706
+// Summon Nishruu: no scroll? the following is commented out.
 /* COPY ~spell_rev\spwi6##\scrl8b.itm~     ~override~
   SAY NAME2 @705    SAY IDENTIFIED_DESC   @706 */
 

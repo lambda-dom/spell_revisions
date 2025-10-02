@@ -249,3 +249,38 @@ DEFINE_PATCH_FUNCTION wyvern_immunities STR_VAR destination = "*" BEGIN
         END
     END
 END
+
+DEFINE_PATCH_FUNCTION nishruu_immunities STR_VAR destination = "*" BEGIN
+    PATCH_FOR_EACH block IN
+        "poison"
+    BEGIN
+        LPF append_item_block STR_VAR
+            block = "%block%"
+        END
+    END
+
+    PATCH_FOR_EACH spell IN
+        "WIZARD_LOWER_RESISTANCE"
+        "WIZARD_PIERCE_MAGIC"
+    BEGIN
+        LPF get_spell_res STR_VAR
+            spell = "%spell%"
+        RET res = resource END
+
+        //Sanitize.
+        PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+            PATCH_FAIL "nishruu_immunities: spell '%spell%' does not exist."
+        END
+
+        LPF ADD_ITEM_EQEFFECT INT_VAR
+            opcode = 206                    //Protection from spell
+            parameter1 = 0                  //Zero out.
+            parameter2 = 0
+            target = 1                      //Self.
+            timing = 2                      //Equipped.
+            insert_point = 0 - 1            //Last.
+        STR_VAR
+            resource = "%res%"
+        END
+    END
+END
