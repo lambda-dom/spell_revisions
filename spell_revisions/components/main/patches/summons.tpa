@@ -435,3 +435,45 @@ DEFINE_PATCH_FUNCTION wyvern STR_VAR destination = "*" BEGIN
         array = "items"
     END
 END
+
+DEFINE_PATCH_FUNCTION fire_elemental STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "fire_elemental_fists"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "elemental_immunities"
+        slot = "rring"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "immune_normal_weapons"
+        slot = "lring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_fire_elemental STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "greater_fire_elemental_fists"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "elemental_immunities"
+        slot = "rring"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "immune_normal_weapons"
+        slot = "lring"
+        array = "items"
+    END
+END
