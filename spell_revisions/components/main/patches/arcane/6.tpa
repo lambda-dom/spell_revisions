@@ -1,7 +1,191 @@
 //Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/sectypes.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
 
 //Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "6"
+    dir = "%resources%/2da/arcane"
+RET_ARRAY spells = references END
+
+LAF get_table_references STR_VAR
+    tables = "5"
+    dir = "%resources%/2da/divine"
+RET_ARRAY cleric_lvl5_spells = references END
 
 
 //Patches.
+DEFINE_PATCH_FUNCTION summon_invisible_stalker STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_invisible_stalker"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION tensers_transformation STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "tenser_transformation_thac0_a"
+        ext = "eff"
+        match_resource = "thc1#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "tenser_transformation_thac0_b"
+        ext = "eff"
+        match_resource = "thc2#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION flesh_to_stone STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "flesh_to_stone_a"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION banishment STR_VAR destination = "*" BEGIN
+    //Use same effect as cleric's banishment.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "banishment_a"
+        ext = "eff"
+        match_resource = "bnsh#res"
+        references = "effects"
+    END
+END
+
+//Same patch as cleric's true seeing.
+DEFINE_PATCH_FUNCTION true_seeing STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "true_seeing_a"
+        match_resource = "mvis#res"
+        references = "cleric_lvl5_spells"
+    END
+
+    //Patch in protections from obscuring mist.
+    LPF get_spell_res STR_VAR spell = "WIZARD_SPOOK" RET match = resource END
+    PATCH_FOR_EACH spell IN
+        "CLERIC_OBSCURING_MIST"
+        "WIZARD_OBSCURING_MIST"
+    BEGIN
+        LPF get_spell_res STR_VAR spell = "%spell%" RET res = resource END
+        PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+            PATCH_FAIL "true_seeing: spell '%spell%' not found in 'spell.ids'."
+        END
+
+        LPF CLONE_EFFECT INT_VAR
+            verbose = 1
+            match_opcode = 206              //Protection from spell.
+        STR_VAR
+            match_resource = "%match%"
+            resource = "%res%"
+            insert = "last"
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION improved_haste STR_VAR destination = "*" BEGIN
+    //Patch sectypes: remove haste and slow effects.
+    LPF get_sectype_id STR_VAR sectype = "haste" RET sectype_id = id END
+    PATCH_IF (sectype_id = 0 - 1) BEGIN
+        PATCH_FAIL "haste: sectype 'haste' not found."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 221                  //Remove protections by sectype.
+        parameter2 = sectype_id
+    END
+
+    LPF get_sectype_id STR_VAR sectype = "slow" RET sectype_id = id END
+    PATCH_IF (sectype_id = 0 - 1) BEGIN
+        PATCH_FAIL "haste: sectype 'slow' not found."
+    END
+
+    LPF CLONE_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 221                  //Remove protections by sectype.
+        parameter2 = sectype_id
+    STR_VAR
+        insert = "below"
+    END
+END
+
+DEFINE_PATCH_FUNCTION chain_lightning STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "chain_lightning_a"
+        match_resource = "spla#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "chain_lightning_b"
+        match_resource = "splb#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION monster_summoning_6 STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_wyvern_baby"
+        ext = "eff"
+        match_resource = "sum1#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_wyvern"
+        ext = "eff"
+        match_resource = "sum2#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION conjure_fire_elemental STR_VAR destination = "*" BEGIN
+    PATCH_FAIL "conjure_fire_elemental: not implemented yet."
+END
+
+//Use cleric patch.
+DEFINE_PATCH_FUNCTION animate_skeleton_warrior STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "summon_skeleton_warrior"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
