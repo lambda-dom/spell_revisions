@@ -217,3 +217,197 @@ Saving Throw: Breath partial
 
 Upon casting this spell at another creature, a thin green ray shoots unerringly from the caster's fingertip toward the target. Upon contact, the creature must make a saving throw vs. breath at -2 or suffer 2d6 points of magic damage per caster level (to a maximum of 40d6). A creature that makes a successful save is partially affected, taking only 5d6 points of damage. The ray affects even objects constructed entirely of force, such as a Mordenkainen's Sword, which is automatically destroyed when struck. This spell has no affect on clothing or equipment carried by the target."
 
+//contingency:spwi617
+@6170 = "Contingency"
+@6171 = "Contingency
+Level: 6
+School: Universal
+Range: Personal
+Duration: Special
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+Upon casting this spell, the wizard is allowed to choose a spell out of his repertoire of known spells. The spell level must be lower or equal to the level of the caster divided by three. Once the spell is chosen, the caster is allowed to choose a condition of some kind from the list provided. The starting condition can be anything from reaching 10% of his maximum hit points to an enemy being sighted. Once this starting condition is satisfied the spell that was chosen will be cast automatically. For example, a 12th level wizard could place the spell Stoneskin in a contingency with the starting condition being 'the wizard reaches 50% of his maximum hit points'. Then once the wizard is reduced to 50% or less of his total hit points in combat, Stoneskin would be immediately cast upon him. This requires no action by the wizard, happening automatically and instantaneously. The limitation of this spell is that the target of the spell placed in the contingency must be the caster. Therefore, the spell stored cannot be an offensive spell nor can it target any other party members."
+
+//spell_deflection:spwi618, deprecated
+//monster_summoning_6:spwi619, replaces wyvern call.
+@6190 = "Monster Summoning VI"
+@6191 = "Monster Summoning VI
+Level: 6
+School: Conjuration
+Range: Medium
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster summons a number of monsters, which serve the mage under any conditions. The type and number of creatures that appear depend upon the level of the wizard casting the spell. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires.
+
+11th : 2 baby wyverns
+15th+ : 2 baby wyverns, 1 wyvern
+
+Baby Wyvern (6 Hit Dice):
+STR 17, DEX 12, CON 15, INT 6, WIS 11, CHA 9;  AL Neutral Evil
+HP 78, AC 3, THAC0 12, Saving Throws 11/15/11/13/15
+4 Attacks Per Round, 2d6 + 3 Piercing Damage (Bite, Claws, & Sting +1)
+
+Wyvern (7 Hit Dice):
+STR 19, DEX 12, CON 15, INT 6, WIS 12, CHA 9;  AL Neutral Evil
+HP 91, AC 2, THAC0 8, Saving Throws 10/14/10/12/14
+4 Attacks Per Round, 2d6 + 9 Piercing Damage (Bite, Claws, & Sting +2)
+
+Combat Abilities:
+Poison: 25% chance a wyvern's sting injects a poison which inflicts 2hp/sec for 1 turn (save vs. poison at -4 neg.)
+
+Special Qualities:
+Immune to entangle, grease, web, hold, slow, sleep and stun"
+
+//conjure_fire_elemental:spwi620
+@6200 = "Conjure Fire Elemental"
+@6201 = "Conjure Fire Elemental
+Level: 6
+School: Conjuration
+Range: Medium
+Duration: 2 Turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+Upon casting a Conjure Fire Elemental spell, the caster opens a special gate to the Elemental Plane of Fire, and a fire elemental is summoned to the vicinity of the spellcaster. Normally, an elemental with 12 hit dice will be conjured. At fifteenth level and above, however, the caster will be able to summon an elemental with 16 hit dice. The elemental will do the bidding of the caster until it is slain or the duration of the spell runs out. All of the commands given to the elemental are done so telepathically, so there is no time lost due to miscommunication, and it is not necessary to know the language of the summoned creature.
+
+Fire Elemental (12 Hit Dice):
+STR 16, DEX 17, CON 17, INT 6, WIS 11, CHA 11;  AL Neutral
+HP 116, AC 1, THAC0 7, Saving Throws 7/9/8/8/10
+2 Attacks Per Round, 2d6 + 4 Slashing +2d6 Fire Damage (Fist +3)
+
+Greater Fire Elemental (16 Hit Dice):
+STR 18, DEX 19, CON 18, INT 6, WIS 11, CHA 11;  AL Neutral
+HP 138, AC 0, THAC0 3, Saving Throws 4/6/5/4/7
+2 Attacks Per Round, 2d8 + 5 Slashing +2d8 Fire Damage (Fist +3)
+
+Special Qualities (12 & 16 Hit Dice):
+Immune to normal weapons
+Immune to hold, poison, polymorph, sleep and stun effects
+Fire Resistance 100%
+Slashing, Crushing, Piercing, & Missile Resistance 20%"
+
+//conjure_air_elemental:spwi621
+@6210 = "Conjure Air Elemental"
+@6211 = "Conjure Air Elemental
+Level: 6
+School: Conjuration
+Range: Medium
+Duration: 2 Turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+Upon casting a Conjure Air Elemental spell, the caster opens a special gate to the Elemental Plane of Air, and an air elemental is summoned to the vicinity of the spellcaster. Normally, an elemental with 12 hit dice will be conjured. At fifteenth level and above, however, the caster will be able to summon an elemental with 16 hit dice. The elemental will do the bidding of the caster until it is slain or the duration of the spell runs out. All of the commands given to the elemental are done so telepathically, so there is no time lost due to miscommunication, and it is not necessary to know the language of the summoned creature.
+
+Air Elemental (12 Hit Dice):
+STR 16, DEX 19, CON 17, INT 6, WIS 11, CHA 11;  AL Neutral
+HP 116, AC 0, THAC0 5, Saving Throws 7/9/8/8/10
+3 Attacks Per Round, 1d8 + 4 Piercing Damage (Fist +3)
+
+Greater Air Elemental (16 Hit Dice):
+STR 18, DEX 21, CON 18, INT 6, WIS 11, CHA 11;  AL Neutral
+HP 138, AC -1, THAC0 1, Saving Throws 4/6/5/4/7
+3 Attacks Per Round, 1d10 + 5 Piercing Damage (Fist +3)
+
+Special Qualities (12 & 16 Hit Dice):
+Immune to normal weapons
+Immune to hold, poison, polymorph, sleep and stun effects
+Slashing, Crushing, & Piercing Resistance 20%; Missile Resistance 60%"
+
+//conjure_earth_elemental:spwi622
+@6220 = "Conjure Earth Elemental"
+@6221 = "Conjure Earth Elemental
+Level: 6
+School: Conjuration
+Range: Medium
+Duration: 2 Turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+Upon casting a Conjure Earth Elemental spell, the caster opens a special gate to the Elemental Plane of Earth, and an earth elemental is summoned to the vicinity of the spellcaster. Normally, an elemental with 12 hit dice will be conjured. At fifteenth level and above, however, the caster will be able to summon an elemental with 16 hit dice. The elemental will do the bidding of the caster until it is slain or the duration of the spell runs out. All of the commands given to the elemental are done so telepathically, so there is no time lost due to miscommunication, and it is not necessary to know the language of the summoned creature. It is particularly difficult to maintain a gate to the Inner Planes - there is a 15% chance that the portal opened by the caster will collapse before the elemental enters the Prime Material Plane.
+
+Earth Elemental (12 Hit Dice):
+STR 21, DEX 8, CON 19, INT 6, WIS 11, CHA 11;  AL Neutral
+HP 126, AC 3, THAC0 4, Saving Throws 7/9/8/8/10
+2 Attacks Per Round, 2d8+12 Crushing Damage (Fist +3)
+
+Greater Earth Elemental (16 Hit Dice):
+STR 23, DEX 8, CON 21, INT 6, WIS 11, CHA 11;  AL Neutral
+HP 152, AC 2, THAC0 0, Saving Throws 4/6/5/4/7
+2 Attacks Per Round, 2d10+14 Crushing Damage (Fist +3)
+
+Special Qualities (12 & 16 Hit Dice):
+Immune to normal weapons
+Immune to hold, poison, polymorph, sleep and stun effects
+Slashing, Piercing, & Missile Resistance 40%"
+
+//animate_skeleton_warrior:spwi623
+@6230 = "Animate Skeleton Warrior"
+@6230 = "Animate Skeleton Warrior
+Level: 6
+School: Necromancy
+Range: Long
+Duration: 8 hours
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+This spell animates the corpse of a skilled warrior to rise up and serve the caster. This powerful undead creature will remain under the priest's control until slain or the spell duration expires.
+
+Skeleton Warrior (9 Hit Dice):
+STR 18/51, DEX 14, CON -, INT 15, WIS 14, CHA 12;  AL Neutral Evil
+HP 108, AC 2, THAC0 11, Saving Throws 5/7/6/5/8
+2 Attacks Per Round, 2d6 + 1 Slashing Damage (Two-Handed Sword +1)
+
+Special Qualities:
+Immune to normal weapons
+Undead immunities to fear, fatigue, charm, confusion, disease, hold, poison, sleep, stun and death effects
+Cold Resistance 100%; Magic Resistance 90%
+Slashing & Piercing Resistance 40%; Missile Resistance 60%"
+
+//summon_nishruu:spwi624
+@6240 = "Summon Nishruu"
+@6241 = "Summon Nishruu
+Level: 7
+School: Conjuration
+Range: Long
+Duration: 1 round/level
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By casting the Summon Nishruu spell, the wizard calls into existence a magical being of considerable power, the Nishruu. At first glance, this appears to be some sort of mist, but upon closer examination the churning red mass of vapors and shapes moves with a life of its own. Drawn towards magic like a moth to the flame, the Nishruu feeds on the energies surrounding and used by wizards. Luckily, there is no question as to the loyalty of the creature and it will not attack its summoner even though it would like nothing better. Nishruus do not use physical attacks, and they disregard physical attacks made on them, though these attacks can hurt them. Each time a Nishruu touches and wraps its tendrils around a target, it will drain magical energies from him. Excluding Banishment or a dispel magic, the Nishruu is completely immune to magic, and not only that, but magic will actually heal this creature. The creature will remain under the wizard's control until reduced to 0 hit points, dispelled, or the spell duration expires.
+
+Nishruu (9 Hit Dice):
+STR -, DEX 10, CON 16, INT 13, WIS 15, CHA 13;  AL Chaotic Neutral
+HP 90, AC 10, THAC0 7, Saving Throws 8/8/8/8/8
+1 Attack Per Round, Drain Magic (Contact +3)
+
+Combat Abilities:
+Drain Magic:
+- wizards lose one memorized spell, chosen at random from the highest spell level possible
+- any creature touched must save vs. spell or suffer feeblemindedness for 3 rounds
+
+Special Qualities:
+Absorb Magic: immune to magic, every spell cast against a Nishruu heals the creature by 1d8 + 1 hit points
+Physical Resistance 50%"
+
+//stone_to_flesh:spwi625
+@6250 = "Stone to Flesh"
+@6251 = "Stone to Flesh
+Level: 6
+School: Alteration
+Range: Long
+Duration: Permanent
+Casting Time: 6
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell is the reverse of Flesh to Stone and will return any creature that has been turned to stone back into flesh. All possessions on the creature likewise will return to normal. The effect is instantaneous and there is no saving throw or system shock check required."

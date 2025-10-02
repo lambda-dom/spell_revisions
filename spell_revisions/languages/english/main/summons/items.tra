@@ -17,4 +17,7 @@
 @2401 = "Sting"
 @2501 = "Morning Star +1"
 @2502 = "Katana +1"
-@2503 = "Fists"
+@2503 = "Fists +2"
+@2601 = "Sting +1"
+@2602 = "Sting +2"
+@2603 = "Fists +3"

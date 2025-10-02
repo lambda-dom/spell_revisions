@@ -1026,12 +1026,8 @@ APPEND ~spell.ids~ ~2614 WIZARD_ACID_FOG~
 //Currently a *new* pro is added.
 COPY ~spell_rev\spwi6##\spgreorb.pro~     ~override~
 
-COPY ~spell_rev\spwi6##\spwi617.spl~     ~override~  // Contingency
-  SAY NAME1 @691    SAY UNIDENTIFIED_DESC @692
-COPY ~spell_rev\spwi6##\scrl7u.itm~     ~override~
-  SAY NAME2 @691    SAY IDENTIFIED_DESC   @692
-
-COPY ~spell_rev\spwi6##\spwi618.spl~     ~override~  // old Spell Deflection (disabled)
+//Old Spell Deflection (disabled)
+COPY ~spell_rev\spwi6##\spwi618.spl~     ~override~
   SAY NAME1 @693    SAY UNIDENTIFIED_DESC @694
 /* COPY ~spell_rev\spwi6##\scrl7v.itm~     ~override~
   SAY NAME2 @721    SAY IDENTIFIED_DESC   @722 */
@@ -1040,8 +1036,6 @@ COPY_EXISTING ~spell.ids~ ~override~
 
 COPY ~spell_rev\spwi6##\spwi620.spl~     ~override~  // Conjure Fire Elemental
   SAY NAME1 @697    SAY UNIDENTIFIED_DESC @698
-COPY ~spell_rev\spwi6##\scrl7x.itm~     ~override~
-  SAY NAME2 @697    SAY IDENTIFIED_DESC   @698
 COPY ~spell_rev\spwi6##\spfir1.eff~     ~override~
 COPY ~spell_rev\spwi6##\spfir2.eff~     ~override~
 COPY ~spell_rev\spwi6##\elfirsu2.cre~     ~override~
@@ -1055,8 +1049,6 @@ COPY ~spell_rev\spwi6##\elfirsu3.itm~     ~override~
 
 COPY ~spell_rev\spwi6##\spwi621.spl~     ~override~  // Conjure Air Elemental
   SAY NAME1 @699    SAY UNIDENTIFIED_DESC @700
-COPY ~spell_rev\spwi6##\scrl7y.itm~     ~override~
-  SAY NAME2 @699    SAY IDENTIFIED_DESC   @700
 COPY ~spell_rev\spwi6##\spair1.eff~     ~override~
 COPY ~spell_rev\spwi6##\spair2.eff~     ~override~
 COPY ~spell_rev\spwi6##\elairsu2.cre~     ~override~
@@ -1070,8 +1062,6 @@ COPY ~spell_rev\spwi6##\elairsu3.itm~     ~override~
 
 COPY ~spell_rev\spwi6##\spwi622.spl~     ~override~  // Conjure Earth Elemental
   SAY NAME1 @701    SAY UNIDENTIFIED_DESC @702
-COPY ~spell_rev\spwi6##\scrl7z.itm~     ~override~
-  SAY NAME2 @701    SAY IDENTIFIED_DESC   @702
 COPY ~spell_rev\spwi6##\speart1.eff~     ~override~
 COPY ~spell_rev\spwi6##\speart2.eff~     ~override~
 COPY ~spell_rev\spwi6##\elearsu2.cre~     ~override~
@@ -1083,13 +1073,7 @@ COPY ~spell_rev\spwi6##\elearsu3.cre~     ~override~
   SAY NAME2 @3702
 COPY ~spell_rev\spwi6##\elearsu3.itm~     ~override~
 
-COPY ~spell_rev\spwi6##\spwi623.spl~     ~override~  // Animate Skeleton Warrior (replaces Summon Carrion)
-  SAY NAME1 @703    SAY UNIDENTIFIED_DESC @704
-COPY ~spell_rev\spwi6##\scrl8a.itm~     ~override~
-  SAY NAME2 @703    SAY IDENTIFIED_DESC   @704
-COPY ~spell_rev\spwi6##\spwi501a.bam~     ~override~
-COPY ~spell_rev\spwi6##\spwi501b.bam~     ~override~ // also used by CLERIC_ANIMATE_SKELETON_WARRIOR
-COPY ~spell_rev\spwi6##\spwi501c.bam~     ~override~ // also used by CLERIC_ANIMATE_SKELETON_WARRIOR
+// Animate Skeleton Warrior (replaces Summon Carrion)
 APPEND ~spell.ids~ ~2623 WIZARD_ANIMATE_SKELETON_WARRIOR~
 
 /* COPY ~spell_rev\spwi6##\ghastsu.eff~     ~override~
@@ -1122,20 +1106,7 @@ COPY ~spell_rev\spwi6##\spwi625.spl~     ~override~  // Stone to Flesh
 //COPY ~spell_rev\spwi6##\spin686.spl~     ~override~
 /* COPY ~spell_rev\spwi6##\wand18.itm~     ~override~ */
 
-//ADD_SPELL: Monster Summoning VI
-ADD_SPELL ~spell_rev\spwi6##\spwi619.spl~ 2 6 ~WIZARD_MONSTER_SUMMONING_4~ // Monster Summoning VI
-  SAY NAME1 @695    SAY UNIDENTIFIED_DESC @696
-COPY ~spell_rev\spwi6##\scrl7w.itm~     ~override~ // vanilla's Wyvern Call scroll
-  SAY NAME2 @695    SAY IDENTIFIED_DESC   @696
-COPY ~spell_rev\spwi6##\wyvbabsu.eff~     ~override~
-COPY ~spell_rev\spwi6##\wyvbabsu.cre~     ~override~
-COPY ~spell_rev\spwi6##\wyvbabsu.itm~     ~override~
-COPY ~spell_rev\spwi6##\wyvernsu.eff~     ~override~
-COPY ~spell_rev\spwi6##\wyvernsu.cre~     ~override~
-COPY ~spell_rev\spwi6##\wyvernsu.itm~     ~override~
-COPY ~spell_rev\spwi6##\dvwi619a.bam~     ~override~
-COPY ~spell_rev\spwi6##\dvwi619b.bam~     ~override~
-COPY ~spell_rev\spwi6##\dvwi619c.bam~     ~override~
+//Monster Summoning VI: replaces Wyvern Call and goes into Monster Summon IV slot.
 APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_4% WIZARD_MONSTER_SUMMONING_LEVEL_6~
 
 

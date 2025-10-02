@@ -69,3 +69,5 @@ WIZARD_WAVES_OF_FATIGUE                 1       wizard  5       *       0       
 WIZARD_DISPELLING_SCREEN                1       wizard  5       *       0           *
 WIZARD_BANISHMENT                       1       wizard  6       *       0           *
 WIZARD_ACID_FOG                         1       wizard  6       *       0           *
+WIZARD_MONSTER_SUMMONING_LEVEL_6        1       wizard  6       *       0           *
+WIZARD_ANIMATE_SKELETON_WARRIOR         1       wizard  6       *       0           *

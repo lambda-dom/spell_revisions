@@ -140,6 +140,14 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Improved Haste: missing remove spell resources to match protection from spell protections. Add like PfM? Check spell sectype should be none: should be in the code somewhere.
 
+* Monster Summon 6: review damage bonuses, especially on the wyvern as they are too much?
+
+* Elemental summoning spells: not in yet.
+
+* Summon Nishruu: not in yet.
+
+* Stone to Flesh: not in yet.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.

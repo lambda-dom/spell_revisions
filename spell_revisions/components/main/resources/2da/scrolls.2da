@@ -130,6 +130,12 @@ WIZARD_IMPROVED_HASTE                   scrl7q      10      1
 WIZARD_ACID_FOG                         scrl7r      10      1
 WIZARD_CHAIN_LIGHTNING                  scrl7s      10      1
 WIZARD_DISINTEGRATE                     scrl7t      10      1
+WIZARD_CONTINGENCY                      scrl7u      10      1
+WIZARD_MONSTER_SUMMONING_LEVEL_6        scrl7w      10      1
+WIZARD_CONJURE_FIRE_ELEMENTAL           scrl7x      10      1
+WIZARD_CONJURE_AIR_ELEMENTAL            scrl7y      10      1
+WIZARD_CONJURE_EARTH_ELEMENTAL          scrl7z      10      1
+WIZARD_ANIMATE_SKELETON_WARRIOR         scrl8a      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1

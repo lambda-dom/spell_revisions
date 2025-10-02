@@ -405,3 +405,33 @@ DEFINE_PATCH_FUNCTION invisible_stalker STR_VAR destination = "*" BEGIN
         array = "items"
     END
 END
+
+DEFINE_PATCH_FUNCTION wyvern_baby STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "wyvern_baby_sting"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "wyvern_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION wyvern STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "wyvern_sting"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "wyvern_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END

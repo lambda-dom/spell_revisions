@@ -154,3 +154,38 @@ DEFINE_PATCH_FUNCTION chain_lightning STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION monster_summoning_6 STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_wyvern_baby"
+        ext = "eff"
+        match_resource = "sum1#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_wyvern"
+        ext = "eff"
+        match_resource = "sum2#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION conjure_fire_elemental STR_VAR destination = "*" BEGIN
+    PATCH_FAIL "conjure_fire_elemental: not implemented yet."
+END
+
+//Use cleric patch.
+DEFINE_PATCH_FUNCTION animate_skeleton_warrior STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "summon_skeleton_warrior"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END

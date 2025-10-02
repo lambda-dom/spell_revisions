@@ -178,3 +178,9 @@ note(s):
 * Chain Lightning: main target spell scales at one level less than it should.
 
 * Disintegrate: power of Use Eff [177] 5 -> 6.
+
+* Conjure Elemental: standardized duration to 2 turns (= level 10 in old spell) per lesser version.
+
+* Monster Summoning VI: Baby wyvern: sting damage bonus 1 -> 3. Document sting is only 25% chance and fix one-off error. Corrections to str 19 -> 17, thac0 14 -> 12. Wyvern: thac0 13 -> 8, save vs. spell 10 -> 14, wyvern sting damage bonus 2 -> 9. Document sting is only 25% chance and fix one-off error.
+
+* Animate Skeleton Warrior: see level 6 Cleric version.
