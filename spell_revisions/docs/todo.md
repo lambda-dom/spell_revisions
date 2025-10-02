@@ -58,8 +58,6 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## A. 6. Level 6.
 
-* Conjure Elemental: only descriptions in. Doing it in the wizard level 6.
-
 * Physical Mirror: use PfM table to set up immunities to missiles. Shared mirror image effect with reflected image cannot be done because of different power levels.
 
 * Banishment: second eff has wrong target; not clear what is the correct target, if any (summoned_demon?).
@@ -142,8 +140,6 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Monster Summon 6: review damage bonuses, especially on the wyvern as they are too much?
 
-* Elemental summoning spells: not in yet.
-
 * Summon Nishruu: not in yet.
 
 * Stone to Flesh: not in yet.
@@ -183,7 +179,7 @@ note(s):
 
 * Use `append_item_block` instead of hack with `patch_block`. This is already (partially?) done.
 
-* Conjure Elemental: remove probability of not summoning. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Damage bonus 9 -> 4.
+* Conjure Elemental: remove probability of not summoning in wizard version? But then: how to differentiate druid version. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Review damage bonuses.
 
 * Damage bonus on natural attacks: these are set seeming randomly; standardize them.
 
