@@ -286,11 +286,11 @@ STR 18, DEX 19, CON 18, INT 6, WIS 11, CHA 11;  AL Neutral
 HP 138, AC 0, THAC0 3, Saving Throws 4/6/5/4/7
 2 Attacks Per Round, 2d8 + 5 Slashing +2d8 Fire Damage (Fist +3)
 
-Special Qualities (12 & 16 Hit Dice):
+Special Qualities (12 and 16 Hit Dice):
 Immune to normal weapons
 Immune to hold, poison, polymorph, sleep and stun effects
 Fire Resistance 100%
-Slashing, Crushing, Piercing, & Missile Resistance 20%"
+Slashing, Crushing, Piercing and Missile Resistance 20%"
 
 //conjure_air_elemental:spwi621
 @6210 = "Conjure Air Elemental"
@@ -315,10 +315,10 @@ STR 18, DEX 21, CON 18, INT 6, WIS 11, CHA 11;  AL Neutral
 HP 138, AC -1, THAC0 1, Saving Throws 4/6/5/4/7
 3 Attacks Per Round, 1d10 + 5 Piercing Damage (Fist +3)
 
-Special Qualities (12 & 16 Hit Dice):
+Special Qualities (12 and 16 Hit Dice):
 Immune to normal weapons
 Immune to hold, poison, polymorph, sleep and stun effects
-Slashing, Crushing, & Piercing Resistance 20%; Missile Resistance 60%"
+Slashing, Crushing and Piercing Resistance 20%; Missile Resistance 60%"
 
 //conjure_earth_elemental:spwi622
 @6220 = "Conjure Earth Elemental"
@@ -343,10 +343,10 @@ STR 23, DEX 8, CON 21, INT 6, WIS 11, CHA 11;  AL Neutral
 HP 152, AC 2, THAC0 0, Saving Throws 4/6/5/4/7
 2 Attacks Per Round, 2d10+14 Crushing Damage (Fist +3)
 
-Special Qualities (12 & 16 Hit Dice):
+Special Qualities (12 and 16 Hit Dice):
 Immune to normal weapons
 Immune to hold, poison, polymorph, sleep and stun effects
-Slashing, Piercing, & Missile Resistance 40%"
+Slashing, Piercing and Missile Resistance 40%"
 
 //animate_skeleton_warrior:spwi623
 @6230 = "Animate Skeleton Warrior"
