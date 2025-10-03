@@ -999,53 +999,27 @@ APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_4% WIZARD_MONSTER_SUMMONING_LEVEL_
 
 
 //Level 7.
-COPY ~spell_rev\spwi7##\spwi701.spl~     ~override~  // Greater Spell Deflection (replaces Spell Turning)
-  SAY NAME1 @721    SAY UNIDENTIFIED_DESC @722
+// Greater Spell Deflection (replaces Spell Turning)
+APPEND ~spell.ids~ ~2701 WIZARD_GREATER_SPELL_DEFLECTION~
+//Detectable spells stuff.
 LAF ds_altered_spell INT_VAR old_clone=200 new_clone=~-1~ STR_VAR file=~spwi701.spl~ END
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~spwi701.SPL    233     2     116   201    n     A~
-COPY ~spell_rev\spwi7##\scrl7v.itm~     ~override~
-  SAY NAME2 @721    SAY IDENTIFIED_DESC   @722
-COPY ~spell_rev\spwi7##\spwi701a.bam~    ~override~
-COPY ~spell_rev\spwi7##\spwi701b.bam~    ~override~
-COPY ~spell_rev\spwi7##\spwi701c.bam~    ~override~
-APPEND ~spell.ids~ ~2701 WIZARD_GREATER_SPELL_DEFLECTION~
 
-COPY ~spell_rev\spwi7##\spwi702.spl~     ~override~  // Protection from the Elements
-  SAY NAME1 @723    SAY UNIDENTIFIED_DESC @724
-COPY ~spell_rev\spwi7##\scrl8e.itm~     ~override~
-  SAY NAME2 @723    SAY IDENTIFIED_DESC   @724
-
-COPY ~spell_rev\spwi7##\spwi703.spl~     ~override~  // Project Image
-  SAY NAME1 @725    SAY UNIDENTIFIED_DESC @726
-COPY ~spell_rev\spwi7##\scrl8f.itm~     ~override~
-  SAY NAME2 @725    SAY IDENTIFIED_DESC   @726
+//Project image.
+//Seemingly unused resource.
 COPY ~spell_rev\spwi7##\PROJIMAG.SPL~     ~override~
 
-/* ADD_PROJECTILE ~spell_rev\projectles\dvrubray.pro~ */
-COPY ~spell_rev\spwi7##\spwi704.spl~     ~override~  // Ruby Ray of Reversal
-  SAY NAME1 @727    SAY UNIDENTIFIED_DESC @728
-COPY ~spell_rev\spwi7##\scrl8g.itm~     ~override~
-  SAY NAME2 @727    SAY IDENTIFIED_DESC   @728
-
-COPY ~spell_rev\spwi7##\spwi705.spl~     ~override~  // Khelben's Warding Whip
-  SAY NAME1 @729    SAY UNIDENTIFIED_DESC @730
-COPY ~spell_rev\spwi7##\scrl8h.itm~     ~override~
-  SAY NAME2 @729    SAY IDENTIFIED_DESC   @730
-
+// Summon Death Knight (replaces Cacofiend)
+APPEND ~spell.ids~ ~2707 WIZARD_SUMMON_DEATH_KNIGHT~
 COPY ~spell_rev\spwi7##\spwi707.spl~     ~override~  // Summon Death Knight (replaces Cacofiend)
   SAY NAME1 @731    SAY UNIDENTIFIED_DESC @732
-COPY ~spell_rev\spwi7##\scrl8i.itm~     ~override~
-  SAY NAME2 @731    SAY IDENTIFIED_DESC   @732
 COPY ~spell_rev\spwi7##\spcaco.eff~     ~override~ // also used by CLERIC_SUMMON_DEATH_KNIGHT
 COPY ~spell_rev\spwi7##\dvdeathk.bcs~     ~override~
 COPY ~spell_rev\spwi7##\dvdeathk.cre~     ~override~
   SAY NAME1 @3731
   SAY NAME2 @3731
 COPY ~spell_rev\spwi7##\dvdeathk.itm~     ~override~
-COPY ~spell_rev\spwi7##\dvwi707a.bam~    ~override~
-COPY ~spell_rev\spwi7##\dvwi707b.bam~    ~override~ // also used by CLERIC_SUMMON_DEATH_KNIGHT
-COPY ~spell_rev\spwi7##\dvwi707c.bam~    ~override~ // also used by CLERIC_SUMMON_DEATH_KNIGHT
-APPEND ~spell.ids~ ~2707 WIZARD_SUMMON_DEATH_KNIGHT~
+
 
 COPY ~spell_rev\spwi7##\spwi708.spl~     ~override~  // Prismatic Mantle
   SAY NAME1 @733    SAY UNIDENTIFIED_DESC @734

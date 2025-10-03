@@ -164,6 +164,12 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Stone to Flesh: not in yet.
 
+## B. 7. Level 7.
+
+* Protection from the Elements: review protections against specific spells. Add refreshing?
+
+* Summon Death Knight: only description in.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.

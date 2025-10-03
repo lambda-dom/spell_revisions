@@ -1,3 +1,132 @@
 //Description strings.
 //Arcane spells.
 //Level 7.
+//greater_spell_deflection:spwi701, replaces spell turning
+@7010 = "Greater Spell Deflection"
+@7011 = "Greater Spell Deflection
+Level: 7
+School: Abjuration
+Range: Personal
+Duration: 5 turns
+Casting Time: 7
+Area of Effect: Caster
+Saving Throw: None
+
+This abjuration spell causes any spells cast against the wizard to be absorbed and consumed. This affects a total of 12 spell levels, but having 1 level left of protection means a 1st level spell would get absorbed, as well as a 9th level spell. This spell will not protect the caster from a dispel magic. However, it will not be affected by a dispel magic, either.
+
+This spell absorbs spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the wizard (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud)."
+
+//protection_elements:spwi702
+@7020 = "Protection from the Elements"
+@7021 = "Protection from the Elements
+Level: 7
+School: Abjuration
+Range: Touch
+Duration: 1 turn/2 levels
+Casting Time: 7
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, it confers complete protection from all elemental attacks composed of acid, cold, electricity, or fire, whether magical or non-magical in origin. 100% of the elemental damage from attacks with weapons, wands, breath weapons, etc. will be absorbed, and the target creature will become completely immune to the effects of elemental spells. This effect lasts for the duration of the spell or until dispelled."
+
+//project_image:spwi703
+@7030 = "Project Image"
+@7031 = "Project Image
+Level: 7
+School: Illusion
+Range: Personal
+Duration: 1 round/level
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+When this spell is cast, an illusory copy of the casting wizard appears to step out of his body while at the same time the mage is concealed with invisibility. The image can move around, and has the same hit points and can cast the same spells as the wizard, but it cannot make any physical attacks. The caster must maintain concentration on the illusory clone for the duration of the spell and cannot perform any other action while controlling it. If the image is destroyed then the spell ends and the caster can move again. If during this time the caster takes any damage, the image will disappear and the caster will be free to move around once more. Otherwise, the image will remain for the duration of the spell or until affected by a dispel magic or destroyed."
+
+//ruby_ray_reversal:spwi704
+@7040 = "Ruby Ray of Reversal"
+@7041 = "Ruby Ray of Reversal
+Level: 7
+School: Alteration
+Range: Long
+Duration: Instant
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast it will dispel one spell protection of any level on the target. This will always dispel the highest level of spell protection on a target first. If a target has two or more protections tied for the highest level, the choice will be random. Magic resistance does not affect this spell.
+
+The spell protection spells dispelled by Ruby Ray of Reversal are: Minor Spell Deflection, Non-Detection, Minor Globe of Invulnerability, Spell Deflection, Dispelling Screen, Globe of Invulnerability, Greater Spell Deflection, Shield of the Archons, and Spell Trap."
+
+//khelbens_warding_whip:spwi705
+@7050 = "Khelben's Warding Whip"
+@7051 = "Khelben's Warding Whip
+Level: 7
+School: Evocation
+Range: Medium
+Duration: 3 rounds
+Casting Time: 7
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast on the target creature, it will dispel one spell protection of up to 8th level or lower. Every round thereafter, until the duration of the spell expires, another spell protection will be removed from the target. This will always dispel the highest level of spell protection on the target first. If the target has two or more protections tied for the highest level, the choice will be random. The target's magic resistance, if any, does not affect this spell.
+
+The spell protection spells dispelled by Khelben's Warding Whip are: Minor Spell Deflection, Non-Detection, Minor Globe of Invulnerability, Spell Deflection, Dispelling Screen, Globe of Invulnerability, Greater Spell Deflection, and Shield of the Archons."
+
+//monster_summoning_7:spwi706
+@7060 = "Monster Summoning VII"
+@7061 = "Monster Summoning VII
+Level: 7
+School: Conjuration
+Range: Medium
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster summons a number of monsters, which serve the mage under any conditions. The type and number of creatures that appear depend upon the level of the wizard casting the spell. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires.
+
+13th : 2 Otyughs
+15th+ : 3 Otyughs
+
+Otyugh (7 Hit Dice):
+STR 14, DEX 10, CON 13, INT 5, WIS 12, CHA 5;  AL Neutral
+HP 70, AC 3, THAC0 10, Saving Throws 10/12/12/14/12
+3 Attacks Per Round, 1d6 + 3 Piercing or Crushing Damage (Bite & Tentacles +3)
+
+Combat Abilities:
+Disease: creatures struck moves at half speed and suffer 1 point of damage per round for 1 turn
+
+Special Qualities:
+Immune to disease effects
+Slashing, Crushing, & Piercing Resistance 5%; Missile Resistance 100%"
+
+//summon_death_knight:spwi707, replaces caco fiend
+@7070 = "Summon Death Knight"
+@7071 = "Summon Death Knight
+Level: 7
+School: Necromancy
+Range: Medium
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster calls an outer planar creature to attack his foes and himself if not careful. The creature summoned in is a Death Knight, a powerful undead demon. The creature cannot be directly controlled, but the summoner can attempt to compel the demon to perform a service for him for the duration of the spell. Charismatic and powerful casters may bind the creature's will, intelligent and wise ones may negotiate with it, but dealing with these demonic creatures is always dangerous, and sometimes it may lead to disaster. Mages are warned to be careful of this spell, for a mistreated Death Knight will turn on his summoner at the first available opportunity.
+
+Death Knight (13 Hit Dice):
+STR 18/00, DEX 12, CON -, INT 17, WIS 15, CHA 16;  AL Lawful Evil
+HP 112, AC -4, THAC0 1, Saving Throws 5/7/5/9/7
+3 Attacks Per Round, 2d6 + 11 Slashing Damage (Two-Handed Sword +3)
+
+Special Qualities:
+Aura of Fear: creatures in a 5' radius must save vs. spell each round or flee in terror for 1 round
+Immune to non-magical weapons
+Immune to charm, confusion, hold, stun, sleep, poison and death effects
+Cold Resistance 100%; Physical Resistance 20%; Magic Resistance 75%
+
+Special Abilities:
+See Invisibility (permanent)
+Dispel Magic (once every 5 rounds)
+Unholy Fireball (once per day)
+Power Words: Blind, Stun, or Kill (once per day each)
+Symbols: of Weakness or Death (once per day each)"

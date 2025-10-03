@@ -144,3 +144,9 @@ globe_invulnerability_c         1       *       0       #suf:c:WIZARD_GLOBE_OF_I
 monster_summon_6_a              1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_6
 monster_summon_6_b              1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_6
 monster_summon_6_c              1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_6
+greater_spell_deflection_a      1       *       1       #suf:a:WIZARD_GREATER_SPELL_DEFLECTION
+greater_spell_deflection_b      1       *       1       #suf:b:WIZARD_GREATER_SPELL_DEFLECTION
+greater_spell_deflection_c      1       *       1       #suf:c:WIZARD_GREATER_SPELL_DEFLECTION
+greater_spell_deflection_a      1       *       0       #suf:a:WIZARD_SUMMON_DEATH_KNIGHT
+greater_spell_deflection_b      1       *       0       #suf:b:WIZARD_SUMMON_DEATH_KNIGHT
+greater_spell_deflection_c      1       *       0       #suf:c:WIZARD_SUMMON_DEATH_KNIGHT
