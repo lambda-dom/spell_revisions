@@ -107,6 +107,8 @@ note(s):
 
 * Unholy Word: change sectype none -> disabling.
 
+* Animal Summoning 7: Polar Bear: non-magical; damage bonus 0 -> 11. Polar Bear: charisma 10 -> 8, thac0 12 -> 8.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

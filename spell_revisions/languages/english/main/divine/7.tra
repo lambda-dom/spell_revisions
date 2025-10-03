@@ -252,7 +252,7 @@ Up to caster level -10 -- Death
 
 The effects are cumulative and concurrent."
 
-//animal_summoning_7:sppr716, replaces non-existent.
+//animal_summoning_7:sppr716, replaces conjure animals.
 @7160 = "Animal Summoning VII"
 @7161 = "Animal Summoning VII
 Level: 7

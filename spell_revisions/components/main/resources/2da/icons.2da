@@ -82,6 +82,9 @@ summon_shambling_mound_c        1       *       0       #suf:c:CLERIC_SUMMON_SHA
 regenerate_a                    1       *       0       #suf:a:CLERIC_REGENERATE
 regenerate_b                    1       *       0       #suf:b:CLERIC_REGENERATE
 regenerate_c                    1       *       0       #suf:c:CLERIC_REGENERATE
+animal_summon_7_a               1       *       0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_7
+animal_summon_7_b               1       *       0       #suf:b:CLERIC_ANIMAL_SUMMONING_LEVEL_7
+animal_summon_7_c               1       *       0       #suf:c:CLERIC_ANIMAL_SUMMONING_LEVEL_7
 obscuring_mist_a                1       *       0       #suf:a:WIZARD_OBSCURING_MIST
 obscuring_mist_b                1       *       0       #suf:b:WIZARD_OBSCURING_MIST
 obscuring_mist_c                1       *       0       #suf:c:WIZARD_OBSCURING_MIST

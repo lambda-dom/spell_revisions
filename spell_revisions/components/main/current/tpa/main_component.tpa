@@ -514,17 +514,7 @@ COPY ~spell_rev\sppr7##\sppr720d.spl~     ~override~
 COPY ~spell_rev\sppr7##\sppr720e.spl~     ~override~
 COPY ~spell_rev\sppr7##\dvquake.eff~     ~override~
 
-//ADD_SPELL: Animal Summoning VII
-ADD_SPELL ~spell_rev\sppr7##\sppr716.spl~ 1 7 ~CLERIC_ANIMAL_SUMMONING_4~  // Animal Summoning VII
-  SAY NAME1 @331    SAY UNIDENTIFIED_DESC @332
-COPY ~spell_rev\sppr7##\bearposu.eff~     ~override~
-COPY ~spell_rev\sppr7##\bearposu.cre~     ~override~
-  SAY NAME1 @1041
-  SAY NAME2 @1041
-COPY ~spell_rev\sppr7##\bearposu.itm~     ~override~
-COPY ~spell_rev\sppr7##\dvpr716a.bam~     ~override~
-COPY ~spell_rev\sppr7##\dvpr716b.bam~     ~override~
-COPY ~spell_rev\sppr7##\dvpr716c.bam~     ~override~
+//Animal Summoning VII: surgery on spell.ids
 APPEND ~spell.ids~ ~%CLERIC_ANIMAL_SUMMONING_4% CLERIC_ANIMAL_SUMMONING_LEVEL_7~
 
 

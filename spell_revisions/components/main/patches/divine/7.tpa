@@ -104,3 +104,15 @@ END
 DEFINE_PATCH_FUNCTION unholy_word STR_VAR destination = "*" BEGIN
     PATCH_WARN "unholy_word: effects not in yet."
 END
+
+DEFINE_PATCH_FUNCTION animal_summoning_7 STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "summon_polar_bear"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+

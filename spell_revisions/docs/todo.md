@@ -195,7 +195,7 @@ note(s):
 
 * Conjure Elemental: remove probability of not summoning in wizard version? But then: how to differentiate druid version. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Review damage bonuses.
 
-* Damage bonus on natural attacks: these are set seeming randomly; standardize them.
+* Damage bonus on natural attacks: these are set seeming randomly; standardize them. What *seems* to be happening is that the description is taking into account str bonuses.
 
 * Add snake race for snake summon (possibly others with no_race).
 
