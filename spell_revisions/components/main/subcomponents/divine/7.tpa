@@ -1,0 +1,19 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
+
+//Initialization.
+LAF get_component_root RET root = dir END
+LAF get_component_resources_dir RET resources = dir END
+LAF get_component_tra_dir RET tra = dir END
+
+
+//Install spells.
+LAF install_resources STR_VAR
+    type = "spell"
+    dir = "%resources%/spl/divine/7"
+    table = "%resources%/2da/divine/7.2da"
+    patches = "%root%/patches/divine/7.tpa"
+    tra = "%tra%/divine/7.tra"
+END

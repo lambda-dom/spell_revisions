@@ -13,6 +13,8 @@
 @1601 = "Aerial Servant"
 @1602 = "Cave Bear"
 @1603 = "Skeleton Warrior"
+@1701 = "Shambling Mound"
+@1702 = "Polar Bear"
 
 
 //Arcane.
@@ -42,3 +44,4 @@
 @2610 = "Baby Wyvern"
 @2611 = "Wyvern"
 @2612 = "Nishruu"
+@2701 = "Death Knight"

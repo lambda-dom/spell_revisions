@@ -466,81 +466,30 @@ ADD_SPELL ~spell_rev\sppr6##\sppr621.spl~ 1 6 ~CLERIC_CONJURE_AIR_ELEMENTAL~  //
 //ADD_SPELL: Conjure Earth Elemental
 ADD_SPELL ~spell_rev\sppr6##\sppr622.spl~ 1 6 ~CLERIC_CONJURE_EARTH_ELEMENTAL~  // Conjure Earth Elemental (moved from lvl 7)
 
-/*-----------------------level 7-----------------------*/
 
-COPY ~spell_rev\sppr7##\sppr701.spl~     ~override~  // Shield of the Archons
-  SAY NAME1 @231    SAY UNIDENTIFIED_DESC @232
-
-COPY ~spell_rev\sppr7##\sppr702.spl~     ~override~  // Summon Shambling Mound (replaces Conjure Earth Elemental)
-  SAY NAME1 @233    SAY UNIDENTIFIED_DESC @234
-COPY ~spell_rev\sppr7##\mound.eff~     ~override~
-COPY ~spell_rev\sppr7##\smoundsu.cre~     ~override~
-  SAY NAME1 @2233
-  SAY NAME2 @2233
-COPY ~spell_rev\sppr7##\smoundsu.itm~     ~override~
-COPY ~spell_rev\sppr7##\dvsmound.spl~     ~override~
-COPY ~spell_rev\sppr7##\dvsmound.bcs~     ~override~
-COPY ~spell_rev\sppr7##\sppr702a.bam~     ~override~
-COPY ~spell_rev\sppr7##\sppr702b.bam~     ~override~
-COPY ~spell_rev\sppr7##\sppr702c.bam~     ~override~
-APPEND ~spell.ids~ ~1702 CLERIC_STALKER~ // SPPR702 is "Stalker" in IWDEE, a spell that summons Shambling Mounds
+//Level 6.
+// SPPR702 is "Stalker" in IWDEE, a spell that summons Shambling Mounds
+APPEND ~spell.ids~ ~1702 CLERIC_STALKER~
   UNLESS ~^1702[ %TAB%]+CLERIC_STALKER\b~
 
 COPY ~spell_rev\sppr7##\sppr703.spl~     ~override~  // Summon Death Knight (replaces Gate)
   SAY NAME1 @235    SAY UNIDENTIFIED_DESC @236
 APPEND ~spell.ids~ ~1703 CLERIC_SUMMON_DEATH_KNIGHT~
 
-ADD_PROJECTILE ~spell_rev\projectles\dvnatbty.pro~
-COPY ~spell_rev\sppr7##\sppr704.spl~     ~override~  // Nature's Beauty
-  SAY NAME1 @237    SAY UNIDENTIFIED_DESC @238
-  WRITE_SHORT 0x98 %dvnatbty%
-
-COPY ~spell_rev\sppr7##\sppr705.spl~     ~override~  // Fire Storm
-  SAY NAME1 @239    SAY UNIDENTIFIED_DESC @240
-COPY ~spell_rev\sppr7##\dvfirest.eff~     ~override~
-COPY ~spell_rev\sppr7##\sppr705d.spl~     ~override~
-COPY ~spell_rev\sppr7##\sppr705e.spl~     ~override~
-  
-COPY ~spell_rev\sppr7##\sppr706.spl~     ~override~  // Symbol of Weakness (replaces Symbol, Fear)
-  SAY NAME1 @241    SAY UNIDENTIFIED_DESC @242
+//Resources for Symbol of weakness but they do not seem to be used anywhere.
+//Maybe they are resources for the projectile but no reference changes seem to be made.
 COPY ~spell_rev\sppr7##\a#spain.bam~     ~override~
-COPY ~spell_rev\sppr7##\a#ispain.vvc~     ~override~ 
+COPY ~spell_rev\sppr7##\a#ispain.vvc~     ~override~
+// Symbol of Weakness (replaces Symbol, Fear)
 APPEND ~spell.ids~ ~1706 CLERIC_SYMBOL_WEAKNESS~
 
-COPY ~spell_rev\sppr7##\sppr707.spl~     ~override~  // Sunray
-  SAY NAME1 @243    SAY UNIDENTIFIED_DESC @244
-COPY ~spell_rev\sppr7##\sppr707f.spl~     ~override~
-COPY ~spell_rev\sppr7##\sppr707.eff~     ~override~
-
-COPY ~spell_rev\sppr7##\sppr708.spl~     ~override~  // Finger of Death
-  SAY NAME1 @245    SAY UNIDENTIFIED_DESC @246
-COPY ~spell_rev\sppr7##\dvfingpi.eff~     ~override~
-
-ADD_PROJECTILE ~spell_rev\projectles\dvschaos.pro~
-COPY ~spell_rev\sppr7##\sppr709.spl~     ~override~  // Chaos (replaces Confusion)
-  SAY NAME1 @297    SAY UNIDENTIFIED_DESC @298
-  WRITE_SHORT 0x98 %dvschaos%
+// Chaos (replaces Confusion)
 APPEND ~spell.ids~ ~1709 CLERIC_CHAOS~
 
-COPY ~spell_rev\sppr7##\sppr710.spl~     ~override~  // Holy Word
-  SAY NAME1 @247    SAY UNIDENTIFIED_DESC @248
+//Effect for holy word but does not seem to be used anywhere.
 COPY ~spell_rev\sppr7##\dvhoword.eff~     ~override~
 
-COPY ~spell_rev\sppr7##\sppr711.spl~     ~override~  // Regeneration
-  SAY NAME1 @249    SAY UNIDENTIFIED_DESC @250
-COPY ~spell_rev\sppr7##\sppr711a.bam~     ~override~
-COPY ~spell_rev\sppr7##\sppr711b.bam~     ~override~ // also used by CLERIC_REGENERATION_DRUID_VERSION
-COPY ~spell_rev\sppr7##\sppr711c.bam~     ~override~ // also used by CLERIC_REGENERATION_DRUID_VERSION
-
-COPY ~spell_rev\sppr7##\sppr712.spl~     ~override~  // Resurrection
-  SAY NAME1 @251    SAY UNIDENTIFIED_DESC @252
-
-COPY ~spell_rev\sppr7##\sppr713.spl~     ~override~  // Greater Restoration
-  SAY NAME1 @253    SAY UNIDENTIFIED_DESC @254
-
-COPY ~spell_rev\sppr7##\sppr715.spl~     ~override~  // Unholy Word
-  SAY NAME1 @255    SAY UNIDENTIFIED_DESC @256
-COPY ~spell_rev\sppr7##\sppr715e.spl~     ~override~  // Slow effect
+//Effect for unholy word but does not seem to be used anywhere.
 COPY ~spell_rev\sppr7##\dvunword.eff~     ~override~
 
 COPY ~spell_rev\sppr7##\sppr717.spl~     ~override~  // Creeping Doom
@@ -550,32 +499,16 @@ COPY ~spell_rev\sppr7##\sppr717b.spl~     ~override~
 LAF ds_altered_spell INT_VAR old_clone=60 new_clone=~-1~ STR_VAR file=~sppr717.spl~ END
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~sppr717a.SPL    233     3     120   146    6     A~
 
-COPY ~spell_rev\sppr7##\sppr718.spl~     ~override~  // Symbol of Stunning
-  SAY NAME1 @259    SAY UNIDENTIFIED_DESC @260
+//Resources for Symbol of stunning but they do not seem to be used anywhere.
+//Maybe they are resources for the projectile but no reference changes seem to be made.
 COPY ~spell_rev\sppr7##\a#shope.bam~     ~override~
 COPY ~spell_rev\sppr7##\a#ishope.vvc~     ~override~ 
 
-COPY ~spell_rev\sppr7##\sppr719.spl~     ~override~  // Symbol of Death
-  SAY NAME1 @295    SAY UNIDENTIFIED_DESC @296
-COPY ~spell_rev\sppr7##\sppr719c.bam~     ~override~ // fix miscoloured icon in BGEE and BG2EE v2.5
+//Earthquake.
+//Resource not used anywhere by the mod, but present in the folder.
+//COPY ~spell_rev\sppr7##\sppr720f.spl~     ~override~
 
-COPY ~spell_rev\sppr7##\sppr720.spl~     ~override~  // Earthquake
-  SAY NAME1 @261    SAY UNIDENTIFIED_DESC @262
-COPY ~spell_rev\sppr7##\sppr720d.spl~     ~override~
-COPY ~spell_rev\sppr7##\sppr720e.spl~     ~override~
-COPY ~spell_rev\sppr7##\dvquake.eff~     ~override~
-
-//ADD_SPELL: Animal Summoning VII
-ADD_SPELL ~spell_rev\sppr7##\sppr716.spl~ 1 7 ~CLERIC_ANIMAL_SUMMONING_4~  // Animal Summoning VII
-  SAY NAME1 @331    SAY UNIDENTIFIED_DESC @332
-COPY ~spell_rev\sppr7##\bearposu.eff~     ~override~
-COPY ~spell_rev\sppr7##\bearposu.cre~     ~override~
-  SAY NAME1 @1041
-  SAY NAME2 @1041
-COPY ~spell_rev\sppr7##\bearposu.itm~     ~override~
-COPY ~spell_rev\sppr7##\dvpr716a.bam~     ~override~
-COPY ~spell_rev\sppr7##\dvpr716b.bam~     ~override~
-COPY ~spell_rev\sppr7##\dvpr716c.bam~     ~override~
+//Animal Summoning VII: surgery on spell.ids
 APPEND ~spell.ids~ ~%CLERIC_ANIMAL_SUMMONING_4% CLERIC_ANIMAL_SUMMONING_LEVEL_7~
 
 

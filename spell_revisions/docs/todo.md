@@ -62,11 +62,33 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Banishment: second eff has wrong target; not clear what is the correct target, if any (summoned_demon?).
 
+## A. 7. Level 7.
+
+* Summon Shambling Mound: review the constrict spell: especially target vs. point casting and entangle implementation.
+
+* Summon Death Knight: only description in. Implemented in the arcane level.
+
+* Chaos: offload effects to subspells and fix off-by-one probability errors.
+
+* Holy Word: offload effects to subspells.
+
+* Regeneration: handle concurrent stacking.
+
+* Resurrection: go over the list of spells to remove and find some way (a la PfM) to standardize it.
+
+* Unholy Word: offload effects to subspells.
+
+* Creeping Doom: only description in.
+
+* Symbol of Stunning: offload effects to subspell.
+
+* Earthquake: offload unconsciousness to a subspell. The implementation itself seems screwy because it relies on delayed cast spells targeting the targets (they should target the caster, but then the aoe would be caster centered). Maybe targeting via [148] succeeds? The IESDP seems to indicate that this will *not* work. Give projectiles to the subspells? Also, how is the last line of the description implemented?
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.
 
-* Grease: follow implementation of Entangle? Use a sleep subspell? Also increase aoe.
+* Grease: follow implementation of Entangle? Use a sleep subspell? Also increase aoe of projectile.
 
 * Sleep: display "ineffective spell" for creatures with dice > caster level.
 
@@ -179,6 +201,8 @@ note(s):
 
 * Conjure Elemental: remove probability of not summoning in wizard version? But then: how to differentiate druid version. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Review damage bonuses.
 
-* Damage bonus on natural attacks: these are set seeming randomly; standardize them.
+* Damage bonus on natural attacks: these are set seeming randomly; standardize them. What *seems* to be happening is that the description is taking into account str bonuses.
 
 * Add snake race for snake summon (possibly others with no_race).
+
+* Incorporate spell flag setting in the spell tables.

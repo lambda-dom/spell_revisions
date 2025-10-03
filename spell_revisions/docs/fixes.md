@@ -93,6 +93,28 @@ note(s):
 
 * Animate Skeleton Warrior: standardized immunities. Damage bonus 1 (corrected description). Corrections to thac0.
 
+## A. 7. Level 7.
+
+* Summon Shambling Mound: remove undocumented -25% magic damage penalty. Fix damage bonus 3 -> 10. `dvmound1` non-existent spell, made it into recursive call. Fix thac0 8 -> 2. General gianthumanoid -> monster.
+
+* Finger of Death: correct save penalty -4 to -2 per description.
+
+* Holy Word: change sectype conjuration -> disabling.
+
+* Regeneration: fix description: speed 6 -> 7 per implementation.
+
+* Resurrection: fix range 10 -> 1 per description.
+
+* Unholy Word: change sectype none -> disabling.
+
+* Animal Summoning 7: Polar Bear: non-magical; damage bonus 0 -> 11. Polar Bear: charisma 10 -> 8, thac0 12 -> 8.
+
+* Symbol of Stunning: range 70 -> 30.
+
+* Symbol of Death: range 70 -> 30.
+
+* Earthquake: sectype offensivedamage -> battleground.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

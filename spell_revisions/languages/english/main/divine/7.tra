@@ -1,0 +1,343 @@
+//Description strings.
+//Divine spells.
+//Level 7.
+//shield_archons:sppr701
+@7010 = "Shield of the Archons"
+@7011 = "Shield of the Archons
+Level: 7
+School: Abjuration
+Sphere: Protection
+Range: Personal
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This powerful abjuration spell causes spells cast against the priest to be absorbed and consumed. This spell will not protect the caster from dispel magic, but it will not be affected by dispel magic, either.
+
+This spell also grants protection from spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the priest (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud)."
+
+//summon_shambling_mound:sppr702
+@7020 = "Summon Shambling Mound"
+@7021 = ~Summon Shambling Mound
+Level: 7
+School: Conjuration
+Sphere: Plant
+Range: Medium
+Duration: 8 hours
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+This spell summons forth a shambling mound to assist the caster. The shambler appears to be heaps of rotting vegetation, but it is actually an intelligent form of plant life, with a roughly humanoid shape, and a brain-like control center in its "chest" area. The shambling mound will remain under the caster's control until it is slain or the spell duration expires.
+
+Shambling Mound (16 Hit Dice):
+STR 19, DEX 10, CON 16, INT 7, WIS 10, CHA 9;  AL Neutral
+HP 124, AC 0, THAC0 2, Saving Throws 4/6/5/4/7
+2 Attacks Per Round, 2d6 + 10 Crushing Damage (Fist +3)
+
+Combat Abilities:
+Constrict: 50% chance target must save vs. breath or be entangled. Any entangled creature can save vs. breath each round to break free; those who fail the save suffer 2d6 + 10 points of damage and remain entangled
+
+Special Qualities:
+Regeneration: 1hp/round
+Immune to charm, hold, poison, polymorph, sleep and stun effects
+Electrical Resistance 125%; Fire Resistance 100%; Cold Resistance 50%
+Crushing Resistance 100%; Slashing, Piercing and Missile Resistance 50%~
+
+//summon_death_knight:sppr703
+@7030 = "Summon Death Knight"
+@7031 = "Summon Death Knight
+Level: 7
+School: Necromancy
+Sphere: All
+Range: Medium
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster calls an outer planar creature to attack his foes and himself if not careful. The creature summoned in is a Death Knight, a powerful undead demon. The creature cannot be directly controlled, but the summoner can attempt to compel the demon to perform a service for him for the duration of the spell. Charismatic and powerful casters may bind the creature's will, intelligent and wise ones may negotiate with it, but dealing with these demonic creatures is always dangerous, and sometimes it may lead to disaster. Priests are warned to be careful of this spell, for a mistreated Death Knight will turn on his summoner at the first available opportunity.
+
+Death Knight (13 Hit Dice):
+STR 18/00, DEX 12, CON -, INT 17, WIS 15, CHA 16;  AL Lawful Evil
+HP 112, AC -4, THAC0 1, Saving Throws 5/7/5/9/7
+3 Attacks Per Round, 2d6+11 Slashing Damage (Two-Handed Sword +3)
+
+Special Qualities:
+Aura of Fear: creatures in a 5' radius must save vs. spell each round or flee in terror for 1 round
+Immune to non-magical weapons
+Immune to charm, confusion, hold, stun, sleep, poison and death effects
+Cold Resistance 100%; Physical Resistance 20%; Magic Resistance 75%
+
+Special Abilities:
+See Invisibility (permanent)
+Dispel Magic (once every 5 rounds)
+Unholy Fireball (once per day)
+Power Words: Blind, Stun, or Kill (once per day each)
+Symbols: of Weakness or Death (once per day each)"
+
+//natures_beauty:sppr704
+@7040 = "Nature's Beauty"
+@7041 = "Nature's Beauty
+Level: 7
+School: Illusion
+Sphere: Elemental
+Range: Personal
+Duration: 1 turn
+Casting Time: 7
+Area of Effect: 30' radius
+Saving Throw: Special
+
+When this spell is cast, the caster appears to undergo a remarkable transformation. The caster becomes the very ideal of beauty, for a male, this is usually a nymph or a dryad, for a female, the image varies. Any humanoid viewing the illusion must save vs. spell at a -4 penalty or be charmed for 10 rounds. The transformation is instantaneous, but lasts only seconds, affecting those in the area but excluding fellow party members.
+
+If the caster harms, or attempts to harm, a charmed creature by some overt action, or if a dispel magic spell is successfully cast upon a charmed creature, the charm is broken. If two or more charm effects simultaneously affect a creature, the most recent charm takes precedence."
+
+//fire_storm:sppr705
+@7050 = "Fire Storm"
+@7051 = "Fire Storm
+Level: 7
+School: Evocation
+Sphere: Combat, Elemental (Fire)
+Range: Long
+Duration: 4 rounds
+Casting Time: 1 round
+Area of Effect: 30' radius
+Saving Throw: Breath half
+
+When a Fire Storm spell is cast, the whole area is shot through with sheets of roaring flame and then pelted with fiery balls of lava. Those caught in the inferno receive 2d8 points of damage plus one for each level of the caster (up to a maximum of 2d8+20). This assault will last for four rounds, continuing to damage all creatures who remain within the area of effect. An area 10 feet around the caster will be protected from the onslaught. Creatures who successfully save vs. breath at a -4 penalty take only half damage."
+
+//symbol_weakness:sppr706, replaces symbol of fear.
+@7060 = "Symbol of Weakness"
+@7061 = "Symbol of Weakness
+Level: 7
+School: Conjuration
+Sphere: Combat
+Range: Long
+Duration: Special
+Casting Time: 1 round
+Area of Effect: 20' radius
+Saving Throw: Spell negates
+
+Symbol of Weakness is a powerful enchantment that allows the caster to inscribe a symbol on the ground or any other surface. The symbol will remain there until a hostile creature comes within 15 feet of the glyph, at which point it is triggered and explodes, causing all enemies within a 20 foot radius to make a saving throw vs. spell at -4 or have their strength, dexterity, and constitution reduced by 4. The spell effects will persist until the character receives a Cure Disease spell."
+
+//sunray:sppr707
+@7070 = "Sunray"
+@7071 = "Sunray
+Level: 7
+School: Evocation
+Sphere: Sun
+Range: Personal
+Duration: Special
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: Special
+
+When this spell is cast, it causes a ray of sunlight to beam down upon the caster and a globe of searing radiance to explode in a 30 foot radius. All hostile creatures in the area of effect are blinded for 10 rounds and take 6d6 points of damage. Undead creatures caught within the sunburst instead take 1d6 points of damage per caster level (up to a maximum of 20d6). A successful save vs. breath at a -4 penalty negates the blindness and reduces the damage by half. The burst also results in the destruction of all undead creatures specifically harmed by bright light (such as vampires, shadows, and wraiths) that fail a saving throw vs. spell."
+
+//finger_death:sppr708
+@7080 = "Finger of Death"
+@7081 = "Finger of Death
+Level: 7
+School: Necromancy
+Sphere: War
+Range: Long
+Duration: Permanent
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: Death partial
+
+The Finger of Death spell snuffs out the victim's life force. The caster points his finger at the victim after the incantation is complete and death occurs, unless a save vs. death at -2 is made. A creature successfully saving still receives 2d8 + level points of damage, up to a maximum of 2d8 + 20."
+
+//chaos:sppr709, replaces confusion
+@7090 = "Chaos"
+@7091 = "Chaos
+Level: 7
+School: Enchantment
+Sphere: Chaos
+Range: Long
+Duration: 1 turn
+Casting Time: 7
+Area of Effect: 30' radius
+Saving Throw: Special
+
+This spell allows the caster to create a sphere of chaotic magic. All enemies within the area affected by the casting of this spell must make a saving throw vs. spell at -4 for every round that they remain in the sphere, and if the save is failed one of the following random effects occurs: the target is feebleminded, is confused, is paralyzed, is rendered unconscious, or flees in panic."
+
+//holy_word:sppr710
+@7100 = "Holy Word"
+@7101 = "Holy Word
+Level: 7
+School: Conjuration
+Sphere: Combat
+Range: Personal
+Duration: Special
+Casting Time: 1
+Area of Effect: 30' radius
+Saving Throw: None
+
+Uttering a Holy Word channels magic of tremendous power. The spell affect all enemies that are caught in the area of effec, while the effects differ according to the level of the target as follows:
+
+Target's Hit Dice -- Effects of Holy Word
+Equal to caster level -- Deafness for 1 turn
+Up to caster level -1 -- Blindness for 5 rounds
+Up to caster level -5 -- Stun for 1 round
+Up to caster level -10 -- Death
+
+The effects are cumulative and concurrent."
+
+//regeneration:sppr711
+@7110 = "Regeneration"
+@7111 = "Regeneration
+Level: 7
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: 3 turns
+Casting Time: 7
+Area of Effect: 1 creature
+Saving Throw: None
+
+This powerful spell enables the caster to imbue a creature with the ability to regenerate. This regeneration will heal any wounds and even regenerate lost limbs. The creature affected will regain 1 hit point per second (up to a maximum of 180 hit points within 3 turns at level 10). The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
+
+//resurrection:sppr712
+@7120 = "Resurrection"
+@7120 = "Resurrection
+Level: 7
+School: Necromancy
+Sphere: Necromantic
+Range: Touch
+Duration: Permanent
+Casting Time: 1 round
+Area of Effect: 1 creature
+Saving Throw: None
+
+Like the 5th level spell Raise Dead, Resurrection will return a character back to life. However, Resurrection also fully heals the character so that they are ready for the adventuring life once more."
+
+//greater_restoration:sppr713
+@7130 = "Greater Restoration"
+@7131 = "Greater Restoration
+Level: 7
+School: Necromancy
+Sphere: Necromantic
+Range: Touch
+Duration: Permanent
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+A Greater Restoration spell removes most temporary and permanent negative effects from the target creature. It reverses any previous life energy level drain of the creature caused by any force, spell, or monster. It can restore a polymorphed or petrified creature to its natural form, break the effects of a curse, reverse unnatural mental states such as confusion, feeblemindedness, and berserk rages, and free the recipient from magical effects like fear, paralysis, sleep, and stun. This potent spell will also restore any lost hit points and cure the target of any diseases or poisons.
+
+The casting of this spell is very draining on the priest, leaving him physically and mentally exhausted. For 5 rounds after the spell is cast, the priest will suffer a -2 penalty to hit, damage, armor class, and casting speed factor."
+
+//sppr714:non-existent
+//unholy_word:sppr715
+@7150 = "Unholy Word"
+@7151 = "Unholy Word
+Level: 7
+School: Conjuration
+Sphere: Combat
+Range: Personal
+Duration: Special
+Casting Time: 1
+Area of Effect: 30' radius
+Saving Throw: None
+
+Uttering an Unholy Word channels magic of tremendous power. The spell affect all enemies that are caught in the area of effec, while the effects differ according to the level of the target as follows:
+
+Target's Hit Dice      -- Effects of Unholy Word
+Equal to caster level  -- Deafness for 1 turn
+Up to caster level -1  -- Slowness for 5 rounds
+Up to caster level -5  -- Confusion for 1 round
+Up to caster level -10 -- Death
+
+The effects are cumulative and concurrent."
+
+//animal_summoning_7:sppr716, replaces conjure animals.
+@7160 = "Animal Summoning VII"
+@7161 = "Animal Summoning VII
+Level: 7
+School: Conjuration
+Sphere: Animal
+Range: Long
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster calls a number of animals, which serve the summoner under any conditions. The type and number of creatures that appear depend upon the level of the druid casting the spell.
+
+13th+ : 2 Polar Bears
+
+The summoned animals will aid the caster by whatever means they possess, staying until the spell duration expires.
+
+Polar Bear (8 Hit Dice):
+STR 21, DEX 13, CON 19, INT 6, WIS 12, CHA 8;  AL Neutral
+HP 104, AC 3, THAC0 8, Saving Throws 10/14/10/12/14
+2 Attacks Per Round, 2d4 + 11 Crushing Damage (Claws and Bite)
+
+Special Qualities:
+Immunity to Ice Storm
+Cold Resistance 20%"
+
+//creeping_doom:sppr717
+@7170 = "Creeping Doom"
+@7171 = "Creeping Doom
+Level: 7
+School: Conjuration
+Sphere: Animal
+Range: Long
+Duration: 6 rounds
+Casting Time: 5
+Area of Effect: Target, and enemies within 30'
+Saving Throw: Special
+
+When the caster utters the spell Creeping Doom, he calls forth a horde of venomous biting and stinging arachnids, insects, and myriapods. This carpet-like mass swarms over a large area, spreading to all creatures within 30 feet of the target.
+
+For the duration of the spell, those affected fight with a -2 penalty to attack rolls and armor class. In addition, each round the victims suffer 2d3 points of damage from insect bites, have a 100% chance of spell failure, and must make saving throws vs. death at -2 or be poisoned and panic. If a successful save vs. breath at -4 is made, the target manages to avoid most of the swarm, reducing damage from bites by half and completely negating the spell failure penalty. Poisoned creatures suffer additional 2 points of damage each round for 3 rounds or until cured. Magic resistance does not affect this spell."
+
+//symbol_stunning:sppr718
+@7180 = "Symbol of Stunning"
+@7181 = "Symbol of Stunning
+Level: 7
+School: Conjuration
+Sphere: Combat
+Range: Long
+Duration: Special
+Casting Time: 1 round
+Area of Effect: 20' radius
+Saving Throw: Spell negates
+
+Symbol of Stunning is a powerful enchantment that allows the caster to inscribe a symbol on the ground or any other surface. The symbol will remain there until a hostile creature comes within 15 feet of the glyph, at which point it is triggered and explodes, causing all enemies within a 20 foot radius to make a saving throw vs. spell at -4 or be stunned for 4 rounds."
+
+//symbol_death:sppr719
+@7190 = "Symbol of Death"
+@7191 = "Symbol of Death
+Level: 7
+School: Conjuration
+Sphere: Combat
+Range: Long
+Duration: Special
+Casting Time: 1 round
+Area of Effect: 20' radius
+Saving Throw: Death negates
+
+Symbol of Death is a powerful enchantment that allows the caster to inscribe a symbol on the ground or any other surface. The symbol will remain there until a hostile creature comes within 15 feet of the glyph, at which point it is triggered and explodes, causing all enemies within a 20 foot radius to make a saving throw vs. death at -4 or die. Creatures with more than 60 current hit points are immune to this effect."
+
+//earthquake:sppr720
+@7200 = "Earthquake"
+@7201 = "Earthquake
+Level: 7
+School: Alteration
+Sphere: Elemental (Earth)
+Range: Long
+Duration: 3 rounds
+Casting Time: 1 round
+Area of Effect: 30' radius
+Saving Throw: Special
+
+When this spell is cast by a druid, a local earthquake rips the ground. Once every round for the spell's duration, a tremor will take place, affecting all creatures in its area of effect. Earth elementals and flying creatures are unaffected by this spell.
+
+There are three tremors that are caused by the earthquake. The first tremor causes all creatures affected to suffer 6d6 points of damage (save vs. paralyzation at -6 for half damage). Those who fail their saving throw fall to the ground unconscious for 2 rounds. The second tremor is less severe, causing 4d6 points of damage (save vs. death at -4 for half), but is accompanied by fissures opening in the earth, which all affected creatures have a 20% chance to fall into and die (save vs. breath at -4 negates). The final tremor causes 2d6 damage (save vs. death at -2 for half) and there is a 10% chance affected creatures will be trapped within the fissures, causing death (save vs. breath at -2 negates). Creatures knocked unconscious by the first tremor automatically fail any saves to try to avoid falling into or becoming trapped in the fissures.
+
+This spell will affect both enemies and friends of the caster, so care must be taken in its use. Magic resistance does not affect this spell."
+
