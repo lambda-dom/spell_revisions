@@ -42,23 +42,6 @@ Saving Throw: None
 
 This spell allows the caster to summon forth and control one or two massive mountain bears. The bears will respond to the caster's every whim for the duration of the spell.~
 
-/*------------------level 7------------------*/
-
-@231=~Shield of the Archons~
-@232=~Shield of the Archons
-Level: 7
-School: Abjuration
-Sphere: Protection
-Range: Personal
-Duration: 1 turn
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
-
-This powerful abjuration spell causes spells cast against the priest to be absorbed and consumed. This spell will not protect the caster from dispel magic, but it will not be affected by dispel magic, either.
-
-This spell also grants protection from spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the priest (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud).~
-
 @233=~Summon Shambling Mound~
 @234=~Summon Shambling Mound
 Level: 7

@@ -468,9 +468,6 @@ ADD_SPELL ~spell_rev\sppr6##\sppr622.spl~ 1 6 ~CLERIC_CONJURE_EARTH_ELEMENTAL~  
 
 /*-----------------------level 7-----------------------*/
 
-COPY ~spell_rev\sppr7##\sppr701.spl~     ~override~  // Shield of the Archons
-  SAY NAME1 @231    SAY UNIDENTIFIED_DESC @232
-
 COPY ~spell_rev\sppr7##\sppr702.spl~     ~override~  // Summon Shambling Mound (replaces Conjure Earth Elemental)
   SAY NAME1 @233    SAY UNIDENTIFIED_DESC @234
 COPY ~spell_rev\sppr7##\mound.eff~     ~override~
