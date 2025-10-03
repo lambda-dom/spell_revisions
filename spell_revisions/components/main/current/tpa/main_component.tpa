@@ -468,19 +468,8 @@ ADD_SPELL ~spell_rev\sppr6##\sppr622.spl~ 1 6 ~CLERIC_CONJURE_EARTH_ELEMENTAL~  
 
 /*-----------------------level 7-----------------------*/
 
-COPY ~spell_rev\sppr7##\sppr702.spl~     ~override~  // Summon Shambling Mound (replaces Conjure Earth Elemental)
-  SAY NAME1 @233    SAY UNIDENTIFIED_DESC @234
-COPY ~spell_rev\sppr7##\mound.eff~     ~override~
-COPY ~spell_rev\sppr7##\smoundsu.cre~     ~override~
-  SAY NAME1 @2233
-  SAY NAME2 @2233
-COPY ~spell_rev\sppr7##\smoundsu.itm~     ~override~
-COPY ~spell_rev\sppr7##\dvsmound.spl~     ~override~
-COPY ~spell_rev\sppr7##\dvsmound.bcs~     ~override~
-COPY ~spell_rev\sppr7##\sppr702a.bam~     ~override~
-COPY ~spell_rev\sppr7##\sppr702b.bam~     ~override~
-COPY ~spell_rev\sppr7##\sppr702c.bam~     ~override~
-APPEND ~spell.ids~ ~1702 CLERIC_STALKER~ // SPPR702 is "Stalker" in IWDEE, a spell that summons Shambling Mounds
+// SPPR702 is "Stalker" in IWDEE, a spell that summons Shambling Mounds
+APPEND ~spell.ids~ ~1702 CLERIC_STALKER~
   UNLESS ~^1702[ %TAB%]+CLERIC_STALKER\b~
 
 COPY ~spell_rev\sppr7##\sppr703.spl~     ~override~  // Summon Death Knight (replaces Gate)

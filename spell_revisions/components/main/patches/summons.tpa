@@ -184,6 +184,21 @@ DEFINE_PATCH_FUNCTION skeleton_warrior BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION shambling_mound STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "shambling_mound_fists"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "shambling_mound_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
 DEFINE_PATCH_FUNCTION gibberling STR_VAR destination = "*" BEGIN
     //Equip items.
     LPF creature_add_item STR_VAR

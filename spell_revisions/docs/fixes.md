@@ -93,6 +93,10 @@ note(s):
 
 * Animate Skeleton Warrior: standardized immunities. Damage bonus 1 (corrected description). Corrections to thac0.
 
+## A. 7. Level 7.
+
+* Summon Shambling Mound: remove undocumented -25% magic damage penalty. Fix damage bonus 3 -> 10. `dvmound1` non-existent spell, made it into recursive call. Fix thac0 8 -> 2. General gianthumanoid -> monster.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

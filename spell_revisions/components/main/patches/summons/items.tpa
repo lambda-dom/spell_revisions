@@ -284,3 +284,28 @@ DEFINE_PATCH_FUNCTION nishruu_immunities STR_VAR destination = "*" BEGIN
         END
     END
 END
+
+DEFINE_PATCH_FUNCTION shambling_mound_fists STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "shambling_mound_constrict"
+        match_resource = "entg#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION shambling_mound_immunities STR_VAR destination = "*" BEGIN
+    PATCH_FOR_EACH block IN
+        "charm"
+        "paralysis"
+        "poison"
+        "polymorph"
+        "sleep"
+        "stun"
+    BEGIN
+        LPF append_item_block STR_VAR
+            block = "%block%"
+        END
+    END
+END

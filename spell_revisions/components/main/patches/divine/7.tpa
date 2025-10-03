@@ -5,5 +5,19 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 
 //Load references.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
 
 //Patches.
+DEFINE_PATCH_FUNCTION summon_shambling_mound STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "summon_shambling_mound"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END

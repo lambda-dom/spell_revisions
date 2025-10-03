@@ -17,3 +17,31 @@ This powerful abjuration spell causes spells cast against the priest to be absor
 
 This spell also grants protection from spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the priest (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud)."
 
+//summon_shambling_mound:sppr702
+@7020 = "Summon Shambling Mound"
+@7021 = ~Summon Shambling Mound
+Level: 7
+School: Conjuration
+Sphere: Plant
+Range: Medium
+Duration: 8 hours
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+This spell summons forth a shambling mound to assist the caster. The shambler appears to be heaps of rotting vegetation, but it is actually an intelligent form of plant life, with a roughly humanoid shape, and a brain-like control center in its "chest" area. The shambling mound will remain under the caster's control until it is slain or the spell duration expires.
+
+Shambling Mound (16 Hit Dice):
+STR 19, DEX 10, CON 16, INT 7, WIS 10, CHA 9;  AL Neutral
+HP 124, AC 0, THAC0 2, Saving Throws 4/6/5/4/7
+2 Attacks Per Round, 2d6 + 10 Crushing Damage (Fist +3)
+
+Combat Abilities:
+Constrict: 50% chance target must save vs. breath or be entangled. Any entangled creature can save vs. breath each round to break free; those who fail the save suffer 2d6 + 10 points of damage and remain entangled
+
+Special Qualities:
+Regeneration: 1hp/round
+Immune to charm, hold, poison, polymorph, sleep and stun effects
+Electrical Resistance 125%; Fire Resistance 100%; Cold Resistance 50%
+Crushing Resistance 100%; Slashing, Piercing and Missile Resistance 50%~
+
