@@ -79,6 +79,9 @@ animate_skeleton_warrior_c      1       *       0       #suf:c:CLERIC_ANIMATE_SK
 summon_shambling_mound_a        1       *       0       #suf:a:CLERIC_SUMMON_SHAMBLING_MOUND
 summon_shambling_mound_b        1       *       0       #suf:b:CLERIC_SUMMON_SHAMBLING_MOUND
 summon_shambling_mound_c        1       *       0       #suf:c:CLERIC_SUMMON_SHAMBLING_MOUND
+regenerate_a                    1       *       0       #suf:a:CLERIC_REGENERATE
+regenerate_b                    1       *       0       #suf:b:CLERIC_REGENERATE
+regenerate_c                    1       *       0       #suf:c:CLERIC_REGENERATE
 obscuring_mist_a                1       *       0       #suf:a:WIZARD_OBSCURING_MIST
 obscuring_mist_b                1       *       0       #suf:b:WIZARD_OBSCURING_MIST
 obscuring_mist_c                1       *       0       #suf:c:WIZARD_OBSCURING_MIST

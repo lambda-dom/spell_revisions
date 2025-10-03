@@ -68,11 +68,21 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Summon Death Knight: only description in. Implemented in the arcane level.
 
+* Chaos: offload effects to subspells and fix off-by-one probability errors.
+
+* Holy Word: offload effects to subspells.
+
+* Regeneration: handle concurrent stacking.
+
+* Resurrection: go over the list of spells to remove and find some way (a la PfM) to standardize it.
+
+* Unholy Word: offload effects to subspells.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.
 
-* Grease: follow implementation of Entangle? Use a sleep subspell? Also increase aoe.
+* Grease: follow implementation of Entangle? Use a sleep subspell? Also increase aoe of projectile.
 
 * Sleep: display "ineffective spell" for creatures with dice > caster level.
 

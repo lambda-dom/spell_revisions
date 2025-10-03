@@ -15,6 +15,11 @@ LAF get_table_references STR_VAR
     dir = "%resources%/2da/divine"
 RET_ARRAY spells = references END
 
+LAF get_table_references STR_VAR
+    tables = "3"
+    dir = "%resources%/2da/arcane"
+RET_ARRAY wizard_level3_spells = references END
+
 
 //Patches.
 DEFINE_PATCH_FUNCTION summon_shambling_mound STR_VAR destination = "*" BEGIN
@@ -84,4 +89,18 @@ DEFINE_PATCH_FUNCTION sunray STR_VAR destination = "*" BEGIN
         match_resource = "udth#res"
         references = "effects"
     END
+END
+
+DEFINE_PATCH_FUNCTION greater_restoration STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "haste_winded"
+        match_resource = "wind#res"
+        references = "wizard_level3_spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION unholy_word STR_VAR destination = "*" BEGIN
+    PATCH_WARN "unholy_word: effects not in yet."
 END

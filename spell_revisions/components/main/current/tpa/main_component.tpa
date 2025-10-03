@@ -483,35 +483,13 @@ COPY ~spell_rev\sppr7##\a#ispain.vvc~     ~override~
 // Symbol of Weakness (replaces Symbol, Fear)
 APPEND ~spell.ids~ ~1706 CLERIC_SYMBOL_WEAKNESS~
 
-COPY ~spell_rev\sppr7##\sppr708.spl~     ~override~  // Finger of Death
-  SAY NAME1 @245    SAY UNIDENTIFIED_DESC @246
-COPY ~spell_rev\sppr7##\dvfingpi.eff~     ~override~
-
-ADD_PROJECTILE ~spell_rev\projectles\dvschaos.pro~
-COPY ~spell_rev\sppr7##\sppr709.spl~     ~override~  // Chaos (replaces Confusion)
-  SAY NAME1 @297    SAY UNIDENTIFIED_DESC @298
-  WRITE_SHORT 0x98 %dvschaos%
+// Chaos (replaces Confusion)
 APPEND ~spell.ids~ ~1709 CLERIC_CHAOS~
 
-COPY ~spell_rev\sppr7##\sppr710.spl~     ~override~  // Holy Word
-  SAY NAME1 @247    SAY UNIDENTIFIED_DESC @248
+//Effect for holy word but does not seem to be used anywhere.
 COPY ~spell_rev\sppr7##\dvhoword.eff~     ~override~
 
-COPY ~spell_rev\sppr7##\sppr711.spl~     ~override~  // Regeneration
-  SAY NAME1 @249    SAY UNIDENTIFIED_DESC @250
-COPY ~spell_rev\sppr7##\sppr711a.bam~     ~override~
-COPY ~spell_rev\sppr7##\sppr711b.bam~     ~override~ // also used by CLERIC_REGENERATION_DRUID_VERSION
-COPY ~spell_rev\sppr7##\sppr711c.bam~     ~override~ // also used by CLERIC_REGENERATION_DRUID_VERSION
-
-COPY ~spell_rev\sppr7##\sppr712.spl~     ~override~  // Resurrection
-  SAY NAME1 @251    SAY UNIDENTIFIED_DESC @252
-
-COPY ~spell_rev\sppr7##\sppr713.spl~     ~override~  // Greater Restoration
-  SAY NAME1 @253    SAY UNIDENTIFIED_DESC @254
-
-COPY ~spell_rev\sppr7##\sppr715.spl~     ~override~  // Unholy Word
-  SAY NAME1 @255    SAY UNIDENTIFIED_DESC @256
-COPY ~spell_rev\sppr7##\sppr715e.spl~     ~override~  // Slow effect
+//Effect for unholy word but does not seem to be used anywhere.
 COPY ~spell_rev\sppr7##\dvunword.eff~     ~override~
 
 COPY ~spell_rev\sppr7##\sppr717.spl~     ~override~  // Creeping Doom
