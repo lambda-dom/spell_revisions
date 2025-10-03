@@ -109,6 +109,12 @@ note(s):
 
 * Animal Summoning 7: Polar Bear: non-magical; damage bonus 0 -> 11. Polar Bear: charisma 10 -> 8, thac0 12 -> 8.
 
+* Symbol of Stunning: range 70 -> 30.
+
+* Symbol of Death: range 70 -> 30.
+
+* Earthquake: sectype offensivedamage -> battleground.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.

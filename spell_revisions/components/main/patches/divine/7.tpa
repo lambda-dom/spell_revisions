@@ -116,3 +116,21 @@ DEFINE_PATCH_FUNCTION animal_summoning_7 STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION earthquake STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "earthquake_a"
+        match_resource = "spl1#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "earthquake_b"
+        match_resource = "spl2#res"
+        references = "spells"
+    END
+END
+

@@ -64,7 +64,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## A. 7. Level 7.
 
-* Summon Shambling Mound: review the constric spell: especially target vs. point casting and entangle implementation.
+* Summon Shambling Mound: review the constrict spell: especially target vs. point casting and entangle implementation.
 
 * Summon Death Knight: only description in. Implemented in the arcane level.
 
@@ -77,6 +77,12 @@ Not just things to (still) do but also proposed changes to spells.
 * Resurrection: go over the list of spells to remove and find some way (a la PfM) to standardize it.
 
 * Unholy Word: offload effects to subspells.
+
+* Creeping Doom: only description in.
+
+* Symbol of Stunning: offload effects to subspell.
+
+* Earthquake: offload unconsciousness to a subspell. The implementation itself seems screwy because it relies on delayed cast spells targeting the targets (they should target the caster, but then the aoe would be caster centered). Maybe targeting via [148] succeeds? The IESDP seems to indicate that this will *not* work. Give projectiles to the subspells? Also, how is the last line of the description implemented?
 
 # B. Arcane spells.
 
