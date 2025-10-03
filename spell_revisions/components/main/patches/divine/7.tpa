@@ -58,3 +58,30 @@ DEFINE_PATCH_FUNCTION fire_storm STR_VAR destination = "*" BEGIN
         references = "spells"
     END
 END
+
+DEFINE_PATCH_FUNCTION sunray STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "sunray_blind"
+        match_resource = "blnd#res"
+        references = "subspells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "sunray_b"
+        match_resource = "udmg#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
+    STR_VAR
+        resource = "sunray_damage_death"
+        ext = "eff"
+        match_resource = "udth#res"
+        references = "effects"
+    END
+END
