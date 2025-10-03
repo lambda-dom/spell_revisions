@@ -216,3 +216,7 @@ note(s):
 * Summon Nishruu: standardize to fixed 1 turn. Description level 7 -> 6. thac0 11 -> 7. Mention constant detect invis. Contact: correct enchant 0 -> 3 and thac0 bonus; correct item flags. Fix ridiculous feeblemindedness duration.
 
 * Animate Skeleton Warrior: see level 6 Cleric version.
+
+## B. 7. Level 7.
+
+* Monster Summoning 7: Otyugh: thac0 13 -> 10.

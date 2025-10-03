@@ -1159,18 +1159,9 @@ COPY ~spell_rev\spwi7##\spwi723.spl~     ~override~  // Improved Chaos Shield
 
 //ADD_SPELL: Monster Summoning VII
 ADD_SPELL ~spell_rev\spwi7##\spwi724.spl~ 2 7 ~WIZARD_MONSTER_SUMMONING_5~  // Monster Summoning VII (added by V4)
-  SAY NAME1 @866    SAY UNIDENTIFIED_DESC @867
-COPY ~spell_rev\spwi7##\scrl8b.itm~     ~override~  // vanilla's Summon Nishruu scroll
-  SAY NAME2 @866    SAY IDENTIFIED_DESC @867
-COPY ~spell_rev\spwi7##\otyughsu.eff~     ~override~
-COPY ~spell_rev\spwi7##\otyughsu.cre~     ~override~
-  SAY NAME1 @3866
-  SAY NAME2 @3866
-COPY ~spell_rev\spwi7##\otyughsu.itm~     ~override~
-COPY ~spell_rev\spwi7##\dvwi724a.bam~     ~override~
-COPY ~spell_rev\spwi7##\dvwi724b.bam~     ~override~
-COPY ~spell_rev\spwi7##\dvwi724c.bam~     ~override~
 APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_5% WIZARD_MONSTER_SUMMONING_LEVEL_7~
+// vanilla's Summon Nishruu scroll
+COPY ~spell_rev\spwi7##\scrl8b.itm~     ~override~
 
 
 /*-----------------------level 8-----------------------*/

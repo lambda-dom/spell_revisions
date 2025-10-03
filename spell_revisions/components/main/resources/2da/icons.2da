@@ -147,6 +147,9 @@ monster_summon_6_c              1       *       0       #suf:c:WIZARD_MONSTER_SU
 greater_spell_deflection_a      1       *       1       #suf:a:WIZARD_GREATER_SPELL_DEFLECTION
 greater_spell_deflection_b      1       *       1       #suf:b:WIZARD_GREATER_SPELL_DEFLECTION
 greater_spell_deflection_c      1       *       1       #suf:c:WIZARD_GREATER_SPELL_DEFLECTION
-greater_spell_deflection_a      1       *       0       #suf:a:WIZARD_SUMMON_DEATH_KNIGHT
-greater_spell_deflection_b      1       *       0       #suf:b:WIZARD_SUMMON_DEATH_KNIGHT
-greater_spell_deflection_c      1       *       0       #suf:c:WIZARD_SUMMON_DEATH_KNIGHT
+summon_death_knight_a           1       *       0       #suf:a:WIZARD_SUMMON_DEATH_KNIGHT
+summon_death_knight_b           1       *       0       #suf:b:WIZARD_SUMMON_DEATH_KNIGHT
+summon_death_knight_c           1       *       0       #suf:c:WIZARD_SUMMON_DEATH_KNIGHT
+monster_summon_7_a              1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_7
+monster_summon_7_b              1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_7
+monster_summon_7_c              1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_7

@@ -72,7 +72,7 @@ When this spell is cast on the target creature, it will dispel one spell protect
 
 The spell protection spells dispelled by Khelben's Warding Whip are: Minor Spell Deflection, Non-Detection, Minor Globe of Invulnerability, Spell Deflection, Dispelling Screen, Globe of Invulnerability, Greater Spell Deflection, and Shield of the Archons."
 
-//monster_summoning_7:spwi706
+//monster_summoning_7:spwi706, replaces monster summoning V.
 @7060 = "Monster Summoning VII"
 @7061 = "Monster Summoning VII
 Level: 7
@@ -98,7 +98,7 @@ Disease: creatures struck moves at half speed and suffer 1 point of damage per r
 
 Special Qualities:
 Immune to disease effects
-Slashing, Crushing, & Piercing Resistance 5%; Missile Resistance 100%"
+Slashing, Crushing and Piercing Resistance 5%; Missile Resistance 100%"
 
 //summon_death_knight:spwi707, replaces caco fiend
 @7070 = "Summon Death Knight"

@@ -17,3 +17,14 @@ RET_ARRAY spells = references END
 
 
 //Patches.
+DEFINE_PATCH_FUNCTION monster_summoning_7 STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_otyugh"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
