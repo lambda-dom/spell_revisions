@@ -1,0 +1,4 @@
+2DA V1.0
+*
+                            install name    descr   type    lvl flags       school      sectype                 book_icon                                       abil_icon                                       projectile                          range   speed   patch                       over    destination
+invisible_stalker           1       6010    6011    wizard  6   00000000    conjurer    conjuration             #suf:c:WIZARD_INVISIBLE_STALKER                 #suf:b:WIZARD_INVISIBLE_STALKER                 *                                   20      9       summon_invisible_stalker    1       #spl:WIZARD_INVISIBLE_STALKER
