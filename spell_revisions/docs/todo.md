@@ -62,6 +62,12 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Banishment: second eff has wrong target; not clear what is the correct target, if any (summoned_demon?).
 
+## A. 7. Level 7.
+
+* Summon Shambling Mound: review the constric spell: especially target vs. point casting and entangle implementation.
+
+* Summon Death Knight: only description in. Implemented in the arcane level.
+
 # B. Arcane spells.
 
 ## B. 1. Level 1.
@@ -182,3 +188,5 @@ note(s):
 * Damage bonus on natural attacks: these are set seeming randomly; standardize them.
 
 * Add snake race for snake summon (possibly others with no_race).
+
+* Incorporate spell flag setting in the spell tables.

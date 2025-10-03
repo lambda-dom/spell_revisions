@@ -9,6 +9,12 @@ LAF get_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "7"
+    dir = "%resources%/2da/divine"
+RET_ARRAY spells = references END
+
 
 //Patches.
 DEFINE_PATCH_FUNCTION summon_shambling_mound STR_VAR destination = "*" BEGIN
@@ -19,5 +25,36 @@ DEFINE_PATCH_FUNCTION summon_shambling_mound STR_VAR destination = "*" BEGIN
         ext = "eff"
         match_resource = "summ#res"
         references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_storm_a STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        //No cycle because resource must already exist.
+        resource = "fire_storm"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_storm_b STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "fire_storm_a"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION fire_storm STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "fire_storm_b"
+        match_resource = "spl#res"
+        references = "spells"
     END
 END

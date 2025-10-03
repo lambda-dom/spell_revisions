@@ -48,6 +48,8 @@ CLERIC_CONJURE_AIR_ELEMENTAL            1       priest  6       *       0       
 CLERIC_ANIMATE_SKELETON_WARRIOR         1       priest  6       *       0           *
 CLERIC_CONJURE_WATER_ELEMENTAL          1       priest  6       *       0           *
 CLERIC_SUMMON_SHAMBLING_MOUND           1       priest  7       *       0           *
+CLERIC_SUMMON_DEATH_KNIGHT              1       priest  7       *       0           *
+CLERIC_SYMBOL_WEAKNESS                  1       priest  7       *       0           *
 WIZARD_OBSCURING_MIST                   1       wizard  1       *       0           *
 WIZARD_EXPEDITIOUS_RETREAT              1       wizard  1       *       0           *
 WIZARD_TRUE_STRIKE                      1       wizard  1       *       0           *
