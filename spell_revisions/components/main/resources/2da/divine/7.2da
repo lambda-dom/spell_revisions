@@ -1,0 +1,4 @@
+2DA V1.0
+*
+                            install name    descr   type    lvl flags       school      sectype             book_icon                                   abil_icon                                   projectile                      range   speed   patch                       over    destination
+aerial_servant              1       6010    6011    priest  6   00000000    conjurer    conjuration         #suf:c:CLERIC_AERIAL_SERVANT                #suf:b:CLERIC_AERIAL_SERVANT                *                               20      9       aerial_servant              1       #spl:CLERIC_AERIAL_SERVANT
