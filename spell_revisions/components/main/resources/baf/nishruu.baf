@@ -17,16 +17,14 @@ THEN
         MoveToObject(Player1)
 END
 
-//What is this block for? It suggests a role for the detect illusion bonus.
-//Commented out and remove bonus for now.
-//In vanilla this block is for the weakness to dispel magic.
-// IF
-//     CheckStatLT(Myself,20,DETECTILLUSIONS)
-//     !StateCheck(Myself,STATE_DEAD)
-// THEN
-//     RESPONSE #100
-//         Kill(Myself)
-// END
+//Block implementing vulnerability to dispel.
+IF
+    CheckStatLT(Myself,20,DETECTILLUSIONS)
+    !StateCheck(Myself,STATE_DEAD)
+THEN
+    RESPONSE #100
+        Kill(Myself)
+END
 
 IF
     SpellCastOnMe([ANYONE],0)
