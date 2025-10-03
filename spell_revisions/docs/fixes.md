@@ -191,6 +191,6 @@ note(s):
 
 * Monster Summoning VI: Baby wyvern: sting damage bonus 1 -> 3. Document sting is only 25% chance and fix one-off error. Corrections to str 19 -> 17, thac0 14 -> 12. Wyvern: thac0 13 -> 8, save vs. spell 10 -> 14, wyvern sting damage bonus 2 -> 9. Document sting is only 25% chance and fix one-off error.
 
-* Summon Nishruu: standardize to fixed 1 turn. Description level 7 -> 6. thac0 11 -> 7. Mention constant detect invis. Contact: correct enchant 0 -> 3 and thac0 bonus; correct item flags. Remove undocumented detect illusion bonus 20. Fix ridiculous feeblemindedness duration.
+* Summon Nishruu: standardize to fixed 1 turn. Description level 7 -> 6. thac0 11 -> 7. Mention constant detect invis. Contact: correct enchant 0 -> 3 and thac0 bonus; correct item flags. Fix ridiculous feeblemindedness duration.
 
 * Animate Skeleton Warrior: see level 6 Cleric version.
