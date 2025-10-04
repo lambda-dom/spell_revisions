@@ -331,16 +331,17 @@ By casting the Summon Hakeashar spell, the wizard calls into existance a magical
 Hakeashar (12 Hit Dice):
 STR -, DEX 10, CON 16, INT 13, WIS 15, CHA 13;  AL Chaotic Neutral
 HP 114, AC 10, THAC0 2, Saving Throws 6/6/6/6/6
-1 Attack Per Round, Drain Magic (Contact +2)
+1 Attack Per Round, Drain Magic (Contact +3)
 
-Combat Abilities:
-Drain Magic:
-- wizards lose one memorized spell, chosen at random from the highest spell level possible
-- causes feeblemindedness (save vs. spell neg.)
+Combat Abilities:Combat Abilities:
+Drain Magic: wizards lose one memorized spell, chosen at random from the highest spell level possible
+Feeblemind: any creature touched must save vs. spell or suffer feeblemindedness for 3 rounds
 
 Special Qualities:
-Absorb Magic: immune to magic, every spell cast against a Hakeashar heals the creature by 1d8+1 hit points
+Detect invisibility: creature is under a constant detect invisibility effect
+Absorb Magic: immune to magic, every spell cast against a Nishruu heals the creature by 1d8 + 1 hit points
 Immune to normal weapons
+Immunity to poison
 Physical Resistance 50%"
 
 //control_undead:spwi720

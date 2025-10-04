@@ -231,3 +231,4 @@ note(s):
 
 * Summon Djinni: sword: make a real sword, remove apr bonus (move to cre), damage bonus 4 -> 5. Djinni: increase first class 9 -> 10, wis 15 -> 14, hps 70 -> 89, ac 5 -> 0, thac0 10 -> 7, apr 3/2 -> 3, neutral -> ally, gender male -> summoned.
 
+* Summon Hakeashar: fix icons. Swap the contact with the nishruu to give hakeashar the better version. thac0 4 -> 2, allegiance enemy -> ally. Fix eff that summons nishruu -> hakeashar.

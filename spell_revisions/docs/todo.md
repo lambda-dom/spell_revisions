@@ -182,6 +182,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Summon Djinni: Add proficient with scimitars opcode. Make duration constant and fixed.
 
+* Summon Hakeashar: Make duration constant and fixed.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.

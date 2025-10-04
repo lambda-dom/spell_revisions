@@ -1017,18 +1017,6 @@ APPEND ~spell.ids~ ~2711 WIZARD_CHAOS~
 //Seemingly unused effect for finger of death.
 COPY ~spell_rev\spwi7##\dvfingwi.eff~     ~override~
 
-COPY ~spell_rev\spwi7##\spwi719.spl~     ~override~  // Summon Nishruu/Hakeashar
-  SAY NAME1 @705    SAY UNIDENTIFIED_DESC @706
-COPY ~spell_rev\spwi7##\nishrusu.cre~     ~override~
-  SAY NAME1 @3705
-  SAY NAME2 @3705
-COPY ~spell_rev\spwi7##\nishruu.itm~     ~override~
-COPY ~spell_rev\spwi7##\nishru01.bcs~     ~override~
-COPY ~spell_rev\spwi7##\haksu.cre~     ~override~
-  SAY NAME1 @3753
-  SAY NAME2 @3753
-COPY ~spell_rev\spwi7##\haksu.itm~     ~override~
-
 // Mass Heal (limited wish)
 // the other resources (summoning eff, djinni, etc. are not overriden).
 COPY ~spell_rev\spwi7##\spin734.spl~     ~override~
