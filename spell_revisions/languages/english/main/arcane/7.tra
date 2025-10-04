@@ -130,3 +130,25 @@ Dispel Magic (once every 5 rounds)
 Unholy Fireball (once per day)
 Power Words: Blind, Stun, or Kill (once per day each)
 Symbols: of Weakness or Death (once per day each)"
+
+//prismatic_mantle:spwi708
+@7080 = "Prismatic Mantle"
+@7081 = "Prismatic Mantle
+Level: 7
+School: Abjuration
+Range: Personal
+Duration: 4 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: partial
+
+When this spell is cast, an opaque globe of shimmering, multicolored light temporarily surrounds the caster. This magical mantle confers complete invulnerability to all weapons of +3 or less enchantment. Furthermore, opponents within a 10' radius that hit the caster with a weapon or spell are subject to a random prismatic effect once per round. The possible effects of the prismatic mantle are listed below. Due to this spell's short casting time and duration, it is mainly used to buy the wizard a few rounds in the thick of combat.
+
+Red    - 6d6 fire damage (save vs. breath half)
+Orange - 6d6 acid damage (save vs. breath half)
+Yellow - 6d6 electrical damage (save vs. breath half)
+Green  - Death by poison (save vs. poison reduces to 3d6 poison damage)
+Blue   - Stunned for 5 rounds (save vs. polymorph neg.)
+Indigo - Feebleminded for 5 rounds (save vs. wand neg.)
+Violet - Mazed (save vs. spell neg.)"
+

@@ -170,6 +170,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Summon Death Knight: only description in.
 
+* Prismatic Mantle: move some of the effects to standardized subspells.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.

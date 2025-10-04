@@ -9,6 +9,10 @@ LAF get_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
+LAF get_table_references STR_VAR
+    tables = "vvcs"
+RET_ARRAY vvcs = references END
+
 LAF get_component_resources_dir RET resources = dir END
 LAF get_table_references STR_VAR
     tables = "7"
@@ -28,3 +32,79 @@ DEFINE_PATCH_FUNCTION monster_summoning_7 STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION prismatic_mantle STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_fire"
+        match_resource = "fire#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_acid"
+        match_resource = "acid#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_electricity"
+        match_resource = "elec#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_poison"
+        match_resource = "deth#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_stun"
+        match_resource = "stun#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_feeblemind"
+        match_resource = "febl#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_maze"
+        match_resource = "maze#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION prismatic_mantle STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215                  //Play visual effect.
+    STR_VAR
+        resource = "prismatic_mantle"
+        ext = "vvc"
+        match_resource = "vvc#res"
+        references = "vvcs"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 232                  //Cast spell on condition.
+    STR_VAR
+        resource = "prismatic_mantle_a"
+        match_resource = "cond#res"
+        references = "spells"
+    END
+END

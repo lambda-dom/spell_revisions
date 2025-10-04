@@ -10,3 +10,4 @@ storm_shield            1       #spl:CLERIC_STORM_SHIELD        *       0       
 conjure_air_elemental   1       #lit:dlelmair                   *       0       #lit:dlelmair
 conjure_fire_elemental  1       #lit:dlelmfir                   *       0       #lit:dlelmfir
 conjure_earth_elemental 1       #lit:dlelmear                   *       0       #lit:dlelmear
+prismatic_mantle        1       #lit:dlmantle                   *       0       #lit:dlmantle
