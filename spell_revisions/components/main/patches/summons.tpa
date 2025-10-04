@@ -651,3 +651,12 @@ DEFINE_PATCH_FUNCTION death_knight BEGIN
         array = "items"
     END
 END
+
+DEFINE_PATCH_FUNCTION efreeti BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "efreeti_scimitar"
+        slot = "weapon1"
+        array = "items"
+    END
+END

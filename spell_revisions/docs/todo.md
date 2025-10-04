@@ -178,6 +178,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Mordenkainen's Sword: mention vulnerability to dispel; review list of spell immunities in sword. Move immunity to psionics to immunities? The problem is that it *may* conflict with SCS.
 
+* Summon Efreeti: Add proficient with scimitars opcode. Review spell protections to fire spells. Make duration constant and fixed.
+
+* Summon Djinni: Add proficient with scimitars opcode.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.

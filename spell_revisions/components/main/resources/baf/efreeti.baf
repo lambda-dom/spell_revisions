@@ -1,0 +1,194 @@
+IF
+    !StateCheck(Myself,STATE_CHARMED)
+    !Allegiance(Myself,EVILCUTOFF)
+    !Allegiance(Myself,ALLY)
+THEN
+    RESPONSE #100
+        Ally()
+        Continue()
+END
+
+IF
+    HPPercentLT(Myself,30)
+    !HasItem("dvgasfrm",Myself)  // Gaseous Form
+    GlobalLT("EfreetiGasForm","LOCALS",3)
+    !StateCheck(Myself,STATE_DEAD)
+THEN
+    RESPONSE #100
+        IncrementGlobal("EfreetiGasForm","LOCALS",1)
+        ReallyForceSpellRES("dvgasfrm",Myself)  // No such index
+END
+
+IF
+    HasItem("dvgasfrm",Myself)  // Gaseous Form
+THEN
+    RESPONSE #50
+        RandomWalk()
+    RESPONSE #50
+        NoAction()
+END
+
+IF
+    HotKey(E)
+    Global("dv_AIOffSwitch","LOCALS",1)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_AIOffSwitch","LOCALS",0)
+        SmallWait(1)
+        DisplayStringHead(Myself,16469)  // On
+END
+
+IF
+    HotKey(D)
+    Global("dv_AIOffSwitch","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("dv_AIOffSwitch","LOCALS",1)
+        SmallWait(1)
+        DisplayStringHead(Myself,16470)  // Off
+END
+
+IF
+    Global("dv_AIOffSwitch","LOCALS",1)
+THEN
+    RESPONSE #100
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_FIRE_SHIELD_RED)  // SPWI418.SPL (Fire Shield)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    !CheckStatGT(Myself,0,WIZARD_FIRE_SHIELD)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(Myself,WIZARD_FIRE_SHIELD_RED)  // SPWI418.SPL (Fire Shield)
+END
+
+IF
+    ActionListEmpty()
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_SHIELD)  // SPWI114.SPL (Shield)
+    !StateCheck(Myself,STATE_INVISIBLE)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(Myself,WIZARD_SHIELD)  // SPWI114.SPL (Shield)
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
+    Global("prep","LOCALS",0)
+    !Range(NearestEnemyOf(Myself),4)
+    !StateCheck(NearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+    !CheckStatGT(NearestEnemyOf(Myself),0,SANCTUARY)
+    !CheckStatGT(NearestEnemyOf(Myself),99,RESISTMAGIC)
+    !CheckStatGT(NearestEnemyOf(Myself),50,RESISTFIRE)
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
+        SetGlobal("prep","LOCALS",1)
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
+    See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_CONJURE_LESSER_FIRE_ELEMENTAL)  // SPWI516.SPL (Conjure Lesser Fire Elemental)
+THEN
+    RESPONSE #100
+        Spell(Myself,WIZARD_CONJURE_LESSER_FIRE_ELEMENTAL)  // SPWI516.SPL (Conjure Lesser Fire Elemental)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    StateCheck(Myself,STATE_INVISIBLE)
+    GlobalTimerNotExpired("inviswander","LOCALS")
+THEN
+    RESPONSE #100
+        RandomWalkContinuous()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_INVISIBILITY)  // SPWI206.SPL (Invisibility)
+    !StateCheck(Myself,STATE_NOT_TARGETABLE)
+    !CheckStatGT(Myself,0,SANCTUARY)
+    See(NearestEnemyOf(Myself))
+    !CheckStatGT(NearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(SecondNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(ThirdNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(FourthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(FifthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(SixthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(SeventhNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(EighthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(NinthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(TenthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    HPPercentLT(Myself,50)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(Myself,WIZARD_INVISIBILITY)  // SPWI206.SPL (Invisibility)
+        SetGlobalTimer("inviswander","LOCALS",2)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_AGANNAZAR_SCORCHER)  // SPWI217.SPL (Agannazar's Scorcher)
+    See(ThirdNearestEnemyOf(Myself))
+    !StateCheck(ThirdNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+    !CheckStatGT(ThirdNearestEnemyOf(Myself),0,SANCTUARY)
+    !CheckStatGT(ThirdNearestEnemyOf(Myself),99,RESISTMAGIC)
+    !CheckStatGT(ThirdNearestEnemyOf(Myself),50,RESISTFIRE)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),WIZARD_AGANNAZAR_SCORCHER)  // SPWI217.SPL (Agannazar's Scorcher)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
+    See(NearestEnemyOf(Myself))
+    !StateCheck(NearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+    !CheckStatGT(NearestEnemyOf(Myself),0,SANCTUARY)
+    !CheckStatGT(NearestEnemyOf(Myself),99,RESISTMAGIC)
+    !CheckStatGT(NearestEnemyOf(Myself),50,RESISTFIRE)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    HaveSpell(WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
+    !Range(NearestEnemyOf(Myself),4)
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
+END
+

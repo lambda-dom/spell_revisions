@@ -278,7 +278,7 @@ With this spell, the conjurer can cajole an efreeti, a massive genie with powerf
 Efreeti (10 Hit Dice):
 STR 19, DEX 17, CON 16, INT 13, WIS 14, CHA 15; AL Lawful Evil
 HP 98, AC 1, THAC0 5, Saving Throws 8/11/8/11/11
-2 Attacks Per Round, 1d8+10 Slashing +1d6 Fire Damage (Scimitar +2)
+2 Attacks Per Round, 1d8 + 10 Slashing +1d6 Fire Damage (Scimitar +2)
 
 Special Qualities:
 Fire Resistance 100%
@@ -306,7 +306,7 @@ With this spell, the conjurer can cajole a djinni, a massive genie with powerful
 Djinni (10 Hit Dice):
 STR 17, DEX 19, CON 15, INT 14, WIS 14, CHA 15; AL Chaotic Good
 HP 89, AC 0, THAC0 7, Saving Throws 11/7/11/7/7
-3 Attacks Per Round, 1d8+5 Slashing Damage (Scimitar +2)
+3 Attacks Per Round, 1d8 + 5 Slashing Damage (Scimitar +2)
 
 Memorized Spells:
 1. Magic Missile (x3), Shield

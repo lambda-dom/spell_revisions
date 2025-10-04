@@ -226,3 +226,6 @@ note(s):
 * Mass Invisibility: range 35 -> 30.
 
 * Death Knight: sword: make a real sword, thac0 bonus 4 -> 3, damage bonus 5 -> 11. Death knight: thac0 7 -> 1, apr 2 -> 3.
+
+* Summon Efreeti: sword: make a real sword, damage bonus 4 -> 10. Efreet: increase first class 9 -> 10, str 18/00 -> 19, wis 15 -> 14, hps 80 -> 98, ac 4 -> 1, thac0 10 -> 5, apr 3/2 -> 2, saves wand 8 -> 11, saves spell 7 -> 11, gender male -> summoned.
+
