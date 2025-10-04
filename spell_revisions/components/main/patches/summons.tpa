@@ -600,3 +600,93 @@ DEFINE_PATCH_FUNCTION nishruu STR_VAR destination = "*" BEGIN
         array = "items"
     END
 END
+
+DEFINE_PATCH_FUNCTION otyugh STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "otyugh_tentacles"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "otyugh_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION mordenkainen_sword STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "mordenkainen_sword"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "mordenkainen_immunities"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION death_knight BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "death_knight_sword"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "undead_immunities"
+        slot = "rring"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "immune_normal_weapons"
+        slot = "lring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION efreeti BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "efreeti_scimitar"
+        slot = "weapon1"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION djinni BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "djinni_scimitar"
+        slot = "weapon1"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION hakeashar STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "hakeashar_contact"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "nishruu_immunities"
+        slot = "rring"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "immune_normal_weapons"
+        slot = "lring"
+        array = "items"
+    END
+END

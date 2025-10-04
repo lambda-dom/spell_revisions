@@ -86,6 +86,9 @@ animal_summon_7_a               1       *       0       #suf:a:CLERIC_ANIMAL_SUM
 animal_summon_7_b               1       *       0       #suf:b:CLERIC_ANIMAL_SUMMONING_LEVEL_7
 animal_summon_7_c               1       *       0       #suf:c:CLERIC_ANIMAL_SUMMONING_LEVEL_7
 symbol_death_c                  1       *       1       #suf:c:CLERIC_SYMBOL_DEATH
+chaos_a                         1       *       0       #suf:a:CLERIC_CHAOS
+chaos_b                         1       *       0       #suf:b:CLERIC_CHAOS
+chaos_c                         1       *       0       #suf:c:CLERIC_CHAOS
 obscuring_mist_a                1       *       0       #suf:a:WIZARD_OBSCURING_MIST
 obscuring_mist_b                1       *       0       #suf:b:WIZARD_OBSCURING_MIST
 obscuring_mist_c                1       *       0       #suf:c:WIZARD_OBSCURING_MIST
@@ -144,3 +147,12 @@ globe_invulnerability_c         1       *       0       #suf:c:WIZARD_GLOBE_OF_I
 monster_summon_6_a              1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_6
 monster_summon_6_b              1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_6
 monster_summon_6_c              1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_6
+greater_spell_deflection_a      1       *       1       #suf:a:WIZARD_GREATER_SPELL_DEFLECTION
+greater_spell_deflection_b      1       *       1       #suf:b:WIZARD_GREATER_SPELL_DEFLECTION
+greater_spell_deflection_c      1       *       1       #suf:c:WIZARD_GREATER_SPELL_DEFLECTION
+summon_death_knight_a           1       *       0       #suf:a:WIZARD_SUMMON_DEATH_KNIGHT
+summon_death_knight_b           1       *       0       #suf:b:WIZARD_SUMMON_DEATH_KNIGHT
+summon_death_knight_c           1       *       0       #suf:c:WIZARD_SUMMON_DEATH_KNIGHT
+monster_summon_7_a              1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_7
+monster_summon_7_b              1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_7
+monster_summon_7_c              1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_7

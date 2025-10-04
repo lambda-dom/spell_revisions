@@ -216,3 +216,19 @@ note(s):
 * Summon Nishruu: standardize to fixed 1 turn. Description level 7 -> 6. thac0 11 -> 7. Mention constant detect invis. Contact: correct enchant 0 -> 3 and thac0 bonus; correct item flags. Fix ridiculous feeblemindedness duration.
 
 * Animate Skeleton Warrior: see level 6 Cleric version.
+
+## B. 7. Level 7.
+
+* Monster Summoning 7: Otyugh: thac0 13 -> 10.
+
+* Mordenkainen's Sword: Sword: fix dice 4d5 -> 5d4. Removed add strength bonus. Implemented mind immunities directly. Corrections to thac0 6 -> 2.
+
+* Mass Invisibility: range 35 -> 30.
+
+* Death Knight: sword: make a real sword, thac0 bonus 4 -> 3, damage bonus 5 -> 11. Death knight: thac0 7 -> 1, apr 2 -> 3.
+
+* Summon Efreeti: sword: make a real sword, damage bonus 4 -> 10. Efreet: increase first class 9 -> 10, str 18/00 -> 19, wis 15 -> 14, hps 80 -> 98, ac 4 -> 1, thac0 10 -> 5, apr 3/2 -> 2, saves wand 8 -> 11, saves spell 7 -> 11, neutral -> ally, gender male -> summoned.
+
+* Summon Djinni: sword: make a real sword, remove apr bonus (move to cre), damage bonus 4 -> 5. Djinni: increase first class 9 -> 10, wis 15 -> 14, hps 70 -> 89, ac 5 -> 0, thac0 10 -> 7, apr 3/2 -> 3, neutral -> ally, gender male -> summoned.
+
+* Summon Hakeashar: fix icons. Swap the contact with the nishruu to give hakeashar the better version. thac0 4 -> 2, allegiance enemy -> ally. Fix eff that summons nishruu -> hakeashar.

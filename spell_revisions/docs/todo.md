@@ -164,6 +164,26 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Stone to Flesh: not in yet.
 
+## B. 7. Level 7.
+
+* Protection from the Elements: review protections against specific spells. Add refreshing?
+
+* Summon Death Knight: Add proficient with two-handed swords opcode. Systematize spell protections in the sword. Systematize fear aura. Missing resources (e. g. unholy fireball).
+
+* Prismatic Mantle: move some of the effects to standardized subspells.
+
+* Chaos: offload effects to subspells and fix off-by-one probability errors -- see cleric version.
+
+* Prismatic Spray: move effects to subspells.
+
+* Mordenkainen's Sword: mention vulnerability to dispel; review list of spell immunities in sword. Move immunity to psionics to immunities? The problem is that it *may* conflict with SCS.
+
+* Summon Efreeti: Add proficient with scimitars opcode. Review spell protections to fire spells. Make duration constant and fixed.
+
+* Summon Djinni: Add proficient with scimitars opcode. Make duration constant and fixed.
+
+* Summon Hakeashar: Make duration constant and fixed.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.
@@ -206,3 +226,5 @@ note(s):
 * Add snake race for snake summon (possibly others with no_race).
 
 * Incorporate spell flag setting in the spell tables.
+
+* Revert names of sequencers to vanilla names? e. g. no "Simbul" and what not?

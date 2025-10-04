@@ -1,0 +1,237 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+
+
+//Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
+    tables = "vvcs"
+RET_ARRAY vvcs = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "7"
+    dir = "%resources%/2da/arcane"
+RET_ARRAY spells = references END
+
+LAF get_table_references STR_VAR
+    tables = "scripts"
+    dir = "%resources%/2da/summons"
+RET_ARRAY scripts = references END
+
+//Patches.
+DEFINE_PATCH_FUNCTION monster_summoning_7 STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_otyugh"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION summon_death_knight STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_death_knight"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION prismatic_mantle STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_fire"
+        match_resource = "fire#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_acid"
+        match_resource = "acid#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_electricity"
+        match_resource = "elec#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_poison"
+        match_resource = "deth#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_stun"
+        match_resource = "stun#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_feeblemind"
+        match_resource = "febl#res"
+        references = "spells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "prismatic_mantle_maze"
+        match_resource = "maze#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION prismatic_mantle STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215                  //Play visual effect.
+    STR_VAR
+        resource = "prismatic_mantle"
+        ext = "vvc"
+        match_resource = "vvc#res"
+        references = "vvcs"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 232                  //Cast spell on condition.
+    STR_VAR
+        resource = "prismatic_mantle_a"
+        match_resource = "cond#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION spell_sequencer_d STR_VAR destination = "*" BEGIN
+    //Sanitize.
+    LPF get_spell_res STR_VAR spell = "WIZARD_SPELL_SEQUENCER" RET res = resource END
+    PATCH_IF NOT (7 = STRING_LENGTH "%res%") BEGIN
+        PATCH_FAIL "spell_sequencer_d: parent resource name '%res%' is not 7 characters long."
+    END
+
+    PATCH_IF NOT ("%destination%" STRING_EQUAL_CASE "%res%d") BEGIN
+        PATCH_FAIL "spell_sequencer_d: resource name '%destination%' is not '%res%d'."
+    END
+
+    //Patch references.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 258                  //Activate sequencer.
+    STR_VAR
+        match_resource = "actv#res"
+        resource = "%res%"
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 172                  //Remove spell.
+    STR_VAR
+        match_resource = "rems#res"
+        resource = "%destination%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION mordenkainen_sword STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_mordenkainen_sword"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION summon_efreeti STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_efreeti"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION summon_djinni STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_djinni"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION summon_hakeashar STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_hakeashar"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION control_undead_a STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 82                   //Set AI script.
+    STR_VAR
+        resource = "melee"
+        extension = "bcs"
+        match_resource = "ai#res"
+        references = "scripts"
+    END
+END
+
+DEFINE_PATCH_FUNCTION control_undead STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "control_undead_a"
+        match_resource = "ctrl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION improved_chaos_shield STR_VAR destination = "*" BEGIN
+    //Sanitize.
+    LPF get_spell_res STR_VAR spell = "WIZARD_CHAOS_SHIELD" RET res = resource END
+    PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
+        PATCH_FAIL "improved_chaos_shield: resource for 'WIZARD_CHAOS_SHIELD' does not exist in game."
+    END
+
+    LPF CLONE_EFFECT INT_VAR
+        verbose = 1
+        check_globals = 0
+        match_opcode = 321                  //Remove effects by resource.
+    STR_VAR
+        resource = "%res%"
+        insert = "below"
+    END
+END

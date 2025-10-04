@@ -467,13 +467,12 @@ ADD_SPELL ~spell_rev\sppr6##\sppr621.spl~ 1 6 ~CLERIC_CONJURE_AIR_ELEMENTAL~  //
 ADD_SPELL ~spell_rev\sppr6##\sppr622.spl~ 1 6 ~CLERIC_CONJURE_EARTH_ELEMENTAL~  // Conjure Earth Elemental (moved from lvl 7)
 
 
-//Level 6.
+//Level 7.
 // SPPR702 is "Stalker" in IWDEE, a spell that summons Shambling Mounds
 APPEND ~spell.ids~ ~1702 CLERIC_STALKER~
   UNLESS ~^1702[ %TAB%]+CLERIC_STALKER\b~
 
-COPY ~spell_rev\sppr7##\sppr703.spl~     ~override~  // Summon Death Knight (replaces Gate)
-  SAY NAME1 @235    SAY UNIDENTIFIED_DESC @236
+// Summon Death Knight (replaces Gate)
 APPEND ~spell.ids~ ~1703 CLERIC_SUMMON_DEATH_KNIGHT~
 
 //Resources for Symbol of weakness but they do not seem to be used anywhere.
@@ -998,206 +997,35 @@ COPY ~spell_rev\spwi6##\spwi625.spl~     ~override~  // Stone to Flesh
 APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_4% WIZARD_MONSTER_SUMMONING_LEVEL_6~
 
 
-/*-----------------------level 7-----------------------*/
-
-COPY ~spell_rev\spwi7##\spwi701.spl~     ~override~  // Greater Spell Deflection (replaces Spell Turning)
-  SAY NAME1 @721    SAY UNIDENTIFIED_DESC @722
+//Level 7.
+// Greater Spell Deflection (replaces Spell Turning)
+APPEND ~spell.ids~ ~2701 WIZARD_GREATER_SPELL_DEFLECTION~
+//Detectable spells stuff.
 LAF ds_altered_spell INT_VAR old_clone=200 new_clone=~-1~ STR_VAR file=~spwi701.spl~ END
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~spwi701.SPL    233     2     116   201    n     A~
-COPY ~spell_rev\spwi7##\scrl7v.itm~     ~override~
-  SAY NAME2 @721    SAY IDENTIFIED_DESC   @722
-COPY ~spell_rev\spwi7##\spwi701a.bam~    ~override~
-COPY ~spell_rev\spwi7##\spwi701b.bam~    ~override~
-COPY ~spell_rev\spwi7##\spwi701c.bam~    ~override~
-APPEND ~spell.ids~ ~2701 WIZARD_GREATER_SPELL_DEFLECTION~
 
-COPY ~spell_rev\spwi7##\spwi702.spl~     ~override~  // Protection from the Elements
-  SAY NAME1 @723    SAY UNIDENTIFIED_DESC @724
-COPY ~spell_rev\spwi7##\scrl8e.itm~     ~override~
-  SAY NAME2 @723    SAY IDENTIFIED_DESC   @724
-
-COPY ~spell_rev\spwi7##\spwi703.spl~     ~override~  // Project Image
-  SAY NAME1 @725    SAY UNIDENTIFIED_DESC @726
-COPY ~spell_rev\spwi7##\scrl8f.itm~     ~override~
-  SAY NAME2 @725    SAY IDENTIFIED_DESC   @726
+//Project image.
+//Seemingly unused resource.
 COPY ~spell_rev\spwi7##\PROJIMAG.SPL~     ~override~
 
-/* ADD_PROJECTILE ~spell_rev\projectles\dvrubray.pro~ */
-COPY ~spell_rev\spwi7##\spwi704.spl~     ~override~  // Ruby Ray of Reversal
-  SAY NAME1 @727    SAY UNIDENTIFIED_DESC @728
-COPY ~spell_rev\spwi7##\scrl8g.itm~     ~override~
-  SAY NAME2 @727    SAY IDENTIFIED_DESC   @728
-
-COPY ~spell_rev\spwi7##\spwi705.spl~     ~override~  // Khelben's Warding Whip
-  SAY NAME1 @729    SAY UNIDENTIFIED_DESC @730
-COPY ~spell_rev\spwi7##\scrl8h.itm~     ~override~
-  SAY NAME2 @729    SAY IDENTIFIED_DESC   @730
-
-COPY ~spell_rev\spwi7##\spwi707.spl~     ~override~  // Summon Death Knight (replaces Cacofiend)
-  SAY NAME1 @731    SAY UNIDENTIFIED_DESC @732
-COPY ~spell_rev\spwi7##\scrl8i.itm~     ~override~
-  SAY NAME2 @731    SAY IDENTIFIED_DESC   @732
-COPY ~spell_rev\spwi7##\spcaco.eff~     ~override~ // also used by CLERIC_SUMMON_DEATH_KNIGHT
-COPY ~spell_rev\spwi7##\dvdeathk.bcs~     ~override~
-COPY ~spell_rev\spwi7##\dvdeathk.cre~     ~override~
-  SAY NAME1 @3731
-  SAY NAME2 @3731
-COPY ~spell_rev\spwi7##\dvdeathk.itm~     ~override~
-COPY ~spell_rev\spwi7##\dvwi707a.bam~    ~override~
-COPY ~spell_rev\spwi7##\dvwi707b.bam~    ~override~ // also used by CLERIC_SUMMON_DEATH_KNIGHT
-COPY ~spell_rev\spwi7##\dvwi707c.bam~    ~override~ // also used by CLERIC_SUMMON_DEATH_KNIGHT
+// Summon Death Knight (replaces Cacofiend)
 APPEND ~spell.ids~ ~2707 WIZARD_SUMMON_DEATH_KNIGHT~
 
-COPY ~spell_rev\spwi7##\spwi708.spl~     ~override~  // Prismatic Mantle
-  SAY NAME1 @733    SAY UNIDENTIFIED_DESC @734
-COPY ~spell_rev\spwi7##\scrl8j.itm~     ~override~
-  SAY NAME2 @733    SAY IDENTIFIED_DESC   @734
-COPY ~spell_rev\spwi7##\dvmantle.vvc~     ~override~
-COPY ~spell_rev\spwi7##\dvmantle.bam~     ~override~
-//Auxiliary resources.
-//Open new scope to avoid polluting namespace.
-WITH_SCOPE BEGIN
-  //Copy spells.
-  ACTION_FOR_EACH res IN "spwi708a" "spwi708b" "dvpacid" "dvpfebl" "dvpdeth" "dvpelec" "dvpfire" "dvpmaze" "dvpstun" BEGIN
-    //Existence checks. Should not fail, but if it does, FAIL loudly and early.
-    ACTION_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
-      COPY ~spell_rev\spwi7##\%res%.spl~ ~override~
-    END ELSE BEGIN
-      FAIL "Name clash: resource %res%.spl already exists in game."
-    END
-  END
-  //Copy eff's.
-  ACTION_IF NOT (FILE_EXISTS_IN_GAME "spwi708b.eff") BEGIN
-    COPY ~spell_rev\spwi7##\spwi708b.eff~ ~override~
-  END ELSE BEGIN
-    FAIL "Name clash: resource spwi708b.eff already exists in game."
-  END
-END
-
-COPY ~spell_rev\spwi7##\spwi710.spl~     ~override~  // Simbul's Spell Sequencer (previously named Spell Sequencer)
-  SAY NAME1 @735    SAY UNIDENTIFIED_DESC @736
-COPY ~spell_rev\spwi7##\scrl8l.itm~     ~override~
-  SAY NAME2 @735    SAY IDENTIFIED_DESC   @736
-COPY ~spell_rev\spwi7##\spwi710d.spl~     ~override~
-  SAY NAME1 @735
-
-COPY ~spell_rev\spwi7##\spwi711.spl~     ~override~  // Chaos ("replaces" Sphere of Chaos)
-  SAY NAME1 @737    SAY UNIDENTIFIED_DESC @738
-  WRITE_SHORT 0x98 %dvschaos%
-COPY ~spell_rev\spwi7##\scrl8m.itm~     ~override~
-  SAY NAME2 @737    SAY IDENTIFIED_DESC   @738
-COPY ~spell_rev\spwi7##\dvwi711a.bam~    ~override~
-COPY ~spell_rev\spwi7##\dvwi711b.bam~    ~override~ // also used by CLERIC_CHAOS
-COPY ~spell_rev\spwi7##\dvwi711c.bam~    ~override~ // also used by CLERIC_CHAOS
+//Chaos ("replaces" Sphere of Chaos)
 APPEND ~spell.ids~ ~2711 WIZARD_CHAOS~
 
-COPY ~spell_rev\spwi7##\spwi712.spl~     ~override~  // Delayed Blast Fireball
-  SAY NAME1 @739    SAY UNIDENTIFIED_DESC @740
-COPY ~spell_rev\spwi7##\scrl8n.itm~     ~override~
-  SAY NAME2 @739    SAY IDENTIFIED_DESC   @740
+//Seemingly unused effect for finger of death.
+COPY ~spell_rev\spwi7##\dvfingwi.eff~     ~override~
 
-COPY ~spell_rev\spwi7##\spwi713.spl~     ~override~  // Finger of Death
-  SAY NAME1 @741    SAY UNIDENTIFIED_DESC @742
-COPY ~spell_rev\spwi7##\scrl8o.itm~     ~override~
-  SAY NAME2 @741    SAY IDENTIFIED_DESC   @742
-  COPY ~spell_rev\spwi7##\dvfingwi.eff~     ~override~
-
-COPY ~spell_rev\spwi7##\spwi714.spl~     ~override~  // Prismatic Spray
-  SAY NAME1 @743    SAY UNIDENTIFIED_DESC @744
-COPY ~spell_rev\spwi7##\scrl8p.itm~     ~override~
-  SAY NAME2 @743    SAY IDENTIFIED_DESC   @744
-COPY ~spell_rev\projectles\pspray.pro~ ~override~
-/*COPY_EXISTING ~pspray.pro~ ~override~
-  WRITE_BYTE 0x200 0
-  WRITE_SHORT 0x204 256
-  WRITE_SHORT 0x206 256*/
-
-COPY ~spell_rev\spwi7##\spwi715.spl~     ~override~  // Power Word Stun
-  SAY NAME1 @745    SAY UNIDENTIFIED_DESC @746
-COPY ~spell_rev\spwi7##\scrl8q.itm~     ~override~
-  SAY NAME2 @745    SAY IDENTIFIED_DESC   @746
-
-COPY ~spell_rev\spwi7##\spwi716.spl~     ~override~  // Mordenkainen's Sword
-  SAY NAME1 @747    SAY UNIDENTIFIED_DESC @748
-COPY ~spell_rev\spwi7##\scrl8r.itm~     ~override~
-  SAY NAME2 @747    SAY IDENTIFIED_DESC   @748
-COPY ~spell_rev\spwi7##\sword01.cre~     ~override~
-  SAY NAME1 @3747
-  SAY NAME2 @3747
-COPY ~spell_rev\spwi7##\spmorsw.eff~     ~override~
-COPY ~spell_rev\spwi7##\morsword.itm~     ~override~
-COPY ~spell_rev\spwi7##\dvmsword.bcs~     ~override~
-
-COPY ~spell_rev\spwi7##\spwi717.spl~     ~override~  // Summon Efreeti
-  SAY NAME1 @749    SAY UNIDENTIFIED_DESC @750
-COPY ~spell_rev\spwi7##\scrl8s.itm~     ~override~
-  SAY NAME2 @749    SAY IDENTIFIED_DESC   @750
-COPY ~spell_rev\spwi7##\dvefreet.eff~     ~override~
-COPY ~spell_rev\spwi7##\dvefreet.cre~     ~override~
-  SAY NAME1 @3749
-  SAY NAME2 @3749
-COPY ~spell_rev\spwi7##\dvefreet.itm~     ~override~
-COPY ~spell_rev\spwi7##\dvefreet.bcs~     ~override~
-
-COPY ~spell_rev\spwi7##\spwi718.spl~     ~override~  // Summon Djinni
-  SAY NAME1 @751    SAY UNIDENTIFIED_DESC @752
-COPY ~spell_rev\spwi7##\scrl8t.itm~     ~override~
-  SAY NAME2 @751    SAY IDENTIFIED_DESC   @752
-COPY ~spell_rev\spwi7##\dvdjinni.eff~     ~override~
-COPY ~spell_rev\spwi7##\dvdjinni.cre~     ~override~
-  SAY NAME1 @3751
-  SAY NAME2 @3751
-COPY ~spell_rev\spwi7##\dvdjinni.itm~     ~override~
-COPY ~spell_rev\spwi7##\dvdjinni.bcs~     ~override~
-
-COPY ~spell_rev\spwi7##\spwi719.spl~     ~override~  // Summon Nishruu/Hakeashar
-  SAY NAME1 @705    SAY UNIDENTIFIED_DESC @706
-COPY ~spell_rev\spwi7##\scrl8u.itm~     ~override~
-  SAY NAME2 @705    SAY IDENTIFIED_DESC   @706
-COPY ~spell_rev\spwi7##\nishrusu.cre~     ~override~
-  SAY NAME1 @3705
-  SAY NAME2 @3705
-COPY ~spell_rev\spwi7##\nishruu.itm~     ~override~
-COPY ~spell_rev\spwi7##\nishru01.bcs~     ~override~
-COPY ~spell_rev\spwi7##\haksu.cre~     ~override~
-  SAY NAME1 @3753
-  SAY NAME2 @3753
-COPY ~spell_rev\spwi7##\haksu.itm~     ~override~
-
-COPY ~spell_rev\spwi7##\spwi720.spl~     ~override~  // Control Undead
-  SAY NAME1 @755    SAY UNIDENTIFIED_DESC @756
-COPY ~spell_rev\spwi7##\scrl8v.itm~     ~override~
-  SAY NAME2 @755    SAY IDENTIFIED_DESC   @756
-COPY ~spell_rev\spwi7##\dvctrund.eff~     ~override~
-
-COPY ~spell_rev\spwi7##\spwi721.spl~     ~override~  // Mass Invisibility
-  SAY NAME1 @757    SAY UNIDENTIFIED_DESC @758
-COPY ~spell_rev\spwi7##\scrl8w.itm~     ~override~
-  SAY NAME2 @757    SAY IDENTIFIED_DESC   @758
-
-COPY ~spell_rev\spwi7##\spwi722.spl~     ~override~  // Limited Wish
-  SAY NAME1 @759    SAY UNIDENTIFIED_DESC @760
-COPY ~spell_rev\spwi7##\scrla4.itm~     ~override~
-  SAY NAME2 @759    SAY IDENTIFIED_DESC   @760
-COPY ~spell_rev\spwi7##\spin734.spl~     ~override~  // Mass Heal (limited wish)
-
-COPY ~spell_rev\spwi7##\spwi723.spl~     ~override~  // Improved Chaos Shield
-  SAY NAME1 @761    SAY UNIDENTIFIED_DESC @762
+// Mass Heal (limited wish)
+// the other resources (summoning eff, djinni, etc. are not overriden).
+COPY ~spell_rev\spwi7##\spin734.spl~     ~override~
 
 //ADD_SPELL: Monster Summoning VII
 ADD_SPELL ~spell_rev\spwi7##\spwi724.spl~ 2 7 ~WIZARD_MONSTER_SUMMONING_5~  // Monster Summoning VII (added by V4)
-  SAY NAME1 @866    SAY UNIDENTIFIED_DESC @867
-COPY ~spell_rev\spwi7##\scrl8b.itm~     ~override~  // vanilla's Summon Nishruu scroll
-  SAY NAME2 @866    SAY IDENTIFIED_DESC @867
-COPY ~spell_rev\spwi7##\otyughsu.eff~     ~override~
-COPY ~spell_rev\spwi7##\otyughsu.cre~     ~override~
-  SAY NAME1 @3866
-  SAY NAME2 @3866
-COPY ~spell_rev\spwi7##\otyughsu.itm~     ~override~
-COPY ~spell_rev\spwi7##\dvwi724a.bam~     ~override~
-COPY ~spell_rev\spwi7##\dvwi724b.bam~     ~override~
-COPY ~spell_rev\spwi7##\dvwi724c.bam~     ~override~
 APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_5% WIZARD_MONSTER_SUMMONING_LEVEL_7~
+// vanilla's Summon Nishruu scroll
+COPY ~spell_rev\spwi7##\scrl8b.itm~     ~override~
 
 
 /*-----------------------level 8-----------------------*/
