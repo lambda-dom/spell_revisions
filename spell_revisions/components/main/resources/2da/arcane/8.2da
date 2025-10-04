@@ -1,0 +1,4 @@
+2DA V1.0
+*
+                                install name    descr   type    lvl flags       school      sectype                 book_icon                                   abil_icon                                   projectile                      range   speed   patch                   over    destination
+greater_spell_deflection        1       7010    7011    wizard  7   00000000    abjurer     spellprotections        #suf:c:WIZARD_GREATER_SPELL_DEFLECTION      #suf:b:WIZARD_GREATER_SPELL_DEFLECTION      *                               1       7       *                       1       #spl:WIZARD_GREATER_SPELL_DEFLECTION
