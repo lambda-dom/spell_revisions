@@ -151,6 +151,10 @@ WIZARD_FINGER_OF_DEATH                  scrl8o      10      1
 WIZARD_PRISMATIC_SPRAY                  scrl8p      10      1
 WIZARD_POWER_WORD_STUN                  scrl8q      10      1
 WIZARD_MORDENKAINENS_SWORD              scrl8r      10      1
+WIZARD_SUMMON_EFREETI                   scrl8s      10      1
+WIZARD_SUMMON_DJINNI                    scrl8t      10      1
+WIZARD_SUMMON_HAKEASHAR                 scrl8u      10      1
+WIZARD_CONTROL_UNDEAD                   scrl8v      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1

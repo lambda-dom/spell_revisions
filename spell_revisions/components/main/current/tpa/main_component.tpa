@@ -1028,8 +1028,6 @@ COPY ~spell_rev\spwi7##\dvfingwi.eff~     ~override~
 
 COPY ~spell_rev\spwi7##\spwi717.spl~     ~override~  // Summon Efreeti
   SAY NAME1 @749    SAY UNIDENTIFIED_DESC @750
-COPY ~spell_rev\spwi7##\scrl8s.itm~     ~override~
-  SAY NAME2 @749    SAY IDENTIFIED_DESC   @750
 COPY ~spell_rev\spwi7##\dvefreet.eff~     ~override~
 COPY ~spell_rev\spwi7##\dvefreet.cre~     ~override~
   SAY NAME1 @3749
@@ -1039,8 +1037,6 @@ COPY ~spell_rev\spwi7##\dvefreet.bcs~     ~override~
 
 COPY ~spell_rev\spwi7##\spwi718.spl~     ~override~  // Summon Djinni
   SAY NAME1 @751    SAY UNIDENTIFIED_DESC @752
-COPY ~spell_rev\spwi7##\scrl8t.itm~     ~override~
-  SAY NAME2 @751    SAY IDENTIFIED_DESC   @752
 COPY ~spell_rev\spwi7##\dvdjinni.eff~     ~override~
 COPY ~spell_rev\spwi7##\dvdjinni.cre~     ~override~
   SAY NAME1 @3751
@@ -1050,8 +1046,6 @@ COPY ~spell_rev\spwi7##\dvdjinni.bcs~     ~override~
 
 COPY ~spell_rev\spwi7##\spwi719.spl~     ~override~  // Summon Nishruu/Hakeashar
   SAY NAME1 @705    SAY UNIDENTIFIED_DESC @706
-COPY ~spell_rev\spwi7##\scrl8u.itm~     ~override~
-  SAY NAME2 @705    SAY IDENTIFIED_DESC   @706
 COPY ~spell_rev\spwi7##\nishrusu.cre~     ~override~
   SAY NAME1 @3705
   SAY NAME2 @3705
@@ -1064,8 +1058,6 @@ COPY ~spell_rev\spwi7##\haksu.itm~     ~override~
 
 COPY ~spell_rev\spwi7##\spwi720.spl~     ~override~  // Control Undead
   SAY NAME1 @755    SAY UNIDENTIFIED_DESC @756
-COPY ~spell_rev\spwi7##\scrl8v.itm~     ~override~
-  SAY NAME2 @755    SAY IDENTIFIED_DESC   @756
 COPY ~spell_rev\spwi7##\dvctrund.eff~     ~override~
 
 COPY ~spell_rev\spwi7##\spwi721.spl~     ~override~  // Mass Invisibility

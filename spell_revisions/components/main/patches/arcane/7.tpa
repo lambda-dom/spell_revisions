@@ -19,6 +19,10 @@ LAF get_table_references STR_VAR
     dir = "%resources%/2da/arcane"
 RET_ARRAY spells = references END
 
+LAF get_table_references STR_VAR
+    tables = "scripts"
+    dir = "%resources%/2da/summons"
+RET_ARRAY scripts = references END
 
 //Patches.
 DEFINE_PATCH_FUNCTION monster_summoning_7 STR_VAR destination = "*" BEGIN
@@ -146,5 +150,26 @@ DEFINE_PATCH_FUNCTION mordenkainen_sword STR_VAR destination = "*" BEGIN
         ext = "eff"
         match_resource = "summ#res"
         references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION control_undead_a STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 82                   //Set AI script.
+    STR_VAR
+        resource = "melee"
+        extension = "bcs"
+        match_resource = "ai#res"
+        references = "scripts"
+    END
+END
+
+DEFINE_PATCH_FUNCTION control_undead STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "control_undead_a"
+        match_resource = "ctrl#res"
+        references = "spells"
     END
 END
