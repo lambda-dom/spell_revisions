@@ -1028,21 +1028,14 @@ APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_5% WIZARD_MONSTER_SUMMONING_LEVEL_
 COPY ~spell_rev\spwi7##\scrl8b.itm~     ~override~
 
 
-/*-----------------------level 8-----------------------*/
-
-COPY ~spell_rev\spwi8##\spwi801.spl~     ~override~  // Ghostform (new alteration spell)
-  SAY NAME1 @767    SAY UNIDENTIFIED_DESC @768
-COPY ~spell_rev\spwi8##\scrlw801.itm~     ~override~
-  SAY NAME2 @767    SAY IDENTIFIED_DESC   @768
+//Level 8.
+// Ghostform (new alteration spell)
 APPEND ~spell.ids~ ~2801 WIZARD_GHOSTFORM~
+COPY ~spell_rev\spwi8##\spwi801.spl~     ~override~
+  SAY NAME1 @767    SAY UNIDENTIFIED_DESC @768
 
 COPY ~spell_rev\spwi8##\spwi802.spl~     ~override~  // Mind Blank (new spell)
   SAY NAME1 @769    SAY UNIDENTIFIED_DESC @770
-COPY ~spell_rev\spwi8##\scrl8d.itm~     ~override~
-  SAY NAME2 @769    SAY IDENTIFIED_DESC   @770
-COPY ~spell_rev\spwi8##\spwi802a.bam~    ~override~
-COPY ~spell_rev\spwi8##\spwi802b.bam~    ~override~
-COPY ~spell_rev\spwi8##\spwi802c.bam~    ~override~
 APPEND ~spell.ids~ ~2802 WIZARD_MIND_BLANK~
   UNLESS ~^2802[ %TAB%]+WIZARD_MIND_BLANK\b~ // this spell already exists in IWDEE
 
@@ -1077,9 +1070,6 @@ COPY ~spell_rev\spwi8##\spwi808.spl~     ~override~  // Moment of Prescience (re
   SAY NAME1 @779    SAY UNIDENTIFIED_DESC @780
 COPY ~spell_rev\spwi8##\scrl9c.itm~     ~override~
   SAY NAME2 @779    SAY IDENTIFIED_DESC   @780
-COPY ~spell_rev\spwi8##\dvwi808a.bam~     ~override~
-COPY ~spell_rev\spwi8##\dvwi808b.bam~     ~override~
-COPY ~spell_rev\spwi8##\dvwi808c.bam~     ~override~
 APPEND ~spell.ids~ ~2808 WIZARD_MOMENT_OF_PRESCIENCE~
 
 COPY ~spell_rev\spwi8##\spwi809.spl~     ~override~  // Simbul's Spell Trigger (previously named Spell Trigger)
@@ -1089,12 +1079,13 @@ COPY ~spell_rev\spwi8##\scrl9d.itm~     ~override~
 COPY ~spell_rev\spwi8##\spwi809d.spl~     ~override~
   SAY NAME1 @781
 
+//Note: projectile already copied.
 ADD_PROJECTILE ~spell_rev\projectles\dvicloud.pro~
+APPEND ~clearair.2da~ ~Incendiary_Cloud                %dvicloud%~
 COPY ~spell_rev\spwi8##\spwi810.spl~     ~override~  // Incendiary Cloud
   SAY NAME1 @783    SAY UNIDENTIFIED_DESC @784
   WRITE_SHORT 0x98 %dvicloud%
   SET dvicloud -= 1
-APPEND ~clearair.2da~ ~Incendiary_Cloud                %dvicloud%~
 COPY ~spell_rev\spwi8##\scrl9e.itm~     ~override~
   SAY NAME2 @783    SAY IDENTIFIED_DESC   @784
 COPY ~spell_rev\spwi8##\dvicloud.eff~     ~override~
@@ -1167,9 +1158,6 @@ COPY ~spell_rev\spwi8##\umbhulsu.cre~     ~override~
   SAY NAME2 @3868
 COPY ~spell_rev\spwi8##\umbhulsu.itm~     ~override~
 COPY ~spell_rev\spwi8##\umbhulsu.bcs~     ~override~
-COPY ~spell_rev\spwi8##\dvwi819a.bam~     ~override~
-COPY ~spell_rev\spwi8##\dvwi819b.bam~     ~override~
-COPY ~spell_rev\spwi8##\dvwi819c.bam~     ~override~
 APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_6% WIZARD_MONSTER_SUMMONING_LEVEL_8~
 
 

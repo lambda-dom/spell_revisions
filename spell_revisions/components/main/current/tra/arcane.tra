@@ -101,34 +101,7 @@ This abjuration spell causes any spells cast against the wizard to be absorbed a
 
 This spell absorbs spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the wizard (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud).~
 
-/*------------------level 8------------------*/
-
-@767=~Ghostform~
-@768=~Ghostform
-Level: 8
-School: Alteration
-Range: Personal
-Duration: 1 round/level
-Casting Time: 8
-Area of Effect: Caster
-Saving Throw: None
-
-When this spell is cast, the wizard and all of his gear assume a visible, incorporeal form like that of a manifesting ghost. The caster is subject only to magical or special attacks, including those by weapons of +1 enchantment or better, or by creatures otherwise able to affect those struck only by magical weapons. Even when hit by magical attacks, any physical damage sustained while in ghost form is reduced by 50%. Non-damaging spell effects affect the caster normally unless they require corporeal targets to function (e.g. Polymorph Other, Flesh to Stone, Disintegrate, and Implosion) or create a corporeal effect that incorporeal creatures would normally be unaffected by (e.g. Entangle, Grease, and Web).
-
-As an incorporeal creature, the caster moves silently and cannot be heard (+100% Move Silently) or backstabbed. While in ghost form, the caster has a base armor class of 0 and is immune to the effects of disease and poison. Any melee attack made while in ghost form is considered a melee touch attack and thus gains a +4 bonus to the attack roll, while projectiles become corporeal as soon as they are fired. The transformation lasts until successfully dispelled or until the duration runs out, but cannot be used in conjunction with other shapeshifting spells such as Polymorph Self and Shapechange.~
-
-@769=~Mind Blank~
-@770=~Mind Blank
-Level: 8
-School: Abjuration
-Range: Touch
-Duration: 8 hours
-Casting Time: 8
-Area of Effect: 1 creature
-Saving Throw: None
-
-The subject is protected from all devices and spells that detect, influence, or read emotions or thoughts. This spell protects against all mind-affecting spells and effects as well as information gathering by divination spells or effects.~
-
+//Level 8.
 @771=~Protection from Energy~
 @772=~Protection from Energy
 Level: 8

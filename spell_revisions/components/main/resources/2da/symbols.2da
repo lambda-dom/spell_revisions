@@ -81,3 +81,9 @@ WIZARD_CONJURE_WATER_ELEMENTAL          1       wizard  6       *       0       
 WIZARD_GREATER_SPELL_DEFLECTION         1       wizard  7       *       0           *
 WIZARD_SUMMON_DEATH_KNIGHT              1       wizard  7       *       0           *
 WIZARD_MONSTER_SUMMONING_LEVEL_7        1       wizard  7       *       0           *
+WIZARD_GHOSTFORM                        1       wizard  8       *       0           *
+WIZARD_MIND_BLANK                       1       wizard  8       *       0           *
+WIZARD_MOMENT_OF_PRESCIENCE             1       wizard  8       *       0           *
+WIZARD_SYMBOL_WEAKNESS                  1       wizard  8       *       0           *
+WIZARD_BIGBYS_ICY_GRASP                 1       wizard  8       *       0           *
+WIZARD_MONSTER_SUMMONING_LEVEL_8        1       wizard  8       *       0           *

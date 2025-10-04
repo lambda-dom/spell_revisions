@@ -156,3 +156,9 @@ summon_death_knight_c           1       *       0       #suf:c:WIZARD_SUMMON_DEA
 monster_summon_7_a              1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_7
 monster_summon_7_b              1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_7
 monster_summon_7_c              1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_7
+mind_blank_a                    1       *       0       #suf:a:WIZARD_MIND_BLANK
+mind_blank_b                    1       *       0       #suf:b:WIZARD_MIND_BLANK
+mind_blank_c                    1       *       0       #suf:c:WIZARD_MIND_BLANK
+monster_summon_8_a              1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_8
+monster_summon_8_b              1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_8
+monster_summon_8_c              1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_8
