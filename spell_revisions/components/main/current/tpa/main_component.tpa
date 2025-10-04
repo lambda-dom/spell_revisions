@@ -1017,14 +1017,6 @@ APPEND ~spell.ids~ ~2711 WIZARD_CHAOS~
 //Seemingly unused effect for finger of death.
 COPY ~spell_rev\spwi7##\dvfingwi.eff~     ~override~
 
-COPY ~spell_rev\spwi7##\spwi718.spl~     ~override~  // Summon Djinni
-  SAY NAME1 @751    SAY UNIDENTIFIED_DESC @752
-COPY ~spell_rev\spwi7##\dvdjinni.eff~     ~override~
-COPY ~spell_rev\spwi7##\dvdjinni.cre~     ~override~
-  SAY NAME1 @3751
-  SAY NAME2 @3751
-COPY ~spell_rev\spwi7##\dvdjinni.itm~     ~override~
-
 COPY ~spell_rev\spwi7##\spwi719.spl~     ~override~  // Summon Nishruu/Hakeashar
   SAY NAME1 @705    SAY UNIDENTIFIED_DESC @706
 COPY ~spell_rev\spwi7##\nishrusu.cre~     ~override~

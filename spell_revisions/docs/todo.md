@@ -180,7 +180,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Summon Efreeti: Add proficient with scimitars opcode. Review spell protections to fire spells. Make duration constant and fixed.
 
-* Summon Djinni: Add proficient with scimitars opcode.
+* Summon Djinni: Add proficient with scimitars opcode. Make duration constant and fixed.
 
 # C. General.
 

@@ -176,6 +176,17 @@ DEFINE_PATCH_FUNCTION summon_efreeti STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION summon_djinni STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_djinni"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
 DEFINE_PATCH_FUNCTION control_undead_a STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 82                   //Set AI script.
