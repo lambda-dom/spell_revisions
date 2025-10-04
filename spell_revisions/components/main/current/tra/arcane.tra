@@ -101,20 +101,7 @@ This abjuration spell causes any spells cast against the wizard to be absorbed a
 
 This spell absorbs spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the wizard (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud).~
 
-/*------------------level 7------------------*/
-
-@735=~Simbul's Spell Sequencer~
-@736=~Simbul's Spell Sequencer
-Level: 7
-School: Universal
-Range: Personal
-Duration: Special
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
-
-This spell allows a mage to prepare a magical sequencer that can store spells to be used later in a single swift action. The sequencer can store three spells to be released simultaneously, all of which must be of 4th level or lower. A mage can only possess one spell sequencer at a time, and the sequencer will remain active until the spells contained within it are released.~
-
+//Level 7.
 @737=~Chaos~
 @738=~Chaos
 Level: 7

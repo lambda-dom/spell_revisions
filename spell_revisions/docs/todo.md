@@ -214,3 +214,5 @@ note(s):
 * Add snake race for snake summon (possibly others with no_race).
 
 * Incorporate spell flag setting in the spell tables.
+
+* Revert names of sequencers to vanilla names? e. g. no "Simbul" and what not?

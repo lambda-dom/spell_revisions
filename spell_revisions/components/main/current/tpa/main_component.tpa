@@ -1023,8 +1023,6 @@ COPY ~spell_rev\spwi7##\dvdeathk.itm~     ~override~
 
 COPY ~spell_rev\spwi7##\spwi710.spl~     ~override~  // Simbul's Spell Sequencer (previously named Spell Sequencer)
   SAY NAME1 @735    SAY UNIDENTIFIED_DESC @736
-COPY ~spell_rev\spwi7##\scrl8l.itm~     ~override~
-  SAY NAME2 @735    SAY IDENTIFIED_DESC   @736
 COPY ~spell_rev\spwi7##\spwi710d.spl~     ~override~
   SAY NAME1 @735
 
