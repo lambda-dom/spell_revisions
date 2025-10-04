@@ -1020,32 +1020,11 @@ COPY ~spell_rev\spwi7##\dvdeathk.cre~     ~override~
   SAY NAME2 @3731
 COPY ~spell_rev\spwi7##\dvdeathk.itm~     ~override~
 
-
-COPY ~spell_rev\spwi7##\spwi710.spl~     ~override~  // Simbul's Spell Sequencer (previously named Spell Sequencer)
-  SAY NAME1 @735    SAY UNIDENTIFIED_DESC @736
-COPY ~spell_rev\spwi7##\spwi710d.spl~     ~override~
-  SAY NAME1 @735
-
-COPY ~spell_rev\spwi7##\spwi711.spl~     ~override~  // Chaos ("replaces" Sphere of Chaos)
-  SAY NAME1 @737    SAY UNIDENTIFIED_DESC @738
-  WRITE_SHORT 0x98 %dvschaos%
-COPY ~spell_rev\spwi7##\scrl8m.itm~     ~override~
-  SAY NAME2 @737    SAY IDENTIFIED_DESC   @738
-COPY ~spell_rev\spwi7##\dvwi711a.bam~    ~override~
-COPY ~spell_rev\spwi7##\dvwi711b.bam~    ~override~ // also used by CLERIC_CHAOS
-COPY ~spell_rev\spwi7##\dvwi711c.bam~    ~override~ // also used by CLERIC_CHAOS
+//Chaos ("replaces" Sphere of Chaos)
 APPEND ~spell.ids~ ~2711 WIZARD_CHAOS~
 
-COPY ~spell_rev\spwi7##\spwi712.spl~     ~override~  // Delayed Blast Fireball
-  SAY NAME1 @739    SAY UNIDENTIFIED_DESC @740
-COPY ~spell_rev\spwi7##\scrl8n.itm~     ~override~
-  SAY NAME2 @739    SAY IDENTIFIED_DESC   @740
-
-COPY ~spell_rev\spwi7##\spwi713.spl~     ~override~  // Finger of Death
-  SAY NAME1 @741    SAY UNIDENTIFIED_DESC @742
-COPY ~spell_rev\spwi7##\scrl8o.itm~     ~override~
-  SAY NAME2 @741    SAY IDENTIFIED_DESC   @742
-  COPY ~spell_rev\spwi7##\dvfingwi.eff~     ~override~
+//Seemingly unused effect for finger of death.
+COPY ~spell_rev\spwi7##\dvfingwi.eff~     ~override~
 
 COPY ~spell_rev\spwi7##\spwi714.spl~     ~override~  // Prismatic Spray
   SAY NAME1 @743    SAY UNIDENTIFIED_DESC @744

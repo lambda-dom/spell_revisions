@@ -172,6 +172,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Prismatic Mantle: move some of the effects to standardized subspells.
 
+* Chaos: offload effects to subspells and fix off-by-one probability errors -- see cleric version.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.
