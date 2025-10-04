@@ -354,3 +354,42 @@ Area of Effect: Target, and enemies within 5'
 Saving Throw: Special
 
 The Control Undead spell allows the caster to take control of undead creatures within the area of effect. This creates a telepathic link between the caster and the undead, allowing complete control. If the undead have 5 or more Hit Dice/levels less than the caster then there is no saving throw allowed, else a save vs. spell at -6 is allowed to negate the effect. The undead remain under control of the caster for the duration of the spell or until they are affected by a dispel magic."
+
+//mass_invisibility:spwi721
+@7210 = "Mass Invisibility"
+@7211 = "Mass Invisibility
+Level: 7
+School: Illusion
+Range: Long
+Duration: 1 round/level
+Casting Time: 7
+Area of Effect: 30' radius
+Saving Throw: None
+
+Upon casting this spell, the wizard causes all friendly creatures within the area of effect to be affected by the spell Improved Invisibility. Creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not."
+
+//limited_wish:spwi722
+@7220 = "Limited Wish"
+@7221 = "Limited Wish
+Level: 7
+School: Universal
+Range: Personal
+Duration: Special
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+Limited Wish is a very potent but difficult spell. It will fulfill literally, but only partially or for a limited duration, the utterance of the spellcaster. Thus, the actuality of the past, present, or future might be altered (but possibly only for the wizard unless the wording of the spell is most carefully stated) in some limited manner. The use of a Limited Wish will not substantially change major realities. The spell can, for example, restore some hit points lost by the wizard. Greedy desires usually end in disaster for the wisher. Lastly, the wiser the wizard, the better chance that he will choose the right wording. Wizards with low wisdom will more often than not meet with disaster when asking for a wish."
+
+//improved_chaos_shield:spwi723
+@7230 = "Improved Chaos Shield"
+@7231 = "Improved Chaos Shield
+Level: 7
+School: Abjuration
+Range: Personal
+Duration: 2 turns
+Casting Time: 7
+Area of Effect: Caster
+Saving Throw: None
+
+Improved Chaos Shield increases a wild mage's chance to gain a favorable result when a wild surge occurs. Every time a roll is made on the wild surge chart, an extra 25 is added to the dice roll. When Nahal's Reckless Dweomer is cast, the bonus from Improved Chaos Shield stacks with the wild mage's level bonus. The caster may have only one chaos shield at a time."

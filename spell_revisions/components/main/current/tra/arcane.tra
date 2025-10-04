@@ -101,44 +101,6 @@ This abjuration spell causes any spells cast against the wizard to be absorbed a
 
 This spell absorbs spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the wizard (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud).~
 
-//Level 7.
-@757=~Mass Invisibility~
-@758=~Mass Invisibility
-Level: 7
-School: Illusion
-Range: Long
-Duration: 1 round/level
-Casting Time: 7
-Area of Effect: 30' radius
-Saving Throw: None
-
-Upon casting this spell, the wizard causes all friendly creatures within the area of effect to be affected by the spell Improved Invisibility. Creatures leaving the area are still subject to the spell's effect; those entering the area after the casting is completed are not.~
-
-@759=~Limited Wish~
-@760=~Limited Wish
-Level: 7
-School: Universal
-Range: Personal
-Duration: Special
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
-
-Limited Wish is a very potent but difficult spell. It will fulfill literally, but only partially or for a limited duration, the utterance of the spellcaster. Thus, the actuality of the past, present, or future might be altered (but possibly only for the wizard unless the wording of the spell is most carefully stated) in some limited manner. The use of a Limited Wish will not substantially change major realities. The spell can, for example, restore some hit points lost by the wizard. Greedy desires usually end in disaster for the wisher. Lastly, the wiser the wizard, the better chance that he will choose the right wording. Wizards with low wisdom will more often than not meet with disaster when asking for a wish.~
-
-@761=~Improved Chaos Shield~
-@762=~Improved Chaos Shield
-Level: 7
-School: Abjuration
-Range: Personal
-Duration: 2 turns
-Casting Time: 7
-Area of Effect: Caster
-Saving Throw: None
-
-Improved Chaos Shield increases a wild mage's chance to gain a favorable result when a wild surge occurs. Every time a roll is made on the wild surge chart, an extra 25 is added to the dice roll. When Nahal's Reckless Dweomer is cast, the bonus from Improved Chaos Shield stacks with the wild mage's level bonus. The caster may have only one chaos shield at a time.~
-
-
 /*------------------level 8------------------*/
 
 @767=~Ghostform~
