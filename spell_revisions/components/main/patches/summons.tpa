@@ -630,3 +630,24 @@ DEFINE_PATCH_FUNCTION mordenkainen_sword STR_VAR destination = "*" BEGIN
         array = "items"
     END
 END
+
+DEFINE_PATCH_FUNCTION death_knight BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "death_knight_sword"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "undead_immunities"
+        slot = "rring"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "immune_normal_weapons"
+        slot = "lring"
+        array = "items"
+    END
+END

@@ -121,7 +121,8 @@ HP 112, AC -4, THAC0 1, Saving Throws 5/7/5/9/7
 Special Qualities:
 Aura of Fear: creatures in a 5' radius must save vs. spell each round or flee in terror for 1 round
 Immune to non-magical weapons
-Immune to charm, confusion, hold, stun, sleep, poison and death effects
+Immune to backstab
+Immune to fear, fatigue, charm, confusion, disease, hold, poison, sleep, stun and death effects
 Cold Resistance 100%; Physical Resistance 20%; Magic Resistance 75%
 
 Special Abilities:

@@ -168,7 +168,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Protection from the Elements: review protections against specific spells. Add refreshing?
 
-* Summon Death Knight: only description in.
+* Summon Death Knight: Add proficient with two-handed swords opcode. Systematize spell protections in the sword. Systematize fear aura. Missing resources (e. g. unholy fireball).
 
 * Prismatic Mantle: move some of the effects to standardized subspells.
 

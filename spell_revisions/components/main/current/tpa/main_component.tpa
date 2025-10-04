@@ -467,13 +467,12 @@ ADD_SPELL ~spell_rev\sppr6##\sppr621.spl~ 1 6 ~CLERIC_CONJURE_AIR_ELEMENTAL~  //
 ADD_SPELL ~spell_rev\sppr6##\sppr622.spl~ 1 6 ~CLERIC_CONJURE_EARTH_ELEMENTAL~  // Conjure Earth Elemental (moved from lvl 7)
 
 
-//Level 6.
+//Level 7.
 // SPPR702 is "Stalker" in IWDEE, a spell that summons Shambling Mounds
 APPEND ~spell.ids~ ~1702 CLERIC_STALKER~
   UNLESS ~^1702[ %TAB%]+CLERIC_STALKER\b~
 
-COPY ~spell_rev\sppr7##\sppr703.spl~     ~override~  // Summon Death Knight (replaces Gate)
-  SAY NAME1 @235    SAY UNIDENTIFIED_DESC @236
+// Summon Death Knight (replaces Gate)
 APPEND ~spell.ids~ ~1703 CLERIC_SUMMON_DEATH_KNIGHT~
 
 //Resources for Symbol of weakness but they do not seem to be used anywhere.
@@ -1011,14 +1010,6 @@ COPY ~spell_rev\spwi7##\PROJIMAG.SPL~     ~override~
 
 // Summon Death Knight (replaces Cacofiend)
 APPEND ~spell.ids~ ~2707 WIZARD_SUMMON_DEATH_KNIGHT~
-COPY ~spell_rev\spwi7##\spwi707.spl~     ~override~  // Summon Death Knight (replaces Cacofiend)
-  SAY NAME1 @731    SAY UNIDENTIFIED_DESC @732
-COPY ~spell_rev\spwi7##\spcaco.eff~     ~override~ // also used by CLERIC_SUMMON_DEATH_KNIGHT
-COPY ~spell_rev\spwi7##\dvdeathk.bcs~     ~override~
-COPY ~spell_rev\spwi7##\dvdeathk.cre~     ~override~
-  SAY NAME1 @3731
-  SAY NAME2 @3731
-COPY ~spell_rev\spwi7##\dvdeathk.itm~     ~override~
 
 //Chaos ("replaces" Sphere of Chaos)
 APPEND ~spell.ids~ ~2711 WIZARD_CHAOS~

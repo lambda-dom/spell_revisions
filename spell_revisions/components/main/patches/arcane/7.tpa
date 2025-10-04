@@ -37,6 +37,17 @@ DEFINE_PATCH_FUNCTION monster_summoning_7 STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION summon_death_knight STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_death_knight"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
 DEFINE_PATCH_FUNCTION prismatic_mantle STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.

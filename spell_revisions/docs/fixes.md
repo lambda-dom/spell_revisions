@@ -224,3 +224,5 @@ note(s):
 * Mordenkainen's Sword: Sword: fix dice 4d5 -> 5d4. Removed add strength bonus. Implemented mind immunities directly. Corrections to thac0 6 -> 2.
 
 * Mass Invisibility: range 35 -> 30.
+
+* Death Knight: sword: make a real sword, thac0 bonus 4 -> 3, damage bonus 5 -> 11. Death knight: thac0 7 -> 1, apr 2 -> 3.
