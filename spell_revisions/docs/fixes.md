@@ -220,3 +220,5 @@ note(s):
 ## B. 7. Level 7.
 
 * Monster Summoning 7: Otyugh: thac0 13 -> 10.
+
+* Mordenkainen's Sword: Sword: fix dice 4d5 -> 5d4. Removed add strength bonus. Implemented mind immunities directly. Corrections to thac0 6 -> 2.

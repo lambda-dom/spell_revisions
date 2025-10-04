@@ -102,52 +102,6 @@ This abjuration spell causes any spells cast against the wizard to be absorbed a
 This spell absorbs spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the wizard (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud).~
 
 //Level 7.
-@743=~Prismatic Spray~
-@744=~Prismatic Spray
-Level: 7
-School: Alteration
-Range: Special
-Duration: Special
-Casting Time: 1
-Area of Effect: Cone
-Saving Throw: Special
-
-When this spell is cast, the wizard causes seven shimmering, multicolored rays of light to flash from his hand. These include all colors of the visible spectrum; each ray has a different power and purpose. Any creature with fewer than 8 Hit Dice struck by a ray is blinded for 5 rounds, regardless of any other effect. Any creature that is caught within the area of effect will be touched by one or more rays. The effects of the rays are listed below and all saves are made at a -4 penalty.
-
-Red - 10d6 points of fire damage (save vs. breath half)
-Orange - 10d6 points of acid damage (save vs. breath half)
-Yellow - 10d6 points of electrical damage (save vs. breath half)
-Green - Death (save vs. poison reduces to 20 poison damage)
-Blue - Permanently stunned (save vs. polymorph neg.)
-Indigo - Feeblemind (save vs. wands neg.)
-Violet - Maze (save vs. spell neg.)~
-
-@745=~Power Word Stun~
-@746=~Power Word Stun
-Level: 7
-School: Enchantment
-Range: Long
-Duration: Special
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
-
-When a Power Word Stun spell is uttered, any creature of the mage's choice within visual range is stunned for a length of time dependent upon its current hit points. Creatures with 1 to 29 hit points are stunned for 4d4 rounds, while those with 30 to 59 are stunned for 2d4 rounds, those with 60 to 89 are stunned for 1d4 rounds, and those with 90 or more are stunned for 1 round. Note that if a creature is weakened so that its hit points are below its usual maximum, its current number of hit points is used to determine the spell's effect.~
-
-@747=~Mordenkainen's Sword~
-@748=~Mordenkainen's Sword
-Level: 7
-School: Evocation
-Range: Personal
-Duration: 1 round/level
-Casting Time: 7
-Area of Effect: Special
-Saving Throw: None
-
-Upon casting this spell, the wizard brings into being a shimmering, swordlike plane of force. Once the spell is cast, the sword will float in the air completely under the control of the caster, until the spell duration expires or the sword is dispelled. The sword acts as a +4 weapon in all respects and attacks on its own once each round, inflicting 5d4 damage when it hits a target. It has 100% resistance to almost all forms of dmage (acid, cold, fire, electricity, poison, etc.), and 95% resistance to physical damage, but it's vulnerable to pure magic damage. The sword is immune to mind affecting spells, has 36 hit points, AC 5, and THAC0 2. Note that this spell does not prevent the caster from performing any other actions while the spell is in effect.~
-
-@3747=~Magical Sword~
-
 @749=~Summon Efreeti~
 @750=~Summon Efreeti
 Level: 7

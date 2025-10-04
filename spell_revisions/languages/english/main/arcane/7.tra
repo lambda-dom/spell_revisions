@@ -205,3 +205,58 @@ Saving Throw: Death partial
 
 The Finger of Death spell snuffs out the victim's life force. The caster points his finger at the victim after the incantation is complete and death occurs, unless a save vs. death at -2 is made. A creature successfully saving still receives 2d8 + level points of damage, up to a maximum of 2d8 + 20."
 
+//prismatic_spray:spwi714
+@7140 = "Prismatic Spray"
+@7141 = "Prismatic Spray
+Level: 7
+School: Alteration
+Range: Special
+Duration: Special
+Casting Time: 1
+Area of Effect: Cone
+Saving Throw: Special
+
+When this spell is cast, the wizard causes seven shimmering, multicolored rays of light to flash from his hand. These include all colors of the visible spectrum; each ray has a different power and purpose. Any creature with fewer than 8 Hit Dice struck by a ray is blinded for 5 rounds, regardless of any other effect. Any creature that is caught within the area of effect will be touched by one or more rays. The effects of the rays are listed below and all saves are made at a -4 penalty.
+
+Red    - 10d6 points of fire damage (save vs. breath half)
+Orange - 10d6 points of acid damage (save vs. breath half)
+Yellow - 10d6 points of electrical damage (save vs. breath half)
+Green  - Death (save vs. poison reduces to 20 poison damage)
+Blue   - Permanently stunned (save vs. polymorph neg.)
+Indigo - Feeblemind (save vs. wands neg.)
+Violet - Maze (save vs. spell neg.)"
+
+//power_word_stun:spwi715
+@7150 = "Power Word Stun"
+@7151 = "Power Word Stun
+Level: 7
+School: Enchantment
+Range: Long
+Duration: Special
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+When a Power Word Stun spell is uttered, any creature of the mage's choice within visual range is stunned for a length of time dependent upon its current hit points. Creatures with 1 to 29 hit points are stunned for 4d4 rounds, while those with 30 to 59 are stunned for 2d4 rounds, those with 60 to 89 are stunned for 1d4 rounds, and those with 90 or more are stunned for 1 round. Note that if a creature is weakened so that its hit points are below its usual maximum, its current number of hit points is used to determine the spell's effect."
+
+//mordenkainen_sword:spwi716
+@7160 = "Mordenkainen's Sword"
+@7161 = "Mordenkainen's Sword
+Level: 7
+School: Evocation
+Range: Personal
+Duration: 1 round/level
+Casting Time: 7
+Area of Effect: Special
+Saving Throw: None
+
+Upon casting this spell, the wizard brings into being a shimmering, swordlike plane of force. Once the spell is cast, the sword will float in the air completely under the control of the caster, until the spell duration expires or the sword is dispelled. The sword acts as a +4 weapon in all respects and attacks on its own once each round. Note that this spell does not prevent the caster from performing any other actions while the spell is in effect.
+
+Magical Sword (10 Hit Dice):
+STR 10, DEX 10, CON 10, INT -, WIS -, CHA -;  AL Neutral
+HP 36, AC 5, THAC0 2, Saving Throws 7/11/7/11/11
+1 Attack Per Round, 5d4 + 4 Slashing (Magic Sword +4)
+
+Special Qualities:
+Immune to mind affecting spells, disease, poison and instant death effects
+Elemental Resistance 100%; Physical Resistance 95%"

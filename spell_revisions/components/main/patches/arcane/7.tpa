@@ -137,3 +137,14 @@ DEFINE_PATCH_FUNCTION spell_sequencer_d STR_VAR destination = "*" BEGIN
         resource = "%destination%"
     END
 END
+
+DEFINE_PATCH_FUNCTION mordenkainen_sword STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_mordenkainen_sword"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END

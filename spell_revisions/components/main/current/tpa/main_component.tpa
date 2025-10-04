@@ -1026,32 +1026,6 @@ APPEND ~spell.ids~ ~2711 WIZARD_CHAOS~
 //Seemingly unused effect for finger of death.
 COPY ~spell_rev\spwi7##\dvfingwi.eff~     ~override~
 
-COPY ~spell_rev\spwi7##\spwi714.spl~     ~override~  // Prismatic Spray
-  SAY NAME1 @743    SAY UNIDENTIFIED_DESC @744
-COPY ~spell_rev\spwi7##\scrl8p.itm~     ~override~
-  SAY NAME2 @743    SAY IDENTIFIED_DESC   @744
-COPY ~spell_rev\projectles\pspray.pro~ ~override~
-/*COPY_EXISTING ~pspray.pro~ ~override~
-  WRITE_BYTE 0x200 0
-  WRITE_SHORT 0x204 256
-  WRITE_SHORT 0x206 256*/
-
-COPY ~spell_rev\spwi7##\spwi715.spl~     ~override~  // Power Word Stun
-  SAY NAME1 @745    SAY UNIDENTIFIED_DESC @746
-COPY ~spell_rev\spwi7##\scrl8q.itm~     ~override~
-  SAY NAME2 @745    SAY IDENTIFIED_DESC   @746
-
-COPY ~spell_rev\spwi7##\spwi716.spl~     ~override~  // Mordenkainen's Sword
-  SAY NAME1 @747    SAY UNIDENTIFIED_DESC @748
-COPY ~spell_rev\spwi7##\scrl8r.itm~     ~override~
-  SAY NAME2 @747    SAY IDENTIFIED_DESC   @748
-COPY ~spell_rev\spwi7##\sword01.cre~     ~override~
-  SAY NAME1 @3747
-  SAY NAME2 @3747
-COPY ~spell_rev\spwi7##\spmorsw.eff~     ~override~
-COPY ~spell_rev\spwi7##\morsword.itm~     ~override~
-COPY ~spell_rev\spwi7##\dvmsword.bcs~     ~override~
-
 COPY ~spell_rev\spwi7##\spwi717.spl~     ~override~  // Summon Efreeti
   SAY NAME1 @749    SAY UNIDENTIFIED_DESC @750
 COPY ~spell_rev\spwi7##\scrl8s.itm~     ~override~

@@ -148,6 +148,9 @@ WIZARD_SPELL_SEQUENCER                  scrl8l      10      1
 WIZARD_SPHERE_OF_CHAOS                  scrl8m      10      1
 WIZARD_DELAYED_BLAST_FIREBALL           scrl8n      10      1
 WIZARD_FINGER_OF_DEATH                  scrl8o      10      1
+WIZARD_PRISMATIC_SPRAY                  scrl8p      10      1
+WIZARD_POWER_WORD_STUN                  scrl8q      10      1
+WIZARD_MORDENKAINENS_SWORD              scrl8r      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1

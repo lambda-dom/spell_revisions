@@ -174,6 +174,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Chaos: offload effects to subspells and fix off-by-one probability errors -- see cleric version.
 
+* Prismatic Spray: move effects to subspells.
+
+* Mordenkainen's Sword: mention vulnerability to dispel; review list of spell immunities in sword. Move immunity to psionics to immunities? The problem is that it *may* conflict with SCS.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.
