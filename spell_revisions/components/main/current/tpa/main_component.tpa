@@ -1004,8 +1004,7 @@ APPEND ~spell.ids~ ~2701 WIZARD_GREATER_SPELL_DEFLECTION~
 LAF ds_altered_spell INT_VAR old_clone=200 new_clone=~-1~ STR_VAR file=~spwi701.spl~ END
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~spwi701.SPL    233     2     116   201    n     A~
 
-//Project image.
-//Seemingly unused resource.
+//Seemingly unused resource for project image.
 COPY ~spell_rev\spwi7##\PROJIMAG.SPL~     ~override~
 
 // Summon Death Knight (replaces Cacofiend)
@@ -1034,20 +1033,11 @@ APPEND ~spell.ids~ ~2801 WIZARD_GHOSTFORM~
 COPY ~spell_rev\spwi8##\spwi801.spl~     ~override~
   SAY NAME1 @767    SAY UNIDENTIFIED_DESC @768
 
-COPY ~spell_rev\spwi8##\spwi802.spl~     ~override~  // Mind Blank (new spell)
-  SAY NAME1 @769    SAY UNIDENTIFIED_DESC @770
+// Mind Blank (new spell)
 APPEND ~spell.ids~ ~2802 WIZARD_MIND_BLANK~
   UNLESS ~^2802[ %TAB%]+WIZARD_MIND_BLANK\b~ // this spell already exists in IWDEE
 
-COPY ~spell_rev\spwi8##\spwi803.spl~     ~override~  // Protection from Energy
-  SAY NAME1 @771    SAY UNIDENTIFIED_DESC @772
-COPY ~spell_rev\spwi8##\scrl8y.itm~     ~override~
-  SAY NAME2 @771    SAY IDENTIFIED_DESC   @772
-
-COPY ~spell_rev\spwi8##\spwi804.spl~     ~override~  // Simulacrum
-  SAY NAME1 @773    SAY UNIDENTIFIED_DESC @774
-COPY ~spell_rev\spwi8##\scrl8z.itm~     ~override~
-  SAY NAME2 @773    SAY IDENTIFIED_DESC   @774
+//Seemingly unused resource for simulacrum.
 COPY ~spell_rev\spwi8##\SIMULACR.SPL~     ~override~
 
 COPY ~spell_rev\spwi8##\spwi805.spl~     ~override~  // Pierce Shield

@@ -184,6 +184,12 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Summon Hakeashar: Make duration constant and fixed.
 
+## B. 8. Level 8.
+
+* Ghostform: review implementation.
+
+* Mind blank: review implementation.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.

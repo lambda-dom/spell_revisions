@@ -29,3 +29,47 @@ Saving Throw: None
 
 The subject is protected from all devices and spells that detect, influence, or read emotions or thoughts. This spell protects against all mind-affecting spells and effects as well as information gathering by divination spells or effects."
 
+//protection_energy:spwi803
+@8030 = "Protection from Energy"
+@8031 = "Protection from Energy
+Level: 8
+School: Abjuration
+Range: Touch
+Duration: 2 rounds/level
+Casting Time: 8
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, it confers complete protection from all energy attacks composed of acid, cold, electricity, fire, or magic damage, whether magical or non-magical in origin. 100% of the energy damage from attacks with weapons, wands, breath weapons, etc. will be absorbed, and the target creature will become completely immune to the effects of energy-based spells. This effect lasts for the duration of the spell or until dispelled."
+
+//simulacrum:spwi804
+@8040 = "Simulacrum"
+@8041 = "Simulacrum
+Level: 8
+School: Illusion
+Range: Personal
+Duration: 1 round/level
+Casting Time: 1 round
+Area of Effect: Caster
+Saving Throw: None
+
+When this spell is cast, the caster taps energy from the Plane of Shadow to create a quasi-real, illusory version of himself. The duplicate is a near-perfect copy of the caster, making it a very powerful ally. The simulacrum is created at 60% of the level of the caster and has all the spells and abilities that the caster would have at that level. It also has 60% of the hit points of the caster. The simulacrum is fully under the control of the caster. The caster may have only one simulacrum at a time."
+
+//pierce_shield:spwi805
+@8050 = "Pierce Shield"
+@8051 = "Pierce Shield
+Level: 8
+School: Abjuration
+Range: Long
+Duration: Special
+Casting Time: 8
+Area of Effect: 1 creature
+Saving Throw: None
+
+By means of this spell, the wizard may launch a massive attack on a target's physical and magical defenses. Pierce Shield will dispel one spell protection of any level from the target creature. This will always dispel the highest level of spell protection on the target first. If the target has two or more protections tied for the highest level, the choice will be random. After piercing through magical protections, this powerful spell will breach each and every combat protection on the target creature. The target's magic resistance, if any, does not affect this spell.
+
+The spell protection spells dispelled by Pierce Shield are: Minor Spell Deflection, Minor Globe of Invulnerability, Spell Deflection, Dispelling Screen, Globe of Invulnerability, Greater Spell Deflection, Shield of the Archons and Spell Trap.
+
+The combat protection spells dispelled by Pierce Shield are: Mage Armor, Shield, Armor of Faith, Barkskin, Protection from Missiles, Spirit Armor, Stoneskin, Protection from Normal Weapons, Protection from Magical Weapons, Physical Mirror, Prismatic Mantle, Moment of Prescience and Absolute Immunity."
+
+//spwi806: non existent

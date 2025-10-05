@@ -159,6 +159,9 @@ WIZARD_MASS_INVISIBILITY                scrl8w      10      1
 WIZARD_LIMITED_WISH                     scrla4      10      1
 WIZARD_GHOSTFORM                        scrlw801    10      1
 WIZARD_MIND_BLANK                       scrl8d      10      1
+WIZARD_PROTECTION_FROM_ENERGY           scrl8y      10      1
+WIZARD_SIMULACRUM                       scrl8z      10      1
+WIZARD_PIERCE_SHIELD                    scrl9a      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1
