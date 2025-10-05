@@ -190,6 +190,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Mind blank: review implementation.
 
+* Protection from Energy: review implementation, especially the spell protections list.
+
 * Summon Fiend: only description in.
 
 # C. General.

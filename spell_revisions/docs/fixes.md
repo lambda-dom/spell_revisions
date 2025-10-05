@@ -236,3 +236,5 @@ note(s):
 ## B. 8. Level 8.
 
 * Pierce Shield: range 40 -> 30.
+
+* Moment of Prescience: there is an ac vs. all bonus 10 contradicting the 20 bonus. Is this a mistake? For now assuming yes.

@@ -102,18 +102,6 @@ This abjuration spell causes any spells cast against the wizard to be absorbed a
 This spell absorbs spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the wizard (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud).~
 
 //Level 8.
-@779=~Moment of Prescience~
-@780=~Moment of Prescience
-Level: 8
-School: Divination
-Range: Personal
-Duration: 4 rounds
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
-
-This spell grants an almost omniscient perception of things to come. For the duration of the spell the mage's armor class is improved by 20 points, and any save is made by the caster with a +20 bonus. Due to this spell's short casting time and duration, it is mainly used to buy the wizard a few rounds in the thick of intense combat.~
-
 @781=~Simbul's Spell Trigger~
 @782=~Simbul's Spell Trigger
 Level: 8
