@@ -1047,8 +1047,6 @@ COPY ~spell_rev\spwi8##\scrl9a.itm~     ~override~
 
 COPY ~spell_rev\spwi8##\spwi807.spl~     ~override~  // Summon Fiend
   SAY NAME1 @777    SAY UNIDENTIFIED_DESC @778
-COPY ~spell_rev\spwi8##\scrl9b.itm~     ~override~
-  SAY NAME2 @777    SAY IDENTIFIED_DESC   @778
 COPY ~spell_rev\spwi8##\spfiend.eff~      ~override~
 COPY ~spell_rev\spwi8##\demglasu.cre~     ~override~
   SAY NAME1 @3777

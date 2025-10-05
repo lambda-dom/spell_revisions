@@ -190,6 +190,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Mind blank: review implementation.
 
+* Summon Fiend: only description in.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.
