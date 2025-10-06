@@ -1052,41 +1052,10 @@ COPY ~spell_rev\spwi8##\demglasu.itm~     ~override~
 // Moment of Prescience (replaces Improved Mantle)
 APPEND ~spell.ids~ ~2808 WIZARD_MOMENT_OF_PRESCIENCE~
 
-COPY ~spell_rev\spwi8##\spwi809.spl~     ~override~  // Simbul's Spell Trigger (previously named Spell Trigger)
-  SAY NAME1 @781    SAY UNIDENTIFIED_DESC @782
-COPY ~spell_rev\spwi8##\scrl9d.itm~     ~override~
-  SAY NAME2 @781    SAY IDENTIFIED_DESC   @782
-COPY ~spell_rev\spwi8##\spwi809d.spl~     ~override~
-  SAY NAME1 @781
-
-//Note: projectile already copied.
-ADD_PROJECTILE ~spell_rev\projectles\dvicloud.pro~
-APPEND ~clearair.2da~ ~Incendiary_Cloud                %dvicloud%~
-COPY ~spell_rev\spwi8##\spwi810.spl~     ~override~  // Incendiary Cloud
-  SAY NAME1 @783    SAY UNIDENTIFIED_DESC @784
-  WRITE_SHORT 0x98 %dvicloud%
-  SET dvicloud -= 1
-COPY ~spell_rev\spwi8##\scrl9e.itm~     ~override~
-  SAY NAME2 @783    SAY IDENTIFIED_DESC   @784
-COPY ~spell_rev\spwi8##\dvicloud.eff~     ~override~
-
-/* COPY_EXISTING ~GORLIC01.CRE~ ~override~  // Azamantes
-              ~GORSKU01.CRE~ ~override~  // Flaming Skull
-              ~HGSKU01.CRE~  ~override~  // Flaming Skull
-  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
-    LAUNCH_PATCH_FUNCTION ~ADD_CRE_IMMUNITY_TO_SPELL~
-      INT_VAR mi_strref = 0 // no text
-      STR_VAR mi_spell = ~SPWI810~ // incendiary cloud
-    END
-  END
-  BUT_ONLY */
-
-COPY ~spell_rev\spwi8##\spwi811.spl~     ~override~  // Symbol of Weakness (replaces Symbol, Fear)
-  SAY NAME1 @785    SAY UNIDENTIFIED_DESC @786
-COPY ~spell_rev\spwi8##\scrl9f.itm~     ~override~
-  SAY NAME2 @785    SAY IDENTIFIED_DESC   @786
-COPY ~spell_rev\shared\spwi899.spl~      ~override~ // Innate Symbol of Weakness
+// Symbol of Weakness (replaces Symbol, Fear)
 APPEND ~spell.ids~ ~2811 WIZARD_SYMBOL_WEAKNESS~
+// Innate Symbol of Weakness
+COPY ~spell_rev\shared\spwi899.spl~      ~override~
 
 COPY ~spell_rev\spwi8##\spwi812.spl~     ~override~  // Abi-Dalzim's Horrid Wilting
   SAY NAME1 @787    SAY UNIDENTIFIED_DESC @788

@@ -164,6 +164,9 @@ WIZARD_SIMULACRUM                       scrl8z      10      1
 WIZARD_PIERCE_SHIELD                    scrl9a      10      1
 WIZARD_SUMMON_FIEND                     scrl9b      10      1
 WIZARD_MOMENT_OF_PRESCIENCE             scrl9c      10      1
+WIZARD_SPELL_TRIGGER                    scrl9d      10      1
+WIZARD_INCENDIARY_CLOUD                 scrl9e      10      1
+WIZARD_SYMBOL_WEAKNESS                  scrl9f      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1

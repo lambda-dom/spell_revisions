@@ -194,6 +194,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Summon Fiend: only description in.
 
+* Incendiary Cloud: deleted protection against giant. Protections against "fire giants and salamanders" not implemented yet. Reduced viasual sight penalty should be hidden inside a spell to set up protections properly (e.g. bat).
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.

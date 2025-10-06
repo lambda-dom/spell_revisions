@@ -17,3 +17,32 @@ RET_ARRAY spells = references END
 
 
 //Patches.
+DEFINE_PATCH_FUNCTION spell_trigger_d STR_VAR destination = "*" BEGIN
+    //Sanitize.
+    LPF get_spell_res STR_VAR spell = "WIZARD_SPELL_TRIGGER" RET res = resource END
+    PATCH_IF NOT (7 = STRING_LENGTH "%res%") BEGIN
+        PATCH_FAIL "spell_trigger_d: parent resource name '%res%' is not 7 characters long."
+    END
+
+    PATCH_IF NOT ("%destination%" STRING_EQUAL_CASE "%res%d") BEGIN
+        PATCH_FAIL "spell_trigger_d: resource name '%destination%' is not '%res%d'."
+    END
+
+    //Patch references.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 258                  //Activate sequencer.
+    STR_VAR
+        match_resource = "actv#res"
+        resource = "%res%"
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 172                  //Remove spell.
+    STR_VAR
+        match_resource = "rems#res"
+        resource = "%destination%"
+    END
+END
+
