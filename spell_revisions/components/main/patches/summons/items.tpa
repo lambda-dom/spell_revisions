@@ -342,3 +342,13 @@ DEFINE_PATCH_FUNCTION mordenkainen_immunities STR_VAR destination = "*" BEGIN
         END
     END
 END
+
+DEFINE_PATCH_FUNCTION umber_hulk_immunities STR_VAR destination = "*" BEGIN
+    PATCH_FOR_EACH block IN
+        "confusion"
+    BEGIN
+        LPF append_item_block STR_VAR
+            block = "%block%"
+        END
+    END
+END

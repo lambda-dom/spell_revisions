@@ -65,3 +65,14 @@ DEFINE_PATCH_FUNCTION bigbys_icy_grasp STR_VAR destination = "*" BEGIN
         references = "spells"
     END
 END
+
+DEFINE_PATCH_FUNCTION monster_summoning_8 STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_umber_hulk"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END

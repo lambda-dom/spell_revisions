@@ -246,3 +246,5 @@ note(s):
 * Incorporate spell flag setting in the spell tables.
 
 * Revert names of sequencers to vanilla names? e. g. no "Simbul" and what not?
+
+* Review ranges of natural weapons.
