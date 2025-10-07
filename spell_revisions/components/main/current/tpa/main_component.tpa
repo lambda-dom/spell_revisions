@@ -1057,44 +1057,23 @@ APPEND ~spell.ids~ ~2811 WIZARD_SYMBOL_WEAKNESS~
 // Innate Symbol of Weakness
 COPY ~spell_rev\shared\spwi899.spl~      ~override~
 
-COPY ~spell_rev\spwi8##\spwi812.spl~     ~override~  // Abi-Dalzim's Horrid Wilting
-  SAY NAME1 @787    SAY UNIDENTIFIED_DESC @788
-COPY ~spell_rev\spwi8##\scrl9g.itm~     ~override~
-  SAY NAME2 @787    SAY IDENTIFIED_DESC   @788
-COPY ~spell_rev\spwi8##\dvhorrid.eff~     ~override~
 
-COPY ~spell_rev\spwi8##\spwi813.spl~     ~override~  // Maze
-  SAY NAME1 @789    SAY UNIDENTIFIED_DESC @790
-COPY ~spell_rev\spwi8##\scrl9h.itm~     ~override~
-  SAY NAME2 @789    SAY IDENTIFIED_DESC   @790
-
-COPY ~spell_rev\spwi8##\spwi815.spl~     ~override~  // Power Word Blind
-  SAY NAME1 @791    SAY UNIDENTIFIED_DESC @792
-COPY ~spell_rev\spwi8##\scrl9j.itm~     ~override~
-  SAY NAME2 @791    SAY IDENTIFIED_DESC   @792
+//Projectile for power word blind not used; why is it being changed?
 COPY_EXISTING ~holdsumm.pro~ ~override~
   WRITE_SHORT 0x204 110
   WRITE_SHORT 0x206 110
 
-COPY ~spell_rev\spwi8##\spwi816.spl~     ~override~  // Symbol of Stunning
-  SAY NAME1 @793    SAY UNIDENTIFIED_DESC @794
-COPY ~spell_rev\spwi8##\scrlap.itm~     ~override~
-  SAY NAME2 @793    SAY IDENTIFIED_DESC   @794
-/* COPY ~spell_rev\shared\spwi898.spl~      ~override~ // Innate Symbol of Stunning */
+// Innate Symbol of Death
+COPY ~spell_rev\shared\spwi897.spl~      ~override~
 
-COPY ~spell_rev\spwi8##\spwi817.spl~     ~override~  // Symbol of Death
-  SAY NAME1 @795    SAY UNIDENTIFIED_DESC @796
-COPY ~spell_rev\spwi8##\scrlao.itm~     ~override~
-  SAY NAME2 @795    SAY IDENTIFIED_DESC   @796
-COPY ~spell_rev\shared\spwi897.spl~      ~override~ // Innate Symbol of Death
-
-COPY ~spell_rev\spwi8##\spwi818.spl~     ~override~  // Bigby's Icy Grasp ("replaces" Clenched Fist)
+// Bigby's Icy Grasp ("replaces" Clenched Fist)
+APPEND ~spell.ids~ ~2818 WIZARD_BIGBYS_ICY_GRASP~
+COPY ~spell_rev\spwi8##\spwi818.spl~     ~override~
   SAY NAME1 @797    SAY UNIDENTIFIED_DESC @798
 COPY ~spell_rev\spwi8##\scrlb1.itm~     ~override~
   SAY NAME2 @797    SAY IDENTIFIED_DESC   @798
 COPY ~spell_rev\spwi8##\spwi818d.spl~     ~override~
 COPY ~spell_rev\spwi8##\spwi818i.eff~     ~override~
-APPEND ~spell.ids~ ~2818 WIZARD_BIGBYS_ICY_GRASP~
 
 //ADD_SPELL: Monster Summoning VIII
 ADD_SPELL ~spell_rev\spwi8##\spwi819.spl~ 2 8 ~WIZARD_MONSTER_SUMMONING_6~  // Monster Summoning VIII (new mage spell)
