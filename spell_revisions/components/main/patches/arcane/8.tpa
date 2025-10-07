@@ -46,3 +46,22 @@ DEFINE_PATCH_FUNCTION spell_trigger_d STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION bigbys_icy_grasp_a STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "bigbys_icy_grasp_b"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION bigbys_icy_grasp STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "bigbys_icy_grasp_a"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
