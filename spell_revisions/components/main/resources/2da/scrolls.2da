@@ -172,6 +172,8 @@ WIZARD_MAZE                             scrl9h      10      1
 WIZARD_POWER_WORD_BLIND                 scrl9j      10      1
 WIZARD_SYMBOL_STUN                      scrlap      10      1
 WIZARD_SYMBOL_DEATH                     scrlao      10      1
+WIZARD_BIGBYS_ICY_GRASP                 scrlb1      10      1
+WIZARD_MONSTER_SUMMONING_LEVEL_8        scrl8c      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1

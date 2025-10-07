@@ -1,0 +1,385 @@
+IF
+    HasItem("dw#sumfi",Myself)
+THEN
+    RESPONSE #100
+        DestroyItem("dw#sumfi")
+        Continue()
+END
+
+IF
+    Allegiance(LastSummonerOf(Myself),ENEMY)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        SetGlobal("GlabrezuControl","LOCALS",1)
+        Enemy()
+END
+
+IF
+    Global("GlabrezuControl","LOCALS",0)
+    OR(6)
+        CheckStatGT(LastSummonerOf(Myself),18,INT)
+        CheckStatGT(LastSummonerOf(Myself),18,WIS)
+        CheckStatGT(LastSummonerOf(Myself),18,CHR)
+        CheckStatGT(LastSummonerOf(Myself),20,LEVEL)
+        CheckStatGT(LastSummonerOf(Myself),20,LEVEL2)
+        CheckStatGT(LastSummonerOf(Myself),20,LEVEL3)
+THEN
+    RESPONSE #100
+        FaceObject(LastSummonerOf(Myself))
+        Wait(2)
+        LeaveParty()
+        ChangeEnemyAlly(Myself,ALLY)
+        SetGlobal("GlabrezuControl","LOCALS",1)
+END
+
+IF
+    Global("GlabrezuControl","LOCALS",0)
+THEN
+    RESPONSE #50
+        FaceObject(LastSummonerOf(Myself))
+        Wait(2)
+        DisplayStringHead(Myself,12663)  // Now I will kill you all, foolish ones!
+        Enemy()
+        SetGlobal("GlabrezuControl","LOCALS",1)
+    RESPONSE #50
+        FaceObject(LastSummonerOf(Myself))
+        Wait(2)
+        DisplayStringHead(Myself,7841)  // Very well, I shall follow you.
+        LeaveParty()
+        ChangeEnemyAlly(Myself,ALLY)
+        SetGlobal("GlabrezuControl","LOCALS",1)
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    !AreaCheck("ar3008")
+    !AreaCheck("ar3004")
+    !GlobalTimerNotExpired("mirror_image","LOCALS")
+    See([ENEMY])
+    !StateCheck(Myself,STATE_MIRRORIMAGE)
+    !CheckStatGT(NearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(SecondNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(ThirdNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(FourthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(FifthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(SixthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(SeventhNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(EighthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(NinthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+    !CheckStatGT(TenthNearestEnemyOf(Myself),0,TRUE_SIGHT)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        SpellNoDec(Myself,WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (Mirror Image)
+        SetGlobalTimer("mirror_image","LOCALS",FIVE_ROUNDS)
+END
+
+IF
+    OR(3)
+        See([0.0.DEMONIC.0.0.0.LAWFUL_EVIL])
+        See([0.0.0.TANARI.0.0.LAWFUL_EVIL])
+        See([0.0.0.0.0.SUMMONED_DEMON.LAWFUL_EVIL])
+THEN
+    RESPONSE #100
+        AttackOneRound(LastSeenBy(Myself))
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    !AreaCheck("ar3004")
+    !AreaCheck("ar3008")
+    !GlobalTimerNotExpired("RemoveMagic","LOCALS")
+    See(NearestEnemyOf(Myself))
+    CheckStatLT(LastSeenBy(Myself),16,LEVEL)
+    CheckStatLT(LastSeenBy(Myself),16,LEVEL2)
+    CheckStatLT(LastSeenBy(Myself),16,LEVEL3)
+    !StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+    OR(12)
+        CheckStatGT(LastSeenBy(Myself),0,IMPROVEDHASTE)
+        StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
+        CheckStatGT(LastSeenBy(Myself),0,TRUE_SIGHT)
+        CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+        CheckStatGT(LastSeenBy(Myself),0,WIZARD_RESIST_FEAR)
+        CheckStatGT(LastSeenBy(Myself),0,CLERIC_DEFENSIVE_HARMONY)
+        CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)
+        CheckStatGT(LastSeenBy(Myself),0,CLERIC_FREE_ACTION)
+        CheckStatGT(LastSeenBy(Myself),0,WIZARD_FIRE_SHIELD)
+        CheckStatGT(LastSeenBy(Myself),0,DEFENSIVE_MODIFIER)
+        CheckStatGT(LastSeenBy(Myself),0,STRENGTH_MODIFIER)
+        CheckStatGT(LastSeenBy(Myself),3,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_REMOVE_MAGIC)  // SPWI302.SPL (Dispel Magic)
+        SetGlobalTimer("RemoveMagic","LOCALS",FIVE_ROUNDS)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    !AreaCheck("ar3004")
+    !AreaCheck("ar3008")
+    !GlobalTimerNotExpired("PWStun","LOCALS")
+    See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+    !General(LastSeenBy(Myself),UNDEAD)
+    !CheckStatGT(LastSeenBy(Myself),50,RESISTMAGIC)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+    !CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+    !CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)
+    !StateCheck(LastSeenBy(Myself),STATE_IMMOBILE)
+    !CheckStatGT(LastSeenBy(Myself),0,HELD)
+    !CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)
+    HPPercentLT(LastSeenBy(Myself),90)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SetGlobalTimer("PWStun","LOCALS",FIVE_ROUNDS)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    !AreaCheck("ar3004")
+    !AreaCheck("ar3008")
+    !GlobalTimerNotExpired("PWStun","LOCALS")
+    See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
+    !General(LastSeenBy(Myself),UNDEAD)
+    !CheckStatGT(LastSeenBy(Myself),50,RESISTMAGIC)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+    !CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+    !CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)
+    !StateCheck(LastSeenBy(Myself),STATE_IMMOBILE)
+    !CheckStatGT(LastSeenBy(Myself),0,HELD)
+    !CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)
+    HPPercentLT(LastSeenBy(Myself),90)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SetGlobalTimer("PWStun","LOCALS",FIVE_ROUNDS)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    !AreaCheck("ar3004")
+    !AreaCheck("ar3008")
+    !GlobalTimerNotExpired("PWStun","LOCALS")
+    See(NearestEnemyOfType([0.0.0.BARD]))
+    !General(LastSeenBy(Myself),UNDEAD)
+    !CheckStatGT(LastSeenBy(Myself),50,RESISTMAGIC)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+    !CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+    !CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)
+    !StateCheck(LastSeenBy(Myself),STATE_IMMOBILE)
+    !CheckStatGT(LastSeenBy(Myself),0,HELD)
+    !CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)
+    HPPercentLT(LastSeenBy(Myself),90)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SetGlobalTimer("PWStun","LOCALS",FIVE_ROUNDS)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    !AreaCheck("ar3004")
+    !AreaCheck("ar3008")
+    !GlobalTimerNotExpired("PWStun","LOCALS")
+    See(NearestEnemyOfType([0.0.0.DRUID_ALL]))
+    !General(LastSeenBy(Myself),UNDEAD)
+    !CheckStatGT(LastSeenBy(Myself),50,RESISTMAGIC)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+    !CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+    !CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)
+    !StateCheck(LastSeenBy(Myself),STATE_IMMOBILE)
+    !CheckStatGT(LastSeenBy(Myself),0,HELD)
+    !CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)
+    HPPercentLT(LastSeenBy(Myself),90)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SetGlobalTimer("PWStun","LOCALS",FIVE_ROUNDS)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    !AreaCheck("ar3004")
+    !AreaCheck("ar3008")
+    !GlobalTimerNotExpired("PWStun","LOCALS")
+    See(NearestEnemyOf(Myself))
+    !General(LastSeenBy(Myself),UNDEAD)
+    !CheckStatGT(LastSeenBy(Myself),50,RESISTMAGIC)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+    !CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+    !CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)
+    !StateCheck(LastSeenBy(Myself),STATE_IMMOBILE)
+    !CheckStatGT(LastSeenBy(Myself),0,HELD)
+    !CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)
+    HPPercentLT(LastSeenBy(Myself),90)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SetGlobalTimer("PWStun","LOCALS",FIVE_ROUNDS)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    !AreaCheck("ar3004")
+    !AreaCheck("ar3008")
+    !GlobalTimerNotExpired("unholy_blight","LOCALS")
+    NumCreatureGT(NearestEnemyOf(Myself),2)
+    See(NearestEnemyOf(Myself))
+    !CheckStat(NearestEnemyOf(Myself),7,WIZARD_SPELL_IMMUNITY)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        SpellNoDec(NearestEnemyOf(Myself),CLERIC_UNHOLY_BLIGHT)  // SPPR314.SPL (Unholy Blight)
+        SetGlobalTimer("unholy_blight","LOCALS",FIVE_ROUNDS)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("castspell","LOCALS")
+    !AreaCheck("ar3004")
+    !AreaCheck("ar3008")
+    !GlobalTimerNotExpired("Confusion","LOCALS")
+    See(NearestEnemyOf(Myself))
+    !General(LastSeenBy(Myself),UNDEAD)
+    !Race(LastSeenBy(Myself),SLIME)
+    !Race(LastSeenBy(Myself),DEMONIC)
+    !StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+    CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+    CheckStatGT(LastSeenBy(Myself),-4,SAVEVSSPELL)
+    !CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)
+    !CheckStat(LastSeenBy(Myself),1,OFFENSIVE_MODIFIER)
+    !CheckStat(LastSeenBy(Myself),8,WIZARD_SPELL_IMMUNITY)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
+        SpellNoDec(NearestEnemyOf(Myself),WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)
+        SetGlobalTimer("Confusion","LOCALS",FIVE_ROUNDS)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+    ActionListEmpty()
+    Allegiance(Myself,ENEMY)
+    !Detect(NearestEnemyOf(Myself))
+    !AreaCheck("ar3004")
+    InMyArea(Player1)
+    InMyArea(Player2)
+    InMyArea(Player3)
+    InMyArea(Player4)
+    InMyArea(Player5)
+    InMyArea(Player6)
+THEN
+    RESPONSE #100
+        ReallyForceSpellRES("dvtelpor",Player1)  // Teleport Without Error
+    RESPONSE #100
+        ReallyForceSpellRES("dvtelpor",Player2)  // Teleport Without Error
+    RESPONSE #100
+        ReallyForceSpellRES("dvtelpor",Player3)  // Teleport Without Error
+    RESPONSE #100
+        ReallyForceSpellRES("dvtelpor",Player4)  // Teleport Without Error
+    RESPONSE #100
+        ReallyForceSpellRES("dvtelpor",Player5)  // Teleport Without Error
+    RESPONSE #100
+        ReallyForceSpellRES("dvtelpor",Player6)  // Teleport Without Error
+END
+
+IF
+    ActionListEmpty()
+    Allegiance(Myself,ENEMY)
+    !Detect(NearestEnemyOf(Myself))
+    !AreaCheck("ar3004")
+    InMyArea(Player1)
+    InMyArea(Player2)
+    InMyArea(Player3)
+THEN
+    RESPONSE #100
+        ReallyForceSpellRES("dvtelpor",Player1)  // Teleport Without Error
+    RESPONSE #100
+        ReallyForceSpellRES("dvtelpor",Player2)  // Teleport Without Error
+    RESPONSE #100
+        ReallyForceSpellRES("dvtelpor",Player3)  // Teleport Without Error
+END
+
+IF
+    ActionListEmpty()
+    Allegiance(Myself,ENEMY)
+    !Detect(NearestEnemyOf(Myself))
+    !AreaCheck("ar3004")
+    InMyArea(Player1)
+THEN
+    RESPONSE #100
+        ReallyForceSpellRES("dvtelpor",Player1)  // Teleport Without Error
+END
+
+IF
+    !Allegiance(Myself,EVILCUTOFF)
+    !See([EVILCUTOFF])
+    ActionListEmpty()
+    InParty(LastSummonerOf(Myself))
+    !Range(LastSummonerOf(Myself),15)
+    InMyArea(LastSummonerOf(Myself))
+    InActiveArea(Myself)
+    InActiveArea(LastSummonerOf(Myself))
+THEN
+    RESPONSE #100
+        Formation(LastSummonerOf(Myself),[-4.-4])
+END
+
+IF
+    !Allegiance(Myself,EVILCUTOFF)
+    !See([EVILCUTOFF])
+    ActionListEmpty()
+    !InParty(LastSummonerOf(Myself))
+    !Range(Player1,15)
+    InMyArea(Player1)
+    InActiveArea(Myself)
+THEN
+    RESPONSE #100
+        Formation(Player1,[-4.-4])
+END
+
