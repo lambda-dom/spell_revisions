@@ -232,3 +232,15 @@ note(s):
 * Summon Djinni: sword: make a real sword, remove apr bonus (move to cre), damage bonus 4 -> 5. Djinni: increase first class 9 -> 10, wis 15 -> 14, hps 70 -> 89, ac 5 -> 0, thac0 10 -> 7, apr 3/2 -> 3, neutral -> ally, gender male -> summoned.
 
 * Summon Hakeashar: fix icons. Swap the contact with the nishruu to give hakeashar the better version. thac0 4 -> 2, allegiance enemy -> ally. Fix eff that summons nishruu -> hakeashar.
+
+## B. 8. Level 8.
+
+* Pierce Shield: range 40 -> 30.
+
+* Moment of Prescience: there is an ac vs. all bonus 10 contradicting the 20 bonus. Is this a mistake? For now assuming yes.
+
+* Summon Fiend: Glabrezu pincers: damage bonus 4 -> 12. Creature: Hps 100 -> 160, thac0 8 -> 1, apr 3 -> 4
+
+* Bigby's Icy Grasp: range 35 -> 30.
+
+* Umber Hulk: Claws: damage bonus 3 -> 11. Creature: dice 7 -> 8, thac0 13 -> 6. Undocumented physical resistances 5 (missile 100) -> 0.

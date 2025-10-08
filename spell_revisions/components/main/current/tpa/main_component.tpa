@@ -1004,8 +1004,7 @@ APPEND ~spell.ids~ ~2701 WIZARD_GREATER_SPELL_DEFLECTION~
 LAF ds_altered_spell INT_VAR old_clone=200 new_clone=~-1~ STR_VAR file=~spwi701.spl~ END
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~spwi701.SPL    233     2     116   201    n     A~
 
-//Project image.
-//Seemingly unused resource.
+//Seemingly unused resource for project image.
 COPY ~spell_rev\spwi7##\PROJIMAG.SPL~     ~override~
 
 // Summon Death Knight (replaces Cacofiend)
@@ -1028,150 +1027,41 @@ APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_5% WIZARD_MONSTER_SUMMONING_LEVEL_
 COPY ~spell_rev\spwi7##\scrl8b.itm~     ~override~
 
 
-/*-----------------------level 8-----------------------*/
-
-COPY ~spell_rev\spwi8##\spwi801.spl~     ~override~  // Ghostform (new alteration spell)
-  SAY NAME1 @767    SAY UNIDENTIFIED_DESC @768
-COPY ~spell_rev\spwi8##\scrlw801.itm~     ~override~
-  SAY NAME2 @767    SAY IDENTIFIED_DESC   @768
+//Level 8.
+// Ghostform (new alteration spell)
 APPEND ~spell.ids~ ~2801 WIZARD_GHOSTFORM~
+COPY ~spell_rev\spwi8##\spwi801.spl~     ~override~
+  SAY NAME1 @767    SAY UNIDENTIFIED_DESC @768
 
-COPY ~spell_rev\spwi8##\spwi802.spl~     ~override~  // Mind Blank (new spell)
-  SAY NAME1 @769    SAY UNIDENTIFIED_DESC @770
-COPY ~spell_rev\spwi8##\scrl8d.itm~     ~override~
-  SAY NAME2 @769    SAY IDENTIFIED_DESC   @770
-COPY ~spell_rev\spwi8##\spwi802a.bam~    ~override~
-COPY ~spell_rev\spwi8##\spwi802b.bam~    ~override~
-COPY ~spell_rev\spwi8##\spwi802c.bam~    ~override~
+// Mind Blank (new spell)
 APPEND ~spell.ids~ ~2802 WIZARD_MIND_BLANK~
   UNLESS ~^2802[ %TAB%]+WIZARD_MIND_BLANK\b~ // this spell already exists in IWDEE
 
-COPY ~spell_rev\spwi8##\spwi803.spl~     ~override~  // Protection from Energy
-  SAY NAME1 @771    SAY UNIDENTIFIED_DESC @772
-COPY ~spell_rev\spwi8##\scrl8y.itm~     ~override~
-  SAY NAME2 @771    SAY IDENTIFIED_DESC   @772
-
-COPY ~spell_rev\spwi8##\spwi804.spl~     ~override~  // Simulacrum
-  SAY NAME1 @773    SAY UNIDENTIFIED_DESC @774
-COPY ~spell_rev\spwi8##\scrl8z.itm~     ~override~
-  SAY NAME2 @773    SAY IDENTIFIED_DESC   @774
+//Seemingly unused resource for simulacrum.
 COPY ~spell_rev\spwi8##\SIMULACR.SPL~     ~override~
 
-COPY ~spell_rev\spwi8##\spwi805.spl~     ~override~  // Pierce Shield
-  SAY NAME1 @775    SAY UNIDENTIFIED_DESC @776
-COPY ~spell_rev\spwi8##\scrl9a.itm~     ~override~
-  SAY NAME2 @775    SAY IDENTIFIED_DESC   @776
-
-COPY ~spell_rev\spwi8##\spwi807.spl~     ~override~  // Summon Fiend
-  SAY NAME1 @777    SAY UNIDENTIFIED_DESC @778
-COPY ~spell_rev\spwi8##\scrl9b.itm~     ~override~
-  SAY NAME2 @777    SAY IDENTIFIED_DESC   @778
-COPY ~spell_rev\spwi8##\spfiend.eff~      ~override~
-COPY ~spell_rev\spwi8##\demglasu.cre~     ~override~
-  SAY NAME1 @3777
-  SAY NAME2 @3777
-COPY ~spell_rev\spwi8##\dvglabre.bcs~     ~override~
-COPY ~spell_rev\spwi8##\demglasu.itm~     ~override~
-
-COPY ~spell_rev\spwi8##\spwi808.spl~     ~override~  // Moment of Prescience (replaces Improved Mantle)
-  SAY NAME1 @779    SAY UNIDENTIFIED_DESC @780
-COPY ~spell_rev\spwi8##\scrl9c.itm~     ~override~
-  SAY NAME2 @779    SAY IDENTIFIED_DESC   @780
-COPY ~spell_rev\spwi8##\dvwi808a.bam~     ~override~
-COPY ~spell_rev\spwi8##\dvwi808b.bam~     ~override~
-COPY ~spell_rev\spwi8##\dvwi808c.bam~     ~override~
+// Moment of Prescience (replaces Improved Mantle)
 APPEND ~spell.ids~ ~2808 WIZARD_MOMENT_OF_PRESCIENCE~
 
-COPY ~spell_rev\spwi8##\spwi809.spl~     ~override~  // Simbul's Spell Trigger (previously named Spell Trigger)
-  SAY NAME1 @781    SAY UNIDENTIFIED_DESC @782
-COPY ~spell_rev\spwi8##\scrl9d.itm~     ~override~
-  SAY NAME2 @781    SAY IDENTIFIED_DESC   @782
-COPY ~spell_rev\spwi8##\spwi809d.spl~     ~override~
-  SAY NAME1 @781
-
-ADD_PROJECTILE ~spell_rev\projectles\dvicloud.pro~
-COPY ~spell_rev\spwi8##\spwi810.spl~     ~override~  // Incendiary Cloud
-  SAY NAME1 @783    SAY UNIDENTIFIED_DESC @784
-  WRITE_SHORT 0x98 %dvicloud%
-  SET dvicloud -= 1
-APPEND ~clearair.2da~ ~Incendiary_Cloud                %dvicloud%~
-COPY ~spell_rev\spwi8##\scrl9e.itm~     ~override~
-  SAY NAME2 @783    SAY IDENTIFIED_DESC   @784
-COPY ~spell_rev\spwi8##\dvicloud.eff~     ~override~
-
-/* COPY_EXISTING ~GORLIC01.CRE~ ~override~  // Azamantes
-              ~GORSKU01.CRE~ ~override~  // Flaming Skull
-              ~HGSKU01.CRE~  ~override~  // Flaming Skull
-  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
-    LAUNCH_PATCH_FUNCTION ~ADD_CRE_IMMUNITY_TO_SPELL~
-      INT_VAR mi_strref = 0 // no text
-      STR_VAR mi_spell = ~SPWI810~ // incendiary cloud
-    END
-  END
-  BUT_ONLY */
-
-COPY ~spell_rev\spwi8##\spwi811.spl~     ~override~  // Symbol of Weakness (replaces Symbol, Fear)
-  SAY NAME1 @785    SAY UNIDENTIFIED_DESC @786
-COPY ~spell_rev\spwi8##\scrl9f.itm~     ~override~
-  SAY NAME2 @785    SAY IDENTIFIED_DESC   @786
-COPY ~spell_rev\shared\spwi899.spl~      ~override~ // Innate Symbol of Weakness
+// Symbol of Weakness (replaces Symbol, Fear)
 APPEND ~spell.ids~ ~2811 WIZARD_SYMBOL_WEAKNESS~
+// Innate Symbol of Weakness
+COPY ~spell_rev\shared\spwi899.spl~      ~override~
 
-COPY ~spell_rev\spwi8##\spwi812.spl~     ~override~  // Abi-Dalzim's Horrid Wilting
-  SAY NAME1 @787    SAY UNIDENTIFIED_DESC @788
-COPY ~spell_rev\spwi8##\scrl9g.itm~     ~override~
-  SAY NAME2 @787    SAY IDENTIFIED_DESC   @788
-COPY ~spell_rev\spwi8##\dvhorrid.eff~     ~override~
-
-COPY ~spell_rev\spwi8##\spwi813.spl~     ~override~  // Maze
-  SAY NAME1 @789    SAY UNIDENTIFIED_DESC @790
-COPY ~spell_rev\spwi8##\scrl9h.itm~     ~override~
-  SAY NAME2 @789    SAY IDENTIFIED_DESC   @790
-
-COPY ~spell_rev\spwi8##\spwi815.spl~     ~override~  // Power Word Blind
-  SAY NAME1 @791    SAY UNIDENTIFIED_DESC @792
-COPY ~spell_rev\spwi8##\scrl9j.itm~     ~override~
-  SAY NAME2 @791    SAY IDENTIFIED_DESC   @792
+//Projectile for power word blind not used; why is it being changed?
 COPY_EXISTING ~holdsumm.pro~ ~override~
   WRITE_SHORT 0x204 110
   WRITE_SHORT 0x206 110
 
-COPY ~spell_rev\spwi8##\spwi816.spl~     ~override~  // Symbol of Stunning
-  SAY NAME1 @793    SAY UNIDENTIFIED_DESC @794
-COPY ~spell_rev\spwi8##\scrlap.itm~     ~override~
-  SAY NAME2 @793    SAY IDENTIFIED_DESC   @794
-/* COPY ~spell_rev\shared\spwi898.spl~      ~override~ // Innate Symbol of Stunning */
+// Innate Symbol of Death.
+COPY ~spell_rev\shared\spwi897.spl~      ~override~
 
-COPY ~spell_rev\spwi8##\spwi817.spl~     ~override~  // Symbol of Death
-  SAY NAME1 @795    SAY UNIDENTIFIED_DESC @796
-COPY ~spell_rev\spwi8##\scrlao.itm~     ~override~
-  SAY NAME2 @795    SAY IDENTIFIED_DESC   @796
-COPY ~spell_rev\shared\spwi897.spl~      ~override~ // Innate Symbol of Death
-
-COPY ~spell_rev\spwi8##\spwi818.spl~     ~override~  // Bigby's Icy Grasp ("replaces" Clenched Fist)
-  SAY NAME1 @797    SAY UNIDENTIFIED_DESC @798
-COPY ~spell_rev\spwi8##\scrlb1.itm~     ~override~
-  SAY NAME2 @797    SAY IDENTIFIED_DESC   @798
-COPY ~spell_rev\spwi8##\spwi818d.spl~     ~override~
-COPY ~spell_rev\spwi8##\spwi818i.eff~     ~override~
+// Bigby's Icy Grasp ("replaces" Clenched Fist)
 APPEND ~spell.ids~ ~2818 WIZARD_BIGBYS_ICY_GRASP~
 
 //ADD_SPELL: Monster Summoning VIII
 ADD_SPELL ~spell_rev\spwi8##\spwi819.spl~ 2 8 ~WIZARD_MONSTER_SUMMONING_6~  // Monster Summoning VIII (new mage spell)
-  SAY NAME1 @868    SAY UNIDENTIFIED_DESC @869
-COPY ~spell_rev\spwi8##\scrl8c.itm~     ~override~ // replaces Stone to Flesh scroll
-  SAY NAME2 @868   SAY IDENTIFIED_DESC   @869
-COPY ~spell_rev\spwi8##\umbhulsu.eff~     ~override~
-COPY ~spell_rev\spwi8##\umbhulsu.cre~     ~override~
-  SAY NAME1 @3868
-  SAY NAME2 @3868
-COPY ~spell_rev\spwi8##\umbhulsu.itm~     ~override~
-COPY ~spell_rev\spwi8##\umbhulsu.bcs~     ~override~
-COPY ~spell_rev\spwi8##\dvwi819a.bam~     ~override~
-COPY ~spell_rev\spwi8##\dvwi819b.bam~     ~override~
-COPY ~spell_rev\spwi8##\dvwi819c.bam~     ~override~
 APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_6% WIZARD_MONSTER_SUMMONING_LEVEL_8~
-
 
 /*-----------------------level 9-----------------------*/
 

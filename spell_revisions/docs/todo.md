@@ -184,6 +184,26 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Summon Hakeashar: Make duration constant and fixed.
 
+## B. 8. Level 8.
+
+* Ghostform: review implementation.
+
+* Mind blank: review implementation.
+
+* Protection from Energy: review implementation, especially the spell protections list.
+
+* Summon Fiend: only description in.
+
+* Incendiary Cloud: deleted protection against giant. Protections against "fire giants and salamanders" not implemented yet. Reduced viasual sight penalty should be hidden inside a spell to set up protections properly (e.g. bat).
+
+* Power Word Blind: review spell protections; obscuring mist missing.
+
+* Bigby's Icy Grasp: only description in.
+
+* Summon Fiend: it is a fighter_mage_cleric so we need to set up third class in the cre tables. Immune to deafness but not mentioned in description. It's race is monster so animal summon buffs must exclude him explicitely. The detectable stuff in the immune to enchanted items +1 is most likely wrong so has tro be reviewed and changed.
+
+* Monster Summoning VII: only description in.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.
@@ -228,3 +248,5 @@ note(s):
 * Incorporate spell flag setting in the spell tables.
 
 * Revert names of sequencers to vanilla names? e. g. no "Simbul" and what not?
+
+* Review ranges of natural weapons.

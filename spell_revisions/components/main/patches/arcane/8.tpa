@@ -1,0 +1,89 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+
+
+//Load reference tables.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "8"
+    dir = "%resources%/2da/arcane"
+RET_ARRAY spells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION spell_trigger_d STR_VAR destination = "*" BEGIN
+    //Sanitize.
+    LPF get_spell_res STR_VAR spell = "WIZARD_SPELL_TRIGGER" RET res = resource END
+    PATCH_IF NOT (7 = STRING_LENGTH "%res%") BEGIN
+        PATCH_FAIL "spell_trigger_d: parent resource name '%res%' is not 7 characters long."
+    END
+
+    PATCH_IF NOT ("%destination%" STRING_EQUAL_CASE "%res%d") BEGIN
+        PATCH_FAIL "spell_trigger_d: resource name '%destination%' is not '%res%d'."
+    END
+
+    //Patch references.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 258                  //Activate sequencer.
+    STR_VAR
+        match_resource = "actv#res"
+        resource = "%res%"
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 172                  //Remove spell.
+    STR_VAR
+        match_resource = "rems#res"
+        resource = "%destination%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION summon_fiend STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_glabrezu"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION bigbys_icy_grasp_a STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "bigbys_icy_grasp_b"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION bigbys_icy_grasp STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "bigbys_icy_grasp_a"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION monster_summoning_8 STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_umber_hulk"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
