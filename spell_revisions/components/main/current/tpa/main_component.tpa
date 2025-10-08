@@ -1063,8 +1063,8 @@ APPEND ~spell.ids~ ~2818 WIZARD_BIGBYS_ICY_GRASP~
 ADD_SPELL ~spell_rev\spwi8##\spwi819.spl~ 2 8 ~WIZARD_MONSTER_SUMMONING_6~  // Monster Summoning VIII (new mage spell)
 APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_6% WIZARD_MONSTER_SUMMONING_LEVEL_8~
 
-/*-----------------------level 9-----------------------*/
 
+//Level 9.
 COPY ~spell_rev\spwi9##\spwi902.spl~     ~override~  // Spell Trap
   SAY NAME1 @811    SAY UNIDENTIFIED_DESC @812
 COPY ~spell_rev\spwi9##\scrl9l.itm~     ~override~

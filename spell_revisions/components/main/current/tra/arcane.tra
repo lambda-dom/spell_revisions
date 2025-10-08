@@ -101,8 +101,7 @@ This abjuration spell causes any spells cast against the wizard to be absorbed a
 
 This spell absorbs spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the wizard (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud).~
 
-/*------------------level 9------------------*/
-
+//Level 9.
 @811=~Spell Trap~
 @812=~Spell Trap
 Level: 9
