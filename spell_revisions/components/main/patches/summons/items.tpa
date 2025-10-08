@@ -18,6 +18,10 @@ LAF get_table_references STR_VAR
     dir = "%resources%/2da/summons"
 RET_ARRAY subspells = references END
 
+LAF get_table_references STR_VAR
+    tables = "5"
+    dir = "%resources%/2da/divine"
+RET_ARRAY divine_lvl5_spells = references END
 
 
 //Patches.
@@ -350,5 +354,28 @@ DEFINE_PATCH_FUNCTION umber_hulk_immunities STR_VAR destination = "*" BEGIN
         LPF append_item_block STR_VAR
             block = "%block%"
         END
+    END
+END
+
+DEFINE_PATCH_FUNCTION glabrezu_immunities STR_VAR destination = "*" BEGIN
+    PATCH_FOR_EACH block IN
+        "poison"
+        "confusion"
+        "stun"
+        "fear"
+    BEGIN
+        LPF append_item_block STR_VAR
+            block = "%block%"
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION glabrezu_pincers STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 232                  //Cast spell on condition.
+    STR_VAR
+        resource = "true_seeing_a"
+        match_resource = "spl#res"
+        references = "spells"
     END
 END

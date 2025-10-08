@@ -89,11 +89,12 @@ By means of this spell, the caster calls an outer planar creature to attack his 
 Glabrezu (15 Hit Dice):
 STR 20, DEX 10, CON 21, INT 16, WIS 17, CHA 16;  AL Chaotic Evil
 HP 160, AC -6, THAC0 1, Saving Throws 6/8/6/10/8
-4 Attacks Per Round, 2d6+12 Piercing Damage (Pincers & Claws +4)
+4 Attacks Per Round, 2d6 + 12 Piercing Damage (Pincers & Claws +4)
 
 Special Qualities:
-Immune to weapons lower than +2 enchantment
-Immune to confusion, fear, poison, & stun effects
+Immune to weapons of +1 enchantment and lower
+Immune to backstab
+Immune to poison, fear, confusion and stun effects
 Electrical Resistance 100%; Acid, Cold, & Fire Resistance 50%
 Magic Resistance 50%
 

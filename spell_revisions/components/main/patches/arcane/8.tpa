@@ -46,6 +46,17 @@ DEFINE_PATCH_FUNCTION spell_trigger_d STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION summon_fiend STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "summon_glabrezu"
+        ext = "eff"
+        match_resource = "summ#res"
+        references = "effects"
+    END
+END
+
 DEFINE_PATCH_FUNCTION bigbys_icy_grasp_a STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.

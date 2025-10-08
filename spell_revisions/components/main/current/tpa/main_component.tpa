@@ -1040,13 +1040,6 @@ APPEND ~spell.ids~ ~2802 WIZARD_MIND_BLANK~
 //Seemingly unused resource for simulacrum.
 COPY ~spell_rev\spwi8##\SIMULACR.SPL~     ~override~
 
-COPY ~spell_rev\spwi8##\spwi807.spl~     ~override~  // Summon Fiend
-  SAY NAME1 @777    SAY UNIDENTIFIED_DESC @778
-COPY ~spell_rev\spwi8##\demglasu.cre~     ~override~
-  SAY NAME1 @3777
-  SAY NAME2 @3777
-COPY ~spell_rev\spwi8##\demglasu.itm~     ~override~
-
 // Moment of Prescience (replaces Improved Mantle)
 APPEND ~spell.ids~ ~2808 WIZARD_MOMENT_OF_PRESCIENCE~
 
@@ -1055,29 +1048,19 @@ APPEND ~spell.ids~ ~2811 WIZARD_SYMBOL_WEAKNESS~
 // Innate Symbol of Weakness
 COPY ~spell_rev\shared\spwi899.spl~      ~override~
 
-
 //Projectile for power word blind not used; why is it being changed?
 COPY_EXISTING ~holdsumm.pro~ ~override~
   WRITE_SHORT 0x204 110
   WRITE_SHORT 0x206 110
 
-// Innate Symbol of Death
+// Innate Symbol of Death.
 COPY ~spell_rev\shared\spwi897.spl~      ~override~
 
 // Bigby's Icy Grasp ("replaces" Clenched Fist)
 APPEND ~spell.ids~ ~2818 WIZARD_BIGBYS_ICY_GRASP~
-COPY ~spell_rev\spwi8##\spwi818.spl~     ~override~
-  SAY NAME1 @797    SAY UNIDENTIFIED_DESC @798
-COPY ~spell_rev\spwi8##\spwi818d.spl~     ~override~
-COPY ~spell_rev\spwi8##\spwi818i.eff~     ~override~
 
 //ADD_SPELL: Monster Summoning VIII
 ADD_SPELL ~spell_rev\spwi8##\spwi819.spl~ 2 8 ~WIZARD_MONSTER_SUMMONING_6~  // Monster Summoning VIII (new mage spell)
-  SAY NAME1 @868    SAY UNIDENTIFIED_DESC @869
-COPY ~spell_rev\spwi8##\umbhulsu.cre~     ~override~
-  SAY NAME1 @3868
-  SAY NAME2 @3868
-COPY ~spell_rev\spwi8##\umbhulsu.itm~     ~override~
 APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_6% WIZARD_MONSTER_SUMMONING_LEVEL_8~
 
 /*-----------------------level 9-----------------------*/

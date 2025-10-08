@@ -200,6 +200,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Bigby's Icy Grasp: only description in.
 
+* Summon Fiend: it is a fighter_mage_cleric so we need to set up third class in the cre tables. Immune to deafness but not mentioned in description. It's race is monster so animal summon buffs must exclude him explicitely. The detectable stuff in the immune to enchanted items +1 is most likely wrong so has tro be reviewed and changed.
+
 * Monster Summoning VII: only description in.
 
 # C. General.

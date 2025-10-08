@@ -239,6 +239,8 @@ note(s):
 
 * Moment of Prescience: there is an ac vs. all bonus 10 contradicting the 20 bonus. Is this a mistake? For now assuming yes.
 
+* Summon Fiend: Glabrezu pincers: damage bonus 4 -> 12. Creature: Hps 100 -> 160, thac0 8 -> 1, apr 3 -> 4
+
 * Bigby's Icy Grasp: range 35 -> 30.
 
 * Umber Hulk: Claws: damage bonus 3 -> 11. Creature: dice 7 -> 8, thac0 13 -> 6. Undocumented physical resistances 5 (missile 100) -> 0.
