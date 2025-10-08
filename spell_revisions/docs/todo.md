@@ -250,3 +250,5 @@ note(s):
 * Revert names of sequencers to vanilla names? e. g. no "Simbul" and what not?
 
 * Review ranges of natural weapons.
+
+* Review resource usage in scripts -- NI throws a warning on not found resources.

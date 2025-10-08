@@ -1,3 +1,150 @@
 //Description strings.
 //Arcane spells.
 //Level 9.
+//non-existent:spwi901
+//spell_trap:spwi902
+@9020 = "Spell Trap"
+@9021 = "Spell Trap
+Level: 9
+School: Abjuration
+Range: Personal
+Duration: 2 turns
+Casting Time: 1 round
+Area of Effect: Caster
+Saving Throw: None
+
+This abjuration spell causes any spells cast against the wizard to be absorbed and consumed. This affects a total of 99 spell levels, but having 1 level left of protection means a 1st level spell would get absorbed, as well as a 9th level spell. This spell will not protect the caster from a dispel magic. However, it will not be affected by a dispel magic, either."
+
+//spellstrike:spwi903
+@9030 = "Spellstrike"
+@9031 = "Spellstrike
+Level: 9
+School: Abjuration
+Range: Long
+Duration: Special
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, it will dispel all spell protections on the target. In addition, affected creature will suffer from 100% spell failure rate in the first round, followed by 50% spell failure in the second round. Magic resistance does not affect this spell.
+
+The spell protection spells dispelled by Spellstrike are: Minor Spell Deflection, Non-Detection, Minor Globe of Invulnerability, Spell Deflection, Dispelling Screen, Globe of Invulnerability, Greater Spell Deflection, Shield of the Archons, Mind Blank and Spell Trap."
+
+//non-existent:spwi904
+//gate:spwi905
+@9050 = "Gate"
+@9051 = "Gate
+Level: 9
+School: Conjuration
+Range: Medium
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster calls an outer planar creature to attack his foes and himself if not careful. The creature summoned in is a Pit Fiend, the most powerful specimen of the Baatezu. The creature cannot be directly controlled, but the summoner can attempt to compel the demon to perform a service for him for the duration of the spell. Charismatic and powerful casters may bind the creature's will, intelligent and wise ones may negotiate with it, but dealing with these demonic creatures is always dangerous, and sometimes it may lead to disaster. Mages are warned to be careful of this spell, for a mistreated Pit Fiend will turn on his summoner at the first available opportunity, tear him and his companions apart piece by piece and then feast on the remains.
+
+Pit Fiend (20 Hit Dice):
+STR 24, DEX 16, CON 19, INT 20, WIS 16, CHA 25;  AL Lawful Evil
+HP 170, AC -8, THAC0 -7, Saving Throws 4/6/4/8/6
+5 Attacks Per Round, 2d6+16 Piercing Damage (Claws, Bite and Tail +4)
+
+Combat Abilities (20% chance each):
+Disease: creatures struck by a pit fiend's bite attack must save vs. death at -4 or be infected with a vile disease known as devil chills, losing 2 points of strength after an incubation period of 12 hours
+Poison: a pit fiend's bite injects a lethal poison which inflicts 10 points of damage every second for 2 rounds unless a save vs. poison at -4 penalty is made
+Constrict: creatures struck by the pit fiend's tail must save vs. death at -4 to avoid being stunned for 1 round
+
+Special Qualities:
+Immune to weapons lower than +3 enchantment
+Immune to confusion, fear, poison and stun effects
+Regeneration: 2hp/round
+Fire Resistance 100%; Cold Resistance 50%; Magic Resistance 65%
+
+Special Abilities:
+See Invisibility (permanent)
+Improved Invisibility (at will)
+Fireball (once every 5 rounds)
+Dispel Magic (once every 5 rounds)
+Symbol of Weakness (once every 5 rounds)
+Unholy Word (once per day)
+Meteor Swarm (once per day)"
+
+//non-existent:spwi906
+//absolute_immunity:spwi907
+@9070 = "Absolute Immunity"
+@9071 = "Absolute Immunity
+Level: 9
+School: Abjuration
+Range: Personal
+Duration: 4 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+When Absolute Immunity is cast, the caster gains complete invulnerability to physical and magical damage. This spell is incredibly powerful, hence the short duration. Combined with a short casting time, these factors make the spell ideally suited for use in the thick of combat where buying a few seconds can mean the difference between life or death."
+
+//chain_contingency:spwi908
+@9080 = "Chain Contingency"
+@9081 = "Chain Contingency
+Level: 9
+School: Universal
+Range: Personal
+Duration: Special
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+Chain Contingency channels some of the magical energy of the mage and releases it only under certain circumstances. Basically, the mage chooses three spells, which will be released under certain conditions such as being hit by an enemy. When this condition occurs all three spells are cast immediately. Spells of up to 8th level may be used in the contingency."
+
+//time_stop:spwi909
+@9090 = "Time Stop"
+@9091 = "Time Stop
+Level: 9
+School: Alteration
+Range: Personal
+Duration: 3 rounds
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+Upon casting a Time Stop spell, the wizard causes the flow of time to stop in the entire area that the caster is currently in. Outside this area the sphere simply seems to shimmer for an instant. Inside the sphere, the caster is free to act for three rounds of apparent time. The wizard can move and act freely within the area where time is stopped, but all other creatures are frozen in their actions, for they are literally between ticks of the time clock. Nothing can enter the area of effect without being stopped in time also. When the spell duration ceases, everyone is again operating in normal time. All spells cast during the Time Stop will take effect immediately after time returns to normal."
+
+//imprisonment:spwi910
+@9100 = "Imprisonment"
+@9101 = "Imprisonment
+Level: 9
+School: Abjuration
+Range: Short
+Duration: Permanent
+Casting Time: 1 round
+Area of Effect: 1 creature
+Saving Throw: None
+
+When the Imprisonment spell is cast the target creature becomes entombed in a small sphere far beneath the surface of the earth in a state of suspended animation, conscious of its fate. The victim remains there unless the reverse of the spell, Freedom, is cast. Otherwise, the victim will remain imprisoned for 1 turn at the end of which it will die a horrible, despairing death by asphyxiation. If a Freedom spell is cast in the area where the creature was imprisoned then he will reappear exactly where he was last standing. Dispel magic will not free creatures trapped in this manner. The target's magic resistance, if any, does not affect this spell."
+
+//meteor_swarm:spwi911
+@9110 = "Meteor Swarm"
+@9111 = "Meteor Swarm
+Level: 9
+School: Evocation
+Range: Long
+Duration: Instant
+Casting Time: 1 round
+Area of Effect: 30' radius
+Saving Throw: Breath half
+
+Upon completion of this spell, a swarm of minute meteors bombards the affected area, dealing devastating damage to friend and foe. Any creature caught in the destructive path of the meteors will suffer 40d4 points of fire damage, with a save vs. breath at -4 allowed for half damage. The caster is well advised to be careful in his use of this spell. Magic resistance does not affect this spell."
+
+//power_word_kill:spwi912
+@9120 = "Power Word Kill"
+@9121 = "Power Word Kill
+Level: 9
+School: Enchantment
+Range: Long
+Duration: Instant
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Special
+
+When a Power Word Kill spell is uttered, one creature targeted by the caster is slain. Creatures who currently have 60 or more hit points can save vs. spell to avoid the effects, but those with 1 to 59 hit points are powerless to resist. Even if the creature's maximum hit points are higher than 60, its current hit points are used for this determination."
+

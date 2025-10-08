@@ -1067,58 +1067,39 @@ APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_6% WIZARD_MONSTER_SUMMONING_LEVEL_
 //Level 9.
 COPY ~spell_rev\spwi9##\spwi902.spl~     ~override~  // Spell Trap
   SAY NAME1 @811    SAY UNIDENTIFIED_DESC @812
-COPY ~spell_rev\spwi9##\scrl9l.itm~     ~override~
-  SAY NAME2 @811    SAY IDENTIFIED_DESC   @812
 
+//Projectile commented out in the original.
 /* ADD_PROJECTILE ~spell_rev\projectles\dvsplstr.pro~ */
 COPY ~spell_rev\spwi9##\spwi903.spl~     ~override~  // Spellstrike
   SAY NAME1 @813    SAY UNIDENTIFIED_DESC @814
-COPY ~spell_rev\spwi9##\scrl9m.itm~     ~override~
-  SAY NAME2 @813    SAY IDENTIFIED_DESC   @814
 
 COPY ~spell_rev\spwi9##\spwi905.spl~     ~override~  // Gate
   SAY NAME1 @815    SAY UNIDENTIFIED_DESC @816
-COPY ~spell_rev\spwi9##\scrl9n.itm~     ~override~
-  SAY NAME2 @815    SAY IDENTIFIED_DESC   @816
 COPY ~spell_rev\spwi9##\spgate.eff~     ~override~
 COPY ~spell_rev\spwi9##\dempitsu.cre~     ~override~
   SAY NAME1 @3815
   SAY NAME2 @3815
 COPY ~spell_rev\spwi9##\dempitsu.itm~     ~override~
-COPY ~spell_rev\spwi9##\dvpitsu.bcs~     ~override~
 
 COPY ~spell_rev\spwi9##\spwi907.spl~     ~override~  // Absolute Immunity
   SAY NAME1 @817    SAY UNIDENTIFIED_DESC @818
-COPY ~spell_rev\spwi9##\scrl9p.itm~     ~override~
-  SAY NAME2 @817    SAY IDENTIFIED_DESC   @818
 
 COPY ~spell_rev\spwi9##\spwi908.spl~     ~override~  // Chain Contingency
   SAY NAME1 @819    SAY UNIDENTIFIED_DESC @820
-COPY ~spell_rev\spwi9##\scrl9q.itm~     ~override~
-  SAY NAME2 @819    SAY IDENTIFIED_DESC   @820
 
 COPY ~spell_rev\spwi9##\spwi909.spl~     ~override~  // Time Stop
   SAY NAME1 @821    SAY UNIDENTIFIED_DESC @822
-COPY ~spell_rev\spwi9##\scrl9r.itm~     ~override~
-  SAY NAME2 @821    SAY IDENTIFIED_DESC   @822
 
 COPY ~spell_rev\spwi9##\spwi910.spl~     ~override~  // Imprisonment
   SAY NAME1 @823    SAY UNIDENTIFIED_DESC @824
-COPY ~spell_rev\spwi9##\scrl9s.itm~     ~override~
-  SAY NAME2 @823    SAY IDENTIFIED_DESC   @824
 
-ADD_PROJECTILE ~spell_rev\projectles\dvmswarm.pro~
 COPY ~spell_rev\spwi9##\spwi911.spl~     ~override~  // Meteor Swarm
   SAY NAME1 @825    SAY UNIDENTIFIED_DESC @826
   WRITE_SHORT 0x98 %dvmswarm%
-COPY ~spell_rev\spwi9##\scrl9t.itm~     ~override~
-  SAY NAME2 @825    SAY IDENTIFIED_DESC   @826
 COPY ~spell_rev\spwi9##\dvmeteor.vvc~     ~override~
 
 COPY ~spell_rev\spwi9##\spwi912.spl~     ~override~  // Power Word Kill
   SAY NAME1 @827    SAY UNIDENTIFIED_DESC @828
-COPY ~spell_rev\spwi9##\scrl9u.itm~     ~override~
-  SAY NAME2 @827    SAY IDENTIFIED_DESC   @828
 
 COPY ~spell_rev\spwi9##\spwi913.spl~     ~override~  // Wail of the Banshee
   SAY NAME1 @829    SAY UNIDENTIFIED_DESC @830
