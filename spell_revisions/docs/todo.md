@@ -202,13 +202,13 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Summon Fiend: it is a fighter_mage_cleric so we need to set up third class in the cre tables. Immune to deafness but not mentioned in description. It's race is monster so animal summon buffs must exclude him explicitely. The detectable stuff in the immune to enchanted items +1 is most likely wrong so has tro be reviewed and changed.
 
-* Monster Summoning VII: only description in.
-
 # C. General.
 
-* weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.
+* weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *?
 
-* Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
+* weidu_library stuff: cre tables need third_class and at least override and default scripts. General table code needs a third mode (code 2) for "must override": the resource is overriden and *must* exist (so an existence check is performed).
+
+* Handle replacements: for now, they are just new spells, but they should replace old versions which implies doing surgery on `spell.ids`. This needs weidu library support for the appropriate operations.
 
 * Cure line of spells: mention in description that it also cures intoxication.
 
