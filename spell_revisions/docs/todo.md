@@ -202,6 +202,20 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Summon Fiend: it is a fighter_mage_cleric so we need to set up third class in the cre tables. Immune to deafness but not mentioned in description. It's race is monster so animal summon buffs must exclude him explicitely. The detectable stuff in the immune to enchanted items +1 is most likely wrong so has tro be reviewed and changed.
 
+## B. 9. Level 9.
+
+* Gate: only description in.
+
+* Absolute Immunity: only description in.
+
+* Chain Contingency: probably discussed somewhere, but can we get rid of the seemingly useless cast spell opcode?
+
+* Imprisonment: only description in.
+
+* Meteor Swarm: what is the allow spotting (12) flag for? Should it be outdoors only?
+
+* Energy Drain: only description in.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *?
