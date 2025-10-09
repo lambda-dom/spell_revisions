@@ -183,6 +183,13 @@ WIZARD_TIME_STOP                        scrl9r      10      1
 WIZARD_IMPRISONMENT                     scrl9s      10      1
 WIZARD_METEOR_SWARM                     scrl9t      10      1
 WIZARD_POWER_WORD_KILL                  scrl9u      10      1
+WIZARD_WAIL_OF_THE_BANSHEE              scrl9v      10      1
+WIZARD_ENERGY_DRAIN                     scrl9w      10      1
+WIZARD_BLACK_BLADE_OF_DISASTER          scrl9x      10      1
+WIZARD_SHAPECHANGE                      scrl9y      10      1
+WIZARD_FREEDOM                          scrl9z      10      1
+WIZARD_BIGBYS_CRUSHING_HAND             scrlb2      10      1
+WIZARD_WISH                             scrlb4      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1
