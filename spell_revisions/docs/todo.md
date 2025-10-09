@@ -220,8 +220,6 @@ Not just things to (still) do but also proposed changes to spells.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *?
 
-* weidu_library stuff: cre tables need third_class and at least override and default scripts. General table code needs a third mode (code 2) for "must override": the resource is overriden and *must* exist (so an existence check is performed).
-
 * Handle replacements: for now, they are just new spells, but they should replace old versions which implies doing surgery on `spell.ids`. This needs weidu library support for the appropriate operations.
 
 * Cure line of spells: mention in description that it also cures intoxication.
