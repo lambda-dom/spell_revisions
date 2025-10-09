@@ -69,7 +69,7 @@ Symbol of Weakness (once every 5 rounds)
 Unholy Word (once per day)
 Meteor Swarm (once per day)"
 
-//non-existent:spwi906
+//non-existent, slated for monster_summoning_9:spwi906
 //absolute_immunity:spwi907
 @9070 = "Absolute Immunity"
 @9071 = "Absolute Immunity
