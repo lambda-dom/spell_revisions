@@ -252,3 +252,5 @@ note(s):
 * Review ranges of natural weapons.
 
 * Review resource usage in scripts -- NI throws a warning on not found resources.
+
+* Spell trap-like spells use a subspell to remove the resource when all the spell levels are removed. These should be overriden but this is the case only for spell trap.

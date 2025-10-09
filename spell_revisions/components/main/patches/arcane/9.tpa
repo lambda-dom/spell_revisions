@@ -17,3 +17,23 @@ RET_ARRAY spells = references END
 
 
 //Patches.
+DEFINE_PATCH_FUNCTION spell_trap_b STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 321                  //Remove effects by resource.
+    STR_VAR
+        resource = "spell_trap"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION spell_trap STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 201                  //Spell deflection.
+    STR_VAR
+        resource = "spell_trap_b"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+

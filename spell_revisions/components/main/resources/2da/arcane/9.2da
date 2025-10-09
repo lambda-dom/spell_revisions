@@ -1,4 +1,6 @@
 2DA V1.0
 *
-            install name    descr   type    lvl flags       school      sectype     book_icon                   abil_icon                   projectile  range   speed   patch   over    destination
-ghostform   1       8010    8011    wizard  8   00000000    transmuter  combination #suf:c:WIZARD_WRAITHFORM    #suf:b:WIZARD_WRAITHFORM    *           1       8       *       1       #spl:WIZARD_GHOSTFORM
+                install name    descr   type    lvl flags       school      sectype             book_icon                   abil_icon                   projectile          range   speed   patch           over    destination
+spell_trap_b    1       *       *       special 1   00000000    abjurer     spellprotections    *                           *                           *                   1       1       spell_trap_b    1       #suf:b:WIZARD_SPELL_TRAP
+spell_trap      1       9020    9021    wizard  9   00000000    abjurer     spellprotections    #suf:c:WIZARD_SPELL_TRAP    #suf:b:WIZARD_SPELL_TRAP    *                   1       9       spell_trap      1       #spl:WIZARD_SPELL_TRAP
+spellstrike     1       9030    9031    wizard  9   01000000    abjurer     magicattack         #suf:c:WIZARD_SPELLSTRIKE   #suf:b:WIZARD_SPELLSTRIKE   #lbl:spell_attack   30      5       *               1       #spl:WIZARD_SPELLSTRIKE
