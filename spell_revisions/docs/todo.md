@@ -200,7 +200,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Bigby's Icy Grasp: only description in.
 
-* Summon Fiend: it is a fighter_mage_cleric so we need to set up third class in the cre tables. Immune to deafness but not mentioned in description. It's race is monster so animal summon buffs must exclude him explicitely. The detectable stuff in the immune to enchanted items +1 is most likely wrong so has tro be reviewed and changed.
+* Summon Fiend: Immune to deafness but not mentioned in description. It's race is monster so animal summon buffs must exclude him explicitely. The detectable stuff in the immune to enchanted items +1 is most likely wrong so has to be reviewed and changed.
 
 ## B. 9. Level 9.
 
@@ -266,3 +266,7 @@ note(s):
 * Review resource usage in scripts -- NI throws a warning on not found resources.
 
 * Spell trap-like spells use a subspell to remove the resource when all the spell levels are removed. These should be overriden but this is the case only for spell trap.
+
+* Cre tables updated but no script data in yet.
+
+* change elemental names lesser_air_elemental -> air_elemental_lesser, etc.
