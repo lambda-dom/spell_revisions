@@ -210,7 +210,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Chain Contingency: probably discussed somewhere, but can we get rid of the seemingly useless cast spell opcode?
 
-* Imprisonment: only description in.
+* Imprisonment: sectype patching not in yet.
 
 * Meteor Swarm: what is the allow spotting (12) flag for? Should it be outdoors only?
 
