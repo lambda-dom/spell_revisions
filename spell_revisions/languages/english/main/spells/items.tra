@@ -105,3 +105,7 @@
 //Level 5.
 @2500 = "Phantom Blade"
 @2501 = "This longsword was created by the Phantom Blade spell."
+
+//Level 9.
+@2900 = "Black Blade of Disaster"
+@2901 = "This longsword was created by the Black Blade of Disaster spell."
