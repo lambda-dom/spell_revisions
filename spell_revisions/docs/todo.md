@@ -206,7 +206,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Gate: only description in.
 
-* Absolute Immunity: only description in.
+* Absolute Immunity: review spell protection list.
 
 * Chain Contingency: probably discussed somewhere, but can we get rid of the seemingly useless cast spell opcode?
 
