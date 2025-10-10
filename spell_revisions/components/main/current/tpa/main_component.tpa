@@ -1065,13 +1065,8 @@ APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_6% WIZARD_MONSTER_SUMMONING_LEVEL_
 
 
 //Level 9.
-COPY ~spell_rev\spwi9##\spwi902.spl~     ~override~  // Spell Trap
-  SAY NAME1 @811    SAY UNIDENTIFIED_DESC @812
-
 //Projectile commented out in the original.
 /* ADD_PROJECTILE ~spell_rev\projectles\dvsplstr.pro~ */
-COPY ~spell_rev\spwi9##\spwi903.spl~     ~override~  // Spellstrike
-  SAY NAME1 @813    SAY UNIDENTIFIED_DESC @814
 
 COPY ~spell_rev\spwi9##\spwi905.spl~     ~override~  // Gate
   SAY NAME1 @815    SAY UNIDENTIFIED_DESC @816
@@ -1080,33 +1075,6 @@ COPY ~spell_rev\spwi9##\dempitsu.cre~     ~override~
   SAY NAME1 @3815
   SAY NAME2 @3815
 COPY ~spell_rev\spwi9##\dempitsu.itm~     ~override~
-
-COPY ~spell_rev\spwi9##\spwi907.spl~     ~override~  // Absolute Immunity
-  SAY NAME1 @817    SAY UNIDENTIFIED_DESC @818
-
-COPY ~spell_rev\spwi9##\spwi908.spl~     ~override~  // Chain Contingency
-  SAY NAME1 @819    SAY UNIDENTIFIED_DESC @820
-
-COPY ~spell_rev\spwi9##\spwi909.spl~     ~override~  // Time Stop
-  SAY NAME1 @821    SAY UNIDENTIFIED_DESC @822
-
-COPY ~spell_rev\spwi9##\spwi910.spl~     ~override~  // Imprisonment
-  SAY NAME1 @823    SAY UNIDENTIFIED_DESC @824
-
-COPY ~spell_rev\spwi9##\spwi911.spl~     ~override~  // Meteor Swarm
-  SAY NAME1 @825    SAY UNIDENTIFIED_DESC @826
-  WRITE_SHORT 0x98 %dvmswarm%
-COPY ~spell_rev\spwi9##\dvmeteor.vvc~     ~override~
-
-COPY ~spell_rev\spwi9##\spwi912.spl~     ~override~  // Power Word Kill
-  SAY NAME1 @827    SAY UNIDENTIFIED_DESC @828
-
-COPY ~spell_rev\spwi9##\spwi913.spl~     ~override~  // Wail of the Banshee
-  SAY NAME1 @829    SAY UNIDENTIFIED_DESC @830
-
-COPY ~spell_rev\spwi9##\spwi914.spl~     ~override~  // Larloch's Energy Drain
-  SAY NAME1 @831    SAY UNIDENTIFIED_DESC @832
-COPY ~spell_rev\spwi9##\dvenerdr.eff~     ~override~
 
 COPY ~spell_rev\spwi9##\spwi915.spl~     ~override~  // Black Blade of Disaster
   SAY NAME1 @833    SAY UNIDENTIFIED_DESC @834

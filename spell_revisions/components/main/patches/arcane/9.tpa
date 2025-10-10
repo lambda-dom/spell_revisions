@@ -9,6 +9,10 @@ LAF get_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
+LAF get_table_references STR_VAR
+    tables = "vvcs"
+RET_ARRAY vvcs = references END
+
 LAF get_component_resources_dir RET resources = dir END
 LAF get_table_references STR_VAR
     tables = "9"
@@ -37,3 +41,12 @@ DEFINE_PATCH_FUNCTION spell_trap STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION meteor_swarm STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215                  //Play visual effect.
+    STR_VAR
+        resource = "meteor_swarm"
+        match_resource = "vvc#res"
+        references = "vvcs"
+    END
+END
