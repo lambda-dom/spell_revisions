@@ -270,3 +270,5 @@ note(s):
 * Cre tables updated but no script data in yet.
 
 * change elemental names lesser_air_elemental -> air_elemental_lesser, etc.
+
+* Energy Drain: protection from level drain does not block the bonuses to self; first move these bonuses to subspell then find a way to block them if *target* has level drain protection.
