@@ -214,7 +214,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Meteor Swarm: what is the allow spotting (12) flag for? Should it be outdoors only?
 
-* Energy Drain: only description in.
+* Energy Drain: protection from level drain does not block the bonuses to self; first move these bonuses to subspell then find a way to block them if *target* has level drain protection.
+
+* Freedom: review spell removal and cures; sectype patching not in yet.
 
 # C. General.
 
@@ -270,5 +272,3 @@ note(s):
 * Cre tables updated but no script data in yet.
 
 * change elemental names lesser_air_elemental -> air_elemental_lesser, etc.
-
-* Energy Drain: protection from level drain does not block the bonuses to self; first move these bonuses to subspell then find a way to block them if *target* has level drain protection.

@@ -1076,11 +1076,6 @@ COPY ~spell_rev\spwi9##\dempitsu.cre~     ~override~
   SAY NAME2 @3815
 COPY ~spell_rev\spwi9##\dempitsu.itm~     ~override~
 
-COPY ~spell_rev\spwi9##\spwi915.spl~     ~override~  // Black Blade of Disaster
-  SAY NAME1 @833    SAY UNIDENTIFIED_DESC @834
-COPY ~spell_rev\spwi9##\blakblad.itm~     ~override~
-COPY ~spell_rev\spwi9##\blakblad.spl~     ~override~
-
 COPY ~spell_rev\spwi9##\spwi916.spl~     ~override~  // Shapechange
   SAY NAME1 @835    SAY UNIDENTIFIED_DESC @836
 COPY ~spell_rev\spwi9##\spwi971.itm~     ~override~
@@ -1101,9 +1096,6 @@ COPY ~spell_rev\spwi9##\spwi975.spl~     ~override~
 COPY ~spell_rev\spwi9##\spwi976.spl~     ~override~
   PATCH_IF GAME_IS ~iwdee~ BEGIN SAY NAME1 @21011 END
 COPY ~spell_rev\spwi9##\spwi976.itm~     ~override~
-
-COPY ~spell_rev\spwi9##\spwi917.spl~     ~override~  // Freedom
-  SAY NAME1 @837 SAY UNIDENTIFIED_DESC @838
 
 COPY ~spell_rev\spwi9##\spwi918.spl~     ~override~  // Bigby's Crushing Hand
   SAY NAME1 @839    SAY UNIDENTIFIED_DESC @840
