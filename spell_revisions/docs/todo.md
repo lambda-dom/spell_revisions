@@ -218,6 +218,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Freedom: review spell removal and cures; sectype patching not in yet.
 
+* Bigby's Crushing Hand: move stun to a subspell.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *?
