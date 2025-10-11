@@ -180,7 +180,7 @@ DEFINE_PATCH_FUNCTION ghoul_touch_itm STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION phantom_blade_itm STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION phantom_blade STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 177                  //Use eff.
     STR_VAR
@@ -188,5 +188,15 @@ DEFINE_PATCH_FUNCTION phantom_blade_itm STR_VAR destination = "*" BEGIN
         ext = "eff"
         match_resource = "damg#res"
         references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION black_blade_disaster STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "black_blade_disaster"
+        match_resource = "blad#res"
+        references = "spells"
     END
 END

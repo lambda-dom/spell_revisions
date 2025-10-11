@@ -357,7 +357,7 @@ DEFINE_PATCH_FUNCTION umber_hulk_immunities STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION glabrezu_immunities STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION demon_immunities STR_VAR destination = "*" BEGIN
     PATCH_FOR_EACH block IN
         "poison"
         "confusion"

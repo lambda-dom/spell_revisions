@@ -200,15 +200,31 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Bigby's Icy Grasp: only description in.
 
-* Summon Fiend: it is a fighter_mage_cleric so we need to set up third class in the cre tables. Immune to deafness but not mentioned in description. It's race is monster so animal summon buffs must exclude him explicitely. The detectable stuff in the immune to enchanted items +1 is most likely wrong so has tro be reviewed and changed.
+* Summon Fiend: Immune to deafness but not mentioned in description. It's race is monster so animal summon buffs must exclude him explicitely. The detectable stuff in the immune to enchanted items +1 is most likely wrong so has to be reviewed and changed.
 
-* Monster Summoning VII: only description in.
+## B. 9. Level 9.
+
+* Gate: Move effects of tail to subspells.
+
+* Absolute Immunity: review spell protection list.
+
+* Chain Contingency: probably discussed somewhere, but can we get rid of the seemingly useless cast spell opcode?
+
+* Imprisonment: sectype patching not in yet.
+
+* Meteor Swarm: what is the allow spotting (12) flag for? Should it be outdoors only?
+
+* Energy Drain: protection from level drain does not block the bonuses to self; first move these bonuses to subspell then find a way to block them if *target* has level drain protection.
+
+* Freedom: review spell removal and cures; sectype patching not in yet.
+
+* Bigby's Crushing Hand: move stun to a subspell.
 
 # C. General.
 
-* weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *.
+* weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *?
 
-* Handle replacements: for now, they are just new spells, but they should replace old which implies doing surgery on `spell.ids`.
+* Handle replacements: for now, they are just new spells, but they should replace old versions which implies doing surgery on `spell.ids`. This needs weidu library support for the appropriate operations.
 
 * Cure line of spells: mention in description that it also cures intoxication.
 
@@ -250,3 +266,11 @@ note(s):
 * Revert names of sequencers to vanilla names? e. g. no "Simbul" and what not?
 
 * Review ranges of natural weapons.
+
+* Review resource usage in scripts -- NI throws a warning on not found resources.
+
+* Spell trap-like spells use a subspell to remove the resource when all the spell levels are removed. These should be overriden but this is the case only for spell trap.
+
+* Cre tables updated but no script data in yet.
+
+* change elemental names lesser_air_elemental -> air_elemental_lesser, etc.

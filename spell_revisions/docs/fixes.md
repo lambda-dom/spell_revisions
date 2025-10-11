@@ -244,3 +244,7 @@ note(s):
 * Bigby's Icy Grasp: range 35 -> 30.
 
 * Umber Hulk: Claws: damage bonus 3 -> 11. Creature: dice 7 -> 8, thac0 13 -> 6. Undocumented physical resistances 5 (missile 100) -> 0.
+
+## B. 9. Level 9.
+
+* Pit Fiend: review fire spell protections on weapon (and maybe move them to ring). Damage bonus 4 -> 16. Fix probabilities out of whack, duration of disease display string. Change constrict save to vs. breath. Creature: hps 120 -> 170, ac -6 -> -7, thac0 5 -> -7, apr 4 -> 5.
