@@ -47,15 +47,16 @@ By means of this spell, the caster calls an outer planar creature to attack his 
 Pit Fiend (20 Hit Dice):
 STR 24, DEX 16, CON 19, INT 20, WIS 16, CHA 25;  AL Lawful Evil
 HP 170, AC -8, THAC0 -7, Saving Throws 4/6/4/8/6
-5 Attacks Per Round, 2d6+16 Piercing Damage (Claws, Bite and Tail +4)
+5 Attacks Per Round, 2d6 + 16 Piercing Damage (Claws, Bite and Tail +4)
 
-Combat Abilities (20% chance each):
-Disease: creatures struck by a pit fiend's bite attack must save vs. death at -4 or be infected with a vile disease known as devil chills, losing 2 points of strength after an incubation period of 12 hours
+Combat Abilities (33% chance each):
+Disease: creatures struck by a pit fiend's claws must save vs. death at -4 or be infected with a vile disease known as devil chills, losing 2 points of strength after an incubation period of 12 hours
 Poison: a pit fiend's bite injects a lethal poison which inflicts 10 points of damage every second for 2 rounds unless a save vs. poison at -4 penalty is made
-Constrict: creatures struck by the pit fiend's tail must save vs. death at -4 to avoid being stunned for 1 round
+Constrict: creatures struck by the pit fiend's tail must save vs. breath at -4 to avoid being stunned for 1 round
 
 Special Qualities:
-Immune to weapons lower than +3 enchantment
+Immune to weapons of +2 enchantment and lower
+Immune to backstab
 Immune to confusion, fear, poison and stun effects
 Regeneration: 2hp/round
 Fire Resistance 100%; Cold Resistance 50%; Magic Resistance 65%

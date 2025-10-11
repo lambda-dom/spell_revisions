@@ -204,7 +204,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 9. Level 9.
 
-* Gate: only description in.
+* Gate: Move effects of tail to subspells.
 
 * Absolute Immunity: review spell protection list.
 

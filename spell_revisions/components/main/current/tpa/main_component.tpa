@@ -1068,14 +1068,6 @@ APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_6% WIZARD_MONSTER_SUMMONING_LEVEL_
 //Projectile commented out in the original.
 /* ADD_PROJECTILE ~spell_rev\projectles\dvsplstr.pro~ */
 
-COPY ~spell_rev\spwi9##\spwi905.spl~     ~override~  // Gate
-  SAY NAME1 @815    SAY UNIDENTIFIED_DESC @816
-COPY ~spell_rev\spwi9##\spgate.eff~     ~override~
-COPY ~spell_rev\spwi9##\dempitsu.cre~     ~override~
-  SAY NAME1 @3815
-  SAY NAME2 @3815
-COPY ~spell_rev\spwi9##\dempitsu.itm~     ~override~
-
 COPY ~spell_rev\spwi9##\spwi916.spl~     ~override~  // Shapechange
   SAY NAME1 @835    SAY UNIDENTIFIED_DESC @836
 COPY ~spell_rev\spwi9##\spwi971.itm~     ~override~
