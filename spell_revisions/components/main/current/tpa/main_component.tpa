@@ -1097,14 +1097,10 @@ COPY ~spell_rev\spwi9##\spwi976.spl~     ~override~
   PATCH_IF GAME_IS ~iwdee~ BEGIN SAY NAME1 @21011 END
 COPY ~spell_rev\spwi9##\spwi976.itm~     ~override~
 
-COPY ~spell_rev\spwi9##\spwi918.spl~     ~override~  // Bigby's Crushing Hand
-  SAY NAME1 @839    SAY UNIDENTIFIED_DESC @840
-COPY ~spell_rev\spwi9##\spwi918d.spl~     ~override~
+// Mass Breach aux spell for wish.
+COPY ~spell_rev\spwi9##\spwish38.spl~     ~override~
 
-COPY ~spell_rev\spwi9##\spwi919.spl~     ~override~  // Wish
-  SAY NAME1 @841    SAY UNIDENTIFIED_DESC @842
-COPY ~spell_rev\spwi9##\spwish38.spl~     ~override~  // Mass Breach
-
+// unknown resource copied right below wish.
 COPY ~spell_rev\spwi9##\p3-12m4.itm~     ~override~
 
 /*
