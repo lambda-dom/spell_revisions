@@ -12,4 +12,7 @@ LAF add_spell_symbols STR_VAR
     table = "%resources%/2da/spell_symbols/additions.2da"
 END
 
-//spell.ids surgery.
+//Move spell symbols in level.
+LAF change_spell_symbols STR_VAR
+    table = "%resources%/2da/spell_symbols/changes.2da"
+END

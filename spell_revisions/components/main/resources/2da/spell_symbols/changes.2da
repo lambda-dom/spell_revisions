@@ -1,0 +1,13 @@
+2DA V1.0
+*
+                                    install type    level
+CLERIC_GOOD_BERRIES                 1       priest  1
+CLERIC_CURE_SERIOUS_WOUNDS          0       priest  3
+CLERIC_CAUSE_SERIOUS_WOUNDS         0       priest  3
+CLERIC_CURE_CRITICAL_WOUNDS         0       priest  4
+CLERIC_CAUSE_CRITICAL_WOUNDS        0       priest  4
+CLERIC_PROTECTION_FROM_FIRE         0       priest  5
+CLERIC_PROTECTION_FROM_LIGHTNING    0       priest  5
+CLERIC_CONJURE_EARTH_ELEMENTAL      0       priest  6
+WIZARD_KNOW_ALIGNMENT               0       wizard  1
+WIZARD_SPELL_DEFLECTION             0       wizard  5

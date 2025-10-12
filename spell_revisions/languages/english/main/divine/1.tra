@@ -29,7 +29,6 @@ Saving Throw: Spell negates
 This spell enables the priest to command another creature to lie down and take no action (sleep) for a single round. The creature has a saving throw penalty of -1 (to save against this spell) for every two extra levels of the caster, to a maximum of -4 at 9th level."
 
 //cure_light_wounds:sppr103
-//TODO: spell also cures intoxication, but not mentioned in description.
 @1030 = "Cure Light Wounds"
 @1031 = "Cure Light Wounds
 Level: 1
@@ -155,7 +154,7 @@ Saving Throw: None
 
 The caster of the Armor of Faith receives significant protection against physical and magic damage. This magical armor is a force of energy that absorbs a portion of the damage intended for the caster, effectively reducing the damage sustained by 10%. Multiple castings of this spell are not cumulative."
 
-//Circle of Protection:sppr112
+//non-existent:sppr112; CLERIC_CIRCLE_OF_PROTECTION in spell.ids.
 //doom:sppr113
 @1130 = "Doom"
 @1131 = "Doom
@@ -170,12 +169,13 @@ Saving Throw: Spell negates
 
 This spell causes a feeling of doom to overwhelm the target. For the duration of the spell, the target receives a -2 penalty to attack rolls, damage rolls, and saving throws unless a save vs. spell is made. The creature has a saving throw penalty of -1 (to save against this spell) for every two extra levels of the caster, to a maximum of -4 at 9th level. Multiple castings of this spell are not cumulative."
 
-//sppr114: Animal Friendship
-//sppr115: Endure Heat and Cold
+//non-existent:sppr114; CLERIC_ANIMAL_FRIENDSHIP in spell.ids
+//non-existent:sppr115; CLERIC_ENDURE_HEAT_COLD in spell.ids
+
 //New spells.
 //New divine spells.
-@1510 = ~Strength of Stone~
-@1511 = ~Strength of Stone
+@1510 = "Strength of Stone"
+@1511 = "Strength of Stone
 Level: 1
 School: Alteration
 Sphere: Elemental (Earth)
@@ -185,7 +185,7 @@ Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None
 
-Calling upon the strength of the earth, the druid gains some of the solidity and strength of stone. This spell sets the strength of the character to 18 and then adds 50 exceptional strength on top of this. The character receives any strength bonuses appropriate. For example, if a character has between 18/50 and 18/00 strength, then his strength will just be set to 18/00. If a character has a strength between 18/01 and 18/50, then his strength will become 18/50 + original percentage. If his strength is less then 18, then it will just become 18/50. However, this spell will actually lower a character's strength if it is already 19 or more. For the duration of the spell, the caster also becomes immune to everything, magical or otherwise, that pushes him away (e.g. wing buffets, gusts of wind, telekinesis, etc.), but will move at a reduced speed.~
+Calling upon the strength of the earth, the druid gains some of the solidity and strength of stone. This spell sets the strength of the character to 18 and then adds 50 exceptional strength on top of this. The character receives any strength bonuses appropriate. For example, if a character has between 18/50 and 18/00 strength, then his strength will just be set to 18/00. If a character has a strength between 18/01 and 18/50, then his strength will become 18/50 + original percentage. If his strength is less then 18, then it will just become 18/50. However, this spell will actually lower a character's strength if it is already 19 or more. For the duration of the spell, the caster also becomes immune to everything, magical or otherwise, that pushes him away (e.g. wing buffets, gusts of wind, telekinesis, etc.), but will move at a reduced speed."
 
 @1520 = "Sunscorch"
 @1521 = "Sunscorch
@@ -285,6 +285,7 @@ Special Qualities:
   Blindsense: relies on echolocation to fight in conditions of poor light or total darkness, ignoring the penalties associated with blindness
 "
 
+//Moved from spwi207 to new level.
 @1580 = "Goodberry"
 @1581 = "Goodberry
 Level: 1
