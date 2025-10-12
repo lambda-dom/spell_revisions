@@ -42,7 +42,7 @@ Saving Throw: None
 
 When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 1d8 + 1/level points of damage sustained by the target creature, up to a maximum of 1d8 + 10."
 
-//detect_alignment:sppr104
+//detect_alignment:sppr104, CLERIC_DETECT_EVIL in spell.ids.
 @1040 = "Detect Alignment"
 @1041 = "Detect Alignment
 Level: 1
@@ -285,7 +285,7 @@ Special Qualities:
   Blindsense: relies on echolocation to fight in conditions of poor light or total darkness, ignoring the penalties associated with blindness
 "
 
-//Moved from spwi207 to new level.
+//Moved from level 2.
 @1580 = "Goodberry"
 @1581 = "Goodberry
 Level: 1

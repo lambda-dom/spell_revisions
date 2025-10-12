@@ -16,3 +16,8 @@ END
 LAF change_spell_symbols STR_VAR
     table = "%resources%/2da/spell_symbols/changes.2da"
 END
+
+//Replace spell seymbols.
+LAF replace_spell_symbols STR_VAR
+    table = "%resources%/2da/spell_symbols/replaces.2da"
+END
