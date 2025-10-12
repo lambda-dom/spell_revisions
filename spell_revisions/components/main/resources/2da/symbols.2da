@@ -18,7 +18,6 @@ CLERIC_ANIMAL_SUMMONING_LEVEL_2         1       priest  2       *       0       
 CLERIC_BREAK_ENCHANTMENT                1       priest  3       *       0           *
 CLERIC_CONTAGION                        1       priest  3       *       0           *
 CLERIC_GUST_OF_WIND                     1       priest  3       *       0           *
-CLERIC_CAUSE_SERIOUS_WOUNDS             0       priest  3       *       0           *
 CLERIC_MAGIC_FANG                       1       priest  3       *       0           *
 CLERIC_STORM_SHIELD                     1       priest  3       *       0           *
 CLERIC_SPIKE_GROWTH                     1       priest  3       *       0           *
@@ -26,7 +25,6 @@ CLERIC_ICELANCE                         1       priest  3       *       0       
 CLERIC_REGENERATE_SERIOUS_WOUNDS        1       priest  3       *       0           *
 CLERIC_ANIMAL_SUMMONING_LEVEL_3         1       priest  3       *       0           *
 CLERIC_ANIMAL_SUMMONING_LEVEL_4         1       priest  4       *       0           *
-CLERIC_CAUSE_CRITICAL_WOUNDS            0       priest  4       *       0           *
 CLERIC_ICE_STORM                        1       priest  4       *       0           *
 CLERIC_REGENERATE_CRITICAL_WOUNDS       1       priest  4       *       0           *
 CLERIC_REPULSION                        1       priest  5       *       0           *
@@ -34,9 +32,7 @@ CLERIC_CURE_MORTAL_WOUNDS               1       priest  5       *       0       
 CLERIC_ANIMAL_SUMMONING_LEVEL_5         1       priest  5       *       0           *
 CLERIC_CAUSE_MORTAL_WOUNDS              1       priest  5       *       0           *
 CLERIC_POLYMORPH_OTHER                  1       priest  5       *       0           *
-CLERIC_PROTECTION_FROM_FIRE             0       priest  5       *       0           *
 CLERIC_PROTECTION_FROM_COLD             1       priest  5       *       0           *
-CLERIC_PROTECTION_FROM_LIGHTNING        0       priest  5       *       0           *
 CLERIC_PROTECTION_FROM_ACID             1       priest  5       *       0           *
 CLERIC_PROTECTION_FROM_ELEMENTAL_ENERGY 0       priest  5       *       0           *
 CLERIC_MASS_REGENERATE                  1       priest  5       *       0           *
