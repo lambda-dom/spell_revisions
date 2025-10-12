@@ -48,11 +48,11 @@ CLERIC_SUMMON_DEATH_KNIGHT              0       priest  7       *
 CLERIC_SYMBOL_WEAKNESS                  0       priest  7       *
 CLERIC_CHAOS                            0       priest  7       *
 CLERIC_ANIMAL_SUMMONING_LEVEL_7         0       priest  7       *
-WIZARD_OBSCURING_MIST                   0       wizard  1       *
-WIZARD_EXPEDITIOUS_RETREAT              0       wizard  1       *
-WIZARD_TRUE_STRIKE                      0       wizard  1       *
-WIZARD_DIMENSION_JUMP                   0       wizard  1       *
-WIZARD_MONSTER_SUMMONING_LEVEL_1        0       wizard  1       *
+WIZARD_OBSCURING_MIST                   1       wizard  1       *
+WIZARD_EXPEDITIOUS_RETREAT              1       wizard  1       *
+WIZARD_TRUE_STRIKE                      1       wizard  1       *
+WIZARD_DIMENSION_JUMP                   1       wizard  1       *
+WIZARD_MONSTER_SUMMONING_LEVEL_1        1       wizard  1       *
 WIZARD_BATTERING_RAM                    0       wizard  2       *
 WIZARD_KNOW_OPPONENT                    0       wizard  2       *
 WIZARD_SOUND_BURST                      0       wizard  2       *

@@ -83,7 +83,7 @@ Saving Throw: None
 
 This spell grants the recipient immunity to all petrification attacks. This includes basilisk and medusa gaze, cursed scrolls of petrification, etc."
 
-//non-existent: spwi109
+//non-existent: spwi109, WIZARD_HOLD_PORTAL in spell.ids
 //identify:spwi110
 @1100 = "Identify"
 @1101 = "Identify
@@ -229,11 +229,11 @@ Saving Throw: None
 
 Upon casting this spell, the wizard creates one illusory image of himself that will travel alongside him. The image performs all of the actions that the wizard does, and seems to react normally to both physical and magical damage (such as appearing to be burned when hit by a fireball) so that if any enemies are trying to attack the wizard they will not know which one is real. There is a 50% chance that an attacker will attack the image and a 50% chance that he will attack the caster. The image is immune to all forms of damage, but will disappear if a dispel magic or a detect illusion spell is cast upon it, or when the spell duration runs out. This spell cannot be cast on anyone who is under the effects of a Mirror Image spell, and multiple castings of this spell will not create additional images."
 
-//non-existent: spwi121
-//non-existent: spwi122
+//non-existent: spwi121, WIZARD_REVEAL_MAGIC in spell.ids
+//non-existent: spwi122, WIZARD_PROTECTION_CIRCLE in spell.ids
 //Find Familiar: spwi123
 
-//nahal_reckless_dweomer:spwi124
+//nahal_reckless_dweomer:spwi124, slot shared with WIZARD_ALARM in spell.ids
 @1240 = "Nahal's Reckless Dweomer"
 @1241 = "Nahal's Reckless Dweomer
 Level: 1
@@ -263,6 +263,7 @@ A Spook spell enables the wizard to play upon natural fears to cause the target 
 
 
 //New spells.
+//Replaces Blindness in SR.
 @1500 = "Obscuring Mist"
 @1501 = "Obscuring Mist
 Level: 1
@@ -287,6 +288,7 @@ Saving Throw: None
 
 When cast, this spell provides all friendly creatures in the area with an amazing fleetness of foot. The affected creatures movement rate is almost tripled for the duration of the spell, but the excessively unnatural speed prevents them from taking almost any other actions except for running."
 
+//Replaces Infravision in SR.
 @1520 = "True Strike"
 @1521 = "True Strike
 Level: 1
@@ -311,6 +313,7 @@ Saving Throw: None
 
 This spell transports the caster to any place within sight. When the spell is cast, a dimensional portal opens up in front of the caster, which he immediately steps through. Upon passing through the portal, the caster finds himself at his chosen destination. The caster always arrives at exactly the spot desired, and the dimensional door doesn't allow anyone or anything else to pass through. Spells about to be cast upon the wizard will fail, and missiles about to hit him will instead hit thin air."
 
+//Moved from level 2.
 @1540 = "Know Alignment"
 @1541 = "Know Alignment
 Level: 1
@@ -323,6 +326,7 @@ Saving Throw: None
 
 This spell allows the wizard to search out the feelings of all creatures within the current area. When affected by this spell, a target will briefly glow red if he's evil, green if he's good, and white if he's neutral. Magic resistance does not affect this spell."
 
+//Replaces Friends in SR.
 @1550 = "Monster Summoning I"
 @1551 = "Monster Summoning I
 Level: 1
