@@ -12,3 +12,5 @@ LAF install_resources STR_VAR
     type = "add_symbol"
     table = "%resources%/2da/symbols.2da"
 END
+
+//spell.ids surgery.

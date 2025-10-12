@@ -190,6 +190,7 @@ WIZARD_SHAPECHANGE                      scrl9y      10      1
 WIZARD_FREEDOM                          scrl9z      10      1
 WIZARD_BIGBYS_CRUSHING_HAND             scrlb2      10      1
 WIZARD_WISH                             scrlb4      10      1
+CLERIC_CURE_SERIOUS_WOUNDS              scrl56      10      1
 CLERIC_CURE_CRITICAL_WOUNDS             scrl61      10      1
 CLERIC_FREE_ACTION                      scrl58      10      1
 CLERIC_MENTAL_DOMINATION                scrl5a      10      1
@@ -199,3 +200,4 @@ CLERIC_FLAME_STRIKE                     scrl62      10      1
 CLERIC_RAISE_DEAD                       scrl63      10      1
 CLERIC_CHAMPIONS_STRENGTH               scrl5e      10      1
 CLERIC_CHAOTIC_COMMANDS                 scrl5f      10      1
+CLERIC_LESSER_RESTORATION               restore     10      1

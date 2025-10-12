@@ -346,42 +346,13 @@ COPY ~spell_rev\sppr2##\fblade7.itm~     ~override~
 COPY ~spell_rev\sppr2##\fblade8.itm~     ~override~
 COPY ~spell_rev\sppr2##\fblade9.itm~     ~override~
 
-//Deprecate old goodberry.
-APPEND ~spell.ids~ ~1207 CLERIC_GOOD_BERRIES_DEPRECATED~
-
-// Know Opponent replaces Know Alignment.
-APPEND ~spell.ids~ ~1209 CLERIC_KNOW_OPPONENT~
-
-// Resist Elements (replaces Resist Fire and Cold)
-APPEND ~spell.ids~ ~1210 CLERIC_RESIST_ELEMENTS~
-
 //Draw upon Holy Might.
-//Unused subspell.
-COPY ~spell_rev\sppr2##\sppr214w.spl~    ~override~
 STRING_SET ~12108~ @57 // change portrait icon name into Draw upon Divine Might
-
-// Cure Moderate Wounds (moved from lvl 3, originally Cure Medium Wounds).
-ADD_SPELL ~spell_rev\sppr2##\sppr215.spl~ 1 2 ~CLERIC_CURE_MODERATE_WOUNDS~
-
 
 //Level 3.
 //Dispel magic.
 COPY ~spell_rev\sppr3##\sppr303.spl~     ~override~  // Dispel Magic
   SAY NAME1 @75    SAY UNIDENTIFIED_DESC @76
-
-//Old Protection from Fire (disabled)
-COPY_EXISTING ~spell.ids~ ~override~
-  REPLACE_TEXTUALLY ~^1306[ %TAB%]+CLERIC_PROTECTION_FROM_FIRE\b~ ~1306 CLERIC_PROTECTION_FROM_FIRE_DEPRECATED~
-
-// Break Enchantment (replaces Remove Curse).
-APPEND ~spell.ids~ ~1307 CLERIC_BREAK_ENCHANTMENT~
-
-// Cure Serious Wounds (moved from lvl 4, replaces Cure Medium Wounds) 
-COPY ~spell_rev\sppr4##\scrl56.itm~     ~override~
-  SAY NAME2 @109    SAY IDENTIFIED_DESC   @110
-
-// Gust of Wind (replaces Zone of Sweet Air).
-APPEND ~spell.ids~ ~1318 CLERIC_GUST_OF_WIND~
 
 // Summon Insects detectable spells stuff.
 LAF ds_altered_spell INT_VAR old_clone=60 new_clone=~-1~ STR_VAR file=~sppr319.spl~ END
@@ -389,34 +360,19 @@ APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~sppr319a.SPL    233     1     120 
 
 
 //Level 4.
-// Animal Summoning IV (originally Animal Summoning I)
-APPEND ~spell.ids~ ~1402 CLERIC_ANIMAL_SUMMONING_LEVEL_4~
-
 COPY ~spell_rev\sppr4##\sppr407.spl~     ~override~  // old Protection from Lightning (disabled)
   SAY NAME1 @123    SAY UNIDENTIFIED_DESC @124
   LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 7567 parameter1 = RESOLVE_STR_REF(@123) END
+//Why are we adding the scroll of the spell is deprecated?
 COPY ~spell_rev\sppr4##\scrl5c.itm~     ~override~
   SAY NAME2 @123    SAY IDENTIFIED_DESC   @124
-COPY_EXISTING ~spell.ids~ ~override~
-  REPLACE_TEXTUALLY ~^1407[ %TAB%]+CLERIC_PROTECTION_FROM_LIGHTNING\b~ ~1407 CLERIC_PROTECTION_FROM_LIGHTNING_DEPRECATED~
 
 // change portrait icon name into Divine Power
 STRING_SET ~8267~ @133
 
-//Lesser restoration scroll.
-COPY ~spell_rev\sppr4##\restore.itm~     ~override~
-  SAY NAME2 @143    SAY IDENTIFIED_DESC   @144 
-
-
 //Level 5.
-// old Cure Critical Wounds (disabled) -> Cure Mortal Wounds.
-APPEND ~spell.ids~ ~1502 CLERIC_CURE_CRITICAL_WOUNDS_DEPRECATED~
-
 // change portrait icon name into Righteous Fury
 STRING_SET ~8272~ @133
-
-// Repulsion (replaces Repulse Undead)
-APPEND ~spell.ids~ ~1515 CLERIC_REPULSION~
 
 // Insect Plague detectable spells stuff.
 LAF ds_altered_spell INT_VAR old_clone=60 new_clone=~-1~ STR_VAR file=~sppr517.spl~ END
@@ -433,16 +389,8 @@ COPY ~spell_rev\sppr5##\spja01f.eff~     ~override~
 
 
 //Level 6.
-// Animal Summoning VI (originally Animal Summoning III)
-APPEND ~spell.ids~ ~1602 CLERIC_ANIMAL_SUMMONING_LEVEL_6~
-
 // Blade Barrier (AI's version)
 COPY ~spell_rev\sppr6##\sppr698.spl~     ~override~
-
-COPY ~spell_rev\sppr6##\sppr604.spl~     ~override~  // Conjure Animals (disabled)
-  SAY NAME1 @197    SAY UNIDENTIFIED_DESC @198
-COPY_EXISTING ~spell.ids~ ~override~
-APPEND ~spell.ids~ ~1604 CLERIC_CONJURE_ANIMALS_DEPRECATED~
 
 //Patch projectile for fire seeds.
 COPY_EXISTING ~bolt2.pro~ ~override~
@@ -460,30 +408,15 @@ LAF ds_altered_spell INT_VAR old_clone=197 new_clone=~142~ STR_VAR file=~sppr613
 //Override projectile for sol's searing orb.
 COPY ~spell_rev\projectles\bulletex.pro~     ~override~
 
-//ADD_SPELL: Conjure Air Elemental
-ADD_SPELL ~spell_rev\sppr6##\sppr621.spl~ 1 6 ~CLERIC_CONJURE_AIR_ELEMENTAL~  // Conjure Air Elemental (added to druid's spells)
-
-//ADD_SPELL: Conjure Earth Elemental
-ADD_SPELL ~spell_rev\sppr6##\sppr622.spl~ 1 6 ~CLERIC_CONJURE_EARTH_ELEMENTAL~  // Conjure Earth Elemental (moved from lvl 7)
-
-
 //Level 7.
 // SPPR702 is "Stalker" in IWDEE, a spell that summons Shambling Mounds
 APPEND ~spell.ids~ ~1702 CLERIC_STALKER~
   UNLESS ~^1702[ %TAB%]+CLERIC_STALKER\b~
 
-// Summon Death Knight (replaces Gate)
-APPEND ~spell.ids~ ~1703 CLERIC_SUMMON_DEATH_KNIGHT~
-
 //Resources for Symbol of weakness but they do not seem to be used anywhere.
 //Maybe they are resources for the projectile but no reference changes seem to be made.
 COPY ~spell_rev\sppr7##\a#spain.bam~     ~override~
 COPY ~spell_rev\sppr7##\a#ispain.vvc~     ~override~
-// Symbol of Weakness (replaces Symbol, Fear)
-APPEND ~spell.ids~ ~1706 CLERIC_SYMBOL_WEAKNESS~
-
-// Chaos (replaces Confusion)
-APPEND ~spell.ids~ ~1709 CLERIC_CHAOS~
 
 //Effect for holy word but does not seem to be used anywhere.
 COPY ~spell_rev\sppr7##\dvhoword.eff~     ~override~
@@ -507,9 +440,9 @@ COPY ~spell_rev\sppr7##\a#ishope.vvc~     ~override~
 //Resource not used anywhere by the mod, but present in the folder.
 //COPY ~spell_rev\sppr7##\sppr720f.spl~     ~override~
 
-//Animal Summoning VII: surgery on spell.ids
+//Animal Summoning VII
+//There is no Animal Summoning IV, so why is this needed?
 APPEND ~spell.ids~ ~%CLERIC_ANIMAL_SUMMONING_4% CLERIC_ANIMAL_SUMMONING_LEVEL_7~
-
 
 /*-----------------------level 8-----------------------*/
 
