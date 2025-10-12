@@ -346,42 +346,13 @@ COPY ~spell_rev\sppr2##\fblade7.itm~     ~override~
 COPY ~spell_rev\sppr2##\fblade8.itm~     ~override~
 COPY ~spell_rev\sppr2##\fblade9.itm~     ~override~
 
-//Deprecate old goodberry.
-APPEND ~spell.ids~ ~1207 CLERIC_GOOD_BERRIES_DEPRECATED~
-
-// Know Opponent replaces Know Alignment.
-APPEND ~spell.ids~ ~1209 CLERIC_KNOW_OPPONENT~
-
-// Resist Elements (replaces Resist Fire and Cold)
-APPEND ~spell.ids~ ~1210 CLERIC_RESIST_ELEMENTS~
-
 //Draw upon Holy Might.
-//Unused subspell.
-COPY ~spell_rev\sppr2##\sppr214w.spl~    ~override~
 STRING_SET ~12108~ @57 // change portrait icon name into Draw upon Divine Might
-
-// Cure Moderate Wounds (moved from lvl 3, originally Cure Medium Wounds).
-ADD_SPELL ~spell_rev\sppr2##\sppr215.spl~ 1 2 ~CLERIC_CURE_MODERATE_WOUNDS~
-
 
 //Level 3.
 //Dispel magic.
 COPY ~spell_rev\sppr3##\sppr303.spl~     ~override~  // Dispel Magic
   SAY NAME1 @75    SAY UNIDENTIFIED_DESC @76
-
-//Old Protection from Fire (disabled)
-COPY_EXISTING ~spell.ids~ ~override~
-  REPLACE_TEXTUALLY ~^1306[ %TAB%]+CLERIC_PROTECTION_FROM_FIRE\b~ ~1306 CLERIC_PROTECTION_FROM_FIRE_DEPRECATED~
-
-// Break Enchantment (replaces Remove Curse).
-APPEND ~spell.ids~ ~1307 CLERIC_BREAK_ENCHANTMENT~
-
-// Cure Serious Wounds (moved from lvl 4, replaces Cure Medium Wounds) 
-COPY ~spell_rev\sppr4##\scrl56.itm~     ~override~
-  SAY NAME2 @109    SAY IDENTIFIED_DESC   @110
-
-// Gust of Wind (replaces Zone of Sweet Air).
-APPEND ~spell.ids~ ~1318 CLERIC_GUST_OF_WIND~
 
 // Summon Insects detectable spells stuff.
 LAF ds_altered_spell INT_VAR old_clone=60 new_clone=~-1~ STR_VAR file=~sppr319.spl~ END
@@ -389,34 +360,19 @@ APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~sppr319a.SPL    233     1     120 
 
 
 //Level 4.
-// Animal Summoning IV (originally Animal Summoning I)
-APPEND ~spell.ids~ ~1402 CLERIC_ANIMAL_SUMMONING_LEVEL_4~
-
 COPY ~spell_rev\sppr4##\sppr407.spl~     ~override~  // old Protection from Lightning (disabled)
   SAY NAME1 @123    SAY UNIDENTIFIED_DESC @124
   LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 7567 parameter1 = RESOLVE_STR_REF(@123) END
+//Why are we adding the scroll of the spell is deprecated?
 COPY ~spell_rev\sppr4##\scrl5c.itm~     ~override~
   SAY NAME2 @123    SAY IDENTIFIED_DESC   @124
-COPY_EXISTING ~spell.ids~ ~override~
-  REPLACE_TEXTUALLY ~^1407[ %TAB%]+CLERIC_PROTECTION_FROM_LIGHTNING\b~ ~1407 CLERIC_PROTECTION_FROM_LIGHTNING_DEPRECATED~
 
 // change portrait icon name into Divine Power
 STRING_SET ~8267~ @133
 
-//Lesser restoration scroll.
-COPY ~spell_rev\sppr4##\restore.itm~     ~override~
-  SAY NAME2 @143    SAY IDENTIFIED_DESC   @144 
-
-
 //Level 5.
-// old Cure Critical Wounds (disabled) -> Cure Mortal Wounds.
-APPEND ~spell.ids~ ~1502 CLERIC_CURE_CRITICAL_WOUNDS_DEPRECATED~
-
 // change portrait icon name into Righteous Fury
 STRING_SET ~8272~ @133
-
-// Repulsion (replaces Repulse Undead)
-APPEND ~spell.ids~ ~1515 CLERIC_REPULSION~
 
 // Insect Plague detectable spells stuff.
 LAF ds_altered_spell INT_VAR old_clone=60 new_clone=~-1~ STR_VAR file=~sppr517.spl~ END
@@ -433,16 +389,8 @@ COPY ~spell_rev\sppr5##\spja01f.eff~     ~override~
 
 
 //Level 6.
-// Animal Summoning VI (originally Animal Summoning III)
-APPEND ~spell.ids~ ~1602 CLERIC_ANIMAL_SUMMONING_LEVEL_6~
-
 // Blade Barrier (AI's version)
 COPY ~spell_rev\sppr6##\sppr698.spl~     ~override~
-
-COPY ~spell_rev\sppr6##\sppr604.spl~     ~override~  // Conjure Animals (disabled)
-  SAY NAME1 @197    SAY UNIDENTIFIED_DESC @198
-COPY_EXISTING ~spell.ids~ ~override~
-APPEND ~spell.ids~ ~1604 CLERIC_CONJURE_ANIMALS_DEPRECATED~
 
 //Patch projectile for fire seeds.
 COPY_EXISTING ~bolt2.pro~ ~override~
@@ -460,30 +408,15 @@ LAF ds_altered_spell INT_VAR old_clone=197 new_clone=~142~ STR_VAR file=~sppr613
 //Override projectile for sol's searing orb.
 COPY ~spell_rev\projectles\bulletex.pro~     ~override~
 
-//ADD_SPELL: Conjure Air Elemental
-ADD_SPELL ~spell_rev\sppr6##\sppr621.spl~ 1 6 ~CLERIC_CONJURE_AIR_ELEMENTAL~  // Conjure Air Elemental (added to druid's spells)
-
-//ADD_SPELL: Conjure Earth Elemental
-ADD_SPELL ~spell_rev\sppr6##\sppr622.spl~ 1 6 ~CLERIC_CONJURE_EARTH_ELEMENTAL~  // Conjure Earth Elemental (moved from lvl 7)
-
-
 //Level 7.
 // SPPR702 is "Stalker" in IWDEE, a spell that summons Shambling Mounds
 APPEND ~spell.ids~ ~1702 CLERIC_STALKER~
   UNLESS ~^1702[ %TAB%]+CLERIC_STALKER\b~
 
-// Summon Death Knight (replaces Gate)
-APPEND ~spell.ids~ ~1703 CLERIC_SUMMON_DEATH_KNIGHT~
-
 //Resources for Symbol of weakness but they do not seem to be used anywhere.
 //Maybe they are resources for the projectile but no reference changes seem to be made.
 COPY ~spell_rev\sppr7##\a#spain.bam~     ~override~
 COPY ~spell_rev\sppr7##\a#ispain.vvc~     ~override~
-// Symbol of Weakness (replaces Symbol, Fear)
-APPEND ~spell.ids~ ~1706 CLERIC_SYMBOL_WEAKNESS~
-
-// Chaos (replaces Confusion)
-APPEND ~spell.ids~ ~1709 CLERIC_CHAOS~
 
 //Effect for holy word but does not seem to be used anywhere.
 COPY ~spell_rev\sppr7##\dvhoword.eff~     ~override~
@@ -507,9 +440,9 @@ COPY ~spell_rev\sppr7##\a#ishope.vvc~     ~override~
 //Resource not used anywhere by the mod, but present in the folder.
 //COPY ~spell_rev\sppr7##\sppr720f.spl~     ~override~
 
-//Animal Summoning VII: surgery on spell.ids
+//Animal Summoning VII
+//There is no Animal Summoning IV, so why is this needed?
 APPEND ~spell.ids~ ~%CLERIC_ANIMAL_SUMMONING_4% CLERIC_ANIMAL_SUMMONING_LEVEL_7~
-
 
 /*-----------------------level 8-----------------------*/
 
@@ -603,15 +536,6 @@ COPY ~spell_rev\sppr7##\sppr732.itm~     ~override~
 COPY_EXISTING ~grease.pro~ ~override~
   WRITE_SHORT 0x206 110
 
-// Obscuring Mist (replaces Blindness).
-APPEND ~spell.ids~ ~2106 WIZARD_OBSCURING_MIST~
-
-// Monster Summoning I (replaces Friends)
-APPEND ~spell.ids~ ~2107 WIZARD_MONSTER_SUMMONING_LEVEL_1~
-
-// True Strike (replaces Infravision)
-APPEND ~spell.ids~ ~2111 WIZARD_TRUE_STRIKE~
-
 //Chromatic orb: subspell for what??
 COPY ~spell_rev\spwi1##\spwi118z.spl~     ~override~
 // Chromatic orb projectile.
@@ -621,8 +545,6 @@ COPY ~spell_rev\spwi1##\chromorb.pro~     ~override~
 // Find Familiar
 COPY ~spell_rev\spwi1##\spwi123.spl~     ~override~
   SAY NAME1 @439    SAY UNIDENTIFIED_DESC @440
-COPY ~spell_rev\spwi1##\scrl6d.itm~     ~override~
-  SAY NAME2 @439    SAY IDENTIFIED_DESC   @440
 COPY ~spell_rev\spwi1##\famcat.cre~     ~override~
   SAY NAME1 @1042
   SAY NAME2 @1042
@@ -741,31 +663,17 @@ COPY ~spell_rev\spwi1##\psdclaw.itm~     ~override~
 COPY ~spell_rev\spwi1##\quasclaw.itm~     ~override~
 
 // Detect Alignment (moved from lvl 2)
+// For now, this is covered in spell additions.
 ADD_SPELL ~spell_rev\spwi1##\spwi126.spl~ 2 1 ~WIZARD_KNOW_ALIGNMENT~
   //New desc ref because old version still around -- see below.
   SAY NAME1 @453    SAY UNIDENTIFIED_DESC @2000
-// TODO: add scroll
-
 
 //Level 2.
-// old Detect Alignment (disabled, originally Detect Evil)
-APPEND ~spell.ids~ ~2202 WIZARD_DETECT_EVIL_DEPRECATED~
-
-// Battering Ram ("replaces" Knock)
-APPEND ~spell.ids~ ~2207 WIZARD_BATTERING_RAM~
-
-// Know Opponent (replaces Know Alignment)
-APPEND ~spell.ids~ ~2208 WIZARD_KNOW_OPPONENT~
-
 // Web projectile
 COPY_EXISTING ~web.pro~ ~override~
   WRITE_SHORT 0x206 190
 
-// Sound Burst (replaces Deafness).
-APPEND ~spell.ids~ ~2223 WIZARD_SOUND_BURST~
-
 // scroll bam for Resist elements.
-COPY ~spell_rev\spwi2##\dvpr210a.bam~   ~override~  
 COPY ~spell_rev\spwi2##\scrl86.itm~     ~override~  // vanilla's Detect Evil scroll
   SAY NAME2 @864    SAY IDENTIFIED_DESC   @865
 
@@ -780,9 +688,6 @@ ACTION_IF (GAME_INCLUDES ~bg2~) BEGIN
     END
     BUT_ONLY
 END
-
-// Monster Summoning III (originally Monster Summoning I)
-APPEND ~spell.ids~ ~2309 WIZARD_MONSTER_SUMMONING_LEVEL_3~
 
 //Non-detection: detectable spells stuff.
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~spwi310.SPL    282     3     6     142    n     A~
@@ -801,9 +706,6 @@ COPY ~spell_rev\spwi3##\spwi326.spl~     ~override~  // Dispel Magic
   SAY NAME1 @547    SAY UNIDENTIFIED_DESC @548
 
 //Level 4.
-// Dimension Door (disabled)
-APPEND ~spell.ids~ ~2402 WIZARD_DIMENSION_DOOR_DEPRECATED~
-
 COPY ~spell_rev\spwi4##\spwi403.spl~     ~override~  // Fire Shield (Blue) (AI only now)
   SAY NAME1 @565    SAY UNIDENTIFIED_DESC @566
 /* COPY ~spell_rev\spwi4##\scrl1w.itm~     ~override~  // Scroll used for Mestil's Acid Sheath
@@ -835,9 +737,6 @@ COPY ~spell_rev\spwi4##\gnlcapsu.itm~     ~override~
 COPY_EXISTING ~spell.ids~ ~override~
   REPLACE_TEXTUALLY ~^2407[ %TAB%]+WIZARD_MONSTER_SUMMONING_2\b~ ~2407 WIZARD_MONSTER_SUMMONING_2_DEPRECATED~
 
-// Break Enchantment (replaces Remove Curse)
-APPEND ~spell.ids~ ~2410 WIZARD_BREAK_ENCHANTMENT~
-
 COPY ~spell_rev\spwi4##\spwi413.spl~     ~override~  // Otiluke's Resilient Sphere
   SAY NAME1 @585    SAY UNIDENTIFIED_DESC @586
 COPY ~spell_rev\spwi4##\spwi413c.spl~     ~override~
@@ -868,28 +767,13 @@ COPY ~spell_rev\spwi4##\spwi465.spl~     ~override~
 //Seemingly unused phase spider.
 COPY ~spell_rev\spwi4##\spidphsu.cre~     ~override~
 COPY ~spell_rev\spwi4##\spidphsu.itm~     ~override~
-// Monster Summoning IV ("replaces" Spider Spawn)
-APPEND ~spell.ids~ ~2423 WIZARD_MONSTER_SUMMONING_2~
-APPEND ~spell.ids~ ~2423 WIZARD_MONSTER_SUMMONING_LEVEL_4~
 
 //Level 5.
-// Summon Shadow (replaces Animate Dead)
-APPEND ~spell.ids~ ~2501 WIZARD_SUMMON_SHADOW~
-
 //Why is this being copied for cone of cold?
 COPY_EXISTING ~spccoldl.bam~ ~override~
 
-// Monster Summoning V (originally Monster Summoning III)
-APPEND ~spell.ids~ ~2504 WIZARD_MONSTER_SUMMONING_LEVEL_5~
-
-//Waves of Fatigue (replaces Chaos)
-COPY_EXISTING ~spell.ids~ ~override~
-  REPLACE_TEXTUALLY ~^2508[ %TAB%]+WIZARD_CHAOS~ ~2508 WIZARD_WAVES_OF_FATIGUE~
-
 //Detectable spells stuff for Dispelling screen.
 LAF ds_altered_spell INT_VAR old_clone=142 new_clone=~-1~ STR_VAR file=~spwi590.spl~ END
-// Dispelling Screen (replaces Spell Immunity)
-APPEND ~spell.ids~ ~2510 WIZARD_DISPELLING_SCREEN~
 
 COPY ~spell_rev\spwi5##\spwi590.spl~     ~override~ // SI:Abj replaced by Dispelling Screen
   SAY NAME1 @629    SAY UNIDENTIFIED_DESC @630
@@ -907,7 +791,6 @@ COPY ~spell_rev\spwi5##\spwi597.spl~     ~override~
 //Detectable spells stuff for spell deflection.
 LAF ds_altered_spell INT_VAR old_clone=200 new_clone=~-1~ STR_VAR file=~spwi522.spl~ END
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~SPWI522.SPL    233     1     116   201    n     A~
-APPEND ~spell.ids~ ~2522 WIZARD_SPELL_DEFLECTION~
 
 /*
 ADD_SPELL ~spell_rev\spwi5##\spwi524.spl~ 2 5 ~WIZARD_BALL_LIGHTNING~  // Ball Lightning (new spell)
@@ -924,14 +807,9 @@ COPY ~spell_rev\spwi5##\fireelem.itm~     ~override~
 //ADD_SPELL: Mestil's Acid Sheath
 ADD_SPELL ~spell_rev\spwi5##\spwi526.spl~ 2 5 ~WIZARD_MESTILS_ACID_SHEATH~  // Mestil's Acid Sheath (new spell)
   SAY NAME1 @565    SAY UNIDENTIFIED_DESC @566
-COPY ~spell_rev\spwi5##\scrl1w.itm~      ~override~
-  SAY NAME2 @565    SAY IDENTIFIED_DESC   @566
 COPY ~spell_rev\spwi5##\dvwi526d.spl~    ~override~
 COPY ~spell_rev\spwi5##\mestsh.vvc~      ~override~
 COPY ~spell_rev\spwi5##\mestsh.bam~      ~override~
-COPY ~spell_rev\spwi5##\dvwi526a.bam~    ~override~
-COPY ~spell_rev\spwi5##\dvwi526b.bam~    ~override~
-COPY ~spell_rev\spwi5##\dvwi526c.bam~    ~override~
 /* STRING_SET ~13070~ @565 // change portrait icon from Fire Shield (Blue) to Acid Sheath */
 
 
@@ -939,15 +817,9 @@ COPY ~spell_rev\spwi5##\dvwi526c.bam~    ~override~
 //Invisible stalker: what is this cre for? Overriding vanilla?
 COPY ~spell_rev\spwi6##\stalke.cre~     ~override~
 
-//Replace Death spell with banishment.
-APPEND ~spell.ids~ ~2605 WIZARD_BANISHMENT~
-
 //Mislead: what are these resources for?
 COPY ~spell_rev\spwi6##\mislead.spl~     ~override~
 COPY ~spell_rev\spwi6##\dvnosong.spl~     ~override~
-
-//Acid Fog replaces Death Fog spell.
-APPEND ~spell.ids~ ~2614 WIZARD_ACID_FOG~
 
 //Overwrite disintegrate projectile.
 //Currently a *new* pro is added.
@@ -960,9 +832,6 @@ COPY ~spell_rev\spwi6##\spwi618.spl~     ~override~
   SAY NAME2 @721    SAY IDENTIFIED_DESC   @722 */
 COPY_EXISTING ~spell.ids~ ~override~
   REPLACE_TEXTUALLY ~^2618[ %TAB%]+WIZARD_SPELL_DEFLECTION\b~ ~2618 WIZARD_SPELL_DEFLECTION_DEPRECATED~
-
-// Animate Skeleton Warrior (replaces Summon Carrion)
-APPEND ~spell.ids~ ~2623 WIZARD_ANIMATE_SKELETON_WARRIOR~
 
 /* COPY ~spell_rev\spwi6##\ghastsu.eff~     ~override~
 COPY ~spell_rev\spwi6##\ghastsu.cre~     ~override~
@@ -993,25 +862,13 @@ COPY ~spell_rev\spwi6##\spwi625.spl~     ~override~  // Stone to Flesh
 //COPY ~spell_rev\spwi6##\spin686.spl~     ~override~
 /* COPY ~spell_rev\spwi6##\wand18.itm~     ~override~ */
 
-//Monster Summoning VI: replaces Wyvern Call and goes into Monster Summon IV slot.
-APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_4% WIZARD_MONSTER_SUMMONING_LEVEL_6~
-
-
 //Level 7.
-// Greater Spell Deflection (replaces Spell Turning)
-APPEND ~spell.ids~ ~2701 WIZARD_GREATER_SPELL_DEFLECTION~
-//Detectable spells stuff.
+//Detectable spells stuff for Greater Spell Deflection (replaces Spell Turning).
 LAF ds_altered_spell INT_VAR old_clone=200 new_clone=~-1~ STR_VAR file=~spwi701.spl~ END
 APPEND_OUTER ~spell_rev/lib/ds_sr_extra.2da~ ~spwi701.SPL    233     2     116   201    n     A~
 
 //Seemingly unused resource for project image.
 COPY ~spell_rev\spwi7##\PROJIMAG.SPL~     ~override~
-
-// Summon Death Knight (replaces Cacofiend)
-APPEND ~spell.ids~ ~2707 WIZARD_SUMMON_DEATH_KNIGHT~
-
-//Chaos ("replaces" Sphere of Chaos)
-APPEND ~spell.ids~ ~2711 WIZARD_CHAOS~
 
 //Seemingly unused effect for finger of death.
 COPY ~spell_rev\spwi7##\dvfingwi.eff~     ~override~
@@ -1020,19 +877,11 @@ COPY ~spell_rev\spwi7##\dvfingwi.eff~     ~override~
 // the other resources (summoning eff, djinni, etc. are not overriden).
 COPY ~spell_rev\spwi7##\spin734.spl~     ~override~
 
-//ADD_SPELL: Monster Summoning VII
-ADD_SPELL ~spell_rev\spwi7##\spwi724.spl~ 2 7 ~WIZARD_MONSTER_SUMMONING_5~  // Monster Summoning VII (added by V4)
-APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_5% WIZARD_MONSTER_SUMMONING_LEVEL_7~
-// vanilla's Summon Nishruu scroll
+// vanilla's Summon Nishruu scroll used by Monster Summoning VII.
 COPY ~spell_rev\spwi7##\scrl8b.itm~     ~override~
 
 
 //Level 8.
-// Ghostform (new alteration spell)
-APPEND ~spell.ids~ ~2801 WIZARD_GHOSTFORM~
-COPY ~spell_rev\spwi8##\spwi801.spl~     ~override~
-  SAY NAME1 @767    SAY UNIDENTIFIED_DESC @768
-
 // Mind Blank (new spell)
 APPEND ~spell.ids~ ~2802 WIZARD_MIND_BLANK~
   UNLESS ~^2802[ %TAB%]+WIZARD_MIND_BLANK\b~ // this spell already exists in IWDEE
@@ -1040,12 +889,7 @@ APPEND ~spell.ids~ ~2802 WIZARD_MIND_BLANK~
 //Seemingly unused resource for simulacrum.
 COPY ~spell_rev\spwi8##\SIMULACR.SPL~     ~override~
 
-// Moment of Prescience (replaces Improved Mantle)
-APPEND ~spell.ids~ ~2808 WIZARD_MOMENT_OF_PRESCIENCE~
-
-// Symbol of Weakness (replaces Symbol, Fear)
-APPEND ~spell.ids~ ~2811 WIZARD_SYMBOL_WEAKNESS~
-// Innate Symbol of Weakness
+// Innate Symbol of Weakness.
 COPY ~spell_rev\shared\spwi899.spl~      ~override~
 
 //Projectile for power word blind not used; why is it being changed?
@@ -1055,13 +899,6 @@ COPY_EXISTING ~holdsumm.pro~ ~override~
 
 // Innate Symbol of Death.
 COPY ~spell_rev\shared\spwi897.spl~      ~override~
-
-// Bigby's Icy Grasp ("replaces" Clenched Fist)
-APPEND ~spell.ids~ ~2818 WIZARD_BIGBYS_ICY_GRASP~
-
-//ADD_SPELL: Monster Summoning VIII
-ADD_SPELL ~spell_rev\spwi8##\spwi819.spl~ 2 8 ~WIZARD_MONSTER_SUMMONING_6~  // Monster Summoning VIII (new mage spell)
-APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_6% WIZARD_MONSTER_SUMMONING_LEVEL_8~
 
 
 //Level 9.
@@ -1112,7 +949,6 @@ COPY ~spell_rev\spwi9##\dvwi906b.bam~    ~override~
 COPY ~spell_rev\spwi9##\dvwi906c.bam~    ~override~
 APPEND ~spell.ids~ ~%WIZARD_MONSTER_SUMMONING_7% WIZARD_MONSTER_SUMMONING_LEVEL_9~
 */
-
 
 /*-----------------------level 10-----------------------*/
 

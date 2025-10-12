@@ -10,9 +10,8 @@ LAF get_component_tra_dir RET tra = dir END
 
 
 //Install spell symbols.
-LAF install_resources STR_VAR
-    type = "add_symbol"
-    table = "%resources%/2da/symbols.2da"
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/spell_symbols.tpa"
 END
 
 //Install sectypes.
@@ -20,7 +19,7 @@ LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/sectypes.tpa"
 END
 
-//Install vvcs.
+//Install vvcs needed by spells, e.g. via Play Visual [215] opcode.
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/vvcs.tpa"
 END
@@ -45,7 +44,7 @@ LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/items.tpa"
 END
 
-//Install tables for spells (e. g. tables used by select spell [214] opcode).
+//Install tables for spells (e. g. tables used by Select Spell [214] opcode).
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/tables.tpa"
 END
