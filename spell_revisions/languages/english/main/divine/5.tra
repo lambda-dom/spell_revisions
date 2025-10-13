@@ -277,6 +277,7 @@ Polymorph Other is a powerful magic that permanently alters the form of the crea
 
 Note that all clothes and equipment that the target was wearing will mold into the new form. However, they will return to their previous state once the target dies or the effects are dispelled."
 
+//Moved from level 3.
 @5510 = "Protection from Fire"
 @5511 = "Protection from Fire
 Level: 5

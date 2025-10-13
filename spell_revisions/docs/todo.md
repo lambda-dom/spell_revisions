@@ -224,6 +224,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *?
 
+* weidu_library stuff: need a primitive to change the slot of an existing symbol to the one of an existing symbol (this breaks injectivity rule). For noe CLERIC_CURE_SERIOUS_WOUNDS is just moved to level 3.
+
 * Handle replacements: for now, they are just new spells, but they should replace old versions which implies doing surgery on `spell.ids`. This needs weidu library support for the appropriate operations.
 
 * Cure line of spells: mention in description that it also cures intoxication.
