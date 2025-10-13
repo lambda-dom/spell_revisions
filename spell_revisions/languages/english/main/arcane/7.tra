@@ -1,7 +1,7 @@
 //Description strings.
 //Arcane spells.
 //Level 7.
-//greater_spell_deflection:spwi701, replaces spell turning
+//greater_spell_deflection:spwi701, replaces Spell Turning
 @7010 = "Greater Spell Deflection"
 @7011 = "Greater Spell Deflection
 Level: 7
@@ -72,34 +72,7 @@ When this spell is cast on the target creature, it will dispel one spell protect
 
 The spell protection spells dispelled by Khelben's Warding Whip are: Minor Spell Deflection, Non-Detection, Minor Globe of Invulnerability, Spell Deflection, Dispelling Screen, Globe of Invulnerability, Greater Spell Deflection, and Shield of the Archons."
 
-//monster_summoning_7:spwi706, replaces monster summoning V.
-@7060 = "Monster Summoning VII"
-@7061 = "Monster Summoning VII
-Level: 7
-School: Conjuration
-Range: Medium
-Duration: 3 turns
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
-
-By means of this spell, the caster summons a number of monsters, which serve the mage under any conditions. The type and number of creatures that appear depend upon the level of the wizard casting the spell. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires.
-
-13th : 2 Otyughs
-15th+ : 3 Otyughs
-
-Otyugh (7 Hit Dice):
-STR 14, DEX 10, CON 13, INT 5, WIS 12, CHA 5;  AL Neutral
-HP 70, AC 3, THAC0 10, Saving Throws 10/12/12/14/12
-3 Attacks Per Round, 1d6 + 3 Piercing or Crushing Damage (Bite & Tentacles +3)
-
-Combat Abilities:
-Disease: creatures struck moves at half speed and suffer 1 point of damage per round for 1 turn
-
-Special Qualities:
-Immune to disease effects
-Slashing, Crushing and Piercing Resistance 5%; Missile Resistance 100%"
-
+//non-existent:spwi706
 //summon_death_knight:spwi707, replaces caco fiend
 @7070 = "Summon Death Knight"
 @7071 = "Summon Death Knight
@@ -132,7 +105,7 @@ Unholy Fireball (once per day)
 Power Words: Blind, Stun, or Kill (once per day each)
 Symbols: of Weakness or Death (once per day each)"
 
-//prismatic_mantle:spwi708
+//prismatic_mantle:spwi708, replaces Mantle. Aliased to prevent AI confusion.
 @7080 = "Prismatic Mantle"
 @7081 = "Prismatic Mantle
 Level: 7
@@ -153,7 +126,7 @@ Blue   - Stunned for 5 rounds (save vs. polymorph neg.)
 Indigo - Feebleminded for 5 rounds (save vs. wand neg.)
 Violet - Mazed (save vs. spell neg.)"
 
-//non-existent:spwi709
+//non-existent:spwi709, WIZARD_TATTOOS_OF_POWER in spell.ids
 //spell_sequencer:spwi710
 @7100 = "Simbul's Spell Sequencer"
 @7101 = "Simbul's Spell Sequencer
@@ -167,7 +140,7 @@ Saving Throw: None
 
 This spell allows a mage to prepare a magical sequencer that can store spells to be used later in a single swift action. The sequencer can store three spells to be released simultaneously, all of which must be of 4th level or lower. A mage can only possess one spell sequencer at a time, and the sequencer will remain active until the spells contained within it are released."
 
-//chaos:spwi711
+//chaos:spwi711, replaces Sphere of Chaos
 @7110 = "Chaos"
 @7111 = "Chaos
 Level: 7
@@ -395,3 +368,31 @@ Area of Effect: Caster
 Saving Throw: None
 
 Improved Chaos Shield increases a wild mage's chance to gain a favorable result when a wild surge occurs. Every time a roll is made on the wild surge chart, an extra 25 is added to the dice roll. When Nahal's Reckless Dweomer is cast, the bonus from Improved Chaos Shield stacks with the wild mage's level bonus. The caster may have only one chaos shield at a time."
+
+//New spells.
+@7500 = "Monster Summoning VII"
+@7501 = "Monster Summoning VII
+Level: 7
+School: Conjuration
+Range: Medium
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster summons a number of monsters, which serve the mage under any conditions. The type and number of creatures that appear depend upon the level of the wizard casting the spell. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires.
+
+13th : 2 Otyughs
+15th+ : 3 Otyughs
+
+Otyugh (7 Hit Dice):
+STR 14, DEX 10, CON 13, INT 5, WIS 12, CHA 5;  AL Neutral
+HP 70, AC 3, THAC0 10, Saving Throws 10/12/12/14/12
+3 Attacks Per Round, 1d6 + 3 Piercing or Crushing Damage (Bite & Tentacles +3)
+
+Combat Abilities:
+Disease: creatures struck moves at half speed and suffer 1 point of damage per round for 1 turn
+
+Special Qualities:
+Immune to disease effects
+Slashing, Crushing and Piercing Resistance 5%; Missile Resistance 100%"

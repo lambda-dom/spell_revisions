@@ -105,8 +105,8 @@ This spell holds persons and animals rigidly immobile and in place. The term "pe
 
 Held creatures cannot move or speak, but they remain aware of events around them even though they are helpless to change them. Time passes at a normal rate for the targets and hence being held does not stop any worsening of their condition due to wounds, disease, or poison.~
 
-//protection_fire, moved to level 5:sppr306
-//break_enchantment, replacement for remove curse:sppr307
+//sppr306:protection_fire, moved to level 5
+//break_enchantment:sppr307, replaces Remove Curse
 @3070 ="Break Enchantment"
 @3071 ="Break Enchantment
 Level: 3
@@ -190,7 +190,7 @@ Saving Throw: None
 
 When this spell is cast, all party members within 30 feet of the caster gain a +2 bonus to strength. If a party member ends up with a strength value of 18, then her strength will be set to 18/75. The spell lasts for 10 rounds, whereafter everyone's strength returns to normal."
 
-//holy_smite: sppr313
+//holy_smite:sppr313
 @3130 = "Holy Smite"
 @3131 = "Holy Smite
 Level: 3
@@ -204,7 +204,7 @@ Saving Throw: Special
 
 With this spell the priest draws down holy power to smite his enemies. Opponents within the spell's area of effect take 1d4 points of damage for every level of the caster (up to a maximum of 10d4), with a successful saving throw vs. spell for half. If the victim fails his save, then he will also be blinded for 1 round."
 
-//unholy_blight: sppr314
+//unholy_blight:sppr314
 @3140 = "Unholy Blight"
 @3141 = "Unholy Blight
 Level: 3
@@ -218,7 +218,7 @@ Saving Throw: Special
 
 With this spell the priest calls up unholy power to smite his enemies. The power takes the form of a chilling, cloying miasma of darkness. Opponents within the spell's area of effect take 1d4 points of damage for every level of the caster up to a maximum of 10d4, with a successful saving throw vs. spell for half. If the victim fails his save, then he will also receive a -2 penalty on his attack rolls and saving throws for 4 rounds."
 
-//cure_serious_wounds: sppr315: move level 3 to level 3, replaces cure medium wounds.
+//cure_serious_wounds:sppr315, replaces Cure Medium Wounds.
 @3150 = "Cure Serious Wounds"
 @3151 = "Cure Serious Wounds
 Level: 3
@@ -232,8 +232,8 @@ Saving Throw: None
 
 When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 3d8 + 3/level points of damage sustained by the target creature (up to a maximum of 3d8+30)."
 
-//non-existent: sppr316
-//cure_disease: sppr317
+//non-existent:sppr316, CLERIC_CURE_BLIND_DEAF in spell.ids.
+//cure_disease:sppr317
 @3170 = "Cure Disease"
 @3171 = "Cure Disease
 Level: 3
@@ -247,7 +247,7 @@ Saving Throw: None
 
 By laying her hands upon a sickly person, the caster can cure almost any disease with this spell. The cure is permanent, but this does not grant the recipient of the spell immunity from further afflictions. Blindness and deafness are also cured with this spell, but some powerful magically created diseases may not be curable by this spell."
 
-//gust_wind: sppr318: replacement for Zone of Sweet Air
+//gust_wind:sppr318, replaces Zone of Sweet Air
 @3180 = "Gust of Wind"
 @3181 = "Gust of Wind
 Level: 3
@@ -261,7 +261,7 @@ Saving Throw: Special
 
 This spell creates a severe blast of air that originates from the caster, affecting all enemies in its path. Those within 6 feet must save vs. breath at -2 or be blown back by the force of the gust and knocked unconscious for 1 round. In addition, this spell will disperse all clouds, including magically created vapors such as Cloudkill, in the caster's current area."
 
-//summon_insects: sppr319
+//summon_insects:sppr319
 @3190 = "Summon Insects"
 @3191 = "Summon Insects
 Level: 3
@@ -291,6 +291,7 @@ Saving Throw: Poison negates
 
 This spell causes a major disease and weakness in a creature. Every 2 rounds the afflicted individual must make a saving throw vs. poison at -2 or suffer additional -2 penalty to strength, dexterity, constitution, and charisma (up to -6 to all stats). The effects of this spell will persist until the creature receives a Cure Disease spell, or the spell duration expires."
 
+//Moved from level 4.
 @3510 = "Cause Serious Wounds"
 @3511 = "Cause Serious Wounds
 Level: 3

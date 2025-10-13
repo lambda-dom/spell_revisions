@@ -1,6 +1,6 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
-INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spell_symbols.tpa"
 
 
 //Initialization.
@@ -8,9 +8,26 @@ LAF get_component_resources_dir RET resources = dir END
 
 
 //Add new spell symbolic names.
-LAF install_resources STR_VAR
-    type = "add_symbol"
-    table = "%resources%/2da/symbols/additions.2da"
+LAF add_spell_symbols STR_VAR
+    table = "%resources%/2da/spell_symbols/additions.2da"
 END
 
-//spell.ids surgery.
+//Add new spell symbols by aliasing.
+LAF alias_spell_symbols STR_VAR
+    table = "%resources%/2da/spell_symbols/aliases.2da"
+END
+
+//Move spell symbols in level (e.g. aliased ones).
+LAF change_spell_symbols STR_VAR
+    table = "%resources%/2da/spell_symbols/changes.2da"
+END
+
+//Replace spell symbols.
+LAF replace_spell_symbols STR_VAR
+    table = "%resources%/2da/spell_symbols/replaces.2da"
+END
+
+//Replace spell symbol holes.
+LAF assign_spell_symbol_holes STR_VAR
+    table = "%resources%/2da/spell_symbols/holes.2da"
+END

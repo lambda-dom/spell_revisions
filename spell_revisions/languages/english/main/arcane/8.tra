@@ -16,7 +16,7 @@ When this spell is cast, the wizard and all of his gear assume a visible, incorp
 
 As an incorporeal creature, the caster moves silently and cannot be heard (+100% Move Silently) or backstabbed. While in ghost form, the caster has a base armor class of 0 and is immune to the effects of disease and poison. Any melee attack made while in ghost form is considered a melee touch attack and thus gains a +4 bonus to the attack roll, while projectiles become corporeal as soon as they are fired. The transformation lasts until successfully dispelled or until the duration runs out, but cannot be used in conjunction with other shapeshifting spells such as Polymorph Self and Shapechange."
 
-//mind_blank:spwi802; spwi802 exists as a resource but is not present in spell.ids
+//mind_blank:spwi802; spwi802 exists as a resource (named Spell Deflection) but is not present in spell.ids
 @8020 = "Mind Blank"
 @8021 = "Mind Blank
 Level: 8
@@ -72,7 +72,7 @@ The spell protection spells dispelled by Pierce Shield are: Minor Spell Deflecti
 
 The combat protection spells dispelled by Pierce Shield are: Mage Armor, Shield, Armor of Faith, Barkskin, Protection from Missiles, Spirit Armor, Stoneskin, Protection from Normal Weapons, Protection from Magical Weapons, Physical Mirror, Prismatic Mantle, Moment of Prescience and Absolute Immunity."
 
-//spwi806: non existent
+//spwi806: non-existent
 //summon_fiend:spwi807
 @8070 = "Summon Fiend"
 @8071 = "Summon Fiend
@@ -106,19 +106,7 @@ Unholy Blight (once every 5 rounds)
 Confusion (once every 5 rounds)
 Power Word Stun (once every 5 rounds)"
 
-//moment_prescience:spwi808
-@8080 = "Moment of Prescience"
-@8081 = "Moment of Prescience
-Level: 8
-School: Divination
-Range: Personal
-Duration: 4 rounds
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
-
-This spell grants an almost omniscient perception of things to come. For the duration of the spell the mage's armor class is improved by 20 points, and any save is made by the caster with a +20 bonus. Due to this spell's short casting time and duration, it is mainly used to buy the wizard a few rounds in the thick of intense combat."
-
+//spwi808:Improved Mantle
 //spell_trigger:spwi809
 @8090 = "Simbul's Spell Trigger"
 @8091 = "Simbul's Spell Trigger
@@ -145,7 +133,7 @@ Saving Throw: Special
 
 An Incendiary Cloud spell creates a cloud of roiling smoke and roaring flame. The smoke obscures all sight beyond 15 feet, including darkvision. Creatures within the area suffer a -4 penalty to attack rolls and armor class. In addition, the flames deal 4d6 points of fire damage each round to everything within the cloud, with a saving throw vs. breath at -4 allowed for half damage. Fire dwellers like fire elementals, fire giants and salamanders are immune to the effects of this spell."
 
-//symbol_weakness:spwi811
+//symbol_weakness:spwi811, replaces Symbol of Fear
 @8110 = "Symbol of Weakness"
 @8111 = "Symbol of Weakness
 Level: 8
@@ -195,7 +183,7 @@ under 3      -- eternity
 
 If the 9th level spell Freedom is cast in the area where a creature is mazed, it will effectively bring him back to this plane, ending the spell prematurely. Otherwise, the effect lasts for the duration of the spell. A mazed creature cannot be freed through a dispel magic."
 
-//spwi814:non-existent
+//spwi814:non-existent, WIZARD_OTTOS_IRRESISTIBLE_DANCE in spell.ids
 //power_word_blind:spwi815
 @8150 = "Power Word Blind"
 @8151 = "Power Word Blind
@@ -235,7 +223,7 @@ Saving Throw: Death negates
 
 Symbol of Death is a powerful enchantment that allows the caster to inscribe a symbol on the ground or any other surface. The symbol will remain there until a hostile creature comes within 15 feet of the glyph, at which point it is triggered and explodes, causing all enemies within a 20 foot radius to make a saving throw vs. death at -4 or die. Creatures with more than 60 current hit points are immune to this effect."
 
-//bigbys_icy_grasp:spwi818, replaces cleched fist
+//bigbys_icy_grasp:spwi818, replaces Bigby's Clenched Fist
 @8180 = "Bigby's Icy Grasp"
 @8181 = "Bigby's Icy Grasp
 Level: 8
@@ -248,9 +236,21 @@ Saving Throw: Special
 
 This spell causes a huge disembodied hand to crush the target and pin it to the ground. Each round the massive hand smashes the target for 2d8 cold damage and holds it for 1 round unless a successful save vs. breath is made at a -2 penalty. Elementals and other incorporeal creatures such as Shadows and Wraiths are immune to the hold effect. After the 8th round, the spell is finished."
 
-//monster_summoning_8:spwi819
-@8190 = "Monster Summoning VIII"
-@8191 = "Monster Summoning VIII
+//New spells.
+@8500 = "Moment of Prescience"
+@8501 = "Moment of Prescience
+Level: 8
+School: Divination
+Range: Personal
+Duration: 4 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This spell grants an almost omniscient perception of things to come. For the duration of the spell the mage's armor class is improved by 20 points, and any save is made by the caster with a +20 bonus. Due to this spell's short casting time and duration, it is mainly used to buy the wizard a few rounds in the thick of intense combat."
+
+@8510 = "Monster Summoning VIII"
+@8511 = "Monster Summoning VIII
 Level: 8
 School: Conjuration
 Range: Medium
@@ -274,3 +274,4 @@ Confusing Gaze
 
 Special Qualities:
 Immune to confusion effects"
+

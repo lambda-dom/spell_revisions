@@ -28,7 +28,7 @@ Saving Throw: None
 
 When a wizard casts a Detect Invisibility spell, he becomes able to see clearly any objects or beings that are invisible within a 50 foot radius, as well as any that are astral, ethereal, or out of phase. Instantly and once each round for 5 rounds after the spell is cast, all concealed enemies within the area of effect will become visible to the caster and his allies. Invisible objects carried into the warded area will also become visible. This spell does not reveal illusions or enable the caster to see through physical objects. Magic resistance does not affect this spell."
 
-//non-existent:spwi204
+//non-existent:spwi204, WIZARD_FOG_CLOUD in spell.ids
 //horror:spwi205
 @2050 = "Horror"
 @2051 = "Horror
@@ -55,8 +55,32 @@ Saving Throw: None
 
 This spell causes the creature touched to vanish from sight and be undetectable by normal vision or even infravision. Of course, the invisible creature is not magically silenced, and certain other conditions can render the creature detectable. Items dropped or put down by the invisible creature become visible, items picked up disappear if tucked into the clothing or pouches worn by the creature. The caster cannot perform any actions that manipulate the environment around him such as opening doors, disarming traps, or opening chests. An invisible creature can drink a potion, or cast non-attack spells centered on himself and remain invisible, but he cannot attack nor cast spells on other targets without ending the spell. The spell remains in effect until it is magically broken or dispelled, until the recipient attacks any creature, or until 8 hours have passed."
 
-//knock:spwi207
-//know_alignment:spwi208
+//battering_ram:spwi207, replaces Knock
+@2070 = "Battering Ram"
+@2071 = "Battering Ram
+Level: 2
+School: Evocation
+Range: Medium
+Duration: Instant
+Casting Time: 2
+Area of Effect: 1 creature or object
+Saving Throw: Special
+
+This spell creates a ram-like force that can strike with considerable power. The force can be used to open or smash locked, held, or wizard-locked doors, as well as locked boxes or chests, but it does not raise barred gates or similar impediments. If used against a creature, the target suffers 2d6 points of crushing damage, and must save vs. breath to avoid being knocked unconscious for 1 round."
+
+//know_opponent:spwi208, replaces Know Alignment moved to level 1
+@2080 = "Know Opponent"
+@2081 = "Know Opponent
+Level: 2
+School: Divination
+Range: Long
+Duration: 2 turns
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, the wizard's eyes glow with magical energy, enabling him to read the aura of a creature, and determine the creature's strengths and weaknesses. For the duration of the spell, the target's physical resistances are lowered by 10% and all attacks against the target creature are made with a +2 bonus to the attack roll. Certain magical devices negate the power of the Know Opponent spell, and the spell has no effect on creatures who don't emanate auras, such as constructs. Magic resistance does not affect this spell."
+
 //luck:spwi209
 @2090 = "Luck"
 @2091 = "Luck
@@ -148,7 +172,7 @@ Saving Throw: Breath negates
 
 A Web spell creates a many-layered mass of strong, sticky strands similar to spider webs but far larger and tougher. The Web spell covers a maximum area of about 20 feet in radius. Creatures caught within webs, or simply touching them, become stuck among the gluey fibers. Creatures that make a successful saving throw vs. breath can move at half speed through the area, but must make additional saving throws each round they remain in the area of effect. A failed saving throw means the creature is stuck in the webs, unable to move for that round. Incorporeal and flying creatures are unaffected by this spell, as are spiders and exceptionally large and strong creatures who suffer little to no distress from the webs."
 
-//non existent:spwi216
+//non existent:spwi216, WIZARD_WIZARD_LOCK in spell.ids
 //agannazar_scorcher:spwi217
 @2170 = "Agannazar's Scorcher"
 @2171 = "Agannazar's Scorcher
@@ -227,7 +251,19 @@ Saving Throw: None
 
 Chaos Shield increases a wild mage's chance to gain a favorable result when a wild surge occurs. Every time a roll is made on the wild surge chart, an extra 15 is added to the dice roll. When Nahal's Reckless Dweomer is cast, the bonus from Chaos Shield stacks with the wild mage's level bonus."
 
-//deafness:spwi223
+//sound_burst:spwi223, replaces Deafness
+@2230 = "Sound Burst"
+@2231 = "Sound Burst
+Level: 2
+School: Evocation
+Range: Long
+Duration: 1 turn
+Casting Time: 2
+Area of Effect: Target and enemies within 10'
+Saving Throw: Breath partial
+
+This spell blasts an area with a tremendous cacophony. Enemies within the area suffer 4d4 points of crushing damage, and are deafened for 1 turn. A successful save vs. breath at -2 penalty halves the damage and negates the deafness, and the spell does not affect elementals and constructs. Deafened spellcasters have a 50% chance to miscast any spell. This deafness can be done away with by means of a Dispel Magic spell or a Cure Disease spell."
+
 //glitterdust:spwi224
 @2240 = "Glitterdust"
 @2241 = "Glitterdust
@@ -242,47 +278,8 @@ Saving Throw: Special
 This spell creates a cloud of glittering golden particles within the area of effect. The sparkling dust dazzles all opponents in the area (-2 penalty to attack rolls) for 4 rounds and reveals any opponents who are invisible. Those affected must also save vs. breath to avoid becoming completely covered by the dust, which cannot be removed and continues to sparkle for 4 rounds. Those failing the save remain unable to successfully hide themselves until the dust fades."
 
 //New spells.
-//Replaces knock.
-@2500 = "Battering Ram"
-@2501 = "Battering Ram
-Level: 2
-School: Evocation
-Range: Medium
-Duration: Instant
-Casting Time: 2
-Area of Effect: 1 creature or object
-Saving Throw: Special
-
-This spell creates a ram-like force that can strike with considerable power. The force can be used to open or smash locked, held, or wizard-locked doors, as well as locked boxes or chests, but it does not raise barred gates or similar impediments. If used against a creature, the target suffers 2d6 points of crushing damage, and must save vs. breath to avoid being knocked unconscious for 1 round."
-
-//Replaces know alignment.
-@2510 = "Know Opponent"
-@2511 = "Know Opponent
-Level: 2
-School: Divination
-Range: Long
-Duration: 2 turns
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None
-
-When this spell is cast, the wizard's eyes glow with magical energy, enabling him to read the aura of a creature, and determine the creature's strengths and weaknesses. For the duration of the spell, the target's physical resistances are lowered by 10% and all attacks against the target creature are made with a +2 bonus to the attack roll. Certain magical devices negate the power of the Know Opponent spell, and the spell has no effect on creatures who don't emanate auras, such as constructs. Magic resistance does not affect this spell."
-
-//Replaces deafness.
-@2520 = "Sound Burst"
-@2521 = "Sound Burst
-Level: 2
-School: Evocation
-Range: Long
-Duration: 1 turn
-Casting Time: 2
-Area of Effect: Target and enemies within 10'
-Saving Throw: Breath partial
-
-This spell blasts an area with a tremendous cacophony. Enemies within the area suffer 4d4 points of crushing damage, and are deafened for 1 turn. A successful save vs. breath at -2 penalty halves the damage and negates the deafness, and the spell does not affect elementals and constructs. Deafened spellcasters have a 50% chance to miscast any spell. This deafness can be done away with by means of a Dispel Magic spell or a Cure Disease spell."
-
-@2530 = "Resist Elements"
-@2531 = "Resist Elements
+@2510 = "Resist Elements"
+@2511 = "Resist Elements
 Level: 2
 School: Transmutation
 Range: Touch
@@ -293,8 +290,8 @@ Saving Throw: None
 
 Upon the casting of this spell, the recipient's resistance to all forms of elemental damage is increased by 25%. This effect will last for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
 
-@2540 = "Monster Summoning II"
-@2541 = "Monster Summoning II
+@2520 = "Monster Summoning II"
+@2521 = "Monster Summoning II
 Level: 2
 School: Conjuration
 Range: Medium

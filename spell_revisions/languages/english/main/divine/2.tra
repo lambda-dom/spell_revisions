@@ -89,7 +89,7 @@ Saving Throw: None
 
 With this spell, the caster causes a blazing ray of red-hot fire to spring forth from his hand. The caster wields this blade-like ray as if proficient with the weapon, at his normal THAC0. At level 3, it functions as a magical weapon, dealing 2d6+1 points of fire damage, with an enchantment bonus of +1. For every other three experience levels of the spellcaster, this bonus increases by one, up to a total of +3 enchantment level, +3 to attack rolls, and +3 to damage for a 9th-level caster. Since the blade is immaterial, strength modifiers do not apply to attack rolls or damage, and attacks with the flame blade are considered melee touch attacks (+4 attack roll bonus)."
 
-//sppr207:goodberry:moved to level 1
+//sppr207:goodberry, moved to level 1
 //hold_person:sppr208
 @2080 = "Hold Person"
 @2081 = "Hold Person
@@ -106,8 +106,21 @@ This spell holds one or more humans, demihumans, or humanoid creatures rigidly i
 
 Held creatures cannot move or speak, but they remain aware of events around them even though they are helpless to change them. Time passes at a normal rate for the targets and hence being held does not stop any worsening of their condition due to wounds, disease, or poison."
 
-//know alignment:sppr209. To deprecate as detect alignment already exists at level 1.
-//resist_elements:sppr210: replaces resist fire.
+//know_opponent:sppr209, replaces Know Alignment, moved to level 1.
+@2090 = "Know Opponent"
+@2091 = "Know Opponent
+Level: 2
+School: Divination
+Sphere: Divination
+Range: Long
+Duration: 2 turns
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, the caster's eyes glow with magical energy, enabling him to read the aura of a creature, and determine the creature's strengths and weaknesses. For the duration of the spell, the target's physical resistances are lowered by 10% and all attacks against the target creature are made with a +2 bonus to the attack roll. Certain magical devices negate the power of the Know Opponent spell, and the spell has no effect on creatures who don't emanate auras, such as constructs. Magic resistance does not affect this spell."
+
+//resist_elements:sppr210: replaces Resist Fire.
 @2100 = "Resist Elements"
 @2101 = "Resist Elements
 Level: 2
@@ -177,25 +190,11 @@ Saving Throw: None
 
 When this spell is cast, the priest's body shudders and glows with a shimmering aura as it becomes a vessel for the power of his god. When he does this, his strength, dexterity, and constitution scores are raised by 1 point for every 3 levels of the caster, to a maximum of 3 points at level 9. This spell is not cumulative with itself or with other similar spells."
 
+//sppr215:non-existent, CLERIC_RESIST_COLD in spell.ids
 
 //New spells.
-//Replaced Know Alignment.
-@2510 = "Know Opponent"
-@2511 = "Know Opponent
-Level: 2
-School: Divination
-Sphere: Divination
-Range: Long
-Duration: 2 turns
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None
-
-When this spell is cast, the caster's eyes glow with magical energy, enabling him to read the aura of a creature, and determine the creature's strengths and weaknesses. For the duration of the spell, the target's physical resistances are lowered by 10% and all attacks against the target creature are made with a +2 bonus to the attack roll. Certain magical devices negate the power of the Know Opponent spell, and the spell has no effect on creatures who don't emanate auras, such as constructs. Magic resistance does not affect this spell."
-
-//Cure medium wounds: renamed and moved to level 2.
-@2520 = "Cure Moderate Wounds"
-@2521 = "Cure Moderate Wounds
+@2510 = "Cure Moderate Wounds"
+@2511 = "Cure Moderate Wounds
 Level: 2
 School: Necromancy
 Sphere: Healing
@@ -207,8 +206,8 @@ Saving Throw: None
 
 When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 2d8 + 2/level points of damage sustained by the target creature, up to a maximum of 2d8 + 20."
 
-@2530 = "Fire Trap"
-@2531 = "Fire Trap
+@2520 = "Fire Trap"
+@2521 = "Fire Trap
 Level: 2
 School: Abjuration
 Sphere: Elemental (Fire)
@@ -222,8 +221,8 @@ This powerful trap harms those who enter, pass, or open the selected area or obj
 
 When the spell is cast, the druid weaves a tracery of faintly glowing lines around the warding sigil. When a hostile creature comes within 15 feet of the trap, it is triggered and explodes, damaging every enemy within a 20 foot radius. The damage inflicted is equal to 1d4 points of fire damage per level of the caster, up to a maximum of 10d4. Those who a roll successful saving throw vs. breath will receive only half damage. This spell will not harm party members."
 
-@2540 = "Regenerate Moderate Wounds"
-@2541 = "Regenerate Moderate Wounds
+@2530 = "Regenerate Moderate Wounds"
+@2531 = "Regenerate Moderate Wounds
 Level: 2
 School: Alteration
 Sphere: Healing
@@ -235,8 +234,8 @@ Saving Throw: None
 
 This spell enables the caster to imbue a creature with the ability to regenerate. The creature affected will regain 2 hit points per round, up to a maximum of 60 hit points within 3 turns at level 10. The effect lasts for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
 
-@2550 = "Gust of Wind"
-@2551 = "Gust of Wind
+@2540 = "Gust of Wind"
+@2541 = "Gust of Wind
 Level: 2
 School: Evocation
 Sphere: Elemental (Air)
@@ -246,10 +245,10 @@ Casting Time: 1
 Area of Effect: Special
 Saving Throw: Special
 
-This spell creates a severe blast of air that originates from the caster, affecting all enemies in its path. Those within 6 feet must save vs. breath or be blown back by the force of the gust and knocked unconscious for 1 round. In addition, this spell will disperse all clouds, including magically created vapors such as Cloudkill, and kill all insect swarms on allied characters in the caster's current area."
+This spell creates a severe blast of air that originates from the caster, affecting all enemies in its path. Those within 6 feet must save vs. breath or be blown back by the force of the gust and knocked unconscious for 1 round. In addition, this spell will disperse all clouds in the caster's current area, including magically created vapors such as Cloudkill, and disperse all the insect swarms plagueing allied characters."
 
-@2560 = "Cause Moderate Wounds"
-@2561 = "Cause Moderate Wounds
+@2550 = "Cause Moderate Wounds"
+@2551 = "Cause Moderate Wounds
 Level: 2
 School: Necromancy
 Sphere: Necromantic
@@ -261,8 +260,8 @@ Saving Throw: None
 
 This spell is the reverse of Cure Moderate Wounds. Instead of healing the creature touched, it causes damage. On a successful touch from the priest, the spell inflicts 2d8 + 2/level points of damage upon the target, up to a maximum of 2d8 + 20. The spell expires once the priest makes a successful melee attack or after 1 turn has passed. The priest gains a +4 bonus to hit the target. Magic resistance does not affect this spell."
 
-@2570 = "Animal Summoning II"
-@2571 = "Animal Summoning II
+@2560 = "Animal Summoning II"
+@2561 = "Animal Summoning II
 Level: 2
 School: Conjuration
 Sphere: Animal

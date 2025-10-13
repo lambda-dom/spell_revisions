@@ -170,9 +170,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Summon Death Knight: Add proficient with two-handed swords opcode. Systematize spell protections in the sword. Systematize fear aura. Missing resources (e. g. unholy fireball).
 
-* Prismatic Mantle: move some of the effects to standardized subspells.
+* Prismatic Mantle: move some of the effects to standardized subspells. The symbol is WIZARD_MANTLE but this is a case where introducing an alias is a good idea.
 
-* Chaos: offload effects to subspells and fix off-by-one probability errors -- see cleric version.
+* Chaos: offload effects to subspells and fix off-by-one probability errors -- see cleric version. Why the rename? Keep the same symbol and rename it to vanilla Sphere of Chaos. Use the same name for the cleric version.
 
 * Prismatic Spray: move effects to subspells.
 
@@ -186,13 +186,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 8. Level 8.
 
-* Ghostform: review implementation.
-
-* Mind blank: review implementation.
-
 * Protection from Energy: review implementation, especially the spell protections list.
 
-* Summon Fiend: only description in.
+* Moment of Prescience: for now the symbol is added, as we do not want to override Improved Mantle.
 
 * Incendiary Cloud: deleted protection against giant. Protections against "fire giants and salamanders" not implemented yet. Reduced viasual sight penalty should be hidden inside a spell to set up protections properly (e.g. bat).
 
@@ -223,8 +219,6 @@ Not just things to (still) do but also proposed changes to spells.
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *?
-
-* Handle replacements: for now, they are just new spells, but they should replace old versions which implies doing surgery on `spell.ids`. This needs weidu library support for the appropriate operations.
 
 * Cure line of spells: mention in description that it also cures intoxication.
 
