@@ -190,6 +190,7 @@ Saving Throw: None
 
 When this spell is cast, the priest's body shudders and glows with a shimmering aura as it becomes a vessel for the power of his god. When he does this, his strength, dexterity, and constitution scores are raised by 1 point for every 3 levels of the caster, to a maximum of 3 points at level 9. This spell is not cumulative with itself or with other similar spells."
 
+//sppr215:non-existent, CLERIC_RESIST_COLD in spell.ids
 
 //New spells.
 //Cure medium wounds: renamed and moved from level 3 to level 2.
