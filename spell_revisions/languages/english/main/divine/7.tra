@@ -17,7 +17,7 @@ This powerful abjuration spell causes spells cast against the priest to be absor
 
 This spell also grants protection from spells cast from scrolls and innate spell-like abilities, but will not protect against area effect spells that are not centered directly upon the priest (such as Fireball), or stationary area effect spells (such as Cloudkill and Stinking Cloud)."
 
-//summon_shambling_mound:sppr702
+//summon_shambling_mound:sppr702, replaces Conjure Earth Elemental, moved to level 6
 @7020 = "Summon Shambling Mound"
 @7021 = ~Summon Shambling Mound
 Level: 7
@@ -45,7 +45,7 @@ Immune to charm, hold, poison, polymorph, sleep and stun effects
 Electrical Resistance 125%; Fire Resistance 100%; Cold Resistance 50%
 Crushing Resistance 100%; Slashing, Piercing and Missile Resistance 50%~
 
-//summon_death_knight:sppr703
+//summon_death_knight:sppr703, replaces Gate
 @7030 = "Summon Death Knight"
 @7031 = "Summon Death Knight
 Level: 7
@@ -107,7 +107,7 @@ Saving Throw: Breath half
 
 When a Fire Storm spell is cast, the whole area is shot through with sheets of roaring flame and then pelted with fiery balls of lava. Those caught in the inferno receive 2d8 points of damage plus one for each level of the caster (up to a maximum of 2d8+20). This assault will last for four rounds, continuing to damage all creatures who remain within the area of effect. An area 10 feet around the caster will be protected from the onslaught. Creatures who successfully save vs. breath at a -4 penalty take only half damage."
 
-//symbol_weakness:sppr706, replaces symbol of fear.
+//symbol_weakness:sppr706, replaces Symbol of Fear.
 @7060 = "Symbol of Weakness"
 @7061 = "Symbol of Weakness
 Level: 7
@@ -149,7 +149,7 @@ Saving Throw: Death partial
 
 The Finger of Death spell snuffs out the victim's life force. The caster points his finger at the victim after the incantation is complete and death occurs, unless a save vs. death at -2 is made. A creature successfully saving still receives 2d8 + level points of damage, up to a maximum of 2d8 + 20."
 
-//chaos:sppr709, replaces confusion
+//chaos:sppr709, replaces Confusion
 @7090 = "Chaos"
 @7091 = "Chaos
 Level: 7
@@ -229,7 +229,7 @@ A Greater Restoration spell removes most temporary and permanent negative effect
 
 The casting of this spell is very draining on the priest, leaving him physically and mentally exhausted. For 5 rounds after the spell is cast, the priest will suffer a -2 penalty to hit, damage, armor class, and casting speed factor."
 
-//sppr714:non-existent
+//sppr714:non-existent, CLERIC_ENERGY_DRAIN in spell.ids
 //unholy_word:sppr715
 @7150 = "Unholy Word"
 @7151 = "Unholy Word
@@ -252,33 +252,7 @@ Up to caster level -10 -- Death
 
 The effects are cumulative and concurrent."
 
-//animal_summoning_7:sppr716, replaces conjure animals.
-@7160 = "Animal Summoning VII"
-@7161 = "Animal Summoning VII
-Level: 7
-School: Conjuration
-Sphere: Animal
-Range: Long
-Duration: 3 turns
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
-
-By means of this spell, the caster calls a number of animals, which serve the summoner under any conditions. The type and number of creatures that appear depend upon the level of the druid casting the spell.
-
-13th+ : 2 Polar Bears
-
-The summoned animals will aid the caster by whatever means they possess, staying until the spell duration expires.
-
-Polar Bear (8 Hit Dice):
-STR 21, DEX 13, CON 19, INT 6, WIS 12, CHA 8;  AL Neutral
-HP 104, AC 3, THAC0 8, Saving Throws 10/14/10/12/14
-2 Attacks Per Round, 2d4 + 11 Crushing Damage (Claws and Bite)
-
-Special Qualities:
-Immunity to Ice Storm
-Cold Resistance 20%"
-
+//sppr716:non-existent, CLERIC_SPACE_WARP in spell.ids
 //creeping_doom:sppr717
 @7170 = "Creeping Doom"
 @7171 = "Creeping Doom
@@ -341,3 +315,30 @@ There are three tremors that are caused by the earthquake. The first tremor caus
 
 This spell will affect both enemies and friends of the caster, so care must be taken in its use. Magic resistance does not affect this spell."
 
+//HLA's start at sppr7121.
+//New spells.
+@7500 = "Animal Summoning VII"
+@7501 = "Animal Summoning VII
+Level: 7
+School: Conjuration
+Sphere: Animal
+Range: Long
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster calls a number of animals, which serve the summoner under any conditions. The type and number of creatures that appear depend upon the level of the druid casting the spell.
+
+13th+ : 2 Polar Bears
+
+The summoned animals will aid the caster by whatever means they possess, staying until the spell duration expires.
+
+Polar Bear (8 Hit Dice):
+STR 21, DEX 13, CON 19, INT 6, WIS 12, CHA 8;  AL Neutral
+HP 104, AC 3, THAC0 8, Saving Throws 10/14/10/12/14
+2 Attacks Per Round, 2d4 + 11 Crushing Damage (Claws and Bite)
+
+Special Qualities:
+Immunity to Ice Storm
+Cold Resistance 20%"

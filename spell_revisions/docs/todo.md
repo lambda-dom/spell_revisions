@@ -170,9 +170,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Summon Death Knight: Add proficient with two-handed swords opcode. Systematize spell protections in the sword. Systematize fear aura. Missing resources (e. g. unholy fireball).
 
-* Prismatic Mantle: move some of the effects to standardized subspells.
+* Prismatic Mantle: move some of the effects to standardized subspells. The symbol is WIZARD_MANTLE but this is a case where introducing an alias is a good idea.
 
-* Chaos: offload effects to subspells and fix off-by-one probability errors -- see cleric version.
+* Chaos: offload effects to subspells and fix off-by-one probability errors -- see cleric version. Why the rename? Keep the same symbol and rename it to vanilla Sphere of Chaos. Use the same name for the cleric version.
 
 * Prismatic Spray: move effects to subspells.
 

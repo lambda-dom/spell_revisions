@@ -1,6 +1,7 @@
 2DA V1.0
 *
-                            install type    level   id
-CLERIC_CURE_MORTAL_WOUNDS   1       priest  5       2
-CLERIC_CAUSE_MORTAL_WOUNDS  1       priest  5       10
-WIZARD_KNOW_OPPONENT        1       wizard  2       8
+                                install type    level   id
+CLERIC_CURE_MORTAL_WOUNDS       1       priest  5       2
+CLERIC_CAUSE_MORTAL_WOUNDS      1       priest  5       10
+CLERIC_SUMMON_SHAMBLING_MOUND   1       priest  7       2
+WIZARD_KNOW_OPPONENT            1       wizard  2       8
