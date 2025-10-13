@@ -48,9 +48,5 @@ WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY 1       wizard  4       *
 WIZARD_CONJURE_LESSER_WATER_ELEMENTAL   1       wizard  5       *
 WIZARD_CONJURE_WATER_ELEMENTAL          1       wizard  6       *
 WIZARD_MONSTER_SUMMONING_LEVEL_7        1       wizard  7       *
-WIZARD_GHOSTFORM                        0       wizard  8       *
-WIZARD_MIND_BLANK                       0       wizard  8       *
-WIZARD_MOMENT_OF_PRESCIENCE             0       wizard  8       *
-WIZARD_SYMBOL_WEAKNESS                  0       wizard  8       *
-WIZARD_BIGBYS_ICY_GRASP                 0       wizard  8       *
-WIZARD_MONSTER_SUMMONING_LEVEL_8        0       wizard  8       *
+WIZARD_MOMENT_OF_PRESCIENCE             1       wizard  8       *
+WIZARD_MONSTER_SUMMONING_LEVEL_8        1       wizard  8       *

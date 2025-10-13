@@ -186,13 +186,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 8. Level 8.
 
-* Ghostform: review implementation.
-
-* Mind blank: review implementation.
-
 * Protection from Energy: review implementation, especially the spell protections list.
 
-* Summon Fiend: only description in.
+* Moment of Prescience: for now the symbol is added, as we do not want to override Improved Mantle.
 
 * Incendiary Cloud: deleted protection against giant. Protections against "fire giants and salamanders" not implemented yet. Reduced viasual sight penalty should be hidden inside a spell to set up protections properly (e.g. bat).
 
