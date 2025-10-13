@@ -69,7 +69,7 @@ Saving Throw: Special
 
 Flesh to Stone is a powerful magic that permanently turns the flesh of the creature affected into stone. When struck by this spell the target is slowed for 3 rounds as its flesh begins to harden. The following round the subject of the spell must save vs. petrification at -4 or be turned into a statue. A dispel magic spell cannot restore the victim's natural form, but some powerful spells, such as Stone to Flesh or Freedom, can. This spell has no effect on undead, constructs, or incorporeal creatures."
 
-//banishment:spwi605, replaces death spell
+//banishment:spwi605, replaces Death Spell
 @6050 = "Banishment"
 @6051 = "Banishment
 Level: 6
@@ -138,7 +138,38 @@ When this spell is cast, the caster gains the ability to see the exact locations
 
 Note: True Seeing does not dispel illusionary clones such as those conjured by Mislead or Simulacrum, but instead clearly highlights them, revealing them as deceptions."
 
-//monster_summoning_6:spwi610
+//monster_summoning_6:spwi610, replaces non-existent Monster Summon IV
+@6100 = "Monster Summoning VI"
+@6101 = "Monster Summoning VI
+Level: 6
+School: Conjuration
+Range: Medium
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster summons a number of monsters, which serve the mage under any conditions. The type and number of creatures that appear depend upon the level of the wizard casting the spell. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires.
+
+11th : 2 baby wyverns
+15th+ : 2 baby wyverns, 1 wyvern
+
+Baby Wyvern (6 Hit Dice):
+STR 17, DEX 12, CON 15, INT 6, WIS 11, CHA 9;  AL Neutral Evil
+HP 78, AC 3, THAC0 12, Saving Throws 11/15/11/13/15
+4 Attacks Per Round, 2d6 + 3 Piercing Damage (Bite, Claws, & Sting +1)
+
+Wyvern (7 Hit Dice):
+STR 19, DEX 12, CON 15, INT 6, WIS 12, CHA 9;  AL Neutral Evil
+HP 91, AC 2, THAC0 8, Saving Throws 10/14/10/12/14
+4 Attacks Per Round, 2d6 + 9 Piercing Damage (Bite, Claws, & Sting +2)
+
+Combat Abilities:
+Poison: 25% chance a wyvern's sting injects a poison which inflicts 2hp/sec for 1 turn (save vs. poison at -4 neg.)
+
+Special Qualities:
+Immune to entangle, grease, web, hold, slow, sleep and stun"
+
 //protection_magical_weapons:spwi611
 @6110 = "Protection from Magical Weapons"
 @6111 = "Protection from Magical Weapons
@@ -178,7 +209,7 @@ Saving Throw: None
 
 When this spell is cast, each affected creature functions at double normal movement rate, gains a +2 bonus to attack rolls, armor class, and saving throws vs. breath, and can make one extra attack each round. Spellcasting and spell effects are not affected. There are two major differences between the third level wizard spell Haste and this spell. The first major difference is that there is no period of fatigue following the expiration of this spell. The other major difference is that Improved Haste cannot be countered by Slow."
 
-//acid_fog:spwi614, replaces death fog
+//acid_fog:spwi614, replaces Death Fog
 @6140 = "Acid Fog"
 @6141 = "Acid Fog
 Level: 6
@@ -230,39 +261,7 @@ Saving Throw: None
 
 Upon casting this spell, the wizard is allowed to choose a spell out of his repertoire of known spells. The spell level must be lower or equal to the level of the caster divided by three. Once the spell is chosen, the caster is allowed to choose a condition of some kind from the list provided. The starting condition can be anything from reaching 10% of his maximum hit points to an enemy being sighted. Once this starting condition is satisfied the spell that was chosen will be cast automatically. For example, a 12th level wizard could place the spell Stoneskin in a contingency with the starting condition being 'the wizard reaches 50% of his maximum hit points'. Then once the wizard is reduced to 50% or less of his total hit points in combat, Stoneskin would be immediately cast upon him. This requires no action by the wizard, happening automatically and instantaneously. The limitation of this spell is that the target of the spell placed in the contingency must be the caster. Therefore, the spell stored cannot be an offensive spell nor can it target any other party members."
 
-//spell_deflection:spwi618, deprecated
-//monster_summoning_6:spwi619, replaces wyvern call.
-@6190 = "Monster Summoning VI"
-@6191 = "Monster Summoning VI
-Level: 6
-School: Conjuration
-Range: Medium
-Duration: 3 turns
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
-
-By means of this spell, the caster summons a number of monsters, which serve the mage under any conditions. The type and number of creatures that appear depend upon the level of the wizard casting the spell. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires.
-
-11th : 2 baby wyverns
-15th+ : 2 baby wyverns, 1 wyvern
-
-Baby Wyvern (6 Hit Dice):
-STR 17, DEX 12, CON 15, INT 6, WIS 11, CHA 9;  AL Neutral Evil
-HP 78, AC 3, THAC0 12, Saving Throws 11/15/11/13/15
-4 Attacks Per Round, 2d6 + 3 Piercing Damage (Bite, Claws, & Sting +1)
-
-Wyvern (7 Hit Dice):
-STR 19, DEX 12, CON 15, INT 6, WIS 12, CHA 9;  AL Neutral Evil
-HP 91, AC 2, THAC0 8, Saving Throws 10/14/10/12/14
-4 Attacks Per Round, 2d6 + 9 Piercing Damage (Bite, Claws, & Sting +2)
-
-Combat Abilities:
-Poison: 25% chance a wyvern's sting injects a poison which inflicts 2hp/sec for 1 turn (save vs. poison at -4 neg.)
-
-Special Qualities:
-Immune to entangle, grease, web, hold, slow, sleep and stun"
-
+//spell_deflection:spwi618, moved to level 5
 //conjure_fire_elemental:spwi620
 @6200 = "Conjure Fire Elemental"
 @6201 = "Conjure Fire Elemental
@@ -348,7 +347,7 @@ Immune to normal weapons
 Immune to hold, poison, polymorph, sleep and stun effects
 Slashing, Piercing and Missile Resistance 40%"
 
-//animate_skeleton_warrior:spwi623
+//animate_skeleton_warrior:spwi623, replaces Carrion Summon
 @6230 = "Animate Skeleton Warrior"
 @6230 = "Animate Skeleton Warrior
 Level: 6

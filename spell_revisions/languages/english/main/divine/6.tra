@@ -24,7 +24,7 @@ Special Qualities:
 Natural Invisibility: constantly invisible as if affected by an Improved Invisibility spell
 Immune to hold, poison, polymorph, sleep and stun effects"
 
-//monster_summoning_6:sppr602
+//monster_summoning_6:sppr602, replaces Animal Summoning III
 @6020 = "Animal Summoning VI"
 @6021 = "Animal Summoning VI
 Level: 6
@@ -64,7 +64,7 @@ The priest employs this spell to create a wall of circling, razor-sharp blades. 
 
 Note that spells like Invisibility, Shadow Door, etc. will not function on the caster when protected by Blade Barrier. Also, cleric/thieves and cleric/rangers who cast this will not be able to hide in shadows until the spell expires."
 
-//conjure animals, deprecated:sppr604
+//conjure animals:sppr604, deprecated, role played by Animal Summoning VII
 //conjure_fire_elemental:sppr605
 @6050 = "Conjure Fire Elemental"
 @6051 = "Conjure Fire Elemental
@@ -325,6 +325,7 @@ Undead immunities to fear, fatigue, charm, confusion, disease, hold, poison, sle
 Cold Resistance 100%; Magic Resistance 90%
 Slashing & Piercing Resistance 40%; Missile Resistance 60%"
 
+//Druid version of regeneration.
 @6540 = "Regeneration"
 @6541 = "Regeneration
 Level: 6
