@@ -9,11 +9,11 @@ LAF get_component_resources_dir RET resources = dir END
 LAF get_component_tra_dir RET tra = dir END
 
 
-//Install spell symbols.
-LAF install_subcomponent STR_VAR
-    subcomponent = "%root%/subcomponents/spell_symbols.tpa"
-END
-
+// //Install spell symbols.
+// LAF install_subcomponent STR_VAR
+//     subcomponent = "%root%/subcomponents/spell_symbols.tpa"
+// END
+//
 // //Install sectypes.
 // LAF install_subcomponent STR_VAR
 //     subcomponent = "%root%/subcomponents/sectypes.tpa"

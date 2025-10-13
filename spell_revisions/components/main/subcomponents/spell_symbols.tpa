@@ -5,6 +5,7 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/spell_symbols.tpa"
 
 //Initialization.
 LAF get_component_resources_dir RET resources = dir END
+PRINT "spell_symbols: '%COMPONENT_DIR%' == '%resources%'."
 
 
 //Add new spell symbolic names.

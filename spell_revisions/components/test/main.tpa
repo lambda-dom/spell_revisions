@@ -1,0 +1,12 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+
+
+//Set variables.
+OUTER_TEXT_SPRINT root "%MOD_FOLDER%/components/main"
+
+//Execute subcomponents.
+//Install spell symbols.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/spell_symbols.tpa"
+END
