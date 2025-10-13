@@ -10,3 +10,8 @@ OUTER_TEXT_SPRINT root "%MOD_FOLDER%/components/main"
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/spell_symbols.tpa"
 END
+
+//Install sectypes.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/sectypes.tpa"
+END

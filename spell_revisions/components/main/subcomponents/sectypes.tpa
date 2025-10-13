@@ -9,7 +9,7 @@ LAF get_component_resources_dir RET resources = dir END
 LAF get_component_tra_dir RET tra = dir END
 
 
-//Install vvcs for spells.
+//Install needed sectypes.
 LAF add_sectypes STR_VAR
     table = "%resources%/2da/sectypes.2da"
     tra = "%tra%/sectypes.tra"
