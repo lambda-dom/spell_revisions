@@ -268,3 +268,7 @@ note(s):
 * Cre tables updated but no script data in yet.
 
 * change elemental names lesser_air_elemental -> air_elemental_lesser, etc.
+
+# D. Projectiles.
+
+* disintegrate: missing spgreorb aux resource.

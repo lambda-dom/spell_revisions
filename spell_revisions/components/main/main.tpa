@@ -18,22 +18,22 @@ LAF get_component_tra_dir RET tra = dir END
 // LAF install_subcomponent STR_VAR
 //     subcomponent = "%root%/subcomponents/sectypes.tpa"
 // END
-// 
+
 // //Install vvcs needed by spells, e.g. via Play Visual [215] opcode.
 // LAF install_subcomponent STR_VAR
 //     subcomponent = "%root%/subcomponents/vvcs.tpa"
 // END
 
-//Install projectiles.
+// //Install projectiles.
+// LAF install_subcomponent STR_VAR
+//     subcomponent = "%root%/subcomponents/projectiles.tpa"
+// END
+
+//Install icons for spells.
 LAF install_subcomponent STR_VAR
-    subcomponent = "%root%/subcomponents/projectiles.tpa"
+    subcomponent = "%root%/subcomponents/icons.tpa"
 END
 
-// //Install icons for spells.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/icons.tpa"
-// END
-// 
 // //Install summons.
 // LAF install_subcomponent STR_VAR
 //     subcomponent = "%root%/subcomponents/summons.tpa"

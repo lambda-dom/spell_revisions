@@ -20,3 +20,8 @@ END
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/vvcs.tpa"
 END
+
+//Install projectiles.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/projectiles.tpa"
+END

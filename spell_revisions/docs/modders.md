@@ -21,3 +21,7 @@ Because of data dependencies, there is a well defined ordering in which surgery 
 ## B. 3. VVCs.
 
 Name the .vvc and required .bam animations identically with a fixed, statically defined name prefixed by the global prefix (for now settled on `dl`). The symbolic names are derived from the spells they are attached to.
+
+## B. 4. Projectiles.
+
+Same naming scheme as .vvc *but* this will probably change as now these are all *new* resources and we should rather, in some instances, override existing resources. This is particularly true for projectiles with a label suffixed sr.

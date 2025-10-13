@@ -248,3 +248,9 @@ note(s):
 ## B. 9. Level 9.
 
 * Pit Fiend: review fire spell protections on weapon (and maybe move them to ring). Damage bonus 4 -> 16. Fix probabilities out of whack, duration of disease display string. Change constrict save to vs. breath. Creature: hps 120 -> 170, ac -6 -> -7, thac0 5 -> -7, apr 4 -> 5.
+
+# C. Projectiles.
+
+* strength_of_one: affects only enemies and only allies, remove the former.
+
+* mass regenerate: affects only enemies and only allies, remove the former.
