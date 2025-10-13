@@ -14,6 +14,8 @@ Saving Throw: Spell negates
 
 This spell causes confusion in one or more creatures within the area, creating indecision and the inability to take effective action. All hostile creatures within the area of effect are allowed a saving throw vs. spell at -2. Those successfully saving are unaffected by the spell. Those who fail their saving throws will either go berserk, stand confused, or wander about for the duration of the spell. Wandering creatures move as far from the caster as possible, according to their most typical mode of movement (characters walk, fish swim, bats fly, etc.). Any confused creature that is attacked perceives the attacker as an enemy and acts according to its basic nature."
 
+//spwi402:dimension door, unused
+//spwi403:frost shield, currently unused but will be reinstated
 //ice_storm:spwi404
 @4040 = "Ice Storm"
 @4041 = "Ice Storm
@@ -53,7 +55,39 @@ Saving Throw: None
 
 This spell creates a faintly shimmering magical sphere around the caster that prevents any 1st-, 2nd-, or 3rd-level spell effects from penetrating (i.e., the area of effect of any such spells does not include the area of the globe of invulnerability). This includes innate abilities and effects from devices. However, any type of spell can be cast out of the magical sphere, and these pass from the caster of the globe to their subject without affecting the globe. Fourth and higher level spells are not affected by the globe. The globe can be brought down by a successful dispel magic."
 
-//monster_summoning_1, deprecated:spwi407
+//monster_summoning_4:spwi407, replaces Monster Summoning I
+@4070 = "Monster Summoning IV"
+@4071 = "Monster Summoning IV
+Level: 4
+School: Conjuration
+Range: Medium
+Duration: 3 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster summons a number of monsters, which serve the mage under any conditions. The type and number of creatures that appear depend upon the level of the wizard casting the spell. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires.
+
+7th : 2 giant spiders
+9th : 3 giant spiders
+12th+ : 3 giant spiders, 1 sword spider
+
+Giant Spider (4 Hit Dice):
+STR 15, DEX 17, CON 12, INT -, WIS 10, CHA 3;  AL Neutral
+HP 32, AC 6, THAC0 16, Saving Throws 10/13/10/13/13
+1 Attack Per Round, 1d8 + 1 Piercing Damage (Sting +1)
+
+Sword Spider (5 Hit Dice):
+STR 17, DEX 10, CON 15, INT -, WIS 11, CHA 3;  AL Neutral
+HP 45, AC 3, THAC0 14, Saving Throws 9/12/9/12/12
+4 Attacks Per Round, 1d8 + 2 Piercing Damage (Legs & Sting +1)
+
+Combat Abilities (all spiders):
+Poison: spiders' bites inject a venom which inflicts 2hp/round for 1 turn (save vs. poison negates)
+
+Special Qualities (all spiders):
+Immune to poison and web effects"
+
 //stoneskin:spwi408
 @4080 = "Stoneskin"
 @4081 = "Stoneskin
@@ -82,7 +116,7 @@ Saving Throw: Death negates
 
 This spell causes a major disease and weakness in a creature. Every 2 rounds the afflicted individual must make a saving throw vs. poison at -2 or suffer additional -2 penalty to strength, dexterity, constitution, and charisma (up to -8 to all stats). The effects of this spell will persist until the creature receives a Cure Disease spell, or the spell duration expires."
 
-//break_enchantment:spwi410
+//break_enchantment:spwi410, replaces Remove Curse
 @4100 = "Break Enchantment"
 @4101 = "Break Enchantment
 Level: 4
@@ -273,8 +307,8 @@ Saving Throw: Spell negates
 
 With this spell, the wizard instigates a teleportation effect as far as the wizard can see. All enemies in this area are randomly teleported for the duration of the spell unless they save vs. spell at -4. Magic resistance does not affect this spell. This spell is best used against multiple enemies, serving to confuse them and allowing the wizard to concentrate on activating her defenses."
 
-//non existent:spwi422
-//spider_spawn, deprecated:spwi423
+//spwi422:non-existent
+//spider_spawn:spwi423, deprecated, role played by Monster Summoning IV
 //farsight:spwi424
 @4240 = "Farsight"
 @4241 = "Farsight
@@ -303,40 +337,8 @@ When this spell is employed, the wizard creates an invisible sensory organ that 
 
 
 //New spells.
-@4500 = "Monster Summoning IV"
-@4501 = "Monster Summoning IV
-Level: 4
-School: Conjuration
-Range: Medium
-Duration: 3 turns
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
-
-By means of this spell, the caster summons a number of monsters, which serve the mage under any conditions. The type and number of creatures that appear depend upon the level of the wizard casting the spell. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires. The summoned creatures will remain under the wizard's control until they are slain or the spell duration expires.
-
-7th : 2 giant spiders
-9th : 3 giant spiders
-12th+ : 3 giant spiders, 1 sword spider
-
-Giant Spider (4 Hit Dice):
-STR 15, DEX 17, CON 12, INT -, WIS 10, CHA 3;  AL Neutral
-HP 32, AC 6, THAC0 16, Saving Throws 10/13/10/13/13
-1 Attack Per Round, 1d8 + 1 Piercing Damage (Sting +1)
-
-Sword Spider (5 Hit Dice):
-STR 17, DEX 10, CON 15, INT -, WIS 11, CHA 3;  AL Neutral
-HP 45, AC 3, THAC0 14, Saving Throws 9/12/9/12/12
-4 Attacks Per Round, 1d8 + 2 Piercing Damage (Legs & Sting +1)
-
-Combat Abilities (all spiders):
-Poison: spiders' bites inject a venom which inflicts 2hp/round for 1 turn (save vs. poison negates)
-
-Special Qualities (all spiders):
-Immune to poison and web effects"
-
-@4510 = "Protection from Elemental Energy"
-@4511 = "Protection from Elemental Energy
+@4500 = "Protection from Elemental Energy"
+@4501 = "Protection from Elemental Energy
 Level: 4
 School: Abjuration
 Range: Touch
@@ -347,8 +349,8 @@ Saving Throw: None
 
 When this spell is cast, the recipient receives complete protection from one damage type: acid, cold, fire, or lightning. 100% of the damage from the selected source of energy will be absorbed, and the target creature will become completely immune to the effects of spells based on that element. Multiple castings of this spell are not cumulative, but each time a different damage type can be selected."
 
-@4520 = "Vitriolic Sphere"
-@4521 = "Vitriolic Sphere
+@4510 = "Vitriolic Sphere"
+@4511 = "Vitriolic Sphere
 Level: 4
 School: Conjuration
 Range: Medium
@@ -359,10 +361,9 @@ Saving Throw: Breath half
 
 When this spell is cast, a glowing orb of emerald acid streaks to the target and explodes in a 10-foot radius. Each creature in the area must make a save vs. breath. On a failed save, a creature takes 10d4 acid damage and 4d4 acid damage at the end of its next 2 rounds. On a successful save, a creature takes half the initial damage and half damage at the end of each round."
 
-//protection_electricity:spwi512, moved to level 4.
 //Moved from level 3.
-@4610 = "Protection from Fire"
-@4611 = "Protection from Fire
+@4520 = "Protection from Fire"
+@4521 = "Protection from Fire
 Level: 4
 School: Abjuration
 Range: Touch
@@ -374,8 +375,8 @@ Saving Throw: None
 When a Protection from Fire spell is cast, the recipient receives complete protection from all fire-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like fiery dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Burning Hands, Fireball, Flame Strike, and Fire Storm. Multiple castings of this spell are not cumulative."
 
 //Moved from level 3.
-@4620 = "Protection from Cold"
-@4621 = "Protection from Cold
+@4530 = "Protection from Cold"
+@4531 = "Protection from Cold
 Level: 4
 School: Abjuration
 Range: Touch
@@ -386,8 +387,9 @@ Saving Throw: None
 
 When a Protection from Cold spell is cast, the recipient receives complete protection from all cold-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like icy dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Ice Storm and Cone of Cold. Multiple castings of this spell are not cumulative."
 
-@4630 = "Protection from Electricity"
-@4631 = "Protection from Electricity
+//Moved from level 5.
+@4540 = "Protection from Electricity"
+@4541 = "Protection from Electricity
 Level: 4
 School: Abjuration
 Range: Touch
@@ -398,9 +400,9 @@ Saving Throw: None
 
 When a Protection from Electricity spell is cast, the recipient receives complete protection from all electrical-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like electric dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Lightning Bolt, Glyph of Warding, Call Lightning, and Chain Lightning. Multiple castings of this spell are not cumulative."
 
-//protection_acid:spwi517, moved to level 4.
-@4640 = "Protection from Acid"
-@4641 = "Protection from Acid
+//Moved from level 5.
+@4550 = "Protection from Acid"
+@4551 = "Protection from Acid
 Level: 4
 School: Abjuration
 Range: Touch

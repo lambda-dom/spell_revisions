@@ -21,9 +21,8 @@ CLERIC_SPIKE_GROWTH                     1       priest  3       *
 CLERIC_ICELANCE                         1       priest  3       *
 CLERIC_REGENERATE_SERIOUS_WOUNDS        1       priest  3       *
 CLERIC_ANIMAL_SUMMONING_LEVEL_3         1       priest  3       *
-CLERIC_ANIMAL_SUMMONING_LEVEL_4         0       priest  4       *
-CLERIC_ICE_STORM                        0       priest  4       *
-CLERIC_REGENERATE_CRITICAL_WOUNDS       0       priest  4       *
+CLERIC_ICE_STORM                        1       priest  4       *
+CLERIC_REGENERATE_CRITICAL_WOUNDS       1       priest  4       *
 CLERIC_REPULSION                        0       priest  5       *
 CLERIC_CURE_MORTAL_WOUNDS               0       priest  5       *
 CLERIC_ANIMAL_SUMMONING_LEVEL_5         0       priest  5       *
@@ -53,9 +52,8 @@ WIZARD_MONSTER_SUMMONING_LEVEL_1        1       wizard  1       *
 WIZARD_RESIST_ELEMENTS                  1       wizard  2       *
 WIZARD_MONSTER_SUMMONING_LEVEL_2        1       wizard  2       *
 WIZARD_ICELANCE                         1       wizard  3       *
-WIZARD_BREAK_ENCHANTMENT                0       wizard  4       *
-WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY 0       wizard  4       *
-WIZARD_VITRIOLIC_SPHERE                 0       wizard  4       *
+WIZARD_VITRIOLIC_SPHERE                 1       wizard  4       *
+WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY 1       wizard  4       *
 WIZARD_SUMMON_SHADOW                    0       wizard  5       *
 WIZARD_MONSTER_SUMMONING_LEVEL_5        0       wizard  5       *
 WIZARD_WAVES_OF_FATIGUE                 0       wizard  5       *

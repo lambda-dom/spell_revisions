@@ -3,10 +3,12 @@
                                     install type    level
 CLERIC_GOOD_BERRIES                 1       priest  1
 CLERIC_CAUSE_SERIOUS_WOUNDS         1       priest  3
-CLERIC_CURE_CRITICAL_WOUNDS         0       priest  4
-CLERIC_CAUSE_CRITICAL_WOUNDS        0       priest  4
 CLERIC_PROTECTION_FROM_FIRE         1       priest  5
-CLERIC_PROTECTION_FROM_LIGHTNING    0       priest  5
+CLERIC_PROTECTION_FROM_LIGHTNING    1       priest  5
 CLERIC_CONJURE_EARTH_ELEMENTAL      0       priest  6
 WIZARD_KNOW_ALIGNMENT               1       wizard  1
+WIZARD_PROTECTION_FROM_FIRE         1       wizard  4
+WIZARD_PROTECTION_FROM_COLD         1       wizard  4
+WIZARD_PROTECTION_FROM_ELECTRICITY  1       wizard  4
+WIZARD_PROTECTION_FROM_ACID         1       wizard  4
 WIZARD_SPELL_DEFLECTION             0       wizard  5

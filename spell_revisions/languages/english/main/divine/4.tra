@@ -1,7 +1,7 @@
 //Description strings.
 //Divine spells.
 //Level 4.
-//cure_critical_wounds:sppr401
+//cure_critical_wounds:sppr401, replaces Cure Serious Wounds, moved from level 5
 @4010 = "Cure Critical Wounds"
 @4011 = "Cure Critical Wounds
 Level: 4
@@ -15,7 +15,7 @@ Saving Throw: None
 
 When casting this spell, and laying his hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 4d8 + 4/level points of damage sustained by the target creature (up to a maximum of 4d8 + 40)."
 
-//animal_summoning_4:sppr402
+//animal_summoning_4:sppr402, replaces Animal Summoning I
 @4020 = "Animal Summoning IV"
 @4021 = "Animal Summoning IV
 Level: 4
@@ -98,7 +98,7 @@ Saving Throw: None
 
 Defensive Harmony grants affected creatures a defensive bonus by enhancing the coordination of their attacks and defenses. This allows a group of creatures to act as a cohesive unit for a single battle or encounter. The effect is always centered on the caster, but affects all those within a 10 foot radius. The affected creatures can move outside of this radius after the spell is cast and still enjoy the benefits of the Harmony. While the spell is in effect, each affected creature gains a +4 bonus to her armor class. Multiple castings of this spell are not cumulative."
 
-//protection_from_electricity, deprecated:sppr407
+//protection_from_electricity:sppr407, moved to level 5 and renamed
 //magic_circle_against_evil:sppr408
 @4080 = "Magic Circle against Evil"
 @4081 = "Magic Circle against Evil
@@ -224,7 +224,7 @@ Saving Throw: None
 
 When a Negative Plane Protection spell is cast, the recipient receives complete protection from negative energy attacks. This spell also affords the recipient partial protection from monsters with Negative Energy plane connections (such as vampires) and certain weapons and spells that drain levels. A protected creature is immune to any form of level draining for the duration of the spell, though they will still suffer normal hit point damage from the physical attacks, if applicable."
 
-//cause_critical_wounds:sppr414
+//cause_critical_wounds:sppr414, replaces Cause Serious Wounds, moved from level 5
 @4140 = "Cause Critical Wounds"
 @4141 = "Cause Critical Wounds
 Level: 4
