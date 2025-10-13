@@ -15,3 +15,8 @@ END
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/sectypes.tpa"
 END
+
+//Install vvcs needed by spells, e.g. via Play Visual [215] opcode.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/vvcs.tpa"
+END
