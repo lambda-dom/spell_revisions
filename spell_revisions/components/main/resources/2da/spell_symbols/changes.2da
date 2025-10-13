@@ -2,8 +2,6 @@
 *
                                     install type    level
 CLERIC_GOOD_BERRIES                 1       priest  1
-CLERIC_CURE_MEDIUM_WOUNDS           1       priest  2
-CLERIC_CURE_SERIOUS_WOUNDS          1       priest  3
 CLERIC_CAUSE_SERIOUS_WOUNDS         1       priest  3
 CLERIC_CURE_CRITICAL_WOUNDS         0       priest  4
 CLERIC_CAUSE_CRITICAL_WOUNDS        0       priest  4

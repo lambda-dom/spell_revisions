@@ -106,7 +106,7 @@ This spell holds persons and animals rigidly immobile and in place. The term "pe
 Held creatures cannot move or speak, but they remain aware of events around them even though they are helpless to change them. Time passes at a normal rate for the targets and hence being held does not stop any worsening of their condition due to wounds, disease, or poison.~
 
 //sppr306:protection_fire, moved to level 5
-//break_enchantment:sppr307, replacement for remove curse
+//break_enchantment:sppr307, replaces Remove Curse
 @3070 ="Break Enchantment"
 @3071 ="Break Enchantment
 Level: 3
@@ -218,7 +218,7 @@ Saving Throw: Special
 
 With this spell the priest calls up unholy power to smite his enemies. The power takes the form of a chilling, cloying miasma of darkness. Opponents within the spell's area of effect take 1d4 points of damage for every level of the caster up to a maximum of 10d4, with a successful saving throw vs. spell for half. If the victim fails his save, then he will also receive a -2 penalty on his attack rolls and saving throws for 4 rounds."
 
-//cure_serious_wounds:sppr315, move to level 3, replaces cure medium wounds.
+//cure_serious_wounds:sppr315, replaces Cure Medium Wounds.
 @3150 = "Cure Serious Wounds"
 @3151 = "Cure Serious Wounds
 Level: 3
@@ -247,7 +247,7 @@ Saving Throw: None
 
 By laying her hands upon a sickly person, the caster can cure almost any disease with this spell. The cure is permanent, but this does not grant the recipient of the spell immunity from further afflictions. Blindness and deafness are also cured with this spell, but some powerful magically created diseases may not be curable by this spell."
 
-//gust_wind:sppr318, replacement for Zone of Sweet Air
+//gust_wind:sppr318, replaces Zone of Sweet Air
 @3180 = "Gust of Wind"
 @3181 = "Gust of Wind
 Level: 3

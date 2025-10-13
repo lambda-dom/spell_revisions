@@ -12,7 +12,12 @@ LAF add_spell_symbols STR_VAR
     table = "%resources%/2da/spell_symbols/additions.2da"
 END
 
-//Move spell symbols in level.
+//Add new spell symbols by aliasing.
+LAF alias_spell_symbols STR_VAR
+    table = "%resources%/2da/spell_symbols/aliases.2da"
+END
+
+//Move spell symbols in level (e.g. aliased ones).
 LAF change_spell_symbols STR_VAR
     table = "%resources%/2da/spell_symbols/changes.2da"
 END
@@ -23,6 +28,6 @@ LAF replace_spell_symbols STR_VAR
 END
 
 //Replace spell symbol holes.
-LAF replace_spell_symbol_holes STR_VAR
+LAF assign_spell_symbol_holes STR_VAR
     table = "%resources%/2da/spell_symbols/holes.2da"
 END

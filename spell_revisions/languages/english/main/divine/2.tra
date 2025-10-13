@@ -89,7 +89,7 @@ Saving Throw: None
 
 With this spell, the caster causes a blazing ray of red-hot fire to spring forth from his hand. The caster wields this blade-like ray as if proficient with the weapon, at his normal THAC0. At level 3, it functions as a magical weapon, dealing 2d6+1 points of fire damage, with an enchantment bonus of +1. For every other three experience levels of the spellcaster, this bonus increases by one, up to a total of +3 enchantment level, +3 to attack rolls, and +3 to damage for a 9th-level caster. Since the blade is immaterial, strength modifiers do not apply to attack rolls or damage, and attacks with the flame blade are considered melee touch attacks (+4 attack roll bonus)."
 
-//sppr207:goodberry:moved to level 1
+//sppr207:goodberry, moved to level 1
 //hold_person:sppr208
 @2080 = "Hold Person"
 @2081 = "Hold Person
@@ -106,7 +106,7 @@ This spell holds one or more humans, demihumans, or humanoid creatures rigidly i
 
 Held creatures cannot move or speak, but they remain aware of events around them even though they are helpless to change them. Time passes at a normal rate for the targets and hence being held does not stop any worsening of their condition due to wounds, disease, or poison."
 
-//know_opponent:sppr209, replaces Know Alignment.
+//know_opponent:sppr209, replaces Know Alignment, moved to level 1.
 @2090 = "Know Opponent"
 @2091 = "Know Opponent
 Level: 2
@@ -193,7 +193,6 @@ When this spell is cast, the priest's body shudders and glows with a shimmering 
 //sppr215:non-existent, CLERIC_RESIST_COLD in spell.ids
 
 //New spells.
-//Cure medium wounds: renamed and moved from level 3 to level 2.
 @2510 = "Cure Moderate Wounds"
 @2511 = "Cure Moderate Wounds
 Level: 2

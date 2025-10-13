@@ -2,7 +2,6 @@
 *
                                     install resource
 CLERIC_KNOW_OPPONENT                1       CLERIC_KNOW_ALIGNMENT
-CLERIC_CURE_MODERATE_WOUNDS         1       CLERIC_CURE_MEDIUM_WOUNDS
 CLERIC_RESIST_ELEMENTS              1       CLERIC_RESIST_FIRE
 CLERIC_BREAK_ENCHANTMENT            1       CLERIC_REMOVE_CURSE
 CLERIC_GUST_OF_WIND                 1       CLERIC_ZONE_OF_SWEET_AIR
