@@ -1,7 +1,7 @@
 //Description strings.
 //Divine spells.
 //Level 5.
-//animal_summon_5:sppr501
+//animal_summon_5:sppr501, replaces Animal Summoning II
 @5010 = "Animal Summoning V"
 @5011 = "Animal Summoning V
 Level: 5
@@ -31,7 +31,7 @@ Poison: inflicts 1d6 damage on each hit plus 1 point every 3 seconds for 1 turn 
 Special Qualities
 Immune to entangle, grease, web and poison effects"
 
-//cure_mortal_wounds:sppr502
+//cure_mortal_wounds:sppr502, replaces Cure Critical Wounds
 @5020 = "Cure Mortal Wounds"
 @5021 = "Cure Mortal Wounds
 Level: 5
@@ -147,7 +147,7 @@ Saving Throw: None
 
 Upon the casting of this spell, the recipient's resistance to all forms of magic is increased by 2% per level of the priest, up to a maximum bonus of 40% at 20th level. This effect will last for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
 
-//cause_mortal_wounds:sppr510
+//cause_mortal_wounds:sppr510, replaces Cause Critical Wounds
 @5100 = "Cause Mortal Wounds"
 @5101 = "Cause Mortal Wounds
 Level: 5
@@ -217,7 +217,7 @@ Saving Throw: None
 
 When casting this spell, the priest must picture the faces of his fellow party members clearly and focus on the unity of the group. Upon completion, all party members within sight of the caster are healed by 2d8 + 2/level hit points (up to a maximum of 2d8 + 20)."
 
-//repulsion:sppr515
+//repulsion:sppr515, replaces Repulse Undead
 @5150 = "Repulsion"
 @5151 = "Repulsion
 Level: 5
@@ -304,6 +304,7 @@ Saving Throw: None
 
 When a Protection from Cold spell is cast, the recipient receives complete protection from cold-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like icy dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Ice Storm and Cone of Cold. Multiple castings of this spell are not cumulative."
 
+//Moved from level 3 and renamed.
 @5530 = "Protection from Electricity"
 @5531 = "Protection from Electricity
 Level: 5
