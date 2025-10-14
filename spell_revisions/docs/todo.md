@@ -278,3 +278,7 @@ note(s):
 * symbol of death, cleric: we override the c icon to fix a miscolor, but this *may* have been fixed.
 
 * some bams are overriden by SR, but not all cases have been reviewed for graphical fidelity (that is, they are an actual improvement).
+
+# F. Spell tables.
+
+* We cannot existence check the existence of spell resources in the spell tables because they are copied only later.

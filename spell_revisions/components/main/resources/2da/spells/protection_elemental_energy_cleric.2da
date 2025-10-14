@@ -1,0 +1,7 @@
+2DA V1.0
+****
+        ResRef                                  Type
+Fire    #spl:CLERIC_PROTECTION_FROM_FIRE        3
+Cold    #spl:CLERIC_PROTECTION_FROM_COLD        3
+Elec    #spl:CLERIC_PROTECTION_FROM_ELECTRICITY 3
+Acid    #spl:CLERIC_PROTECTION_FROM_ACID        3

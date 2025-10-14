@@ -25,3 +25,13 @@ END
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/projectiles.tpa"
 END
+
+//Install icons for spells.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/icons.tpa"
+END
+
+//Install tables for spells (e. g. tables used by Select Spell [214] opcode).
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/tables.tpa"
+END
