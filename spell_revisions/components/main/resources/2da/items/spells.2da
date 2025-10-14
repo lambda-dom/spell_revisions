@@ -6,7 +6,7 @@ cause_moderate_wounds_a 1       *       *       special 1   01000000    necroman
 cause_serious_wounds_a  1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *               1000    1       *       0       #suf:a:CLERIC_CAUSE_SERIOUS_WOUNDS
 cause_critical_wounds_a 1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *               1000    1       *       0       #suf:a:CLERIC_CAUSE_CRITICAL_WOUNDS
 cause_mortal_wounds_a   1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *               1000    1       *       0       #suf:a:CLERIC_CAUSE_MORTAL_WOUNDS
-slay_living_a           1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *               1000    1       *       0       #suf:a:CLERIC_SLAY_LIVING
-fire_seeds_a            1       *       *       special 1   01000000    conjurer    offensivedamage     *           *           #lbl:fireseed   1000    1       *       0       #suf:a:CLERIC_FIRE_SEEDS
 harm_a                  1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *               1000    1       *       0       #suf:a:CLERIC_HARM
+slay_living_a           1       *       *       special 1   01000000    necromancer offensivedamage     *           *           *               1000    1       *       0       #suf:a:CLERIC_SLAY_LIVING
+fire_seeds_a            1       *       *       special 1   01000000    *           *                   *           *           #lbl:fireseed   1000    1       *       0       #suf:a:CLERIC_FIRE_SEEDS
 black_blade_disaster    1       *       *       special 1   01000000    *           *                   *           *           *               1000    1       *       0       #suf:a:WIZARD_BLACK_BLADE_OF_DISASTER
