@@ -5,8 +5,53 @@
 @1100 = "Magical Stone"
 @1101 = "These stones have been enchanted by the Magical Stone spell."
 
-@1110 = "Shillelagh"
-@1111 = "This magical cudgel was created by the Shillelagh spell."
+@1110 = "Shillelagh +1"
+@1111 = "This magical cudgel was created by the Shillelagh spell.
+
+Combat Abilities:
+ Entangle: on a failed save vs. breath, target is entangled for 1 round
+
+STATISTICS:
+
+THAC0: +1 bonus
+Damage: 2d4 + 1
+Damage type: crushing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Club
+Type: 1-handed"
+
+@1112 = "Shillelagh +2"
+@1113 = "This magical cudgel was created by the Shillelagh spell.
+
+Combat Abilities:
+ Entangle: on a failed save vs. breath, target is entangled for 1 round
+
+STATISTICS:
+
+THAC0: +2 bonus
+Damage: 2d4 + 2
+Damage type: crushing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Club
+Type: 1-handed"
+
+@1114 = "Shillelagh +3"
+@1115 = "This magical cudgel was created by the Shillelagh spell.
+
+Combat Abilities:
+ Entangle: on a failed save vs. breath, target is entangled for 1 round
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 2d4 + 3
+Damage type: crushing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Club
+Type: 1-handed"
 
 @1120 = "Cause Light Wounds"
 @1121 = "Fists enchanted by the Cause Light Wounds spell."
@@ -21,11 +66,146 @@
 @1137 = "Created by the Goodberry spell, this simple-looking berry will heal seven points of damage."
 
 //Level 2.
-@1200 = "Flame Blade"
-@1201 = "This magical scimitar was created by the Flame Blade spell."
+@1200 = "Flame Blade +1"
+@1201 = "This magical scimitar was created by the Flame Blade spell.
 
-@1210 = "Spiritual Hammer"
-@1211 = "This magical warhammer was created by the Spiritual Hammer spell."
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Flaming: does extra 2d6 + 1 fire damage
+
+STATISTICS:
+
+THAC0: +5 bonus
+Damage: 0
+Damage type: slashing
+Weight: 0
+Speed Factor: 2
+Proficiency Type: Scimitar/Wakizashi/Ninja-To
+Type: 1-handed"
+
+@1202 = "Flame Blade +2"
+@1203 = "This magical scimitar was created by the Flame Blade spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Flaming: does extra 2d6 + 2 fire damage
+
+STATISTICS:
+
+THAC0: +6 bonus
+Damage: 0
+Damage type: slashing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Scimitar/Wakizashi/Ninja-To
+Type: 1-handed"
+
+@1204 = "Flame Blade +3"
+@1205 = "This magical scimitar was created by the Flame Blade spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Flaming: does extra 2d6 + 3 fire damage
+
+STATISTICS:
+
+THAC0: +7 bonus
+Damage: 0
+Damage type: slashing
+Weight: 0
+Speed Factor: 0
+Proficiency Type: Scimitar/Wakizashi/Ninja-To
+Type: 1-handed"
+
+@1210 = "Spiritual Hammer +1"
+@1211 = "This war hammer was created by the Spiritual Hammer spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Spiritual: can strike any creature within 20 feet without any close combat penalties to thac0
+  Magic: creatures struck suffer 1d8 + 1 magic damage
+
+STATISTICS:
+
+THAC0: +5 bonus
+Damage: 0
+Damage type: crushing
+Weight: 0
+Speed Factor: 6
+Proficiency Type: War Hammer
+Type: 1-handed"
+
+@1212 = "Spiritual Hammer +2"
+@1213 = "This war hammer was created by the Spiritual Hammer spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Spiritual: can strike any creature within 20 feet without any close combat penalties to thac0
+  Magic: creatures struck suffer 1d8 + 2 magic damage
+
+STATISTICS:
+
+THAC0: +6 bonus
+Damage: 0
+Damage type: crushing
+Weight: 0
+Speed Factor: 5
+Proficiency Type: War Hammer
+Type: 1-handed"
+
+@1214 = "Spiritual Hammer +3"
+@1215 = "This war hammer was created by the Spiritual Hammer spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Spiritual: can strike any creature within 20 feet without any close combat penalties to thac0
+  Magic: creatures struck suffer 1d8 + 3 magic damage
+
+STATISTICS:
+
+THAC0: +7 bonus
+Damage: 0
+Damage type: crushing
+Weight: 0
+Speed Factor: 4
+Proficiency Type: War Hammer
+Type: 1-handed"
+
+@1216 = "Spiritual Hammer +4"
+@1217 = "This war hammer was created by the Spiritual Hammer spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Spiritual: can strike any creature within 20 feet without any close combat penalties to thac0
+  Magic: creatures struck suffer 1d8 + 4 magic damage
+
+STATISTICS:
+
+THAC0: +4 bonus
+Damage: 0
+Damage type: crushing
+Weight: 0
+Speed Factor: 3
+Proficiency Type: War Hammer
+Type: 1-handed"
+
+@1218 = "Spiritual Hammer +5"
+@1219 = "This war hammer was created by the Spiritual Hammer spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Spiritual: can strike any creature within 20 feet without any close combat penalties to thac0
+  Magic: creatures struck suffer 1d8 + 5 magic damage
+
+STATISTICS:
+
+THAC0: +5 bonus
+Damage: 0
+Damage type: crushing
+Weight: 0
+Speed Factor: 2
+Proficiency Type: War Hammer
+Type: 1-handed"
 
 @1220 = "Cause Moderate Wounds"
 @1221 = "Fists enchanted by the Cause Moderate Wounds spell."
@@ -69,43 +249,359 @@
 @2201 = "Fists enchanted by the Ghoul Touch spell."
 
 //Level 3.
-@2300 = "Melf's Minute Meteor"
-@2301 = "These minute meteors were created by the Melf's Minute Meteors spell."
+@2300 = "Melf's Minute Meteors +2"
+@2301 = "These minute meteors were created by the Melf's Minute Meteors spell.
+
+Combat Abilities:
+  Fiery: does extra 2d6 fire damage
+
+STATISTICS:
+
+THAC0: +5 bonus
+Damage: 1D4
+Damage type: missile
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Dart
+Type: 1-handed"
 
 //Level 4.
 @2400 = "Squirrel Claws"
 @2401 = "These claws were created by the Polymorph Other spell."
 
 //Items for enchanted weapons.
-@2410 = "Axe"
-@2411 = "Club"
-@2412 = "Flail"
-@2413 = "Mace"
-@2414 = "Morning Star"
-@2415 = "Hammer"
-@2416 = "Dagger"
-@2417 = "Short Sword"
-@2418 = "Long Sword"
-@2419 = "Bastard Sword"
-@2420 = "Two-Handed Sword"
-@2421 = "Scimitar"
-@2422 = "Katana"
-@2423 = "Halberd"
-@2424 = "Quarterstaff"
-@2425 = "Spear"
-@2426 = "Short Bow"
-@2427 = "Long Bow"
-@2428 = "Light Crossbow"
-@2429 = "Heavy Crossbow"
-@2430 = "Sling"
-@2431 = "Arrow"
-@2432 = "Bolt"
-@2433 = "Bullet"
+@2410 = "Enchanted Axe +3"
+@2411 = "This axe was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D8 + 3
+Damage type: slashing
+Weight: 0
+Speed Factor: 4
+Proficiency Type: Axe
+Type: 1-handed"
+
+@2412 = "Enchanted Club +3"
+@2413 = "This club was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6 + 3
+Damage type: crushing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Club
+Type: 1-handed"
+
+@2414 = "Enchanted Flail +3"
+@2415 = "This flail was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6 + 4
+Damage type: crushing
+Weight: 0
+Speed Factor: 4
+Proficiency Type: Flail/Morning Star
+Type: 1-handed"
+
+@2416 = "Enchanted Mace +3"
+@2417 = "This mace was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6 + 4
+Damage type: crushing
+Weight: 0
+Speed Factor: 4
+Proficiency Type: Mace
+Type: 1-handed"
+
+@2418 = "Enchanted Morning Star +3"
+@2419 = "This morning star was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 2D4 + 3
+Damage type: crushing
+Weight: 0
+Speed Factor: 4
+Proficiency Type: Flail/Morning Star
+Type: 1-handed"
+
+@2420 = "Enchanted War Hammer +3"
+@2421 = "This war hammer was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D4 + 4
+Damage type: crushing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: War Hammer
+Type: 1-handed"
+
+@2422 = "Enchanted Dagger +3"
+@2423 = "This dagger was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D4 + 3
+Damage type: piercing
+Weight: 0
+Speed Factor: 0
+Proficiency Type: Dagger
+Type: 1-handed"
+
+@2424 = "Enchanted Short Sword +3"
+@2425 = "This short sword was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6 +3
+Damage type: piercing
+Speed Factor: 0
+Weight: 0
+Proficiency Type: Short Sword
+Type: 1-handed"
+
+@2426 = "Enchanted Long Sword +3"
+@2427 = "This long sword was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D8 + 3
+Damage type: slashing
+Weight: 0
+Speed Factor: 2
+Proficiency Type: Long Sword
+Type: 1-handed"
+
+@2428 = "Enchanted Bastard Sword +3"
+@2429 = "This bastard sword was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 2D4 + 3
+Damage type: slashing
+Weight: 0
+Speed Factor: 5
+Proficiency Type: Bastard Sword
+Type: 1-handed"
+
+@2430 = "Enchanted Two-Handed Sword +3"
+@2431 = "This two-handed sword was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D10 + 3
+Damage type: slashing
+Weight: 0
+Speed Factor: 7
+Proficiency Type: Two-Handed Sword
+Type: 2-handed"
+
+@2432 = "Enchanted Scimitar +3"
+@2433 = "This scimitar was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D8 + 3
+Damage type: slashing
+Weight: 0
+Speed Factor: 2
+Proficiency Type: Scimitar/Wakizashi/Ninja-To
+Type: 1-handed"
+
+@2434 = "Enchanted Katana +3"
+@2435 = "This katana was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D10 + 3
+Damage type: slashing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Katana
+Type: 1-handed"
+
+@2436 = "Enchanted Halberd +3"
+@2437 = "This halberd was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D10 + 3
+Damage type: piercing
+Weight: 0
+Speed Factor: 6
+Proficiency Type: Halberd
+Type: 2-handed"
+
+@2438 = "Enchanted Quarterstaff +3"
+@2439 = "This quarterstaff was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6 + 3
+Damage type: crushing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Quarterstaff
+Type: 2-handed"
+
+@2440 = "Enchanted Spear +3"
+@2441 = "This spear was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6 + 3
+Damage type: piercing
+Weight: 0
+Speed Factor: 3
+Proficiency Type: Spear
+Type: 2-handed"
+
+@2442 = "Enchanted Short Bow +3"
+@2443 = "This short bow was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Weight: 0
+Speed Factor: 3
+Proficiency Type: Short Bow
+Type: 2-handed"
+
+@2444 = "Enchanted Long Bow +3"
+@2445 = "This long bow was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +4 bonus
+Weight: 0
+Speed Factor: 4
+Proficiency Type: Long Bow
+Type: 2-handed"
+
+@2446 = "Enchanted Light Crossbow +3"
+@2447 = "This light crossbow was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: +3 bonus
+Weight: 0
+Speed Factor: 2
+Proficiency Type: Crossbow
+Type: 2-handed"
+
+@2448 = "Enchanted Heavy Crossbow +3"
+@2449 = "This heavy crossbow was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: +5 bonus
+Weight: 0
+Speed Factor: 7
+Proficiency Type: Crossbow
+Type: 2-handed"
+
+@2450 = "Enchanted Sling +3"
+@2451 = "This sling was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: +3 bonus
+Weight: 0
+Speed Factor: 3
+Proficiency Type: Sling
+Type: 1-handed"
+
+@2452 = "Enchanted Arrow +3"
+@2453 = "These arrows were created by the Enchant Weapon spell and functions like +3 ammunition in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6
+Damage type: missile
+Weight: 0
+Launcher: Bow"
+
+@2454 = "Enchanted Bolt +3"
+@2455 = "These bolts were created by the Enchant Weapon spell and functions like +3 ammunition in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D8
+Damage type: missile
+Weight: 0
+Launcher: Crossbow"
+
+@2456 = "Enchanted Bullet +3"
+@2457 = "These bullets were created by the Enchant Weapon spell and functions like +3 ammunition in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D4 + 4
+Damage type: missile
+Weight: 0
+Launcher: Sling"
 
 //Level 5.
 @2500 = "Phantom Blade"
-@2501 = "This longsword was created by the Phantom Blade spell."
+@2501 = "This long sword was created by the Phantom Blade spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Magic scramble: creatures struck cannot cast spells unless they save vs. spell at a penalty of -4
+  Undead bane: undead suffer additional 10 points of magic damage.
+  Magic: creatures struck suffer 1d12 + 4 magic damage
+
+STATISTICS:
+
+THAC0: +8 bonus
+Damage: 0
+Damage type: slashing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Long Sword
+Type: 1-handed"
 
 //Level 9.
 @2900 = "Black Blade of Disaster"
-@2901 = "This longsword was created by the Black Blade of Disaster spell."
+@2901 = "This long sword was created by the Black Blade of Disaster spell.
+
+Combat Abilities:
+  Disintegration: 15% chance of doing 5d6 magic damage, 40d6 on failed save vs. spell at a penalty of -2
+
+STATISTICS:
+
+THAC0: +9 bonus
+Damage: 2D12 + 5
+Damage type: slashing
+Weight: 0
+Speed Factor: 0
+Proficiency Type: Long Sword
+Type: 1-handed"

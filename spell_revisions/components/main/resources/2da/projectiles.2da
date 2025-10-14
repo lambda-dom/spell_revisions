@@ -37,6 +37,6 @@ acid_fog            1       acid_fog            1           *                   
 disintegrate        1       disintegrate_sr     0           *                   0       #lit:dldisint
 natures_beauty      1       natures_beauty      0           *                   0       #lit:dlnatbea
 chaos               1       chaos               0           *                   0       #lit:dlschaos
-prismatic_spray     1       prismatic_spray     0           *                   0       #lit:dlpspray
+prismatic_spray     1       prismatic_spray_sr  0           *                   0       #lit:dlpspray
 incendiary_cloud    1       incendiary_cloud    1           *                   0       #lit:dlicloud
-meteor_swarm        1       meteor_swarm        0           *                   0       #lit:dlmswarm
+meteor_swarm        1       meteor_swarm_sr     0           *                   0       #lit:dlmswarm

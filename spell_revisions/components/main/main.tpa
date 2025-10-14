@@ -19,44 +19,44 @@ LAF get_component_tra_dir RET tra = dir END
 //     subcomponent = "%root%/subcomponents/sectypes.tpa"
 // END
 
-//Install vvcs needed by spells, e.g. via Play Visual [215] opcode.
-LAF install_subcomponent STR_VAR
-    subcomponent = "%root%/subcomponents/vvcs.tpa"
-END
+// //Install vvcs needed by spells, e.g. via Play Visual [215] opcode.
+// LAF install_subcomponent STR_VAR
+//     subcomponent = "%root%/subcomponents/vvcs.tpa"
+// END
 
 // //Install projectiles.
 // LAF install_subcomponent STR_VAR
 //     subcomponent = "%root%/subcomponents/projectiles.tpa"
 // END
-// 
+
 // //Install icons for spells.
 // LAF install_subcomponent STR_VAR
 //     subcomponent = "%root%/subcomponents/icons.tpa"
+// END
+
+// //Install tables for spells (e. g. tables used by Select Spell [214] opcode).
+// LAF install_subcomponent STR_VAR
+//     subcomponent = "%root%/subcomponents/tables.tpa"
+// END
+
+// //Install items for spells (e. g. items created through spells).
+// LAF install_subcomponent STR_VAR
+//     subcomponent = "%root%/subcomponents/items.tpa"
+// END
+
+//Install effects for spells.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/effects.tpa"
+END
+
+// //Install subspells for spells.
+// LAF install_subcomponent STR_VAR
+//     subcomponent = "%root%/subcomponents/subspells.tpa"
 // END
 // 
 // //Install summons.
 // LAF install_subcomponent STR_VAR
 //     subcomponent = "%root%/subcomponents/summons.tpa"
-// END
-// 
-// //Install items for spells (e. g. items created through spells).
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/items.tpa"
-// END
-// 
-// //Install tables for spells (e. g. tables used by Select Spell [214] opcode).
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/tables.tpa"
-// END
-// 
-// //Install effects for spells.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/effects.tpa"
-// END
-// 
-// //Install subspells for spells.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/subspells.tpa"
 // END
 // 
 // 

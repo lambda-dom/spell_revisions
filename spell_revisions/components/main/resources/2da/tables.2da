@@ -1,5 +1,6 @@
 2DA V1.0
 *
-                            install patch                       override    destination
-enchanted_weapon            1       enchanted_weapon            1           #spl:WIZARD_ENCHANTED_WEAPON
-protection_elemental_energy 1       protection_elemental_energy 1           #spl:WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY
+                                    install patch                       override    destination
+enchanted_weapon                    1       column_spell_ref_patcher    1           #spl:WIZARD_ENCHANTED_WEAPON
+protection_elemental_energy_wizard  1       column_spell_ref_patcher    1           #spl:WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY
+protection_elemental_energy_cleric  1       column_spell_ref_patcher    1           #spl:CLERIC_PROTECTION_FROM_ELEMENTAL_ENERGY

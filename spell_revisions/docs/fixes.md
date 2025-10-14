@@ -28,9 +28,9 @@ Fixes to base SR, v4.19.
 
 * Resist Elements: Fix: description sectype abjuration -> transmutation in description.
 
-* Flame Blade: Fix: give scimitar prof to flame blades.
+* Flame Blade: Fix: give scimitar prof to flame blades and added modify profs opcode. Corrected spepd factor to take into account enchantment.
 
-* Spiritual Hammer: Fix: give hammer prof to spiritual hammers. Move spell to item block (this was only needed in oBG because of the next item); drop undocumented golem immunity to magic damage. Dropped aux spell that also has spurious (?) sectype. Fix weight 2 -> 0.
+* Spiritual Hammer: Fix: give hammer prof to spiritual hammers and added modify profs opcode. Move spell to item block (this was only needed in oBG because of the next item); drop undocumented golem immunity to magic damage. Dropped aux spell that also has spurious (?) sectype. Fix weight 2 -> 0.
 
 * Gust of Wind (druid version): mention in description that it dispels insect swarms in the area.
 
@@ -97,6 +97,8 @@ note(s):
 
 * Summon Shambling Mound: remove undocumented -25% magic damage penalty. Fix damage bonus 3 -> 10. `dvmound1` non-existent spell, made it into recursive call. Fix thac0 8 -> 2. General gianthumanoid -> monster.
 
+* Chaos: renamed back to Sphere of Chaos vanilla to improve compatibility.
+
 * Finger of Death: correct save penalty -4 to -2 per description.
 
 * Holy Word: change sectype conjuration -> disabling.
@@ -133,9 +135,11 @@ note(s):
 
 * Monster Summoning I: gibberlings: correct thac0 (per description).
 
+* Chill Touch: Removed undispellable flag from item.
+
 ## B. 2. Level 2.
 
-* Ghoul Touch: fix description to mention that paralyze lasts for 3 rounds only. Sectype (of main spell) to `offensivedamage` for consistency with similar spells.
+* Ghoul Touch: fix description to mention that paralyze lasts for 3 rounds only. Sectype (of main spell) to `offensivedamage` for consistency with similar spells. Removed undispellable flag from item.
 
 * Glitterdust: Question: why the variable stuff?
 
@@ -171,6 +175,8 @@ note(s):
 
 * Confusion: standardized range to long per description (35 -> 30).
 
+* Enchanted Weapon: weight set to 0 as per description. We also set to 0 the strength requirements.
+
 * Polymorph Other: standardized range to long per description (40 -> 30). The SR implementation goes by creating an item in the weapon slot that does the animation and stat changes. Polymorph opcode is not used (is bugged in the EEs per the IESDP).
 
 * Simbul Spell Matrix: out of combat only.
@@ -193,7 +199,7 @@ note(s):
 
 * Breach: range 40 -> 30 per description (Long).
 
-* Phantom Blade: correct damage to undead. Moved prof opcode to it.
+* Phantom Blade: correct damage to undead. Moved prof opcode to it. Fixed thac0 bonus 4 -> 8 (+4 plus melee +4).
 
 * Conjure Elemental: standardized duration to 2 turns (= level 10 in old spell) instead of 3 to accentuate "difficult to maintain portal" blurb. Fix off-by-1 probability errors. Air Elemental: added polymorph immunity per other elementals. Corrections to ac, thac0. Added 50% electricity resistance. Earth elemental: corrections to ac, thac0. Fire elemental: corrections to ac, thac0. Giant humanoid -> monster.
 
@@ -233,6 +239,8 @@ note(s):
 
 * Summon Hakeashar: fix icons. Swap the contact with the nishruu to give hakeashar the better version. thac0 4 -> 2, allegiance enemy -> ally. Fix eff that summons nishruu -> hakeashar.
 
+* Chaos: renamed sphere of chaos for compatibility with the wizard version. The description already contains sphere talk in it so this is lore justified.
+
 ## B. 8. Level 8.
 
 * Pierce Shield: range 40 -> 30.
@@ -246,5 +254,7 @@ note(s):
 * Umber Hulk: Claws: damage bonus 3 -> 11. Creature: dice 7 -> 8, thac0 13 -> 6. Undocumented physical resistances 5 (missile 100) -> 0.
 
 ## B. 9. Level 9.
+
+* Black Blade of Disaster: add prof opcode. This should not make a real difference as thac0 is set to 0.
 
 * Pit Fiend: review fire spell protections on weapon (and maybe move them to ring). Damage bonus 4 -> 16. Fix probabilities out of whack, duration of disease display string. Change constrict save to vs. breath. Creature: hps 120 -> 170, ac -6 -> -7, thac0 5 -> -7, apr 4 -> 5.

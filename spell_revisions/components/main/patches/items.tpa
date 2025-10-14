@@ -24,70 +24,42 @@ RET_ARRAY subspells = references END
 
 //Patches.
 DEFINE_PATCH_FUNCTION shillelagh_itm STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "shillelagh_entangle"
-        array = "subspells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "shillelagh_entangle"
         match_resource = "spl#res"
-        resource = "%res%"
+        references = "subspells"
     END
 END
 
 DEFINE_PATCH_FUNCTION cause_light_itm STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "cause_light_wounds_a"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "cause_light_wounds_a"
         match_resource = "spl#res"
-        resource = "%res%"
+        references = "spells"
     END
 END
 
 DEFINE_PATCH_FUNCTION cause_moderate_itm STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "cause_moderate_wounds_a"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
-        match_opcode = 146              //Cast spell.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "cause_moderate_wounds_a"
         match_resource = "spl#res"
-        resource = "%res%"
+        references = "spells"
     END
 END
 
 DEFINE_PATCH_FUNCTION cause_serious_itm STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "cause_serious_wounds_a"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "cause_serious_wounds_a"
         match_resource = "spl#res"
-        resource = "%res%"
+        references = "spells"
     END
 END
 
@@ -147,36 +119,22 @@ DEFINE_PATCH_FUNCTION harm_itm STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION shocking_grasp_itm STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "shocking_grasp_stun"
-        array = "subspells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "shocking_grasp_stun"
         match_resource = "stun#res"
-        resource = "%res%"
+        references = "subspells"
     END
 END
 
 DEFINE_PATCH_FUNCTION ghoul_touch_itm STR_VAR destination = "*" BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "ghoul_touch_hold"
-        array = "subspells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "ghoul_touch_hold"
         match_resource = "hold#res"
-        resource = "%res%"
+        references = "subspells"
     END
 END
 
