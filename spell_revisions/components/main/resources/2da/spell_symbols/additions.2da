@@ -45,6 +45,7 @@ WIZARD_MONSTER_SUMMONING_LEVEL_2        1       wizard  2       *
 WIZARD_ICELANCE                         1       wizard  3       *
 WIZARD_VITRIOLIC_SPHERE                 1       wizard  4       *
 WIZARD_PROTECTION_FROM_ELEMENTAL_ENERGY 1       wizard  4       *
+WIZARD_MESTILS_ACID_SHEATH              1       wizard  5       *
 WIZARD_CONJURE_LESSER_WATER_ELEMENTAL   1       wizard  5       *
 WIZARD_CONJURE_WATER_ELEMENTAL          1       wizard  6       *
 WIZARD_MONSTER_SUMMONING_LEVEL_7        1       wizard  7       *

@@ -6,3 +6,4 @@
 //Error strings.
 //Engine requirements.
 @100 = "Mod only for BG enhanced edition games."
+@101 = "Main component cannot be installed."

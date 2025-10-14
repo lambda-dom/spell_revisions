@@ -172,7 +172,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Prismatic Mantle: move some of the effects to standardized subspells. The symbol is WIZARD_MANTLE but this is a case where introducing an alias is a good idea.
 
-* Chaos: offload effects to subspells and fix off-by-one probability errors -- see cleric version. Why the rename? Keep the same symbol and rename it to vanilla Sphere of Chaos. Use the same name for the cleric version.
+* Chaos: offload effects to subspells and fix off-by-one probability errors -- see cleric version. Why the rename? Keep the same symbol and rename it to vanilla Sphere of Chaos. Use the same name for the cleric version; this includes the symbol.
 
 * Prismatic Spray: move effects to subspells.
 
@@ -272,3 +272,9 @@ note(s):
 # D. Projectiles.
 
 * disintegrate: missing spgreorb aux resource.
+
+# E. Icons.
+
+* symbol of death, cleric: we override the c icon to fix a miscolor, but this *may* have been fixed.
+
+* some bams are overriden by SR, but not all cases have been reviewed for graphical fidelity (that is, they are an actual improvement).

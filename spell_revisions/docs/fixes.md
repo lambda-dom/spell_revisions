@@ -97,6 +97,8 @@ note(s):
 
 * Summon Shambling Mound: remove undocumented -25% magic damage penalty. Fix damage bonus 3 -> 10. `dvmound1` non-existent spell, made it into recursive call. Fix thac0 8 -> 2. General gianthumanoid -> monster.
 
+* Chaos: renamed back to Sphere of Chaos vanilla to improve compatibility.
+
 * Finger of Death: correct save penalty -4 to -2 per description.
 
 * Holy Word: change sectype conjuration -> disabling.
@@ -232,6 +234,8 @@ note(s):
 * Summon Djinni: sword: make a real sword, remove apr bonus (move to cre), damage bonus 4 -> 5. Djinni: increase first class 9 -> 10, wis 15 -> 14, hps 70 -> 89, ac 5 -> 0, thac0 10 -> 7, apr 3/2 -> 3, neutral -> ally, gender male -> summoned.
 
 * Summon Hakeashar: fix icons. Swap the contact with the nishruu to give hakeashar the better version. thac0 4 -> 2, allegiance enemy -> ally. Fix eff that summons nishruu -> hakeashar.
+
+* Chaos: renamed sphere of chaos for compatibility with the wizard version. The description already contains sphere talk in it so this is lore justified.
 
 ## B. 8. Level 8.
 

@@ -29,4 +29,5 @@ LAF install_component STR_VAR COMPONENT = "main" END
 //Testing.
 BEGIN @2 DESIGNATED 2
 REQUIRE_PREDICATE (GAME_IS "bgee bg2ee eet") @100
+REQUIRE_PREDICATE (NOT (MOD_IS_INSTALLED "spell_revisions.tp2" (ID_OF_LABEL "spell_revisions.tp2" "lambda_dom-spell_revisions-main"))) @101
 LAF install_component STR_VAR COMPONENT = "test" root = "main" END
