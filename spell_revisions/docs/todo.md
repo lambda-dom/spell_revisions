@@ -132,7 +132,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Polymorph other: aux resources do not seem to be used anywhere.
 
-* Enchant weapon: the basic spell is in but the items are missing proper descriptions and the spell, descriptions and ability icons. Review use exclusion flags on the items.
+* Enchant weapon: review exclusion flags on the items.
 
 * Monster Summoning IV: cre and script for phase spider unused.
 

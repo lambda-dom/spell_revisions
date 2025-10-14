@@ -173,6 +173,8 @@ note(s):
 
 * Confusion: standardized range to long per description (35 -> 30).
 
+* Enchanted Weapon: weight set to 0 as per description. We also set to 0 the strength requirements.
+
 * Polymorph Other: standardized range to long per description (40 -> 30). The SR implementation goes by creating an item in the weapon slot that does the animation and stat changes. Polymorph opcode is not used (is bugged in the EEs per the IESDP).
 
 * Simbul Spell Matrix: out of combat only.
