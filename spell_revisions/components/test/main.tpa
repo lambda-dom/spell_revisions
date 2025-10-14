@@ -35,3 +35,8 @@ END
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/tables.tpa"
 END
+
+//Install items for spells (e. g. items created through spells).
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/items.tpa"
+END

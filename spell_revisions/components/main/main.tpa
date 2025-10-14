@@ -39,24 +39,24 @@ LAF get_component_tra_dir RET tra = dir END
 //     subcomponent = "%root%/subcomponents/tables.tpa"
 // END
 
-//Install items for spells (e. g. items created through spells).
+// //Install items for spells (e. g. items created through spells).
+// LAF install_subcomponent STR_VAR
+//     subcomponent = "%root%/subcomponents/items.tpa"
+// END
+
+//Install effects for spells.
 LAF install_subcomponent STR_VAR
-    subcomponent = "%root%/subcomponents/items.tpa"
+    subcomponent = "%root%/subcomponents/effects.tpa"
 END
 
-// //Install summons.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/summons.tpa"
-// END
-// 
-// //Install effects for spells.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/effects.tpa"
-// END
-// 
 // //Install subspells for spells.
 // LAF install_subcomponent STR_VAR
 //     subcomponent = "%root%/subcomponents/subspells.tpa"
+// END
+// 
+// //Install summons.
+// LAF install_subcomponent STR_VAR
+//     subcomponent = "%root%/subcomponents/summons.tpa"
 // END
 // 
 // 
