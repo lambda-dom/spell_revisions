@@ -275,10 +275,14 @@ note(s):
 
 # E. Icons.
 
-* symbol of death, cleric: we override the c icon to fix a miscolor, but this *may* have been fixed.
+* symbol of death, cleric: we override the c icon to fix a miscolor, but this *may* have been fixed in more recent EE versions (or maybe even the fixpack?).
 
 * some bams are overriden by SR, but not all cases have been reviewed for graphical fidelity (that is, they are an actual improvement).
 
 # F. Spell tables.
 
-* We cannot existence check the existence of spell resources in the spell tables because they are copied only later.
+* We cannot existence check the spell resources in the spell tables because they are made available only later in the install order.
+
+# G. Spell items.
+
+* Item descriptions will probably have to wait IR to set up completely, but is it even worth it? Meaning, is there even a possibility to see them in game? If not just get rid of them. Weapons on humanoid can be seen, so full descriptins are good, but natural weapons on monsters do not, so in those cases they can be forgotten.
