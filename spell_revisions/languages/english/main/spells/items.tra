@@ -2,9 +2,11 @@
 //Items for spells.
 //Divine.
 //Level 1.
+//Magical Stones are thrown so function like darts, use Dart +1 with equipped abilities?
 @1100 = "Magical Stone"
 @1101 = "These stones have been enchanted by the Magical Stone spell."
 
+//Club; use Club +1 description as base.
 @1110 = "Shillelagh"
 @1111 = "This magical cudgel was created by the Shillelagh spell."
 
@@ -21,9 +23,11 @@
 @1137 = "Created by the Goodberry spell, this simple-looking berry will heal seven points of damage."
 
 //Level 2.
+//Scimitar; use magical scimitar description as base.
 @1200 = "Flame Blade"
 @1201 = "This magical scimitar was created by the Flame Blade spell."
 
+//Warhammer; use magical scimitar description as base.
 @1210 = "Spiritual Hammer"
 @1211 = "This magical warhammer was created by the Spiritual Hammer spell."
 

@@ -28,9 +28,9 @@ Fixes to base SR, v4.19.
 
 * Resist Elements: Fix: description sectype abjuration -> transmutation in description.
 
-* Flame Blade: Fix: give scimitar prof to flame blades.
+* Flame Blade: Fix: give scimitar prof to flame blades and added modify profs opcode.
 
-* Spiritual Hammer: Fix: give hammer prof to spiritual hammers. Move spell to item block (this was only needed in oBG because of the next item); drop undocumented golem immunity to magic damage. Dropped aux spell that also has spurious (?) sectype. Fix weight 2 -> 0.
+* Spiritual Hammer: Fix: give hammer prof to spiritual hammers and added modify profs opcode. Move spell to item block (this was only needed in oBG because of the next item); drop undocumented golem immunity to magic damage. Dropped aux spell that also has spurious (?) sectype. Fix weight 2 -> 0.
 
 * Gust of Wind (druid version): mention in description that it dispels insect swarms in the area.
 
@@ -251,6 +251,6 @@ note(s):
 
 ## B. 9. Level 9.
 
-* Pit Fiend: review fire spell protections on weapon (and maybe move them to ring). Damage bonus 4 -> 16. Fix probabilities out of whack, duration of disease display string. Change constrict save to vs. breath. Creature: hps 120 -> 170, ac -6 -> -7, thac0 5 -> -7, apr 4 -> 5.
+* Black Blade of Disaster: add prof opcode. This should not make a real difference as thac0 is set to 0.
 
-# C. Projectiles.
+* Pit Fiend: review fire spell protections on weapon (and maybe move them to ring). Damage bonus 4 -> 16. Fix probabilities out of whack, duration of disease display string. Change constrict save to vs. breath. Creature: hps 120 -> 170, ac -6 -> -7, thac0 5 -> -7, apr 4 -> 5.

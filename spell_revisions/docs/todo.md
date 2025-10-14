@@ -8,9 +8,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Entangle: current implementation is incorrect as the decrease movement applies to all creatures, including those that should be immune. Solution: if we want to use the subspell (and we should), we may need another spell to decrease speed and then call the subspell or simply patch the subspell.
 
-* Goodberry: scaling, slow regenerating effect of 1 hp for round. Only castable outdoors and ooc.
+* Goodberry: add scaling, non-concurrent, slow regenerating effect of 1 hp for round. Scale instant healing a little better. Only castable outdoors and ooc.
 
-* Find Familiar: yet to implement.
+* Magical Stone: do the same dart treatment as fire seeds.
 
 ## A. 2. Level 2.
 
@@ -62,6 +62,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Banishment: second eff has wrong target; not clear what is the correct target, if any (summoned_demon?).
 
+* Fire Seeds: mention in description that they are used as darts.
+
 ## A. 7. Level 7.
 
 * Summon Shambling Mound: review the constrict spell: especially target vs. point casting and entangle implementation.
@@ -88,7 +90,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 1. Level 1.
 
-* Grease: follow implementation of Entangle? Use a sleep subspell? Also increase aoe of projectile.
+* Find Familiar: yet to implement.
+
+* Grease: follow implementation of Entangle? Use a sleep subspell? Increase aoe of projectile -- see SRR.
 
 * Sleep: display "ineffective spell" for creatures with dice > caster level.
 
@@ -128,7 +132,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Polymorph other: aux resources do not seem to be used anywhere.
 
-* Enchant weapon: the basic spell is in but the items are missing proper descriptions and the spell, descriptions and ability icons.
+* Enchant weapon: the basic spell is in but the items are missing proper descriptions and the spell, descriptions and ability icons. Review use exclusion flags on the items.
 
 * Monster Summoning IV: cre and script for phase spider unused.
 
@@ -269,6 +273,8 @@ note(s):
 
 * change elemental names lesser_air_elemental -> air_elemental_lesser, etc.
 
+* How to setup immunities to general effects like Entangle? The best way would be to use spell states, but we are lacking such as Entangle Immunity (but we do have Free Action, and that is already taken advantage of in standardized spell).
+
 # D. Projectiles.
 
 * disintegrate: missing spgreorb aux resource.
@@ -285,4 +291,11 @@ note(s):
 
 # G. Spell items.
 
-* Item descriptions will probably have to wait IR to set up completely, but is it even worth it? Meaning, is there even a possibility to see them in game? If not just get rid of them. Weapons on humanoid can be seen, so full descriptins are good, but natural weapons on monsters do not, so in those cases they can be forgotten.
+* Item descriptions will probably have to wait IR to set up completely.
+
+note(s):
+* Even weapons on humanoids can be seen, so full descriptins are good for those as well as weapons conjured by spells, but natural weapons on monsters cannot, so in those cases descriptions can be forgotten.
+
+* Clubs have Maces category instead of Clubs, why? Does it make a difference? This is probably a question for IR to deal with however.
+
+* Magical Stone, Fire Seeds, Searing Orb, Chill Touch, Ghoul Touch, are marked undispellable, contrary to most magical weapons. Is this justified?

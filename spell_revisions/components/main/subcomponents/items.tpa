@@ -28,17 +28,17 @@ LAF install_resources STR_VAR
     dir = "%resources%/spl/items"
 END
 
-// //Install subspells for items (for spells...).
-// LAF install_resources STR_VAR
-//     type = "subspell"
-//     table = "%resources%/2da/items/subspells.2da"
-// END
-// 
-// //Install spell-created items.
-// LAF install_resources STR_VAR
-//     type = "copy_item_simplified"
-//     table = "%resources%/2da/items.2da"
-//     dir = "%resources%/itm/spells"
-//     tra = "%tra%/spells/items.tra"
-//     patches = "%MOD_FOLDER%/components/main/patches/items.tpa"
-// END
+//Install subspells for items (for spells...).
+LAF install_resources STR_VAR
+    type = "subspell"
+    table = "%resources%/2da/items/subspells.2da"
+END
+
+//Install spell-created items.
+LAF install_resources STR_VAR
+    type = "copy_item_simplified"
+    table = "%resources%/2da/items.2da"
+    dir = "%resources%/itm/spells"
+    tra = "%tra%/spells/items.tra"
+    patches = "%MOD_FOLDER%/components/main/patches/items.tpa"
+END
