@@ -298,4 +298,6 @@ note(s):
 
 * Clubs have Maces category instead of Clubs, why? Does it make a difference? This is probably a question for IR to deal with however.
 
-* Magical Stone, Fire Seeds, Searing Orb, Chill Touch, Ghoul Touch, are marked undispellable, contrary to most magical weapons. Is this justified?
+* Magical Stone, Fire Seeds and Searing Orb are marked undispellable, contrary to most magical weapons. Is this justified? Searing Orb explicily says the spell is not affected by magic resistance so there is at least justification. Shillelagh explicitly mentions dispellability. Note that this can be controlled form the 2da table.
+
+* Enchanted weapons need a second pass over the weapon speeds.

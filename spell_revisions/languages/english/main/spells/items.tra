@@ -2,13 +2,56 @@
 //Items for spells.
 //Divine.
 //Level 1.
-//Magical Stones are thrown so function like darts, use Dart +1 with equipped abilities?
 @1100 = "Magical Stone"
 @1101 = "These stones have been enchanted by the Magical Stone spell."
 
-//Club; use Club +1 description as base.
-@1110 = "Shillelagh"
-@1111 = "This magical cudgel was created by the Shillelagh spell."
+@1110 = "Shillelagh +1"
+@1111 = "This magical cudgel was created by the Shillelagh spell.
+
+Combat Abilities:
+ Entangle: on a failed save vs. breath, target is entangled for 1 round
+
+STATISTICS:
+
+THAC0: +1 bonus
+Damage: 2d4 + 1
+Damage type: crushing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Club
+Type: 1-handed"
+
+@1112 = "Shillelagh +2"
+@1113 = "This magical cudgel was created by the Shillelagh spell.
+
+Combat Abilities:
+ Entangle: on a failed save vs. breath, target is entangled for 1 round
+
+STATISTICS:
+
+THAC0: +2 bonus
+Damage: 2d4 + 2
+Damage type: crushing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Club
+Type: 1-handed"
+
+@1114 = "Shillelagh +3"
+@1115 = "This magical cudgel was created by the Shillelagh spell.
+
+Combat Abilities:
+ Entangle: on a failed save vs. breath, target is entangled for 1 round
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 2d4 + 3
+Damage type: crushing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Club
+Type: 1-handed"
 
 @1120 = "Cause Light Wounds"
 @1121 = "Fists enchanted by the Cause Light Wounds spell."
@@ -23,13 +66,146 @@
 @1137 = "Created by the Goodberry spell, this simple-looking berry will heal seven points of damage."
 
 //Level 2.
-//Scimitar; use magical scimitar description as base.
-@1200 = "Flame Blade"
-@1201 = "This magical scimitar was created by the Flame Blade spell."
+@1200 = "Flame Blade +1"
+@1201 = "This magical scimitar was created by the Flame Blade spell.
 
-//Warhammer; use magical scimitar description as base.
-@1210 = "Spiritual Hammer"
-@1211 = "This magical warhammer was created by the Spiritual Hammer spell."
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Flaming: does extra 2d6 + 1 fire damage
+
+STATISTICS:
+
+THAC0: +5 bonus
+Damage: 0
+Damage type: slashing
+Weight: 0
+Speed Factor: 2
+Proficiency Type: Scimitar/Wakizashi/Ninja-To
+Type: 1-handed"
+
+@1202 = "Flame Blade +2"
+@1203 = "This magical scimitar was created by the Flame Blade spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Flaming: does extra 2d6 + 2 fire damage
+
+STATISTICS:
+
+THAC0: +6 bonus
+Damage: 0
+Damage type: slashing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Scimitar/Wakizashi/Ninja-To
+Type: 1-handed"
+
+@1204 = "Flame Blade +3"
+@1205 = "This magical scimitar was created by the Flame Blade spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Flaming: does extra 2d6 + 3 fire damage
+
+STATISTICS:
+
+THAC0: +7 bonus
+Damage: 0
+Damage type: slashing
+Weight: 0
+Speed Factor: 0
+Proficiency Type: Scimitar/Wakizashi/Ninja-To
+Type: 1-handed"
+
+@1210 = "Spiritual Hammer +1"
+@1211 = "This war hammer was created by the Spiritual Hammer spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Spiritual: can strike any creature within 20 feet without any close combat penalties to thac0
+  Magic: creatures struck suffer 1d8 + 1 magic damage
+
+STATISTICS:
+
+THAC0: +5 bonus
+Damage: 0
+Damage type: crushing
+Weight: 0
+Speed Factor: 6
+Proficiency Type: War Hammer
+Type: 1-handed"
+
+@1212 = "Spiritual Hammer +2"
+@1213 = "This war hammer was created by the Spiritual Hammer spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Spiritual: can strike any creature within 20 feet without any close combat penalties to thac0
+  Magic: creatures struck suffer 1d8 + 2 magic damage
+
+STATISTICS:
+
+THAC0: +6 bonus
+Damage: 0
+Damage type: crushing
+Weight: 0
+Speed Factor: 5
+Proficiency Type: War Hammer
+Type: 1-handed"
+
+@1214 = "Spiritual Hammer +3"
+@1215 = "This war hammer was created by the Spiritual Hammer spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Spiritual: can strike any creature within 20 feet without any close combat penalties to thac0
+  Magic: creatures struck suffer 1d8 + 3 magic damage
+
+STATISTICS:
+
+THAC0: +7 bonus
+Damage: 0
+Damage type: crushing
+Weight: 0
+Speed Factor: 4
+Proficiency Type: War Hammer
+Type: 1-handed"
+
+@1216 = "Spiritual Hammer +4"
+@1217 = "This war hammer was created by the Spiritual Hammer spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Spiritual: can strike any creature within 20 feet without any close combat penalties to thac0
+  Magic: creatures struck suffer 1d8 + 4 magic damage
+
+STATISTICS:
+
+THAC0: +4 bonus
+Damage: 0
+Damage type: crushing
+Weight: 0
+Speed Factor: 3
+Proficiency Type: War Hammer
+Type: 1-handed"
+
+@1218 = "Spiritual Hammer +5"
+@1219 = "This war hammer was created by the Spiritual Hammer spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Spiritual: can strike any creature within 20 feet without any close combat penalties to thac0
+  Magic: creatures struck suffer 1d8 + 5 magic damage
+
+STATISTICS:
+
+THAC0: +5 bonus
+Damage: 0
+Damage type: crushing
+Weight: 0
+Speed Factor: 2
+Proficiency Type: War Hammer
+Type: 1-handed"
 
 @1220 = "Cause Moderate Wounds"
 @1221 = "Fists enchanted by the Cause Moderate Wounds spell."
@@ -73,8 +249,21 @@
 @2201 = "Fists enchanted by the Ghoul Touch spell."
 
 //Level 3.
-@2300 = "Melf's Minute Meteor"
-@2301 = "These minute meteors were created by the Melf's Minute Meteors spell."
+@2300 = "Melf's Minute Meteors +2"
+@2301 = "These minute meteors were created by the Melf's Minute Meteors spell.
+
+Combat Abilities:
+  Fiery: does extra 2d6 fire damage
+
+STATISTICS:
+
+THAC0: +5 bonus
+Damage: 1D4
+Damage type: missile
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Dart
+Type: 1-handed"
 
 //Level 4.
 @2400 = "Squirrel Claws"
@@ -382,8 +571,37 @@ Launcher: Sling"
 
 //Level 5.
 @2500 = "Phantom Blade"
-@2501 = "This longsword was created by the Phantom Blade spell."
+@2501 = "This long sword was created by the Phantom Blade spell.
+
+Combat Abilities:
+  Immaterial: every attack is a melee touch attack with a +4 bonus to THAC0 but with no strength bonus to thac0 and damage
+  Magic scramble: creatures struck cannot cast spells unless they save vs. spell at a penalty of -4
+  Undead bane: undead suffer additional 10 points of magic damage.
+  Magic: creatures struck suffer 1d12 + 4 magic damage
+
+STATISTICS:
+
+THAC0: +8 bonus
+Damage: 0
+Damage type: slashing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Long Sword
+Type: 1-handed"
 
 //Level 9.
 @2900 = "Black Blade of Disaster"
-@2901 = "This longsword was created by the Black Blade of Disaster spell."
+@2901 = "This long sword was created by the Black Blade of Disaster spell.
+
+Combat Abilities:
+  Disintegration: 15% chance of doing 5d6 magic damage, 40d6 on failed save vs. spell at a penalty of -2
+
+STATISTICS:
+
+THAC0: +9 bonus
+Damage: 2D12 + 5
+Damage type: slashing
+Weight: 0
+Speed Factor: 0
+Proficiency Type: Long Sword
+Type: 1-handed"

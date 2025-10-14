@@ -28,7 +28,7 @@ Fixes to base SR, v4.19.
 
 * Resist Elements: Fix: description sectype abjuration -> transmutation in description.
 
-* Flame Blade: Fix: give scimitar prof to flame blades and added modify profs opcode.
+* Flame Blade: Fix: give scimitar prof to flame blades and added modify profs opcode. Corrected spepd factor to take into account enchantment.
 
 * Spiritual Hammer: Fix: give hammer prof to spiritual hammers and added modify profs opcode. Move spell to item block (this was only needed in oBG because of the next item); drop undocumented golem immunity to magic damage. Dropped aux spell that also has spurious (?) sectype. Fix weight 2 -> 0.
 
@@ -135,9 +135,11 @@ note(s):
 
 * Monster Summoning I: gibberlings: correct thac0 (per description).
 
+* Chill Touch: Removed undispellable flag from item.
+
 ## B. 2. Level 2.
 
-* Ghoul Touch: fix description to mention that paralyze lasts for 3 rounds only. Sectype (of main spell) to `offensivedamage` for consistency with similar spells.
+* Ghoul Touch: fix description to mention that paralyze lasts for 3 rounds only. Sectype (of main spell) to `offensivedamage` for consistency with similar spells. Removed undispellable flag from item.
 
 * Glitterdust: Question: why the variable stuff?
 
@@ -197,7 +199,7 @@ note(s):
 
 * Breach: range 40 -> 30 per description (Long).
 
-* Phantom Blade: correct damage to undead. Moved prof opcode to it.
+* Phantom Blade: correct damage to undead. Moved prof opcode to it. Fixed thac0 bonus 4 -> 8 (+4 plus melee +4).
 
 * Conjure Elemental: standardized duration to 2 turns (= level 10 in old spell) instead of 3 to accentuate "difficult to maintain portal" blurb. Fix off-by-1 probability errors. Air Elemental: added polymorph immunity per other elementals. Corrections to ac, thac0. Added 50% electricity resistance. Earth elemental: corrections to ac, thac0. Fire elemental: corrections to ac, thac0. Giant humanoid -> monster.
 
