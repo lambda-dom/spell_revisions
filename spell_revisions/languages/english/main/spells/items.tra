@@ -81,30 +81,304 @@
 @2401 = "These claws were created by the Polymorph Other spell."
 
 //Items for enchanted weapons.
-@2410 = "Axe"
-@2411 = "Club"
-@2412 = "Flail"
-@2413 = "Mace"
-@2414 = "Morning Star"
-@2415 = "Hammer"
-@2416 = "Dagger"
-@2417 = "Short Sword"
-@2418 = "Long Sword"
-@2419 = "Bastard Sword"
-@2420 = "Two-Handed Sword"
-@2421 = "Scimitar"
-@2422 = "Katana"
-@2423 = "Halberd"
-@2424 = "Quarterstaff"
-@2425 = "Spear"
-@2426 = "Short Bow"
-@2427 = "Long Bow"
-@2428 = "Light Crossbow"
-@2429 = "Heavy Crossbow"
-@2430 = "Sling"
-@2431 = "Arrow"
-@2432 = "Bolt"
-@2433 = "Bullet"
+@2410 = "Enchanted Axe +3"
+@2411 = "This axe was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D8 + 3
+Damage type: slashing
+Weight: 0
+Speed Factor: 4
+Proficiency Type: Axe
+Type: 1-handed"
+
+@2412 = "Enchanted Club +3"
+@2413 = "This club was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6 + 3
+Damage type: crushing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Club
+Type: 1-handed"
+
+@2414 = "Enchanted Flail +3"
+@2415 = "This flail was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6 + 4
+Damage type: crushing
+Weight: 0
+Speed Factor: 4
+Proficiency Type: Flail/Morning Star
+Type: 1-handed"
+
+@2416 = "Enchanted Mace +3"
+@2417 = "This mace was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6 + 4
+Damage type: crushing
+Weight: 0
+Speed Factor: 4
+Proficiency Type: Mace
+Type: 1-handed"
+
+@2418 = "Enchanted Morning Star +3"
+@2419 = "This morning star was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 2D4 + 3
+Damage type: crushing
+Weight: 0
+Speed Factor: 4
+Proficiency Type: Flail/Morning Star
+Type: 1-handed"
+
+@2420 = "Enchanted War Hammer +3"
+@2421 = "This war hammer was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D4 + 4
+Damage type: crushing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: War Hammer
+Type: 1-handed"
+
+@2422 = "Enchanted Dagger +3"
+@2423 = "This dagger was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D4 + 3
+Damage type: piercing
+Weight: 0
+Speed Factor: 0
+Proficiency Type: Dagger
+Type: 1-handed"
+
+@2424 = "Enchanted Short Sword +3"
+@2425 = "This short sword was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6 +3
+Damage type: piercing
+Speed Factor: 0
+Weight: 0
+Proficiency Type: Short Sword
+Type: 1-handed"
+
+@2426 = "Enchanted Long Sword +3"
+@2427 = "This long sword was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D8 + 3
+Damage type: slashing
+Weight: 0
+Speed Factor: 2
+Proficiency Type: Long Sword
+Type: 1-handed"
+
+@2428 = "Enchanted Bastard Sword +3"
+@2429 = "This bastard sword was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 2D4 + 3
+Damage type: slashing
+Weight: 0
+Speed Factor: 5
+Proficiency Type: Bastard Sword
+Type: 1-handed"
+
+@2430 = "Enchanted Two-Handed Sword +3"
+@2431 = "This two-handed sword was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D10 + 3
+Damage type: slashing
+Weight: 0
+Speed Factor: 7
+Proficiency Type: Two-Handed Sword
+Type: 2-handed"
+
+@2432 = "Enchanted Scimitar +3"
+@2433 = "This scimitar was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D8 + 3
+Damage type: slashing
+Weight: 0
+Speed Factor: 2
+Proficiency Type: Scimitar/Wakizashi/Ninja-To
+Type: 1-handed"
+
+@2434 = "Enchanted Katana +3"
+@2435 = "This katana was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D10 + 3
+Damage type: slashing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Katana
+Type: 1-handed"
+
+@2436 = "Enchanted Halberd +3"
+@2437 = "This halberd was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D10 + 3
+Damage type: piercing
+Weight: 0
+Speed Factor: 6
+Proficiency Type: Halberd
+Type: 2-handed"
+
+@2438 = "Enchanted Quarterstaff +3"
+@2439 = "This quarterstaff was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6 + 3
+Damage type: crushing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Quarterstaff
+Type: 2-handed"
+
+@2440 = "Enchanted Spear +3"
+@2441 = "This spear was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6 + 3
+Damage type: piercing
+Weight: 0
+Speed Factor: 3
+Proficiency Type: Spear
+Type: 2-handed"
+
+@2442 = "Enchanted Short Bow +3"
+@2443 = "This short bow was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Weight: 0
+Speed Factor: 3
+Proficiency Type: Short Bow
+Type: 2-handed"
+
+@2444 = "Enchanted Long Bow +3"
+@2445 = "This long bow was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +4 bonus
+Weight: 0
+Speed Factor: 4
+Proficiency Type: Long Bow
+Type: 2-handed"
+
+@2446 = "Enchanted Light Crossbow +3"
+@2447 = "This light crossbow was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: +3 bonus
+Weight: 0
+Speed Factor: 2
+Proficiency Type: Crossbow
+Type: 2-handed"
+
+@2448 = "Enchanted Heavy Crossbow +3"
+@2449 = "This heavy crossbow was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: +5 bonus
+Weight: 0
+Speed Factor: 7
+Proficiency Type: Crossbow
+Type: 2-handed"
+
+@2450 = "Enchanted Sling +3"
+@2451 = "This sling was created by the Enchant Weapon spell and functions like a +3 weapon in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: +3 bonus
+Weight: 0
+Speed Factor: 3
+Proficiency Type: Sling
+Type: 1-handed"
+
+@2452 = "Enchanted Arrow +3"
+@2453 = "These arrows were created by the Enchant Weapon spell and functions like +3 ammunition in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D6
+Damage type: missile
+Weight: 0
+Launcher: Bow"
+
+@2454 = "Enchanted Bolt +3"
+@2455 = "These bolts were created by the Enchant Weapon spell and functions like +3 ammunition in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D8
+Damage type: missile
+Weight: 0
+Launcher: Crossbow"
+
+@2456 = "Enchanted Bullet +3"
+@2457 = "These bullets were created by the Enchant Weapon spell and functions like +3 ammunition in all respects.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D4 + 4
+Damage type: missile
+Weight: 0
+Launcher: Sling"
 
 //Level 5.
 @2500 = "Phantom Blade"
