@@ -30,7 +30,7 @@ IF
     SpellCastOnMe([ANYONE],0)
 THEN
     RESPONSE #100
-        ApplySpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+        ApplySpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)
 END
 
 IF

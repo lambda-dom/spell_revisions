@@ -53,13 +53,13 @@ END
 
 IF
     !GlobalTimerNotExpired("rage","LOCALS")
-    HaveSpell(BERSERKER_RAGE)  // SPCL321.SPL (Enrage)
+    HaveSpell(BERSERKER_RAGE)
     See(NearestEnemyOf(Myself))
     !CheckStat(Myself,1,OFFENSIVE_MODIFIER)
 THEN
     RESPONSE #100
         SetGlobalTimer("rage","LOCALS",EIGHTEEN_MINUTES)
-        Spell(Myself,BERSERKER_RAGE)  // SPCL321.SPL (Enrage)
+        Spell(Myself,BERSERKER_RAGE)
 END
 
 IF
@@ -221,4 +221,3 @@ THEN
     RESPONSE #100
         AttackOneRound(NearestEnemyOf(Myself))
 END
-

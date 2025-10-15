@@ -60,12 +60,12 @@ END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_SHIELD)  // SPWI114.SPL (harmCo)
+    HaveSpell(WIZARD_SHIELD)
     !StateCheck(Myself,STATE_INVISIBLE)
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_SHIELD)  // SPWI114.SPL (harmCo)
+        Spell(Myself,WIZARD_SHIELD)
 END
 
 IF
@@ -95,7 +95,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        ApplySpell(Myself,WIZARD_INVISIBILITY)  // SPWI206.SPL (l, 10' Radiu)
+        ApplySpell(Myself,WIZARD_INVISIBILITY)
         SetGlobalTimer("invis","LOCALS",THREE_ROUNDS)
         SetGlobalTimer("inviswander","LOCALS",3)
     RESPONSE #100
@@ -104,33 +104,33 @@ END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (PersonDire C)
+    HaveSpell(WIZARD_MAGIC_MISSILE)
     See(NearestEnemyOf(Myself))
     HPLT(LastSeenBy(Myself),15)
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(LastSeenBy(Myself),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (PersonDire C)
+        Spell(LastSeenBy(Myself),WIZARD_MAGIC_MISSILE)
     RESPONSE #100
         Continue()
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_SLOW)  // SPWI312.SPL (thWi)
+    HaveSpell(WIZARD_SLOW)
     NumCreatureGT([ENEMY],2)
     See(NearestEnemyOf(Myself))
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (thWi)
+        Spell(LastSeenBy(Myself),WIZARD_SLOW)
     RESPONSE #100
         Continue()
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (sBlindnessBl)
+    HaveSpell(WIZARD_MIRROR_IMAGE)
     !StateCheck(Myself,STATE_NOT_TARGETABLE)
     !CheckStatGT(Myself,0,SANCTUARY)
     See(NearestEnemyOf(Myself))
@@ -147,39 +147,39 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (sBlindnessBl)
+        Spell(Myself,WIZARD_MIRROR_IMAGE)
     RESPONSE #100
         Continue()
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_HORROR)  // SPWI205.SPL (TouchL)
+    HaveSpell(WIZARD_HORROR)
     NumCreatureGT([ENEMY],2)
     See(NearestEnemyOf(Myself))
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(LastSeenBy(Myself),WIZARD_HORROR)  // SPWI205.SPL (TouchL)
+        Spell(LastSeenBy(Myself),WIZARD_HORROR)
     RESPONSE #100
         Continue()
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_BLINDNESS)  // SPWI106.SPL (tion From)
+    HaveSpell(WIZARD_BLINDNESS)
     See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_BLINDNESS)  // SPWI106.SPL (tion From)
+        Spell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_BLINDNESS)
     RESPONSE #100
         Continue()
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_DIRE_CHARM)  // SPWI316.SPL (riendsSlee)
+    HaveSpell(WIZARD_DIRE_CHARM)
     NumCreatureGT([ENEMY],1)
     See(NearestEnemyOf(Myself))
     General(LastSeenBy,HUMANOID)
@@ -191,20 +191,20 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(LastSeenBy(Myself),WIZARD_DIRE_CHARM)  // SPWI316.SPL (riendsSlee)
+        Spell(LastSeenBy(Myself),WIZARD_DIRE_CHARM)
     RESPONSE #100
         Continue()
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_HASTE)  // SPWI305.SPL (treng)
+    HaveSpell(WIZARD_HASTE)
     NumCreatureGT([ENEMY],2)
     See(NearestEnemyOf(Myself))
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_HASTE)  // SPWI305.SPL (treng)
+        Spell(Myself,WIZARD_HASTE)
     RESPONSE #100
         Continue()
 END
@@ -215,4 +215,3 @@ THEN
     RESPONSE #100
         AttackOneRound(LastSeenBy(Myself))
 END
-

@@ -80,95 +80,95 @@ THEN
 END
 
 IF
-    HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+    HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
     HPPercentLT(Myself,75)
 THEN
     RESPONSE #100
-        Spell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+        Spell(Myself,CLERIC_CURE_LIGHT_WOUNDS)
 END
 
 IF
-    HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+    HaveSpell(CLERIC_REMOVE_FEAR)
 THEN
     RESPONSE #100
-        Spell(Myself,CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+        Spell(Myself,CLERIC_REMOVE_FEAR)
 END
 
 IF
     See(NearestEnemyOf(Myself))
     !Range(NearestEnemyOf(Myself),4)
     Range(NearestEnemyOf(Myself),20)
-    HaveSpell(CLERIC_CHANT)  // SPPR203.SPL (Chant)
+    HaveSpell(CLERIC_CHANT)
     !StateCheck(LastSeenBy(Myself),STATE_CHANT)
 THEN
     RESPONSE #100
-        Spell(Myself,CLERIC_CHANT)  // SPPR203.SPL (Chant)
+        Spell(Myself,CLERIC_CHANT)
 END
 
 IF
     See(NearestEnemyOf(Myself))
     !Range(NearestEnemyOf(Myself),4)
-    HaveSpell(CLERIC_BLESS)  // SPPR101.SPL (Bless)
+    HaveSpell(CLERIC_BLESS)
     !StateCheck(LastSeenBy(Myself),STATE_BLESS)
 THEN
     RESPONSE #100
-        Spell(Myself,CLERIC_BLESS)  // SPPR101.SPL (Bless)
+        Spell(Myself,CLERIC_BLESS)
 END
 
 IF
     See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
-    HaveSpell(CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+    HaveSpell(CLERIC_SILENCE_15_FOOT)
 THEN
     RESPONSE #100
-        Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+        Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)
 END
 
 IF
     See(NearestEnemyOfType([0.0.0.DRUID_ALL]))
-    HaveSpell(CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+    HaveSpell(CLERIC_SILENCE_15_FOOT)
 THEN
     RESPONSE #100
-        Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+        Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)
 END
 
 IF
     See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
-    HaveSpell(CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+    HaveSpell(CLERIC_SILENCE_15_FOOT)
 THEN
     RESPONSE #100
-        Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+        Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)
     RESPONSE #100
         Continue()
 END
 
 IF
     See(NearestEnemyOfType([0.0.0.BARD_ALL]))
-    HaveSpell(CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+    HaveSpell(CLERIC_SILENCE_15_FOOT)
 THEN
     RESPONSE #100
-        Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)  // SPPR211.SPL (Silence, 15' Radius)
+        Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)
     RESPONSE #100
         Continue()
 END
 
 IF
     See(NearestEnemyOf(Myself))
-    HaveSpell(CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
+    HaveSpell(CLERIC_HOLD_PERSON)
     General(LastSeenBy,HUMANOID)
     !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
     !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
     !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 THEN
     RESPONSE #100
-        Spell(NearestEnemyOf(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
+        Spell(NearestEnemyOf(Myself),CLERIC_HOLD_PERSON)
 END
 
 IF
     See(NearestEnemyOf(Myself))
-    HaveSpell(CLERIC_ARMOR_OF_FAITH)  // SPPR111.SPL (Armor of Faith)
+    HaveSpell(CLERIC_ARMOR_OF_FAITH)
 THEN
     RESPONSE #100
-        Spell(Myself,CLERIC_ARMOR_OF_FAITH)  // SPPR111.SPL (Armor of Faith)
+        Spell(Myself,CLERIC_ARMOR_OF_FAITH)
         SetGlobal("lastSpell","LOCALS",1)
 END
 
@@ -186,4 +186,3 @@ THEN
     RESPONSE #100
         AttackOneRound(NearestEnemyOf(Myself))
 END
-

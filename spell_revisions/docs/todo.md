@@ -301,3 +301,19 @@ note(s):
 * Magical Stone, Fire Seeds and Searing Orb are marked undispellable, contrary to most magical weapons. Is this justified? Searing Orb explicily says the spell is not affected by magic resistance so there is at least justification. Shillelagh explicitly mentions dispellability. Note that this can be controlled from the 2da table.
 
 * Enchanted weapons need a second pass over the weapon speeds.
+
+# H. Scripts.
+
+* weidu_library support: needs ways to systematize resource consumption; this involves (1) casting spells not in spell.ids (2) tlk references. The best way may be to use some form of variable expansion to be done at compile time using a table as the environment.
+
+* Death Knight: checks for dw#sumfi item.
+
+* Glabrezu: checks for dw#sumfi item.
+
+* Pit Fiend: checks for dw#sumfi item.
+
+* Shambling Mound: checks for dvinvis (??).
+
+* Ogre Mage: uses blindness, supposed to be deprecated.
+
+* resources needed: INNATE_TELEPORT_WITHOUT_ERROR, INNATE_GASEOUS_FORM. The latter also needs an item which is conjured in the spell. Also need leopard_pounce for leopard and weidu library support.

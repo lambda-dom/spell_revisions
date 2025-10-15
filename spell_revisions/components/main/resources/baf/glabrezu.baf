@@ -78,7 +78,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(Myself,WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (Mirror Image)
+        SpellNoDec(Myself,WIZARD_MIRROR_IMAGE)
         SetGlobalTimer("mirror_image","LOCALS",FIVE_ROUNDS)
 END
 
@@ -118,7 +118,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_REMOVE_MAGIC)  // SPWI302.SPL (Dispel Magic)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_REMOVE_MAGIC)
         SetGlobalTimer("RemoveMagic","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -144,7 +144,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)
         SetGlobalTimer("PWStun","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -170,7 +170,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)
         SetGlobalTimer("PWStun","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -196,7 +196,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)
         SetGlobalTimer("PWStun","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -222,7 +222,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)
         SetGlobalTimer("PWStun","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -248,7 +248,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)
         SetGlobalTimer("PWStun","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -265,7 +265,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(NearestEnemyOf(Myself),CLERIC_UNHOLY_BLIGHT)  // SPPR314.SPL (Unholy Blight)
+        SpellNoDec(NearestEnemyOf(Myself),CLERIC_UNHOLY_BLIGHT)
         SetGlobalTimer("unholy_blight","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -289,7 +289,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(NearestEnemyOf(Myself),WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)
+        SpellNoDec(NearestEnemyOf(Myself),WIZARD_CONFUSION)
         SetGlobalTimer("Confusion","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -315,17 +315,17 @@ IF
     InMyArea(Player6)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player1)  // Teleport Without Error
+        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player1)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player2)  // Teleport Without Error
+        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player2)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player3)  // Teleport Without Error
+        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player3)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player4)  // Teleport Without Error
+        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player4)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player5)  // Teleport Without Error
+        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player5)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player6)  // Teleport Without Error
+        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player6)
 END
 
 IF
@@ -338,11 +338,11 @@ IF
     InMyArea(Player3)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player1)  // Teleport Without Error
+        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player1)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player2)  // Teleport Without Error
+        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player2)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player3)  // Teleport Without Error
+        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player3)
 END
 
 IF
@@ -353,7 +353,7 @@ IF
     InMyArea(Player1)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player1)  // Teleport Without Error
+        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player1)
 END
 
 IF
@@ -382,4 +382,3 @@ THEN
     RESPONSE #100
         Formation(Player1,[-4.-4])
 END
-

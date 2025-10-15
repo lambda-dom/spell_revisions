@@ -9,7 +9,7 @@ IF
         AreaCheck("AR6400")
 THEN
     RESPONSE #100
-        ApplySpellRES("dvinvis",Myself)  // No such index
+        ApplySpellRES("dvinvis",Myself)
         PlaySound("ACT_07")
         Continue()
 END

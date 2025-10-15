@@ -10,17 +10,17 @@ END
 
 IF
     HPPercentLT(Myself,30)
-    !HasItem("dvgasfrm",Myself)  // Gaseous Form
+    !HasItem("itm#gas_form_item",Myself)  // Gaseous Form
     GlobalLT("DjinniGasForm","LOCALS",3)
     !StateCheck(Myself,STATE_DEAD)
 THEN
     RESPONSE #100
         IncrementGlobal("DjinniGasForm","LOCALS",1)
-        ReallyForceSpellRES("dvgasfrm",Myself)  // No such index
+        ReallyForceSpellRES(INNATE_GAS_FORM,Myself)
 END
 
 IF
-    HasItem("dvgasfrm",Myself)  // Gaseous Form
+    HasItem("itm#gas_form_item",Myself)  // Gaseous Form
 THEN
     RESPONSE #50
         RandomWalk()
@@ -56,19 +56,19 @@ END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_SHIELD)  // SPWI114.SPL (Shield)
+    HaveSpell(WIZARD_SHIELD)
     !StateCheck(Myself,STATE_INVISIBLE)
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_SHIELD)  // SPWI114.SPL (Shield)
+        Spell(Myself,WIZARD_SHIELD)
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
     !AreaCheck("ar3008")
     !AreaCheck("ar3004")
-    HaveSpell(WIZARD_IMPROVED_INVISIBILITY)  // SPWI405.SPL (Improved Invisibility)
+    HaveSpell(WIZARD_IMPROVED_INVISIBILITY)
     !CheckStatGT(NearestEnemyOf(Myself),0,TRUE_SIGHT)
     !CheckStatGT(SecondNearestEnemyOf(Myself),0,TRUE_SIGHT)
     !CheckStatGT(ThirdNearestEnemyOf(Myself),0,TRUE_SIGHT)
@@ -83,14 +83,14 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_IMPROVED_INVISIBILITY)  // SPWI405.SPL (Improved Invisibility)
+        Spell(Myself,WIZARD_IMPROVED_INVISIBILITY)
     RESPONSE #100
         Continue()
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (Mirror Image)
+    HaveSpell(WIZARD_MIRROR_IMAGE)
     !StateCheck(Myself,STATE_NOT_TARGETABLE)
     !CheckStatGT(Myself,0,SANCTUARY)
     See(NearestEnemyOf(Myself))
@@ -107,26 +107,26 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (Mirror Image)
+        Spell(Myself,WIZARD_MIRROR_IMAGE)
     RESPONSE #100
         Continue()
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
+    HaveSpell(WIZARD_MAGIC_MISSILE)
     See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
+        Spell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_MAGIC_MISSILE)
     RESPONSE #100
         Continue()
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_LIGHTNING_BOLT)  // SPWI308.SPL (Lightning Bolt)
+    HaveSpell(WIZARD_LIGHTNING_BOLT)
     !Range(NearestEnemyOf(Myself),4)
     !StateCheck(NearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
     !CheckStatGT(NearestEnemyOf(Myself),0,SANCTUARY)
@@ -136,17 +136,17 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(LastSeenBy(Myself),WIZARD_LIGHTNING_BOLT)  // SPWI308.SPL (Lightning Bolt)
+        Spell(LastSeenBy(Myself),WIZARD_LIGHTNING_BOLT)
     RESPONSE #100
         Continue()
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_CONJURE_LESSER_AIR_ELEMENTAL)  // SPWI520.SPL (Conjure Lesser Air Elemental)
+    HaveSpell(WIZARD_CONJURE_LESSER_AIR_ELEMENTAL)
 THEN
     RESPONSE #100
-        Spell(Myself,WIZARD_CONJURE_LESSER_AIR_ELEMENTAL)  // SPWI520.SPL (Conjure Lesser Air Elemental)
+        Spell(Myself,WIZARD_CONJURE_LESSER_AIR_ELEMENTAL)
     RESPONSE #100
         Continue()
 END
@@ -161,7 +161,7 @@ END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_INVISIBILITY)  // SPWI206.SPL (Invisibility)
+    HaveSpell(WIZARD_INVISIBILITY)
     !StateCheck(Myself,STATE_NOT_TARGETABLE)
     !CheckStatGT(Myself,0,SANCTUARY)
     See(NearestEnemyOf(Myself))
@@ -178,7 +178,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_INVISIBILITY)  // SPWI206.SPL (Invisibility)
+        Spell(Myself,WIZARD_INVISIBILITY)
         SetGlobalTimer("inviswander","LOCALS",2)
     RESPONSE #100
         Continue()
@@ -186,65 +186,64 @@ END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_HASTE)  // SPWI305.SPL (Haste)
+    HaveSpell(WIZARD_HASTE)
     !StateCheck(Myself,STATE_INVISIBLE)
     See(NearestEnemyOf(Myself))
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_HASTE)  // SPWI305.SPL (Haste)
+        Spell(Myself,WIZARD_HASTE)
     RESPONSE #100
         Continue()
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)  // SPWI406.SPL (Minor Globe of Invulnerability)
+    HaveSpell(WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)
     See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)  // SPWI406.SPL (Minor Globe of Invulnerability)
+        Spell(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)  // SPWI406.SPL (Minor Globe of Invulnerability)
+    HaveSpell(WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)
     See(NearestEnemyOfType([0.0.0.BARD_ALL]))
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)  // SPWI406.SPL (Minor Globe of Invulnerability)
+        Spell(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)  // SPWI406.SPL (Minor Globe of Invulnerability)
+    HaveSpell(WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)
     See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)  // SPWI406.SPL (Minor Globe of Invulnerability)
+        Spell(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)  // SPWI406.SPL (Minor Globe of Invulnerability)
+    HaveSpell(WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)
     See(NearestEnemyOfType([0.0.0.DRUID_ALL]))
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)  // SPWI406.SPL (Minor Globe of Invulnerability)
+        Spell(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)
 END
 
 IF
     !GlobalTimerNotExpired("castspell","LOCALS")
-    HaveSpell(WIZARD_TELEPORT_FIELD)  // SPWI421.SPL (Teleport Field)
+    HaveSpell(WIZARD_TELEPORT_FIELD)
     See(NearestEnemyOf(Myself))
     HPPercentLT(Myself,50)
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        Spell(Myself,WIZARD_TELEPORT_FIELD)  // SPWI421.SPL (Teleport Field)
+        Spell(Myself,WIZARD_TELEPORT_FIELD)
 END
-

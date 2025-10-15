@@ -220,7 +220,7 @@ IF
     Global("firstUse","LOCALS",0)
 THEN
     RESPONSE #100
-        ForceSpell(LastSeenBy(Myself),HULK_CONFUSION)  // SPIN839.SPL (Confusion)
+        ForceSpell(LastSeenBy(Myself),HULK_CONFUSION)
         SetGlobal("firstUse","LOCALS",1)
 END
 
@@ -230,7 +230,7 @@ IF
     !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 THEN
     RESPONSE #100
-        ForceSpell(LastSeenBy(Myself),HULK_CONFUSION)  // SPIN839.SPL (Confusion)
+        ForceSpell(LastSeenBy(Myself),HULK_CONFUSION)
 END
 
 IF
@@ -239,4 +239,3 @@ THEN
     RESPONSE #100
         AttackOneRound(NearestEnemyOf(Myself))
 END
-

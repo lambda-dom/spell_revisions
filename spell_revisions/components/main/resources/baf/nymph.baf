@@ -35,103 +35,103 @@ THEN
 END
 
 IF
-    HaveSpell(CLERIC_BARKSKIN)  // SPPR202.SPL (Barkskin)
+    HaveSpell(CLERIC_BARKSKIN)
     Global("prep","LOCALS",0)
 THEN
     RESPONSE #100
-        Spell(Myself,CLERIC_BARKSKIN)  // SPPR202.SPL (Barkskin)
+        Spell(Myself,CLERIC_BARKSKIN)
         SetGlobal("prep","LOCALS",1)
 END
 
 IF
-    HaveSpell(CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
+    HaveSpell(CLERIC_SLOW_POISON)
     See([PC])
     StateCheck(LastSeenBy(Myself),STATE_POISONED)
 THEN
     RESPONSE #100
-        Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
+        Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)
 END
 
 IF
-    HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+    HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
     HPPercentLT(Myself,80)
 THEN
     RESPONSE #100
-        Spell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+        Spell(Myself,CLERIC_CURE_LIGHT_WOUNDS)
 END
 
 IF
     See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
-    HaveSpell(CLERIC_SUMMON_INSECTS)  // SPPR319.SPL (Summon Insects)
+    HaveSpell(CLERIC_SUMMON_INSECTS)
     !CheckStatGT(LastSeenBy(Myself),0,CLERIC_INSECT_PLAGUE)
 THEN
     RESPONSE #100
-        Spell(LastSeenBy(Myself),CLERIC_SUMMON_INSECTS)  // SPPR319.SPL (Summon Insects)
+        Spell(LastSeenBy(Myself),CLERIC_SUMMON_INSECTS)
 END
 
 IF
     See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
-    HaveSpell(CLERIC_SUMMON_INSECTS)  // SPPR319.SPL (Summon Insects)
+    HaveSpell(CLERIC_SUMMON_INSECTS)
     !CheckStatGT(LastSeenBy(Myself),0,CLERIC_INSECT_PLAGUE)
 THEN
     RESPONSE #100
-        Spell(LastSeenBy(Myself),CLERIC_SUMMON_INSECTS)  // SPPR319.SPL (Summon Insects)
+        Spell(LastSeenBy(Myself),CLERIC_SUMMON_INSECTS)
 END
 
 IF
     See(NearestEnemyOfType([0.0.0.DRUID_ALL]))
-    HaveSpell(CLERIC_SUMMON_INSECTS)  // SPPR319.SPL (Summon Insects)
+    HaveSpell(CLERIC_SUMMON_INSECTS)
     !CheckStatGT(LastSeenBy(Myself),0,CLERIC_INSECT_PLAGUE)
 THEN
     RESPONSE #100
-        Spell(LastSeenBy(Myself),CLERIC_SUMMON_INSECTS)  // SPPR319.SPL (Summon Insects)
+        Spell(LastSeenBy(Myself),CLERIC_SUMMON_INSECTS)
 END
 
 IF
     See(NearestEnemyOf(Myself))
-    HaveSpell(CLERIC_HOLD_ANIMAL)  // SPPR305.SPL (Hold Person or Animal)
+    HaveSpell(CLERIC_HOLD_ANIMAL)
     !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
     !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
     !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 THEN
     RESPONSE #100
-        Spell(NearestEnemyOf(Myself),CLERIC_HOLD_ANIMAL)  // SPPR305.SPL (Hold Person or Animal)
+        Spell(NearestEnemyOf(Myself),CLERIC_HOLD_ANIMAL)
 END
 
 IF
     See(NearestEnemyOf(Myself))
-    HaveSpell(CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Animal)
+    HaveSpell(CLERIC_CHARM_PERSON)
     !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
     !StateCheck(LastSeenBy(Myself),STATE_CHARMED)
     !StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
     !CheckStatGT(LastSeenBy(Myself),0,CLERIC_INSECT_PLAGUE)
 THEN
     RESPONSE #100
-        Spell(NearestEnemyOf(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Animal)
+        Spell(NearestEnemyOf(Myself),CLERIC_CHARM_PERSON)
 END
 
 IF
     See(NearestEnemyOf(Myself))
-    HaveSpell(CLERIC_ANIMAL_SUMMONING_LEVEL_4)  // SPPR402.SPL (Animal Summoning IV)
+    HaveSpell(CLERIC_ANIMAL_SUMMONING_LEVEL_4)
 THEN
     RESPONSE #100
-        Spell(NearestEnemyOf(Myself),CLERIC_ANIMAL_SUMMONING_LEVEL_4)  // SPPR402.SPL (Animal Summoning IV)
+        Spell(NearestEnemyOf(Myself),CLERIC_ANIMAL_SUMMONING_LEVEL_4)
 END
 
 IF
     See(NearestEnemyOf(Myself))
-    HaveSpell(CLERIC_CALL_LIGHTNING)  // SPPR302.SPL (Call Lightning)
+    HaveSpell(CLERIC_CALL_LIGHTNING)
 THEN
     RESPONSE #100
-        Spell(NearestEnemyOf(Myself),CLERIC_CALL_LIGHTNING)  // SPPR302.SPL (Call Lightning)
+        Spell(NearestEnemyOf(Myself),CLERIC_CALL_LIGHTNING)
 END
 
 IF
-    HaveSpell(CLERIC_SHILLELAGH)  // SPPR110.SPL (Shillelagh)
+    HaveSpell(CLERIC_SHILLELAGH)
     See(NearestEnemyOf(Myself))
 THEN
     RESPONSE #100
-        Spell(Myself,CLERIC_SHILLELAGH)  // SPPR110.SPL (Shillelagh)
+        Spell(Myself,CLERIC_SHILLELAGH)
         SetGlobal("lastSpell","LOCALS",1)
 END
 
@@ -151,4 +151,3 @@ THEN
     RESPONSE #100
         Continue()
 END
-
