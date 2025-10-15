@@ -302,7 +302,11 @@ note(s):
 
 * Enchanted weapons need a second pass over the weapon speeds.
 
-# H. Scripts.
+# H. Summons.
+
+Naming of aux resources used literal, statically defined name with no override. The implication is that only "top level" resources used by spells use spell.ids name anchoring.
+
+## H. 1. Scripts.
 
 * weidu_library support: needs ways to systematize resource consumption; this involves (1) casting spells not in spell.ids (2) tlk references. The best way may be to use some form of variable expansion to be done at compile time using a table as the environment.
 
@@ -312,8 +316,6 @@ note(s):
 
 * Pit Fiend: checks for dw#sumfi item.
 
-* Shambling Mound: checks for dvinvis (??).
+* Shambling Mound: checks for dvinvis. This is a resource in SR, but we still have not discovered its use.
 
 * Ogre Mage: uses blindness, supposed to be deprecated.
-
-* resources needed: INNATE_TELEPORT_WITHOUT_ERROR, INNATE_GASEOUS_FORM. The latter also needs an item which is conjured in the spell. Also need leopard_pounce for leopard and weidu library support.

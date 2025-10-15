@@ -1,5 +1,7 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+
 
 //Load references.
 LAF get_component_resources_dir RET resources = dir END
@@ -8,23 +10,44 @@ LAF get_table_references STR_VAR
     dir = "%resources%/2da/summons"
 RET_ARRAY effects = references END
 
+LAF get_table_references STR_VAR
+    tables = "items"
+    dir = "%resources%/2da/summons"
+RET_ARRAY items = references END
+
 
 //Patches.
 DEFINE_PATCH_FUNCTION pack_attack BEGIN
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        value = "pack_attack"
-        array = "effects"
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "pack_attack"
         ext = "eff"
-    RET res = resource END
+        match_resource = "thac#res"
+        references = "effects"
+    END
+END
+
+DEFINE_PATCH_FUNCTION gas_form BEGIN
+    //Get reference.
+    //Resource does not exist at this point in the install.
+    LPF get_array_element STR_VAR
+        array = "items"
+        key = "gas_form"
+    RET resource = value END
+
+    //Sanitize.
+    PATCH_IF ("%resource%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "gas_form: reference 'gas_form' not found in item references array."
+    END
 
     LPF ALTER_EFFECT INT_VAR
         check_globals = 0
         check_headers = 1
         verbose = 1
-        match_opcode = 177              //Use Eff.
+        match_opcode = 111              //Create weapon.
     STR_VAR
-        match_resource = "thac#res"
+        match_resource = "itm#res"
         resource = "%res%"
     END
 END
