@@ -141,7 +141,7 @@ IF
     Global("lastSpell","LOCALS",1)
 THEN
     RESPONSE #100
-        ForceSpell(NearestEnemyOf(Myself),WIZARD_DIMENSION_DOOR_DEPRECATED)  // SPWI402.SPL (Dimension Jump)
+        ForceSpell(NearestEnemyOf(Myself),WIZARD_DIMENSION_DOOR)
 END
 
 IF

@@ -14,40 +14,40 @@ LAF install_resources STR_VAR
     table = "%resources%/2da/summons/scripts.2da"
 END
 
-//Install effects used by summons.
-LAF install_resources STR_VAR
-    type = "create_effect"
-    table = "%resources%/2da/summons/effects.2da"
-END
-
-//Install subspells for summons.
-LAF install_resources STR_VAR
-    type = "subspell"
-    dir = "%resources%/spl/summons"
-    table = "%resources%/2da/summons/subspells.2da"
-END
-
-//Install spells for summons.
-LAF install_resources STR_VAR
-    type = "spell"
-    dir = "%resources%/spl/summons"
-    table = "%resources%/2da/summons/spells.2da"
-    patches = "%MOD_FOLDER%/components/main/patches/summons/spells.tpa"
-END
-
-//Install items for summons.
-LAF install_resources STR_VAR
-    type = "item"
-    dir = "%resources%/itm/summons"
-    table = "%resources%/2da/summons/items.2da"
-    tra = "%tra%/summons/items.tra"
-    patches = "%MOD_FOLDER%/components/main/patches/summons/items.tpa"
-END
-
-//Install summons.
-LAF install_resources STR_VAR
-    type = "creature"
-    table = "%resources%/2da/summons.2da"
-    tra = "%tra%/summons.tra"
-    patches = "%MOD_FOLDER%/components/main/patches/summons.tpa"
-END
+// //Install effects used by summons.
+// LAF install_resources STR_VAR
+//     type = "create_effect"
+//     table = "%resources%/2da/summons/effects.2da"
+// END
+// 
+// //Install subspells for summons.
+// LAF install_resources STR_VAR
+//     type = "subspell"
+//     dir = "%resources%/spl/summons"
+//     table = "%resources%/2da/summons/subspells.2da"
+// END
+// 
+// //Install spells for summons.
+// LAF install_resources STR_VAR
+//     type = "spell"
+//     dir = "%resources%/spl/summons"
+//     table = "%resources%/2da/summons/spells.2da"
+//     patches = "%MOD_FOLDER%/components/main/patches/summons/spells.tpa"
+// END
+// 
+// //Install items for summons.
+// LAF install_resources STR_VAR
+//     type = "item"
+//     dir = "%resources%/itm/summons"
+//     table = "%resources%/2da/summons/items.2da"
+//     tra = "%tra%/summons/items.tra"
+//     patches = "%MOD_FOLDER%/components/main/patches/summons/items.tpa"
+// END
+// 
+// //Install summons.
+// LAF install_resources STR_VAR
+//     type = "creature"
+//     table = "%resources%/2da/summons.2da"
+//     tra = "%tra%/summons.tra"
+//     patches = "%MOD_FOLDER%/components/main/patches/summons.tpa"
+// END
