@@ -1,0 +1,6 @@
+2DA V1.0
+*
+            name    descr   arg1        arg2    arg3    patch           patch_description
+paralyze    1000    1001    duration    *       *       patch_duration  encode_description_arguments
+entangle    1010    1011    duration    *       *       patch_duration  encode_description_arguments
+stun        1020    1021    duration    *       *       patch_duration  encode_description_arguments

@@ -1,0 +1,15 @@
+//Description strings.
+@1000 = "Paralyze"
+@1001 = "Paralyzes the victim for %arg1% round(s). Incorporeal creatures like Elementals and non-living creatures are immune to paralyzation."
+
+@1010 = "Entangle"
+@1011 = "Entangles the victim for %arg1% round(s). Incorporeal creatures like Elementals, flying creatures like Wyverns and Giant creatures are immune to entangle."
+
+@1020 = "Stun"
+@1021 = "Victim is stunned for %arg1% round(s)."
+
+
+//Strings for display string [139] opcodes: relay info to the user.
+@10000 = "Paralyzed"
+@10001 = "Entangled"
+@10002 = "Stunned"

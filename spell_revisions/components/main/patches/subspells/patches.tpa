@@ -1,0 +1,28 @@
+//Description patches.
+DEFINE_DIMORPHIC_FUNCTION encode_description_arguments INT_VAR
+    description = 0
+STR_VAR
+    arg1 = ""
+    arg2 = ""
+    arg3 = ""
+RET text BEGIN
+    OUTER_SPRINT text (AT description)
+    OUTER_TEXT_SPRINT text EVAL "%text%"
+END
+
+
+//Spell patches.
+DEFINE_PATCH_FUNCTION patch_duration STR_VAR arg1 = "" arg2 = "*" arg3 = "*" BEGIN
+    //Sanitize arguments.
+    PATCH_IF NOT (IS_AN_INT arg1) BEGIN
+        PATCH_FAIL "patch_duration: arg1 '%arg1%' is not an integer."
+    END
+
+    PATCH_IF NOT (arg1 > 0) BEGIN
+        PATCH_FAIL "patch_duration: duration '%arg1%' must be strictly positive."
+    END
+ 
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        duration_high = 6 * arg1
+    END
+END
