@@ -4,7 +4,6 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 
 
 //Initialization.
-LAF get_component_root RET root = dir END
 LAF get_component_resources_dir RET resources = dir END
 LAF get_component_tra_dir RET tra = dir END
 
@@ -33,7 +32,7 @@ LAF install_resources STR_VAR
     type = "spell"
     dir = "%resources%/spl/summons"
     table = "%resources%/2da/summons/spells.2da"
-    patches = "%root%/patches/summons/spells.tpa"
+    patches = "%MOD_FOLDER%/components/main/patches/summons/spells.tpa"
 END
 
 //Install items for summons.
@@ -42,7 +41,7 @@ LAF install_resources STR_VAR
     dir = "%resources%/itm/summons"
     table = "%resources%/2da/summons/items.2da"
     tra = "%tra%/summons/items.tra"
-    patches = "%root%/patches/summons/items.tpa"
+    patches = "%MOD_FOLDER%/components/main/patches/summons/items.tpa"
 END
 
 //Install summons.
@@ -50,5 +49,5 @@ LAF install_resources STR_VAR
     type = "creature"
     table = "%resources%/2da/summons.2da"
     tra = "%tra%/summons.tra"
-    patches = "%root%/patches/summons.tpa"
+    patches = "%MOD_FOLDER%/components/main/patches/summons.tpa"
 END
