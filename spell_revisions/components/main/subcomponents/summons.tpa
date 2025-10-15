@@ -8,19 +8,19 @@ LAF get_component_resources_dir RET resources = dir END
 LAF get_component_tra_dir RET tra = dir END
 
 
-// //Install effects used by summons.
-// LAF install_resources STR_VAR
-//     type = "create_effect"
-//     table = "%resources%/2da/summons/effects.2da"
-// END
-// 
-// //Install subspells for summons.
-// LAF install_resources STR_VAR
-//     type = "subspell"
-//     dir = "%resources%/spl/summons"
-//     table = "%resources%/2da/summons/subspells.2da"
-// END
-// 
+//Install effects used by summons.
+LAF install_resources STR_VAR
+    type = "create_effect"
+    table = "%resources%/2da/summons/effects.2da"
+END
+
+//Install subspells for summons.
+LAF install_resources STR_VAR
+    type = "subspell"
+    dir = "%resources%/spl/summons"
+    table = "%resources%/2da/summons/subspells.2da"
+END
+
 // //Install spells for summons.
 // LAF install_resources STR_VAR
 //     type = "spell"
