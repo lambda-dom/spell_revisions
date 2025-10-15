@@ -226,6 +226,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *?
 
+* weidu_library stuff: replacing spell symbols both in replaces and assigning to slot holes are slow operations.
+
 * Cure line of spells: mention in description that it also cures intoxication.
 
 * Regenerate line of spells: handle inter-spell concurrency. The idea is that higher level remove and block lower level.

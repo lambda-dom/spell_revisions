@@ -8,26 +8,31 @@ LAF get_component_resources_dir RET resources = dir END
 
 
 //Add new spell symbolic names.
+PRINT "spell_symbols: adding new spell symbols."
 LAF add_spell_symbols STR_VAR
     table = "%resources%/2da/spell_symbols/additions.2da"
 END
 
 //Add new spell symbols by aliasing.
+PRINT "spell_symbols: adding new spell symbols by aliasing."
 LAF alias_spell_symbols STR_VAR
     table = "%resources%/2da/spell_symbols/aliases.2da"
 END
 
 //Move spell symbols in level (e.g. aliased ones).
+PRINT "spell_symbols: move spell symbols in level."
 LAF change_spell_symbols STR_VAR
     table = "%resources%/2da/spell_symbols/changes.2da"
 END
 
 //Replace spell symbols.
+PRINT "spell_symbols: replace spell symbols."
 LAF replace_spell_symbols STR_VAR
     table = "%resources%/2da/spell_symbols/replaces.2da"
 END
 
 //Replace spell symbol holes.
+PRINT "spell_symbols: assigning new spell symbols to slot holes."
 LAF assign_spell_symbol_holes STR_VAR
     table = "%resources%/2da/spell_symbols/holes.2da"
 END
