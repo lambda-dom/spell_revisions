@@ -16,7 +16,7 @@ IF
 THEN
     RESPONSE #100
         IncrementGlobal("EfreetiGasForm","LOCALS",1)
-        ReallyForceSpellRES(INNATE_GAS_FORM,Myself)
+        ReallyForceSpellRES("spl#gas_form",Myself)
 END
 
 IF

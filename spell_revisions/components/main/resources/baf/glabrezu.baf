@@ -315,17 +315,17 @@ IF
     InMyArea(Player6)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player1)
+        ReallyForceSpellRES("spl#iteleport_without_error",Player1)
     RESPONSE #100
-        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player2)
+        ReallyForceSpellRES("spl#iteleport_without_error",Player2)
     RESPONSE #100
-        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player3)
+        ReallyForceSpellRES("spl#iteleport_without_error",Player3)
     RESPONSE #100
-        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player4)
+        ReallyForceSpellRES("spl#iteleport_without_error",Player4)
     RESPONSE #100
-        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player5)
+        ReallyForceSpellRES("spl#iteleport_without_error",Player5)
     RESPONSE #100
-        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player6)
+        ReallyForceSpellRES("spl#iteleport_without_error",Player6)
 END
 
 IF
@@ -338,11 +338,11 @@ IF
     InMyArea(Player3)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player1)
+        ReallyForceSpellRES("spl#iteleport_without_error",Player1)
     RESPONSE #100
-        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player2)
+        ReallyForceSpellRES("spl#iteleport_without_error",Player2)
     RESPONSE #100
-        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player3)
+        ReallyForceSpellRES("spl#iteleport_without_error",Player3)
 END
 
 IF
@@ -353,7 +353,7 @@ IF
     InMyArea(Player1)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES(INNATE_TELEPORT_WITHOUT_ERROR,Player1)
+        ReallyForceSpellRES("spl#iteleport_without_error",Player1)
 END
 
 IF
