@@ -220,9 +220,13 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Bigby's Crushing Hand: move stun to a subspell.
 
+* Black Blade of Disaster: it has no strength bonuses but neither does it have the immaterial bonus of +4 thac0. Add it? The effect should also change? Check SRR.
+
 # C. General.
 
 * weidu_library stuff: (2) type the fields like those requiring tra refs by making the default -1 instead of *?
+
+* weidu_library stuff: replacing spell symbols both in replaces and assigning to slot holes are slow operations.
 
 * Cure line of spells: mention in description that it also cures intoxication.
 
@@ -239,7 +243,7 @@ note(s):
 
 * Cre scripts: set them in the patches instead of relying on name synchronicity.
 
-* Cre scripts: some spells are cast in the script (example: leopard casts dvspratt). The resource names must be corrected in a patch to the script.
+* Cre scripts: Review resource usage in scripts -- NI throws a warning on not found resources. Some spells are cast in the script (example: leopard casts dvspratt). The resource names must be corrected in a patch to the script.
 
 * Summon spell lists: summon spell lists also have to be combed over and eventually patched.
 
@@ -247,17 +251,17 @@ note(s):
 
 * As per Cure Mortal Wounds description implement immunity for non-living and extra-planar for all cure spells.
 
-* Elemental protection: deal more systematically with elemental protection: if elemental resist >= 100 then protection from resource to block spell.
+* Elemental protection: deal more systematically with elemental protection: if elemental resist >= 100 then protection from resource to block spell. This also precludes the need to implement it in elemental damage spells.
 
-* Anti-undead spells like hold undead should bypass magic resistance.
+* Anti-undead save-or-else spells like hold undead should bypass magic resistance.
 
 * Use `append_item_block` instead of hack with `patch_block`. This is already (partially?) done.
 
 * Conjure Elemental: remove probability of not summoning in wizard version? But then: how to differentiate druid version. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Review damage bonuses.
 
-* Damage bonus on natural attacks: these are set seeming randomly; standardize them. What *seems* to be happening is that the description is taking into account str bonuses.
+* Damage bonus on natural attacks: these are set seeming randomly; standardize them. What *seems* to be happening is that the description is taking into account str bonuses. Check with SRR.
 
-* Add snake race for snake summon (possibly others with no_race).
+* Add snake race for snake summon (possibly others with no_race). See https://www.gibberlings3.net/forums/topic/40559-ee-race-updates for a Reptile suggestion.
 
 * Incorporate spell flag setting in the spell tables.
 
@@ -265,11 +269,7 @@ note(s):
 
 * Review ranges of natural weapons.
 
-* Review resource usage in scripts -- NI throws a warning on not found resources.
-
 * Spell trap-like spells use a subspell to remove the resource when all the spell levels are removed. These should be overriden but this is the case only for spell trap.
-
-* Cre tables updated but no script data in yet.
 
 * change elemental names lesser_air_elemental -> air_elemental_lesser, etc.
 
@@ -294,10 +294,10 @@ note(s):
 * Item descriptions will probably have to wait IR to set up completely.
 
 note(s):
-* Even weapons on humanoids can be seen, so full descriptins are good for those as well as weapons conjured by spells, but natural weapons on monsters cannot, so in those cases descriptions can be forgotten.
+* Even weapons on humanoids can be seen, so full descriptins are good for those as well as weapons conjured by spells, but natural weapons on monsters cannot, so in those cases descriptions can be left out.
 
 * Clubs have Maces category instead of Clubs, why? Does it make a difference? This is probably a question for IR to deal with however.
 
-* Magical Stone, Fire Seeds and Searing Orb are marked undispellable, contrary to most magical weapons. Is this justified? Searing Orb explicily says the spell is not affected by magic resistance so there is at least justification. Shillelagh explicitly mentions dispellability. Note that this can be controlled form the 2da table.
+* Magical Stone, Fire Seeds and Searing Orb are marked undispellable, contrary to most magical weapons. Is this justified? Searing Orb explicily says the spell is not affected by magic resistance so there is at least justification. Shillelagh explicitly mentions dispellability. Note that this can be controlled from the 2da table.
 
 * Enchanted weapons need a second pass over the weapon speeds.

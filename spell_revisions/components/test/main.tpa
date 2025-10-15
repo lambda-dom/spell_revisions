@@ -5,7 +5,8 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 //Set variables.
 OUTER_TEXT_SPRINT root "%MOD_FOLDER%/components/main"
 
-//Execute subcomponents.
+
+//Subcomponents.
 //Install spell symbols.
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/spell_symbols.tpa"
@@ -39,4 +40,16 @@ END
 //Install items for spells (e. g. items created through spells).
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/items.tpa"
+END
+
+//Summons go here.
+
+//Install effects.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/effects.tpa"
+END
+
+//Install subspells.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/subspells.tpa"
 END
