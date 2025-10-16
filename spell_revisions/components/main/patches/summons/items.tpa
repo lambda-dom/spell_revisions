@@ -371,11 +371,23 @@ DEFINE_PATCH_FUNCTION demon_immunities STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION glabrezu_pincers STR_VAR destination = "*" BEGIN
-    LPF patch_resource_reference INT_VAR
+    //Get reference:
+    //Resource does not exist at this point in the install.
+    LPF get_array_element STR_VAR
+        array = "divine_lvl5_spells"
+        key = "true_seeing_a"
+    RET resource = value END
+
+    //Sanitize.
+    PATCH_IF ("%resource%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "glabrezu_pincers: reference 'true_seeing_a' not found among divine level 5 spells table."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
         match_opcode = 232                  //Cast spell on condition.
     STR_VAR
-        resource = "true_seeing_a"
         match_resource = "spl#res"
-        references = "spells"
+        resource = "%resource%"
     END
 END

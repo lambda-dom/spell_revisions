@@ -48,6 +48,6 @@ DEFINE_PATCH_FUNCTION gas_form BEGIN
         match_opcode = 111              //Create weapon.
     STR_VAR
         match_resource = "itm#res"
-        resource = "%res%"
+        resource = "%resource%"
     END
 END
