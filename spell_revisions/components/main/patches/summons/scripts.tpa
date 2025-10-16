@@ -23,7 +23,27 @@ DEFINE_PATCH_FUNCTION patch_teleport_spell STR_VAR destination = "*" BEGIN
     END
 
     LPF patch_script_spell_replacements STR_VAR
-        replacements = "replacements"
+        spells = "replacements"
         references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION patch_gas_form STR_VAR destination = "*" BEGIN
+    DEFINE_ARRAY replacement_spells BEGIN
+        "gas_form"
+    END
+
+    LPF patch_script_spell_replacements STR_VAR
+        spells = "replacement_spells"
+        references = "spells"
+    END
+
+    DEFINE_ARRAY replacement_items BEGIN
+        "gas_form_item"
+    END
+
+    LPF patch_script_item_replacements STR_VAR
+        items = "replacement_items"
+        references = "items"
     END
 END

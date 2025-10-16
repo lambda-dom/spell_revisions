@@ -17,10 +17,10 @@ LAF install_resources STR_VAR
     table = "%resources%/2da/summons/effects.2da"
 END
 
-// //Install subspells for summons.
-// LAF install_subspells_mod STR_VAR
-//     table = "%resources%/2da/summons/subspells.2da"
-// END
+//Install subspells for summons.
+LAF install_subspells_mod STR_VAR
+    table = "%resources%/2da/summons/subspells.2da"
+END
 
 //Install spells for summons.
 LAF install_resources STR_VAR
@@ -31,14 +31,14 @@ LAF install_resources STR_VAR
     patches = "%MOD_FOLDER%/components/main/patches/summons/spells.tpa"
 END
 
-// //Install items for summons.
-// LAF install_resources STR_VAR
-//     type = "copy_item"
-//     dir = "%resources%/itm/summons"
-//     table = "%resources%/2da/summons/items.2da"
-//     tra = "%tra%/summons/items.tra"
-//     patches = "%MOD_FOLDER%/components/main/patches/summons/items.tpa"
-// END
+//Install items for summons.
+LAF install_resources STR_VAR
+    type = "copy_item"
+    dir = "%resources%/itm/summons"
+    table = "%resources%/2da/summons/items.2da"
+    tra = "%tra%/summons/items.tra"
+    patches = "%MOD_FOLDER%/components/main/patches/summons/items.tpa"
+END
 
 //Install scripts.
 LAF install_resources STR_VAR

@@ -320,8 +320,6 @@ Naming of aux resources used literal, statically defined name with no override. 
 
 * Ogre Mage: uses blindness, supposed to be deprecated.
 
-* Script replacement is not working and no replacements are being made.
-
 ## H. 2. Spells.
 
 * Bat swarm: must be targeted better, as currently it only filters for animals. Bats are classified as no_race.

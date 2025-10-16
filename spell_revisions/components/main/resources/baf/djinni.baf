@@ -10,17 +10,17 @@ END
 
 IF
     HPPercentLT(Myself,30)
-    !HasItem("itm#gas_form_item",Myself)  // Gaseous Form
+    !HasItem(gas_form_item,Myself)  // Gaseous Form
     GlobalLT("DjinniGasForm","LOCALS",3)
     !StateCheck(Myself,STATE_DEAD)
 THEN
     RESPONSE #100
         IncrementGlobal("DjinniGasForm","LOCALS",1)
-        ReallyForceSpellRES("spl#gas_form",Myself)
+        ReallyForceSpellRES(gas_form,Myself)
 END
 
 IF
-    HasItem("itm#gas_form_item",Myself)  // Gaseous Form
+    HasItem(gas_form_item,Myself)  // Gaseous Form
 THEN
     RESPONSE #50
         RandomWalk()

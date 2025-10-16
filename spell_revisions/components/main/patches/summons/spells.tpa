@@ -33,12 +33,12 @@ DEFINE_PATCH_FUNCTION gas_form BEGIN
     //Resource does not exist at this point in the install.
     LPF get_array_element STR_VAR
         array = "items"
-        key = "gas_form"
+        key = "gas_form_item"
     RET resource = value END
 
     //Sanitize.
     PATCH_IF ("%resource%" STRING_EQUAL_CASE "*") BEGIN
-        PATCH_FAIL "gas_form: reference 'gas_form' not found in item references array."
+        PATCH_FAIL "gas_form: reference 'gas_form_item' not found in item references array."
     END
 
     LPF ALTER_EFFECT INT_VAR
