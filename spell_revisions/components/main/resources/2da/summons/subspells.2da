@@ -1,6 +1,6 @@
 2DA V1.0
 *
-                        install subspell        name    descr   arg1    arg2        arg3        school      sectype         patch                   over    destination
-spider_sting_poison     1       poisoning       *       *       10      2           *           *           *               *                       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_4
-shadow_drain_strength   1       drain_strength  *       *       10      1           *           *           *               *                       0       #suf:b:WIZARD_SUMMON_SHADOW
-wraith_level_drain      1       level_drain     *       *       10      1           *           *           *               *                       0       #suf:d:WIZARD_SUMMON_SHADOW
+                        install subspell        arg1    arg2    arg3    school  sectype over    destination
+spider_sting_poison     1       poisoning       10      2       *       *       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_4
+shadow_drain_strength   1       drain_strength  10      1       *       *       *       0       #suf:b:WIZARD_SUMMON_SHADOW
+wraith_level_drain      1       level_drain     10      1       *       *       *       0       #suf:d:WIZARD_SUMMON_SHADOW

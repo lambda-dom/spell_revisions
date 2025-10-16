@@ -1,6 +1,11 @@
 2DA V1.0
 *
-            name    descr   arg1        arg2    arg3    patch           patch_description
-paralyze    1000    1001    duration    *       *       patch_duration  encode_description_arguments
-entangle    1010    1011    duration    *       *       patch_duration  encode_description_arguments
-stun        1020    1021    duration    *       *       patch_duration  encode_description_arguments
+                name    descr   arg1        arg2    arg3    patch           patch_description
+paralyze        1000    1001    duration    *       *       patch_duration  encode_description_arguments
+entangle        1010    1011    duration    *       *       patch_duration  encode_description_arguments
+stun            1020    1021    duration    *       *       patch_duration  encode_description_arguments
+poisoning       2000    2001    duration    amount  *       poisoning       encode_description_arguments
+bleeding        2010    2011    duration    amount  *       splash_damage   encode_description_arguments
+acid_splash     2020    2021    duration    amount  *       splash_damage   encode_description_arguments
+level_drain     2030    2031    duration    amount  *       level_drain     encode_description_arguments
+drain_strength  2040    2041    duration    amount  *       drain_strength  encode_description_arguments

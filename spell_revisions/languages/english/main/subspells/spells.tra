@@ -1,4 +1,5 @@
 //Description strings.
+//Duration spells.
 @1000 = "Paralyze"
 @1001 = "Paralyzes the victim for %arg1% round(s). Incorporeal creatures like Elementals and non-living creatures are immune to paralyzation."
 
@@ -8,8 +9,33 @@
 @1020 = "Stun"
 @1021 = "Victim is stunned for %arg1% round(s)."
 
+@1030 = "Unconsciousness"
+@1031 = "Victim is knocked down unconscious for %arg1% round(s), awaking before the end of this period if it takes any damage. Incorporeal creatures like Elementals and non-living creatures are immune to the effect."
+
+
+//Duration and amount spells.
+@2000 = "Poisoning"
+@2001 = "Every %arg2% second(s) for %arg1% round(s), living creatures suffer 1 point of poison damage. This effect is not dispellable and is cumulative with itself."
+
+@2010 = "Bleeding"
+@2011 = "When hit and every round thereafter for %arg1% round(s), living creatures suffer %arg2% point(s) of piercing damage. The effect is not dispellable."
+
+@2020 = "Acid Splash"
+@2021 = "When hit and every round thereafter for %arg1% round(s), targets suffer %arg2% point(s) of acid damage. The effect is not dispellable."
+
+@2030 = "Level drained"
+@2031 = "Victim loses %arg2% level(s) for %arg1% round(s). Incorporeal creatures like Elementals and non-living creatures are immune to level drain. The effect is cumulative."
+
+@2040 = "Drain Strength"
+@2041 = "Victim is weakened, losing %arg2% points of strenth for %arg1% round(s). Incorporeal creatures like Elementals and non-living creatures are immune to the effect. The effect is cumulative."
+
 
 //Strings for display string [139] opcodes: relay info to the user.
 @10000 = "Paralyzed"
 @10001 = "Entangled"
 @10002 = "Stunned"
+@10003 = "Unconscious"
+
+@10101 = "Poisoned"
+@10102 = "Bleeding"
+@10103 = "Splashed with acid"
