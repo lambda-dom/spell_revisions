@@ -2,6 +2,9 @@
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
 
 //Initialization.
 LAF get_component_resources_dir RET resources = dir END
@@ -15,9 +18,7 @@ LAF install_resources STR_VAR
 END
 
 //Install subspells for summons.
-LAF install_resources STR_VAR
-    type = "subspell"
-    dir = "%resources%/spl/summons"
+LAF install_subspells_mod STR_VAR
     table = "%resources%/2da/summons/subspells.2da"
 END
 
@@ -39,11 +40,11 @@ END
 //     patches = "%MOD_FOLDER%/components/main/patches/summons/items.tpa"
 // END
 
-//Install scripts.
-LAF install_resources STR_VAR
-    type = "script"
-    table = "%resources%/2da/summons/scripts.2da"
-END
+// //Install scripts.
+// LAF install_resources STR_VAR
+//     type = "script"
+//     table = "%resources%/2da/summons/scripts.2da"
+// END
 
 // 
 // //Install summons.

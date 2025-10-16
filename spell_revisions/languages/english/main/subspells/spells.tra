@@ -39,3 +39,4 @@
 @10101 = "Poisoned"
 @10102 = "Bleeding"
 @10103 = "Splashed with acid"
+@10104 = "Enfeebled"
