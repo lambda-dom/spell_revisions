@@ -8,7 +8,7 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 //Initialization.
 LAF get_component_resources_dir RET resources = dir END
-LAF get_component_tra_dir RET tra = dir END
+LAF get_component_tra_dir RET tras = dir END
 
 
 //Install effects used by summons.
@@ -27,7 +27,7 @@ LAF install_resources STR_VAR
     type = "spell"
     dir = "%resources%/spl/summons"
     table = "%resources%/2da/summons/spells.2da"
-    tra = "%tra%/summons/spells.tra"
+    tra = "%tras%/summons/spells.tra"
     patches = "%MOD_FOLDER%/components/main/patches/summons/spells.tpa"
 END
 
@@ -36,7 +36,7 @@ LAF install_resources STR_VAR
     type = "copy_item"
     dir = "%resources%/itm/summons"
     table = "%resources%/2da/summons/items.2da"
-    tra = "%tra%/summons/items.tra"
+    tra = "%tras%/summons/items.tra"
     patches = "%MOD_FOLDER%/components/main/patches/summons/items.tpa"
 END
 
@@ -47,11 +47,10 @@ LAF install_resources STR_VAR
     patches = "%MOD_FOLDER%/components/main/patches/summons/scripts.tpa"
 END
 
-// 
-// //Install summons.
-// LAF install_resources STR_VAR
-//     type = "creature"
-//     table = "%resources%/2da/summons.2da"
-//     tra = "%tra%/summons.tra"
-//     patches = "%MOD_FOLDER%/components/main/patches/summons.tpa"
-// END
+//Install summons.
+LAF install_resources STR_VAR
+    type = "creature"
+    table = "%resources%/2da/summons.2da"
+    tra = "%tras%/summons.tra"
+    patches = "%MOD_FOLDER%/components/main/patches/summons.tpa"
+END
