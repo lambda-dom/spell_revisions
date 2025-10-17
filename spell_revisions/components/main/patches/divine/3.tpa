@@ -87,7 +87,7 @@ DEFINE_PATCH_FUNCTION miscast_magic_b STR_VAR destination = "*" BEGIN
     END
 
     //Get reference.
-    LPF get_resource_ref STR_VAR
+    LPF get_table_ref STR_VAR
         ref = "#suf:c:CLERIC_MISCAST_MAGIC"
     RET res = resource END
 
@@ -114,7 +114,7 @@ DEFINE_PATCH_FUNCTION miscast_magic_c STR_VAR destination = "*" BEGIN
     END
 
     //Get reference.
-    LPF get_resource_ref STR_VAR
+    LPF get_table_ref STR_VAR
         ref = "#suf:d:CLERIC_MISCAST_MAGIC"
     RET res = resource END
 
@@ -141,7 +141,7 @@ DEFINE_PATCH_FUNCTION miscast_magic_d STR_VAR destination = "*" BEGIN
     END
 
     //Get reference.
-    LPF get_resource_ref STR_VAR
+    LPF get_table_ref STR_VAR
         ref = "#suf:e:CLERIC_MISCAST_MAGIC"
     RET res = resource END
 
@@ -191,7 +191,7 @@ DEFINE_PATCH_FUNCTION miscast_magic STR_VAR destination = "*" BEGIN
     END
 
     //Get reference.
-    LPF get_resource_ref STR_VAR
+    LPF get_table_ref STR_VAR
         ref = "#suf:b:CLERIC_MISCAST_MAGIC"
     RET res = resource END
 

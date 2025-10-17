@@ -188,7 +188,7 @@ DEFINE_PATCH_FUNCTION faerie_fire BEGIN
 
     //Patch-in protection from aux glitterdust.
     //Spell not installed at this point, so use computed ref.
-    LPF get_resource_ref STR_VAR
+    LPF get_table_ref STR_VAR
         ref = "#suf:a:WIZARD_GLITTERDUST"
     RET res = resource END
 
