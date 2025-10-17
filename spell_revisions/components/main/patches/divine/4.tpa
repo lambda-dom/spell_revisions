@@ -10,25 +10,25 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
 //Load references.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "items"
 RET_ARRAY items = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 
 LAF get_component_resources_dir RET resources = dir END
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "4"
     dir = "%resources%/2da/divine"
 RET_ARRAY spells = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "3"
     dir = "%resources%/2da/arcane"
 RET_ARRAY arcane_spells = references END
@@ -144,9 +144,9 @@ END
 DEFINE_PATCH_FUNCTION lesser_restoration STR_VAR destination = "*" BEGIN
     //Spell does not exist by this point => TODO: refactor to ensure it does.
     //Get reference.
-    LPF get_resource_ref STR_VAR
-        ref = "#suf:a:WIZARD_HASTE"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:a:WIZARD_HASTE"
+    RET res = return END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1

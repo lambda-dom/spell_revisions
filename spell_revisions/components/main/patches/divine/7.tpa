@@ -5,17 +5,17 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 
 //Load references.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
 LAF get_component_resources_dir RET resources = dir END
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "7"
     dir = "%resources%/2da/divine"
 RET_ARRAY spells = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "3"
     dir = "%resources%/2da/arcane"
 RET_ARRAY wizard_level3_spells = references END

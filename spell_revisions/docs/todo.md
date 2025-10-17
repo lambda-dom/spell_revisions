@@ -228,6 +228,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * weidu_library stuff: replacing spell symbols both in replaces and assigning to slot holes are slow operations.
 
+* weidu_library stuff: damage types in damages.ids, item flags in cres in invitem.ids, item flags in itemflag.ids (the latter does not have the undispellable flag).
+
 * Cure line of spells: mention in description that it also cures intoxication.
 
 * Regenerate line of spells: handle inter-spell concurrency. The idea is that higher level remove and block lower level.

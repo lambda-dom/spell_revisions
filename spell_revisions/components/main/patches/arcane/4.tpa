@@ -11,19 +11,19 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
 //Load reference tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "items"
 RET_ARRAY items = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "tables"
 RET_ARRAY tables = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "vvcs"
 RET_ARRAY vvcs = references END
 
@@ -31,10 +31,9 @@ RET_ARRAY vvcs = references END
 //Patches.
 DEFINE_PATCH_FUNCTION contagion STR_VAR destination = "*" BEGIN
     //Spell may not exist by this point => TODO: refactor to ensure it does.
-    //Get reference.
-    LPF get_resource_ref STR_VAR
-        ref = "#suf:a:CLERIC_CONTAGION"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:a:CLERIC_CONTAGION"
+    RET res = return END
 
 
     LPF ALTER_EFFECT INT_VAR

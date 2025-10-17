@@ -9,20 +9,20 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
 //Load references.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "items"
 RET_ARRAY items = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 
 LAF get_component_resources_dir RET resources = dir END
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "3"
     dir = "%resources%/2da/divine"
 RET_ARRAY spells = references END
@@ -87,9 +87,9 @@ DEFINE_PATCH_FUNCTION miscast_magic_b STR_VAR destination = "*" BEGIN
     END
 
     //Get reference.
-    LPF get_resource_ref STR_VAR
-        ref = "#suf:c:CLERIC_MISCAST_MAGIC"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:c:CLERIC_MISCAST_MAGIC"
+    RET res = return END
 
     PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
         PATCH_FAIL "miscast_magic_b: spell '%res%.spl' does not exist in-game."
@@ -114,9 +114,9 @@ DEFINE_PATCH_FUNCTION miscast_magic_c STR_VAR destination = "*" BEGIN
     END
 
     //Get reference.
-    LPF get_resource_ref STR_VAR
-        ref = "#suf:d:CLERIC_MISCAST_MAGIC"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:d:CLERIC_MISCAST_MAGIC"
+    RET res = return END
 
     PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
         PATCH_FAIL "miscast_magic_c: spell '%res%.spl' does not exist in-game."
@@ -141,9 +141,9 @@ DEFINE_PATCH_FUNCTION miscast_magic_d STR_VAR destination = "*" BEGIN
     END
 
     //Get reference.
-    LPF get_resource_ref STR_VAR
-        ref = "#suf:e:CLERIC_MISCAST_MAGIC"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:e:CLERIC_MISCAST_MAGIC"
+    RET res = return END
 
     PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
         PATCH_FAIL "miscast_magic_d: spell '%res%.spl' does not exist in-game."
@@ -191,9 +191,9 @@ DEFINE_PATCH_FUNCTION miscast_magic STR_VAR destination = "*" BEGIN
     END
 
     //Get reference.
-    LPF get_resource_ref STR_VAR
-        ref = "#suf:b:CLERIC_MISCAST_MAGIC"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:b:CLERIC_MISCAST_MAGIC"
+    RET res = return END
 
     PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
         PATCH_FAIL "miscast_magic: spell '%res%.spl' does not exist in-game."
