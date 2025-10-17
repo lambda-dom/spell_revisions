@@ -42,17 +42,17 @@ LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/items.tpa"
 END
 
-// //Install summons.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/summons.tpa"
-// END
+//Install summons.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/summons.tpa"
+END
 
-// //Install effects.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/effects.tpa"
-// END
+//Install effects.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/effects.tpa"
+END
 
-// //Install subspells.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/subspells.tpa"
-// END
+//Install subspells.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/subspells.tpa"
+END
