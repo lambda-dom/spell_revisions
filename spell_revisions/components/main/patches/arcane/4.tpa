@@ -31,10 +31,9 @@ RET_ARRAY vvcs = references END
 //Patches.
 DEFINE_PATCH_FUNCTION contagion STR_VAR destination = "*" BEGIN
     //Spell may not exist by this point => TODO: refactor to ensure it does.
-    //Get reference.
-    LPF get_table_ref STR_VAR
-        ref = "#suf:a:CLERIC_CONTAGION"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:a:CLERIC_CONTAGION"
+    RET res = return END
 
 
     LPF ALTER_EFFECT INT_VAR

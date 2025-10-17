@@ -5,7 +5,8 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
 
 //Encoders for patches.
 DEFINE_PATCH_FUNCTION encode_elemental_protection_entry STR_VAR value = "" RET return BEGIN
-    LPF get_table_ref STR_VAR ref = "%value%" RET return = resource END
+    LPF encode_table_reference STR_VAR value = "%value%" RET return END
+
     //No existence check as the resources are available only later.
     PATCH_IF ("%return%" STRING_EQUAL_CASE "*") BEGIN
         PATCH_FAIL "encode_elemental_protection_entry: invalid '%value%' spell."

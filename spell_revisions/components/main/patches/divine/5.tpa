@@ -108,9 +108,9 @@ DEFINE_PATCH_FUNCTION greater_command_i STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION greater_command_h STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        ref = "#suf:i:CLERIC_GREATER_COMMAND"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:i:CLERIC_GREATER_COMMAND"
+    RET res = return END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
@@ -122,9 +122,9 @@ DEFINE_PATCH_FUNCTION greater_command_h STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION greater_command_g STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        ref = "#suf:h:CLERIC_GREATER_COMMAND"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:h:CLERIC_GREATER_COMMAND"
+    RET res = return END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
@@ -136,9 +136,9 @@ DEFINE_PATCH_FUNCTION greater_command_g STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION greater_command_f STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        ref = "#suf:g:CLERIC_GREATER_COMMAND"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:g:CLERIC_GREATER_COMMAND"
+    RET res = return END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
@@ -150,9 +150,9 @@ DEFINE_PATCH_FUNCTION greater_command_f STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION greater_command_e STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        ref = "#suf:f:CLERIC_GREATER_COMMAND"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:f:CLERIC_GREATER_COMMAND"
+    RET res = return END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
@@ -164,9 +164,9 @@ DEFINE_PATCH_FUNCTION greater_command_e STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION greater_command_d STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        ref = "#suf:e:CLERIC_GREATER_COMMAND"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:e:CLERIC_GREATER_COMMAND"
+    RET res = return END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
@@ -178,9 +178,9 @@ DEFINE_PATCH_FUNCTION greater_command_d STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION greater_command_c STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        ref = "#suf:d:CLERIC_GREATER_COMMAND"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:d:CLERIC_GREATER_COMMAND"
+    RET res = return END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
@@ -192,9 +192,9 @@ DEFINE_PATCH_FUNCTION greater_command_c STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION greater_command_b STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        ref = "#suf:c:CLERIC_GREATER_COMMAND"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:c:CLERIC_GREATER_COMMAND"
+    RET res = return END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
@@ -206,9 +206,9 @@ DEFINE_PATCH_FUNCTION greater_command_b STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION greater_command_a STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        ref = "#suf:b:CLERIC_GREATER_COMMAND"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:b:CLERIC_GREATER_COMMAND"
+    RET res = return END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1
@@ -220,9 +220,9 @@ DEFINE_PATCH_FUNCTION greater_command_a STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION greater_command STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        ref = "#suf:a:CLERIC_GREATER_COMMAND"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:a:CLERIC_GREATER_COMMAND"
+    RET res = return END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1

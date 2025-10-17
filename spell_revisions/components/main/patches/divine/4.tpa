@@ -144,9 +144,9 @@ END
 DEFINE_PATCH_FUNCTION lesser_restoration STR_VAR destination = "*" BEGIN
     //Spell does not exist by this point => TODO: refactor to ensure it does.
     //Get reference.
-    LPF get_table_ref STR_VAR
-        ref = "#suf:a:WIZARD_HASTE"
-    RET res = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:a:WIZARD_HASTE"
+    RET res = return END
 
     LPF ALTER_EFFECT INT_VAR
         verbose = 1

@@ -133,9 +133,9 @@ DEFINE_PATCH_FUNCTION glitterdust STR_VAR destination = "*" BEGIN
 
 
     //Patch-in protection from aux faerie fire.
-    LPF get_table_ref STR_VAR
-        ref = "#suf:a:CLERIC_FAERIE_FIRE"
-    RET new = resource END
+    LPF encode_table_reference STR_VAR
+        value = "#suf:a:CLERIC_FAERIE_FIRE"
+    RET new = return END
 
     LPF CLONE_EFFECT INT_VAR
         check_globals = 0
