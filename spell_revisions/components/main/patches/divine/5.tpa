@@ -7,20 +7,20 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
 
 //Load references.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "items"
 RET_ARRAY items = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 
 LAF get_component_resources_dir RET resources = dir END
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "5"
     dir = "%resources%/2da/divine"
 RET_ARRAY spells = references END

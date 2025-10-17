@@ -6,12 +6,12 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/projectiles.tpa"
 
 //Load references.
 LAF get_component_resources_dir RET resources = dir END
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "sounds"
     dir = "%resources%/2da/projectiles"
 RET_ARRAY sounds = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "travelling"
     dir = "%resources%/2da/projectiles"
 RET_ARRAY travelling = references END
@@ -19,13 +19,13 @@ RET_ARRAY travelling = references END
 
 //Patches.
 DEFINE_PATCH_FUNCTION icelance BEGIN
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "icelance"
         array = "sounds"
         ext = "wav"
     RET sound = resource END
 
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "icelance"
         array = "travelling"
         ext = "bam"
@@ -36,7 +36,7 @@ DEFINE_PATCH_FUNCTION icelance BEGIN
 END
 
 DEFINE_PATCH_FUNCTION vitriolic_sphere BEGIN
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "vitriolic_sphere_travelling"
         array = "travelling"
         ext = "bam"

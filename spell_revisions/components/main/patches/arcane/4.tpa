@@ -11,19 +11,19 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
 //Load reference tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "items"
 RET_ARRAY items = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "tables"
 RET_ARRAY tables = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "vvcs"
 RET_ARRAY vvcs = references END
 

@@ -9,20 +9,20 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
 //Load reference tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "items"
 RET_ARRAY items = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 
 LAF get_component_resources_dir RET resources = dir END
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "1"
     dir = "%resources%/2da/divine"
 RET_ARRAY spells = references END
@@ -164,7 +164,7 @@ END
 
 DEFINE_PATCH_FUNCTION faerie_fire BEGIN
     //Get reference.
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "faerie_fire_a"
         array = "spells"
         ext = "spl"

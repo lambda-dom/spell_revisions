@@ -8,17 +8,17 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
 //Load references.
 LAF get_component_resources_dir RET resources = dir END
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "spells"
     dir = "%resources%/2da/summons"
 RET_ARRAY spells = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "subspells"
     dir = "%resources%/2da/summons"
 RET_ARRAY subspells = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "5"
     dir = "%resources%/2da/divine"
 RET_ARRAY divine_lvl5_spells = references END
@@ -27,7 +27,7 @@ RET_ARRAY divine_lvl5_spells = references END
 //Patches.
 DEFINE_PATCH_FUNCTION bat_immunities STR_VAR destination = "*" BEGIN
     //Patch bat swarm.
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "bat_swarm"
         array = "spells"
         ext = "spl"
@@ -77,7 +77,7 @@ END
 
 DEFINE_PATCH_FUNCTION war_dog_scent STR_VAR destination = "*" BEGIN
     //Get reference.
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "war_dog_scent"
         array = "spells"
         ext = "spl"
@@ -118,7 +118,7 @@ END
 
 DEFINE_PATCH_FUNCTION wolf_pack_attack BEGIN
     //Get reference.
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "pack_attack"
         array = "spells"
         ext = "spl"

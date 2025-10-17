@@ -5,12 +5,12 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 //Load references.
 LAF get_component_resources_dir RET resources = dir END
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "effects"
     dir = "%resources%/2da/summons"
 RET_ARRAY effects = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "items"
     dir = "%resources%/2da/summons"
 RET_ARRAY items = references END
