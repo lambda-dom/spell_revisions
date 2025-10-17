@@ -241,10 +241,6 @@ note(s):
 
 * Display strings: this has only be handled in a small number of spells.
 
-* Cre scripts: set them in the patches instead of relying on name synchronicity.
-
-* Cre scripts: Review resource usage in scripts -- NI throws a warning on not found resources. Some spells are cast in the script (example: leopard casts dvspratt). The resource names must be corrected in a patch to the script.
-
 * Summon spell lists: summon spell lists also have to be combed over and eventually patched.
 
 * Make use of states from splstate.ids.
@@ -259,7 +255,7 @@ note(s):
 
 * Conjure Elemental: remove probability of not summoning in wizard version? But then: how to differentiate druid version. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Review damage bonuses.
 
-* Damage bonus on natural attacks: these are set seeming randomly; standardize them. What *seems* to be happening is that the description is taking into account str bonuses. Check with SRR.
+* Damage bonus on natural attacks: these are set seeming randomly; standardize them. What *seems* to be happening is that the description is taking into account str bonuses in damage *and* thac0. Check with SRR.
 
 * Add snake race for snake summon (possibly others with no_race). See https://www.gibberlings3.net/forums/topic/40559-ee-race-updates for a Reptile suggestion.
 
@@ -269,11 +265,9 @@ note(s):
 
 * Review ranges of natural weapons.
 
-* Spell trap-like spells use a subspell to remove the resource when all the spell levels are removed. These should be overriden but this is the case only for spell trap.
+* Spell trap-like spells use a subspell to remove the resource when all the spell levels are removed -- resource mentioned in the spell deflection opcode. These should be overriden but this is the case only for spell trap.
 
-* change elemental names lesser_air_elemental -> air_elemental_lesser, etc.
-
-* How to setup immunities to general effects like Entangle? The best way would be to use spell states, but we are lacking such as Entangle Immunity (but we do have Free Action, and that is already taken advantage of in standardized spell).
+* How to setup immunities to general effects like Entangle? The best way would be to use spell states, but we are lacking such as Entangle Immunity (but we do have Free Action, and that is already taken advantage of in standardized spell). Another option is to use sectypes, at least in the standardized effects; this is a little better now (but still not ideal), since we have decoupled subspells implementaion.
 
 # D. Projectiles.
 
@@ -308,7 +302,7 @@ Naming of aux resources used literal, statically defined name with no override. 
 
 * Summons: missing dire wolf cre in summons table (dlmelee script).
 
-* Should elementals be General monsters? The greater version (at least) have General as gianthumanoid, which is important for some spells like knockback. The same for shambling mounds.
+* Should elementals be General monsters? The greater version (at least) have General as gianthumanoid, which is important for some spells like knockback, the animal buffs that have been extended to monsters, etc. The same for shambling mounds. More generally, we need a pass over the General categorization.
 
 ## H. 1. Scripts.
 
