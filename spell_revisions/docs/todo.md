@@ -306,6 +306,10 @@ note(s):
 
 Naming of aux resources used literal, statically defined name with no override. The implication is that only "top level" resources used by spells use spell.ids name anchoring.
 
+* Summons: missing dire wolf cre in summons table (dlmelee script).
+
+* Should elementals be General monsters? The greater version (at least) have General as gianthumanoid, which is important for some spells like knockback. The same for shambling mounds.
+
 ## H. 1. Scripts.
 
 * weidu_library support: needs ways to systematize resource consumption; this involves (1) casting spells not in spell.ids (2) tlk references. The best way may be to use some form of variable expansion to be done at compile time using a table as the environment.
@@ -322,4 +326,4 @@ Naming of aux resources used literal, statically defined name with no override. 
 
 ## H. 2. Spells.
 
-* Bat swarm: must be targeted better, as currently it only filters for animals. Bats are classified as no_race.
+* Bat swarm: must be targeted better, as currently it only filters for animals. Bats' race is no_race.

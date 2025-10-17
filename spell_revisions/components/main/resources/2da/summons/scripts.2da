@@ -5,8 +5,8 @@ melee               1       *                       0       #lit:dlmelee
 ranged              1       *                       0       #lit:dlranged
 hobgoblin_shaman    1       *                       0       #lit:dlhobsha
 leopard             1       *                       0       #lit:catjagsu
-hamadryad           1       *                       0       #lit:hamasu
-nymph               1       *                       0       #lit:dlnymph
+hamadryad           1       *                       0       #lit:dlhamasu
+nymph               1       *                       0       #lit:dlnmphsu
 ogre_berserker      1       *                       0       #lit:dlbrsker
 ogre_mage           1       *                       0       #lit:ogremasu
 nishruu             1       *                       0       #lit:nishrusu
