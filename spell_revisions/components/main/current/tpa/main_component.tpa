@@ -306,10 +306,6 @@ ADD_PROJECTILE ~spell_rev\projectles\dvclfear.pro~
 COPY ~spell_rev\shared\fearaura.spl~      ~override~ // Aura of fear
   WRITE_SHORT 0x98 %dvclfear%
 
-COPY ~spell_rev\shared\dvgasfrm.spl~      ~override~ // Gaseous Form
-COPY ~spell_rev\shared\dvgasfrm.itm~      ~override~ // Gaseous Form
-COPY ~spell_rev\shared\dvtelpor.spl~      ~override~ // Teleport Without Error
-
 ACTION_IF FILE_EXISTS_IN_GAME ~spin113.spl~ BEGIN
   COPY_EXISTING ~spin113.spl~ ~override~
 	READ_LONG 0x8 spl_name

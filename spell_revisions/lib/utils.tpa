@@ -1,3 +1,12 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/subspells.tpa"
+
+
+//Initialization.
+OUTER_TEXT_SPRINT res_dir "%MOD_FOLDER%/components/main"
+OUTER_TEXT_SPRINT tra_dir "%MOD_FOLDER%/languages/%LANGUAGE%/main"
+
+
 //Patchers.
 DEFINE_PATCH_FUNCTION clone_to_display_string INT_VAR
     check_headers = 1
@@ -27,5 +36,16 @@ BEGIN
     STR_VAR
         resource = ""                       //Clean.
         insert = "%insert%"
+    END
+END
+
+//Simplify calling install_subspells.
+DEFINE_ACTION_FUNCTION install_subspells_mod STR_VAR table = "" BEGIN
+    LAF install_subspells STR_VAR
+        table = "%table%"
+        subspells = "%res_dir%/resources/2da/subspells/master.2da"
+        dir = "%res_dir%/resources/spl/subspells"
+        tra = "%tra_dir%/subspells/spells.tra"
+        patches = "%res_dir%/patches/subspells/patches.tpa"
     END
 END

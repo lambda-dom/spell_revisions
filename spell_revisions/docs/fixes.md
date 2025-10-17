@@ -227,7 +227,7 @@ note(s):
 
 * Monster Summoning 7: Otyugh: thac0 13 -> 10.
 
-* Mordenkainen's Sword: Sword: fix dice 4d5 -> 5d4. Removed add strength bonus. Implemented mind immunities directly. Corrections to thac0 6 -> 2.
+* Mordenkainen's Sword: Sword: fix dice 4d5 -> 5d4. Removed add strength bonus. Implemented mind immunities directly. Corrections to thac0 6 -> 2. Script: remove detect illusions block copied from nishruu which is used to implement vulnerability to dispel.
 
 * Mass Invisibility: range 35 -> 30.
 

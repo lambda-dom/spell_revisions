@@ -241,10 +241,6 @@ note(s):
 
 * Display strings: this has only be handled in a small number of spells.
 
-* Cre scripts: set them in the patches instead of relying on name synchronicity.
-
-* Cre scripts: Review resource usage in scripts -- NI throws a warning on not found resources. Some spells are cast in the script (example: leopard casts dvspratt). The resource names must be corrected in a patch to the script.
-
 * Summon spell lists: summon spell lists also have to be combed over and eventually patched.
 
 * Make use of states from splstate.ids.
@@ -259,7 +255,7 @@ note(s):
 
 * Conjure Elemental: remove probability of not summoning in wizard version? But then: how to differentiate druid version. Air Elemental: mentioned movement rate +3 in fists. Earth Elemental: mentioned movement rate -2 in fists. Review damage bonuses.
 
-* Damage bonus on natural attacks: these are set seeming randomly; standardize them. What *seems* to be happening is that the description is taking into account str bonuses. Check with SRR.
+* Damage bonus on natural attacks: these are set seeming randomly; standardize them. What *seems* to be happening is that the description is taking into account str bonuses in damage *and* thac0. Check with SRR.
 
 * Add snake race for snake summon (possibly others with no_race). See https://www.gibberlings3.net/forums/topic/40559-ee-race-updates for a Reptile suggestion.
 
@@ -269,11 +265,9 @@ note(s):
 
 * Review ranges of natural weapons.
 
-* Spell trap-like spells use a subspell to remove the resource when all the spell levels are removed. These should be overriden but this is the case only for spell trap.
+* Spell trap-like spells use a subspell to remove the resource when all the spell levels are removed -- resource mentioned in the spell deflection opcode. These should be overriden but this is the case only for spell trap.
 
-* change elemental names lesser_air_elemental -> air_elemental_lesser, etc.
-
-* How to setup immunities to general effects like Entangle? The best way would be to use spell states, but we are lacking such as Entangle Immunity (but we do have Free Action, and that is already taken advantage of in standardized spell).
+* How to setup immunities to general effects like Entangle? The best way would be to use spell states, but we are lacking such as Entangle Immunity (but we do have Free Action, and that is already taken advantage of in standardized spell). Another option is to use sectypes, at least in the standardized effects; this is a little better now (but still not ideal), since we have decoupled subspells implementaion.
 
 # D. Projectiles.
 
@@ -301,3 +295,29 @@ note(s):
 * Magical Stone, Fire Seeds and Searing Orb are marked undispellable, contrary to most magical weapons. Is this justified? Searing Orb explicily says the spell is not affected by magic resistance so there is at least justification. Shillelagh explicitly mentions dispellability. Note that this can be controlled from the 2da table.
 
 * Enchanted weapons need a second pass over the weapon speeds.
+
+# H. Summons.
+
+Naming of aux resources used literal, statically defined name with no override. The implication is that only "top level" resources used by spells use spell.ids name anchoring.
+
+* Summons: missing dire wolf cre in summons table (dlmelee script).
+
+* Should elementals be General monsters? The greater version (at least) have General as gianthumanoid, which is important for some spells like knockback, the animal buffs that have been extended to monsters, etc. The same for shambling mounds. More generally, we need a pass over the General categorization.
+
+## H. 1. Scripts.
+
+* weidu_library support: needs ways to systematize resource consumption; this involves (1) casting spells not in spell.ids (2) tlk references. The best way may be to use some form of variable expansion to be done at compile time using a table as the environment.
+
+* Death Knight: checks for dw#sumfi item.
+
+* Glabrezu: checks for dw#sumfi item.
+
+* Pit Fiend: checks for dw#sumfi item.
+
+* Shambling Mound: checks for dvinvis. This is a resource in SR, but we still have not discovered its use.
+
+* Ogre Mage: uses blindness, supposed to be deprecated.
+
+## H. 2. Spells.
+
+* Bat swarm: must be targeted better, as currently it only filters for animals. Bats' race is no_race.

@@ -2,7 +2,7 @@ IF
     Die()
 THEN
     RESPONSE #100
-        ReallyForceSpellDead(Myself,RED_HOLY_MIGHT)  // SPWI985.SPL (No such index)
+        ReallyForceSpellDead(Myself,RED_HOLY_MIGHT)
         DestroySelf()
 END
 
@@ -83,7 +83,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        ReallyForceSpell(Myself,DEMON_FEAR)  // SPIN890.SPL (Demon Fear)
+        ReallyForceSpell(Myself,DEMON_FEAR)
         SetGlobalTimer("fearaura","LOCALS",THREE_ROUNDS)
         Continue()
 END
@@ -107,7 +107,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(Myself,WIZARD_IMPROVED_INVISIBILITY)  // SPWI405.SPL (Improved Invisibility)
+        SpellNoDec(Myself,WIZARD_IMPROVED_INVISIBILITY)
         SetGlobalTimer("ImpInvisibility","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -139,7 +139,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_REMOVE_MAGIC)  // SPWI302.SPL (Dispel Magic)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_REMOVE_MAGIC)
         SetGlobalTimer("RemoveMagic","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -157,7 +157,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(NearestEnemyOf(Myself),WIZARD_METEOR_SWARM)  // SPWI911.SPL (Meteor Swarm)
+        SpellNoDec(NearestEnemyOf(Myself),WIZARD_METEOR_SWARM)
         SetGlobalTimer("MeteorSwarm","LOCALS",EIGHT_HOURS)
     RESPONSE #100
         Continue()
@@ -175,7 +175,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(NearestEnemyOf(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
+        SpellNoDec(NearestEnemyOf(Myself),WIZARD_FIREBALL)
         SetGlobalTimer("Fireball","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -193,7 +193,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(Myself,CLERIC_UNHOLY_WORD)  // SPPR715.SPL (Unholy Word)
+        SpellNoDec(Myself,CLERIC_UNHOLY_WORD)
         SetGlobalTimer("UnholyWord","LOCALS",1000)
     RESPONSE #100
         Continue()
@@ -211,7 +211,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_NPC_SYMBOL_FEAR)  // SPWI899.SPL (Symbol, Fear)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_NPC_SYMBOL_FEAR)
         SetGlobalTimer("SymbolWeakness","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -237,17 +237,17 @@ IF
     InMyArea(Player6)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player1)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player1)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player2)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player2)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player3)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player3)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player4)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player4)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player5)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player5)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player6)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player6)
 END
 
 IF
@@ -260,11 +260,11 @@ IF
     InMyArea(Player3)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player1)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player1)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player2)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player2)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player3)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player3)
 END
 
 IF
@@ -275,7 +275,7 @@ IF
     InMyArea(Player1)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player1)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player1)
 END
 
 IF

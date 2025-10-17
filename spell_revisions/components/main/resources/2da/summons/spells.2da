@@ -1,8 +1,10 @@
 2DA V1.0
 *
-                            install name    descr   type    lvl flags       school      sectype     book_icon   abil_icon   projectile          range   speed   patch                       over    destination
-bat_swarm                   1       *       *       special 1   00000000    *           *           *           *           #lbl:bat_swarm      1       1       *                           0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_1
-war_dog_scent               1       *       *       special 1   00011000    none        none        *           *           #lbl:war_dog_scent  10      1       *                           0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_2
-pack_attack                 1       *       *       special 1   00000000    *           *           *           *           #lbl:pack_attack    1       1       pack_attack                 0       #suf:a:CLERIC_ANIMAL_SUMMONING_LEVEL_3
-pounce                      1       *       *       special 1   00000000    *           *           *           *           *                   1       1       *                           0       #lit:dvspratt
-shambling_mound_constrict   1       *       *       special 1   00000000    transmuter  disabling   *           *           *                   1       1       shambling_mound_constrict   0       #suf:a:CLERIC_SUMMON_SHAMBLING_MOUND
+                            install name    descr   type    lvl flags       school      sectype     book_icon   abil_icon   projectile          range   speed   patch       over    destination
+bat_swarm                   1       1001    *       innate  1   00011000    *           *           *           *           #lbl:bat_swarm      1       1       *           0       #lit:dlbatswm
+war_dog_scent               1       1011    *       innate  1   00011000    *           *           *           *           #lbl:war_dog_scent  10      1       *           0       #lit:dldogsnt
+pack_attack                 1       1021    *       innate  1   00011000    *           *           *           *           #lbl:pack_attack    1       1       pack_attack 0       #lit:dlpckatt
+leopard_pounce              1       1031    *       innate  1   00011000    *           *           *           *           *                   1       1       *           0       #lit:dlpounce
+shambling_mound_constrict   1       1041    *       special 1   00011000    none        disabling   *           *           *                   1       1       *           0       #lit:dlshcons
+gas_form                    1       1051    *       innate  1   00011000    *           *           *           *           *                   1       1       gas_form    0       #lit:dlgasfrm
+teleport_without_error      1       1061    *       innate  1   00011000    *           *           *           *           *                   1       1       *           0       #lit:dltelept

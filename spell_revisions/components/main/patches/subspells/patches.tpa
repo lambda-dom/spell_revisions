@@ -1,0 +1,97 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/encoders.tpa"
+
+
+//Description patches.
+DEFINE_DIMORPHIC_FUNCTION encode_description_arguments INT_VAR
+    description = 0
+STR_VAR
+    arg1 = ""
+    arg2 = ""
+    arg3 = ""
+RET text BEGIN
+    OUTER_SPRINT text (AT description)
+    OUTER_TEXT_SPRINT text EVAL "%text%"
+END
+
+
+//Spell patches.
+DEFINE_PATCH_FUNCTION patch_duration STR_VAR arg1 = "" arg2 = "*" arg3 = "*" BEGIN
+    //Sanitize arguments.
+    LPF encode_strictly_positive STR_VAR value = "%arg1%" RET arg1 = return END
+
+    //Patch duration.
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        duration_high = 6 * arg1
+    END
+END
+
+DEFINE_PATCH_FUNCTION poisoning STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGIN
+    //Sanitize arguments.
+    LPF encode_strictly_positive STR_VAR value = "%arg2%" RET arg2 = return END
+
+    //Patch amount.
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        match_opcode = 25                   //Poison.
+        parameter1 = arg2
+    END
+
+    //Patch duration.
+    LPF patch_duration STR_VAR arg1 = "%arg1%" END
+END
+
+DEFINE_PATCH_FUNCTION splash_damage STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGIN
+    //Sanitize arguments.
+    LPF encode_strictly_positive STR_VAR value = "%arg2%" RET arg2 = return END
+
+    //Patch amount.
+    LPF ALTER_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = arg2
+    END
+
+    //Patch duration.
+    LPF patch_duration STR_VAR arg1 = "%duration%" END
+
+    //Add remaining delayed damage opcodes.
+    PATCH_IF (arg1 >= 2) BEGIN
+        FOR (i = 1; i < arg1; ++i) BEGIN
+            LPF CLONE_EFFECT INT_VAR
+                match_opcode = 12           //Damage.
+                match_timing = 4            //Delayed.
+                //(duration - i) to get ordered opcodes.
+                duration = 3 + (arg1 - i) * 6
+            STR_VAR
+                insert = "below"
+            END
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION level_drain STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGIN
+    //Sanitize arguments.
+    LPF encode_strictly_positive STR_VAR value = "%arg2%" RET arg2 = return END
+
+    //Patch amount.
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        match_opcode = 216                  //Level drain.
+        parameter1 = arg2
+    END
+
+    //Patch duration.
+    LPF patch_duration STR_VAR arg1 = "%arg1%" END
+END
+
+DEFINE_PATCH_FUNCTION drain_strength STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGIN
+    //Sanitize arguments.
+    LPF encode_strictly_positive STR_VAR value = "%arg2%" RET arg2 = return END
+
+    //Patch amount.
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        match_opcode = 44                   //Strength penalty.
+        parameter1 = 0 - arg2
+    END
+
+    //Patch duration.
+    LPF patch_duration STR_VAR arg1 = "%arg1%" END
+END

@@ -1,6 +1,6 @@
 2DA V1.0
 *
-                        install subspell    name    descr   arg1    arg2    arg3    school      sectype         patch   over    destination
-shillelagh_entangle     1       entangle    *       *       1       *       *       transmuter  disabling       *       0       #suf:a:CLERIC_SHILLELAGH
-shocking_grasp_stun     1       stun        *       *       1       *       *       *           *               *       0       #suf:a:WIZARD_SHOCKING_GRASP
-ghoul_touch_hold        1       paralyze    *       *       3       *       *       necromancer disabling       *       0       #suf:a:WIZARD_GHOUL_TOUCH
+                        install subspell    arg1    arg2    arg3    school      sectype         over    destination
+shillelagh_entangle     1       entangle    1       *       *       transmuter  disabling       0       #suf:a:CLERIC_SHILLELAGH
+shocking_grasp_stun     1       stun        1       *       *       *           *               0       #suf:a:WIZARD_SHOCKING_GRASP
+ghoul_touch_hold        1       paralyze    3       *       *       necromancer disabling       0       #suf:a:WIZARD_GHOUL_TOUCH

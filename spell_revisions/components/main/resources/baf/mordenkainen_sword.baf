@@ -1,12 +1,3 @@
-//Block for vulnerability to dispel magic.
-IF
-    CheckStatLT(Myself,20,DETECTILLUSIONS)
-    !StateCheck(Myself,STATE_DEAD)
-THEN
-    RESPONSE #100
-        Kill(Myself)
-END
-
 IF
     HotKey(F)
     Global("dv_followmode","LOCALS",1)

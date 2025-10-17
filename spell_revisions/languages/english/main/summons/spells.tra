@@ -1,0 +1,8 @@
+//Spells.
+@1001 = "Bat Swarm"
+@1011 = "War Dog Scent"
+@1021 = "Pack Attack"
+@1031 = "Pounce"
+@1041 = "Constrict"
+@1051 = "Gas Form"
+@1061 = "Teleport Without Error"

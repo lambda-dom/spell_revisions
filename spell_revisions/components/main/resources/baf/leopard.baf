@@ -36,7 +36,7 @@ IF
     !Range(NearestEnemyOf(Myself),5)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES("dvspratt",Myself)  // Haste
+        ReallyForceSpellRES("leopard_pounce",Myself)
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
 END
 

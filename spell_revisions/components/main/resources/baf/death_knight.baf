@@ -84,7 +84,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_REMOVE_MAGIC)  // SPWI302.SPL (Dispel Magic)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_REMOVE_MAGIC)
         SetGlobalTimer("RemoveMagic","LOCALS",FIVE_ROUNDS)
     RESPONSE #100
         Continue()
@@ -103,7 +103,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),DEATHKNIGHT_FIREBALL)  // SPIN701.SPL (Unholy Fireball)
+        SpellNoDec(LastSeenBy(Myself),DEATHKNIGHT_FIREBALL)
         SetGlobalTimer("Fireball","LOCALS",ONE_HOUR)
     RESPONSE #100
         Continue()
@@ -122,7 +122,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_NPC_SYMBOL_DEATH)  // SPWI897.SPL (Symbol, Death)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_NPC_SYMBOL_DEATH)
         SetGlobalTimer("SymbolDeath","LOCALS",ONE_HOUR)
     RESPONSE #100
         Continue()
@@ -141,7 +141,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_NPC_SYMBOL_FEAR)  // SPWI899.SPL (Symbol, Fear)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_NPC_SYMBOL_FEAR)
         SetGlobalTimer("SymbolWeakness","LOCALS",ONE_HOUR)
     RESPONSE #100
         Continue()
@@ -159,7 +159,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_KILL)  // SPWI912.SPL (Power Word Kill)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_KILL)
         SetGlobalTimer("PWKill","LOCALS",ONE_HOUR)
     RESPONSE #100
         Continue()
@@ -175,7 +175,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_BLIND)  // SPWI815.SPL (Power Word Blind)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_BLIND)
         SetGlobalTimer("PWBlind","LOCALS",ONE_HOUR)
     RESPONSE #100
         Continue()
@@ -201,7 +201,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)
         SetGlobalTimer("PWStun","LOCALS",ONE_HOUR)
     RESPONSE #100
         Continue()
@@ -227,7 +227,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)
         SetGlobalTimer("PWStun","LOCALS",ONE_HOUR)
     RESPONSE #100
         Continue()
@@ -253,7 +253,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)
         SetGlobalTimer("PWStun","LOCALS",ONE_HOUR)
     RESPONSE #100
         Continue()
@@ -279,7 +279,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)
         SetGlobalTimer("PWStun","LOCALS",ONE_HOUR)
     RESPONSE #100
         Continue()
@@ -305,7 +305,7 @@ IF
 THEN
     RESPONSE #100
         SetGlobalTimer("castspell","LOCALS",ONE_ROUND)
-        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)  // SPWI715.SPL (Power Word Stun)
+        SpellNoDec(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN)
         SetGlobalTimer("PWStun","LOCALS",ONE_HOUR)
     RESPONSE #100
         Continue()
@@ -331,17 +331,17 @@ IF
     InMyArea(Player6)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player1)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player1)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player2)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player2)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player3)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player3)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player4)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player4)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player5)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player5)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player6)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player6)
 END
 
 IF
@@ -354,11 +354,11 @@ IF
     InMyArea(Player3)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player1)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player1)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player2)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player2)
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player3)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player3)
 END
 
 IF
@@ -369,7 +369,7 @@ IF
     InMyArea(Player1)
 THEN
     RESPONSE #100
-        ReallyForceSpellRES("dvtelpor",Player1)  // Teleport Without Error
+        ReallyForceSpellRES(teleport_without_error,Player1)
 END
 
 IF
@@ -398,4 +398,3 @@ THEN
     RESPONSE #100
         Formation(Player1,[-4.-4])
 END
-

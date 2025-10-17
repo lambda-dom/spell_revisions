@@ -1,0 +1,49 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+
+
+//Load references.
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "items"
+    dir = "%resources%/2da/summons"
+RET_ARRAY items = references END
+
+LAF get_table_references STR_VAR
+    tables = "spells"
+    dir = "%resources%/2da/summons"
+RET_ARRAY spells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION patch_teleport_spell STR_VAR destination = "*" BEGIN
+    DEFINE_ARRAY replacements BEGIN
+        "teleport_without_error"
+    END
+
+    LPF patch_script_spell_replacements STR_VAR
+        spells = "replacements"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION patch_gas_form STR_VAR destination = "*" BEGIN
+    DEFINE_ARRAY replacement_spells BEGIN
+        "gas_form"
+    END
+
+    LPF patch_script_spell_replacements STR_VAR
+        spells = "replacement_spells"
+        references = "spells"
+    END
+
+    DEFINE_ARRAY replacement_items BEGIN
+        "gas_form_item"
+    END
+
+    LPF patch_script_item_replacements STR_VAR
+        items = "replacement_items"
+        references = "items"
+    END
+END

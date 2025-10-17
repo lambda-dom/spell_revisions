@@ -727,7 +727,7 @@ DEFINE_PATCH_FUNCTION umber_hulk STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION glabrezu STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION pit_fiend STR_VAR destination = "*" BEGIN
     //Equip items.
     LPF creature_add_item STR_VAR
         reference = "pit_fiend_tail"

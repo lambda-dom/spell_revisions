@@ -2,6 +2,9 @@
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
 
 //Initialization.
 LAF get_component_resources_dir RET resources = dir END
@@ -29,8 +32,7 @@ LAF install_resources STR_VAR
 END
 
 //Install subspells for items (for spells...).
-LAF install_resources STR_VAR
-    type = "subspell"
+LAF install_subspells_mod STR_VAR
     table = "%resources%/2da/items/subspells.2da"
 END
 
