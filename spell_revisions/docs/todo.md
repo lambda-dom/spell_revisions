@@ -333,3 +333,5 @@ Naming of aux resources used literal, statically defined name with no override. 
 * Divide charm in two subtypes: humanoid with elf and half-elf resistances and no creture type and generic, non-humanoid with no elf resistances but with given creature type.
 
 * hold creature: remove uses of Use Eff [177] by filtering for (not ids = specified). This requires weidu_library support to retrieve the correct splprot entry.
+
+* slow: review concurrency; review interaction with sectypes.

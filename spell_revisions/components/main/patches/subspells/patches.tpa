@@ -170,3 +170,27 @@ DEFINE_PATCH_FUNCTION hold_creature STR_VAR arg1 = "" arg2 = "" arg3 = "" BEGIN
     //Patch duration.
     LPF patch_duration STR_VAR arg1 = "%arg1%" END
 END
+
+DEFINE_PATCH_FUNCTION patch_damage STR_VAR arg1 = "" arg2 = "" arg3 = "" BEGIN
+    //Sanitize arguments.
+    LPF encode_positive STR_VAR value = "%arg1%" RET arg1 = return END
+    LPF encode_positive STR_VAR value = "%arg2%" RET arg2 = return END
+    LPF encode_positive STR_VAR value = "%arg3%" RET arg3 = return END
+
+    //Implicit number conversion.
+    amount = arg1
+    dicenumber = arg2
+    dicesize = arg3
+
+    PATCH_IF ((dicesize > 0) AND (dicenumber = 0)) OR ((dicesize = 0) AND (dicenumber > 0)) BEGIN
+        PATCH_FAIL "patch_damage: both dice number and dice size must be strictly positive if one is."
+    END
+
+    //Damage.
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = amount
+        dicenumber = dicenumber
+        dicesize = dicesize
+    END
+END

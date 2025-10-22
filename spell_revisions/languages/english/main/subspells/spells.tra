@@ -15,6 +15,19 @@
 @1040 = "Blind"
 @1041 = "Victim is blinded for %arg1% round(s)."
 
+@1050 = "Panic"
+@1051 = "Victim panics for %arg1% round(s). Undead and illusionary creatures are immune to fear."
+
+@1060 = "Slow"
+@1061 = "Victim is slowed for %arg1% round(s). Two instances of this same spell refresh."
+
+@1070 = "Confusion"
+@1071 = "Victim is confused for %arg1% round(s)."
+
+@1080 = "Sleep"
+@1081 = "Victim is afflicted with magical sleep for %arg1% round(s), awakening before the end of this period if it takes any damage. Dragons, incorporeal creatures like Elementals and non-living creatures are immune to the effect. Elves and Half-elves are especially resistant to magically-induced sleep."
+
+
 //Duration and amount/strength spells.
 @2000 = "Poisoning"
 @2001 = "Every %arg2% second(s) for %arg1% round(s), living creatures suffer 1 point of poison damage. This effect is not dispellable and is cumulative with itself."
@@ -42,12 +55,21 @@
 @3011 = "Hold creature of '%arg3%' in ids file '%arg2%.ids' for %arg1% round(s)."
 
 
+//Damage subspells.
+@4000 = "Vampiric"
+@4001 = "Living creatures are drained of %arg1% point(s)."
+
+
 //Strings for display string [139] opcodes: relay info to the user.
 @10000 = "Paralyzed"
 @10001 = "Entangled"
 @10002 = "Stunned"
 @10003 = "Unconscious"
-@10004 = "Blinded"
+@10004 = "Blind"
+@10005 = "Panic"
+@10006 = "Slowed"
+@10007 = "Confused"
+@10008 = "Sleep"
 
 @10101 = "Poisoned"
 @10102 = "Bleeding"
