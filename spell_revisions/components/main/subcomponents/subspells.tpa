@@ -2,10 +2,12 @@
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
 
 //Initialization.
 LAF get_component_resources_dir RET resources = dir END
-LAF get_component_tra_dir RET tra = dir END
 
 
 //Install subspells.

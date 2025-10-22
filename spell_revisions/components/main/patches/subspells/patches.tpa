@@ -1,6 +1,7 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/encoders.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/ids.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/opcodes.tpa"
 
 
 //Description patches.
@@ -147,7 +148,12 @@ END
 
 DEFINE_PATCH_FUNCTION hold_creature STR_VAR arg1 = "" arg2 = "" arg3 = "" BEGIN
     //Sanitize arguments.
-    LPF get_id_from_ids STR_VAR ids = "%arg2%" value = "%arg3%" RET id = id END
+    LPF get_ids_file_id STR_VAR file = "%arg2%" RET file_id = id END
+    PATCH_IF (0 - 1 = file_id) BEGIN
+        PATCH_FAIL "hold_creature: file '%arg2%.ids' not a valid ids file."
+    END
+
+    LPF get_id_from_ids STR_VAR ids = "%arg2%" value = "%arg3%" RET id END
     PATCH_IF (0 - 1 = id) BEGIN
         PATCH_FAIL "hold_creature: id '%arg3%' not present in ids file '%arg2%.ids'."
     END
@@ -156,14 +162,14 @@ DEFINE_PATCH_FUNCTION hold_creature STR_VAR arg1 = "" arg2 = "" arg3 = "" BEGIN
     LPF ALTER_EFFECT INT_VAR
         check_globals = 0
         match_opcode = 175                  //Hold creature.
-        parameter1 = ids_id
+        parameter1 = file_id
         parameter2 = id
     END
 
     LPF ALTER_EFFECT INT_VAR
         check_globals = 0
         match_opcode = 177                  //Use Eff.
-        parameter1 = ids_id
+        parameter1 = file_id
         parameter2 = id
     END
 

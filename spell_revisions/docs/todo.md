@@ -304,7 +304,7 @@ note(s):
 
 Naming of aux resources used literal, statically defined name with no override. The implication is that only "top level" resources used by spells use spell.ids name anchoring.
 
-* Summons: missing dire wolf cre in summons table (dlmelee script).
+* Summons: missing dire wolf cre in summons table (dlmelee script). The table row is found somewhere in the backups.
 
 * Should elementals be General monsters? The greater version (at least) have General as gianthumanoid, which is important for some spells like knockback, the animal buffs that have been extended to monsters, etc. The same for shambling mounds. More generally, we need a pass over the General categorization.
 
