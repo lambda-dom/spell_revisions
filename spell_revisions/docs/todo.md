@@ -325,3 +325,11 @@ Naming of aux resources used literal, statically defined name with no override. 
 ## H. 2. Spells.
 
 * Bat swarm: must be targeted better, as currently it only filters for animals. Bats' race is no_race.
+
+# I. Subspells.
+
+* Is IMP correct for entangle immunity? Do not think it is...
+
+* Divide charm in two subtypes: humanoid with elf and half-elf resistances and no creture type and generic, non-humanoid with no elf resistances but with given creature type.
+
+* hold creature: remove uses of Use Eff [177] by filtering for (not ids = specified). This requires weidu_library support to retrieve the correct splprot entry.
