@@ -12,8 +12,23 @@
 @1030 = "Unconsciousness"
 @1031 = "Victim is knocked down unconscious for %arg1% round(s), awaking before the end of this period if it takes any damage. Incorporeal creatures like Elementals and non-living creatures are immune to the effect."
 
+@1040 = "Blind"
+@1041 = "Victim is blinded for %arg1% round(s)."
 
-//Duration and amount spells.
+@1050 = "Panic"
+@1051 = "Victim panics for %arg1% round(s). Undead and illusionary creatures are immune to fear."
+
+@1060 = "Slow"
+@1061 = "Victim is slowed for %arg1% round(s). Two instances of this same spell refresh."
+
+@1070 = "Confusion"
+@1071 = "Victim is confused for %arg1% round(s)."
+
+@1080 = "Sleep"
+@1081 = "Victim is afflicted with magical sleep for %arg1% round(s), awakening before the end of this period if it takes any damage. Dragons, incorporeal creatures like Elementals and non-living creatures are immune to the effect. Elves and Half-elves are especially resistant to magically-induced sleep."
+
+
+//Duration and amount/strength spells.
 @2000 = "Poisoning"
 @2001 = "Every %arg2% second(s) for %arg1% round(s), living creatures suffer 1 point of poison damage. This effect is not dispellable and is cumulative with itself."
 
@@ -29,14 +44,37 @@
 @2040 = "Drain Strength"
 @2041 = "Victim is weakened, losing %arg2% points of strenth for %arg1% round(s). Incorporeal creatures like Elementals and non-living creatures are immune to the effect. The effect is cumulative."
 
+@2050 = "Knockback"
+@2051 = "Victim is knocked back with a strength of %arg2%, suffering unconsciouness for %arg1% round(s). Creatures like dragons and giants are immune to knockback."
+
+//Duration, type and mode.
+@3000 = "Charm"
+@3001 = "Creature of general type '%arg2%' is charmed for %arg1% round(s) in mode '%arg3%'."
+
+@3010 = "Hold Creature"
+@3011 = "Hold creature of '%arg3%' in ids file '%arg2%.ids' for %arg1% round(s)."
+
+
+//Damage subspells.
+@4000 = "Vampiric"
+@4001 = "Living creatures are drained of %arg1% point(s)."
+
 
 //Strings for display string [139] opcodes: relay info to the user.
 @10000 = "Paralyzed"
 @10001 = "Entangled"
 @10002 = "Stunned"
 @10003 = "Unconscious"
+@10004 = "Blind"
+@10005 = "Panic"
+@10006 = "Slowed"
+@10007 = "Confused"
+@10008 = "Sleep"
 
 @10101 = "Poisoned"
 @10102 = "Bleeding"
 @10103 = "Splashed with acid"
 @10104 = "Enfeebled"
+
+@10201 = "Charmed"
+@10202 = "Held"

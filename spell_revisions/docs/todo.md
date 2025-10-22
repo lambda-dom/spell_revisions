@@ -271,6 +271,8 @@ note(s):
 
 * How to setup immunities to general effects like Entangle? The best way would be to use spell states, but we are lacking such as Entangle Immunity (but we do have Free Action, and that is already taken advantage of in standardized spell). Another option is to use sectypes, at least in the standardized effects; this is a little better now (but still not ideal), since we have decoupled subspells implementaion.
 
+* [From the forums](https://www.gibberlings3.net/forums/topic/40132-royalprotectors-item-pack-zs_itempack/), a comment by jmerry: "Any sort of temporary proficiency bonus can be made permanent if you level up while it's active and take another proficiency in it. Even more spectacularly, I think a temporary proficiency bonus becomes permanent if you dual-class with it active; if you cast Black Blade of Disaster and then dual, that character gets grand master in long swords permanently.". Sigh.
+
 # D. Projectiles.
 
 * disintegrate: missing spgreorb aux resource.
@@ -302,7 +304,7 @@ note(s):
 
 Naming of aux resources used literal, statically defined name with no override. The implication is that only "top level" resources used by spells use spell.ids name anchoring.
 
-* Summons: missing dire wolf cre in summons table (dlmelee script).
+* Summons: missing dire wolf cre in summons table (dlmelee script). The table row is found somewhere in the backups.
 
 * Should elementals be General monsters? The greater version (at least) have General as gianthumanoid, which is important for some spells like knockback, the animal buffs that have been extended to monsters, etc. The same for shambling mounds. More generally, we need a pass over the General categorization.
 
@@ -323,3 +325,13 @@ Naming of aux resources used literal, statically defined name with no override. 
 ## H. 2. Spells.
 
 * Bat swarm: must be targeted better, as currently it only filters for animals. Bats' race is no_race.
+
+# I. Subspells.
+
+* Is IMP correct for entangle immunity? Do not think it is...
+
+* Divide charm in two subtypes: humanoid with elf and half-elf resistances and no creture type and generic, non-humanoid with no elf resistances but with given creature type.
+
+* hold creature: remove uses of Use Eff [177] by filtering for (not ids = specified). This requires weidu_library support to retrieve the correct splprot entry.
+
+* slow: review concurrency; review interaction with sectypes.

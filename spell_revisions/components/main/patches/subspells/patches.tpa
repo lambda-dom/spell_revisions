@@ -1,5 +1,7 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/encoders.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/ids.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/opcodes.tpa"
 
 
 //Description patches.
@@ -22,6 +24,7 @@ DEFINE_PATCH_FUNCTION patch_duration STR_VAR arg1 = "" arg2 = "*" arg3 = "*" BEG
 
     //Patch duration.
     LPF ALTER_SPELL_EFFECT INT_VAR
+        check_globals = 0
         duration_high = 6 * arg1
     END
 END
@@ -32,6 +35,7 @@ DEFINE_PATCH_FUNCTION poisoning STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGIN
 
     //Patch amount.
     LPF ALTER_SPELL_EFFECT INT_VAR
+        check_globals = 0
         match_opcode = 25                   //Poison.
         parameter1 = arg2
     END
@@ -46,6 +50,7 @@ DEFINE_PATCH_FUNCTION splash_damage STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGIN
 
     //Patch amount.
     LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
         match_opcode = 12                   //Damage.
         parameter1 = arg2
     END
@@ -57,6 +62,7 @@ DEFINE_PATCH_FUNCTION splash_damage STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGIN
     PATCH_IF (arg1 >= 2) BEGIN
         FOR (i = 1; i < arg1; ++i) BEGIN
             LPF CLONE_EFFECT INT_VAR
+                check_globals = 0
                 match_opcode = 12           //Damage.
                 match_timing = 4            //Delayed.
                 //(duration - i) to get ordered opcodes.
@@ -74,6 +80,7 @@ DEFINE_PATCH_FUNCTION level_drain STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGIN
 
     //Patch amount.
     LPF ALTER_SPELL_EFFECT INT_VAR
+        check_globals = 0
         match_opcode = 216                  //Level drain.
         parameter1 = arg2
     END
@@ -88,10 +95,108 @@ DEFINE_PATCH_FUNCTION drain_strength STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGI
 
     //Patch amount.
     LPF ALTER_SPELL_EFFECT INT_VAR
+        check_globals = 0
         match_opcode = 44                   //Strength penalty.
         parameter1 = 0 - arg2
     END
 
     //Patch duration.
     LPF patch_duration STR_VAR arg1 = "%arg1%" END
+END
+
+DEFINE_PATCH_FUNCTION charm STR_VAR arg1 = "" arg2 = "" arg3 = "" BEGIN
+    //Sanitize arguments.
+    PATCH_IF NOT (IS_AN_INT arg3) BEGIN
+        PATCH_FAIL "charm: mode '%arg3%' is not an integer."
+    END
+
+    PATCH_IF NOT (((0 <= arg3) AND (arg3 <= 5)) OR ((1000 <= arg3) AND (arg3 <= 1005))) BEGIN
+        PATCH_FAIL "charm: mode '%arg3%' must be in the [0,5] or [1000, 1005] range."
+    END
+
+    LPF get_id_from_ids STR_VAR ids = "general" value = "%arg2%" RET type = id END
+    PATCH_IF (0 - 1 = type) BEGIN
+        PATCH_FAIL "charm: type '%arg2%' is not present in 'general.ids'."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        match_opcode = 5
+        parameter1 = type
+        parameter2 = arg3
+    END
+
+    //Patch duration.
+    LPF patch_duration STR_VAR arg1 = "%arg1%" END
+END
+
+DEFINE_PATCH_FUNCTION knockback STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGIN
+    //Sanitize arguments.
+    LPF encode_strictly_positive STR_VAR value = "%arg2%" RET arg2 = return END
+
+    //Number conversions.
+    amount = arg2
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        check_globals = 0
+        match_opcode = 235                  //Wing buffet.
+        parameter1 = amount
+    END
+
+    //Patch duration.
+    LPF patch_duration STR_VAR arg1 = "%arg1%" END
+END
+
+DEFINE_PATCH_FUNCTION hold_creature STR_VAR arg1 = "" arg2 = "" arg3 = "" BEGIN
+    //Sanitize arguments.
+    LPF get_ids_file_id STR_VAR file = "%arg2%" RET file_id = id END
+    PATCH_IF (0 - 1 = file_id) BEGIN
+        PATCH_FAIL "hold_creature: file '%arg2%.ids' not a valid ids file."
+    END
+
+    LPF get_id_from_ids STR_VAR ids = "%arg2%" value = "%arg3%" RET id END
+    PATCH_IF (0 - 1 = id) BEGIN
+        PATCH_FAIL "hold_creature: id '%arg3%' not present in ids file '%arg2%.ids'."
+    END
+
+    //Patch hold and Use Eff's.
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        match_opcode = 175                  //Hold creature.
+        parameter1 = file_id
+        parameter2 = id
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        match_opcode = 177                  //Use Eff.
+        parameter1 = file_id
+        parameter2 = id
+    END
+
+    //Patch duration.
+    LPF patch_duration STR_VAR arg1 = "%arg1%" END
+END
+
+DEFINE_PATCH_FUNCTION patch_damage STR_VAR arg1 = "" arg2 = "" arg3 = "" BEGIN
+    //Sanitize arguments.
+    LPF encode_positive STR_VAR value = "%arg1%" RET arg1 = return END
+    LPF encode_positive STR_VAR value = "%arg2%" RET arg2 = return END
+    LPF encode_positive STR_VAR value = "%arg3%" RET arg3 = return END
+
+    //Implicit number conversion.
+    amount = arg1
+    dicenumber = arg2
+    dicesize = arg3
+
+    PATCH_IF ((dicesize > 0) AND (dicenumber = 0)) OR ((dicesize = 0) AND (dicenumber > 0)) BEGIN
+        PATCH_FAIL "patch_damage: both dice number and dice size must be strictly positive if one is."
+    END
+
+    //Damage.
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        match_opcode = 12                   //Damage.
+        parameter1 = amount
+        dicenumber = dicenumber
+        dicesize = dicesize
+    END
 END
