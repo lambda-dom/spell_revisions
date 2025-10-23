@@ -22,6 +22,10 @@ LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 
+LAF load_table_references STR_VAR
+    tables = "vvcs"
+RET_ARRAY vvcs = references END
+
 LAF get_component_resources_dir RET resources = dir END
 LAF load_table_references STR_VAR
     tables = "3"
@@ -305,6 +309,15 @@ DEFINE_PATCH_FUNCTION cause_serious_wounds STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION storm_shield STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215                  //Play visual effect.
+    STR_VAR
+        resource = "storm_shield"
+        ext = "vvc"
+        match_resource = "vvc#res"
+        references = "vvcs"
+    END
+
     LPF get_sectype_id STR_VAR sectype = "insects" RET sectype_id = id END
     PATCH_IF (sectype_id = 0 - 1) BEGIN
         PATCH_FAIL "storm_shield: sectype 'insects' not found."

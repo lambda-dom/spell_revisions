@@ -44,6 +44,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Spike Growth: remove save from movement set for parity with entangle.
 
+* Storm shield: standardize projectiles using a PfM scheme.
+
+* Cause Serious Wounds: the icons may be incorrect, review.
+
 ## A. 4. Level 4.
 
 * Free Action: immunities are in but not curing them. Movement Rate 2 immunity dropped as it should as it is used as a penalty in say, Strength of Stone.
