@@ -46,15 +46,17 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Storm shield: standardize projectiles using a PfM scheme.
 
-* Cause Serious Wounds: the icons may be incorrect, review.
+* Cause Serious Wounds: review the icons as they may be incorrect.
 
 ## A. 4. Level 4.
 
-* Free Action: immunities are in but not curing them. Movement Rate 2 immunity dropped as it should as it is used as a penalty in say, Strength of Stone.
+* Free Action: immunities are in but not curing them. Movement Rate 2 immunity dropped as it should as it is used as a penalty in Strength of Stone, for just one example.
 
 * Death Ward: standardize immunities to instant death and disintegrate.
 
-* Negative Plane Protection: description says abjuration, spell says transmutation: went with description. No sectype; vanila is combination.
+* Negative Plane Protection: No sectype; vanila is combination.
+
+* Poison: move poison damage to subspells (at least the duration one).
 
 ## A. 5. Level 5.
 

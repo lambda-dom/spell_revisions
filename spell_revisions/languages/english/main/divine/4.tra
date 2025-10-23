@@ -312,3 +312,12 @@ This spell enables the caster to imbue a creature with the ability to regenerate
 
 //Display strings.
 @10401 = "Healed"
+@10402 = "Protected from Poison"
+@10403 = "Dominated"
+@10404 = "Defensive Harmony"
+//Already exists at level 1.
+@10405 = "Protected from Evil"
+@10406 = "Death Ward"
+@10407 = "Poisoned"
+@10408 = "Negative Plane Protection"
+@10409 = "Cloak of Fear"

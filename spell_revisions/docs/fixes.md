@@ -59,6 +59,8 @@ note(s):
 
 * Free Action: tightened implementation of immunities.
 
+* Negative Plane Protection: description says abjuration, spell says transmutation: went with description.
+
 * Cause Critical Wounds: correct damage of level 10 header 36 -> 40.
 
 * Animal Summoning IV: leopard claws missing +1 damage bonus. Leopard: corrections to wis, chr, ac. Corrections to pounce (+2 bonus instead of +4).
