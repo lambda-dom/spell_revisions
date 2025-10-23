@@ -6,7 +6,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Armor of Faith: restore resistances of old spell.
 
-* Entangle: current implementation is incorrect as the decrease movement applies to all creatures, including those that should be immune. Solution: if we want to use the subspell (and we should), we may need another spell to decrease speed and then call the subspell or simply patch the subspell.
+* Detect Alignment: introduce alias CLERIC_DETECT_ALIGNMENT? Ot does it already exist?
 
 * Goodberry: add scaling, non-concurrent, slow regenerating effect of 1 hp for round. Scale instant healing a little better. Only castable outdoors and ooc.
 
@@ -335,3 +335,7 @@ Naming of aux resources used literal, statically defined name with no override. 
 * hold creature: remove uses of Use Eff [177] by filtering for (not ids = specified). This requires weidu_library support to retrieve the correct splprot entry.
 
 * slow: review concurrency; review interaction with sectypes.
+
+* slow movement rate ground: harmonize immunities with entangle.
+
+* vampiric damage: patch damage description.

@@ -47,6 +47,10 @@
 @2050 = "Knockback"
 @2051 = "Victim is knocked back with a strength of %arg2%, suffering unconsciouness for %arg1% round(s). Creatures like dragons and giants are immune to knockback."
 
+@2060 = "Slower"
+@2061 = "Victim's movement rate is set to %arg2% percentage for %arg1% round(s). Giant creatures like dragons, incorporeal creatures like Elementals and flying creatures like Wyverns are immune to slowing."
+
+
 //Duration, type and mode.
 @3000 = "Charm"
 @3001 = "Creature of general type '%arg2%' is charmed for %arg1% round(s) in mode '%arg3%'."
@@ -74,7 +78,9 @@
 @10101 = "Poisoned"
 @10102 = "Bleeding"
 @10103 = "Splashed with acid"
-@10104 = "Enfeebled"
+@10104 = "Reduced Strength"
+@10105 = "Knocked Back"
+@10106 = "Slowed"
 
 @10201 = "Charmed"
 @10202 = "Held"

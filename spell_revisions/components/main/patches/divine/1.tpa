@@ -48,7 +48,15 @@ DEFINE_PATCH_FUNCTION entangle STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
-        resource = "entangle_a"
+        resource = "entangle_slow_movement"
+        match_resource = "slmv#res"
+        references = "subspells"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "entangle_entangle"
         match_resource = "entg#res"
         references = "subspells"
     END

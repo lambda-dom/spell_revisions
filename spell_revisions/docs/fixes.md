@@ -12,6 +12,8 @@ Fixes to base SR, v4.19.
 
 * Detect Alignment: -> know alignment and fixed wrong level in the docs.
 
+* Entangle: area slow movement rate subject to same immunities as entangle proper.
+
 * Faerie Fire: Question: why the variable stuff?
 
 * Goodberry: power of opcodes in items 2 -> 0, resist_dispel 3 -> 0.

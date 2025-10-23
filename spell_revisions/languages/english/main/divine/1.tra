@@ -304,6 +304,7 @@ Casting a Goodberry spell creates 5 magical berries that the caster can carry wi
 //Level 1.
 @10101 = "Blessed"
 @10102 = "Healed"
+
 @10103 = "Protected from Evil"
 @10104 = "Strength of Stone"
 @10105 = "Regenerating"
