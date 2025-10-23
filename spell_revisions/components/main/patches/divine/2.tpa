@@ -165,17 +165,17 @@ DEFINE_PATCH_FUNCTION know_opponent STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION cure_moderate_wounds STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION regenerate_moderate_wounds STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
-        tra_ref = 10206
-        match_opcode = 240                  //Remove portrait icon.
+        tra_ref = 10209
+        match_opcode = 142                  //Display portrait icon.
     END
 END
 
-DEFINE_PATCH_FUNCTION regenerate_moderate_wounds STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION cure_moderate_wounds STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
-        tra_ref = 10207
-        match_opcode = 142                  //Display portrait icon.
+        tra_ref = 10210
+        match_opcode = 240                  //Remove portrait icon.
     END
 END
 

@@ -296,6 +296,5 @@ Scent: detect invisible creatures within 10 feet"
 @10206 = "Protected from the Elements"
 @10207 = "Silenced"
 @10208 = "Draw upon Holy Might"
-
-@10206 = "Healed"
-@10207 = "Regenerating"
+@10209 = "Regenerating"
+@10210 = "Healed"
