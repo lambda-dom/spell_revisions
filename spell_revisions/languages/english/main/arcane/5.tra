@@ -202,6 +202,7 @@ Saving Throw: None
 
 This spell creates an immobile, faintly shimmering magical sphere around the caster that cannot be penetrated by non-magical weapons; all such weapons are harmlessly deflected (missile weapons strike the sphere, then immediately fall to the ground). This does not include weapons that are blessed or enchanted. The effect lasts for the duration of the spell or until dispelled."
 
+//spwi512:protection from electricity, moved to level 4
 //breach:spwi513
 @5130 = "Breach"
 @5131 = "Breach
@@ -273,6 +274,7 @@ Immune to hold, poison, polymorph, sleep and stun effects
 Fire Resistance 100%
 Slashing, Crushing, Piercing and Missile Resistance 20%"
 
+//spwi517:protection from acid, moved to level 4
 //phantom_blade:spwi518
 @5180 = "Phantom Blade"
 @5181 = "Phantom Blade

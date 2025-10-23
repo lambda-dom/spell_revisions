@@ -291,6 +291,7 @@ Saving Throw: None
 
 When a Protection from Fire spell is cast, the recipient receives complete protection from fire-based attacks, whether magical or non-magical in origin. 100% of the damage from attacks like fiery dragon breath will be absorbed, and the target creature will become completely immune to the effects of spells such as Burning Hands, Fireball, Flame Strike, and Fire Storm. Multiple castings of this spell are not cumulative."
 
+//Moved from level 3.
 @5520 = "Protection from Cold"
 @5521 = "Protection from Cold
 Level: 5
@@ -356,3 +357,16 @@ Area of Effect: 30' radius
 Saving Throw: None
 
 When this spell is cast, the caster causes all friendly animals and monsters within range to become tougher, stronger and more tenacious. The alteration grants +2 bonus to attack rolls, damage rolls, armor class and saving throws. It also increases the recipient's hit points by 50%, and these bonus hit points are lost first when the recipient takes damage. Multiple castings of this spell are not cumulative."
+
+@5570 = "Protection from Elemental Energy"
+@5571 = "Protection from Elemental Energy
+Level: 4
+School: Abjuration
+Sphere: Elemental, Protection
+Range: Touch
+Duration: 1 turn/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, the recipient receives complete protection from one damage type: acid, cold, fire, or lightning. 100% of the damage from the selected source of energy will be absorbed, and the target creature will become completely immune to the effects of spells based on that element. Multiple castings of this spell are not cumulative, but each time a different damage type can be selected."
