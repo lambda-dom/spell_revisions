@@ -289,8 +289,10 @@ Scent: detect invisible creatures within 10 feet"
 
 //Strings for display string [139] opcodes.
 @10201 = "Aid"
-@10202 = "Chant"
-@10203 = "Evil Chant"
+@10202 = "Barkskin"
+@10203 = "Chant"
+@10204 = "Evil Chant"
+
 @10204 = "Held"
 @10205 = "Silenced"
 @10206 = "Healed"

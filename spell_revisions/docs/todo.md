@@ -24,7 +24,13 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## A. 2. Level 2.
 
+* Aid: (technical) play visual opcode duration 6 -> 5 seconds to escape high duration patching side-effects. Make it fixed duration like other buffs?
+
 * Chant: have good chant nullify bad chant and vice versa.
+
+* Charm: fix: have to use a third subspell that is tasked with casting the two subspells.
+
+* Find Traps: is subspells projectile correct?
 
 ## A. 3. Level 3.
 

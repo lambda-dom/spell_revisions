@@ -89,7 +89,7 @@ DEFINE_PATCH_FUNCTION shillelagh STR_VAR destination = "*" BEGIN
         STR_VAR
             resource = "shillelagh_%i%"
             ext = "itm"
-            match_resource = "item#res"
+            match_resource = "itm%i%#res"
             references = "items"
         END
     END
@@ -147,7 +147,7 @@ DEFINE_PATCH_FUNCTION sunscorch STR_VAR destination = "*" BEGIN
         STR_VAR
             resource = "sunscorch_%i%"
             ext = "eff"
-            match_resource = "damg#res"
+            match_resource = "dmg%i%#res"
             references = "effects"
         END
     END
@@ -250,7 +250,7 @@ DEFINE_PATCH_FUNCTION goodberry BEGIN
         STR_VAR
             resource = "goodberry_%i%"
             ext = "itm"
-            match_resource = ""
+            match_resource = "itm%i%#res"
             references = "items"
         END
     END
