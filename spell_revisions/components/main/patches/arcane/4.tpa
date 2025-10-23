@@ -221,7 +221,7 @@ DEFINE_PATCH_FUNCTION protection_elemental_energy STR_VAR destination = "*" BEGI
     LPF patch_resource_reference INT_VAR
         match_opcode = 214                  //Select spell.
     STR_VAR
-        resource = "protection_elemental_energy"
+        resource = "protection_elemental_energy_wizard"
         match_resource = "tabl#res"
         references = "tables"
     END

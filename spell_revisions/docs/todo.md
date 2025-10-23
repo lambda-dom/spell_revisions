@@ -62,9 +62,13 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Cure Mortal Wounds: Implement immunity for non-living and extra-planar or delete from description?
 
+* Flamestrike: has can target invis flag. Recheck when doing the flags patch.
+
+* Raise Dead: review spell removals.
+
 * True Seeing: there is a protection from the cloak of mirroring -- drop it if needed. Aux spell only removes illusion school spells up to level 2; remove illusionary protections of all levels? Missing protection against shadow door.
 
-* Chaotic Commands: standardize immunities (probably will need append_block support from weidu_library).
+* Chaotic Commands: standardize immunities via blocks library.
 
 * Cause and Cure Mortal Wounds: extend scaling to level 15?
 
@@ -76,7 +80,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Protection from Fire: missing protections (e. g. aux flame arrow).
 
-* Elemental protection: do the same dance as with wizard's protection from elemental energy.
+* Protection from Electricity: missing spell protections?
 
 * Mass Regenerate: currently non-stacking. SR adds non-concurrent stacking, but is it needed?
 
