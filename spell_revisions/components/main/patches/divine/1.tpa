@@ -1,6 +1,7 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
@@ -155,7 +156,7 @@ DEFINE_PATCH_FUNCTION cause_light_wounds BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 111                  //Create Weapon.
     STR_VAR
-        resource = "sunscorch_blind"
+        resource = "cause_light_wounds"
         ext = "itm"
         match_resource = "item#res"
         references = "items"
@@ -225,7 +226,7 @@ DEFINE_PATCH_FUNCTION animal_summoning_1 BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 177                  //Use Eff.
     STR_VAR
-        resource = "sunscorch_blind"
+        resource = "summon_bat"
         ext = "eff"
         match_resource = "summ#res"
         references = "effects"

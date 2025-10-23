@@ -169,8 +169,8 @@ Saving Throw: Spell negates
 
 This spell causes a feeling of doom to overwhelm the target. For the duration of the spell, the target receives a -2 penalty to attack rolls, damage rolls, and saving throws unless a save vs. spell is made. The creature has a saving throw penalty of -1 (to save against this spell) for every two extra levels of the caster, to a maximum of -4 at 9th level. Multiple castings of this spell are not cumulative."
 
-//non-existent:sppr114; CLERIC_ANIMAL_FRIENDSHIP in spell.ids
-//non-existent:sppr115; CLERIC_ENDURE_HEAT_COLD in spell.ids
+//non-existent:sppr114, CLERIC_ANIMAL_FRIENDSHIP in spell.ids
+//non-existent:sppr115, CLERIC_ENDURE_HEAT_COLD in spell.ids
 
 //New spells.
 //New divine spells.
