@@ -106,7 +106,7 @@ END
 
 DEFINE_PATCH_FUNCTION hold_person STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
-        tra_ref = 10204
+        tra_ref = 10205
         match_opcode = 142                  //Display icon.
     END
 END
@@ -129,13 +129,12 @@ END
 
 DEFINE_PATCH_FUNCTION silence STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
-        tra_ref = 10205
+        tra_ref = 10207
         match_opcode = 142                  //Display icon.
     END
 END
 
 DEFINE_PATCH_FUNCTION spiritual_hammer STR_VAR destination = "*" BEGIN
-
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
         LPF patch_resource_reference INT_VAR
