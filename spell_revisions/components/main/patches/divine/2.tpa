@@ -135,6 +135,7 @@ DEFINE_PATCH_FUNCTION silence STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION spiritual_hammer STR_VAR destination = "*" BEGIN
+
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
         LPF patch_resource_reference INT_VAR
@@ -142,6 +143,7 @@ DEFINE_PATCH_FUNCTION spiritual_hammer STR_VAR destination = "*" BEGIN
             header = i - 1
         STR_VAR
             resource = "spiritual_hammer_%i%"
+            ext = "itm"
             match_resource = "item#res"
             references = "items"
         END

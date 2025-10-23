@@ -6,7 +6,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Armor of Faith: restore resistances of old spell.
 
-* Detect Alignment: introduce alias CLERIC_DETECT_ALIGNMENT? Or does it already exist?
+* Detect Alignment: introduce alias CLERIC_DETECT_ALIGNMENT? Already have CLERIC_KNOW_ALIGNMENT.
 
 * Goodberry: add scaling, non-concurrent, slow regenerating effect of 1 hp for round. Scale instant healing a little better. Only castable outdoors and ooc.
 
