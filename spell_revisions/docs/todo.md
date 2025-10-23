@@ -22,6 +22,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Animal Summoning I: Bat has no meaningful race and class.
 
+* Sunscorch: nerf damage dice sides to d4.
+
 ## A. 2. Level 2.
 
 * Aid: (technical) play visual opcode duration 6 -> 5 seconds to escape high duration patching side-effects. Make it fixed duration like other buffs?

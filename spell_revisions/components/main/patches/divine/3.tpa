@@ -1,6 +1,7 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/sectypes.tpa"
 
@@ -296,7 +297,7 @@ DEFINE_PATCH_FUNCTION cause_serious_wounds STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 111                  //Create Weapon.
     STR_VAR
-        resource = "contagion_a"
+        resource = "cause_serious_wounds"
         ext = "itm"
         match_resource = "item#res"
         references = "items"
