@@ -308,5 +308,4 @@ Casting a Goodberry spell creates 5 magical berries that the caster can carry wi
 @10105 = "Armor of Faith"
 @10106 = "Doomed"
 @10107 = "Strength of Stone"
-
-@10105 = "Regenerating"
+@10108 = "Regenerating"
