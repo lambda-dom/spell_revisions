@@ -98,7 +98,7 @@ END
 DEFINE_PATCH_FUNCTION strength_stone STR_VAR destination = "*" BEGIN
     //Patch strings.
     LPF clone_to_display_string INT_VAR
-        tra_ref = 10104
+        tra_ref = 10107
         match_opcode = 142                  //Display portrait icon.
     END
 
@@ -147,7 +147,7 @@ DEFINE_PATCH_FUNCTION sunscorch STR_VAR destination = "*" BEGIN
         STR_VAR
             resource = "sunscorch_%i%"
             ext = "eff"
-            match_resource = "blnd#res"
+            match_resource = "damg#res"
             references = "effects"
         END
     END

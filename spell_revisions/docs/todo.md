@@ -10,7 +10,11 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Goodberry: add scaling, non-concurrent, slow regenerating effect of 1 hp for round. Scale instant healing a little better. Only castable outdoors and ooc.
 
-* Magical Stone: do the same dart treatment as fire seeds.
+* Magical Stone: do the same dart treatment as fire seeds. Override original item.
+
+* Resist Fear: use blocks library to implement immunity to fear, anchoring it to the Play Sound opcode in delayed mode (may need weidu_library support). The already existing block misses set spell state (RESIST_FEAR) opcode and, optionally, a display portrait opcode.
+
+* Strength of Stone: factor out immunity to knockback into a block of its own.
 
 ## A. 2. Level 2.
 
@@ -26,7 +30,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## A. 4. Level 4.
 
-* Free Action: immunities are in but not curing them. Movement Rate 2 immunity dropped.
+* Free Action: immunities are in but not curing them. Movement Rate 2 immunity dropped as it should as it is used as a penalty in say, Strength of Stone.
 
 * Death Ward: standardize immunities to instant death and disintegrate.
 
