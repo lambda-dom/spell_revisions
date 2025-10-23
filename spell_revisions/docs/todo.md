@@ -40,6 +40,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Dispel Magic: only the description is in.
 
+* Invisibility Purge: review immunities on the subspell.
+
 * Spike Growth: remove save from movement set for parity with entangle.
 
 ## A. 4. Level 4.
