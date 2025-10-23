@@ -1,7 +1,7 @@
 2DA V1.0
 *
                                 install subspell                arg1    arg2        arg3        school      sectype         over    destination
-entangle_slow_movement          1       slow_movement_ground    1       *           *           transmuter  disabling       0       #suf:a:CLERIC_ENTANGLE
+entangle_slow_movement          1       slow_movement_ground    1       50          *           transmuter  disabling       0       #suf:a:CLERIC_ENTANGLE
 entangle_entangle               1       entangle                1       *           *           transmuter  disabling       0       #suf:b:CLERIC_ENTANGLE
 sunscorch_blind                 1       blind                   1       *           *           invoker     offensivedamage 0       #suf:a:CLERIC_SUNSCORCH
 charm_person_animal_humanoid    1       charm                   10      humanoid    0           enchanter   disabling       0       #suf:a:CLERIC_CHARM_PERSON
