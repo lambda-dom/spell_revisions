@@ -32,7 +32,7 @@ Fixes to base SR, v4.19.
 
 * Flame Blade: Fix: give scimitar prof to flame blades and added modify profs opcode. Corrected spepd factor to take into account enchantment.
 
-* Spiritual Hammer: Fix: give hammer prof to spiritual hammers and added modify profs opcode. Move spell to item block (this was only needed in oBG because of the next item); drop undocumented golem immunity to magic damage. Dropped aux spell that also has spurious (?) sectype. Fix weight 2 -> 0.
+* Spiritual Hammer: Fix: give hammer prof to spiritual hammers and added modify profs opcode. Move spell to item block (this was only needed in oBG because of the next item); drop undocumented golem immunity to magic damage. Dropped aux spell that also has spurious (?) sectype. Fix weight 2 -> 0. Fix range description.
 
 * Gust of Wind (druid version): mention in description that it dispels insect swarms in the area.
 
