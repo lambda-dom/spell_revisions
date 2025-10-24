@@ -141,6 +141,10 @@ note(s):
 
 * Chill Touch: Removed undispellable flag from item.
 
+* Dimension Jump: correct range in description.
+
+* Know Alignment: casting speed 2 -> 1 per level 1 spell.
+
 ## B. 2. Level 2.
 
 * Ghoul Touch: fix description to mention that paralyze lasts for 3 rounds only. Sectype (of main spell) to `offensivedamage` for consistency with similar spells. Removed undispellable flag from item.
