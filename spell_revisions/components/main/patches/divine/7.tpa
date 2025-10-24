@@ -9,6 +9,10 @@ LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
+LAF load_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
 LAF get_component_resources_dir RET resources = dir END
 LAF load_table_references STR_VAR
     tables = "7"
