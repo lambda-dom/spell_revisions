@@ -354,6 +354,7 @@ HP 8, AC 10, THAC0 19, Saving Throws 13/17/15/13/17
 @10102 = "Protected from petrification"
 @10103 = "Protected from evil"
 @10104 = "Shielded"
+@10105 = "True Strike"
 
-//Not used yet: sleep on creatures with dice > caster level.
+//Not used yet: sleep on creatures with dice > caster level. Note: inclined not to use it.
 @10201 = "Spell Ineffective"

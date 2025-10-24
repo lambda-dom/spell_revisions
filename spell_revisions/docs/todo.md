@@ -128,13 +128,17 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 1. Level 1.
 
+* Grease: use subspells for movement reduction and grease proper. Increase aoe of projectile? See what SRR has done.
+
 * Find Familiar: yet to implement.
 
-* Grease: follow implementation of Entangle? Use a sleep subspell? Increase aoe of projectile -- see SRR.
+* Sleep: display "ineffective spell" for creatures with dice > caster level. Note: actually I am inclined to leave this out.
 
-* Sleep: display "ineffective spell" for creatures with dice > caster level.
+* Chill Touch: improve strength penalty to -4 and add protection to spell to avoid killing by strength draining.
 
 * Spook: True Seeing makes one immune to Spook and this is handled in the True Seeing spell. Better to add a TRUE_SIGHT state to splstate.ids, set it via Set Spell State [328] in True Seeing and then use the usual shenanigan in Spook (e. g. 318) to make True Seeing nullify it. This spell state is apparently missing and is being set via proficiencies, but these are not detected via 318 and related opcodes (or at least I do not know how).
+
+* Obscuring mist: move visual range penalty to subspell. Turn protection from spell -> remove effects by resource.
 
 ## B. 2. Level 2.
 
@@ -267,6 +271,10 @@ Not just things to (still) do but also proposed changes to spells.
 * weidu_library stuff: replacing spell symbols both in replaces and assigning to slot holes are slow operations.
 
 * weidu_library stuff: damage types in damages.ids, item flags in cres in invitem.ids, item flags in itemflag.ids (the latter does not have the undispellable flag).
+
+* weidu_library stuff: subspells could use extra fields for name, description and patch. The problem is that this, in the current implementation, requires passing extra tra and tpa files. One possible solution is, once the implementation of subspells stabilize, to provide an extra call using the standard implementation but now being able to pass the needed extra tra and tpa.
+
+* Spell fist attacks: they are hopelessly unusable so what can be done to make them more enticing? It charges work on them this could add to the number of attacks to make them more enticing. On the other hand is this even worth it?
 
 * Cure line of spells: mention in description that it also cures intoxication.
 
