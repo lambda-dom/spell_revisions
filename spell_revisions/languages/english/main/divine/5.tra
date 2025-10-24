@@ -370,3 +370,9 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 When this spell is cast, the recipient receives complete protection from one damage type: acid, cold, fire, or lightning. 100% of the damage from the selected source of energy will be absorbed, and the target creature will become completely immune to the effects of spells based on that element. Multiple castings of this spell are not cumulative, but each time a different damage type can be selected."
+
+
+//Display strings.
+@10501 = "Champion's Strength"
+@10502 = "Righteous Magic"
+@10503 = "Repulsion"

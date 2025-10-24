@@ -64,7 +64,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Flamestrike: has can target invis flag. Recheck when doing the flags patch.
 
-* Raise Dead: review spell removals.
+* Raise Dead: removes shapechange spells; review for completeness and implement a PfM scheme to list them.
 
 * True Seeing: there is a protection from the cloak of mirroring -- drop it if needed. Aux spell only removes illusion school spells up to level 2; remove illusionary protections of all levels? Missing protection against shadow door.
 
@@ -72,7 +72,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Cause and Cure Mortal Wounds: extend scaling to level 15?
 
-* Greater Command: move sleep to subspell.
+* Greater Command: move sleep to subspell. Also, does not the recursive implementation imply that that it could go on for longer than 1 turn? Yes, so we have to unroll the recursion and put a bound to it.
 
 * Protection from Acid: add protection to Vitriolic Sphere or not needed?
 
