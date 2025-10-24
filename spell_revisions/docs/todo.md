@@ -94,6 +94,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Fire Seeds: mention in description that they are used as darts.
 
+* Sol's Searing Orb: move (splash) fire damage to a subspell.
+
 ## A. 7. Level 7.
 
 * Summon Shambling Mound: review the constrict spell: especially target vs. point casting and entangle implementation.
@@ -301,7 +303,7 @@ note(s):
 
 * How to setup immunities to general effects like Entangle? The best way would be to use spell states, but we are lacking such as Entangle Immunity (but we do have Free Action, and that is already taken advantage of in standardized spell). Another option is to use sectypes, at least in the standardized effects; this is a little better now (but still not ideal), since we have decoupled subspells implementaion.
 
-* [From the forums](https://www.gibberlings3.net/forums/topic/40132-royalprotectors-item-pack-zs_itempack/), a comment by jmerry: "Any sort of temporary proficiency bonus can be made permanent if you level up while it's active and take another proficiency in it. Even more spectacularly, I think a temporary proficiency bonus becomes permanent if you dual-class with it active; if you cast Black Blade of Disaster and then dual, that character gets grand master in long swords permanently.". Sigh.
+* [From the forums](https://www.gibberlings3.net/forums/topic/40132-royalprotectors-item-pack-zs_itempack/), a comment by jmerry: "Any sort of temporary proficiency bonus can be made permanent if you level up while it's active and take another proficiency in it. Even more spectacularly, I think a temporary proficiency bonus becomes permanent if you dual-class with it active; if you cast Black Blade of Disaster and then dual, that character gets grand master in long swords permanently.". Sigh. Given this, just add the bonuses that the corresponding proficiencies would add? One could even read them from the externalized table.
 
 # D. Projectiles.
 
