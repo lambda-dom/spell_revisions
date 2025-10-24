@@ -6,15 +6,33 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Armor of Faith: restore resistances of old spell.
 
-* Entangle: current implementation is incorrect as the decrease movement applies to all creatures, including those that should be immune. Solution: if we want to use the subspell (and we should), we may need another spell to decrease speed and then call the subspell or simply patch the subspell.
+* Detect Alignment: introduce alias CLERIC_DETECT_ALIGNMENT? Already have CLERIC_KNOW_ALIGNMENT.
 
 * Goodberry: add scaling, non-concurrent, slow regenerating effect of 1 hp for round. Scale instant healing a little better. Only castable outdoors and ooc.
 
-* Magical Stone: do the same dart treatment as fire seeds.
+* Magical Stone: do the same dart treatment as fire seeds. Override original item.
+
+* Resist Fear: use blocks library to implement immunity to fear, anchoring it to the Play Sound opcode in delayed mode (may need weidu_library support). The already existing block misses set spell state (RESIST_FEAR) opcode (needs weidu_library support to inline spell state values) and, optionally, a display portrait opcode.
+
+* Strength of Stone: factor out immunity to knockback into a block of its own.
+
+* Faerie Fire: what is the local variable stuff for?
+
+* Obscuring mist: move blind-like part to a subspell.
+
+* Animal Summoning I: Bat has no meaningful race and class.
+
+* Sunscorch: nerf damage dice sides to d4.
 
 ## A. 2. Level 2.
 
+* Aid: (technical) play visual opcode duration 6 -> 5 seconds to escape high duration patching side-effects. Make it fixed duration like other buffs?
+
 * Chant: have good chant nullify bad chant and vice versa.
+
+* Charm: fix: have to use a third subspell that is tasked with casting the two subspells.
+
+* Find Traps: is subspells projectile correct?
 
 ## A. 3. Level 3.
 
@@ -22,27 +40,39 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Dispel Magic: only the description is in.
 
+* Invisibility Purge: review immunities on the subspell.
+
 * Spike Growth: remove save from movement set for parity with entangle.
+
+* Storm shield: standardize projectiles using a PfM scheme.
+
+* Cause Serious Wounds: review the icons as they may be incorrect.
 
 ## A. 4. Level 4.
 
-* Free Action: immunities are in but not curing them. Movement Rate 2 immunity dropped.
+* Free Action: immunities are in but not curing them. Movement Rate 2 immunity dropped as it should as it is used as a penalty in Strength of Stone, for just one example.
 
 * Death Ward: standardize immunities to instant death and disintegrate.
 
-* Negative Plane Protection: description says abjuration, spell says transmutation: went with description. No sectype; vanila is combination.
+* Negative Plane Protection: No sectype; vanila is combination.
+
+* Poison: move poison damage to subspells (at least the duration one).
 
 ## A. 5. Level 5.
 
 * Cure Mortal Wounds: Implement immunity for non-living and extra-planar or delete from description?
 
+* Flamestrike: has can target invis flag. Recheck when doing the flags patch.
+
+* Raise Dead: removes shapechange spells; review for completeness and implement a PfM scheme to list them.
+
 * True Seeing: there is a protection from the cloak of mirroring -- drop it if needed. Aux spell only removes illusion school spells up to level 2; remove illusionary protections of all levels? Missing protection against shadow door.
 
-* Chaotic Commands: standardize immunities (probably will need append_block support from weidu_library).
+* Chaotic Commands: standardize immunities via blocks library.
 
 * Cause and Cure Mortal Wounds: extend scaling to level 15?
 
-* Greater Command: move sleep to subspell.
+* Greater Command: move sleep to subspell. Also, does not the recursive implementation imply that that it could go on for longer than 1 turn? Yes, so we have to unroll the recursion and put a bound to it.
 
 * Protection from Acid: add protection to Vitriolic Sphere or not needed?
 
@@ -50,7 +80,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Protection from Fire: missing protections (e. g. aux flame arrow).
 
-* Elemental protection: do the same dance as with wizard's protection from elemental energy.
+* Protection from Electricity: missing spell protections?
 
 * Mass Regenerate: currently non-stacking. SR adds non-concurrent stacking, but is it needed?
 
@@ -64,15 +94,23 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Fire Seeds: mention in description that they are used as darts.
 
+* Sol's Searing Orb: move (splash) fire damage to a subspell.
+
 ## A. 7. Level 7.
+
+* Shield of the Archons: patch spell deflection ocpodes with self#res to guarantee removal.
 
 * Summon Shambling Mound: review the constrict spell: especially target vs. point casting and entangle implementation.
 
 * Summon Death Knight: only description in. Implemented in the arcane level.
 
-* Chaos: offload effects to subspells and fix off-by-one probability errors.
+* Fire Storm: what is the spell protection doing? Protection for fire elementals can be replaced by immunity resource conditional on fire immunity.
 
-* Holy Word: offload effects to subspells.
+* Sunray: is there a better way to play the holy pillar animation than casting an empty spell?
+
+* Sphere of Chaos: offload effects to subspells and fix off-by-one probability errors.
+
+* Holy Word: offload effects to subspells; not yet done.
 
 * Regeneration: handle concurrent stacking.
 
@@ -271,7 +309,9 @@ note(s):
 
 * How to setup immunities to general effects like Entangle? The best way would be to use spell states, but we are lacking such as Entangle Immunity (but we do have Free Action, and that is already taken advantage of in standardized spell). Another option is to use sectypes, at least in the standardized effects; this is a little better now (but still not ideal), since we have decoupled subspells implementaion.
 
-* [From the forums](https://www.gibberlings3.net/forums/topic/40132-royalprotectors-item-pack-zs_itempack/), a comment by jmerry: "Any sort of temporary proficiency bonus can be made permanent if you level up while it's active and take another proficiency in it. Even more spectacularly, I think a temporary proficiency bonus becomes permanent if you dual-class with it active; if you cast Black Blade of Disaster and then dual, that character gets grand master in long swords permanently.". Sigh.
+* [From the forums](https://www.gibberlings3.net/forums/topic/40132-royalprotectors-item-pack-zs_itempack/), a comment by jmerry: "Any sort of temporary proficiency bonus can be made permanent if you level up while it's active and take another proficiency in it. Even more spectacularly, I think a temporary proficiency bonus becomes permanent if you dual-class with it active; if you cast Black Blade of Disaster and then dual, that character gets grand master in long swords permanently.". Sigh. Given this, just add the bonuses that the corresponding proficiencies would add? One could even read them from the externalized table.
+
+* Uses of Use Eff [177] with the cast spell opcode can be replaced with Apply Effects List [326].
 
 # D. Projectiles.
 
@@ -335,3 +375,7 @@ Naming of aux resources used literal, statically defined name with no override. 
 * hold creature: remove uses of Use Eff [177] by filtering for (not ids = specified). This requires weidu_library support to retrieve the correct splprot entry.
 
 * slow: review concurrency; review interaction with sectypes.
+
+* slow movement rate ground: harmonize immunities with entangle.
+
+* vampiric damage: patch damage description.

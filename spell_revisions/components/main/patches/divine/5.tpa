@@ -19,6 +19,10 @@ LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 
+LAF load_table_references STR_VAR
+    tables = "tables"
+RET_ARRAY tables = references END
+
 LAF get_component_resources_dir RET resources = dir END
 LAF load_table_references STR_VAR
     tables = "5"
@@ -306,3 +310,12 @@ DEFINE_PATCH_FUNCTION animal_growth STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION protection_elemental_energy STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 214                  //Select spell.
+    STR_VAR
+        resource = "protection_elemental_energy_cleric"
+        match_resource = "tabl#res"
+        references = "tables"
+    END
+END

@@ -168,7 +168,7 @@ When this spell is cast upon a poisoned individual, it greatly slows the effects
 Level: 2
 School: Evocation
 Sphere: Combat
-Range: Medium
+Range: Personal
 Duration: 2 turns
 Casting Time: 5
 Area of Effect: Special
@@ -191,7 +191,6 @@ Saving Throw: None
 When this spell is cast, the priest's body shudders and glows with a shimmering aura as it becomes a vessel for the power of his god. When he does this, his strength, dexterity, and constitution scores are raised by 1 point for every 3 levels of the caster, to a maximum of 3 points at level 9. This spell is not cumulative with itself or with other similar spells."
 
 //sppr215:non-existent, CLERIC_RESIST_COLD in spell.ids
-
 //New spells.
 @2510 = "Cure Moderate Wounds"
 @2511 = "Cure Moderate Wounds
@@ -290,9 +289,12 @@ Scent: detect invisible creatures within 10 feet"
 
 //Strings for display string [139] opcodes.
 @10201 = "Aid"
-@10202 = "Chant"
-@10203 = "Evil Chant"
-@10204 = "Held"
-@10205 = "Silenced"
-@10206 = "Healed"
-@10207 = "Regenerating"
+@10202 = "Barkskin"
+@10203 = "Chant"
+@10204 = "Evil Chant"
+@10205 = "Held"
+@10206 = "Protected from the Elements"
+@10207 = "Silenced"
+@10208 = "Draw upon Holy Might"
+@10209 = "Regenerating"
+@10210 = "Healed"

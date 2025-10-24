@@ -12,6 +12,8 @@ Fixes to base SR, v4.19.
 
 * Detect Alignment: -> know alignment and fixed wrong level in the docs.
 
+* Entangle: area slow movement rate subject to same immunities as entangle proper.
+
 * Faerie Fire: Question: why the variable stuff?
 
 * Goodberry: power of opcodes in items 2 -> 0, resist_dispel 3 -> 0.
@@ -30,7 +32,7 @@ Fixes to base SR, v4.19.
 
 * Flame Blade: Fix: give scimitar prof to flame blades and added modify profs opcode. Corrected spepd factor to take into account enchantment.
 
-* Spiritual Hammer: Fix: give hammer prof to spiritual hammers and added modify profs opcode. Move spell to item block (this was only needed in oBG because of the next item); drop undocumented golem immunity to magic damage. Dropped aux spell that also has spurious (?) sectype. Fix weight 2 -> 0.
+* Spiritual Hammer: Fix: give hammer prof to spiritual hammers and added modify profs opcode. Move spell to item block (this was only needed in oBG because of the next item); drop undocumented golem immunity to magic damage. Dropped aux spell that also has spurious (?) sectype. Fix weight 2 -> 0. Fix range description.
 
 * Gust of Wind (druid version): mention in description that it dispels insect swarms in the area.
 
@@ -56,6 +58,8 @@ note(s):
 ## A. 4. Level 4.
 
 * Free Action: tightened implementation of immunities.
+
+* Negative Plane Protection: description says abjuration, spell says transmutation: went with description.
 
 * Cause Critical Wounds: correct damage of level 10 header 36 -> 40.
 

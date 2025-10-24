@@ -9,6 +9,10 @@ LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
+LAF load_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
 LAF get_component_resources_dir RET resources = dir END
 LAF load_table_references STR_VAR
     tables = "7"
@@ -92,12 +96,23 @@ DEFINE_PATCH_FUNCTION sunray STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION greater_restoration STR_VAR destination = "*" BEGIN
-    LPF patch_resource_reference INT_VAR
+    //Resource may not exist at this point.
+    LPF get_array_element STR_VAR
+        array = "wizard_level3_spells"
+        key = "haste_winded"
+    RET resource = value END
+
+    //Sanitize.
+    PATCH_IF ("%resource%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "greater_restoration: reference 'haste_winded' not found in array 'wizard_level3_spells'."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
         match_opcode = 146                  //Cast spell.
     STR_VAR
-        resource = "haste_winded"
+        resource = "%resource%"
         match_resource = "wind#res"
-        references = "wizard_level3_spells"
     END
 END
 
@@ -144,4 +159,3 @@ DEFINE_PATCH_FUNCTION summon_death_knight STR_VAR destination = "*" BEGIN
         references = "effects"
     END
 END
-

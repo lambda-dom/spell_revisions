@@ -16,6 +16,31 @@ RET text BEGIN
     OUTER_TEXT_SPRINT text EVAL "%text%"
 END
 
+DEFINE_DIMORPHIC_FUNCTION encode_damage_arguments INT_VAR
+    description = 0
+STR_VAR
+    arg1 = ""
+    arg2 = ""
+    arg3 = ""
+RET text BEGIN
+    //Sanitize arguments.
+    LAF encode_positive STR_VAR value = "%arg1%" RET arg1 = return END
+    LAF encode_positive STR_VAR value = "%arg2%" RET arg2 = return END
+    LAF encode_positive STR_VAR value = "%arg3%" RET arg3 = return END
+
+    ACTION_IF NOT (arg2 = 0) BEGIN
+        OUTER_TEXT_SPRINT arg1 "%arg2%d%arg3% + %arg1%"
+    END
+
+    LAF encode_description_arguments INT_VAR
+        description = description
+    STR_VAR
+        arg1 = "%arg1%"
+        arg2 = "*"
+        arg3 = "*"
+    RET text END
+END
+
 
 //Spell patches.
 DEFINE_PATCH_FUNCTION patch_duration STR_VAR arg1 = "" arg2 = "*" arg3 = "*" BEGIN
@@ -104,6 +129,36 @@ DEFINE_PATCH_FUNCTION drain_strength STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGI
     LPF patch_duration STR_VAR arg1 = "%arg1%" END
 END
 
+DEFINE_PATCH_FUNCTION knockback STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGIN
+    //Sanitize arguments.
+    LPF encode_strictly_positive STR_VAR value = "%arg2%" RET arg2 = return END
+
+    //Number conversions.
+    amount = arg2
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        check_globals = 0
+        match_opcode = 235                  //Wing buffet.
+        parameter1 = amount
+    END
+
+    //Patch duration.
+    LPF patch_duration STR_VAR arg1 = "%arg1%" END
+END
+
+DEFINE_PATCH_FUNCTION slow_movement_ground STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGIN
+    //Sanitize arguments.
+    LPF encode_percentage STR_VAR value = "%arg2%" RET arg2 = return END
+
+    //Patch amount.
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        match_opcode = 126                  //Movement rate.
+        parameter1 = arg2
+    END
+
+    //Patch duration.
+    LPF patch_duration STR_VAR arg1 = "%arg1%" END
+END
+
 DEFINE_PATCH_FUNCTION charm STR_VAR arg1 = "" arg2 = "" arg3 = "" BEGIN
     //Sanitize arguments.
     PATCH_IF NOT (IS_AN_INT arg3) BEGIN
@@ -130,22 +185,6 @@ DEFINE_PATCH_FUNCTION charm STR_VAR arg1 = "" arg2 = "" arg3 = "" BEGIN
     LPF patch_duration STR_VAR arg1 = "%arg1%" END
 END
 
-DEFINE_PATCH_FUNCTION knockback STR_VAR arg1 = "" arg2 = "" arg3 = "*" BEGIN
-    //Sanitize arguments.
-    LPF encode_strictly_positive STR_VAR value = "%arg2%" RET arg2 = return END
-
-    //Number conversions.
-    amount = arg2
-    LPF ALTER_SPELL_EFFECT INT_VAR
-        check_globals = 0
-        match_opcode = 235                  //Wing buffet.
-        parameter1 = amount
-    END
-
-    //Patch duration.
-    LPF patch_duration STR_VAR arg1 = "%arg1%" END
-END
-
 DEFINE_PATCH_FUNCTION hold_creature STR_VAR arg1 = "" arg2 = "" arg3 = "" BEGIN
     //Sanitize arguments.
     LPF get_ids_file_id STR_VAR file = "%arg2%" RET file_id = id END
@@ -162,15 +201,15 @@ DEFINE_PATCH_FUNCTION hold_creature STR_VAR arg1 = "" arg2 = "" arg3 = "" BEGIN
     LPF ALTER_EFFECT INT_VAR
         check_globals = 0
         match_opcode = 175                  //Hold creature.
-        parameter1 = file_id
-        parameter2 = id
+        parameter1 = id
+        parameter2 = file_id
     END
 
     LPF ALTER_EFFECT INT_VAR
         check_globals = 0
         match_opcode = 177                  //Use Eff.
-        parameter1 = file_id
-        parameter2 = id
+        parameter1 = id
+        parameter2 = file_id
     END
 
     //Patch duration.

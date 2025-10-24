@@ -1,6 +1,7 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/references.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/sectypes.tpa"
 
@@ -20,6 +21,10 @@ RET_ARRAY items = references END
 LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
+
+LAF load_table_references STR_VAR
+    tables = "vvcs"
+RET_ARRAY vvcs = references END
 
 LAF get_component_resources_dir RET resources = dir END
 LAF load_table_references STR_VAR
@@ -238,7 +243,7 @@ END
 DEFINE_PATCH_FUNCTION cure_disease STR_VAR destination = "*" BEGIN
     LPF clone_to_display_string INT_VAR
         tra_ref = 10304
-        match_opcode = 240                  //Remove portrait icon.
+        match_opcode = 215                  //Play visual effect.
     END
 END
 
@@ -296,7 +301,7 @@ DEFINE_PATCH_FUNCTION cause_serious_wounds STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 111                  //Create Weapon.
     STR_VAR
-        resource = "contagion_a"
+        resource = "cause_serious_wounds"
         ext = "itm"
         match_resource = "item#res"
         references = "items"
@@ -304,6 +309,15 @@ DEFINE_PATCH_FUNCTION cause_serious_wounds STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION storm_shield STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215                  //Play visual effect.
+    STR_VAR
+        resource = "storm_shield"
+        ext = "vvc"
+        match_resource = "vvc#res"
+        references = "vvcs"
+    END
+
     LPF get_sectype_id STR_VAR sectype = "insects" RET sectype_id = id END
     PATCH_IF (sectype_id = 0 - 1) BEGIN
         PATCH_FAIL "storm_shield: sectype 'insects' not found."

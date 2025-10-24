@@ -169,8 +169,8 @@ Saving Throw: Spell negates
 
 This spell causes a feeling of doom to overwhelm the target. For the duration of the spell, the target receives a -2 penalty to attack rolls, damage rolls, and saving throws unless a save vs. spell is made. The creature has a saving throw penalty of -1 (to save against this spell) for every two extra levels of the caster, to a maximum of -4 at 9th level. Multiple castings of this spell are not cumulative."
 
-//non-existent:sppr114; CLERIC_ANIMAL_FRIENDSHIP in spell.ids
-//non-existent:sppr115; CLERIC_ENDURE_HEAT_COLD in spell.ids
+//non-existent:sppr114, CLERIC_ANIMAL_FRIENDSHIP in spell.ids
+//non-existent:sppr115, CLERIC_ENDURE_HEAT_COLD in spell.ids
 
 //New spells.
 //New divine spells.
@@ -301,9 +301,11 @@ Casting a Goodberry spell creates 5 magical berries that the caster can carry wi
 
 
 //Strings for display string [139] opcodes.
-//Level 1.
 @10101 = "Blessed"
 @10102 = "Healed"
 @10103 = "Protected from Evil"
-@10104 = "Strength of Stone"
-@10105 = "Regenerating"
+@10104 = "Resist Fear"
+@10105 = "Armor of Faith"
+@10106 = "Doomed"
+@10107 = "Strength of Stone"
+@10108 = "Regenerating"
