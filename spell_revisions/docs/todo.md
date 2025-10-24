@@ -98,13 +98,15 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## A. 7. Level 7.
 
+* Shield of the Archons: patch spell deflection ocpodes with self#res to guarantee removal.
+
 * Summon Shambling Mound: review the constrict spell: especially target vs. point casting and entangle implementation.
 
 * Summon Death Knight: only description in. Implemented in the arcane level.
 
 * Chaos: offload effects to subspells and fix off-by-one probability errors.
 
-* Holy Word: offload effects to subspells.
+* Holy Word: offload effects to subspells; not yet done.
 
 * Regeneration: handle concurrent stacking.
 
