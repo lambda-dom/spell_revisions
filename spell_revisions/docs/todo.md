@@ -156,7 +156,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Dispel Magic: only the description is in.
 
-* Remove magic: reinstate, with old icon but targeting everyone (that is remove magic becomes old dispel magic).
+* Remove magic: reinstate old dispel magic? See SRR.
 
 * Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles. Also used for physical mirror.
 
