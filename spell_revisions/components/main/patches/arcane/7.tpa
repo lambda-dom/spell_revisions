@@ -48,7 +48,7 @@ DEFINE_PATCH_FUNCTION summon_death_knight STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION prismatic_mantle STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION prismatic_mantle_a STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
@@ -203,7 +203,7 @@ DEFINE_PATCH_FUNCTION control_undead_a STR_VAR destination = "*" BEGIN
         match_opcode = 82                   //Set AI script.
     STR_VAR
         resource = "melee"
-        extension = "bcs"
+        ext = "bcs"
         match_resource = "ai#res"
         references = "scripts"
     END
