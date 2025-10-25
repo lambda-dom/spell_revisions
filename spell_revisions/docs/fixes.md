@@ -147,6 +147,8 @@ note(s):
 
 ## B. 2. Level 2.
 
+* Resist Fear: casting speed 2 for consistency.
+
 * Ghoul Touch: fix description to mention that paralyze lasts for 3 rounds only. Sectype (of main spell) to `offensivedamage` for consistency with similar spells. Removed undispellable flag from item.
 
 * Glitterdust: Question: why the variable stuff?

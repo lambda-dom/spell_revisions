@@ -74,7 +74,7 @@ END
 
 DEFINE_PATCH_FUNCTION ghoul_touch STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
-        match_opcode = 146                  //Cast spell.
+        match_opcode = 111                  //Create weapon.
     STR_VAR
         resource = "ghoul_touch"
         ext = "itm"
@@ -186,9 +186,9 @@ DEFINE_PATCH_FUNCTION sound_burst STR_VAR destination = "*" BEGIN
 
     LPF patch_resource_reference INT_VAR
         match_opcode = 215                  //Play visual effect.
-        ext = "vvc"
     STR_VAR
         resource = "sound_burst"
+        ext = "vvc"
         match_resource = "vvc#res"
         references = "vvcs"
     END
@@ -213,9 +213,9 @@ END
 DEFINE_PATCH_FUNCTION monster_summoning_2 BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 177                  //Use Eff.
-        ext = "eff"
     STR_VAR
         resource = "summon_green_slime"
+        ext = "eff"
         match_resource = "summ#res"
         references = "effects"
     END
