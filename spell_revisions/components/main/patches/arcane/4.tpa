@@ -147,6 +147,7 @@ DEFINE_PATCH_FUNCTION fire_shield STR_VAR destination = "*" BEGIN
     LPF CLONE_EFFECT INT_VAR
         verbose = 1
         match_opcode = 30                   //Fire resistance.
+        opcode = 205                        //Protection from spell type.
         parameter1 = 0
         parameter2 = sectype_id
     STR_VAR

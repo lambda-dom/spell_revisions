@@ -194,7 +194,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Polymorph other: aux resources do not seem to be used anywhere.
 
-* Enchant weapon: review exclusion flags on the items. Ability icons for spells should be borrowed from the items.
+* Enchant weapon: review exclusion flags on the items.
 
 * Monster Summoning IV: cre and script for phase spider unused.
 
