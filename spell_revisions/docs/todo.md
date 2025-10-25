@@ -196,6 +196,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Enchant weapon: review exclusion flags on the items.
 
+* Fire Shield: condense retal spells in one unique spell with level headers.
+
+* Teleport Field: color icons red?
+
 * Monster Summoning IV: cre and script for phase spider unused.
 
 * Wizard Eye: change from non-stacking to refreshing? Review creature.
@@ -212,11 +216,11 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Conjure (Lesser) Elemental: Add water elemental and consolidate all spells in one.
 
-* Spell Deflection: add display string.
+* Spell Deflection: add display string. See spell deflection note below.
 
 ## B. 6. Level 6.
 
-* Invisible Stalker: backstab x2 where exactly? *If* it can be added via class setting, class is already ranger so the kit field must be set to stalker. Only move silently is set to 120% as an invis effect is added through thje fists. What about hide in shadoes (set to 0 in the cre)?
+* Invisible Stalker: backstab x2 where exactly? *If* it can be added via class setting, class is already ranger so the kit field must be set to stalker. Only move silently is set to 120% as an invis effect is added through the fists. What about hide in shadows (set to 0 in the cre)?
 
 * Globe of Invulnerability: see Minor Globe of Invulnerability.
 
