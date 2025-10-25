@@ -161,6 +161,9 @@ monster_summoning_level_7_c     1       *       0       #suf:c:WIZARD_MONSTER_SU
 mind_blank_a                    1       *       0       #suf:a:WIZARD_MIND_BLANK
 mind_blank_b                    1       *       0       #suf:b:WIZARD_MIND_BLANK
 mind_blank_c                    1       *       0       #suf:c:WIZARD_MIND_BLANK
+moment_prescience_a             1       *       0       #afx:dl:a:WIZARD_MOMENT_OF_PRESCIENCE
+moment_prescience_b             1       *       0       #afx:dl:b:WIZARD_MOMENT_OF_PRESCIENCE
+moment_prescience_c             1       *       0       #afx:dl:c:WIZARD_MOMENT_OF_PRESCIENCE
 monster_summoning_level_8_a     1       *       0       #suf:a:WIZARD_MONSTER_SUMMONING_LEVEL_8
 monster_summoning_level_8_b     1       *       0       #suf:b:WIZARD_MONSTER_SUMMONING_LEVEL_8
 monster_summoning_level_8_c     1       *       0       #suf:c:WIZARD_MONSTER_SUMMONING_LEVEL_8
