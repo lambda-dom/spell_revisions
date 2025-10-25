@@ -232,6 +232,7 @@ DEFINE_PATCH_FUNCTION vitriolic_sphere STR_VAR destination = "*" BEGIN
         match_opcode = 215                  //Play visual effect.
     STR_VAR
         resource = "vitriolic_sphere"
+        ext = "vvc"
         match_resource = "vvc#res"
         references = "vvcs"
     END
