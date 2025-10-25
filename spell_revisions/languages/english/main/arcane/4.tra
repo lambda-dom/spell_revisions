@@ -443,3 +443,6 @@ When a Protection from Acid spell is cast, the recipient receives complete prote
 
 //Display strings.
 @10401 = "Saving Throws Lowered"
+@10402 = "Confused"
+@10403 = "Protected with a Minor Globe"
+@10404 = "Despair"

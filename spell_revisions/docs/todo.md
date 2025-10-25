@@ -178,11 +178,15 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 4. Level 4.
 
+* Ice Storm: move movement rate penalty to a subspell.
+
 * Blue Shield: reinstate it.
 
-* Mestil's Acid Shield: replaces cold shield but we are reinstating it. Spell itself is not in (and is in level 5).
+* Mestil's Acid Shield: replaces cold shield but we are reinstating it. Spell itself is not in (and is moved to level 5).
 
-* Minor Globe of Invulnerability: pass through area spells of level <= that must be protected against. Externalize like with PfM?
+* Minor Globe of Invulnerability: pass through area spells of level <= that must be protected against. Externalize as with PfM.
+
+* Emotion despair: protection from spell -> remove effects by resource? What did we decide on this on buffs / debuffs? On debuffs protection is better because the removal is conditional while the debuffs usually goes through a save or magic resistance.
 
 * Otiluke Resilient Sphere: only description is in.
 
