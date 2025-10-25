@@ -236,6 +236,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Monster Summon 6: review damage bonuses, especially on the wyvern as they are too much?
 
+* Acid Fog: move movement rate penalty to a subspell.
+
 * Stone to Flesh: not in yet.
 
 ## B. 7. Level 7.

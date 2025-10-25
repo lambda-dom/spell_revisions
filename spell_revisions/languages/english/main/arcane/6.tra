@@ -411,3 +411,11 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell is the reverse of Flesh to Stone and will return any creature that has been turned to stone back into flesh. All possessions on the creature likewise will return to normal. The effect is instantaneous and there is no saving throw or system shock check required."
+
+
+//Strings for display string [139] opcodes.
+@10601 = "Slowed"
+@10602 = "Protection From Magic Energy"
+@10603 = "Protection From Magical Weapons"
+@10604 = "Silenced"
+@10605 = "Hasted"
