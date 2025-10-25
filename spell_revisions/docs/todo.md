@@ -162,11 +162,15 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Haste: externalize haste effects so that winded can protect against them.
 
-* Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles. Also used for physical mirror.
+* Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles. Also used for physical mirror. Use references in first column (e. g. #lbl mostly, but can also use #lit) -- change the patch.
+
+* Slow: protection from spell -> remove effects by sectype (like Haste).
 
 * Skull Trap: has an extra protection for swords. Undocumented so dropped for now, but to be revisited.
 
-* Vampiric Touch: I am not sure the flags have been chosen correctly or even if they can be so chosen, and by this I mean: do damage per amount + dice, maybe capped by max hp of target. Absorb only up to maximum hp. Concurrency with other Vampiric Touches must also be addressed (e.g. spin106).
+* Vampiric Touch: I am not sure the flags have been chosen correctly or even if they can be so chosen, and by this I mean: do damage per amount + dice, maybe capped by max hp of target. Absorb only up to maximum hp. Immunity to source does not exist yet. Concurrency with other Vampiric Touches must also be addressed (e.g. spin106). Offload to a subspell?
+
+* Minor Spell Deflection: see note below on spell deflection opcodes.
 
 * Protection from Fire and Cold: not yet done as these are moved to level 4.
 
@@ -327,7 +331,7 @@ note(s):
 
 * Spell trap-like spells use a subspell to remove the resource when all the spell levels are removed -- resource mentioned in the spell deflection opcode. These should be overriden but this is the case only for spell trap.
 
-* How to setup immunities to general effects like Entangle? The best way would be to use spell states, but we are lacking such as Entangle Immunity (but we do have Free Action, and that is already taken advantage of in standardized spell). Another option is to use sectypes, at least in the standardized effects; this is a little better now (but still not ideal), since we have decoupled subspells implementaion.
+* How to setup immunities to general effects like Entangle? The best way would be to use spell states, but we are lacking such as Entangle Immunity (but we do have Free Action, and that is already taken advantage of in standardized spell). Another option is to use sectypes, at least in the standardized effects; this is a little better now (but still not ideal), since we have decoupled subspells implementation.
 
 * [From the forums](https://www.gibberlings3.net/forums/topic/40132-royalprotectors-item-pack-zs_itempack/), a comment by jmerry: "Any sort of temporary proficiency bonus can be made permanent if you level up while it's active and take another proficiency in it. Even more spectacularly, I think a temporary proficiency bonus becomes permanent if you dual-class with it active; if you cast Black Blade of Disaster and then dual, that character gets grand master in long swords permanently.". Sigh. Given this, just add the bonuses that the corresponding proficiencies would add? One could even read them from the externalized table.
 
