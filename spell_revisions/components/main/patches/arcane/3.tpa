@@ -159,9 +159,14 @@ END
 
 
 DEFINE_PATCH_FUNCTION haste_winded STR_VAR destination = "*" BEGIN
-    LPF get_spell_res STR_VAR spell = "WIZARD_IMPROVED_HASTE" RET res = resource END
-    PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+    LPF get_spell_res STR_VAR spell = "WIZARD_IMPROVED_HASTE" RET imp_haste = resource END
+    PATCH_IF ("%imp_haste%" STRING_EQUAL_CASE "*") BEGIN
         PATCH_FAIL "haste_winded: spell 'WIZARD_IMPROVED_HASTE' not found in 'spell.ids'."
+    END
+
+    LPF get_spell_res STR_VAR spell = "WIZARD_HASTE" RET haste = resource END
+    PATCH_IF ("%haste%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "haste_winded: spell 'WIZARD_HASTE' not found in 'spell.ids'."
     END
 
     LPF ALTER_EFFECT INT_VAR
@@ -169,7 +174,16 @@ DEFINE_PATCH_FUNCTION haste_winded STR_VAR destination = "*" BEGIN
         match_opcode = 206                  //Protection from spell.
     STR_VAR
         match_resource = "imph#res"
-        resource = "%res%"
+        resource = "%haste%"
+    END
+
+    LPF CLONE_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 206                  //Protection from spell.
+    STR_VAR
+        match_resource = "%haste%"
+        resource = "%imp_haste%"
+        insert = "below"
     END
 END
 

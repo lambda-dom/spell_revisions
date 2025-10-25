@@ -158,6 +158,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Remove magic: reinstate old dispel magic? See SRR.
 
+* Fireball: what is the global variable casting effect for?
+
+* Haste: externalize haste effects so that winded can protect against them.
+
 * Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles. Also used for physical mirror.
 
 * Skull Trap: has an extra protection for swords. Undocumented so dropped for now, but to be revisited.
