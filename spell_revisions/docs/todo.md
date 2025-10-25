@@ -214,9 +214,11 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Waves of Fatigue: add immunity for "non-living" (undead, elementals, constructs, etc.).
 
-* Dispelling Screen: the base spell makes no sense so have to implement the patching.
+* Dispelling Screen: the base spell makes no sense so have to implement the patching. The patching is not done, especially in Cast Spell on Condition [232] which is keyed on hit by anyone (for what?).
 
 * Conjure (Lesser) Elemental: Add water elemental and consolidate all spells in one.
+
+* Phantom Blade: lacks immunities for "inorganic beings", which I presume to be undead and constructs (at least).
 
 * Spell Deflection: add display string. See spell deflection note below.
 

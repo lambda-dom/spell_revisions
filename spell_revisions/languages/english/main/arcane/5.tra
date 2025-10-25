@@ -381,5 +381,10 @@ This spell creates an explosive burst of flame that detonates with a low roar an
 
 //Strings for display string [139] opcodes.
 @10501 = "Shielded from Magic Attacks"
-@10503 = "Held"
-@10502 = "Fatigued"
+@10502 = "Held"
+@10503 = "Fatigued"
+@10504 = "Feebleminded"
+@10505 = "Protected from Normal Weapons"
+@10506 = "Combat Protections Dispelled"
+@10507 = "Magic Resistance Lowered"
+@10508 = "Shielded from Magic Attacks"
