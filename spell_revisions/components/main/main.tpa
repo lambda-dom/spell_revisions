@@ -67,7 +67,7 @@ WITH_SCOPE BEGIN
 END
 
 WITH_SCOPE BEGIN
-    OUTER_FOR (i = 4; i <= 4; ++i) BEGIN
+    OUTER_FOR (i = 5; i <= 5; ++i) BEGIN
         LAF install_subcomponent STR_VAR
             subcomponent = "%root%/subcomponents/arcane/%i%.tpa"
         END
