@@ -242,6 +242,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 7. Level 7.
 
+* Greater Spell Deflection: spell deflection note.
+
 * Protection from the Elements: review protections against specific spells. Add refreshing?
 
 * Summon Death Knight: Add proficient with two-handed swords opcode. Systematize spell protections in the sword. Systematize fear aura. Missing resources (e. g. unholy fireball).

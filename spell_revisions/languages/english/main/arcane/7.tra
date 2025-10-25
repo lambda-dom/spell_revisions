@@ -396,3 +396,8 @@ Disease: creatures struck moves at half speed and suffer 1 point of damage per r
 Special Qualities:
 Immune to disease effects
 Slashing, Crushing and Piercing Resistance 5%; Missile Resistance 100%"
+
+
+//Strings for display string [139] opcodes.
+@10701 = "Protected by Spell Deflection"
+@10702 = "Protected From The Elements"
