@@ -323,3 +323,6 @@ Missile Resistance 90%"
 @10203 = "Mirror Imaged"
 @10204 = "Strength Extra Modification"
 @10205 = "Vocalized"
+@10206 = "Chaos Shield"
+//Already exists in divine spells.
+@10207 = "Protected from the Elements"

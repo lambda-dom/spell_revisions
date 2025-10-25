@@ -142,7 +142,15 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 2. Level 2.
 
-* Battering Ram: move unconsciousness from knockback to its own subspell? This would need weidu_library patching.
+* Know Opponent: protection from spell -> remove effects by resource.
+
+* Resist Fear: normalize immunity with blocks library.
+
+* Strength: fixed 10 turns duration?
+
+* Web: move movement rate decrease and web effect paralyze to their own subspells.
+
+* Ray of Enfeeblement: currently it is cumulative with itself. Will leave it that way but it is good to take notice.
 
 ## B. 3. Level 3.
 

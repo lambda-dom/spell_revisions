@@ -196,7 +196,14 @@ END
 
 DEFINE_PATCH_FUNCTION resist_elements STR_VAR destination = "*" BEGIN
     LPF get_spell_res STR_VAR spell = "WIZARD_RESIST_ELEMENTS" RET old = resource END
-    LPF get_spell_res STR_VAR spell = "CLERIC_RESIST_FIRE" RET new = resource END
+    PATCH_IF ("%old%" STRING_EQUAL_CASE "WIZARD_RESIST_ELEMENTS") BEGIN
+        PATCH_FAIL "resist_elements: spell 'WIZARD_RESIST_ELEMENTS' not found in 'spell.ids'."
+    END
+
+    LPF get_spell_res STR_VAR spell = "CLERIC_RESIST_ELEMENTS" RET new = resource END
+    PATCH_IF ("%old%" STRING_EQUAL_CASE "CLERIC_RESIST_ELEMENTS") BEGIN
+        PATCH_FAIL "resist_elements: spell 'CLERIC_RESIST_ELEMENTS' not found in 'spell.ids'."
+    END
 
     LPF CLONE_EFFECT INT_VAR
         check_globals = 0
