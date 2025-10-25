@@ -275,3 +275,7 @@ Confusing Gaze
 Special Qualities:
 Immune to confusion effects"
 
+
+//Strings for display string [139] opcodes.
+@10801 = "Protection from Energy"
+@10802 = "Combat Protections Dispelled"
