@@ -59,7 +59,7 @@ LAF get_component_root RET root = dir END
 
 //Install spells.
 WITH_SCOPE BEGIN
-    OUTER_FOR (i = 7; i <= 7; ++i) BEGIN
+    OUTER_FOR (i = 1; i <= 0; ++i) BEGIN
         LAF install_subcomponent STR_VAR
             subcomponent = "%root%/subcomponents/divine/%i%.tpa"
         END
@@ -67,7 +67,7 @@ WITH_SCOPE BEGIN
 END
 
 WITH_SCOPE BEGIN
-    OUTER_FOR (i = 1; i <= 0; ++i) BEGIN
+    OUTER_FOR (i = 9; i <= 9; ++i) BEGIN
         LAF install_subcomponent STR_VAR
             subcomponent = "%root%/subcomponents/arcane/%i%.tpa"
         END

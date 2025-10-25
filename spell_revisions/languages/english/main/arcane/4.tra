@@ -14,7 +14,7 @@ Saving Throw: Spell negates
 
 This spell causes confusion in one or more creatures within the area, creating indecision and the inability to take effective action. All hostile creatures within the area of effect are allowed a saving throw vs. spell at -2. Those successfully saving are unaffected by the spell. Those who fail their saving throws will either go berserk, stand confused, or wander about for the duration of the spell. Wandering creatures move as far from the caster as possible, according to their most typical mode of movement (characters walk, fish swim, bats fly, etc.). Any confused creature that is attacked perceives the attacker as an enemy and acts according to its basic nature."
 
-//spwi402:dimension door, unused
+//spwi402:dimension door, unused, role played by dimension jump at level 1
 //spwi403:frost shield, currently unused but will be reinstated
 //ice_storm:spwi404
 @4040 = "Ice Storm"
@@ -443,3 +443,6 @@ When a Protection from Acid spell is cast, the recipient receives complete prote
 
 //Display strings.
 @10401 = "Saving Throws Lowered"
+@10402 = "Confused"
+@10403 = "Protected with a Minor Globe"
+@10404 = "Despair"

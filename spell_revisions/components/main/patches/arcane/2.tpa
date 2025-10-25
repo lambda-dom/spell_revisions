@@ -74,7 +74,7 @@ END
 
 DEFINE_PATCH_FUNCTION ghoul_touch STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
-        match_opcode = 146                  //Cast spell.
+        match_opcode = 111                  //Create weapon.
     STR_VAR
         resource = "ghoul_touch"
         ext = "itm"
@@ -186,9 +186,9 @@ DEFINE_PATCH_FUNCTION sound_burst STR_VAR destination = "*" BEGIN
 
     LPF patch_resource_reference INT_VAR
         match_opcode = 215                  //Play visual effect.
-        ext = "vvc"
     STR_VAR
         resource = "sound_burst"
+        ext = "vvc"
         match_resource = "vvc#res"
         references = "vvcs"
     END
@@ -196,7 +196,14 @@ END
 
 DEFINE_PATCH_FUNCTION resist_elements STR_VAR destination = "*" BEGIN
     LPF get_spell_res STR_VAR spell = "WIZARD_RESIST_ELEMENTS" RET old = resource END
-    LPF get_spell_res STR_VAR spell = "CLERIC_RESIST_FIRE" RET new = resource END
+    PATCH_IF ("%old%" STRING_EQUAL_CASE "WIZARD_RESIST_ELEMENTS") BEGIN
+        PATCH_FAIL "resist_elements: spell 'WIZARD_RESIST_ELEMENTS' not found in 'spell.ids'."
+    END
+
+    LPF get_spell_res STR_VAR spell = "CLERIC_RESIST_ELEMENTS" RET new = resource END
+    PATCH_IF ("%old%" STRING_EQUAL_CASE "CLERIC_RESIST_ELEMENTS") BEGIN
+        PATCH_FAIL "resist_elements: spell 'CLERIC_RESIST_ELEMENTS' not found in 'spell.ids'."
+    END
 
     LPF CLONE_EFFECT INT_VAR
         check_globals = 0
@@ -213,9 +220,9 @@ END
 DEFINE_PATCH_FUNCTION monster_summoning_2 BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 177                  //Use Eff.
-        ext = "eff"
     STR_VAR
         resource = "summon_green_slime"
+        ext = "eff"
         match_resource = "summ#res"
         references = "effects"
     END

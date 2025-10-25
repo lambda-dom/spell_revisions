@@ -101,7 +101,7 @@ Level: 2
 School: Abjuration
 Range: Long
 Duration: 5 turns
-Casting Time: 1
+Casting Time: 2
 Area of Effect: 30' radius
 Saving Throw: None
 
@@ -323,3 +323,6 @@ Missile Resistance 90%"
 @10203 = "Mirror Imaged"
 @10204 = "Strength Extra Modification"
 @10205 = "Vocalized"
+@10206 = "Chaos Shield"
+//Already exists in divine spells.
+@10207 = "Protected from the Elements"

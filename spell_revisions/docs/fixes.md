@@ -141,7 +141,13 @@ note(s):
 
 * Chill Touch: Removed undispellable flag from item.
 
+* Dimension Jump: correct range in description.
+
+* Know Alignment: casting speed 2 -> 1 per level 1 spell.
+
 ## B. 2. Level 2.
+
+* Resist Fear: casting speed 2 for consistency.
 
 * Ghoul Touch: fix description to mention that paralyze lasts for 3 rounds only. Sectype (of main spell) to `offensivedamage` for consistency with similar spells. Removed undispellable flag from item.
 
@@ -185,7 +191,7 @@ note(s):
 
 * Simbul Spell Matrix: out of combat only.
 
-* Monster Summoning IV: Correct description on the amount of poison damage (3 -> 2) and damage bonuses on both stings. Correct probability of poison (20 -> 100) on sword spider sting. Standardized imlpementation of immunities. Giant Spider: corrections to ac, thac0 and saves. Sword spider: corrections to thac0 and saves.
+* Monster Summoning IV: Correct description on the amount of poison damage (3 -> 2) and damage bonuses on both stings. Correct probability of poison (20 -> 100) on sword spider sting. Standardized implementation of immunities. Giant Spider: corrections to ac, thac0 and saves. Sword spider: corrections to thac0 and saves.
 
 * Fire Shield: sectype offensivedamage -> specificprotections.
 
@@ -197,7 +203,11 @@ note(s):
 
 * Summon Shadow: Shadow: added immunities to fear and fatigue; standardized immunities. Missing save on opcode in shadow touch. Corrections to thac0. Wraith: added immunities to fear and fatigue; standardized immunities and dropped blindness immunity. Standardized level drain. Corrections to thac0, ac. Range of spell long -> medium.
 
+* Cloudkill: fixed levels on the slay opcodes.
+
 * Monster Summoning V: correct ridiculous damage bonus 9 -> 3, 1. Ogre Berserker: corrections to thac0, hps. Ogre Mage: corrections to int, wis, chr, hps, ac, thac0, saves.
+
+* Hold Monster: use subspells?
 
 * Dispelling Screen: undocumented bonus of mr (patched out later?).
 

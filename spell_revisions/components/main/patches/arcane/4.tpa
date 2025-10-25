@@ -52,6 +52,17 @@ DEFINE_PATCH_FUNCTION greater_malison STR_VAR destination = "*" BEGIN
     END
 END
 
+DEFINE_PATCH_FUNCTION spirit_armor STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215                  //Play visual effect.
+    STR_VAR
+        resource = "spirit_armor"
+        ext = "vvc"
+        match_resource = "vvc#res"
+        references = "vvcs"
+    END
+END
+
 DEFINE_PATCH_FUNCTION polymorph_other STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 111                  //Create weapon.
@@ -136,6 +147,7 @@ DEFINE_PATCH_FUNCTION fire_shield STR_VAR destination = "*" BEGIN
     LPF CLONE_EFFECT INT_VAR
         verbose = 1
         match_opcode = 30                   //Fire resistance.
+        opcode = 205                        //Protection from spell type.
         parameter1 = 0
         parameter2 = sectype_id
     STR_VAR
@@ -232,6 +244,7 @@ DEFINE_PATCH_FUNCTION vitriolic_sphere STR_VAR destination = "*" BEGIN
         match_opcode = 215                  //Play visual effect.
     STR_VAR
         resource = "vitriolic_sphere"
+        ext = "vvc"
         match_resource = "vvc#res"
         references = "vvcs"
     END

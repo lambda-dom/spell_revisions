@@ -128,29 +128,49 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 1. Level 1.
 
+* Grease: use subspells for movement reduction and grease proper. Increase aoe of projectile? See what SRR has done.
+
 * Find Familiar: yet to implement.
 
-* Grease: follow implementation of Entangle? Use a sleep subspell? Increase aoe of projectile -- see SRR.
+* Sleep: display "ineffective spell" for creatures with dice > caster level. Note: actually I am inclined to leave this out.
 
-* Sleep: display "ineffective spell" for creatures with dice > caster level.
+* Chill Touch: improve strength penalty to -4 and add protection to spell to avoid killing by strength draining.
 
 * Spook: True Seeing makes one immune to Spook and this is handled in the True Seeing spell. Better to add a TRUE_SIGHT state to splstate.ids, set it via Set Spell State [328] in True Seeing and then use the usual shenanigan in Spook (e. g. 318) to make True Seeing nullify it. This spell state is apparently missing and is being set via proficiencies, but these are not detected via 318 and related opcodes (or at least I do not know how).
 
+* Obscuring mist: move visual range penalty to subspell. Turn protection from spell -> remove effects by resource.
+
 ## B. 2. Level 2.
 
-* Battering Ram: move unconsciousness from knockback to its own subspell? This would need weidu_library patching.
+* Know Opponent: protection from spell -> remove effects by resource.
+
+* Resist Fear: normalize immunity with blocks library.
+
+* Strength: fixed 10 turns duration?
+
+* Web: move movement rate decrease and web effect paralyze to their own subspells.
+
+* Ray of Enfeeblement: currently it is cumulative with itself. Will leave it that way but it is good to take notice.
 
 ## B. 3. Level 3.
 
 * Dispel Magic: only the description is in.
 
-* Remove magic: reinstate, with old icon but targeting everyone (that is remove magic becomes old dispel magic).
+* Remove magic: reinstate old dispel magic? See SRR.
 
-* Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles. Also used for physical mirror.
+* Fireball: what is the global variable casting effect for?
+
+* Haste: externalize haste effects so that winded can protect against them.
+
+* Protection from Missiles: Externalize the missiles table (e. g. copy it to weidu_external and offer functions as a modder resource to use it). Needs a pass over missing projectiles. Also used for physical mirror. Use references in first column (e. g. #lbl mostly, but can also use #lit) -- change the patch.
+
+* Slow: protection from spell -> remove effects by sectype (like Haste).
 
 * Skull Trap: has an extra protection for swords. Undocumented so dropped for now, but to be revisited.
 
-* Vampiric Touch: I am not sure the flags have been chosen correctly or even if they can be so chosen, and by this I mean: do damage per amount + dice, maybe capped by max hp of target. Absorb only up to maximum hp. Concurrency with other Vampiric Touches must also be addressed (e.g. spin106).
+* Vampiric Touch: I am not sure the flags have been chosen correctly or even if they can be so chosen, and by this I mean: do damage per amount + dice, maybe capped by max hp of target. Absorb only up to maximum hp. Immunity to source does not exist yet. Concurrency with other Vampiric Touches must also be addressed (e.g. spin106). Offload to a subspell?
+
+* Minor Spell Deflection: see note below on spell deflection opcodes.
 
 * Protection from Fire and Cold: not yet done as these are moved to level 4.
 
@@ -158,11 +178,15 @@ Not just things to (still) do but also proposed changes to spells.
 
 ## B. 4. Level 4.
 
+* Ice Storm: move movement rate penalty to a subspell.
+
 * Blue Shield: reinstate it.
 
-* Mestil's Acid Shield: replaces cold shield but we are reinstating it. Spell itself is not in (and is in level 5).
+* Mestil's Acid Shield: replaces cold shield but we are reinstating it. Spell itself is not in (and is moved to level 5).
 
-* Minor Globe of Invulnerability: pass through area spells of level <= that must be protected against. Externalize like with PfM?
+* Minor Globe of Invulnerability: pass through area spells of level <= that must be protected against. Externalize as with PfM.
+
+* Emotion despair: protection from spell -> remove effects by resource? What did we decide on this on buffs / debuffs? On debuffs protection is better because the removal is conditional while the debuffs usually goes through a save or magic resistance.
 
 * Otiluke Resilient Sphere: only description is in.
 
@@ -172,6 +196,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Enchant weapon: review exclusion flags on the items.
 
+* Fire Shield: condense retal spells in one unique spell with level headers.
+
+* Teleport Field: color icons red?
+
 * Monster Summoning IV: cre and script for phase spider unused.
 
 * Wizard Eye: change from non-stacking to refreshing? Review creature.
@@ -180,19 +208,23 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Monster Summon 5: Ogre Mage casts haste not slow which he does not have; does not use invis at will which is not memorized anyway.
 
-* Shadow Door: add a True Seeing state so that we can put immunity to the spell in the spell itself (see Spook above).
+* Shadow Door: add a True Seeing state so that we can put immunity to the spell in the spell itself (see Spook above). Put a sectype on the aux spell so we can defend against it.
+
+* Domination: missing immunities (and elf resistances)? Or is it considered not a charm?
 
 * Waves of Fatigue: add immunity for "non-living" (undead, elementals, constructs, etc.).
 
-* Dispelling Screen: the base spell makes no sense so have to implement the patching.
+* Dispelling Screen: the base spell makes no sense so have to implement the patching. The patching is not done, especially in Cast Spell on Condition [232] which is keyed on hit by anyone (for what?).
 
 * Conjure (Lesser) Elemental: Add water elemental and consolidate all spells in one.
 
-* Spell Deflection: add display string.
+* Phantom Blade: lacks immunities for "inorganic beings", which I presume to be undead and constructs (at least).
+
+* Spell Deflection: add display string. See spell deflection note below.
 
 ## B. 6. Level 6.
 
-* Invisible Stalker: backstab x2 where exactly? *If* it can be added via class setting, class is already ranger so the kit field must be set to stalker. Only move silently is set to 120% as an invis effect is added through thje fists. What about hide in shadoes (set to 0 in the cre)?
+* Invisible Stalker: backstab x2 where exactly? *If* it can be added via class setting, class is already ranger so the kit field must be set to stalker. Only move silently is set to 120% as an invis effect is added through the fists. What about hide in shadows (set to 0 in the cre)?
 
 * Globe of Invulnerability: see Minor Globe of Invulnerability.
 
@@ -204,9 +236,13 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Monster Summon 6: review damage bonuses, especially on the wyvern as they are too much?
 
+* Acid Fog: move movement rate penalty to a subspell.
+
 * Stone to Flesh: not in yet.
 
 ## B. 7. Level 7.
+
+* Greater Spell Deflection: spell deflection note.
 
 * Protection from the Elements: review protections against specific spells. Add refreshing?
 
@@ -268,6 +304,10 @@ Not just things to (still) do but also proposed changes to spells.
 
 * weidu_library stuff: damage types in damages.ids, item flags in cres in invitem.ids, item flags in itemflag.ids (the latter does not have the undispellable flag).
 
+* weidu_library stuff: subspells could use extra fields for name, description and patch. The problem is that this, in the current implementation, requires passing extra tra and tpa files. One possible solution is, once the implementation of subspells stabilize, to provide an extra call using the standard implementation but now being able to pass the needed extra tra and tpa.
+
+* Spell fist attacks: they are hopelessly unusable so what can be done to make them more enticing? It charges work on them this could add to the number of attacks to make them more enticing. On the other hand is this even worth it?
+
 * Cure line of spells: mention in description that it also cures intoxication.
 
 * Regenerate line of spells: handle inter-spell concurrency. The idea is that higher level remove and block lower level.
@@ -307,7 +347,7 @@ note(s):
 
 * Spell trap-like spells use a subspell to remove the resource when all the spell levels are removed -- resource mentioned in the spell deflection opcode. These should be overriden but this is the case only for spell trap.
 
-* How to setup immunities to general effects like Entangle? The best way would be to use spell states, but we are lacking such as Entangle Immunity (but we do have Free Action, and that is already taken advantage of in standardized spell). Another option is to use sectypes, at least in the standardized effects; this is a little better now (but still not ideal), since we have decoupled subspells implementaion.
+* How to setup immunities to general effects like Entangle? The best way would be to use spell states, but we are lacking such as Entangle Immunity (but we do have Free Action, and that is already taken advantage of in standardized spell). Another option is to use sectypes, at least in the standardized effects; this is a little better now (but still not ideal), since we have decoupled subspells implementation.
 
 * [From the forums](https://www.gibberlings3.net/forums/topic/40132-royalprotectors-item-pack-zs_itempack/), a comment by jmerry: "Any sort of temporary proficiency bonus can be made permanent if you level up while it's active and take another proficiency in it. Even more spectacularly, I think a temporary proficiency bonus becomes permanent if you dual-class with it active; if you cast Black Blade of Disaster and then dual, that character gets grand master in long swords permanently.". Sigh. Given this, just add the bonuses that the corresponding proficiencies would add? One could even read them from the externalized table.
 

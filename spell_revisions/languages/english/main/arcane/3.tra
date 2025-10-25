@@ -313,7 +313,7 @@ Saving Throw: None
 
 This spell enables the wizard to summon small globes of fire (one for each level of experience of the caster), which, when thrown, burst upon impact and inflict 1d4 points of missile damage plus 2d4 points of fire damage to the creature struck. The wizard gains a +5 bonus to hit with the missiles, and each meteor is considered to be of +2 enchantment to determine what it can hit. The wizard may discharge up to five missiles per round."
 
-//dispel_magic:spwi326
+//remove_magic:spwi326
 
 //New spells.
 @3500 = "Icelance"
@@ -327,3 +327,15 @@ Area of Effect: 1 creature
 Saving Throw: Paralyzation partial
 
 When this spell is cast, a sharp spear of ice impales the target, inflicting 5d6 points of damage. The target must make a save vs. paralyzation or be held for three rounds."
+
+
+//Strings for display string [139] opcodes.
+@10301 = "Clairvoyance"
+@10302 = "Dispel Effects"
+@10303 = "Hasted"
+@10304 = "Held"
+@10305 = "Non-detected"
+@10306 = "Slowed"
+@10307 = "Dire Charmed"
+@10308 = "Ghost Armor"
+@10309 = "Protected by Minor Spell Deflection"

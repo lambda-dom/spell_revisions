@@ -198,7 +198,7 @@ When a Power Word Silence spell is uttered, the target creature becomes unable m
 
 //improved_haste:spwi613
 @6130 = "Improved Haste"
-@6130 = "Improved Haste
+@6131 = "Improved Haste
 Level: 6
 School: Alteration
 Range: Long
@@ -349,7 +349,7 @@ Slashing, Piercing and Missile Resistance 40%"
 
 //animate_skeleton_warrior:spwi623, replaces Carrion Summon
 @6230 = "Animate Skeleton Warrior"
-@6230 = "Animate Skeleton Warrior
+@6231 = "Animate Skeleton Warrior
 Level: 6
 School: Necromancy
 Range: Long
@@ -411,3 +411,11 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell is the reverse of Flesh to Stone and will return any creature that has been turned to stone back into flesh. All possessions on the creature likewise will return to normal. The effect is instantaneous and there is no saving throw or system shock check required."
+
+
+//Strings for display string [139] opcodes.
+@10601 = "Slowed"
+@10602 = "Protection From Magic Energy"
+@10603 = "Protection From Magical Weapons"
+@10604 = "Silenced"
+@10605 = "Hasted"
