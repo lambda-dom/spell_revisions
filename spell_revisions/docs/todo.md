@@ -208,7 +208,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Monster Summon 5: Ogre Mage casts haste not slow which he does not have; does not use invis at will which is not memorized anyway.
 
-* Shadow Door: add a True Seeing state so that we can put immunity to the spell in the spell itself (see Spook above).
+* Shadow Door: add a True Seeing state so that we can put immunity to the spell in the spell itself (see Spook above). Put a sectype on the aux spell so we can defend against it.
+
+* Domination: missing immunities (and elf resistances)? Or is it considered not a charm?
 
 * Waves of Fatigue: add immunity for "non-living" (undead, elementals, constructs, etc.).
 

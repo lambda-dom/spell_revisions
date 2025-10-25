@@ -203,7 +203,11 @@ note(s):
 
 * Summon Shadow: Shadow: added immunities to fear and fatigue; standardized immunities. Missing save on opcode in shadow touch. Corrections to thac0. Wraith: added immunities to fear and fatigue; standardized immunities and dropped blindness immunity. Standardized level drain. Corrections to thac0, ac. Range of spell long -> medium.
 
+* Cloudkill: fixed levels on the slay opcodes.
+
 * Monster Summoning V: correct ridiculous damage bonus 9 -> 3, 1. Ogre Berserker: corrections to thac0, hps. Ogre Mage: corrections to int, wis, chr, hps, ac, thac0, saves.
+
+* Hold Monster: use subspells?
 
 * Dispelling Screen: undocumented bonus of mr (patched out later?).
 
