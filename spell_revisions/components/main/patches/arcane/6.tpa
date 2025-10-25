@@ -20,7 +20,7 @@ RET_ARRAY spells = references END
 LAF load_table_references STR_VAR
     tables = "5"
     dir = "%resources%/2da/divine"
-RET_ARRAY cleric_lvl5_spells = references END
+RET_ARRAY divine_lvl5_spells = references END
 
 
 //Patches.
@@ -79,12 +79,24 @@ END
 
 //Same patch as cleric's true seeing.
 DEFINE_PATCH_FUNCTION true_seeing STR_VAR destination = "*" BEGIN
-    LPF patch_resource_reference INT_VAR
+    //Get reference:
+    //Resource may not exist at this point in the install.
+    LPF get_array_element STR_VAR
+        array = "divine_lvl5_spells"
+        key = "true_seeing_a"
+    RET resource = value END
+
+    //Sanitize.
+    PATCH_IF ("%resource%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "true_seeing: reference 'true_seeing_a' not found in divine level 5 spells table."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
         match_opcode = 146                  //Cast spell.
     STR_VAR
-        resource = "true_seeing_a"
         match_resource = "mvis#res"
-        references = "cleric_lvl5_spells"
+        resource = "%resource%"
     END
 
     //Patch in protections from obscuring mist.

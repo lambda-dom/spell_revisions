@@ -198,7 +198,7 @@ When a Power Word Silence spell is uttered, the target creature becomes unable m
 
 //improved_haste:spwi613
 @6130 = "Improved Haste"
-@6130 = "Improved Haste
+@6131 = "Improved Haste
 Level: 6
 School: Alteration
 Range: Long
@@ -349,7 +349,7 @@ Slashing, Piercing and Missile Resistance 40%"
 
 //animate_skeleton_warrior:spwi623, replaces Carrion Summon
 @6230 = "Animate Skeleton Warrior"
-@6230 = "Animate Skeleton Warrior
+@6231 = "Animate Skeleton Warrior
 Level: 6
 School: Necromancy
 Range: Long
