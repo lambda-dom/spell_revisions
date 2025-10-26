@@ -18,7 +18,7 @@ Fixes to base SR, v4.19.
 
 * Goodberry: power of opcodes in items 2 -> 0, resist_dispel 3 -> 0.
 
-* Sunscorch: change damage dice sides to d4.
+* Sunscorch: change damage dice sides to d4: all (most?) divine damage spells use d4; magic missile uses d4; it has extra damage against undead *and* a powerful side effect.
 
 ## A. 2. Level 2.
 
@@ -174,6 +174,8 @@ note(s):
 * Clairvoyance: correction of power in saves opcode.
 
 * Non-detection: protection from spell type divinationattack.
+
+* Melf's meteors: description says evocation school, spell says conjuration. Going with description for now.
 
 * Protection from Missiles: externalized the projectiles that spell defends against. Fixed flame arrow projectile. Needs a pass over missing projectiles.
 
