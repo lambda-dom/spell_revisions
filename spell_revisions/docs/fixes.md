@@ -18,6 +18,8 @@ Fixes to base SR, v4.19.
 
 * Goodberry: power of opcodes in items 2 -> 0, resist_dispel 3 -> 0.
 
+* Sunscorch: change damage dice sides to d4.
+
 ## A. 2. Level 2.
 
 * Animal Summoning 2: drop sectype on dog scent. War dogs: correct int, hps and ac (went with the description).

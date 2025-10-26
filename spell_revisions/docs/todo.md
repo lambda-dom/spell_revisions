@@ -306,6 +306,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * weidu_library stuff: subspells could use extra fields for name, description and patch. The problem is that this, in the current implementation, requires passing extra tra and tpa files. One possible solution is, once the implementation of subspells stabilize, to provide an extra call using the standard implementation but now being able to pass the needed extra tra and tpa.
 
+* Animation duration have to be combed over; consider this line of EEFP fixpack "Contingency's animation gets cut off since the duration for the effect is too short".
+
 * Spell fist attacks: they are hopelessly unusable so what can be done to make them more enticing? It charges work on them this could add to the number of attacks to make them more enticing. On the other hand is this even worth it?
 
 * Cure line of spells: mention in description that it also cures intoxication.
@@ -356,6 +358,8 @@ note(s):
 # D. Projectiles.
 
 * disintegrate: missing spgreorb aux resource.
+
+* Projectiles have to get a pass for their radius. IESDP hels a little with conversion rates; consider also the line "Protection From Evil, 10' Radius had a radius of 15 feet" in the EEFP fixpack.
 
 # E. Icons.
 
