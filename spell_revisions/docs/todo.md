@@ -22,11 +22,9 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Animal Summoning I: Bat has no meaningful race and class.
 
-* Sunscorch: nerf damage dice sides to d4.
-
 ## A. 2. Level 2.
 
-* Aid: (technical) play visual opcode duration 6 -> 5 seconds to escape high duration patching side-effects. Make it fixed duration like other buffs?
+* Aid: (technical) play visual opcode duration 6 -> 5 seconds to escape high duration patching side-effects (may trim off animation). Make it fixed duration like other buffs?
 
 * Chant: have good chant nullify bad chant and vice versa.
 
@@ -76,7 +74,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Protection from Acid: add protection to Vitriolic Sphere or not needed?
 
-* Protection from Cold: only protectiom from wizard's cone of cold and icestrom. Add other.
+* Protection from Cold: only protection from wizard's cone of cold and ice storm. Add other.
 
 * Protection from Fire: missing protections (e. g. aux flame arrow).
 
@@ -101,8 +99,6 @@ Not just things to (still) do but also proposed changes to spells.
 * Shield of the Archons: patch spell deflection ocpodes with self#res to guarantee removal.
 
 * Summon Shambling Mound: review the constrict spell: especially target vs. point casting and entangle implementation.
-
-* Summon Death Knight: only description in. Implemented in the arcane level.
 
 * Fire Storm: what is the spell protection doing? Protection for fire elementals can be replaced by immunity resource conditional on fire immunity.
 
@@ -132,17 +128,17 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Find Familiar: yet to implement.
 
-* Sleep: display "ineffective spell" for creatures with dice > caster level. Note: actually I am inclined to leave this out.
+* Sleep: display "ineffective spell" for creatures with dice > caster level. Note: leave this out so as not to complicate the implementation of immunities?
 
 * Chill Touch: improve strength penalty to -4 and add protection to spell to avoid killing by strength draining.
 
 * Spook: True Seeing makes one immune to Spook and this is handled in the True Seeing spell. Better to add a TRUE_SIGHT state to splstate.ids, set it via Set Spell State [328] in True Seeing and then use the usual shenanigan in Spook (e. g. 318) to make True Seeing nullify it. This spell state is apparently missing and is being set via proficiencies, but these are not detected via 318 and related opcodes (or at least I do not know how).
 
-* Obscuring mist: move visual range penalty to subspell. Turn protection from spell -> remove effects by resource.
+* Obscuring mist: move visual range penalty to subspell. Keep protection from spell as it is a debuff but systematize it (via a table as in PfM?).
 
 ## B. 2. Level 2.
 
-* Know Opponent: protection from spell -> remove effects by resource.
+* Know Opponent: Keep protection from spell as it is a debuff but systematize it (via a table as in PfM?).
 
 * Resist Fear: normalize immunity with blocks library.
 
@@ -172,10 +168,6 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Minor Spell Deflection: see note below on spell deflection opcodes.
 
-* Protection from Fire and Cold: not yet done as these are moved to level 4.
-
-* Melf's meteors: description says evocation school, spell says conjuration. Going with description for now.
-
 ## B. 4. Level 4.
 
 * Ice Storm: move movement rate penalty to a subspell.
@@ -200,7 +192,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Teleport Field: color icons red?
 
-* Monster Summoning IV: cre and script for phase spider unused.
+* Monster Summoning IV: cre and script for phase spider unused. Currently we override monster summoning but better to override spider spawn?
 
 * Wizard Eye: change from non-stacking to refreshing? Review creature.
 
@@ -214,7 +206,7 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Waves of Fatigue: add immunity for "non-living" (undead, elementals, constructs, etc.).
 
-* Dispelling Screen: the base spell makes no sense so have to implement the patching. The patching is not done, especially in Cast Spell on Condition [232] which is keyed on hit by anyone (for what?).
+* Dispelling Screen: the base spell makes no sense so have to implement the patching. The patching is not done, especially in Cast Spell on Condition [232] which is keyed on hit by anyone -- for what? What is even the opcode for?
 
 * Conjure (Lesser) Elemental: Add water elemental and consolidate all spells in one.
 
@@ -306,6 +298,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * weidu_library stuff: subspells could use extra fields for name, description and patch. The problem is that this, in the current implementation, requires passing extra tra and tpa files. One possible solution is, once the implementation of subspells stabilize, to provide an extra call using the standard implementation but now being able to pass the needed extra tra and tpa.
 
+* Animation duration have to be combed over; consider this line of EEFP fixpack "Contingency's animation gets cut off since the duration for the effect is too short".
+
 * Spell fist attacks: they are hopelessly unusable so what can be done to make them more enticing? It charges work on them this could add to the number of attacks to make them more enticing. On the other hand is this even worth it?
 
 * Cure line of spells: mention in description that it also cures intoxication.
@@ -353,9 +347,13 @@ note(s):
 
 * Uses of Use Eff [177] with the cast spell opcode can be replaced with Apply Effects List [326].
 
+* Slow Poison can now use the slow poison [329] opcode.
+
 # D. Projectiles.
 
 * disintegrate: missing spgreorb aux resource.
+
+* Projectiles have to get a pass for their radius. IESDP helps a little with conversion rates; consider also the line "Protection From Evil, 10' Radius had a radius of 15 feet" in the EEFP fixpack. See [here](https://www.gibberlings3.net/forums/topic/39174-pro-explosion-size-units-to-feet-conversion/) for more information.
 
 # E. Icons.
 
