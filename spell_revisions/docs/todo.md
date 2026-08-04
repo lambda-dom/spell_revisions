@@ -136,6 +136,8 @@ Not just things to (still) do but also proposed changes to spells.
 
 * Obscuring mist: move visual range penalty to subspell. Keep protection from spell as it is a debuff but systematize it (via a table as in PfM?).
 
+* Chromatic Orb: description mentions multicolored orbs, but I *think* there are no chances of more than one color.
+
 ## B. 2. Level 2.
 
 * Know Opponent: Keep protection from spell as it is a debuff but systematize it (via a table as in PfM?).
@@ -348,6 +350,12 @@ note(s):
 * Uses of Use Eff [177] with the cast spell opcode can be replaced with Apply Effects List [326].
 
 * Slow Poison can now use the slow poison [329] opcode.
+
+* The EEFP adds a few states to splstate.ids, namely several *_IMMUNITY like entangle, web, etc. Take advantage of this. We still need TRUE_SIGHT (or some equivalent).
+
+* Nishruu and Hakeashar vulnerability to magic can be implemented directly in the dispel effects via Use Eff [177] targetting them using destself.eff, instead of the weird scripting way done in SR.
+
+* Spells which use improved invisibility should no longer set normal invisibility as it's redundant.
 
 # D. Projectiles.
 
